@@ -1,0 +1,544 @@
+{
+  "composition": {
+    "original": true,
+    "sections": {
+      "intro": [
+        "Dmaj9",
+        "D6/9",
+        "Gmaj7/D",
+        "Dmaj9",
+        "F#m7/A",
+        "G6/9",
+        "Aadd9",
+        "D6/9"
+      ],
+      "A": [
+        "Dmaj9",
+        "F#m7/A",
+        "G6/9",
+        "Em9",
+        "A6sus2",
+        "Dmaj7/F#",
+        "Bm9",
+        "Gmaj7",
+        "Em9",
+        "Aadd9",
+        "F#m7",
+        "Bm7",
+        "E7sus4",
+        "G6/9",
+        "A6sus2",
+        "D6/9"
+      ],
+      "B": [
+        "Gmaj9",
+        "Dmaj7/F#",
+        "Em9",
+        "Aadd9",
+        "Bm9",
+        "F#m7",
+        "G6/9",
+        "A6sus2",
+        "Em9",
+        "Dmaj9/F#",
+        "Gm6",
+        "D6/9",
+        "E7sus4",
+        "Gmaj7",
+        "Aadd9",
+        "Dmaj9"
+      ],
+      "A_return": [
+        "Dmaj9",
+        "F#m7/A",
+        "G6/9",
+        "Em9",
+        "A6sus2",
+        "Dmaj7/F#",
+        "Bm9",
+        "Gmaj7",
+        "Em9",
+        "Aadd9",
+        "F#m7",
+        "Bm7",
+        "E7sus4",
+        "G6/9",
+        "A6sus2",
+        "D6/9"
+      ],
+      "outro": [
+        "G6/9",
+        "Dmaj7/F#",
+        "Em9",
+        "A6sus2",
+        "F#m7",
+        "Bm9",
+        "Gmaj7",
+        "Aadd9",
+        "Em9",
+        "G6/9",
+        "A6sus2",
+        "D6/9",
+        "Dmaj9",
+        "D6/9",
+        "Dmaj9",
+        "Dmaj9"
+      ]
+    },
+    "phrases_midi": {
+      "A1": [
+        [
+          0,
+          66,
+          2.4
+        ],
+        [
+          3,
+          64,
+          1
+        ],
+        [
+          4.5,
+          62,
+          2.5
+        ],
+        [
+          9,
+          64,
+          1
+        ],
+        [
+          10.5,
+          66,
+          1.1
+        ]
+      ],
+      "A2": [
+        [
+          0,
+          69,
+          2
+        ],
+        [
+          3,
+          71,
+          1.3
+        ],
+        [
+          5,
+          69,
+          1.8
+        ],
+        [
+          8,
+          66,
+          2.6
+        ]
+      ],
+      "A3": [
+        [
+          0.5,
+          64,
+          2
+        ],
+        [
+          3,
+          66,
+          1.2
+        ],
+        [
+          5,
+          69,
+          2
+        ],
+        [
+          8,
+          66,
+          1
+        ],
+        [
+          9.5,
+          64,
+          1.8
+        ]
+      ],
+      "A4": [
+        [
+          0,
+          71,
+          2.5
+        ],
+        [
+          3,
+          69,
+          1.5
+        ],
+        [
+          5.5,
+          66,
+          1.8
+        ],
+        [
+          8,
+          64,
+          1
+        ],
+        [
+          9.5,
+          62,
+          2.1
+        ]
+      ],
+      "B1": [
+        [
+          0,
+          71,
+          2
+        ],
+        [
+          3,
+          73,
+          1.5
+        ],
+        [
+          5,
+          74,
+          2.4
+        ],
+        [
+          9,
+          73,
+          1.8
+        ]
+      ],
+      "B2": [
+        [
+          0.5,
+          74,
+          2
+        ],
+        [
+          3,
+          76,
+          2
+        ],
+        [
+          6,
+          74,
+          1.5
+        ],
+        [
+          9,
+          71,
+          2.1
+        ]
+      ],
+      "B3": [
+        [
+          0,
+          69,
+          1.8
+        ],
+        [
+          3,
+          71,
+          1.4
+        ],
+        [
+          5,
+          74,
+          4.6
+        ],
+        [
+          10,
+          73,
+          1.2
+        ]
+      ],
+      "B4": [
+        [
+          0.5,
+          73,
+          1.4
+        ],
+        [
+          3,
+          71,
+          1.2
+        ],
+        [
+          5,
+          69,
+          1.7
+        ],
+        [
+          8,
+          66,
+          1
+        ],
+        [
+          10,
+          64,
+          1.6
+        ]
+      ]
+    }
+  },
+  "render": {
+    "sample_rate": 44100,
+    "channels": 2,
+    "wav_format": "PCM signed 16-bit",
+    "mp3_bitrate": 160000,
+    "reverb_rt60_seconds": 8,
+    "delay_beats": 1.5,
+    "seam_crossfade_seconds_each_side": 4,
+    "target_integrated_lufs": -16,
+    "peak_ceiling_dbtp": -1.7
+  },
+  "tracks": [
+    {
+      "file": "public/audio/ambient-lullaby.mp3",
+      "seed": 19642026,
+      "key": "D",
+      "bpm": 64,
+      "bars": 72,
+      "meter": "3/4",
+      "description": "Balanced warm harp, rounded singing lead and soft wide pad.",
+      "mix": {
+        "pad": 0.047,
+        "pluck": 0.072,
+        "lead": 0.115,
+        "bass": 0.032,
+        "wet": 0.31,
+        "cutoff": 4300,
+        "box": 0.08,
+        "detune": 5,
+        "skip": 0.1
+      },
+      "events": {
+        "pad": 325,
+        "pluck": 342,
+        "lead": 55,
+        "bass": 64,
+        "skipped_plucks": 90
+      },
+      "wav": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -4.789418969851398,
+        "first_50ms_rms_dbfs": -25.317077947101897,
+        "last_50ms_rms_dbfs": -24.390261445832422,
+        "first_last_50ms_waveform_rmse": 0.09386257827281952,
+        "boundary_jump_dbfs": -48.3015877968431,
+        "nearby_99th_percentile_step_dbfs": -41.242631898253606,
+        "boundary_step_ratio": 0.44366197183098594,
+        "seam_pass": true,
+        "integrated_lufs": -16,
+        "true_peak_dbtp": -4.79,
+        "lra_lu": 8.1
+      },
+      "mp3": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -5.233068146525951,
+        "first_50ms_rms_dbfs": -25.761710657053143,
+        "last_50ms_rms_dbfs": -24.839424030430504,
+        "first_last_50ms_waveform_rmse": 0.08914372324943542,
+        "boundary_jump_dbfs": -81.28953047951485,
+        "nearby_99th_percentile_step_dbfs": -41.62848270347912,
+        "boundary_step_ratio": 0.010397947281643389,
+        "seam_pass": true,
+        "integrated_lufs": -16.45,
+        "true_peak_dbtp": -5.23,
+        "lra_lu": 8.2
+      },
+      "mp3_bytes": 4051183,
+      "sha256": "63d8a2c7544881a4b24e8a72c21d5b440b41139e5cb6b6ea15ab2cc2e89f7051"
+    },
+    {
+      "file": "public/audio/ambient-lullaby-a.mp3",
+      "seed": 19651199,
+      "key": "D",
+      "bpm": 64,
+      "bars": 72,
+      "meter": "3/4",
+      "description": "More intimate, drier plucks with a clearer harp pulse and lighter pad.",
+      "mix": {
+        "pad": 0.036,
+        "pluck": 0.088,
+        "lead": 0.102,
+        "bass": 0.027,
+        "wet": 0.27,
+        "cutoff": 4750,
+        "box": 0.04,
+        "detune": 3,
+        "skip": 0.08
+      },
+      "events": {
+        "pad": 325,
+        "pluck": 339,
+        "lead": 55,
+        "bass": 64,
+        "skipped_plucks": 93
+      },
+      "wav": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -4.704718112426365,
+        "first_50ms_rms_dbfs": -26.957431468472272,
+        "last_50ms_rms_dbfs": -26.07864259999936,
+        "first_last_50ms_waveform_rmse": 0.0778641551733017,
+        "boundary_jump_dbfs": -50.66357403840299,
+        "nearby_99th_percentile_step_dbfs": -43.15030175918528,
+        "boundary_step_ratio": 0.42105263157894735,
+        "seam_pass": true,
+        "integrated_lufs": -15.99,
+        "true_peak_dbtp": -4.7,
+        "lra_lu": 9.8
+      },
+      "mp3": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -5.150310265423141,
+        "first_50ms_rms_dbfs": -27.402733245803187,
+        "last_50ms_rms_dbfs": -26.523041024266192,
+        "first_last_50ms_waveform_rmse": 0.07397189736366272,
+        "boundary_jump_dbfs": -54.97405942214129,
+        "nearby_99th_percentile_step_dbfs": -43.52391227771591,
+        "boundary_step_ratio": 0.26760402590127463,
+        "seam_pass": true,
+        "integrated_lufs": -16.43,
+        "true_peak_dbtp": -5.15,
+        "lra_lu": 9.7
+      },
+      "mp3_bytes": 4051183,
+      "sha256": "b4d2a9ff1fc4ac985839e3666d5c0e445d02abfe39dd0b04ce1b7fcba6be25f5"
+    },
+    {
+      "file": "public/audio/ambient-lullaby-b.mp3",
+      "seed": 19660372,
+      "key": "D",
+      "bpm": 64,
+      "bars": 72,
+      "meter": "3/4",
+      "description": "Softer, darker and more spacious; extra pad, more room presence and fewer plucks.",
+      "mix": {
+        "pad": 0.059,
+        "pluck": 0.054,
+        "lead": 0.091,
+        "bass": 0.033,
+        "wet": 0.39,
+        "cutoff": 3600,
+        "box": 0.02,
+        "detune": 7,
+        "skip": 0.16
+      },
+      "events": {
+        "pad": 325,
+        "pluck": 334,
+        "lead": 55,
+        "bass": 64,
+        "skipped_plucks": 98
+      },
+      "wav": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -4.700618523670364,
+        "first_50ms_rms_dbfs": -23.57273667441589,
+        "last_50ms_rms_dbfs": -22.621421072442768,
+        "first_last_50ms_waveform_rmse": 0.11458448320627213,
+        "boundary_jump_dbfs": -46.17248117855737,
+        "nearby_99th_percentile_step_dbfs": -39.378145429631736,
+        "boundary_step_ratio": 0.45738636363636365,
+        "seam_pass": true,
+        "integrated_lufs": -16,
+        "true_peak_dbtp": -4.7,
+        "lra_lu": 7.1
+      },
+      "mp3": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -5.145514644966374,
+        "first_50ms_rms_dbfs": -24.019024418838356,
+        "last_50ms_rms_dbfs": -23.067396218662278,
+        "first_last_50ms_waveform_rmse": 0.10880483686923981,
+        "boundary_jump_dbfs": -54.69647578662623,
+        "nearby_99th_percentile_step_dbfs": -39.73655317677655,
+        "boundary_step_ratio": 0.1786503492295591,
+        "seam_pass": true,
+        "integrated_lufs": -16.45,
+        "true_peak_dbtp": -5.15,
+        "lra_lu": 7
+      },
+      "mp3_bytes": 4051183,
+      "sha256": "75a4143cea85d2945bb28cefa24644a7365a74d4003ec86fa4b342f0039e8046"
+    },
+    {
+      "file": "public/audio/ambient-lullaby-c.mp3",
+      "seed": 19669545,
+      "key": "D",
+      "bpm": 64,
+      "bars": 72,
+      "meter": "3/4",
+      "description": "A delicate music-box tint on the lead, lighter bass and a little more shimmer.",
+      "mix": {
+        "pad": 0.044,
+        "pluck": 0.063,
+        "lead": 0.099,
+        "bass": 0.024,
+        "wet": 0.33,
+        "cutoff": 4500,
+        "box": 0.28,
+        "detune": 4,
+        "skip": 0.13
+      },
+      "events": {
+        "pad": 325,
+        "pluck": 334,
+        "lead": 55,
+        "bass": 64,
+        "skipped_plucks": 98
+      },
+      "wav": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -5.215137510972909,
+        "first_50ms_rms_dbfs": -25.690053659541014,
+        "last_50ms_rms_dbfs": -24.77293288729904,
+        "first_last_50ms_waveform_rmse": 0.08995790779590607,
+        "boundary_jump_dbfs": -48.79805947134375,
+        "nearby_99th_percentile_step_dbfs": -41.64961288170624,
+        "boundary_step_ratio": 0.43911439114391143,
+        "seam_pass": true,
+        "integrated_lufs": -16,
+        "true_peak_dbtp": -5.21,
+        "lra_lu": 9.9
+      },
+      "mp3": {
+        "duration_seconds": 202.5,
+        "sample_rate_hz": 44100,
+        "channels": 2,
+        "sample_peak_dbfs": -5.65909437308735,
+        "first_50ms_rms_dbfs": -26.135807503276762,
+        "last_50ms_rms_dbfs": -25.21279570574777,
+        "first_last_50ms_waveform_rmse": 0.08549638837575912,
+        "boundary_jump_dbfs": -55.90565106469026,
+        "nearby_99th_percentile_step_dbfs": -42.06155883981087,
+        "boundary_step_ratio": 0.20313997223455835,
+        "seam_pass": true,
+        "integrated_lufs": -16.44,
+        "true_peak_dbtp": -5.66,
+        "lra_lu": 10
+      },
+      "mp3_bytes": 4051183,
+      "sha256": "76260db78d1a02261b4bda9a503fb9d85aa3834fa52cc841d8dab61df9305fe1"
+    }
+  ]
+}

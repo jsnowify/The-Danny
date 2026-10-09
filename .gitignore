@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.audio-venv/
+__pycache__/
+*.tsbuildinfo
+.env*
+!.env.example
