@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-10T01:18:52.330Z",
+  "comparisonChoices": [
+    "clearing-0-1918",
+    "clearing-8-1918",
+    "woodland-0-1918",
+    "clearing-0-390",
+    "clearing-8-390",
+    "woodland-0-390"
+  ],
+  "comparisonImagesLoaded": true,
+  "keyboardReveal": true,
+  "finalMemoryHung": [
+    "lake",
+    "sunrise",
+    "dinner",
+    "boat",
+    "garden",
+    "guitar",
+    "road",
+    "fire"
+  ],
+  "finaleViewports": [
+    "1918x918",
+    "390x844"
+  ],
+  "freeExploration": true,
+  "errors": [],
+  "limits": "Finale captured in reduced motion; normal camera pacing and physical device behavior remain separate reviews."
+}

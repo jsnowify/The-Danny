@@ -1,0 +1,406 @@
+{
+  "requestedBy": "Owner requested cleanup of tests and scripts after obsolete documentation removal",
+  "removedScripts": [
+    {
+      "path": "scripts/ambient-production-smoke.mjs",
+      "bytes": 4212,
+      "sha256": "bc64c0c461d2d68b52fe0c8ee39a07697c28388df652caf60f917341b7d2f7a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/ambient-production-smoke.mjs"
+    },
+    {
+      "path": "scripts/baseline-pass-7.mjs",
+      "bytes": 1708,
+      "sha256": "66d0ec0b4ccda0dcce065ae9858950053328f4aaf926c882f6a6b81a6e421f25",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/baseline-pass-7.mjs"
+    },
+    {
+      "path": "scripts/capture-camera-study.mjs",
+      "bytes": 10961,
+      "sha256": "b78b8f6ef08968ccea0b6b8a8bb5228bc23e175d9d35ab5d82cfe9ae97971e7e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-camera-study.mjs"
+    },
+    {
+      "path": "scripts/capture-integration-motion.mjs",
+      "bytes": 9241,
+      "sha256": "3ad8cbe42ee2e7ae5cbe6cdacb21670f2b5f0a9bd8980911921cc6ffde8f4cc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-integration-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-pass-3.mjs",
+      "bytes": 12034,
+      "sha256": "4182af13bcc85cd210be5415250f4c7d7fe9b7cb1b04ea9e1ddc4d1ffab52205",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-pass-3.mjs"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-motion.mjs",
+      "bytes": 8958,
+      "sha256": "17af3b402f34e58af8bc09d8766facf9d0414405dea3e47089aaea71d7b9b76d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-rest.mjs",
+      "bytes": 12004,
+      "sha256": "708b4c1e5866d894266f48fa39a7dd6ddbf253112ee08a868ae1375c82e5257c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-reference-rest.mjs"
+    },
+    {
+      "path": "scripts/capture-style-prototype.mjs",
+      "bytes": 3624,
+      "sha256": "93a0c11f0e05b399debb8ae57610f7621e128b44aeeed4543f46b9dd6350bac1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-audit.mjs",
+      "bytes": 9647,
+      "sha256": "75e71fee37a1522807515ffe8759f663c249401b37a644b5b463c0578cde08c8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-v4-audit.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-companions.mjs",
+      "bytes": 9264,
+      "sha256": "6f43bc6dadbb7ea70a9e37a098a87359bb5bbb3e889514242e26c96275dbeded",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-v4-companions.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-flora.mjs",
+      "bytes": 10171,
+      "sha256": "72050abd5fee44e610b4efd7acf1438f9c316bff5dfdd8bf1a36b98939c6c96f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-v4-flora.mjs"
+    },
+    {
+      "path": "scripts/capture-visual-integration.mjs",
+      "bytes": 13678,
+      "sha256": "745f97abda9824b0b50b8cba1ee9aeefe4064c7c345dd6b143a51587d121f866",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/checkpoint-visual-integration.mjs",
+      "bytes": 2535,
+      "sha256": "d93c0081182e32a4b53080b78893cdbfc656f9a2757bb06fd56ae5d4126361f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/checkpoint-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/export-ambient.mjs",
+      "bytes": 1818,
+      "sha256": "645fd1c78e62b41386d619f52c5877ceb37907bccfbe3c3760e0a544005a90e1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/export-ambient.mjs"
+    },
+    {
+      "path": "scripts/export-source.mjs",
+      "bytes": 7242,
+      "sha256": "e874d65789f0a90ebe628ed95342ba99507d9b83a20197d7c7ea69cf85f4d4ee",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/export-source.mjs"
+    },
+    {
+      "path": "scripts/export-stage-a.mjs",
+      "bytes": 1677,
+      "sha256": "012c2cb2c4598eaf7b3b4eb77df901782df6050403cdfd9cec2282309c4b5b20",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/export-stage-a.mjs"
+    },
+    {
+      "path": "scripts/export-v25-stage-a.mjs",
+      "bytes": 1456,
+      "sha256": "1318174f5ac9c3e41418765e95651116945782a8923e12364b2207f2a71a83aa",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/export-v25-stage-a.mjs"
+    },
+    {
+      "path": "scripts/extract-v4-references.ps1",
+      "bytes": 1132,
+      "sha256": "ba906da749a30945ee7e97dfa1030e55496afcfa665fdebe318645f21aeb4def",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/extract-v4-references.ps1"
+    },
+    {
+      "path": "scripts/measure-pass-3.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/measure-pass-3.mjs"
+    },
+    {
+      "path": "scripts/measure-reference-motion.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/measure-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/performance.mjs",
+      "bytes": 9419,
+      "sha256": "1a5badc76ddd47663f3a2be3a7c6c5df2a9fcc38612a71798a4fb7eb8ae4bcfb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/performance.mjs"
+    },
+    {
+      "path": "scripts/probe-integration-scene.mjs",
+      "bytes": 5481,
+      "sha256": "749ca5d41b96e09ba201bde8f60d94e372c415b8c1409fa742a0ae0506abb5d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/probe-integration-scene.mjs"
+    },
+    {
+      "path": "scripts/production-smoke.mjs",
+      "bytes": 6641,
+      "sha256": "150b9faf9ac3cad01135d0ac0ea8234124fc6f76534cc99a6e764c60ff919292",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/production-smoke.mjs"
+    },
+    {
+      "path": "scripts/seal-reference-motion.mjs",
+      "bytes": 6366,
+      "sha256": "de6ed6bd42af20bfb93813c9ca3149c4be5d8f3be011077053969cfb3f8c6f4f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/seal-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/seal-visual-integration.mjs",
+      "bytes": 10515,
+      "sha256": "073da4a0470422dedd313acdd24e208b4fed37d9cd88ee0f75375d1dc47a5f71",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/seal-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/serve-motion-baseline.mjs",
+      "bytes": 953,
+      "sha256": "c3b70ae58f84f89e70490b7a1a38618d199e0714dd2116f5432f7fd73c67265d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/serve-motion-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-camera-pass.mjs",
+      "bytes": 16567,
+      "sha256": "69f3e2cecbaf1f687db8b01ffbc637dc6d0b2f58d266df11d61e0773d1c2185c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-camera-pass.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-checkpoints.mjs",
+      "bytes": 5621,
+      "sha256": "abef49ebd36966002dc340b8d042b60f35721164a8126e4d1f224506e5ec5be1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-integration-checkpoints.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-experience.mjs",
+      "bytes": 17826,
+      "sha256": "50c9e679f8324377a1befb6c9351c4b2768ae8021e72791f38bf1c6e31f4cb27",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-integration-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-lifecycle.mjs",
+      "bytes": 10625,
+      "sha256": "cde25b1ff94f6efb37b826f976ea0944c933fd2b4513eeae2c0f2300701d23d5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-integration-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-review.mjs",
+      "bytes": 4783,
+      "sha256": "d8be33b059d308cca9d3fdca105edaa7a427081c3dd93b14746fec210154a7e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-integration-review.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-baseline.mjs",
+      "bytes": 9581,
+      "sha256": "8d0ad93c2f70e9111c50245a57f5ad10be150d9d72fbebe797c8f9a1a66695d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-3-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-experience.mjs",
+      "bytes": 16585,
+      "sha256": "1cc5563a681d58f6e0ae82280ad6cb9ace01a576a141af3e3dc2c7f57c2b8694",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-3-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-lifecycle.mjs",
+      "bytes": 10626,
+      "sha256": "3f1d3122ff44e890341de1349c8f6d6605ae656658d520eb3183fd467672f967",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-3-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-review.mjs",
+      "bytes": 2574,
+      "sha256": "70d029094f6a369a37edea8f57fd1e054c3e2c034e5ef6555cc2cfc0c08336e2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-3-review.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-recovered-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-recovered-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-recovery-review.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-experience.mjs",
+      "bytes": 17395,
+      "sha256": "1e8705204bec49d32f87d4d42a7e8a6eacca8811599cfae89a1f6e275f77d66a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-reference-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-lifecycle.mjs",
+      "bytes": 10594,
+      "sha256": "aa0e8ea4e6571ab03e0829247cab641c95de6de57b6f8dc13ef3416ddb00fd52",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-reference-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-motion.mjs",
+      "bytes": 8019,
+      "sha256": "b9ed42b7cee4c70bebb6d7f2135a96af10e0182cf672d6812708fdde3a40e756",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-review.mjs",
+      "bytes": 4876,
+      "sha256": "450d5a200e13dd2cc69d3dfaf4ca7fd685b648b0b170329e526661a529d7e1fb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-reference-review.mjs"
+    },
+    {
+      "path": "scripts/verify-style-prototype.mjs",
+      "bytes": 13844,
+      "sha256": "6b442174a2a260c8afe05f0f2cc1d603017b096665056b76a90a77d6d72d25a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-final.mjs",
+      "bytes": 2591,
+      "sha256": "924d530187e5e4ee89f2b0442286245701a85ec56d4e6d68e605d33185632a69",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-v4-final.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-handoff.mjs",
+      "bytes": 3884,
+      "sha256": "fe382708b37ece35006683b5b7f12ebe624dddd6ab59e0fe67d61e88f3eb46ea",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-v4-handoff.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-lifecycle.mjs",
+      "bytes": 10413,
+      "sha256": "cde251cc9f4812ca8bc3ca78236407a6c92a19a7ca9f9af73c6cf5909e8f2577",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-v4-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-navigation.mjs",
+      "bytes": 4393,
+      "sha256": "b7ed2d738683e8b7c3423fa8e5f2dd33938b15a3bef88833ec34a454d77438c0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-v4-navigation.mjs"
+    }
+  ],
+  "removedTests": [
+    {
+      "path": "tests/v4-audit.spec.ts",
+      "bytes": 8785,
+      "sha256": "16e325ff0d2da8a41c49e033e063fdf85170df6c57422d1c9e67266f5b8c9e34",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/v4-audit.spec.ts"
+    },
+    {
+      "path": "tests/v4-living-world.spec.ts",
+      "bytes": 5154,
+      "sha256": "d2d75c539983ca9e30813c0964f35e41d50b8733c89a1afdd68fc5b19fc82bc7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/v4-living-world.spec.ts"
+    }
+  ],
+  "renamedTests": [
+    {
+      "from": "tests/pass-3-trees.spec.ts",
+      "to": "tests/painted-trees.spec.ts",
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0"
+    },
+    {
+      "from": "tests/stage-a.spec.ts",
+      "to": "tests/loading-and-hints.spec.ts",
+      "sha256": "65f8392b3deb5d5f9f60e79a5ba834c9d3acb4b2f2e159d34e72bdd212e62f8d"
+    },
+    {
+      "from": "tests/v3-foundation.spec.ts",
+      "to": "tests/content-and-migration.spec.ts",
+      "sha256": "35bba14dea5f0cc879df4145ab78bfaf3c5c77f96153e8a300a05aa3b771ecb4"
+    },
+    {
+      "from": "tests/v4-audio-mixer.spec.ts",
+      "to": "tests/audio-mixer.spec.ts",
+      "sha256": "6c968334041e6dd8b6181d771d0e32b8d0ea21ea679b7fdb9d8bb4ccd7ab9ec2"
+    },
+    {
+      "from": "tests/v4-compact-ui.spec.ts",
+      "to": "tests/compact-ui.spec.ts",
+      "sha256": "4e65649a36ec3905900de84c4bf101fe3e20436f99e4ecf6d8e05c58a676c61f"
+    },
+    {
+      "from": "tests/v4-companions.spec.ts",
+      "to": "tests/companions.spec.ts",
+      "sha256": "1962815a6214ef73187e1b17e96aa1d8a55f5cac1c4b66e829cb2d8ee4afe910"
+    },
+    {
+      "from": "tests/v4-composition.spec.ts",
+      "to": "tests/composition.spec.ts",
+      "sha256": "409ec31eda4b9a98cefeb3d82140bd5deb1e137b5ee96bd5d93a4ed8b4b1888d"
+    },
+    {
+      "from": "tests/v4-flora-guide.spec.ts",
+      "to": "tests/flora-guide.spec.ts",
+      "sha256": "44cca1a0bb2b786e9428f48b050a1123658a2bc782924c3e7715cf6ec86c5b1b"
+    },
+    {
+      "from": "tests/v4-idle.spec.ts",
+      "to": "tests/idle.spec.ts",
+      "sha256": "247e38d62d8dbf9bc7d1908af9c68aadaeaea3a08040ff0b0cd49e9ba737c36a"
+    },
+    {
+      "from": "tests/v4-journal.spec.ts",
+      "to": "tests/journal.spec.ts",
+      "sha256": "ef00b097a26c6c5bcf235dfefd25d3b579a3848f8811ca44be80ed55b8618fdf"
+    },
+    {
+      "from": "tests/v4-nearby.spec.ts",
+      "to": "tests/nearby-company.spec.ts",
+      "sha256": "b0269417d78cd5527c286293161c59c7e6add83c53b98fb4f5ededb4bef306f1"
+    },
+    {
+      "from": "tests/v4-oscar.spec.ts",
+      "to": "tests/oscar.spec.ts",
+      "sha256": "33add16d04789d4df3725e211d70ee0e17f440d527f70814879cfc55270d0250"
+    },
+    {
+      "from": "tests/v4-painted-forest.spec.ts",
+      "to": "tests/painted-forest.spec.ts",
+      "sha256": "2dffb627eb4869cc06894fd377adb973192babf9a8b100422067844661644e80"
+    }
+  ],
+  "retainedScripts": [
+    "scripts/benchmark-pass-7.mjs",
+    "scripts/capture-pass-7.mjs",
+    "scripts/measure-pass-7.mjs",
+    "scripts/profile-pass-7.mjs",
+    "scripts/render-info.mjs",
+    "scripts/seal-pass-7.mjs",
+    "scripts/serve-local-production.mjs",
+    "scripts/serve-pass-7-baseline.mjs",
+    "scripts/smoke-pass-7-production.mjs",
+    "scripts/validate-vercel.mjs",
+    "scripts/verify-pass-7-experience.mjs",
+    "scripts/verify-pass-7-lifecycle.mjs",
+    "scripts/verify-pass-7-preview.mjs",
+    "scripts/verify-pass-7-review.mjs",
+    "scripts/verify-pass-7-visibility.mjs"
+  ],
+  "retainedTestCount": 17,
+  "complete": true,
+  "discoveredTests": 44,
+  "freshUnitTestsPassed": 13,
+  "unitTestEvidence": "verification/cleanup-unit-tests.json",
+  "retainedScriptsSyntaxAndReferencesVerified": 15,
+  "renamedTestContentsUnchanged": true,
+  "runtimeAssetsAndBuildFilesUnchanged": 152,
+  "recordedAt": "2026-10-10T13:46:11.786Z"
+}

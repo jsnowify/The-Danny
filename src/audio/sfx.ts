@@ -13,10 +13,36 @@ export function createSfx(bus: Tone.Gain) {
     volume: -20,
   }).connect(bus);
   let lastNoise = 0;
+  let animalAt = 0;
+  const purrFilter = new Tone.Filter(110, "lowpass").connect(bus),
+    purr = new Tone.NoiseSynth({
+      noise: { type: "brown" },
+      envelope: { attack: 0.08, decay: 0.5, sustain: 0, release: 0.15 },
+      volume: -37,
+    }).connect(purrFilter);
+  const animal = new Tone.Synth({
+    oscillator: { type: "triangle" },
+    envelope: { attack: 0.04, decay: 0.15, sustain: 0, release: 0.12 },
+    volume: -36,
+  }).connect(filter);
   return {
     play(sound: Sound) {
       const now = Tone.now();
-      if (sound === "step" || sound === "paper") {
+      if (sound === "cat" || sound === "dog") {
+        if (now < animalAt) return;
+        animalAt = now + 7;
+        animal.triggerAttackRelease(
+          sound === "cat" ? 540 : 160,
+          0.13,
+          now,
+          0.45,
+        );
+        animal.frequency.exponentialRampToValueAtTime(
+          sound === "cat" ? 380 : 105,
+          now + 0.15,
+        );
+        if (sound === "cat") purr.triggerAttackRelease(0.55, now + 0.2, 0.2);
+      } else if (sound === "step" || sound === "paper") {
         if (now - lastNoise < 0.1) return;
         lastNoise = now;
         noise.triggerAttackRelease(
@@ -47,6 +73,9 @@ export function createSfx(bus: Tone.Gain) {
       noise.dispose();
       notes.dispose();
       filter.dispose();
+      animal.dispose();
+      purr.dispose();
+      purrFilter.dispose();
     },
   };
 }

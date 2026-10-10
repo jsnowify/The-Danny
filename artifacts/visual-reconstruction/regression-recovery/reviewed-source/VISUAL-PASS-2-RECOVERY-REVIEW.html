@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Danny ? corrected Pass 2 review</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f0ebdf;
+        color: #263d30;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1320px;
+        margin: auto;
+        padding: 28px 24px 80px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 52px);
+        margin: 12px 0;
+      }
+      h2 {
+        margin-top: 38px;
+      }
+      p {
+        max-width: 850px;
+      }
+      .status {
+        display: inline-block;
+        padding: 7px 14px;
+        border: 1px solid #647456;
+        border-radius: 30px;
+        background: #fff8e8;
+      }
+      a {
+        color: #36553b;
+      }
+      button,
+      select {
+        font: inherit;
+        min-height: 44px;
+        padding: 8px 14px;
+        border: 1px solid #647456;
+        border-radius: 8px;
+        background: #fff8e8;
+        color: #263d30;
+      }
+      button {
+        cursor: pointer;
+      }
+      button[aria-pressed="true"] {
+        background: #36553b;
+        color: #fff8e8;
+      }
+      :focus-visible {
+        outline: 3px solid #b75a28;
+        outline-offset: 4px;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin: 18px 0;
+      }
+      .compare {
+        position: relative;
+        background: #283e30;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .compare img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .compare .after {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0 50% 0 0);
+      }
+      .compare .divider {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #fff8e8;
+        pointer-events: none;
+      }
+      .tag {
+        position: absolute;
+        top: 12px;
+        max-width: 43%;
+        background: #fff8e8ed;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 13px;
+      }
+      .tag.left {
+        left: 12px;
+      }
+      .tag.right {
+        right: 12px;
+      }
+      .range {
+        width: 100%;
+        accent-color: #36553b;
+        min-height: 44px;
+      }
+      .portrait .compare {
+        max-width: 430px;
+        margin: auto;
+      }
+      .note {
+        color: #52634b;
+        font-size: 14px;
+      }
+      figure {
+        margin: 0;
+      }
+      figure > img {
+        max-width: 100%;
+        display: block;
+        border-radius: 12px;
+      }
+      figcaption {
+        padding: 10px 0;
+        font-size: 14px;
+      }
+      .gallery.portrait {
+        max-width: 430px;
+        margin: auto;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .pair img {
+        width: 100%;
+      }
+      details {
+        border-top: 1px solid #a6ae96;
+        padding: 16px 0;
+        margin-top: 24px;
+      }
+      summary {
+        cursor: pointer;
+      }
+      .reference {
+        max-width: 100%;
+        border-radius: 12px;
+      }
+      @media (max-width: 700px) {
+        main {
+          padding: 18px 14px 48px;
+        }
+        .pair {
+          grid-template-columns: 1fr;
+        }
+        .tag {
+          font-size: 11px;
+          padding: 4px 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="status"
+        >Pass 2 correction ? awaiting your visual approval</span
+      >
+      <h1>The approved artwork is the baseline.</h1>
+      <p>
+        The previous Pass 2 framed the older live forest while Pass 1 remained
+        an isolated study. This correction carries the approved paint,
+        silhouettes, materials and light into the live game, then applies the
+        camera and composition work. Pass 3 and every later pass are stopped.
+      </p>
+      <p>
+        <a href="/">Try the corrected live game</a> ?
+        <a href="/?visual=prototype">Open the frozen approved study</a> ?
+        <a href="VISUAL-PASS-2-RECOVERY-REPORT.md"
+          >Read the cause and verification report</a
+        >
+      </p>
+      <h2>Approved Pass 1 and corrected Pass 2</h2>
+      <p>
+        The artwork is identical; the live view adds the game HUD and
+        companions, a following camera, terrain contact and hanging memories.
+        Move the divider to compare.
+      </p>
+      <div class="controls" aria-label="Comparison viewport">
+        <button type="button" id="desktop" aria-pressed="true">Desktop</button
+        ><button type="button" id="portrait" aria-pressed="false">Phone</button>
+      </div>
+      <div id="comparison">
+        <div class="compare">
+          <img id="before" alt="Approved Pass 1 visual baseline" /><img
+            class="after"
+            id="after"
+            alt="Corrected live Pass 2, pending approval"
+          /><span class="divider" id="divider"></span
+          ><span class="tag left">Corrected Pass 2 ? approval pending</span
+          ><span class="tag right">Approved Pass 1</span>
+        </div>
+      </div>
+      <label for="reveal"
+        >Reveal corrected Pass 2: <output id="percent">50%</output></label
+      ><input
+        class="range"
+        id="reveal"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+      />
+      <p class="note">
+        These are real browser captures. The comparison has the same viewport
+        dimensions on each side; camera positions differ because Pass 2
+        introduces following and HUD clearance. The original Pass 1 evidence and
+        source files are unchanged.
+      </p>
+      <h2>Corrected live views</h2>
+      <div class="controls">
+        <label for="viewport">Viewport</label
+        ><select id="viewport">
+          <option value="1918x918">Desktop ? 1918 ? 918</option>
+          <option value="390x844">Phone ? 390 ? 844</option>
+          <option value="320x568">Compact phone ? 320 ? 568</option>
+          <option value="844x390">Landscape phone ? 844 ? 390</option></select
+        ><label for="view">View</label
+        ><select id="view">
+          <option value="clearing-0">Clearing ? before memories</option>
+          <option value="clearing-8">Clearing ? eight memories hung</option>
+          <option value="clearing-side-8">Beside the tree ? eight hung</option>
+          <option value="tree-return-8">Returning to the tree</option>
+          <option value="woodland-0">Walking beyond the clearing</option>
+        </select>
+      </div>
+      <figure class="gallery" id="gallery">
+        <img id="live" alt="Corrected live game screenshot" />
+        <figcaption id="caption"></figcaption>
+      </figure>
+      <p class="note">
+        Existing botanical species, animals, Oscar and the bench remain
+        functional. The broader forest retains botanical models from the earlier
+        game; their later art passes are paused. The approved clearing assets
+        are now used in the live scene at every quality tier.
+      </p>
+      <h2>The rejected baseline error</h2>
+      <div class="pair">
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/pass-2/iteration-07/live-clearing-0-1918x918.png"
+            alt="Rejected previous Pass 2 showing the older live forest"
+          />
+          <figcaption>
+            Previous Pass 2: camera changes applied to the older live art.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-0-1918x918.png"
+            alt="Corrected Pass 2 using the approved artwork"
+          />
+          <figcaption>
+            Corrected Pass 2: the approved artwork is the live foundation.
+          </figcaption>
+        </figure>
+      </div>
+      <details>
+        <summary>Supplied art reference</summary>
+        <p>The original reference is retained for visual comparison.</p>
+        <img
+          class="reference"
+          src="artifacts/v4-final-comparison/reference-3.png"
+          alt="User-supplied painterly forest reference"
+        />
+      </details>
+      <details>
+        <summary>What verification establishes</summary>
+        <p>
+          Actual geometry buffers, canvas texture pixels, material properties
+          and the light rig were compared between the frozen Pass 1 scene and
+          the live game. Camera views were captured across four viewport shapes.
+          Gameplay, hanging, persistence, mobile controls and the production
+          bundle were checked separately. A build or a passing test does not
+          grant visual approval.
+        </p>
+        <p>
+          <a
+            href="artifacts/visual-reconstruction/regression-recovery/baseline-verification.json"
+            >Asset and lighting fingerprints</a
+          >
+          ?
+          <a
+            href="artifacts/visual-reconstruction/regression-recovery/iteration-03/captures.json"
+            >Capture measurements</a
+          >
+        </p>
+      </details>
+      <p>
+        <strong
+          >Next step: your visual review of this corrected Pass 2. No Pass 3
+          work will resume without your approval.</strong
+        >
+      </p>
+    </main>
+    <script>
+      const directory =
+        "artifacts/visual-reconstruction/regression-recovery/iteration-03/";
+      const before = document.getElementById("before"),
+        after = document.getElementById("after"),
+        comparison = document.getElementById("comparison"),
+        reveal = document.getElementById("reveal");
+      function compare(phone) {
+        comparison.classList.toggle("portrait", phone);
+        before.src =
+          "artifacts/visual-reconstruction/pass-1/prototype-04-" +
+          (phone ? "390-t0" : "1918-t8") +
+          ".png";
+        after.src =
+          directory +
+          "live-clearing-0-" +
+          (phone ? "390x844" : "1918x918") +
+          ".png";
+        document
+          .getElementById("desktop")
+          .setAttribute("aria-pressed", String(!phone));
+        document
+          .getElementById("portrait")
+          .setAttribute("aria-pressed", String(phone));
+      }
+      function update() {
+        after.style.clipPath = "inset(0 " + (100 - reveal.value) + "% 0 0)";
+        document.getElementById("divider").style.left = reveal.value + "%";
+        document.getElementById("percent").value = reveal.value + "%";
+      }
+      document.getElementById("desktop").onclick = () => compare(false);
+      document.getElementById("portrait").onclick = () => compare(true);
+      reveal.oninput = update;
+      function gallery() {
+        const viewport = document.getElementById("viewport"),
+          view = document.getElementById("view");
+        document.getElementById("live").src =
+          directory + "live-" + view.value + "-" + viewport.value + ".png";
+        document
+          .getElementById("gallery")
+          .classList.toggle(
+            "portrait",
+            viewport.value === "390x844" || viewport.value === "320x568",
+          );
+        document.getElementById("caption").textContent =
+          view.selectedOptions[0].textContent +
+          " ? " +
+          viewport.selectedOptions[0].textContent +
+          " ? Pass 2 approval pending";
+      }
+      document.getElementById("viewport").onchange = gallery;
+      document.getElementById("view").onchange = gallery;
+      compare(false);
+      update();
+      gallery();
+    </script>
+  </body>
+</html>

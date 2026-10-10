@@ -1,0 +1,1676 @@
+{
+  "recordedAt": "2026-10-10T13:46:13.387Z",
+  "status": "Complete; ready for owner local-production testing",
+  "authorization": "Owner authorized Pass 7 and clarified local production testing; no remote release.",
+  "authorizedPass": 7,
+  "ownerVisualApproval": false,
+  "finalVisualPass": true,
+  "parentManifest": {
+    "path": "artifacts/visual-reconstruction/passes-4-6/manifest.json",
+    "sha256": "f34756328af5a99044d0fdbf2ae1cb591dd7d9792368c1a9ef31196dd8047345"
+  },
+  "baseline": {
+    "path": "artifacts/visual-reconstruction/pass-7/baseline.json",
+    "bytes": 53186,
+    "sha256": "a12c96f8046334dcdc5c092e62056cc1c9eaa8e291ef2f601bd92dafe225c00f"
+  },
+  "sourceFiles": [
+    {
+      "path": ".vercelignore",
+      "bytes": 100,
+      "sha256": "49b21b5ef4d792c00449de26dad651e632b21dead65c3d77affc7e32b6f53039",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/.vercelignore"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 3698,
+      "sha256": "cc588d2d392bf1992f0114162ae33a361fed8924ff7b167bcebbc88db01aff37",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/DEPLOYMENT.md"
+    },
+    {
+      "path": "PERSONALIZATION.md",
+      "bytes": 4920,
+      "sha256": "e77956b598eb58bc78bef5ddcce722b100b84694d8628b9dafe085189852f3d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/PERSONALIZATION.md"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7242,
+      "sha256": "3f14bb2f6d649056e704980a75fc017799a98fbaa442e17e58c99c5f3859bc22",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/README.md"
+    },
+    {
+      "path": "VISUAL-PASS-7-REPORT.md",
+      "bytes": 9744,
+      "sha256": "c9d9af026df0725a520158144a63132174fd69b638eaf9fc36970b36aa02ec98",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/VISUAL-PASS-7-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASS-7-REVIEW.html",
+      "bytes": 9022,
+      "sha256": "065acb48ba23b6e95011a986bea8b1211d4c1fc1f70b84f8d41d3c38fc40ee8c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/VISUAL-PASS-7-REVIEW.html"
+    },
+    {
+      "path": "index.html",
+      "bytes": 460,
+      "sha256": "cc4eb1eafbb32a7ef6705b5fb71d4c906d52dc1334342a3b1491651b6ccbd43a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/index.html"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 125124,
+      "sha256": "19167416a1dbc7ac9c3a7adf55fd2e2f684cc507a757d04146d10aef6bee545c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1077,
+      "sha256": "825d3128fb18ada6eebc2bbd3c96f48ce398be422cc2cb0e22ea8acae5e597a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/package.json"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 683,
+      "sha256": "043713d863becae6d4e8582d0b4dd161494eddeca3760aea249fbfde169aa916",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/playwright.config.ts"
+    },
+    {
+      "path": "scripts/benchmark-pass-7.mjs",
+      "bytes": 3093,
+      "sha256": "fba83007eaefc53cd27de07213dc3aea069b5e8d20c5feee308ee31b18346633",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/benchmark-pass-7.mjs"
+    },
+    {
+      "path": "scripts/capture-pass-7.mjs",
+      "bytes": 13728,
+      "sha256": "3b76cfa53f2d4e6819412c9ec87c53e4e3c0203f4f3cdc46e61a6036ec0e83b9",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/capture-pass-7.mjs"
+    },
+    {
+      "path": "scripts/measure-pass-7.mjs",
+      "bytes": 9549,
+      "sha256": "35a228249fb659c944f0486532a9f455f6fdd1610091d63bd182495fae489315",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/measure-pass-7.mjs"
+    },
+    {
+      "path": "scripts/profile-pass-7.mjs",
+      "bytes": 3369,
+      "sha256": "056891bf2141d9267037a2f8e119210d381623bae4e01f925a1446063e1c0590",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/profile-pass-7.mjs"
+    },
+    {
+      "path": "scripts/render-info.mjs",
+      "bytes": 615,
+      "sha256": "148fc16284d7feff9fa9f169ae5c89a6f322e34f207ce21421920df00d57ca7c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/render-info.mjs"
+    },
+    {
+      "path": "scripts/seal-pass-7.mjs",
+      "bytes": 12089,
+      "sha256": "c109fa8d37642857a1241721b13f80074d621114358b160ee214e6f1600ca977",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/seal-pass-7.mjs"
+    },
+    {
+      "path": "scripts/serve-local-production.mjs",
+      "bytes": 434,
+      "sha256": "3f0fa88c754ef463bd99033ca414fcb08fc4a35de2e5bbcac3826aff749c1b69",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/serve-local-production.mjs"
+    },
+    {
+      "path": "scripts/serve-pass-7-baseline.mjs",
+      "bytes": 993,
+      "sha256": "70dfca88292b5ec2b15fdd320fe89a0cf6bc6a36c65c72d6a7745d22ebc23ef1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/serve-pass-7-baseline.mjs"
+    },
+    {
+      "path": "scripts/smoke-pass-7-production.mjs",
+      "bytes": 6765,
+      "sha256": "e47927626f50a96f4fd27640dbbec9b8b2624060b8ada58ecfcd16448d99e912",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/smoke-pass-7-production.mjs"
+    },
+    {
+      "path": "scripts/validate-vercel.mjs",
+      "bytes": 2391,
+      "sha256": "bba9eb4cd7e8528c678fee9af71bc584d7c9c807149fe17d6b520c35ee2a220a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/validate-vercel.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-7-experience.mjs",
+      "bytes": 17822,
+      "sha256": "e5556ade57e83b1f21134c23457aeab2ef3cca9a1a68ecec8ddb8f86a2f22f5d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-7-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-7-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "dcf786e45dc8fc5741eaa125e4096626af8553d414c85131664a83c98482bd2e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-7-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-7-preview.mjs",
+      "bytes": 1541,
+      "sha256": "37b8e456af7ed3a3adb29c59fe9372490d6f819fb2b32a113e1e3832d8bc792c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-7-preview.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-7-review.mjs",
+      "bytes": 3585,
+      "sha256": "749416b1d361ff77b94240fe1aabc89758445a812e97baf8f4340c3014d2c616",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-7-review.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-7-visibility.mjs",
+      "bytes": 10697,
+      "sha256": "4bde4c660be24c2e9768ce346c3621a6f642277a96bc7533b8cca76b236e4252",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/scripts/verify-pass-7-visibility.mjs"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 4807,
+      "sha256": "cc62fa2184032058858c88ca811d48d0d946831e9bb8b996550a1acd896bda3f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/App.tsx"
+    },
+    {
+      "path": "src/assets/blue-heaven-flower.svg",
+      "bytes": 2786,
+      "sha256": "8badb9a6acc40f5af34e05e933234a0bcb2dc375e327d35c15a1db6c48275b7e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/assets/blue-heaven-flower.svg"
+    },
+    {
+      "path": "src/audio/bridge.ts",
+      "bytes": 278,
+      "sha256": "a200e69fd8b1b94f286fa0f783e8433900ac6073fb39b2490bd4a242ea610069",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/bridge.ts"
+    },
+    {
+      "path": "src/audio/engine.ts",
+      "bytes": 7234,
+      "sha256": "a344aa754bde01b098f6ac9505e33e0213478d91c59793fcaa7de0f11c1f1e64",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/engine.ts"
+    },
+    {
+      "path": "src/audio/music.ts",
+      "bytes": 3105,
+      "sha256": "eb360d6e3a46e6641fa94cf96652a1654df2d0dd3aa3ec41fb2686b0650e08be",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/music.ts"
+    },
+    {
+      "path": "src/audio/nature.ts",
+      "bytes": 4992,
+      "sha256": "64110b82ef817a7c66f5c15dfc3b317aa6970fc671fefb0937192d0107a6d807",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/nature.ts"
+    },
+    {
+      "path": "src/audio/sfx.ts",
+      "bytes": 2554,
+      "sha256": "30871bbdde83b9e8bff58de93d0fb8ac5f08a31ab0a49d3d21bafb90051f119e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/sfx.ts"
+    },
+    {
+      "path": "src/audio/track.ts",
+      "bytes": 3027,
+      "sha256": "c4f7006149f61ecf5f625431c3f556353a097a48b54e78ebd82e55acf9cd6a61",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/audio/track.ts"
+    },
+    {
+      "path": "src/config.ts",
+      "bytes": 278,
+      "sha256": "d8a75acb84b19b759620c82526033aaa388062ef53efc3432bfbeed770890ce4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config.ts"
+    },
+    {
+      "path": "src/config/audio.ts",
+      "bytes": 571,
+      "sha256": "d3fbb3b52a86cf0a42ee5062bad4e7244080707583e59d1d4ba8f347133a60b3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/audio.ts"
+    },
+    {
+      "path": "src/config/companions.ts",
+      "bytes": 4563,
+      "sha256": "86245c3161819cfb632d3b0e900ec96d351935f00d1ed3a47ee1e8e73a445ff0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/companions.ts"
+    },
+    {
+      "path": "src/config/discoveries.ts",
+      "bytes": 461,
+      "sha256": "10179dcb03634fa0c357adce10fb86ac63a8a495c0e7a1c5622c46468016ed61",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/discoveries.ts"
+    },
+    {
+      "path": "src/config/flora.ts",
+      "bytes": 6937,
+      "sha256": "d6732dc2272f33b5167e45f078cc5b675ffbb726fe066c48151260650729ee2b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/flora.ts"
+    },
+    {
+      "path": "src/config/localization.ts",
+      "bytes": 12715,
+      "sha256": "1c7d59ee4d8cb979ea8c4412548e7f83827bf7fa3122f5033d86daa2e4d60cbe",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/localization.ts"
+    },
+    {
+      "path": "src/config/memorial.ts",
+      "bytes": 1576,
+      "sha256": "b55d66d8a5d8a5733f41969829b1e34f71d9d644927475881d8eb3479791ca96",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/memorial.ts"
+    },
+    {
+      "path": "src/config/memories.ts",
+      "bytes": 1587,
+      "sha256": "f082cbd5390104a558c0b2f312c55f87f8685b6ab52dcc639b5c95561beaec09",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/memories.ts"
+    },
+    {
+      "path": "src/config/oscar.ts",
+      "bytes": 1000,
+      "sha256": "a62ba9945199252e1f1c5a8f268153a825acfb0337198256693bd09a8b67f544",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/oscar.ts"
+    },
+    {
+      "path": "src/config/regions.ts",
+      "bytes": 2496,
+      "sha256": "78a12f13afe2485a3ad50395e5f77918421966e0a2866f6a65eef7dcfcff19d1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/regions.ts"
+    },
+    {
+      "path": "src/config/validation.ts",
+      "bytes": 1440,
+      "sha256": "242d331e357cf9b50783bf2b0a088ec8a27b352c61e22ace94f06c25ecd904e2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/validation.ts"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/visual.ts"
+    },
+    {
+      "path": "src/config/world.ts",
+      "bytes": 624,
+      "sha256": "0e101afedf7b991eb759fdd69544297937ddd19e90b0652dc411e17d62867e0e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/config/world.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/StylePrototype.tsx",
+      "bytes": 5593,
+      "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/dev/style-prototype/StylePrototype.tsx"
+    },
+    {
+      "path": "src/dev/style-prototype/assets.ts",
+      "bytes": 10841,
+      "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/dev/style-prototype/assets.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/dev/style-prototype/geometry.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/dev/style-prototype/paint.ts"
+    },
+    {
+      "path": "src/features/animals/Animal.tsx",
+      "bytes": 6164,
+      "sha256": "188ac1a506b7a1f34995bbe594c346f48b507d43cfdf0b66deab0a32ff5cef4c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/animals/Animal.tsx"
+    },
+    {
+      "path": "src/features/animals/Companions.tsx",
+      "bytes": 2964,
+      "sha256": "123f1ff42bd30ae2cb4a0b00a9c3511de39c462b3a469af8930c2e707a58c663",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/animals/Companions.tsx"
+    },
+    {
+      "path": "src/features/animals/geometry.ts",
+      "bytes": 5778,
+      "sha256": "48441cd6188f663ac3c86c005215e87008466fdef6ea1312e6ebf9f4d9bf5d2a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/animals/geometry.ts"
+    },
+    {
+      "path": "src/features/animals/simulation.ts",
+      "bytes": 5863,
+      "sha256": "4c9829bf4e087b6399deff9d563fd767d6a4b09bbab7edca7203a9a91b57e52a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/animals/simulation.ts"
+    },
+    {
+      "path": "src/features/idleClock.ts",
+      "bytes": 756,
+      "sha256": "f6952005c5b21acabcb9008dacb9d94a0b88bf72e284411ab849a708f2b2aee6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/idleClock.ts"
+    },
+    {
+      "path": "src/features/interaction.ts",
+      "bytes": 940,
+      "sha256": "670e8b5225eb6f50460c98cb3b37b1234fe7a5309205ae03b46911ceaa12baf8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/interaction.ts"
+    },
+    {
+      "path": "src/features/oscar/Oscar.tsx",
+      "bytes": 6018,
+      "sha256": "78c0cc9db9bdb2a76435d59d45c980512b8438d836868553ad2696719f73c172",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/features/oscar/Oscar.tsx"
+    },
+    {
+      "path": "src/hooks/useActivity.ts",
+      "bytes": 3141,
+      "sha256": "b5419657b95d6e00652cf0f51ccbf0a3c1da4153778f8fb1acbf6af315754563",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useActivity.ts"
+    },
+    {
+      "path": "src/hooks/useDialog.ts",
+      "bytes": 1703,
+      "sha256": "ad223e9d9fbba62df6e1a29695e53fcfa167c4986c3bf7d484316576b218bdc4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useDialog.ts"
+    },
+    {
+      "path": "src/hooks/usePlayerControls.ts",
+      "bytes": 4425,
+      "sha256": "44bdd16e35e458307e603b1a89bac4bd43e2d56b1fe2878384a9bde5e3133d1d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/usePlayerControls.ts"
+    },
+    {
+      "path": "src/hooks/useProximity.ts",
+      "bytes": 706,
+      "sha256": "19e63875d5450905168616ac95d4315f81b1066bbab76c1b1d9bd487d3c82465",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useProximity.ts"
+    },
+    {
+      "path": "src/hooks/useQuality.ts",
+      "bytes": 367,
+      "sha256": "ecbe9340d6b32557493b25f2589ff6c7c6a5de974ad049898644d26f7a6b537b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useQuality.ts"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.ts",
+      "bytes": 440,
+      "sha256": "31fb0a52ec722b6861de9a64e4193d0bec0ef74acaf3415acf0889463aa197e0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useReducedMotion.ts"
+    },
+    {
+      "path": "src/hooks/useText.ts",
+      "bytes": 174,
+      "sha256": "f2f8e1fda3001406d9f91a1a1b5430e15bef474536a58c69ff1876a852b432a6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/hooks/useText.ts"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 1262,
+      "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/main.tsx"
+    },
+    {
+      "path": "src/persistence.ts",
+      "bytes": 5769,
+      "sha256": "d207b9aa5cd58762aea56f45cd13775e4e01a9953edf8148c6c63c56272874b8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/persistence.ts"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 1730,
+      "sha256": "863ad34191efa3438554ca2f6047e6337b3997817ca419106d6682088499b042",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/ApprovedFoundation.tsx"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 12238,
+      "sha256": "598333ec530b7955e1177df757468b30a1fbe86263f0cfcc5fa8b1ef66ed1e6e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Camera.tsx"
+    },
+    {
+      "path": "src/scene/DevTools.tsx",
+      "bytes": 12111,
+      "sha256": "170143196994b635996923b048a3c0818d792bf5f6abe690baf6630dd8ddcb3d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/DevTools.tsx"
+    },
+    {
+      "path": "src/scene/DevVisualizations.tsx",
+      "bytes": 3046,
+      "sha256": "d8388fd3d8a26dcc18c152f114b4db1fe0b98cb8cfd848cdff7cf615ab57b1c2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/DevVisualizations.tsx"
+    },
+    {
+      "path": "src/scene/Effects.tsx",
+      "bytes": 2727,
+      "sha256": "d7eb0c5fa64525379ef366b0ce0a791727d33dec0b049ffa5a363518318d509e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Effects.tsx"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 7683,
+      "sha256": "b720d2e7768d8e215f335e08fdf96336a9d2f1af51788fc49c8ac849ebbac386",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Flora.tsx"
+    },
+    {
+      "path": "src/scene/ForestDrift.tsx",
+      "bytes": 3392,
+      "sha256": "29b382baa054dffd3b26b0f8795fa2a9b9a3b33337e7329050a160a2c0ccef9c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/ForestDrift.tsx"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "e8e9e3ab605a384ff5c4787330b8e9821404dee99ba4a339006b3cbd6d7699f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Ground.tsx"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 3788,
+      "sha256": "9a94eae6ebe535606d8ff57384d2fb06eb87fdad9a986bd710758e7eb828eb75",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Lighting.tsx"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/MemoryPicture.tsx"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 10018,
+      "sha256": "8371af8635522f81c931230874a1e38638cf8303c9b9362adb1997809ba84b39",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/MemoryTree.tsx"
+    },
+    {
+      "path": "src/scene/Particles.tsx",
+      "bytes": 7223,
+      "sha256": "b263f1eee869e17caf4f5a48e0bc4851b9cf004569d4a8d62cf5f75e38dda5e8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Particles.tsx"
+    },
+    {
+      "path": "src/scene/PlantDiscoveries.tsx",
+      "bytes": 1322,
+      "sha256": "7019e3d2f6a73b16f863e2439631969f763eac3b871a724c8895e68b4c363844",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/PlantDiscoveries.tsx"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 11315,
+      "sha256": "8af8ecff55c2b7f67d7ccff1f8bf5346582654e5c3fcc737b8dc41cf16d0eb60",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Player.tsx"
+    },
+    {
+      "path": "src/scene/Pond.tsx",
+      "bytes": 1436,
+      "sha256": "8cc320c1cd8772d4f8726b195538f4f7f34c8cb5a2b1aa3af7bd06fe9f52f39f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Pond.tsx"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9304,
+      "sha256": "1516cf19f5aaf732fe27126bff1d4fdcad6a3a5bbe310926dbe2ea23090d4bfe",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Scene.tsx"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6783,
+      "sha256": "388a326bd0a0a8a0b42769a599e0e3dbfed3390ebe085fe7346837827400dc1b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/SpeciesFlora.tsx"
+    },
+    {
+      "path": "src/scene/Timeline.tsx",
+      "bytes": 1857,
+      "sha256": "f65d82bf6dad5d74bde7936ae1199cbc7f138f5d47b9111dd04589d9efdb95a8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/Timeline.tsx"
+    },
+    {
+      "path": "src/scene/breeze.ts",
+      "bytes": 1615,
+      "sha256": "7738496de5daf0e05b7b65fc20fc4b5a4cf2171ff57bd60db20a0c7c1f727d66",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/breeze.ts"
+    },
+    {
+      "path": "src/scene/calibration.ts",
+      "bytes": 702,
+      "sha256": "e8c2e4a49e8961a2539468757b877f805bbe72af492c043707866c3b8e11ced4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/calibration.ts"
+    },
+    {
+      "path": "src/scene/clothMotion.ts",
+      "bytes": 3340,
+      "sha256": "49d6c9dcaffed912eca655841b433c7942512e82dbafe6c1e4b72cf956d0f9df",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/clothMotion.ts"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/forestGeometry.ts"
+    },
+    {
+      "path": "src/scene/instanceVisibility.ts",
+      "bytes": 4018,
+      "sha256": "dbdf3e0c766f666903ebdc67abd1f4ba5a6f5202d3bd807fb9c6fa009066622f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/instanceVisibility.ts"
+    },
+    {
+      "path": "src/scene/paintedGeometry.ts",
+      "bytes": 3227,
+      "sha256": "dd1c02a6f6764dd7e8ad6fe839be4db91865ff3a32511334fa5b83e6a63496e8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/paintedGeometry.ts"
+    },
+    {
+      "path": "src/scene/propGeometry.ts",
+      "bytes": 1385,
+      "sha256": "5005820fe3ff63d03b2c56e9a006c502c91b3390b93684aa3b6ce26479fc18f1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/propGeometry.ts"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 7430,
+      "sha256": "6b7a0df1e02cf9ac9db661c33c7079d95e83d4c853d1383e15145b990548a55f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/resources.tsx"
+    },
+    {
+      "path": "src/scene/runtime.ts",
+      "bytes": 675,
+      "sha256": "f44eefa88456a7a111979af6cd626c5d6a9e17670dc76260a7dd3c82f9e461de",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/runtime.ts"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/speciesGeometry.ts"
+    },
+    {
+      "path": "src/scene/travelerGeometry.ts",
+      "bytes": 3641,
+      "sha256": "7349cdd26f7a93023c1bada20eed0963b76bc775bb488f5cbe634992f3fd75ce",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/travelerGeometry.ts"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9901,
+      "sha256": "8e15a770e411fab66cbf37d369686a063c9111cc7d037e4247704ae5cafc9533",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/scene/world.ts"
+    },
+    {
+      "path": "src/shaders/goldenCurrent.ts",
+      "bytes": 3804,
+      "sha256": "1d3bf1869114ab048abd1eee8b6b2774925a4e55203c54299ec7531d2e70fba4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/goldenCurrent.ts"
+    },
+    {
+      "path": "src/shaders/grain.ts",
+      "bytes": 380,
+      "sha256": "bb03775c23d3322785030bcbb56f252e955df6fa76ee60829ed45637dbca56c3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/grain.ts"
+    },
+    {
+      "path": "src/shaders/ground.ts",
+      "bytes": 2973,
+      "sha256": "e9a645124247a4afc1c374279a228b91abb10eec83cf9e371822a17bd436c843",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/ground.ts"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/outline.ts"
+    },
+    {
+      "path": "src/shaders/water.ts",
+      "bytes": 1008,
+      "sha256": "d0069107d7bf8ffcf157f521371540891e730579e6149dc4da6f4a67eb581fc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/water.ts"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 6535,
+      "sha256": "345ef15f1a65914266ee463c8c46d6fc7a25454ad4bb120477ea3d289b3eb86d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/shaders/wind.ts"
+    },
+    {
+      "path": "src/store.ts",
+      "bytes": 12431,
+      "sha256": "a81d930b54c7ff1a5988fc7572d43c8b53c4bb0a08ebae52b04bc00be64b3370",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/store.ts"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/styles.css"
+    },
+    {
+      "path": "src/textures/memoryArt.ts",
+      "bytes": 6806,
+      "sha256": "a718ad3a0209cf01c09854e21dc347561fc213ab8f19c4a316e8aeb7e49acf47",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/textures/memoryArt.ts"
+    },
+    {
+      "path": "src/textures/paintTexture.ts",
+      "bytes": 4066,
+      "sha256": "1cc5c5276334080f96011c984fe6a23f37070c2946febdcd07dd2da19e37e7ba",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/textures/paintTexture.ts"
+    },
+    {
+      "path": "src/ui/BrandLogo.tsx",
+      "bytes": 402,
+      "sha256": "0540c33fff34095f884fd8608fceff9eae40159e638e7eeb0f7f68fbd09a932e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/BrandLogo.tsx"
+    },
+    {
+      "path": "src/ui/CompanionPortrait.tsx",
+      "bytes": 1867,
+      "sha256": "80d61aa7111d35e06190cd13441a25f06e857c7358b19447c896306a92e30bb4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/CompanionPortrait.tsx"
+    },
+    {
+      "path": "src/ui/Compass.tsx",
+      "bytes": 1437,
+      "sha256": "2218f9d0b9f5f69eb56455901248e4032caa558a3b58d7f9ca6276722fc53c74",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Compass.tsx"
+    },
+    {
+      "path": "src/ui/CustomTrackSetting.tsx",
+      "bytes": 1147,
+      "sha256": "d63438986ab364855fdd5b458b45b6fa744eee190544b78a5933a2cbc6fc4978",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/CustomTrackSetting.tsx"
+    },
+    {
+      "path": "src/ui/Dedication.tsx",
+      "bytes": 2783,
+      "sha256": "2f3abf4f0f98a213d8d1e63c9df0d587a0542cda5358df3d5cddca2aee6e600e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Dedication.tsx"
+    },
+    {
+      "path": "src/ui/FieldGuide.tsx",
+      "bytes": 3064,
+      "sha256": "a79ae260af80f977672cc7e800be3c7613202f7b9fbe7816714387eb174b345b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/FieldGuide.tsx"
+    },
+    {
+      "path": "src/ui/Finale.tsx",
+      "bytes": 1382,
+      "sha256": "1d09b06eb8e3fe09e253c1bc5358e2eaec42cb06dab2e749c586c5171b9288d0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Finale.tsx"
+    },
+    {
+      "path": "src/ui/Hud.tsx",
+      "bytes": 5717,
+      "sha256": "a1041cf48ada0037e2b30bc4ad508f2f1b90d90bd2536d62b90327032181deab",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Hud.tsx"
+    },
+    {
+      "path": "src/ui/Icons.tsx",
+      "bytes": 1580,
+      "sha256": "4fa7aa15beb62a07def33f6a40011fdebabc4f798ee1e8be5bdecb9981fc1a97",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Icons.tsx"
+    },
+    {
+      "path": "src/ui/IdleRest.tsx",
+      "bytes": 609,
+      "sha256": "b1c6ad486aed7cbc6e7de4691301160563485b776484234827d1c378170d4f4d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/IdleRest.tsx"
+    },
+    {
+      "path": "src/ui/Intro.tsx",
+      "bytes": 816,
+      "sha256": "9dae6af61d5bb2fef1db80b919d58d45c66bd72ec162d629b787df6c0a39cfc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Intro.tsx"
+    },
+    {
+      "path": "src/ui/Journal.tsx",
+      "bytes": 7730,
+      "sha256": "8d037b0b676d445cb46903d5b6e4443270bd5c9b96564c09965931d16ec769ab",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Journal.tsx"
+    },
+    {
+      "path": "src/ui/LanguageSwitch.tsx",
+      "bytes": 510,
+      "sha256": "af54dd85ff01e2646dae09361283f863c643f4f171ca3c943396acd0d0130a97",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/LanguageSwitch.tsx"
+    },
+    {
+      "path": "src/ui/LoadingScreen.tsx",
+      "bytes": 953,
+      "sha256": "1c0fbfc99259c87d123aa06e70e28928f8db61ee401c9781b3772ed9004a2293",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/LoadingScreen.tsx"
+    },
+    {
+      "path": "src/ui/MemorySlots.tsx",
+      "bytes": 1435,
+      "sha256": "44740a4afbe6d245eeabd8dd3271b7d0dbc96e03d87eaac89421a7baa07c463d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/MemorySlots.tsx"
+    },
+    {
+      "path": "src/ui/NearbyCompany.tsx",
+      "bytes": 1930,
+      "sha256": "9bcf142c47f1d974cd5e308181b3feec44723aac359d42777063d4dcd967cacc",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/NearbyCompany.tsx"
+    },
+    {
+      "path": "src/ui/OscarDialogue.tsx",
+      "bytes": 1097,
+      "sha256": "88c2d3ab710c908ba3f959d9735c9f9fed5b4bbd2bfda9a88ae84975121caae6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/OscarDialogue.tsx"
+    },
+    {
+      "path": "src/ui/PauseMenu.tsx",
+      "bytes": 5976,
+      "sha256": "4a1af2089eecc5bdf316b34d2dc9eee5bb26085d2d2e62d2889c4a5aeaee6ded",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/PauseMenu.tsx"
+    },
+    {
+      "path": "src/ui/PlantSilhouette.tsx",
+      "bytes": 3925,
+      "sha256": "ef325dd8b2072936abd8b09b88ff88505b1cad36e9eb0e6fd2be09680a2121a3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/PlantSilhouette.tsx"
+    },
+    {
+      "path": "src/ui/TitleBackdrop.tsx",
+      "bytes": 4875,
+      "sha256": "11f77c986cfe9222f31bc5b12685ceb8ca0303b1a15cb5992da58aeb509ea7b8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/TitleBackdrop.tsx"
+    },
+    {
+      "path": "src/ui/TitleScreen.tsx",
+      "bytes": 2630,
+      "sha256": "ab4b5c8b3fe549577466285374fd5f3bfdffebe744bd685a5c8f29cc44901b23",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/TitleScreen.tsx"
+    },
+    {
+      "path": "src/ui/Toasts.tsx",
+      "bytes": 2582,
+      "sha256": "a49bedf6a66cfc25841b93c374563b6bba41d49c426b3ade13949bc9e4d6c3b0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Toasts.tsx"
+    },
+    {
+      "path": "src/ui/TributeInscription.tsx",
+      "bytes": 396,
+      "sha256": "a363ff2bc51f4d3e7aff85106a221cc171446adee92858333313135bad621baf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/TributeInscription.tsx"
+    },
+    {
+      "path": "src/ui/Viewer.tsx",
+      "bytes": 4216,
+      "sha256": "84c8e5c499d8fe052a3aa7192435e1a6396b107f31ddf90fe2668c5b4a0b6e6a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/ui/Viewer.tsx"
+    },
+    {
+      "path": "src/utils/chunks.ts",
+      "bytes": 2018,
+      "sha256": "6bc1007740348425f8f38ae60b5eb64763896f57716eded2df0d63e4eb520172",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/utils/chunks.ts"
+    },
+    {
+      "path": "src/utils/placeholders.ts",
+      "bytes": 1144,
+      "sha256": "d5b3766341a90bcee3adb2e4732af862b174f6148633604c9fe2cc4205b9a7cf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/utils/placeholders.ts"
+    },
+    {
+      "path": "src/utils/progress.ts",
+      "bytes": 744,
+      "sha256": "1dbf6cd628bda307cc7cc86f2d38ff8e699411b9c430a55d9165cafcef8e54f4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/utils/progress.ts"
+    },
+    {
+      "path": "src/utils/random.ts",
+      "bytes": 716,
+      "sha256": "6131c88bfa9ca07201483f74d2f2e0090c61102ae9c95bbb6a648c95493c45f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/utils/random.ts"
+    },
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/approved/assets.ts"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/approved/geometry.ts"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/approved/paint.ts"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/forestPaint.ts"
+    },
+    {
+      "path": "src/visual/heroClearance.ts",
+      "bytes": 1691,
+      "sha256": "ab4f83d7cca9d83fbafe6bedb1f75ac771bf9048f14bd63b97445cde0fa99393",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/heroClearance.ts"
+    },
+    {
+      "path": "src/visual/landscapePaint.ts",
+      "bytes": 5914,
+      "sha256": "fd9b161621f1e504370e89b24bb9bee64948825e681836abb502c95bda8b3f1b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/landscapePaint.ts"
+    },
+    {
+      "path": "src/visual/memoryCurrent.ts",
+      "bytes": 6114,
+      "sha256": "19a695eb723ac309718307cef83e45da30bffd3764fbe276e282d8b7bced071d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/memoryCurrent.ts"
+    },
+    {
+      "path": "src/visual/paintedSurface.ts",
+      "bytes": 1619,
+      "sha256": "9e1a080736624f0567e66a667e0a78407b2765bc03d285b8f5d03444051d0c81",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/paintedSurface.ts"
+    },
+    {
+      "path": "src/visual/propPaint.ts",
+      "bytes": 2450,
+      "sha256": "155613384550846aea8c9196f1686d914e8f9ad240111d413c56d1ba723aea6b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/src/visual/propPaint.ts"
+    },
+    {
+      "path": "tests/audio-mixer.spec.ts",
+      "bytes": 3748,
+      "sha256": "6c968334041e6dd8b6181d771d0e32b8d0ea21ea679b7fdb9d8bb4ccd7ab9ec2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/audio-mixer.spec.ts"
+    },
+    {
+      "path": "tests/audio.spec.ts",
+      "bytes": 9312,
+      "sha256": "b2bf0a974a637ffaf5bab4e28e20f9f42d6004c0fee33e8a27651e9a0d54948a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/audio.spec.ts"
+    },
+    {
+      "path": "tests/compact-ui.spec.ts",
+      "bytes": 3315,
+      "sha256": "4e65649a36ec3905900de84c4bf101fe3e20436f99e4ecf6d8e05c58a676c61f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/compact-ui.spec.ts"
+    },
+    {
+      "path": "tests/companions.spec.ts",
+      "bytes": 1391,
+      "sha256": "1962815a6214ef73187e1b17e96aa1d8a55f5cac1c4b66e829cb2d8ee4afe910",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/companions.spec.ts"
+    },
+    {
+      "path": "tests/composition.spec.ts",
+      "bytes": 12210,
+      "sha256": "409ec31eda4b9a98cefeb3d82140bd5deb1e137b5ee96bd5d93a4ed8b4b1888d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/composition.spec.ts"
+    },
+    {
+      "path": "tests/content-and-migration.spec.ts",
+      "bytes": 9134,
+      "sha256": "35bba14dea5f0cc879df4145ab78bfaf3c5c77f96153e8a300a05aa3b771ecb4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/content-and-migration.spec.ts"
+    },
+    {
+      "path": "tests/experience.spec.ts",
+      "bytes": 8842,
+      "sha256": "3977b3bb9b85906cb01d633b82f7da816ba1f6a57004bdf6c4e49e589591d2c6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/experience.spec.ts"
+    },
+    {
+      "path": "tests/flora-guide.spec.ts",
+      "bytes": 6035,
+      "sha256": "44cca1a0bb2b786e9428f48b050a1123658a2bc782924c3e7715cf6ec86c5b1b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/flora-guide.spec.ts"
+    },
+    {
+      "path": "tests/idle.spec.ts",
+      "bytes": 3016,
+      "sha256": "247e38d62d8dbf9bc7d1908af9c68aadaeaea3a08040ff0b0cd49e9ba737c36a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/idle.spec.ts"
+    },
+    {
+      "path": "tests/journal.spec.ts",
+      "bytes": 3514,
+      "sha256": "ef00b097a26c6c5bcf235dfefd25d3b579a3848f8811ca44be80ed55b8618fdf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/journal.spec.ts"
+    },
+    {
+      "path": "tests/loading-and-hints.spec.ts",
+      "bytes": 7624,
+      "sha256": "65f8392b3deb5d5f9f60e79a5ba834c9d3acb4b2f2e159d34e72bdd212e62f8d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/loading-and-hints.spec.ts"
+    },
+    {
+      "path": "tests/nearby-company.spec.ts",
+      "bytes": 3078,
+      "sha256": "b0269417d78cd5527c286293161c59c7e6add83c53b98fb4f5ededb4bef306f1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/nearby-company.spec.ts"
+    },
+    {
+      "path": "tests/oscar.spec.ts",
+      "bytes": 2781,
+      "sha256": "33add16d04789d4df3725e211d70ee0e17f440d527f70814879cfc55270d0250",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/oscar.spec.ts"
+    },
+    {
+      "path": "tests/painted-forest.spec.ts",
+      "bytes": 4702,
+      "sha256": "2dffb627eb4869cc06894fd377adb973192babf9a8b100422067844661644e80",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/painted-forest.spec.ts"
+    },
+    {
+      "path": "tests/painted-trees.spec.ts",
+      "bytes": 4326,
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/painted-trees.spec.ts"
+    },
+    {
+      "path": "tests/persistence.spec.ts",
+      "bytes": 11293,
+      "sha256": "2da691f0dfcec80a7e48e305be1e6b33710f6fc95aa2fcb23968e57917b50dfc",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/persistence.spec.ts"
+    },
+    {
+      "path": "tests/robustness.spec.ts",
+      "bytes": 2763,
+      "sha256": "63e8ea6cf2e4dcf992028d5d9e5e6c0d99e89ee514354c64c110d745a67c03d9",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tests/robustness.spec.ts"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 510,
+      "sha256": "53ff85d717be27e224fbde12c9297a63443d81ba55c1fa501af391fe38b9acae",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/tsconfig.json"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 636,
+      "sha256": "7c0579127b2dc70592bb93b3c1acc95c0ff7bc49a915327ad6e71df9d74a54a2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/vercel.json"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 196,
+      "sha256": "f2de674d90f68188e2547039865510537347356c0cb10c40f6a85c7a27a0c4f9",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/reviewed-source/vite.config.ts"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/captures.json",
+      "bytes": 170140,
+      "sha256": "4181c594b430ea4053d626690a54efb4317d81c218414871bc9cc01c87bc1064"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2055191,
+      "sha256": "882660b3d39a0ba8fb1709af9cf85192ef72e3f786a0506419dec0a5181e027d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-0-320x568.png",
+      "bytes": 212022,
+      "sha256": "aeebea560e2dbda23f2f39f3ffd5ad4266fd1abc1fdc0a8538efa953348ef87d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 378858,
+      "sha256": "bcf715e89da3e57a481849580db5ffd63e8440c82e45a994a1e71c80ddb01354"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-0-844x390.png",
+      "bytes": 401841,
+      "sha256": "30a290a8e7378e575c7ac28629a34eb2ced4120afd3a3c69c95b851333666ddb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2072299,
+      "sha256": "d372e0fea5aae44447fe3b14c65960f3f7febbd0db7952a0acbc8208b7fdf4f4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-8-320x568.png",
+      "bytes": 218708,
+      "sha256": "22c9c7257a95a3604f12acea5afc96b976382d82426be54e467457a1eda4859e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 389442,
+      "sha256": "27bf9b6034dc26964cf98e49d2d32cb4ff79e690900208a2046f4dc4d2389704"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-8-844x390.png",
+      "bytes": 407635,
+      "sha256": "eb86f7c92e86e9e268f8c5ea9dfa2cd1485dcc025eb021084f5f385245ab97c6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1960722,
+      "sha256": "7b216e1fd322bfd6bcc9e495cf10f59fd58ebc7b3ec8b3e40a9a2d7ff5df4fca"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-side-8-320x568.png",
+      "bytes": 218220,
+      "sha256": "fa7e0580522ff2a90f684ab67e470d67aea8b7128df8fbe56a9c7b5463dd27b3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 400817,
+      "sha256": "043bfbe65dfe294501edaa0d708ce74084009206172314110ef60a11f72b1aec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-clearing-side-8-844x390.png",
+      "bytes": 399472,
+      "sha256": "4ddd72ffcc6d5b965ef974e97ea9d64b800496757519ed7890c29c644dab0999"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1504410,
+      "sha256": "311124bddd9f9d2953deb490654c38bb0590832aac01aa9c6ead8c4625ff8058"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-deep-forest-0-320x568.png",
+      "bytes": 190244,
+      "sha256": "817486923b9bb49e2c4cfe741d76e0424c47b9ef8da44f10614f2046b8ed731a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 308444,
+      "sha256": "8b59a8948f1c783a58d050600efefa1982e823654502a8a91a90cdf4a522c236"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-deep-forest-0-844x390.png",
+      "bytes": 370369,
+      "sha256": "be6c37e8519008dbd97aaf2ddf78170d366886ab6a52688733a747da1f706700"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1567404,
+      "sha256": "8d612b289b9193aa51b2679435ba1ef95a15b23afe492dab4e7d4e3d4f0f6448"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-grove-8-320x568.png",
+      "bytes": 209400,
+      "sha256": "821c1865eb8ae31740d2cf11a1b63269412bf737577d780a655360aeec5eaede"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-grove-8-390x844.png",
+      "bytes": 351560,
+      "sha256": "bd5c6bb4b61151140be842ee34902c892fa2200c52fa433df6b77c3d7f74be27"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-grove-8-844x390.png",
+      "bytes": 381279,
+      "sha256": "98e73306cbe0e4022de7ddc1025e451f7a7d8d67866d53178cefd72c48ece421"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1619583,
+      "sha256": "96bedbeb66e25c0827733da27e9e632c1978d58f857f29ab94e98c1276ac7016"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-pond-8-320x568.png",
+      "bytes": 146802,
+      "sha256": "e284cacd8ee1f76043fe3262e9ada2997abef446e9a23938ff8228a2f8ee3b4f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-pond-8-390x844.png",
+      "bytes": 240716,
+      "sha256": "2bb7decac785d3189079b5b1c6e7b2f3d8605fc120f4d4927d90382626c958f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-pond-8-844x390.png",
+      "bytes": 365435,
+      "sha256": "df7b083af5c07778d8834a6a4c33b634be6b39fa17c65e32014adf6345f49c7c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1990413,
+      "sha256": "5131765fe9886c4d3904a8fcbc5f001b140e384924d53ae3303a9e3d30dedad0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-tree-return-8-320x568.png",
+      "bytes": 221244,
+      "sha256": "6dafb010d12a4bd653194197141adacf9f7548870bda8e2c45ff45a4679e77cf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 384638,
+      "sha256": "488e2181fd758202e083be06de795250c7d6426ea01e2ff83a012bea8d09dbf3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-tree-return-8-844x390.png",
+      "bytes": 401345,
+      "sha256": "c4522d8b02f0067da59ffbeb95a78da2513406a55ddcfe9b13e4ec1fac0c9df4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1922133,
+      "sha256": "522946d08399b9295fc499eb7bfe2a49f247bf124f87ed3c710219846e419807"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-woodland-0-320x568.png",
+      "bytes": 251085,
+      "sha256": "61700280e75d43e2893eafbd578babec9ba93b4e47df765d19a83cc926eb0dda"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 434877,
+      "sha256": "31796c5376975613648a95c9f234062a5e7de36b15fe12a92e58dbf46699ea1d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/after/iteration-01/live-woodland-0-844x390.png",
+      "bytes": 397626,
+      "sha256": "b818c61f4bd0f3203d074197fb3c288bafb140def592b1d2e516f1ee190bde26"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/baseline.json",
+      "bytes": 53186,
+      "sha256": "a12c96f8046334dcdc5c092e62056cc1c9eaa8e291ef2f601bd92dafe225c00f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/captures.json",
+      "bytes": 170191,
+      "sha256": "de4da7028616ddd3ad7cea0f370e33f3dbad31ed5bf43900717edb73ac85c881"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2055191,
+      "sha256": "882660b3d39a0ba8fb1709af9cf85192ef72e3f786a0506419dec0a5181e027d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-0-320x568.png",
+      "bytes": 212022,
+      "sha256": "aeebea560e2dbda23f2f39f3ffd5ad4266fd1abc1fdc0a8538efa953348ef87d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 378858,
+      "sha256": "bcf715e89da3e57a481849580db5ffd63e8440c82e45a994a1e71c80ddb01354"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-0-844x390.png",
+      "bytes": 401841,
+      "sha256": "30a290a8e7378e575c7ac28629a34eb2ced4120afd3a3c69c95b851333666ddb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2072299,
+      "sha256": "d372e0fea5aae44447fe3b14c65960f3f7febbd0db7952a0acbc8208b7fdf4f4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-8-320x568.png",
+      "bytes": 218708,
+      "sha256": "22c9c7257a95a3604f12acea5afc96b976382d82426be54e467457a1eda4859e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 389442,
+      "sha256": "27bf9b6034dc26964cf98e49d2d32cb4ff79e690900208a2046f4dc4d2389704"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-8-844x390.png",
+      "bytes": 407635,
+      "sha256": "eb86f7c92e86e9e268f8c5ea9dfa2cd1485dcc025eb021084f5f385245ab97c6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1960722,
+      "sha256": "7b216e1fd322bfd6bcc9e495cf10f59fd58ebc7b3ec8b3e40a9a2d7ff5df4fca"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-side-8-320x568.png",
+      "bytes": 218220,
+      "sha256": "fa7e0580522ff2a90f684ab67e470d67aea8b7128df8fbe56a9c7b5463dd27b3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 400817,
+      "sha256": "043bfbe65dfe294501edaa0d708ce74084009206172314110ef60a11f72b1aec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-clearing-side-8-844x390.png",
+      "bytes": 399472,
+      "sha256": "4ddd72ffcc6d5b965ef974e97ea9d64b800496757519ed7890c29c644dab0999"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1504410,
+      "sha256": "311124bddd9f9d2953deb490654c38bb0590832aac01aa9c6ead8c4625ff8058"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-deep-forest-0-320x568.png",
+      "bytes": 190244,
+      "sha256": "817486923b9bb49e2c4cfe741d76e0424c47b9ef8da44f10614f2046b8ed731a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 308444,
+      "sha256": "8b59a8948f1c783a58d050600efefa1982e823654502a8a91a90cdf4a522c236"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-deep-forest-0-844x390.png",
+      "bytes": 370368,
+      "sha256": "22dc22b88024e7fcaad30779dd9dce2d2dc9ca2ab92d2425ae9d9d0e584e2d65"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1567404,
+      "sha256": "8d612b289b9193aa51b2679435ba1ef95a15b23afe492dab4e7d4e3d4f0f6448"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-grove-8-320x568.png",
+      "bytes": 209400,
+      "sha256": "821c1865eb8ae31740d2cf11a1b63269412bf737577d780a655360aeec5eaede"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-grove-8-390x844.png",
+      "bytes": 351560,
+      "sha256": "bd5c6bb4b61151140be842ee34902c892fa2200c52fa433df6b77c3d7f74be27"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-grove-8-844x390.png",
+      "bytes": 381279,
+      "sha256": "98e73306cbe0e4022de7ddc1025e451f7a7d8d67866d53178cefd72c48ece421"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1619583,
+      "sha256": "96bedbeb66e25c0827733da27e9e632c1978d58f857f29ab94e98c1276ac7016"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-pond-8-320x568.png",
+      "bytes": 146802,
+      "sha256": "e284cacd8ee1f76043fe3262e9ada2997abef446e9a23938ff8228a2f8ee3b4f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-pond-8-390x844.png",
+      "bytes": 240716,
+      "sha256": "2bb7decac785d3189079b5b1c6e7b2f3d8605fc120f4d4927d90382626c958f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-pond-8-844x390.png",
+      "bytes": 365435,
+      "sha256": "df7b083af5c07778d8834a6a4c33b634be6b39fa17c65e32014adf6345f49c7c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1990413,
+      "sha256": "5131765fe9886c4d3904a8fcbc5f001b140e384924d53ae3303a9e3d30dedad0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-tree-return-8-320x568.png",
+      "bytes": 221244,
+      "sha256": "6dafb010d12a4bd653194197141adacf9f7548870bda8e2c45ff45a4679e77cf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 384638,
+      "sha256": "488e2181fd758202e083be06de795250c7d6426ea01e2ff83a012bea8d09dbf3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-tree-return-8-844x390.png",
+      "bytes": 401345,
+      "sha256": "c4522d8b02f0067da59ffbeb95a78da2513406a55ddcfe9b13e4ec1fac0c9df4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1922134,
+      "sha256": "def799bd9895424a2d01f6c4da2d199626c828d93f7000a3407681293c81d387"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-woodland-0-320x568.png",
+      "bytes": 251085,
+      "sha256": "61700280e75d43e2893eafbd578babec9ba93b4e47df765d19a83cc926eb0dda"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 434877,
+      "sha256": "31796c5376975613648a95c9f234062a5e7de36b15fe12a92e58dbf46699ea1d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/before/iteration-01/live-woodland-0-844x390.png",
+      "bytes": 397629,
+      "sha256": "18c1c7b88be0b5dc5e053027a2af94f9866a63893053efd726291f1ab3c0f98a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/build-verification.json",
+      "bytes": 688,
+      "sha256": "017a1c3035fa5640a924eb6ab48f7b4a21e4ff34c429867c16d828d0a9d9cfef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/documentation-cleanup.json",
+      "bytes": 30090,
+      "sha256": "67d0b64e4cb7a2ce5caf339f8a347141aa6f95daba30cb2a43c2b76e8e9e8677"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-bamboo-medium.json",
+      "bytes": 2072,
+      "sha256": "7d7f57fc283c9c161e3f4dcf563f9f97ad9234bb4b14a6814dcdf35b1869af9a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-clearing-high-complete.json",
+      "bytes": 2057,
+      "sha256": "e83e338ec8a9c990f9d30b5ee0ae2111951e9201cf080a0723021bda47ea0588"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-clearing-low.json",
+      "bytes": 2061,
+      "sha256": "7835fd1cf06db718bb076d10007ae1acee0abee2fae62c76e6ac463522e2b2dd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-clearing-medium.json",
+      "bytes": 2065,
+      "sha256": "90295c74cf89c66d7b11321ed3190bc99eb0e0ee91f5092bcd58245f75a574e4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-low-initial.json",
+      "bytes": 2064,
+      "sha256": "8740ba8e19056276a6fc9491280ad9971f2be26b37623794faacd2e03edaa403"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-pond-low-complete.json",
+      "bytes": 2072,
+      "sha256": "6ecc08c8f013730dee72600de37e8ff83e07cf70f40af8cf644af8943085b97e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-after-portrait-low.json",
+      "bytes": 2062,
+      "sha256": "d0af1da75f47adaff063e09cd31d4c88b716f596b2ea54b2ea73bcc6188ff218"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-bamboo-medium.json",
+      "bytes": 2076,
+      "sha256": "7eccc1d1e8dd8c39eb2e533d326f05c7dbbc79c842d6749cf7144f201ec0d6af"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-clearing-high-complete.json",
+      "bytes": 2070,
+      "sha256": "8ddbc1404d2048b43816f1e4362e181f8c71280bba78c954d1ecef20db850798"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-clearing-low.json",
+      "bytes": 2061,
+      "sha256": "67c9f58eb9967b347acaa689c74e323a896b57d8893501cf21f7a3a2d722bd38"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-clearing-medium.json",
+      "bytes": 2068,
+      "sha256": "99b2b7ff45ca28d9d28b7e7171cfe8abc110232828c52b6942db294bb139ce5b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-low.json",
+      "bytes": 2063,
+      "sha256": "0ed9a319cd316268e5d4e64ddaecb424353d9ba0125ed2f8b5b8ba93f237a293"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-pond-low-complete.json",
+      "bytes": 2071,
+      "sha256": "918656c2b5e2e225963189d86fb401bc16a3a77c6aa905b8f9e9d52dee3ddc76"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance-before-portrait-low.json",
+      "bytes": 2064,
+      "sha256": "c867497c64a29159377b1dbb424fc2ef0dc7428ba31f6d6706a55a72e83ee89b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/performance.json",
+      "bytes": 29943,
+      "sha256": "4a6cd057d80d064b1a862b15658a5c0f46091c49fb63211cde717eaf86b19ff4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/profile-before.json",
+      "bytes": 32142,
+      "sha256": "427385a0b379635d57b64ee905d292da251e947838e7a4c95bd0f7c1bd8bfb8a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/source-verification.json",
+      "bytes": 3880,
+      "sha256": "f9c972f369672353fbd45d511653c083eba5fa9e23ffab3f480f2ba15b3b4db6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/tools-cleanup.json",
+      "bytes": 17665,
+      "sha256": "467a4e4dd1d3c5b5979bd1198944a1885f3bbee58ca605325955667ec8e45bba"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/validation.json",
+      "bytes": 3228,
+      "sha256": "f6685c86e0ac92d4318072ef3dcffa1b1a41f3ff5dbf9fc4b5c73285e4a67d12"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/camera-walk-contact-sheet.jpg",
+      "bytes": 84682,
+      "sha256": "101185f3d736514feb3caf09622d0feaa1e6356505188f0a9a61fc3695b86808"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/camera-walk.webm",
+      "bytes": 1280081,
+      "sha256": "0724eb7bb10552e48753a5037d25878d167d871cf0fb72d2579ce815083d5d5e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/capture-readiness-error.md",
+      "bytes": 444,
+      "sha256": "1bd81e9de9675a8ccabc13b53c41ee6a1291b8fbcec1b6ef6edaf300d281a7be"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/cleanup-unit-tests.json",
+      "bytes": 18150,
+      "sha256": "6a95658584379af1816ba7c09cfc762c71302c36b7ed1b95965dd1b4a699e38a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/lifecycle/latest-cycle.json",
+      "bytes": 451,
+      "sha256": "1388298a81da811aea3a09e8b48cf61d28cb2b3f9ecb8f0aa51fee4867f2ff4f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/lifecycle/verification.json",
+      "bytes": 6068,
+      "sha256": "b05a4c4e6ba98b60095d1b6ca1634b039f7280f5fc7db661edfec64c6cae62b0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/local-preview.json",
+      "bytes": 4753,
+      "sha256": "fb0bbfcb9927c3e1248661b6a1f854026eabfcfce5056e1d4e99dc494ddea09c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/motion-raw/page@906197f6c8bc0d6459fe99162763f41e.webm",
+      "bytes": 9044750,
+      "sha256": "9a7e3351f3ad5799b11c9773bc3023633477178a694189c2d6d6d468b00c447d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/motion-verification.json",
+      "bytes": 20903,
+      "sha256": "0bf9f3cb4b37859957bc0a94b252e219545889a14624f2c591caa126cfae645f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/normal-motion-end.png",
+      "bytes": 629293,
+      "sha256": "2d9326431a7c39ffb9e5e9e528d0a33ba65acd5fa6f57cc28862f0f325b6fa0b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/playwright.json",
+      "bytes": 20033,
+      "sha256": "1a57bbe65e89fad38febcdda3de8184ebc192e16e9d945c1fd998cfc1bea815e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-1918x918.png",
+      "bytes": 2076598,
+      "sha256": "52c0fc7fc188a2fd929e9428e1f3d1210ab61b635cf4569cb4627b144c51e76c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-320x568.png",
+      "bytes": 219470,
+      "sha256": "321b631ab1b2ab30fa3a31bed1fe76d34528571c01df422b29a5064a176cdafa"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-844x390.png",
+      "bytes": 410772,
+      "sha256": "7243f53c0d45dd5b57a2799c755b732db9641b5af8f5e6ca82fc6ec4a8cefd1f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-smoke-editor-preview.json",
+      "bytes": 1663,
+      "sha256": "8dba6fd24e2c7fafde10cad0c0446d5815e266f7aa539a11a31dc8c0953218b6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-smoke/forest.png",
+      "bytes": 835537,
+      "sha256": "0cac1370c47625d21684da1a0988a283d532e2e75b5fba8be53c5d82b05481d7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-smoke/verification.json",
+      "bytes": 1663,
+      "sha256": "dd962673d9f93360cfe5c649261101c2b1c1c6a813cd51a0929c7a22592ceea8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-verification-editor-preview.json",
+      "bytes": 490,
+      "sha256": "958f39db7de012ccc9e8052088071c91468b5610371755590c37c35158e8c80b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/production-verification.json",
+      "bytes": 490,
+      "sha256": "d2adfd90ef4a42bf21b6c31170a79613d6d5e0ff07a4879c37b7c71e1831442b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/review-desktop.png",
+      "bytes": 1490122,
+      "sha256": "3ea824419f553cffb6089dba82849c89152e993325d0386f8e5bf8a85d77db1f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/review-phone.png",
+      "bytes": 475830,
+      "sha256": "9240e47b73913fd687519bad03a3bc7378d05633fa0820b77abffe1404ea22c1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/review.json",
+      "bytes": 226,
+      "sha256": "d79e0dd3f4e6982a75a71de9014713d7d78c1e2d99e56c61b72a061e87bbcf48"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/visibility-before-memory-bounds.json",
+      "bytes": 64507,
+      "sha256": "07896cdf2e91a64f5fc95e69faaac4beb639c69c86277bcbc174797f51bcbdea"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-7/verification/visibility.json",
+      "bytes": 64489,
+      "sha256": "36ee2aac513494624130b53f31810c5bc89b7f73a3c816327a015a91f12cfe95"
+    }
+  ],
+  "productionFiles": [
+    {
+      "path": "dist/assets/FieldGuide-orVL8cY5.js",
+      "bytes": 4526,
+      "sha256": "3dfa298f707b3b36fd04427deca1233f12adea7bf824ad22252ee01bba9a3f1d"
+    },
+    {
+      "path": "dist/assets/Journal-C2G5Eejh.js",
+      "bytes": 5201,
+      "sha256": "7e5050c6807d6752f5f63652629acf3c87683e0120f3f227082390d582b91227"
+    },
+    {
+      "path": "dist/assets/OscarDialogue-CwmXj5Ji.js",
+      "bytes": 741,
+      "sha256": "4ba833435bd2cb4af7861bd0fbc918b647951b7d6620e556fd5c8b35e809e69f"
+    },
+    {
+      "path": "dist/assets/Scene-Czx1bhTO.js",
+      "bytes": 939587,
+      "sha256": "addc5f95c8ec0a401606d5a4aeaa15e18c2487bd28fdcb9f4e5f02896d36460e"
+    },
+    {
+      "path": "dist/assets/engine-DHpoh1PL.js",
+      "bytes": 263704,
+      "sha256": "6d08255d0ce0a374f4f6b256f38bc223452ec7a6b4da5f4d68bcaa2831a66805"
+    },
+    {
+      "path": "dist/assets/flora-CDe2SlT-.js",
+      "bytes": 5295,
+      "sha256": "710cc8fbcd079eb510618cc7694b19cc7170aee2de88a39c7222c3cf253ca95e"
+    },
+    {
+      "path": "dist/assets/index-Bxz-AyIC.js",
+      "bytes": 213530,
+      "sha256": "ebcaee97c5b9b287703c478b40b539509f3412ccccb309810c82bbc029b9adc3"
+    },
+    {
+      "path": "dist/assets/index-Fa0NSu9_.css",
+      "bytes": 28990,
+      "sha256": "fc9cd2d59b3f4828ebb73f3843c900160a6534ce32a091eea9d513fe7d1d7458"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-BVbkICAY.woff",
+      "bytes": 18336,
+      "sha256": "6d0b022af858becb27f1a033de5d3c0604fc6f2191a7f3ff4dba5d3515e95051"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-C2je3j2s.woff2",
+      "bytes": 11604,
+      "sha256": "290e6267dd833bf5f899eba4c29ad0a9b09dbe53f6075b18af38057159e1ff20"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-CFCUzsTy.woff",
+      "bytes": 9860,
+      "sha256": "1719ae18b98d033d2555f5a5971a30f5bb610ed849fc5a1119fe39db6d40eb3e"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-a.mp3",
+      "bytes": 4051183,
+      "sha256": "b4d2a9ff1fc4ac985839e3666d5c0e445d02abfe39dd0b04ce1b7fcba6be25f5"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-b.mp3",
+      "bytes": 4051183,
+      "sha256": "75a4143cea85d2945bb28cefa24644a7365a74d4003ec86fa4b342f0039e8046"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-c.mp3",
+      "bytes": 4051183,
+      "sha256": "76260db78d1a02261b4bda9a503fb9d85aa3834fa52cc841d8dab61df9305fe1"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.mp3",
+      "bytes": 4051183,
+      "sha256": "63d8a2c7544881a4b24e8a72c21d5b440b41139e5cb6b6ea15ab2cc2e89f7051"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.wav",
+      "bytes": 35721044,
+      "sha256": "1b3b34972af27f8001496f7494f8b3b17e4bed5e44f7557c8a9a005d4f7aa5c2"
+    },
+    {
+      "path": "dist/audio/ambient-render-report.json",
+      "bytes": 11942,
+      "sha256": "4075cc0a11551b89f1c92f486c0dd41409dea0dc4d9a96a89336b27fe498c011"
+    },
+    {
+      "path": "dist/fonts/instrument-serif-LICENSE.txt",
+      "bytes": 4532,
+      "sha256": "b6106a757902d2d412e09d94dc4a226fe3da80485208a98003969f1b8b6b1d74"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 558,
+      "sha256": "9d0a6b226e661f63cd847aeab9d5ffa8ecb2d30e931e25306e1956c5e14195a1"
+    }
+  ],
+  "historicalDiagnosticFiles": [
+    "verification/visibility-before-memory-bounds.json",
+    "verification/capture-readiness-error.md",
+    "performance-after-low-initial.json",
+    "verification/production-verification-editor-preview.json",
+    "verification/production-smoke-editor-preview.json"
+  ],
+  "finalEvidence": {
+    "capture": "after/iteration-01",
+    "visibility": "verification/visibility.json",
+    "performance": "performance.json",
+    "tests": "verification/playwright.json"
+  },
+  "localProduction": "http://localhost:4173/",
+  "remoteDeployment": false
+}

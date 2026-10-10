@@ -1,0 +1,1110 @@
+[
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-0-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.689073234366687,
+        14.585865137819129
+      ],
+      "direction": [
+        0,
+        -0.7771625758351323,
+        -0.6292998734477091
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 51.00151266235683,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6287237102163739
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 71,
+      "textures": 10
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:56:25.909Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-8-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.678483067667724,
+        14.572165699962984
+      ],
+      "direction": [
+        0,
+        -0.7681807801681223,
+        -0.6402329958540836
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50.19080439220376,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6468365617031155
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 74,
+      "textures": 11
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:56:40.571Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-f/trial/woodland-0-1918.png",
+    "camera": {
+      "position": [
+        -2.908917507728674,
+        14.620061248592936,
+        13.054874352456782
+      ],
+      "direction": [
+        0.042796024573825815,
+        -0.7761396929061991,
+        -0.6291070476287381
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50.9084756246428,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": -0.31835725617322685,
+      "y": 0.08772372015937824
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 73,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:56:57.538Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-4",
+      "progress": 4,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-4-1918.png",
+    "camera": {
+      "position": [
+        -18.881557665662783,
+        14.309327919967247,
+        4.735978401798988
+      ],
+      "direction": [
+        0.04273238489123704,
+        -0.775877984472524,
+        -0.6294341081418778
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50.88470161876371,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 1.1900116058577073,
+      "y": 1.1204275584632972
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 74,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 56.43330383813196,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:57:10.744Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "woodland-8",
+      "progress": 8,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-f/trial/woodland-8-1918.png",
+    "camera": {
+      "position": [
+        -6.238623648759013,
+        14.555494786655649,
+        11.320888225572054
+      ],
+      "direction": [
+        -0.042947139315702744,
+        -0.7545659284283457,
+        -0.6548173813206754
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 48.98745599876078,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": -0.10359836729175298,
+      "y": 0.09316435682176422
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 77,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:57:23.147Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "obstruction-0",
+      "progress": 0,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-f/trial/obstruction-0-1918.png",
+    "camera": {
+      "position": [
+        -16.324459531454362,
+        14.356734901224636,
+        5.180932977134307
+      ],
+      "direction": [
+        0.02754766331604918,
+        -0.7788616461494028,
+        -0.6265905061547518
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 51.15646663953451,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 1.404552252879069,
+      "y": 0.9270411155714888
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 73,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:57:31.823Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "obstruction-8",
+      "progress": 8,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-f/trial/obstruction-8-1918.png",
+    "camera": {
+      "position": [
+        0.5909655677429964,
+        14.673791913025424,
+        9.523770524352143
+      ],
+      "direction": [
+        -0.1292157855152384,
+        -0.7458716802084,
+        -0.6534360851963857
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 48.23402438388016,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.8347891153976805,
+      "y": 0.902614796076336
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 74,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:57:43.303Z"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-0-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.684079186800622,
+        14.579404838729726
+      ],
+      "direction": [
+        0,
+        -0.7733483385154899,
+        -0.6339813461887749
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50.65552630081312,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6700603479942033
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 67,
+      "textures": 9
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:57:54.451Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-8-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.7667742917647594,
+        -0.6419168057378243
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50.06510017726378,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6806745499963189
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 76,
+      "textures": 15
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:00.396Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-f/trial/woodland-0-390.png",
+    "camera": {
+      "position": [
+        -12.865461765666382,
+        14.426265405876398,
+        7.869197149002032
+      ],
+      "direction": [
+        0.13130748929146344,
+        -0.791088985315712,
+        -0.5974416796375437
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 52.2873956257204,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": -1.3736262588405435,
+      "y": 0.5003233020664781
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 71,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:06.555Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-4",
+      "progress": 4,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-f/trial/clearing-4-390.png",
+    "camera": {
+      "position": [
+        -8.114712333197698,
+        14.518967925694563,
+        10.343753318803438
+      ],
+      "direction": [
+        -0.09650200650335186,
+        -0.737963298909911,
+        -0.6679053317670315
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 47.558207680717004,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 1.6619888655196307,
+      "y": 0.9652699731219815
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 72,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 56.43330383813196,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:12.494Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "woodland-8",
+      "progress": 8,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-f/trial/woodland-8-390.png",
+    "camera": {
+      "position": [
+        -13.270646571438451,
+        14.418610576288678,
+        7.658381481775815
+      ],
+      "direction": [
+        0.10137744227665313,
+        -0.7866906153110643,
+        -0.6089667396327512
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 51.8773109875009,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": -1.2303115049933775,
+      "y": 0.48086072775749195
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 74,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:18.560Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "obstruction-0",
+      "progress": 0,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-f/trial/obstruction-0-390.png",
+    "camera": {
+      "position": [
+        -4.200064291403779,
+        14.58330685734118,
+        8.043934319152395
+      ],
+      "direction": [
+        -0.1395048067037261,
+        -0.742521009611286,
+        -0.6551343062246037
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 47.94661201170209,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 2.313823976687185,
+      "y": 1.0030654137217816
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 71,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:24.225Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "obstruction-8",
+      "progress": 8,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-f/trial/obstruction-8-390.png",
+    "camera": {
+      "position": [
+        7.915400277312986,
+        14.811414764946198,
+        11.527056760639427
+      ],
+      "direction": [
+        -0.04367159880634976,
+        -0.7595776164009319,
+        -0.6489488701896136
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 49.42697562142248,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.6669414072440765,
+      "y": 0.7034067836876506
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 75,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-09T12:58:30.099Z"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": []
+  }
+]

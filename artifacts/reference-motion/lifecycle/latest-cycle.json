@@ -1,0 +1,24 @@
+{
+  "mounted": {
+    "animals": 8,
+    "geometries": 89,
+    "textures": 13,
+    "ownedCompanionGeometries": 41
+  },
+  "removed": {
+    "animals": 0,
+    "geometryDisposals": 41,
+    "rigDisposals": 8,
+    "geometries": 1,
+    "textures": 0,
+    "diagnosticsPresent": false,
+    "contextLost": true,
+    "undisposedSceneGeometries": [
+      {
+        "type": "BufferGeometry",
+        "object": "Sprite",
+        "disposed": false
+      }
+    ]
+  }
+}

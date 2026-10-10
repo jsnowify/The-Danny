@@ -1,0 +1,103 @@
+{
+  "recordedAt": "2026-10-10T10:30:37.061Z",
+  "status": "Ready for owner visual review",
+  "approvedVisualBaseline": 2,
+  "pendingPass": 3,
+  "userApproved": false,
+  "laterPassesAuthorized": false,
+  "sourcePreservation": {
+    "existingFilesUnchanged": 97,
+    "frozenPass1Files": 9
+  },
+  "motion": [
+    {
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "frames": 390,
+      "errors": [],
+      "farSpeed": 4.402546572293759,
+      "maxExpansion": 0.23999999889907728,
+      "finalSpeed": 0,
+      "finalExpansion": 0.00032648832901149534,
+      "preservedMemoriesAndSettings": true,
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maximumRelativeSpanRate": 0.3010766938088328,
+      "closeSpeed": 0.5426839077418635,
+      "closeExpansion": 0.0014265278794793577,
+      "turnRate": 16.814952573525577,
+      "idleSeconds": 10,
+      "environmentContinuesAfterRelease": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "frames": 140,
+      "errors": [],
+      "farSpeed": 3.875283113578906,
+      "maxExpansion": 0.10314988107245122,
+      "finalSpeed": 0,
+      "finalExpansion": 0.00013246009778301973,
+      "preservedMemoriesAndSettings": true,
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "maximumRelativeSpanRate": 0.4301701226391336
+    }
+  ],
+  "clothChecks": [
+    "All nine frozen Pass 1 files and all unrelated source files match SHA-256; approved asset/paint/geometry factories and Pass 3 tree profiles remain untouched.",
+    "Cloth subdivision preserves resting bounds and surface area; shoulder vertices remain anchored, hem responds, and reduced motion restores every resting vertex.",
+    "Cloth spring settling agrees at 15, 30, 60 and 120 Hz."
+  ],
+  "regression": {
+    "startTime": "2026-10-10T08:50:27.183Z",
+    "duration": 326558.035,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cleanup": {
+    "cycles": 5,
+    "errors": [],
+    "limits": "Five reset/remount cycles (three Medium plus High/Low), including Medium/High resize; not a long-session soak. Heap excludes native audio/GPU memory. AI timing excludes rendering and is not FPS. The shared Three Sprite geometry and the VSM shadow blur triangle remain engine caches; all scene-owned geometry disposes and the old GL context is destroyed."
+  },
+  "production": {
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ]
+  },
+  "liveBrowser": {
+    "frames": 70,
+    "seconds": 20.96330000000447,
+    "fps": 3.3391689285553836,
+    "p95FrameMilliseconds": 385.6000000014901,
+    "maximumSpanStep": 1.6331177138637134,
+    "maximumRelativeSpanRate": 0.4683330086878484,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "limit": "One software-WebGL browser, Low quality, actual held ground pointer for twenty wall-clock seconds. Movement uses short collision substeps; elapsed time is capped at 250 ms for long stalls/resumes. Rendering below 4 FPS still slows simulation. This records live responsiveness, not accelerated simulation or physical GPU performance."
+  },
+  "review": {
+    "videos": 5,
+    "chapters": 7,
+    "images": 4,
+    "phonePageFits": true,
+    "errors": []
+  },
+  "nextAction": "Owner reviews the rendered candidate; wait for approval before Pass 4."
+}

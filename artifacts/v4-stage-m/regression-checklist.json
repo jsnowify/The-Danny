@@ -1,0 +1,314 @@
+[
+  {
+    "number": 1,
+    "check": "Loading screen",
+    "result": "PASS",
+    "evidence": "Delayed load, loading retry and HUD absence: v3-foundation and stage-a tests."
+  },
+  {
+    "number": 2,
+    "check": "Title screen",
+    "result": "PASS",
+    "evidence": "Real title/begin flow: experience and stage-a tests."
+  },
+  {
+    "number": 3,
+    "check": "Dedication",
+    "result": "PASS",
+    "evidence": "Exact identity/years, reopening and hidden HUD: persistence and stage-a; final dedication captures."
+  },
+  {
+    "number": 4,
+    "check": "Intro starts/skips",
+    "result": "PASS",
+    "evidence": "Actual intro, skip, pause and reduced-motion readable text: v3-foundation."
+  },
+  {
+    "number": 5,
+    "check": "HUD hidden before gameplay",
+    "result": "PASS",
+    "evidence": "Delayed loading, dedication and intro tests."
+  },
+  {
+    "number": 6,
+    "check": "Camera feels closer",
+    "result": "REVIEWED + TEST",
+    "evidence": "Actual A/M paired views and five-shape projected-camera check; subjective feel remains owner review."
+  },
+  {
+    "number": 7,
+    "check": "Tree proportions",
+    "result": "REVIEWED",
+    "evidence": "Actual clearing/woodland pairs and sixteen-model atlas; calibrated source dimensions."
+  },
+  {
+    "number": 8,
+    "check": "Recognizable player",
+    "result": "REVIEWED + TEST",
+    "evidence": "Actual traveler model, clearing screenshots and keyboard/sitting test."
+  },
+  {
+    "number": 9,
+    "check": "Organic paths",
+    "result": "REVIEWED",
+    "evidence": "Narrow soft irregular shader trails in clearing, woodland and regional captures."
+  },
+  {
+    "number": 10,
+    "check": "Slender Memory Tree",
+    "result": "REVIEWED + TEST",
+    "evidence": "0/4/8 screenshots; preserved eight anchors and leaf growth test."
+  },
+  {
+    "number": 11,
+    "check": "Golden petals circulate",
+    "result": "PASS + REVIEWED",
+    "evidence": "Shaped GPU clock/growth/pause/reduced-motion tests; final gold distribution reviewed in stills."
+  },
+  {
+    "number": 12,
+    "check": "Mouse controls",
+    "result": "PASS",
+    "evidence": "Real pointer-held movement in experience."
+  },
+  {
+    "number": 13,
+    "check": "Keyboard controls",
+    "result": "PASS",
+    "evidence": "Real WASD/arrow walking and idle wake: experience, living-world, idle."
+  },
+  {
+    "number": 14,
+    "check": "Touch controls",
+    "result": "PASS (EMULATED)",
+    "evidence": "Trusted touch walking/context recovery and portrait focus/targets; physical devices remain owner checks."
+  },
+  {
+    "number": 15,
+    "check": "All regions reachable",
+    "result": "PASS (STATIC ROUTES)",
+    "evidence": "Independent collision-grid flood fill reaches eight region viewpoints; actual regional placement captures show each."
+  },
+  {
+    "number": 16,
+    "check": "Eight memories reachable",
+    "result": "PASS",
+    "evidence": "Flood-fill routes, spatial-edge collision checks and full collect/hang journey. Repeatable visits use DEV placement; ordinary input is tested separately."
+  },
+  {
+    "number": 17,
+    "check": "Memory viewer",
+    "result": "PASS",
+    "evidence": "Open/read/close/focus, reread after completion: experience and compact check."
+  },
+  {
+    "number": 18,
+    "check": "Memory collection",
+    "result": "PASS",
+    "evidence": "All eight collected, immediately persisted and restored: experience."
+  },
+  {
+    "number": 19,
+    "check": "Memory hanging",
+    "result": "PASS",
+    "evidence": "Actual return prompt/flight and stable anchor checks: experience and painted-forest."
+  },
+  {
+    "number": 20,
+    "check": "Trees revive",
+    "result": "PASS + REVIEWED",
+    "evidence": "Radius expands to 160, all eight branches and leaves grow; 0/4/8 captures."
+  },
+  {
+    "number": 21,
+    "check": "Snowa discoverable",
+    "result": "PASS",
+    "evidence": "Actual Snowa UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 22,
+    "check": "Hoshi discoverable",
+    "result": "PASS",
+    "evidence": "Actual Hoshi UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 23,
+    "check": "Thoma discoverable",
+    "result": "PASS",
+    "evidence": "Actual Thoma UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 24,
+    "check": "Simba discoverable",
+    "result": "PASS",
+    "evidence": "Actual Simba UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 25,
+    "check": "Star discoverable",
+    "result": "PASS",
+    "evidence": "Actual Star UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 26,
+    "check": "Nano discoverable",
+    "result": "PASS",
+    "evidence": "Actual Nano UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 27,
+    "check": "Doreamon discoverable",
+    "result": "PASS",
+    "evidence": "Real Nearby company selection while Oscar keeps the primary prompt; encounter and reload verified."
+  },
+  {
+    "number": 28,
+    "check": "Max discoverable",
+    "result": "PASS",
+    "evidence": "Actual Max UI interaction, saved encounter and reload; companion verification."
+  },
+  {
+    "number": 29,
+    "check": "Cat interactions",
+    "result": "PASS",
+    "evidence": "All five live UI actions update cat journal/save without changing story progress."
+  },
+  {
+    "number": 30,
+    "check": "Dog interactions",
+    "result": "PASS",
+    "evidence": "All three live UI actions update dog journal/save without changing story progress."
+  },
+  {
+    "number": 31,
+    "check": "Companions avoid invalid terrain",
+    "result": "PASS (SIMULATED)",
+    "evidence": "300 simulated seconds per actor plus simultaneous run; zero invalid steps, bounded homes and safe short approach."
+  },
+  {
+    "number": 32,
+    "check": "Companions cannot trap player",
+    "result": "PASS + SOURCE REVIEW",
+    "evidence": "Actors are not solid additions to the traveler collision grid; AI avoids others/player/Oscar. Simultaneous actors remain separated."
+  },
+  {
+    "number": 33,
+    "check": "Oscar encountered",
+    "result": "PASS",
+    "evidence": "Actual proximity, dialogue opening and persistent optional encounter: oscar test."
+  },
+  {
+    "number": 34,
+    "check": "Oscar dialogue",
+    "result": "PASS",
+    "evidence": "Four progress-aware states, fictional label and family relation; captured at 0/1/4/8."
+  },
+  {
+    "number": 35,
+    "check": "Companion Journal updates",
+    "result": "PASS",
+    "evidence": "Eight saved encounters, real desktop/portrait journal and reload."
+  },
+  {
+    "number": 36,
+    "check": "Family Journal updates",
+    "result": "PASS",
+    "evidence": "Oscar encounter persists and Family entry reflects it: oscar/journal tests."
+  },
+  {
+    "number": 37,
+    "check": "Field Guide updates",
+    "result": "PASS",
+    "evidence": "All sixteen real landmark discoveries, entries, detail and reload; flora-guide and captures."
+  },
+  {
+    "number": 38,
+    "check": "Reload preserves progress",
+    "result": "PASS",
+    "evidence": "Story, flora, companions, family, language/settings: experience/persistence/journal/guide and companion reload."
+  },
+  {
+    "number": 39,
+    "check": "Existing saves migrate",
+    "result": "PASS",
+    "evidence": "Versions 1-3/current key, precedence, corrupt/unsupported/blocked storage, validated IDs and defaults: persistence/foundation."
+  },
+  {
+    "number": 40,
+    "check": "Audio/mute",
+    "result": "PASS",
+    "evidence": "Gesture, original MP3 native seam, progressive/ducking/loop, master and buses, custom validation/fallback/retry and hidden/paused lifecycle."
+  },
+  {
+    "number": 41,
+    "check": "Language switch",
+    "result": "PASS",
+    "evidence": "EN/FIL DOM labels, html language and persistence; authored personal prose retains its language."
+  },
+  {
+    "number": 42,
+    "check": "Idle system",
+    "result": "PASS (ACCELERATED)",
+    "evidence": "Actual elapsed-time controller reaches 10/20/45/300, suspends frames and wakes with input. Real five-minute wait is an owner check."
+  },
+  {
+    "number": 43,
+    "check": "Reduced motion",
+    "result": "PASS",
+    "evidence": "GPU clocks, camera, traveler, readable intro and idle behavior; no motion required to complete."
+  },
+  {
+    "number": 44,
+    "check": "8/8 triggers finale",
+    "result": "PASS",
+    "evidence": "Actual eighth hang opens finale and saves completion: experience."
+  },
+  {
+    "number": 45,
+    "check": "Uncluttered finale",
+    "result": "REVIEWED + TEST",
+    "evidence": "8/8 tree/pictures remain central; inhabitants stay in their regions. Final UI and free exploration tested; emotional pacing is subjective."
+  },
+  {
+    "number": 46,
+    "check": "Free exploration after finale",
+    "result": "PASS",
+    "evidence": "Keep exploring restores explore, allows rereading and retains completed forest: experience."
+  },
+  {
+    "number": 47,
+    "check": "Mobile UI accessible",
+    "result": "PASS (EMULATED) + REVIEWED",
+    "evidence": "44px targets, focused/scrollable memories at 320x844/320x568/390x568, 390 portrait dialogs, keyboard tabs/traps/Escape and large text."
+  },
+  {
+    "number": 48,
+    "check": "WebGL fallback",
+    "result": "PASS",
+    "evidence": "Unavailable context and trusted context-loss/retry tests."
+  },
+  {
+    "number": 49,
+    "check": "Reset progress",
+    "result": "PASS",
+    "evidence": "Confirmed reset clears story/flora/cats/dogs/Oscar/finale and v1 backup; settings/language retained."
+  },
+  {
+    "number": 50,
+    "check": "No critical errors remain",
+    "result": "NO UNEXPECTED ERRORS OBSERVED",
+    "evidence": "44-case full run, compact check, four focused cases, final captures and lifecycle checks; intentional failure/fallback tests are expected."
+  },
+  {
+    "number": 51,
+    "check": "Accurate performance report",
+    "result": "MEASURED",
+    "evidence": "Five isolated all-pass 60s samples, reported cost/heap regressions and explicit limits; hardware/mobile 60 FPS remains unverified."
+  },
+  {
+    "number": 52,
+    "check": "Meaningful final screenshots",
+    "result": "REVIEWED",
+    "evidence": "Actual paired captures and fifteen-aspect review demonstrate closer/readable composition and original painted art; differences/limitations recorded."
+  }
+]

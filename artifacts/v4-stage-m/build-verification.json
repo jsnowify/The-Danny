@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-10-10T01:22:05.986Z",
+  "command": "npm run build",
+  "outcome": "PASS",
+  "typeScript": "PASS",
+  "vite": "6.4.4",
+  "transformedModules": 1740,
+  "markerMatches": {
+    "console-ninja": [],
+    "wallaby": [],
+    "__DANNY_TEST__": [],
+    "__DANNY_AUDIO__": [],
+    "__DANNY_IDLE__": [],
+    "CameraCalibration": []
+  },
+  "assets": [
+    {
+      "name": "engine-BTVqjTDk.js",
+      "bytes": 263826,
+      "gzipBytes": 67506
+    },
+    {
+      "name": "FieldGuide-Cj_bYn2Z.js",
+      "bytes": 4526,
+      "gzipBytes": 2281
+    },
+    {
+      "name": "flora-Cr-c78YN.js",
+      "bytes": 5295,
+      "gzipBytes": 2202
+    },
+    {
+      "name": "index-DtRnnW-I.js",
+      "bytes": 213484,
+      "gzipBytes": 72066
+    },
+    {
+      "name": "index-EPvnouSt.css",
+      "bytes": 27649,
+      "gzipBytes": 7283
+    },
+    {
+      "name": "Journal-z4gjP78n.js",
+      "bytes": 5201,
+      "gzipBytes": 2036
+    },
+    {
+      "name": "OscarDialogue-vk_3n9SG.js",
+      "bytes": 741,
+      "gzipBytes": 418
+    },
+    {
+      "name": "Scene-BLlKWCYq.js",
+      "bytes": 976443,
+      "gzipBytes": 266834
+    }
+  ]
+}

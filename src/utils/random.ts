@@ -9,6 +9,10 @@ export function random(seed: number) {
 }
 export const clamp = (n: number, low: number, high: number) =>
   Math.max(low, Math.min(high, n));
-export const groundHeight = (x: number, z: number) =>
-  Math.sin(x * 0.075) * Math.cos(z * 0.07) * 0.32 + Math.sin(z * 0.15) * 0.12;
+export const groundHeight = (x: number, z: number) => {
+  const base =
+    Math.sin(x * 0.075) * Math.cos(z * 0.07) * 0.32 + Math.sin(z * 0.15) * 0.12;
+  const edge = clamp((Math.hypot(x - 19, z - 5) - 5.15) / 1.25, 0, 1);
+  return base - 0.56 * (1 - edge * edge * (3 - 2 * edge));
+};
 export const pathX = (z: number) => Math.sin(z * 0.063) * 9;

@@ -1,11 +1,19 @@
-import { PROJECT_NAME, TEXT } from "../config";
+import { useText } from "../hooks/useText";
+import { PROJECT_NAME } from "../config";
 import { useStore } from "../store";
 import { MemorySlots } from "./MemorySlots";
 import { Compass } from "./Compass";
 import { Icon } from "./Icons";
 import { playSound } from "../audio/bridge";
 import { BrandLogo } from "./BrandLogo";
+import { REGIONS } from "../config/regions";
+import { input } from "../scene/runtime";
+import { primaryAction, interact } from "../features/interaction";
+import { COMPANION_BY_ID } from "../config/companions";
+import { LanguageSwitch } from "./LanguageSwitch";
+import { NearbyCompany } from "./NearbyCompany";
 export function Hud() {
+  const TEXT = useText();
   const muted = useStore((s) => s.settings.muted),
     near = useStore((s) => s.nearTree),
     hung = useStore((s) => s.hung),
@@ -13,7 +21,14 @@ export function Hud() {
     phase = useStore((s) => s.phase),
     nearMemory = useStore((s) => s.nearMemory);
   const available = collected.some((id) => !hung.includes(id));
+  const nearCompanion = useStore((s) => s.nearCompanion),
+    nearOscar = useStore((s) => s.nearOscar);
+  const action = primaryAction();
+  void nearCompanion;
+  void nearOscar;
   const audioFailed = useStore((s) => s.audioFailed);
+  const regionId = useStore((s) => s.regionId),
+    discovered = useStore((s) => s.discoveredSpecies.length);
   return (
     <div className="hud">
       <div className="hud-left">
@@ -34,6 +49,16 @@ export function Hud() {
         >
           <Icon name={muted ? "mute" : "sound"} />
         </button>
+        <button
+          className="journal-button icon-button"
+          aria-label={TEXT.companions}
+          onClick={() => {
+            input.held = false;
+            useStore.setState({ journalOpen: true });
+          }}
+        >
+          <Icon name="book" />
+        </button>
       </div>
       <div className="hud-center">
         <div className="wordmark">
@@ -44,6 +69,24 @@ export function Hud() {
       </div>
       <div className="hud-right">
         <Compass />
+        <LanguageSwitch />
+        {document.fullscreenEnabled && (
+          <button
+            className="icon-button fullscreen-button"
+            aria-label={TEXT.fullscreen}
+            onClick={() =>
+              void (
+                document.fullscreenElement
+                  ? document.exitFullscreen()
+                  : document.documentElement.requestFullscreen()
+              ).catch(() =>
+                useStore.setState({ toast: TEXT.fullscreenUnavailable }),
+              )
+            }
+          >
+            <Icon name="fullscreen" />
+          </button>
+        )}
         <button
           className="icon-button"
           aria-label={TEXT.showDedication}
@@ -62,7 +105,25 @@ export function Hud() {
           {hung.length} / 8 {TEXT.returned}
         </small>
       </div>
-      {phase === "explore" && near && available && (
+      {regionId !== "clearing" && (
+        <span className="region-caption">
+          {REGIONS.find((r) => r.id === regionId)?.name}
+        </span>
+      )}
+      <button
+        className="field-guide-button"
+        aria-label={TEXT.guide}
+        title={`${discovered} / 16 ${TEXT.guide}`}
+        onClick={() => {
+          input.held = false;
+          useStore.setState({ fieldGuideOpen: true });
+        }}
+      >
+        <Icon name="leaf" />
+        <span>{TEXT.guide}</span>
+        <small>{discovered}/16</small>
+      </button>
+      {phase === "explore" && near && available && action?.kind === "hang" && (
         <button
           className="primary hang-button"
           onClick={() => useStore.getState().beginHanging()}
@@ -71,7 +132,7 @@ export function Hud() {
           <Icon name="leaf" />
         </button>
       )}
-      {phase === "explore" && nearMemory && (
+      {phase === "explore" && nearMemory && action?.kind === "memory" && (
         <button
           className="near-memory"
           onClick={() => useStore.getState().openMemory(nearMemory)}
@@ -81,6 +142,27 @@ export function Hud() {
           <kbd>E</kbd>
         </button>
       )}
+      {action?.kind === "animal" && (
+        <button className="near-memory" onClick={interact}>
+          <Icon name="heart" />
+          {
+            TEXT.actions[
+              COMPANION_BY_ID[action.id!].action as keyof typeof TEXT.actions
+            ]
+          }{" "}
+          {COMPANION_BY_ID[action.id!].name}
+          <kbd>E</kbd>
+        </button>
+      )}
+      {action?.kind === "oscar" && (
+        <button className="near-memory" onClick={interact}>
+          <Icon name="heart" />
+          {TEXT.talkOscar}
+          <kbd>E</kbd>
+        </button>
+      )}
+
+      <NearbyCompany />
       <span className="controls-note">
         {TEXT.controlHold}
         <span> · </span>

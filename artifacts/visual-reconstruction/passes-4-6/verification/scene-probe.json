@@ -1,0 +1,3485 @@
+{
+  "oscar": [
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0.97,
+        0
+      ],
+      "world": [
+        -6.3,
+        0.6841663068563967,
+        4.4
+      ],
+      "vertices": 162,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6.3,
+        1.2041663068563966,
+        4.4
+      ],
+      "vertices": 117,
+      "material": "MeshStandardMaterial",
+      "color": "bd9476",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0.11,
+        -0.02
+      ],
+      "world": [
+        -6.3,
+        1.3141663068563967,
+        4.380000000000001
+      ],
+      "vertices": 117,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        -0.068,
+        0.025,
+        0.18
+      ],
+      "world": [
+        -6.367999999999999,
+        1.2291663068563965,
+        4.58
+      ],
+      "vertices": 35,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0.068,
+        0.025,
+        0.18
+      ],
+      "world": [
+        -6.232,
+        1.2291663068563965,
+        4.58
+      ],
+      "vertices": 35,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        -0.285,
+        0.89,
+        0
+      ],
+      "world": [
+        -6.585,
+        0.6041663068563967,
+        4.4
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0.285,
+        0.89,
+        0
+      ],
+      "world": [
+        -6.015,
+        0.6041663068563967,
+        4.4
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -0.3,
+        0
+      ],
+      "world": [
+        -6.415,
+        0.3645219915009532,
+        4.653601744736752
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "65756d",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -0.3,
+        0
+      ],
+      "world": [
+        -6.185,
+        0.3645219915009532,
+        4.653601744736752
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "65756d",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": ""
+    }
+  ],
+  "companions": [
+    {
+      "name": "companion-snowa",
+      "position": [
+        3.7228150444767847,
+        0.05115102389383888,
+        -2.039604298145448
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            3.7228150444767847,
+            0.05115102389383888,
+            -2.039604298145448
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            3.402893225447058,
+            0.7011510238938389,
+            -2.0761286695802985
+          ],
+          "vertices": 4620,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            3.7228150444767847,
+            0.05115102389383888,
+            -2.039604298145448
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            4.088439980510758,
+            0.43115102389383886,
+            -1.9978621593627617
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            3.7228150444767847,
+            0.05115102389383888,
+            -2.039604298145448
+          ],
+          "vertices": 7884,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-hoshi",
+      "position": [
+        18,
+        0.039962368316527344,
+        -19
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            18,
+            0.039962368316527344,
+            -19
+          ],
+          "vertices": 1008,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            18,
+            0.6379623683165274,
+            -18.70376
+          ],
+          "vertices": 4620,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            18,
+            0.039962368316527344,
+            -19
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            18,
+            0.38956236831652735,
+            -19.33856
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            18,
+            0.039962368316527344,
+            -19
+          ],
+          "vertices": 8388,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-thoma",
+      "position": [
+        -6,
+        -0.0060838766888672985,
+        8
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -6,
+            -0.2572315164432515,
+            8
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -6,
+            0.4317684835567486,
+            8.34132
+          ],
+          "vertices": 4620,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -6,
+            -0.2572315164432515,
+            8
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -6,
+            0.14556848355674856,
+            7.60992
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -6,
+            -0.0060838766888672985,
+            8
+          ],
+          "vertices": 7884,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-simba",
+      "position": [
+        34,
+        -0.1265456426067974,
+        26
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            34,
+            -0.1265456426067974,
+            26
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            34,
+            0.6014543573932027,
+            26.36064
+          ],
+          "vertices": 4620,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            34,
+            -0.1265456426067974,
+            26
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            34,
+            0.29905435739320263,
+            25.58784
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            34,
+            -0.1265456426067974,
+            26
+          ],
+          "vertices": 7884,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-star",
+      "position": [
+        7,
+        -0.14495452920462523,
+        27
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            7,
+            -0.14495452920462523,
+            27
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            7,
+            0.4400454707953748,
+            27.2898
+          ],
+          "vertices": 4620,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            7,
+            -0.14495452920462523,
+            27
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            7,
+            0.1970454707953748,
+            26.6688
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            7,
+            -0.14495452920462523,
+            27
+          ],
+          "vertices": 7884,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-nano",
+      "position": [
+        -12,
+        -0.025371890772515233,
+        18
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -12,
+            -0.025371890772515233,
+            18
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -12,
+            0.9646281092274848,
+            18.427
+          ],
+          "vertices": 5544,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -12,
+            -0.025371890772515233,
+            18
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -12,
+            0.6946281092274847,
+            17.512
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -12,
+            -0.025371890772515233,
+            18
+          ],
+          "vertices": 8808,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-doreamon",
+      "position": [
+        -8,
+        -0.14345533817562564,
+        2
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -8,
+            -0.298084470894313,
+            2
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -8,
+            0.591915529105687,
+            2.469
+          ],
+          "vertices": 5544,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -8,
+            -0.298084470894313,
+            2
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -8,
+            0.321915529105687,
+            1.464
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            -8,
+            -0.14345533817562564,
+            2
+          ],
+          "vertices": 8808,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    },
+    {
+      "name": "companion-max",
+      "position": [
+        22.939510045221564,
+        -0.18209792758146756,
+        26.637005557382896
+      ],
+      "visible": true,
+      "meshes": [
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            22.939510045221564,
+            -0.18209792758146756,
+            26.637005557382896
+          ],
+          "vertices": 504,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            22.869321972693324,
+            0.9979020724185326,
+            26.215813636194028
+          ],
+          "vertices": 5544,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            22.939510045221564,
+            -0.18209792758146756,
+            26.637005557382896
+          ],
+          "vertices": 600,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            23.019724985253838,
+            0.7279020724185324,
+            27.118367753027318
+          ],
+          "vertices": 360,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        },
+        {
+          "type": "Mesh",
+          "name": "",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            22.939510045221564,
+            -0.18209792758146756,
+            26.637005557382896
+          ],
+          "vertices": 8808,
+          "material": "MeshStandardMaterial",
+          "color": "ffffff",
+          "map": "painted-prop-paper",
+          "visible": true,
+          "parent": ""
+        }
+      ]
+    }
+  ],
+  "geometries": [
+    {
+      "type": "Mesh",
+      "name": "prototype-traveler-contact",
+      "position": [
+        0,
+        0.012,
+        0
+      ],
+      "world": [
+        0,
+        0.10230573386958944,
+        5.5
+      ],
+      "vertices": 34,
+      "material": "MeshBasicMaterial",
+      "color": "586049",
+      "visible": true,
+      "parent": "hooded-traveler",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.46000001910141836
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-embroidered-cloak",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0.08814573386958943,
+        5.5
+      ],
+      "vertices": 11238,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-red-traveler",
+      "bound": {
+        "center": [
+          0.005732536315917969,
+          0.6483483649790287,
+          0.08499255869537592
+        ],
+        "radius": 0.9632127176793709
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-shadow-face",
+      "position": [
+        0.01,
+        1.33,
+        0.06
+      ],
+      "world": [
+        0.006910372152548496,
+        1.2934912098770457,
+        4.925242587150829
+      ],
+      "vertices": 273,
+      "material": "MeshBasicMaterial",
+      "color": "2b231b",
+      "visible": true,
+      "parent": "prototype-red-traveler",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 1.0000000250926921
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-pointed-hat",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0.08814573386958943,
+        5.5
+      ],
+      "vertices": 2338,
+      "material": "MeshStandardMaterial",
+      "color": "f4541c",
+      "visible": true,
+      "parent": "prototype-red-traveler",
+      "bound": {
+        "center": [
+          0.009845219552516937,
+          1.7496238350868225,
+          0.06897024158388376
+        ],
+        "radius": 0.4155682995733368
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-boot",
+      "position": [
+        -0.12,
+        0.1,
+        0
+      ],
+      "world": [
+        -0.12061444465137003,
+        0.17664371958818462,
+        5.45345022164185
+      ],
+      "vertices": 117,
+      "material": "MeshBasicMaterial",
+      "color": "2b231b",
+      "visible": true,
+      "parent": "prototype-red-traveler",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 1.0000000029504936
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-boot",
+      "position": [
+        0.14,
+        0.1,
+        0
+      ],
+      "world": [
+        0.14016171374775652,
+        0.17664371958818462,
+        5.452034732117466
+      ],
+      "vertices": 117,
+      "material": "MeshBasicMaterial",
+      "color": "2b231b",
+      "visible": true,
+      "parent": "prototype-red-traveler",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 1.0000000029504936
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "painted-ground",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0,
+        0
+      ],
+      "vertices": 6561,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 155.5635467622955
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "pond-water",
+      "position": [
+        0,
+        0.03,
+        0
+      ],
+      "world": [
+        19,
+        0.13,
+        5
+      ],
+      "vertices": 66,
+      "material": "ShaderMaterial",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 5.700000249762319
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "memory-tree-limbs",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0,
+        0
+      ],
+      "vertices": 2070,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "memory-tree",
+      "bound": {
+        "center": [
+          0.043663620948791504,
+          2.3234684916678816,
+          -0.0170360766351223
+        ],
+        "radius": 2.3305607839344757
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0,
+        0,
+        0
+      ],
+      "vertices": 169,
+      "material": "MeshBasicMaterial",
+      "color": "f8df96",
+      "map": "",
+      "visible": true,
+      "parent": "memory-tree",
+      "bound": {
+        "center": [
+          0,
+          0.028000004589557648,
+          0
+        ],
+        "radius": 6.36638695862405
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        4.5,
+        0
+      ],
+      "world": [
+        0,
+        4.5,
+        0
+      ],
+      "vertices": 50,
+      "material": "MeshBasicMaterial",
+      "color": "fff2c4",
+      "visible": false,
+      "parent": "memory-tree",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0.6,
+        0
+      ],
+      "world": [
+        -4.7,
+        0.55470725334053,
+        3.6
+      ],
+      "vertices": 900,
+      "material": "MeshStandardMaterial",
+      "color": "b39970",
+      "map": "painted-wood-pigment",
+      "visible": true,
+      "parent": "memory-bench",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 1.1870292771471298
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        1.05,
+        -0.26
+      ],
+      "world": [
+        -4.824650640037093,
+        1.0047072533405301,
+        3.371828533908503
+      ],
+      "vertices": 900,
+      "material": "MeshStandardMaterial",
+      "color": "b39970",
+      "map": "painted-wood-pigment",
+      "visible": true,
+      "parent": "memory-bench",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 1.1659759621096413
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        -0.83,
+        0.27,
+        0
+      ],
+      "world": [
+        -5.4283935263690095,
+        0.22470725334053002,
+        3.9979231970414886
+      ],
+      "vertices": 900,
+      "material": "MeshStandardMaterial",
+      "color": "b39970",
+      "map": "painted-wood-pigment",
+      "visible": true,
+      "parent": "memory-bench",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.3631218290101791
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0.83,
+        0.27,
+        0
+      ],
+      "world": [
+        -3.971606473630991,
+        0.22470725334053002,
+        3.2020768029585116
+      ],
+      "vertices": 900,
+      "material": "MeshStandardMaterial",
+      "color": "b39970",
+      "map": "painted-wood-pigment",
+      "visible": true,
+      "parent": "memory-bench",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.3631218290101791
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        10,
+        2.0865301440418094,
+        10
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.7400000000000002,
+        0
+      ],
+      "world": [
+        10,
+        0.34653014404180915,
+        10
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-lake",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -15,
+        1.724148090738209,
+        12
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.74,
+        0
+      ],
+      "world": [
+        -15,
+        -0.01585190926179103,
+        12
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-sunrise",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -24,
+        1.4209467284476132,
+        -7
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.7399999999999998,
+        0
+      ],
+      "world": [
+        -24,
+        -0.3190532715523866,
+        -7
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-dinner",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        24,
+        1.934719812950145,
+        -9
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.74,
+        0
+      ],
+      "world": [
+        24,
+        0.19471981295014507,
+        -9
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-boat",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        15,
+        1.8171231535167547,
+        -25
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.74,
+        0
+      ],
+      "world": [
+        15,
+        0.0771231535167547,
+        -25
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-garden",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -10,
+        1.987356782430067,
+        -28
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.7400000000000002,
+        0
+      ],
+      "world": [
+        -10,
+        0.24735678243006687,
+        -28
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-guitar",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        30,
+        1.7887370795844544,
+        22
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.74,
+        0
+      ],
+      "world": [
+        30,
+        0.04873707958445439,
+        22
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-road",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -33,
+        1.7674674399252126,
+        27
+      ],
+      "vertices": 4,
+      "material": "MeshBasicMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.8086099100903006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -1.74,
+        0
+      ],
+      "world": [
+        -33,
+        0.02746743992521261,
+        27
+      ],
+      "vertices": 82,
+      "material": "MeshBasicMaterial",
+      "color": "ffe8a8",
+      "visible": false,
+      "parent": "memory-picture-fire",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        3.7228150444767847,
+        0.05115102389383888,
+        -2.039604298145448
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.4599999934434891,
+          0
+        ],
+        "radius": 0.4600000083446505
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        3.402893225447058,
+        0.7011510238938389,
+        -2.0761286695802985
+      ],
+      "vertices": 4620,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.06144999712705612,
+          0.029499992728233337
+        ],
+        "radius": 0.3025042927522498
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        4.088439980510758,
+        0.43115102389383886,
+        -1.9978621593627617
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0.054429877549409866,
+          0.27608101023361087,
+          -0.07054593600332737
+        ],
+        "radius": 0.3014977636054228
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        3.7228150444767847,
+        0.05115102389383888,
+        -2.039604298145448
+      ],
+      "vertices": 7884,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        18,
+        0.039962368316527344,
+        -19
+      ],
+      "vertices": 1008,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        18,
+        0.6379623683165274,
+        -18.70376
+      ],
+      "vertices": 4620,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        18,
+        0.38956236831652735,
+        -19.33856
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        18,
+        0.039962368316527344,
+        -19
+      ],
+      "vertices": 8388,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.47749997954815626,
+          -0.10820817947387695
+        ],
+        "radius": 0.7523847553585772
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6,
+        -0.2572315164432515,
+        8
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.4599999934434891,
+          0
+        ],
+        "radius": 0.4600000083446505
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6,
+        0.4317684835567486,
+        8.34132
+      ],
+      "vertices": 4620,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.047349996864795685,
+          0.01449999213218689
+        ],
+        "radius": 0.3128574231410464
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6,
+        0.14556848355674856,
+        7.60992
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0.054429877549409866,
+          0.27608101023361087,
+          -0.07054593600332737
+        ],
+        "radius": 0.3014977636054228
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6,
+        -0.0060838766888672985,
+        8
+      ],
+      "vertices": 7884,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        34,
+        -0.1265456426067974,
+        26
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        34,
+        0.6014543573932027,
+        26.36064
+      ],
+      "vertices": 4620,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        34,
+        0.29905435739320263,
+        25.58784
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        34,
+        -0.1265456426067974,
+        26
+      ],
+      "vertices": 7884,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.47749997954815626,
+          -0.10820817947387695
+        ],
+        "radius": 0.7523847553585772
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        7,
+        -0.14495452920462523,
+        27
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        7,
+        0.4400454707953748,
+        27.2898
+      ],
+      "vertices": 4620,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        7,
+        0.1970454707953748,
+        26.6688
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        7,
+        -0.14495452920462523,
+        27
+      ],
+      "vertices": 7884,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.47749997954815626,
+          -0.10820817947387695
+        ],
+        "radius": 0.7523847553585772
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -12,
+        -0.025371890772515233,
+        18
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -12,
+        0.9646281092274848,
+        18.427
+      ],
+      "vertices": 5544,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -12,
+        0.6946281092274847,
+        17.512
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -12,
+        -0.025371890772515233,
+        18
+      ],
+      "vertices": 8808,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.6158940652385354,
+          -0.08601254224777222
+        ],
+        "radius": 1.0186038922912808
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -8,
+        -0.298084470894313,
+        2
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.7000000029802322,
+          0
+        ],
+        "radius": 0.6700000166893006
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -8,
+        0.591915529105687,
+        2.469
+      ],
+      "vertices": 5544,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.008694067597389221,
+          0.05500000715255737
+        ],
+        "radius": 0.34832706349692144
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -8,
+        0.321915529105687,
+        1.464
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0.053522830829024315,
+          0.30405700486153364,
+          -0.07057472318410873
+        ],
+        "radius": 0.3304685595297233
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -8,
+        -0.14345533817562564,
+        2
+      ],
+      "vertices": 8808,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        22.939510045221564,
+        -0.18209792758146756,
+        26.637005557382896
+      ],
+      "vertices": 504,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        22.869321972693324,
+        0.9979020724185326,
+        26.215813636194028
+      ],
+      "vertices": 5544,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        23.019724985253838,
+        0.7279020724185324,
+        27.118367753027318
+      ],
+      "vertices": 360,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        22.939510045221564,
+        -0.18209792758146756,
+        26.637005557382896
+      ],
+      "vertices": 8808,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0.7108940351754427,
+          -0.08601254224777222
+        ],
+        "radius": 1.0705591385402438
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0.97,
+        0
+      ],
+      "world": [
+        -6.3,
+        0.6841663068563967,
+        4.4
+      ],
+      "vertices": 162,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.4449999928474426
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -6.3,
+        1.2041663068563966,
+        4.4
+      ],
+      "vertices": 117,
+      "material": "MeshStandardMaterial",
+      "color": "bd9476",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.1899999991658229
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        0.11,
+        -0.02
+      ],
+      "world": [
+        -6.3,
+        1.3141663068563967,
+        4.380000000000001
+      ],
+      "vertices": 117,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.1899999991658229
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        -0.068,
+        0.025,
+        0.18
+      ],
+      "world": [
+        -6.367999999999999,
+        1.2291663068563965,
+        4.58
+      ],
+      "vertices": 35,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.017000000923871994
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0.068,
+        0.025,
+        0.18
+      ],
+      "world": [
+        -6.232,
+        1.2291663068563965,
+        4.58
+      ],
+      "vertices": 35,
+      "material": "MeshStandardMaterial",
+      "color": "5d5547",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.017000000923871994
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        -0.285,
+        0.89,
+        0
+      ],
+      "world": [
+        -6.585,
+        0.6041663068563967,
+        4.4
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.22200000286102295
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0.285,
+        0.89,
+        0
+      ],
+      "world": [
+        -6.015,
+        0.6041663068563967,
+        4.4
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "c6b58b",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.22200000286102295
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -0.3,
+        0
+      ],
+      "world": [
+        -6.415,
+        0.3645219915009532,
+        4.653601744736752
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "65756d",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.22200000286102295
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "",
+      "position": [
+        0,
+        -0.3,
+        0
+      ],
+      "world": [
+        -6.185,
+        0.3645219915009532,
+        4.653601744736752
+      ],
+      "vertices": 98,
+      "material": "MeshStandardMaterial",
+      "color": "65756d",
+      "map": "painted-prop-paper",
+      "visible": true,
+      "parent": "",
+      "bound": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 0.22200000286102295
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-painted-ground",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        0.35,
+        0,
+        1.6
+      ],
+      "vertices": 4,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": false,
+      "parent": "approved-pass-1-foundation",
+      "bound": null,
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-painted-crown",
+      "position": [
+        0,
+        1.95,
+        0
+      ],
+      "world": [
+        -5.405154671729006,
+        1.6907733656506176,
+        0.20191110816305058
+      ],
+      "vertices": 5398,
+      "map": "map",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-1",
+      "bound": {
+        "center": [
+          -0.004470348358154297,
+          2.506703482940793,
+          0.16511702630668879
+        ],
+        "radius": 2.66603120353529
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-cream-contour",
+      "position": [
+        0,
+        1.95,
+        0
+      ],
+      "world": [
+        -5.405154671729006,
+        1.6907733656506176,
+        0.20191110816305058
+      ],
+      "vertices": 1206,
+      "material": "MeshBasicMaterial",
+      "color": "ffdfad",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-1",
+      "bound": {
+        "center": [
+          -0.004364609718322754,
+          2.5059196623042226,
+          0.29095491766929626
+        ],
+        "radius": 2.6500357362731766
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-illustrated-trunk",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        -5.45,
+        0,
+        0.8
+      ],
+      "vertices": 1556,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-1",
+      "bound": {
+        "center": [
+          -0.01703212782740593,
+          1.0499999430030584,
+          0.09281298611313105
+        ],
+        "radius": 1.0824659915211647
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-painted-crown",
+      "position": [
+        0,
+        1.95,
+        0
+      ],
+      "world": [
+        5.908566816271364,
+        1.5621275660902445,
+        3.3474178716723837
+      ],
+      "vertices": 5392,
+      "map": "map",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-2",
+      "bound": {
+        "center": [
+          0.06286495923995972,
+          2.609797667711973,
+          0.1723007122054696
+        ],
+        "radius": 2.6823481828471882
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-cream-contour",
+      "position": [
+        0,
+        1.95,
+        0
+      ],
+      "world": [
+        5.908566816271364,
+        1.5621275660902445,
+        3.3474178716723837
+      ],
+      "vertices": 1206,
+      "material": "MeshBasicMaterial",
+      "color": "ffdfad",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-2",
+      "bound": {
+        "center": [
+          0.06298059225082397,
+          2.61016689427197,
+          0.29095491766929626
+        ],
+        "radius": 2.666396235458576
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-illustrated-trunk",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "world": [
+        5.949999999999999,
+        0,
+        3.9
+      ],
+      "vertices": 1556,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-surrounding-tree-2",
+      "bound": {
+        "center": [
+          -0.01703212782740593,
+          1.0499999430030584,
+          0.09281298611313105
+        ],
+        "radius": 1.0824659915211647
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-rock-1",
+      "position": [
+        -1.65,
+        0.6335999999999999,
+        -0.1
+      ],
+      "world": [
+        -1.2999999999999998,
+        0.6335999999999999,
+        1.5
+      ],
+      "vertices": 3818,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-rock-group",
+      "bound": {
+        "center": [
+          0.004722505807876587,
+          0.17085614800453186,
+          0.5219974378123879
+        ],
+        "radius": 1.2358564636977574
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-rock-2",
+      "position": [
+        -1.13,
+        0.288,
+        0.1
+      ],
+      "world": [
+        -0.7799999999999999,
+        0.288,
+        1.7000000000000002
+      ],
+      "vertices": 3804,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-rock-group",
+      "bound": {
+        "center": [
+          0.004722505807876587,
+          0.1708577573299408,
+          0.5225283959880471
+        ],
+        "radius": 1.2360884468629172
+      },
+      "frustumCulled": true
+    },
+    {
+      "type": "Mesh",
+      "name": "prototype-rock-3",
+      "position": [
+        1.16,
+        0.432,
+        -2
+      ],
+      "world": [
+        1.5099999999999998,
+        0.432,
+        -0.3999999999999999
+      ],
+      "vertices": 3798,
+      "material": "MeshStandardMaterial",
+      "color": "ffffff",
+      "map": "",
+      "visible": true,
+      "parent": "prototype-rock-group",
+      "bound": {
+        "center": [
+          0.004722505807876587,
+          0.1708606779575348,
+          0.5233049849048257
+        ],
+        "radius": 1.2364284979046063
+      },
+      "frustumCulled": true
+    }
+  ],
+  "programs": [
+    {
+      "id": 0,
+      "key": "lse,false,false,false,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,1,142336,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 1,
+      "key": "lse,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,7,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 2,
+      "key": "se,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,7,142336,srgb,the-danny-painted-wind-v5-false-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 3,
+      "key": "lse,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,3,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 4,
+      "key": "se,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,3,142336,srgb,the-danny-painted-wind-v5-false-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 5,
+      "key": "lse,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3201,1,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 6,
+      "key": ",false,false,false,false,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,1,132096,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 7,
+      "key": ",false,false,false,false,false,false,false,false,false,,false,false,0,,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,1,132096,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 8,
+      "key": "false,false,false,false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 2
+    },
+    {
+      "id": 9,
+      "key": "false,false,false,false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,134147,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 10,
+      "key": "alse,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 11,
+      "key": "false,false,false,false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 12,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,132099,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 13,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,132099,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 14,
+      "key": ",false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,132099,srgb,the-danny-painted-wind-v5-true-0.76-true",
+      "usedTimes": 2
+    },
+    {
+      "id": 15,
+      "key": ",false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,132099,srgb,the-danny-painted-wind-v5-true-0.76-true",
+      "usedTimes": 2
+    },
+    {
+      "id": 16,
+      "key": ",false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,132099,srgb,the-danny-painted-wind-v5-true-0.76-true",
+      "usedTimes": 3
+    },
+    {
+      "id": 17,
+      "key": ",false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,132099,srgb,the-danny-painted-wind-v5-true-0.76-true",
+      "usedTimes": 3
+    },
+    {
+      "id": 18,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 4
+    },
+    {
+      "id": 19,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 2
+    },
+    {
+      "id": 20,
+      "key": "alse,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 2
+    },
+    {
+      "id": 21,
+      "key": "false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,132099,srgb,the-danny-painted-wind-v5-true-0.7-false-painted-surface-v1-0.075",
+      "usedTimes": 1
+    },
+    {
+      "id": 22,
+      "key": "alse,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,134147,srgb,the-danny-painted-wind-v5-true-0.52-false-painted-surface-v1-0.075",
+      "usedTimes": 1
+    },
+    {
+      "id": 23,
+      "key": "false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,134147,srgb,the-danny-painted-wind-v5-true-0.6-false-painted-surface-v1-0.075",
+      "usedTimes": 1
+    },
+    {
+      "id": 24,
+      "key": "t>\",\n      `#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*${fill.toFixed(3)};`\n    );\n  }-painted-surface-v1-0.075",
+      "usedTimes": 3
+    },
+    {
+      "id": 25,
+      "key": "alse,false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,132099,srgb,the-danny-fixed-painted-landscape-v2",
+      "usedTimes": 1
+    },
+    {
+      "id": 26,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,134147,srgb,the-danny-painted-wind-v5-true-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 27,
+      "key": "false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,134147,srgb,the-danny-painted-wind-v5-true-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 28,
+      "key": "e,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,2051,134147,srgb,the-danny-painted-wind-v5-true-0.18-false-painted-surface-v1-0.075",
+      "usedTimes": 1
+    },
+    {
+      "id": 29,
+      "key": "alse,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,134147,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 30,
+      "key": "t>\",\n      `#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*${fill.toFixed(3)};`\n    );\n  }-painted-surface-v1-0.055",
+      "usedTimes": 3
+    },
+    {
+      "id": 31,
+      "key": "t>\",\n      `#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*${fill.toFixed(3)};`\n    );\n  }-painted-surface-v1-0.055",
+      "usedTimes": 3
+    },
+    {
+      "id": 32,
+      "key": "t>\",\n      `#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*${fill.toFixed(3)};`\n    );\n  }-painted-surface-v1-0.045",
+      "usedTimes": 1
+    },
+    {
+      "id": 33,
+      "key": "t>\",\n      `#include <emissivemap_fragment>\ntotalEmissiveRadiance+=diffuseColor.rgb*${fill.toFixed(3)};`\n    );\n  }-painted-surface-v1-0.035",
+      "usedTimes": 1
+    },
+    {
+      "id": 34,
+      "key": ",false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,5123,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 35,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,5123,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 3
+    },
+    {
+      "id": 36,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,7,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 3
+    },
+    {
+      "id": 37,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 38,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 2
+    },
+    {
+      "id": 39,
+      "key": "e,false,false,false,false,false,false,false,false,false,false,,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 40,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 41,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,5123,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 42,
+      "key": ",false,false,false,false,false,false,false,false,false,false,0,,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,3,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 1
+    },
+    {
+      "id": 43,
+      "key": "se,false,false,false,false,false,false,false,false,false,false,,,true,0,,1,0,0,0,1,0,1,0,0,0,0,3,4,0,0,0,1,1027,srgb,onBeforeCompile() {\n  }",
+      "usedTimes": 2
+    },
+    {
+      "id": 44,
+      "key": "lse,false,false,false,false,false,,false,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,0,0,0,3201,7,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 45,
+      "key": "se,false,false,false,false,false,,false,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,0,0,0,3201,7,142336,srgb,the-danny-painted-wind-v5-false-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 46,
+      "key": "lse,false,false,false,false,false,,false,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,0,0,0,3201,3,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    },
+    {
+      "id": 47,
+      "key": "se,false,false,false,false,false,,false,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,0,0,0,3201,3,142336,srgb,the-danny-painted-wind-v5-false-0.18-false",
+      "usedTimes": 1
+    },
+    {
+      "id": 48,
+      "key": "lse,false,false,false,false,false,,false,false,0,,1,0,0,0,1,0,1,0,0,0,0,3,0,0,0,3201,1,140288,srgb,the-danny-painted-wind-v5-false-0.18-true",
+      "usedTimes": 1
+    }
+  ],
+  "errors": [],
+  "browserErrors": []
+}

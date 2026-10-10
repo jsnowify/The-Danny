@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Danny | Pass 3 tree review</title>
+  <style>
+    :root { color-scheme:light; font-family:Georgia,serif; color:#314533; background:#eeeae0 }
+    * { box-sizing:border-box }
+    [hidden] { display:none !important }
+    body { margin:0; padding:28px clamp(16px,4vw,64px) 64px }
+    main { max-width:1600px; margin:auto }
+    h1 { font-size:clamp(28px,4vw,48px); font-weight:normal; margin:10px 0 }
+    p { max-width:950px; line-height:1.6 }
+    a { color:#4a6246; text-underline-offset:3px }
+    .status { font:12px system-ui; letter-spacing:.1em; text-transform:uppercase }
+    .controls { display:flex; flex-wrap:wrap; gap:16px; margin:24px 0 16px }
+    label { display:grid; gap:7px; font:13px system-ui }
+    select, button { min-height:44px; border:1px solid #9ca88c; border-radius:8px; background:#fbf7ea; color:#314533; padding:10px 14px; font:14px system-ui }
+    select { max-width:100% }
+    :focus-visible { outline:3px solid #ae7629; outline-offset:3px }
+    .frame { position:relative; width:100%; aspect-ratio:1918/918; margin:0 auto; background:#dae0d0; overflow:hidden; border-radius:12px; border:1px solid #b1baa4 }
+    .frame img { display:block; position:absolute; width:100%; height:100%; object-fit:contain }
+    #before { clip-path:inset(0 50% 0 0) }
+    #divider { position:absolute; top:0; bottom:0; left:50%; width:2px; background:#fff5d5; pointer-events:none }
+    .tag { position:absolute; bottom:12px; background:#fff5e4e6; padding:8px 10px; font:12px system-ui; border-radius:6px }
+    .tag.old { left:12px }.tag.new { right:12px }
+    .slider { display:flex; align-items:center; gap:12px; margin:14px 0; max-width:900px }
+    .slider label { flex:1 }.slider input { width:100%; accent-color:#aa6b29; min-height:30px }
+    #percent { min-width:4ch; font:14px system-ui }
+    #caption { font:14px/1.6 system-ui; margin-bottom:36px }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin:24px 0 }
+    figure { margin:0; padding:10px; background:#f8f3e7; border:1px solid #b1baa4; border-radius:10px }
+    figure img { width:100%; height:190px; object-fit:contain; background:#d9dfd1 }
+    figcaption { font:13px/1.6 system-ui; padding:6px 0 }
+    .note { padding:18px 22px; border-left:3px solid #a16b2c; background:#f8f3e7 }
+    @media(max-width:550px) { body { padding:18px 14px 40px }.tag { font-size:10px; max-width:44%; bottom:8px; padding:5px }.controls { gap:12px } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="status">Pass 2 approved baseline | Pass 3 awaiting your review</div>
+  <h1>Trees painted in the approved style.</h1>
+  <p>Distinct curved crowns, tapered bark, fine cream edges, and warm and cool versions of the approved brushwork. The clearing artwork, traveler, Memory Tree, ground, lighting, leaf current and camera remain the reviewed foundation.</p>
+  <p><a href="VISUAL-PASS-3-REPORT.md">Read the change and verification report</a> &nbsp; <a href="/?test=1">Explore the live game</a> &nbsp; <a href="VISUAL-PASS-2-RECOVERY-REVIEW.html">Approved Pass 2 review</a></p>
+  <div class="controls">
+    <label>View<select id="view">
+      <option value="woodland-0">Woodland / traveler visibility</option>
+      <option value="clearing-0">Clearing / 0 memories</option>
+      <option value="clearing-8">Clearing / 8 memories</option>
+      <option value="clearing-side-8">Clearing / side approach</option>
+      <option value="tree-return-8">Memory Tree / return approach</option>
+      <option value="narra">Narra / spreading crown</option>
+      <option value="acacia">Acacia / umbrella crown</option>
+      <option value="mango">Mango / swept egg crown</option>
+      <option value="balete">Balete / aerial roots</option>
+      <option value="talisay">Talisay / layered silhouette</option>
+      <option value="agoho">Agoho / narrow crown</option>
+      <option value="coconut">Coconut / fronds</option>
+      <option value="banana">Banana / split blades</option>
+      <option value="bamboo">Bamboo / jointed culms</option>
+    </select></label>
+    <label>Viewport<select id="viewport">
+      <option value="1918x918">Desktop 1918 x 918</option>
+      <option value="390x844">Phone 390 x 844</option>
+      <option value="320x568">Small phone 320 x 568</option>
+      <option value="844x390">Landscape 844 x 390</option>
+    </select></label>
+    <label id="progress-control" hidden>Forest progress<select id="progress"><option value="0">0 memories</option><option value="8">8 memories</option></select></label>
+  </div>
+  <div id="frame" class="frame">
+    <img id="after" alt="Pass 3 live render">
+    <img id="before" alt="Approved Pass 2 live render">
+    <div id="divider" aria-hidden="true"></div>
+    <span class="tag old">Before: approved Pass 2</span><span class="tag new">After: Pass 3</span>
+  </div>
+  <div class="slider"><label for="reveal">Compare before and after<input id="reveal" type="range" min="0" max="100" value="50"></label><output id="percent" for="reveal">50%</output></div>
+  <p id="caption" aria-live="polite"></p>
+  <p class="note">Review the forest silhouettes and pigment balance first, then compare the clearing at both progress states and on a phone. These are actual game renders with isolated saves and the unchanged Pass 2 camera. Forest specimen comparisons use desktop. Pass 4 remains stopped until you approve Pass 3.</p>
+  <div class="gallery" id="gallery"></div>
+  <p>The surrounding ground still has visible stretched texture regions; some rocks, bushes and companion models retain the earlier style. They are visible limitations, outside this tree pass. Screenshots show reduced-motion stills; they do not establish performance on a physical phone.</p>
+  <p><a href="artifacts/visual-reconstruction/pass-3-approved-baseline/manifest.json">Source and evidence checkpoint</a> &nbsp; <a href="artifacts/visual-reconstruction/pass-3-approved-baseline/baseline-verification.json">Baseline preservation evidence</a></p>
+</main>
+<script type="module">
+  const directory="artifacts/visual-reconstruction/pass-3-approved-baseline/";
+  const views=["clearing-0","clearing-8","clearing-side-8","tree-return-8","woodland-0"];
+  const view=document.getElementById("view"), viewport=document.getElementById("viewport"), progress=document.getElementById("progress");
+  const before=document.getElementById("before"), after=document.getElementById("after"), frame=document.getElementById("frame");
+  function update() {
+    const forest=!views.includes(view.value), size=forest?"1918x918":viewport.value;
+    viewport.disabled=forest; document.getElementById("progress-control").hidden=!forest;
+    const name=forest?`${view.value}-${progress.value}`:view.value;
+    before.src=forest?`${directory}before-forest/live-${name}-${size}.png`:`artifacts/visual-reconstruction/regression-recovery/iteration-03/live-${name}-${size}.png`;
+    after.src=`${directory}iteration-07${forest?"-forest":""}/live-${name}-${size}.png`;
+    before.alt=`Approved Pass 2: ${view.selectedOptions[0].text}, ${size}`;
+    after.alt=`Pass 3: ${view.selectedOptions[0].text}, ${size}`;
+    const [width,height]=size.split("x").map(Number);
+    frame.style.aspectRatio=`${width}/${height}`;
+    frame.style.maxWidth=width<500?"430px":"1600px";
+    document.getElementById("caption").replaceChildren();
+    const caption=document.getElementById("caption");
+    caption.append(`${view.selectedOptions[0].text} | ${size} | `);
+    for (const [label,src] of [["Open before",before.src],["Open after",after.src]]) {
+      const a=document.createElement("a"); a.href=src; a.textContent=label; a.target="_blank"; a.rel="noopener"; caption.append(a," ");
+    }
+  }
+  for(const control of [view,viewport,progress]) control.addEventListener("change",update);
+  document.getElementById("reveal").addEventListener("input",event=>{
+    const value=event.target.value;
+    before.style.clipPath=`inset(0 ${100-Number(value)}% 0 0)`;
+    document.getElementById("divider").style.left=value+"%";
+    document.getElementById("percent").value=value+"%";
+  });
+  const gallery=document.getElementById("gallery");
+  for(const [name,label] of [["acacia-8","Acacia: umbrella crown"],["narra-8","Narra: spreading crown"],["balete-8","Balete: cool pigment and roots"],["talisay-8","Talisay: layered crown"],["clearing-8","Clearing: preserved foundation"],["woodland-0","Woodland: traveler opening"]]) {
+    const forest=!views.includes(name), src=`${directory}iteration-07${forest?"-forest":""}/live-${name}-1918x918.png`;
+    const figure=document.createElement("figure"), link=document.createElement("a"), img=document.createElement("img"), caption=document.createElement("figcaption");
+    link.href=src; link.target="_blank"; link.rel="noopener"; img.src=src; img.alt=label; img.loading="lazy"; caption.textContent=label; link.append(img); figure.append(link,caption); gallery.append(figure);
+  }
+  update();
+</script>
+</body>
+</html>

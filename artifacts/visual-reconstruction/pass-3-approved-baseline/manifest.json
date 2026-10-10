@@ -1,0 +1,1305 @@
+{
+  "recordedAt": "2026-10-10T07:41:12.694Z",
+  "currentPass": 3,
+  "status": "Tree candidate frozen before the new reference-motion directive; pending owner visual approval",
+  "userApproved": false,
+  "laterPassesAuthorized": false,
+  "parentManifest": "artifacts/visual-reconstruction/regression-recovery/manifest.json",
+  "approvedBaseline": 2,
+  "approvalForWork": "User: now continue the pass 3",
+  "sourceFiles": [
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 790,
+      "sha256": "3583eac29aa009f41b89b3abd0d1209747a9ff2a761a6769cd4d307558062434"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9237,
+      "sha256": "58383d9b2691fb706fac5d6fbc40300f1dc272c3e2ad614f33da359c66799ec6"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 6541,
+      "sha256": "5acaee2930c594b35429439ef96b56d40e2d36664f4b7354a98bee7e5660c932"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "8decc5df6f22f9ed5924825c483373145b8ce5dbaa5189e1603fa58294d516de"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 2631,
+      "sha256": "4bd5f03dd9b0d2976703d05452f5868477061cd40ce0a020c1fcb0fbcad84be7"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 7493,
+      "sha256": "453913a95f97df62a2c4253ee5c9244e5757c76a286152606c0e1a7f7db6d6ca"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9232,
+      "sha256": "8eaffdab41d8a4b3018ffd081b7a5ad6ad8007cdec37af00606483bb1dceb36f"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6675,
+      "sha256": "cfd23e129256a04cc545c28c5c87ec48f7b0387cdce90e88eb7cccee2dc45a27"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6158,
+      "sha256": "2bf5d08bb6977247fca3077fb84638149d17f28f7b95c01115cfa5f49db15b63"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9875,
+      "sha256": "de256665e53ba96d2ee162643d482dfcbcbcdf8237c1ac50b67fa53d3b6b8ed3"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 5429,
+      "sha256": "d8937e5546f35b67572337fe12a99d9e37bdfdd93a4703fac7bfa6c54a0c31f6"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 10982,
+      "sha256": "303e279d2eb5f1ad7c94b2d441ea60aa7617b8535c3350923928e5f10761543c"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1"
+    },
+    {
+      "path": "tests/v4-composition.spec.ts",
+      "bytes": 9876,
+      "sha256": "50e998fe7f2bc1d52c3ecef3f3733ddc0789f616ae41329c57683b4068914df9"
+    },
+    {
+      "path": "tests/v4-painted-forest.spec.ts",
+      "bytes": 4551,
+      "sha256": "2fbabc45b1f432961511f81606b48bb9a656f53a42a6ab08cf712ea2023364c1"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REVIEW.html",
+      "bytes": 11877,
+      "sha256": "fdcc5ca722d41572eec2019f25407781a6889c88b3d26fb5508dd0c049aa9882"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REPORT.md",
+      "bytes": 9464,
+      "sha256": "54a525f27ed3904a52cfb24a344821b909f551fb26fc5da38a2fc54bbc0bc23e"
+    },
+    {
+      "path": "VISUAL-PASS-2-REPORT.md",
+      "bytes": 15278,
+      "sha256": "f05d7007fd75c4bf28b6e5282f50655e81073f2558981238e1881e4e0fce697a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6947,
+      "sha256": "36d317d935d868610bcac0b3e4beee35eaa3f2266ad79a509d68610f9c7a98dc"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca"
+    },
+    {
+      "path": "scripts/capture-pass-3.mjs",
+      "bytes": 12034,
+      "sha256": "4182af13bcc85cd210be5415250f4c7d7fe9b7cb1b04ea9e1ddc4d1ffab52205"
+    },
+    {
+      "path": "scripts/verify-pass-3-baseline.mjs",
+      "bytes": 9581,
+      "sha256": "8d0ad93c2f70e9111c50245a57f5ad10be150d9d72fbebe797c8f9a1a66695d8"
+    },
+    {
+      "path": "scripts/verify-pass-3-experience.mjs",
+      "bytes": 16585,
+      "sha256": "1cc5563a681d58f6e0ae82280ad6cb9ace01a576a141af3e3dc2c7f57c2b8694"
+    },
+    {
+      "path": "scripts/verify-pass-3-lifecycle.mjs",
+      "bytes": 10626,
+      "sha256": "3f1d3122ff44e890341de1349c8f6d6605ae656658d520eb3183fd467672f967"
+    },
+    {
+      "path": "scripts/verify-pass-3-review.mjs",
+      "bytes": 2574,
+      "sha256": "70d029094f6a369a37edea8f57fd1e054c3e2c034e5ef6555cc2cfc0c08336e2"
+    },
+    {
+      "path": "scripts/measure-pass-3.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db"
+    },
+    {
+      "path": "tests/pass-3-trees.spec.ts",
+      "bytes": 4326,
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0"
+    },
+    {
+      "path": "VISUAL-PASS-3-REVIEW.html",
+      "bytes": 9065,
+      "sha256": "10329cbbb33959712f7bf57fe18fcfdd0aa8c1c568dbb5d1b70d47c7b67878f1"
+    },
+    {
+      "path": "VISUAL-PASS-3-REPORT.md",
+      "bytes": 10047,
+      "sha256": "f833ee0d174a5205feeec04c13cf938d72dbde2f748661ebf07d651b44e7898f"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/baseline-verification.json",
+      "bytes": 20926,
+      "sha256": "4e9bce8f69e3c07a60eb8f62c050e13d45eb5fb9d6ea25fa43d69fb39be65b5f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/baseline.json",
+      "bytes": 5341,
+      "sha256": "fb5ffa1f0c51b231502ba75659b648a62d696dc74f8005678c54c50e9f9c0f38"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/captures.json",
+      "bytes": 95095,
+      "sha256": "e5cbd54a5ac683969bce94bd966fb7ffd99ee8b2be21fa4c3614d3cd3acf7470"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-acacia-0-1918x918.png",
+      "bytes": 1338658,
+      "sha256": "3c810c8df406dcb76359bef3e54eb270495494e41d81bd340f9d226851b244d7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-acacia-8-1918x918.png",
+      "bytes": 1352356,
+      "sha256": "22d10f2c7c3468dbf851ebf24f3677f2534840b0f912339349f12eed62e3c383"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-agoho-0-1918x918.png",
+      "bytes": 807577,
+      "sha256": "ab9c76e26a3861af6de4112d92b7bbded987344dac0ad85b0171c09d243e3319"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-agoho-8-1918x918.png",
+      "bytes": 805742,
+      "sha256": "a512db8adaa71cb5aed5a907e19bf2ecfde52fb569231e46b148da2a11fa4480"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-balete-0-1918x918.png",
+      "bytes": 625093,
+      "sha256": "1c49e0cad2d7c90bd9bc9ee477e063689532d1a7b184e9c213a31a77f29e6cec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-balete-8-1918x918.png",
+      "bytes": 629389,
+      "sha256": "670bfbd458707fc167525b417e8bfd0d44684e0498ca9aaaedb56cd2d23eb3c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-bamboo-0-1918x918.png",
+      "bytes": 1251788,
+      "sha256": "4834748d0f787b1febec129ea85447849d764babf730eba9565267cab016d836"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-bamboo-8-1918x918.png",
+      "bytes": 1250299,
+      "sha256": "caeb61f8d15f5a1164146d39d46c0416d3d786251e5051d7a46c892e054b5771"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-banana-0-1918x918.png",
+      "bytes": 851750,
+      "sha256": "7e173a8ca8be29f18ded7158fd3972d26b4a1fe93d33b828170a58688fa7f4a5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-banana-8-1918x918.png",
+      "bytes": 857887,
+      "sha256": "d2decd33ecf103f7b3e86b32170c48edb668738d327d67a1bb7d15ff182c9fb3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-coconut-0-1918x918.png",
+      "bytes": 955985,
+      "sha256": "49815cfcd6eced6b56db200f007a1c4bcd1384d03153f64d283eb2b6349bba58"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-coconut-8-1918x918.png",
+      "bytes": 975701,
+      "sha256": "6d90eacc46d2010c7feb39539609bd8c4ac4e57f60c13affbeda655ccaa709c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-mango-0-1918x918.png",
+      "bytes": 1231979,
+      "sha256": "227fd32dc440e0e6189e13eb63a283ba52649fc7827b13310affda49c7d05ee0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-mango-8-1918x918.png",
+      "bytes": 1237156,
+      "sha256": "121e8324ce90980884c8a2da6746b5cad192826cdd5efab224303cb425a31fa7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-narra-0-1918x918.png",
+      "bytes": 1280828,
+      "sha256": "4f6e31d80cb6a86d80b5715ba7ebf3c82494150df2408bd910237844ead44682"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-narra-8-1918x918.png",
+      "bytes": 1303170,
+      "sha256": "285e56dad13f487c8e02d3c109ae8f4262a24446fa837f55df47d6c694760cd0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-talisay-0-1918x918.png",
+      "bytes": 758169,
+      "sha256": "6afccbf6014639028de4a3e5b607d435f442cd06af4c0351df5e6f1cc6c2f3ac"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/before-forest/live-talisay-8-1918x918.png",
+      "bytes": 763551,
+      "sha256": "c18815270cd1e6f6e912dbe2b05d33ab3aea44a4e6b92b8e278f1644b949fbc7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/composition-preservation.json",
+      "bytes": 3336,
+      "sha256": "f488ff5c57b1f731bb5bfca1760c37c74651e5481b869ce6c09226b0eb796a24"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/captures.json",
+      "bytes": 53303,
+      "sha256": "85fae8c4ab3ad3bf6d2c3490e251501cf4010df3b41988edfe5830dc601418b3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2010433,
+      "sha256": "5a13822c047dcbffd898c0b2e6d932d28fe0a01c8238172425376c2c51d60d3a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 376402,
+      "sha256": "289cc96f21490cd15a836999f1c1f552e945f5984cc9fbd3ab2e7062de8530f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2030459,
+      "sha256": "ca82e787723a28bb73550052d80b9e59deb23cc2deefb7c64607bcb5a9599ec5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 389733,
+      "sha256": "dea751387ca23abe02287243c8a04b7502d34203b8bcc2a707d608ddf0f23316"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1919456,
+      "sha256": "bada375143a68061532a317d3cf7267fd3cbaac55618084e93f23730f298e1e2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 392099,
+      "sha256": "bb4a92715f931776b701b7e91a334a86febbe4da317cc2868ebdb138d9a755c7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1956446,
+      "sha256": "70117d5a486a947e39b8026db0da8d07465db47e078fd278ade437188eb15595"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 384980,
+      "sha256": "cd39ea83022f5254db378ec17f99a96649cd126f3a27bb6aa5cfa9f14d9c3404"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1746119,
+      "sha256": "58235b0ef3aa8e126bec1b8d301f7511b9f084e440e6e7952cd1961f8f8c9bc5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 430535,
+      "sha256": "c328eb5a4d334db7e69a02b1a6ce3d9f37659aa7e11a34d337c4bd7777ed7e1b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/captures.json",
+      "bytes": 95221,
+      "sha256": "072abd40659c8c9266b46110eb7b9dde30e939c69716cbce314efac079bb10bf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-acacia-0-1918x918.png",
+      "bytes": 1480889,
+      "sha256": "6a65efa88aab9ed8a875ea921d962ec5ca723eb1b113a4c6244e38fbaa165300"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-acacia-8-1918x918.png",
+      "bytes": 1492238,
+      "sha256": "820bfed8339fa0a21371e354da0404c28a2b72deedc2c9bd75bdc607d98c22b2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-agoho-0-1918x918.png",
+      "bytes": 960174,
+      "sha256": "5aca6af4827d0d6c2997f16f9263469e66c5df1eecffa601d6c5f6c0253b4efc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-agoho-8-1918x918.png",
+      "bytes": 965131,
+      "sha256": "17ad491fadcd2fba6ae7fc09c8fe59cad349bb7c02a6932938ab145e8932655b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-balete-0-1918x918.png",
+      "bytes": 818241,
+      "sha256": "9ca8beebe77cfc5b089fd64e72b3c0302602caef8c132c393e6623422fc572c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-balete-8-1918x918.png",
+      "bytes": 809900,
+      "sha256": "fad03bbeae8657f5df922c850940dfe1597bae26ff1e67a1aa313e845d219c8f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-bamboo-0-1918x918.png",
+      "bytes": 1287650,
+      "sha256": "3b794b2b1a62bbfb0cd990e68f3cb3fd38879cd57ab13078e06af3b6d40dbe05"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-bamboo-8-1918x918.png",
+      "bytes": 1287946,
+      "sha256": "00cda5ec95bdd40908bd673f4ec1e3a0c7ae4aeb74e9e9d5ba3ca30c3af8c39f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-banana-0-1918x918.png",
+      "bytes": 974442,
+      "sha256": "75a510c0635aead7293b9d3be04cf1648c605bb3a9141a0700c09a76d367e49b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-banana-8-1918x918.png",
+      "bytes": 984386,
+      "sha256": "f5d871d22eda39504f3dc2b12f4aff50c1b12d7b7928ac236f830210eb4794f0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-coconut-0-1918x918.png",
+      "bytes": 1164787,
+      "sha256": "0614674488f2af4ccef95c222d858f554dbabe5c3edaf2720f9cad31e0cb7196"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-coconut-8-1918x918.png",
+      "bytes": 1183089,
+      "sha256": "df9b442ff7b698096e857fbf07dfbb3b0a3ba14cc510270c40c414e416e8aa77"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-mango-0-1918x918.png",
+      "bytes": 1328206,
+      "sha256": "8a98c5c5a079291885ba883084a77fa3307a0e43f7044d663d44195684e49611"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-mango-8-1918x918.png",
+      "bytes": 1333954,
+      "sha256": "f19c5eff13078c37bc6ddfa0a4fce31764aa620d6eb6664b085a5d6b65c6a1e4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-narra-0-1918x918.png",
+      "bytes": 1450883,
+      "sha256": "4f994d1151578dee5ebeb42d5fb69d66cf89e81deddc1795d27872d6cc56bf68"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-narra-8-1918x918.png",
+      "bytes": 1464164,
+      "sha256": "96a0bdc5bca641d7716b20e30f54c3582b3657767d951199ee71c1d6e642c533"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-talisay-0-1918x918.png",
+      "bytes": 1004538,
+      "sha256": "6c954816165de0c94ec4d3c1b2e7e20d3bf5f125e3925503e6271700a15b1d66"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-02-forest/live-talisay-8-1918x918.png",
+      "bytes": 1014514,
+      "sha256": "f3a71b1ed59babc72f5ed9f1b4b6ddff373ce53db8bae2bc7c0671a7a78fbf5c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/captures.json",
+      "bytes": 106461,
+      "sha256": "0c88fbbd56a838fe2b2868dece581c0c91d6abe1fd6a6fce823ae611dd6e40ef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-0-1918x918.png",
+      "bytes": 2016666,
+      "sha256": "ad5a7f9813f156c3129334933e6c60c923ea6a67db2e73c7671fa523a212d175"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-0-320x568.png",
+      "bytes": 209268,
+      "sha256": "2773426c88a80da560890f87a642e5018a62722a9b36f6873cca9f79739882a8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-0-390x844.png",
+      "bytes": 379065,
+      "sha256": "5fc1009903639187819229d3479afdabcd6d4e836107e3ac11ed354073c4f36d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-0-844x390.png",
+      "bytes": 394898,
+      "sha256": "01567b96425ef0ed40c30d97a04944ba697ff603d51f3e9762ed9542f9974261"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-8-1918x918.png",
+      "bytes": 2036409,
+      "sha256": "c49ebeabcbb931e1464742c3174dd5e34d6d90a917b9ec269872482e2bd8ef67"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-8-320x568.png",
+      "bytes": 215810,
+      "sha256": "037c6e9db3bbc91d2e699e9816ec6d0ccea2c0652659e9e71b6f5e29cc491f2e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-8-390x844.png",
+      "bytes": 389766,
+      "sha256": "d6012530244765c55220f03b1734f7bd15735c297dc3fd6ef24b06e75fd8206a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-8-844x390.png",
+      "bytes": 402144,
+      "sha256": "e07dff2f459ab38a157a8afd21f479f1662b51b38a7147e9db34ae4277a2ae13"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-side-8-1918x918.png",
+      "bytes": 1921553,
+      "sha256": "d44ec7152cdeddf3c580de00f5f2314b87edb2b51b33b9ce94988f341a05b35e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-side-8-320x568.png",
+      "bytes": 211646,
+      "sha256": "05c0f6582e9170af23954003717805486b50ad6ecc02890dcf45903652cd44f0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-side-8-390x844.png",
+      "bytes": 392814,
+      "sha256": "52e80e24ae670ea4f6b7da8079fa3278056d3b25447e2a7c8d88e0713fc862dc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-clearing-side-8-844x390.png",
+      "bytes": 394131,
+      "sha256": "74c2535e5f66f78aa0f11445dbfb2d5b0a98750e93a11f8801398628d56f5925"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-tree-return-8-1918x918.png",
+      "bytes": 1956440,
+      "sha256": "cfd4390def2115a3c3cbc2fb73343e05fe2ef9a7ca9f4dfb02cc32d8ae5f38b0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-tree-return-8-320x568.png",
+      "bytes": 222399,
+      "sha256": "5c5d269cb96b84eaa33c1862b6fe1732f044f947d20916b780c729b0771f3b1f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-tree-return-8-390x844.png",
+      "bytes": 384913,
+      "sha256": "e6082459ced8de68c1957067d6932ee4e2355376913adf47cb751c0e05cf1224"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-tree-return-8-844x390.png",
+      "bytes": 397801,
+      "sha256": "62df5e59ef47e265d06eb923a6b4cf83e8a0906a6770c7a1f5841d89a6700073"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-woodland-0-1918x918.png",
+      "bytes": 1758443,
+      "sha256": "bf629f1ed846b0ffb7a62f5805a7537a2dd9b159b7722728feab8534a6e344a4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-woodland-0-320x568.png",
+      "bytes": 245751,
+      "sha256": "694ce27c4599d773dc622a86c37ef9b30ba314abddf703f85194bcc7e5e72329"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-woodland-0-390x844.png",
+      "bytes": 427973,
+      "sha256": "f34be6f82d89785edd8752a96704ea0ab2b0025167784011d6326e163c52da34"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-03/live-woodland-0-844x390.png",
+      "bytes": 366501,
+      "sha256": "0b252a29dff65e1c9d8e4610947b4015c15cfd9f011cbba4a0e4c4a33917a94d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/captures.json",
+      "bytes": 53303,
+      "sha256": "aa0b31e8b0ed104e8997d9decbb34bd4b4c312077cfe4498c3e0789a28ff530a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-0-1918x918.png",
+      "bytes": 2016711,
+      "sha256": "56869067735222a67d464d6826fdb002815fa8cbfce2103b4d94490f5ec737f1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-0-390x844.png",
+      "bytes": 376467,
+      "sha256": "3846344553197f308d7ee83d47d93818cc25fcaa21787c2981d6c4c4cde02a30"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-8-1918x918.png",
+      "bytes": 2036369,
+      "sha256": "499ad23ec22e1d28f4d6a6d800ad0486da3d19540b95dcdb381efdc1ac8dded2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-8-390x844.png",
+      "bytes": 389710,
+      "sha256": "63fe50d58b5cc8ffb138cda6d2e6dc39704bee735cbbfe7e6a89b5fc74a78f59"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-side-8-1918x918.png",
+      "bytes": 1921520,
+      "sha256": "dfd1d95348d6c8c09f0b3f0f3e2d52ad75305da10c589e11b2585591ccb43048"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-clearing-side-8-390x844.png",
+      "bytes": 392818,
+      "sha256": "2d2b6ee2cfc9a9d3a67a746aae568e075880bf66b42e7bad498b87f41729ba6a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-tree-return-8-1918x918.png",
+      "bytes": 1956400,
+      "sha256": "2cc7c2be4800450b8968044a56e8283038bd58bedb1930d8553ce8ae97517b27"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-tree-return-8-390x844.png",
+      "bytes": 384838,
+      "sha256": "e85e296bfe34c08633d73240f19d159e8545cb3e825a07fa6b6e46e4df30dbfd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-woodland-0-1918x918.png",
+      "bytes": 1759954,
+      "sha256": "f146a3fd5a0b6b03c27a1a3a841a0f57dd927bd88ccd5b057a5899f562e5595d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-04/live-woodland-0-390x844.png",
+      "bytes": 429315,
+      "sha256": "0212733f6ff4e7ffe8f49c3efd75d605da356a382694b7775180f80036b2e003"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/captures.json",
+      "bytes": 106461,
+      "sha256": "54e3152b1e6c99abf6c7d2aa4da184427d79530cb59ea7952b44aa3ab0cb9d3a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-0-1918x918.png",
+      "bytes": 2016690,
+      "sha256": "083c5f11ea886aa1e230db381eb73d6634a5b2603ea919f3ae3278739c023166"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-0-320x568.png",
+      "bytes": 209244,
+      "sha256": "57a0e29c2d55341e3899e8556448975ab99e4a536f7540eacd558f299b036254"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-0-390x844.png",
+      "bytes": 379135,
+      "sha256": "9a9600822fa48ce99c51d15622c1e911e02230319abb824fd1442f139dd63fe0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-0-844x390.png",
+      "bytes": 394969,
+      "sha256": "32f4a56e48369ff7b57ea9eb4a229c3c8511e938b02d6bd319f35a0c3553e571"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-8-1918x918.png",
+      "bytes": 2036382,
+      "sha256": "b018286ed14a28e60658f8182937b4e9e20d305ee8cc8841c8940d9d030510de"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-8-320x568.png",
+      "bytes": 215814,
+      "sha256": "feca370f27a8c9da9bca5edb47258bf4d8301eff52e0340f3bdb32d9987a88fc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-8-390x844.png",
+      "bytes": 389765,
+      "sha256": "f3ff596241b4485d29aab290488c8fa7bb4459495beeef7162986a9fbecb603c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-8-844x390.png",
+      "bytes": 401985,
+      "sha256": "e42db1be97007f29b2a9cb6560f9e06de4a4f79c4d43511a9a226e99e8430e7d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-side-8-1918x918.png",
+      "bytes": 1921572,
+      "sha256": "75a2f631a22433d8e608ac1a941ca348b97afebb4df557ce04c09a1529cd323d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-side-8-320x568.png",
+      "bytes": 211129,
+      "sha256": "97d491f79af85386bc23c712913eb016b60643af7d4396f3d800038d104307f1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-side-8-390x844.png",
+      "bytes": 392086,
+      "sha256": "4b3c9ef79cbe93e5aedcc3b1375820138fc3a1bbde0c1b9ddb7a081bd39e4035"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-clearing-side-8-844x390.png",
+      "bytes": 391567,
+      "sha256": "4974e2dd545b241c62d2ec145ca4838bf0ad02f40276b3dce2ef7b40cb1423cd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-tree-return-8-1918x918.png",
+      "bytes": 1956491,
+      "sha256": "d4a3579676ff78238df99ff69d91ae3eb9dcac97b3ac7a07395e437b796f07f2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-tree-return-8-320x568.png",
+      "bytes": 222395,
+      "sha256": "ce5783563a62297a7add33b953a73d26bfe62bd5a07b991bc3a95d1080fc773a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-tree-return-8-390x844.png",
+      "bytes": 384956,
+      "sha256": "dd246f455984e81ec8875b4cb8985930a8d0a67b06ca99666999166176bbb772"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-tree-return-8-844x390.png",
+      "bytes": 397546,
+      "sha256": "00f96eb7a39a59c5c174d66c5f4c2ef70fa1888bd543d3c910ba20c4fc8e36b7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-woodland-0-1918x918.png",
+      "bytes": 1759902,
+      "sha256": "80be9403939a624677334f0613a79ce4c9b2cd097bc36fc7bb597af7b862a777"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-woodland-0-320x568.png",
+      "bytes": 246947,
+      "sha256": "c8ae9d5f2778cf102472546d61eae93f1a701f9bc3418cfd908d6a428e7ec1d4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-woodland-0-390x844.png",
+      "bytes": 429501,
+      "sha256": "9a72a9f939a34062aa7bb8792ca57cb1fe2e6d663a9271090b6467a12fc5419d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05/live-woodland-0-844x390.png",
+      "bytes": 366543,
+      "sha256": "9298e30c57eb567577707ddf11a2391537a6d18ef84cb39cdc19f6945981106c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/captures.json",
+      "bytes": 95221,
+      "sha256": "5ae61ebbed5568082ef51eacd50e5dc8ad91c08e39dd4f8dbd92611a10a54979"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-acacia-0-1918x918.png",
+      "bytes": 1484874,
+      "sha256": "07feaa162d6b1227b675f33d761f2eeabf0e1c8d8c26afd7d5404caed7664193"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-acacia-8-1918x918.png",
+      "bytes": 1492430,
+      "sha256": "70a813ddff0160885b3ecc6eac26391ad4b93a5b41d7e48842c9b0ba52c488b8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-agoho-0-1918x918.png",
+      "bytes": 947305,
+      "sha256": "0b382509481490fc892bebcbdd30625c5afcc0e94e7fb56b2a61cc84f89cb5ea"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-agoho-8-1918x918.png",
+      "bytes": 951249,
+      "sha256": "70cd3b8721012b4f70cfdea68dd2d57025e7df69b97f8ee2707a6224c43b6151"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-balete-0-1918x918.png",
+      "bytes": 819696,
+      "sha256": "b90e939b8597c621b092c27c0f5e6b8e81cafaa2472dc3fed2fb6ccefe85e326"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-balete-8-1918x918.png",
+      "bytes": 802824,
+      "sha256": "e643eb693334daf5d4d6c07197651208ea9f435b33d507df4277b107ff852d1c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-bamboo-0-1918x918.png",
+      "bytes": 1270126,
+      "sha256": "62d2ec7f77b8fa3925c8a3b38783c3c24f5ae640d5277179047123ca3a671272"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-bamboo-8-1918x918.png",
+      "bytes": 1272380,
+      "sha256": "51ae150be855922d7c2fb07cc6a841e727ce8c5eb3844cbf0ee6a279dda5acc6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-banana-0-1918x918.png",
+      "bytes": 954248,
+      "sha256": "327d6aff19677ac58cdbe37edbf330929ecc29dcadc7f6a2b779b9842bbb1ccc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-banana-8-1918x918.png",
+      "bytes": 964562,
+      "sha256": "b06083d8a973c4f46f2833592f7263409c187fbb48cc10e3955ed2e86362f36e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-coconut-0-1918x918.png",
+      "bytes": 1165207,
+      "sha256": "0a6f30d982e2245373e948679f2a325d1fb184f8bd2321a4caa10a0f11b506fb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-coconut-8-1918x918.png",
+      "bytes": 1184470,
+      "sha256": "c03b109d1fb348a338e00fbe5c10542ff9feeafff414d4b732c66b833c14afa5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-mango-0-1918x918.png",
+      "bytes": 1328201,
+      "sha256": "232c0f8ac3511d30dff7854c42e224a65a37aad1cf2467f4b2d55bf4dcb31319"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-mango-8-1918x918.png",
+      "bytes": 1333891,
+      "sha256": "2c64c60fbb820aff3a24b4f31daa1474f1772224155fac54ed5fee4a57370e5b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-narra-0-1918x918.png",
+      "bytes": 1450038,
+      "sha256": "16bd4c40bf4b10aabcb5e717e72a6ca4e92f9a57fd17a09577751d716be14785"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-narra-8-1918x918.png",
+      "bytes": 1463388,
+      "sha256": "caebf37e80885c8b27ab860c913460531f1e9ad63f608bfca5e0a28ca0c4bf5c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-talisay-0-1918x918.png",
+      "bytes": 1004440,
+      "sha256": "73bd188d138b75404fec2b6a9c3d49d352688014a459c0c209de9e0e7d7f835a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-05-forest/live-talisay-8-1918x918.png",
+      "bytes": 1014667,
+      "sha256": "4cc15a92b34d1668d3a22621fbc6a8636c3046150e8595ed3fb56f614ae14fa9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/captures.json",
+      "bytes": 106459,
+      "sha256": "0bb6a8c90436afba3e1568cec5fc14181d45cb3d56c927fb94f9a88774b69f46"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-0-1918x918.png",
+      "bytes": 2016528,
+      "sha256": "89f57e89c6e446105712d2f0ed6715892e36bcf4d01826a15d207ff83276759e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-0-320x568.png",
+      "bytes": 209288,
+      "sha256": "e04e95f7a1f9fcf18ba0910b2153e8e922ddc07762ec4612549846822c7ee0a5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-0-390x844.png",
+      "bytes": 379131,
+      "sha256": "a464823ba351fb1a72044c345879d52da9e24a67772b87212f332bb897119bcc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-0-844x390.png",
+      "bytes": 394872,
+      "sha256": "fa62a8fe4e4734e37f157165fcd42cacd89c30ade501490bc61300b877414cdf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-8-1918x918.png",
+      "bytes": 2036204,
+      "sha256": "b465f169a5bd3280d127cc40054c73d30bca5bd4b025900a128265991962db0b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-8-320x568.png",
+      "bytes": 215831,
+      "sha256": "8aaa5ae8076398475a6ec96e89a26c243d8e65e2606030dcc602922979f96045"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-8-390x844.png",
+      "bytes": 389732,
+      "sha256": "1d1ecd79a1f96d18656f17a14279d5aee1c8e024be166c51476bdbf9e906e58a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-8-844x390.png",
+      "bytes": 401960,
+      "sha256": "1084270f753ed10d8bb4b10163fcc5427bb85bbb352c6529250059efb227f106"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-side-8-1918x918.png",
+      "bytes": 1921558,
+      "sha256": "142de21790b7c43dd8be116d8925f6e52973c72ea3232b9d3d7d540096cc11cd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-side-8-320x568.png",
+      "bytes": 211140,
+      "sha256": "54542f4cb62c092795d66d7d369ba30b68fea6fe4ab5cfcec4b8091f6042f4d9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-side-8-390x844.png",
+      "bytes": 392112,
+      "sha256": "d817a4e3307c9449ff14673a7d8cc3f342ec604ca6ecae7bd41fa13e6f3f1170"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-clearing-side-8-844x390.png",
+      "bytes": 393904,
+      "sha256": "edc52ed520d79848bc90342d7694bd52ec5c76679038ccf49cee5dd744defb08"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-tree-return-8-1918x918.png",
+      "bytes": 1956467,
+      "sha256": "80803cc55b801c535f76b28d97533504b106b18293185759ea48ed9b27848027"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-tree-return-8-320x568.png",
+      "bytes": 222416,
+      "sha256": "62f1f7d49eadb8cb1a98e3ec8e556a75b99d533ea121c0b5d463002dac1028ad"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-tree-return-8-390x844.png",
+      "bytes": 384802,
+      "sha256": "51d01d288a4faec26e4734495c5adc3b521a1fc60a8eea131e68aab06d202d30"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-tree-return-8-844x390.png",
+      "bytes": 397828,
+      "sha256": "6a3a23f4883b4359831299fca950336a3ff1fccf11f15dc3906fc4f7da8b676e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-woodland-0-1918x918.png",
+      "bytes": 1761867,
+      "sha256": "816ba3e71db6c8cf46af0c568db0c1db90a2e15d5be2cc942cd656cfeb20a727"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-woodland-0-320x568.png",
+      "bytes": 247528,
+      "sha256": "a3dc5865ce8483e949cef08d81d1e6dfebf6d317fcf951a7e243228f7ca18d1c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-woodland-0-390x844.png",
+      "bytes": 430497,
+      "sha256": "cb13654dbe93d7f7c84b663014d8643e458a15f1cd59958183c737e9665ee377"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06/live-woodland-0-844x390.png",
+      "bytes": 366653,
+      "sha256": "72f15d87ad471ae9ee9d23cc3c23218f059bf0ec26b7bc924b606cca57d3cf69"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/captures.json",
+      "bytes": 95221,
+      "sha256": "e07331d5e442d9be07cb378603e513b958a21b4bb67dbfdf8046a99dba6cec50"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-acacia-0-1918x918.png",
+      "bytes": 1486331,
+      "sha256": "4f99661ba5019d3994b0a12a718c27fcbab44247a7a652f8cc912d433c4cc335"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-acacia-8-1918x918.png",
+      "bytes": 1493680,
+      "sha256": "73b4ea22e12f392e7e8e736c622c7f5716dd51ccb72aa66868a7f25364453cf4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-agoho-0-1918x918.png",
+      "bytes": 940197,
+      "sha256": "4b5ce6dbe5065695a24c53fe82e5373917ff7408a64ff440d966cc3c1849d666"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-agoho-8-1918x918.png",
+      "bytes": 944643,
+      "sha256": "447f9f95a64170fead7cf69d901b09e24ba3aa2741c676f13b69772416e56f8e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-balete-0-1918x918.png",
+      "bytes": 821915,
+      "sha256": "9c592869f573ca3afc5d48121f5a605fa5b16da131f3944116daba2e42f1fcb5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-balete-8-1918x918.png",
+      "bytes": 813775,
+      "sha256": "ff5b51cbea4af55212166ad63d2449761030941a285c184956e4093671be59b3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-bamboo-0-1918x918.png",
+      "bytes": 1270149,
+      "sha256": "1ce3e3abaa60b0dd32091924297fcbe0af5c732cafea4d24053f32fab9ed7658"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-bamboo-8-1918x918.png",
+      "bytes": 1272319,
+      "sha256": "1b5dead8094221d5f2ff92b372a90fdf5ab2a48e253165f701879950ff9d8374"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-banana-0-1918x918.png",
+      "bytes": 949773,
+      "sha256": "879b5d9083fcbf2f6f0c3818ee70ae2fcbff06c044b13338aa1d2c1269c7563c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-banana-8-1918x918.png",
+      "bytes": 959856,
+      "sha256": "2f785c6903d271152fc506634dc3d1930eecad66eadc8073e17be8fe98e160de"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-coconut-0-1918x918.png",
+      "bytes": 1165334,
+      "sha256": "f887b21d414705618410003c46ef559e9658036551b9ed8348788653fa1a0b86"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-coconut-8-1918x918.png",
+      "bytes": 1184669,
+      "sha256": "13948186228568ab53a284a5e23c6b7c93a81451b0c41ae1bafb49fc08061833"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-mango-0-1918x918.png",
+      "bytes": 1328137,
+      "sha256": "8e802bbffff2122462b3f65e105f73914157911f0e3f2ddc502d190b80d93b10"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-mango-8-1918x918.png",
+      "bytes": 1333921,
+      "sha256": "946a2869bfe2fa0b7c127df128094d149e908f746018b63a8c7d37750feb658a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-narra-0-1918x918.png",
+      "bytes": 1450015,
+      "sha256": "e16b07f39caf43e881e1afaafedec4228b9412c670e573f5a90ae87af5b44e1e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-narra-8-1918x918.png",
+      "bytes": 1463392,
+      "sha256": "5f8944886e286bb15b6a3c75e5ea5a67c4a0048519536f0869396026d5308f6d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-talisay-0-1918x918.png",
+      "bytes": 1008717,
+      "sha256": "3a51f8aa120cc41cba4b9a2c7e83827499d5b3a3dd5c020b4d85d08dc5ab99ea"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-06-forest/live-talisay-8-1918x918.png",
+      "bytes": 1018902,
+      "sha256": "3d101d3df87c7634a0f3bd3de1ae14f864754f976d7f21c2c90b3cfc3ab62393"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/captures.json",
+      "bytes": 106459,
+      "sha256": "0fff2dd567d8e1d74f8337a0f88a714c9b37bd4c8c92dfec5235bc88a89328ae"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-0-1918x918.png",
+      "bytes": 2016688,
+      "sha256": "c4f8b7821370aefd9132f84c069f66f83e8b90e9e82e7805d6b48680b14a1c53"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-0-320x568.png",
+      "bytes": 207194,
+      "sha256": "7c5147456e0a64d9c17d77ff56ba016178dce50b045c63b82807d9f6981f2d51"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-0-390x844.png",
+      "bytes": 376443,
+      "sha256": "0afef2b05b18e4565f724db4a6b75b6ac7909b37b5bf4d988cd101dc23858d82"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-0-844x390.png",
+      "bytes": 392254,
+      "sha256": "46803b0fe1b5d6e1a613a46827c6354743695302c73481cf87311540098e1b60"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-8-1918x918.png",
+      "bytes": 2036354,
+      "sha256": "ba58d84bb43ee150522c35abf02109fc19d8a6faab27abe294bfab82a290e4d3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-8-320x568.png",
+      "bytes": 215835,
+      "sha256": "c0596c6e42d492ad2b29ee9bbd15c83c836e3e13074b2bc9ccc7c131999f6235"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-8-390x844.png",
+      "bytes": 389721,
+      "sha256": "50ef9fa4b85f20950c21e2aea43070d52c3b93259918f87fb75281b2e2ac5f95"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-8-844x390.png",
+      "bytes": 401970,
+      "sha256": "ca4b28a04a4d05634b304c1d8524484ba4665a582d825e868b242f0ee7da4e44"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-side-8-1918x918.png",
+      "bytes": 1921537,
+      "sha256": "645a7a2bded6788a10d75fd52b14a03fc7dbd66edc2624e42dec67fab83c803e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-side-8-320x568.png",
+      "bytes": 211605,
+      "sha256": "1773a4e81b6692862fd25961ee07ed6b3b8621bae0c3bcf40f5dbc08068c5b6f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-side-8-390x844.png",
+      "bytes": 392811,
+      "sha256": "3edda7c7b5a95820db4cec7367050b714774f048b89126774152e467080ad3f0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-clearing-side-8-844x390.png",
+      "bytes": 394124,
+      "sha256": "58f8bd083b8d3532d13763f53dd3efa22f5ad6cd8b5a9ef51a61fc65286a9828"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-tree-return-8-1918x918.png",
+      "bytes": 1956466,
+      "sha256": "1ca32d86949dc2d33c5e8df216c52ed06c17760ad3069a21711332086c2b9fd7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-tree-return-8-320x568.png",
+      "bytes": 222434,
+      "sha256": "8f1554ba0f27f3ac937269b844719a1ee2c9ebe4d44ea29c9aa4e99c71b0294f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-tree-return-8-390x844.png",
+      "bytes": 384844,
+      "sha256": "3ef2fc0334a86a2b59f8e0cc9d714b94521adf5e926e062c91d4f9458d5bf691"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-tree-return-8-844x390.png",
+      "bytes": 397670,
+      "sha256": "e4484b49ab472b7a8ca19ff5c8b39a91fcfbe3c73c35a5c5f140214778237b84"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-woodland-0-1918x918.png",
+      "bytes": 1761945,
+      "sha256": "3b6198ea3f3285c654eea3bce611bccdaaa395d2dbaee69331953a8bd0cb9209"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-woodland-0-320x568.png",
+      "bytes": 247106,
+      "sha256": "c7ff131f2f95a97d503082937d46483f6a989fd6c5f2a8b40ebaa1b336a219bc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-woodland-0-390x844.png",
+      "bytes": 430411,
+      "sha256": "d57fcc162682b0ccfef8ea5d920218f1ee406ce79b61e2d06e15ab1cdd3cb7b0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07/live-woodland-0-844x390.png",
+      "bytes": 366662,
+      "sha256": "a8bdd85f8dde5f48b17aaa811641ccbae419f155bc74d7f5182cda53b91a9c72"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/captures.json",
+      "bytes": 95201,
+      "sha256": "499bbb78dedf006fb52fa8697d17e08bd25d9c8cd6075272a886eb637eb58090"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-acacia-0-1918x918.png",
+      "bytes": 1487067,
+      "sha256": "fb33f6f9aeb6f0cb8b011c5b865a803af0722a00a547a4523787295f2f841ddb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-acacia-8-1918x918.png",
+      "bytes": 1494420,
+      "sha256": "fd1f8ab4bf6a2e168fb6119d3fd2de0a26a4c5382a0e9f922e49dd7b189f19d7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-agoho-0-1918x918.png",
+      "bytes": 940047,
+      "sha256": "ff5ddde6c2d38af5079bc384f341a76461268f043bf9c49307dce2cb665f3c84"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-agoho-8-1918x918.png",
+      "bytes": 944723,
+      "sha256": "099d26af3de6512f323ed20309344ae968bbe6cf590726bdacc0bff069113b6e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-balete-0-1918x918.png",
+      "bytes": 821885,
+      "sha256": "d6bdd56e6cdd53641e92d4f4a4b4363cc073a632aa653405fbaeb1ef22afcec9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-balete-8-1918x918.png",
+      "bytes": 813731,
+      "sha256": "817a1a9aa1a07f509dd93a5c1bfd828b7a6307b0c1f33d91636fb80f2b022821"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-bamboo-0-1918x918.png",
+      "bytes": 1270152,
+      "sha256": "75a68936dd3b711293a1894716cffeac0bffaf4618d5459d438e3fbab5d7c6e2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-bamboo-8-1918x918.png",
+      "bytes": 1272303,
+      "sha256": "2e4e49cf94974900a7e005c011ff238dc8c858256056f99e44a6cd3708b9ad7a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-banana-0-1918x918.png",
+      "bytes": 949744,
+      "sha256": "7f01940a3f9a05775bfeefef41f9bb47b5964934bd365ea8886bc08572aaca47"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-banana-8-1918x918.png",
+      "bytes": 959713,
+      "sha256": "b88f7f184e513517487636cd57fda98e49ecf2b601b154321c828e31dd26f9ca"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-coconut-0-1918x918.png",
+      "bytes": 1165449,
+      "sha256": "fb1a71837a69ebe480f24fc515182659aa5f4052c201e14e7689ce98a925ce63"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-coconut-8-1918x918.png",
+      "bytes": 1184627,
+      "sha256": "bcf279a082c88b5604d67627569b3ef3d6859e5ac6ac7b5aeeef0db602ed6696"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-mango-0-1918x918.png",
+      "bytes": 1324451,
+      "sha256": "65ff9841ef60fca02f30857f83d21d62fd42c46e32943ed0eece3a2af732964b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-mango-8-1918x918.png",
+      "bytes": 1333858,
+      "sha256": "cee73a661e2b96ccd5cc944e6ef1a7a7209714775f3f6c52acee9d17eb88a98a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-narra-0-1918x918.png",
+      "bytes": 1449694,
+      "sha256": "ea3f5eb5215669e0c9029500c0575dab2a0e68b0341c45a4493588d452cdf6cf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-narra-8-1918x918.png",
+      "bytes": 1463395,
+      "sha256": "c5cc87c184bfe7168063bbbb876957c69fc48650f8cc16ce346703184c0919ea"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-talisay-0-1918x918.png",
+      "bytes": 1008847,
+      "sha256": "5bea057e4f0fcbe82d225a09098a2b0b2e9137e8cad17fdaee770c565407d0ef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/iteration-07-forest/live-talisay-8-1918x918.png",
+      "bytes": 1018875,
+      "sha256": "85013662253b7340fbdc1679f0bcfd34756415f3309b694dda7a9568a0d413dd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/lifecycle/latest-cycle.json",
+      "bytes": 451,
+      "sha256": "95ce3abe5a7325e4683980ddb18ad04cacb5066a5c18a791644b6b5caa457ed3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/lifecycle/verification.json",
+      "bytes": 6085,
+      "sha256": "748ecb04883242519d578e00baf1c6e82c54df93e95f9b1948deb3d7f02e9785"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/performance-before-packing.json",
+      "bytes": 5122,
+      "sha256": "00a060803e07f4faef36f6a6da2796303fa1aa08056e131b2c82bb3894c85245"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/performance.json",
+      "bytes": 5096,
+      "sha256": "e28449f4a5449be7c3a6b5e135b972167bdc8ef13bbfbfd947fc087d4380b350"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/playwright-final.json",
+      "bytes": 5845,
+      "sha256": "4093862eb4bb48de7a4946cb71832481d08e5c418fd120038a6b5a73225f2e1c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/playwright-recheck.json",
+      "bytes": 9314,
+      "sha256": "7a94d06af1dba6b25691257b125f72da82c02d6b57329faa50e1dfdb93dc5391"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/playwright.json",
+      "bytes": 18270,
+      "sha256": "8412c267077e147759dca2eac4cb2cd9b490d238d1f0e7ccf7921af2307cf776"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/production-1918x918.png",
+      "bytes": 2040225,
+      "sha256": "f85da44d26a88f77b4defb1d6b5f3634fd7e76901ce17e3dbe3367663511d53e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/production-320x568.png",
+      "bytes": 216477,
+      "sha256": "0c95c9ee90699f92ad38c9fbba00f0693f7eb563eaed0f1f46dc7ff0aa52f4e8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/production-844x390.png",
+      "bytes": 404945,
+      "sha256": "e448425189ef0bbd77fabb746cadad70590a00095d6f6888d65459f5472f86b4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/production-verification.json",
+      "bytes": 490,
+      "sha256": "d9c1804b613f9189f7e4967c1ee0639962f023cc3d5726819650f134bcb9ecde"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/pass-3-approved-baseline/review-verification.json",
+      "bytes": 2566,
+      "sha256": "8801799d281ee674d969eafc2739f515b6292908c4eed4979aeec46a1ebc5132"
+    }
+  ],
+  "nextAction": "Reference-motion revision and review; do not advance to Pass 4"
+}

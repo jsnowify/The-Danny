@@ -6,7 +6,8 @@ export function useDialog(close: () => void) {
   useEffect(() => {
     const prior = document.activeElement as HTMLElement | null;
     const root = ref.current!;
-    const selector = 'button:not(:disabled), input, select, [tabindex="0"]';
+    const selector =
+      'button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), a[href], summary, [tabindex="0"]';
     const first = root.querySelector<HTMLElement>(selector);
     (first ?? root).focus();
     const key = (event: KeyboardEvent) => {
@@ -16,7 +17,11 @@ export function useDialog(close: () => void) {
         closeRef.current();
       }
       if (event.key !== "Tab") return;
-      const nodes = Array.from(root.querySelectorAll<HTMLElement>(selector));
+      const nodes = Array.from(
+        root.querySelectorAll<HTMLElement>(selector),
+      ).filter(
+        (node) => node.getClientRects().length > 0 && node.tabIndex >= 0,
+      );
       const first = nodes[0],
         last = nodes[nodes.length - 1];
       if (!nodes.length) {

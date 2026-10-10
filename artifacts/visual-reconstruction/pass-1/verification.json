@@ -1,0 +1,303 @@
+{
+  "performance": {
+    "durationMs": 20340.299999999814,
+    "frames": 38,
+    "fps": 1.8682123665826142,
+    "p95FrameMs": 618.2000000001863,
+    "callsRange": [
+      40,
+      40
+    ],
+    "trianglesRange": [
+      55878,
+      55878
+    ],
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+    "viewport": {
+      "width": 960,
+      "height": 640
+    },
+    "dpr": 1,
+    "simulatedTime": 2.1016000000005595,
+    "nativeAudioRequests": 0,
+    "scope": "20-second development prototype observation; shadows included; no gameplay or full-world performance claim"
+  },
+  "accessibility": {
+    "canvasLabel": "Development art study: painted trees, a red-cloaked traveler and a quiet golden leaf current.",
+    "reducedMotionStatic": true,
+    "resizeReusesResources": true
+  },
+  "cleanup": {
+    "records": [
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "instance",
+        "disposed": 1
+      },
+      {
+        "kind": "geometry",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "texture",
+        "disposed": 1
+      },
+      {
+        "kind": "instance",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      },
+      {
+        "kind": "instance",
+        "disposed": 1
+      },
+      {
+        "kind": "material",
+        "disposed": 1
+      }
+    ],
+    "diagnosticRemoved": true,
+    "counts": {
+      "instance": 3,
+      "geometry": 18,
+      "material": 16,
+      "texture": 7
+    }
+  },
+  "motion": {
+    "durationWallSeconds": 15,
+    "snapshot": {
+      "time": 1.5009000000003734,
+      "reduced": false,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "camera": {
+        "position": [
+          0,
+          17,
+          16.5
+        ],
+        "target": [
+          0,
+          0.8,
+          0.3
+        ],
+        "projection": "OrthographicCamera",
+        "frustum": [
+          -10.666666666666666,
+          10.666666666666666,
+          6,
+          -6
+        ]
+      },
+      "metrics": {
+        "calls": 25,
+        "triangles": 35814,
+        "geometries": 19,
+        "textures": 9
+      },
+      "renderer": "WebKit WebGL",
+      "objects": [
+        "HemisphereLight",
+        "DirectionalLight",
+        "visual-style-prototype"
+      ]
+    },
+    "note": "Software WebGL slows the simulation's capped frame delta. Review live on hardware for intended pacing."
+  },
+  "productionStripping": {
+    "chunks": 7,
+    "markersAbsent": [
+      "__DANNY_STYLE_PROTOTYPE__",
+      "visual-style-prototype",
+      "prototype-painted-crown",
+      "StylePrototype"
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x19a400d04800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x19a400d04800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x19a400d04800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x19a400d04800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "[.WebGL-0x1ce400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1ce400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1ce400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1ce400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "production": {
+    "normalGameWithPrototypeQuery": true,
+    "eightMemorySlots": true,
+    "prototypeDiagnosticAbsent": true
+  },
+  "reviewArtifact": {
+    "allIterationsAndPosesLoaded": true,
+    "allReferencesLoaded": true,
+    "videoMetadataLoaded": true,
+    "trimmedVideo": {
+      "source": "http://127.0.0.1:5174/artifacts/visual-reconstruction/pass-1/prototype-motion-review.webm",
+      "duration": 17.64
+    }
+  },
+  "status": "PASS",
+  "checks": {
+    "typescript": "PASS",
+    "productionBuild": "PASS",
+    "format": "PASS",
+    "diffWhitespace": "PASS",
+    "fullGameSuiteRerun": false
+  }
+}

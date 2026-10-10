@@ -9,14 +9,17 @@ import {
   type Texture,
 } from "three";
 import * as damping from "maath/easing";
-import { MEMORIES, TEXT } from "../config";
+import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { useAssets } from "./resources";
 import { ANCHORS } from "./MemoryTree";
+import { memoryBranchSpread } from "./calibration";
 import { flight } from "./Timeline";
 import { atmosphere } from "./runtime";
 import { groundHeight } from "../utils/random";
 import type { Memory } from "../config";
+import { idleRuntime } from "../features/idleClock";
+import { useText } from "../hooks/useText";
 export function MemoryPicture({
   memory,
   index,
@@ -24,6 +27,7 @@ export function MemoryPicture({
   memory: Memory;
   index: number;
 }) {
+  const TEXT = useText();
   const assets = useAssets(),
     group = useRef<Group>(null),
     card = useRef<Group>(null),
@@ -91,7 +95,8 @@ export function MemoryPicture({
       flying = flight.id === memory.id;
     group.current!.visible = !kept || hung || flying || state.phase === "intro";
     const t = atmosphere.time,
-      [ax, ay, az] = ANCHORS[index];
+      [anchorX, ay, az] = ANCHORS[index];
+    const ax = anchorX * memoryBranchSpread();
     let x = memory.position[0],
       y = 1.8 + groundHeight(...memory.position),
       z = memory.position[1];
@@ -115,15 +120,27 @@ export function MemoryPicture({
     const bob = state.settings.reducedMotion
       ? 0
       : Math.sin(t * 1.3 + index) * (hung ? 0.035 : 0.16);
-    damping.damp(scratch, "x", x, flying ? 0.03 : 0.24, dt);
-    damping.damp(scratch, "y", y + bob, flying ? 0.03 : 0.24, dt);
-    damping.damp(scratch, "z", z, flying ? 0.03 : 0.24, dt);
+    if (state.settings.reducedMotion) {
+      scratch.x = x;
+      scratch.y = y;
+      scratch.z = z;
+    } else {
+      damping.damp(scratch, "x", x, flying ? 0.03 : 0.24, dt);
+      damping.damp(scratch, "y", y + bob, flying ? 0.03 : 0.24, dt);
+      damping.damp(scratch, "z", z, flying ? 0.03 : 0.24, dt);
+    }
     group.current!.position.set(scratch.x, scratch.y, scratch.z);
     card.current!.quaternion.copy(camera.quaternion);
     if (!state.settings.reducedMotion)
       card.current!.rotateZ(Math.sin(t * 0.5 + index) * 0.05);
-    const pulse = near ? 1 + Math.sin(t * 3) * 0.07 : 1;
-    card.current!.scale.setScalar((hung ? 0.75 : 0.95) * pulse);
+    const emphasized =
+      near ||
+      (state.idleStage >= 20 && idleRuntime.nearestMemory === memory.id);
+    const pulse =
+      emphasized && !state.settings.reducedMotion
+        ? 1 + Math.sin(t * 1.6) * 0.045
+        : 1;
+    card.current!.scale.setScalar((hung ? 0.46 : 0.95) * pulse);
     const mesh = card.current!.children[0] as Mesh;
     const material = mesh.material as import("three").MeshBasicMaterial;
     if (material.map !== imageRef.current) {
@@ -133,13 +150,19 @@ export function MemoryPicture({
     ring.current!.visible = near && !hung;
     ring.current!.position.y =
       -scratch.y + groundHeight(memory.position[0], memory.position[1]) + 0.06;
-    ring.current!.scale.setScalar(1 + Math.sin(t * 2) * 0.1);
+    ring.current!.scale.setScalar(
+      state.settings.reducedMotion ? 1 : 1 + Math.sin(t * 2) * 0.1,
+    );
   });
   const open = () => {
     if (near || hung) useStore.getState().openMemory(memory.id);
   };
   return (
-    <group ref={group} position={[memory.position[0], 1.8, memory.position[1]]}>
+    <group
+      name={`memory-picture-${memory.id}`}
+      ref={group}
+      position={[memory.position[0], 1.8, memory.position[1]]}
+    >
       <group
         ref={card}
         onClick={(e) => {
@@ -177,8 +200,8 @@ export function MemoryPicture({
         )}
       </group>
       {hung && (
-        <mesh position={[0, 0.75, 0]}>
-          <cylinderGeometry args={[0.009, 0.009, 0.6, 4]} />
+        <mesh position={[0, 0.36, 0]}>
+          <cylinderGeometry args={[0.006, 0.006, 0.16, 4]} />
           <meshBasicMaterial color="#a39367" />
         </mesh>
       )}

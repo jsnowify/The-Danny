@@ -1,0 +1,22 @@
+[
+  {
+    "name": "flora",
+    "command": [
+      "node",
+      "scripts/capture-v4-flora.mjs",
+      "--stage=m"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 192069
+  },
+  {
+    "name": "companions",
+    "command": [
+      "node",
+      "scripts/capture-v4-companions.mjs",
+      "--stage=m"
+    ],
+    "exitCode": 1,
+    "elapsedMs": 86332
+  }
+]

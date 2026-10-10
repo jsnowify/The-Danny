@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-10T13:21:14.739Z",
+  "ui": [],
+  "production": {
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ]
+  },
+  "motion": null,
+  "errors": []
+}

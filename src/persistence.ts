@@ -1,18 +1,47 @@
 import type { StateStorage } from "zustand/middleware";
 import { MEMORIES } from "./config";
 import type { Settings } from "./store";
+import { CAT_IDS, DOG_IDS, SPECIES_IDS } from "./config/discoveries";
+import { safeUrl } from "./config/validation";
 
 export const SAVE_KEY = "the-danny-v2";
 export const LEGACY_SAVE_KEY = "the-danny-v1";
-export const SAVE_VERSION = 2;
+export const SAVE_VERSION = 4;
 
-export type SavedProgress = {
+export type DiscoveryProgress = {
+  discoveredSpecies: string[];
+  discoveredCats: string[];
+  interactedCats: string[];
+  discoveredDogs: string[];
+  interactedDogs: string[];
+  metOscar: boolean;
+  finaleSeen: boolean;
+  language: "en" | "fil";
+};
+
+export function emptyDiscoveries(): DiscoveryProgress {
+  return {
+    discoveredSpecies: [],
+    discoveredCats: [],
+    interactedCats: [],
+    discoveredDogs: [],
+    interactedDogs: [],
+    metOscar: false,
+    finaleSeen: false,
+    language: "en",
+  };
+}
+
+export type SavedProgress = DiscoveryProgress & {
   collected: string[];
   hung: string[];
   introSeen: boolean;
   settings: Partial<Settings>;
 };
 const validIds = new Set(MEMORIES.map((memory) => memory.id));
+const catIds = new Set<string>(CAT_IDS);
+const dogIds = new Set<string>(DOG_IDS);
+const speciesIds = new Set<string>(SPECIES_IDS);
 const record = (value: unknown): Record<string, unknown> =>
   value !== null && typeof value === "object" && !Array.isArray(value)
     ? (value as Record<string, unknown>)
@@ -21,17 +50,19 @@ const record = (value: unknown): Record<string, unknown> =>
 /** Restore known data only; runtime state and actions never come from storage. */
 export function normalizeProgress(value: unknown): SavedProgress {
   const saved = record(value);
-  const ids = (list: unknown): string[] =>
+  const ids = (list: unknown, allowed = validIds): string[] =>
     Array.isArray(list)
       ? [
           ...new Set(
             list.filter(
-              (id): id is string => typeof id === "string" && validIds.has(id),
+              (id): id is string => typeof id === "string" && allowed.has(id),
             ),
           ),
         ]
       : [];
   const hung = ids(saved.hung);
+  const interactedCats = ids(saved.interactedCats, catIds);
+  const interactedDogs = ids(saved.interactedDogs, dogIds);
   const settings: Partial<Settings> = {};
   const preferences = record(saved.settings);
   for (const key of [
@@ -47,9 +78,18 @@ export function normalizeProgress(value: unknown): SavedProgress {
   )
     settings.volume = Math.max(0, Math.min(1, preferences.volume));
   const quality = preferences.quality;
+  for (const key of ["musicVolume", "natureVolume", "effectsVolume"] as const)
+    if (
+      typeof preferences[key] === "number" &&
+      Number.isFinite(preferences[key])
+    )
+      settings[key] = Math.max(0, Math.min(1, preferences[key] as number));
+  if (typeof preferences.customTrackUrl === "string")
+    settings.customTrackUrl = safeUrl(preferences.customTrackUrl);
   if (
     preferences.musicSource === "track" ||
-    preferences.musicSource === "generated"
+    preferences.musicSource === "generated" ||
+    preferences.musicSource === "custom"
   )
     settings.musicSource = preferences.musicSource;
   if (
@@ -63,6 +103,18 @@ export function normalizeProgress(value: unknown): SavedProgress {
     collected: [...new Set([...ids(saved.collected), ...hung])],
     hung,
     introSeen: saved.introSeen === true,
+    discoveredSpecies: ids(saved.discoveredSpecies, speciesIds),
+    discoveredCats: [
+      ...new Set([...ids(saved.discoveredCats, catIds), ...interactedCats]),
+    ],
+    interactedCats,
+    discoveredDogs: [
+      ...new Set([...ids(saved.discoveredDogs, dogIds), ...interactedDogs]),
+    ],
+    interactedDogs,
+    metOscar: saved.metOscar === true,
+    finaleSeen: saved.finaleSeen === true,
+    language: saved.language === "fil" ? "fil" : "en",
     settings,
   };
 }

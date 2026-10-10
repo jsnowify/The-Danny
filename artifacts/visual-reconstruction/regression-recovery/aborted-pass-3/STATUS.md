@@ -1,0 +1,1 @@
+Pass 3 was interrupted and is NOT approved or complete. These source files preserve the stopped attempt for audit only. Active source uses the approved Pass 1 foundation for the Pass 2 correction. Do not restore these files or resume Pass 3 without explicit owner approval of corrected Pass 2.

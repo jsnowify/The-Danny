@@ -1,0 +1,5 @@
+{
+  "identicalGeneratedJavaScript": true,
+  "sha256": "85ce6792cae4d2e31fb6e293fef5644493ad3f9774199fd51aeb4dbdc6a61d04",
+  "fix": "Preserve the supplied material subtype in the TypeScript return type; rendered behavior unchanged."
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Danny · Movement review</title>
+  <style>
+    :root{color-scheme:light;--ink:#283d2e;--paper:#f1efdf;--line:#c5cbb4}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Georgia,serif}main{max-width:1400px;margin:auto;padding:40px 26px 70px}h1{font-size:clamp(32px,4vw,54px);font-weight:normal;line-height:1.1;margin:12px 0 20px}h2{font-size:27px;font-weight:normal;margin:34px 0 12px}p{max-width:950px}a{color:#355d43;text-underline-offset:4px}.status{font:12px/1.6 system-ui;letter-spacing:.13em;text-transform:uppercase}.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}figure{margin:0;background:#e4e6d4;border:1px solid var(--line);border-radius:15px;overflow:hidden}figcaption{padding:10px 14px;font:14px/1.5 system-ui}video,img{display:block;width:100%;height:auto;background:#15271b}video{aspect-ratio:16/9}.tools{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}button,.game{font:14px/1.5 system-ui;padding:10px 15px;border:1px solid #8a9e84;border-radius:22px;color:var(--ink);background:#e5e9d4;cursor:pointer}button:hover,button[aria-pressed=true]{background:#cfdabf}button:focus-visible,a:focus-visible{outline:3px solid #b98530;outline-offset:3px}.note{font:14px/1.65 system-ui;max-width:1000px}.phone{max-width:390px;margin:auto}.phone video{aspect-ratio:390/844}.crossing{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:680px;margin:20px auto}.crossing img{aspect-ratio:390/844}.stills{display:grid;grid-template-columns:1fr 1fr;gap:18px}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}details{border-top:1px solid var(--line);margin-top:30px;padding-top:15px}summary{cursor:pointer;font:15px system-ui}.timestamp{font:13px system-ui;color:#52634c}@media(max-width:700px){main{padding:24px 14px 45px}.pair,.stills{grid-template-columns:1fr}h2{font-size:24px}figcaption{font-size:13px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+  </style>
+</head>
+<body><main>
+  <div class="status">Reference-motion revision · awaiting your approval · Pass 4 stopped</div>
+  <h1>A quiet forest in motion.</h1>
+  <p>The approved painterly artwork remains the foundation. This revision connects cursor distance, walking, camera expansion, delayed fabric response and a shared breeze. The outer landscape extends the painted ground into richer greens.</p>
+  <p><a class="game" href="/" target="_blank" rel="noopener">Try the current game</a></p>
+  <h2>The same route, before and after</h2>
+  <div class="pair">
+    <figure><video id="before" muted playsinline controls preload="metadata" poster="artifacts/reference-motion/before/idle.png"><source src="artifacts/reference-motion/before/movement.mp4" type="video/mp4"></video><figcaption>Before · frozen source from the start of this directive</figcaption></figure>
+    <figure><video id="after" muted playsinline controls preload="metadata" poster="artifacts/reference-motion/iteration-05/idle.png"><source src="artifacts/reference-motion/iteration-05/movement.mp4" type="video/mp4"></video><figcaption>After · final recorded candidate</figcaption></figure>
+  </div>
+  <div class="tools" aria-label="Comparison playback"><button id="play" type="button">Play both</button><button id="pause" type="button">Pause both</button><button id="restart" type="button">Restart</button></div>
+  <div class="tools" id="chapters" aria-label="Movement chapters">
+    <button data-time="0" aria-pressed="true">Idle · 10 seconds</button><button data-time="10" aria-pressed="false">Close hold</button><button data-time="16" aria-pressed="false">Far hold</button><button data-time="22" aria-pressed="false">Forest travel</button><button data-time="28" aria-pressed="false">Sharp turn</button><button data-time="31" aria-pressed="false">Release</button><button data-time="35" aria-pressed="false">Still, after walking</button>
+  </div>
+  <p class="timestamp" id="position" aria-live="off">0.0 / 39 seconds</p>
+  <p class="note">These are actual game frames captured with a fixed 30 Hz simulation clock: ten captured frames per simulation second after the revision, five before. Playback shows animation timing, not measured browser FPS. Software rendering on this machine is slow. The separate live recording below shows normal browser timing.</p>
+  <h2>Phone travel and the corrected tree crossing</h2>
+  <p>Portrait framing protects the Memory Tree while you leave the clearing. The large illustrated tree now fades around the traveler when it blocks the view.</p>
+  <figure class="phone"><video muted playsinline controls preload="metadata" poster="artifacts/reference-motion/iteration-05-phone/far-hold.png"><source src="artifacts/reference-motion/iteration-05-phone/movement.mp4" type="video/mp4"></video><figcaption>390 × 844 · idle, eight-second held walk, release</figcaption></figure>
+  <div class="crossing"><figure><img loading="lazy" src="artifacts/reference-motion/iteration-03-phone/frame-0035.jpg" alt="Earlier phone frame: the orange canopy hides the traveler"><figcaption>Issue found during inspection</figcaption></figure><figure><img loading="lazy" src="artifacts/reference-motion/iteration-05-phone/frame-0035.jpg" alt="Corrected phone frame: the red traveler remains visible through a local canopy fade"><figcaption>Corrected crossing</figcaption></figure></div>
+  <h2>The clearing and eight returned memories</h2>
+  <div class="stills"><figure><img loading="lazy" src="artifacts/reference-motion/iteration-05/live-clearing-0-1918x918.png" alt="Final pale clearing with the approved red traveler, illustrated trees and empty memory slots"><figcaption>0 / 8 · resting composition</figcaption></figure><figure><img loading="lazy" src="artifacts/reference-motion/iteration-05/live-clearing-8-1918x918.png" alt="The same final clearing with all eight memories hanging from the Memory Tree"><figcaption>8 / 8 · all pictures retained</figcaption></figure></div>
+  <h2>The supplied reference</h2>
+  <figure><video muted playsinline controls preload="metadata" poster="artifacts/reference-motion/reference/travel-8-12.jpg"><source src="artifacts/reference-motion/reference/ref-4-review.mp4" type="video/mp4"></video><figcaption>Reference 4 · review copy of the owner's supplied video</figcaption></figure>
+  <details><summary>Normal browser timing and verification details</summary>
+    <p class="note">The live recording holds a ground pointer for twenty wall-clock seconds at Low quality. It runs without the fixed capture clock. Rendering below four FPS still slows the simulation because long stalls are capped at 250 ms. Physical desktop and mobile GPU responsiveness remain unverified.</p>
+    <video muted playsinline controls preload="none" poster="artifacts/reference-motion/normal-motion-end.png"><source src="artifacts/reference-motion/camera-walk.webm" type="video/webm"></video>
+    <p class="note">Remaining visual differences include the orthographic camera's restrained perspective parallax, some older pond and prop materials, repeated painted branch motifs, and visible ordered fading at overlaps. These are described in the report.</p>
+    <div class="links"><a href="REFERENCE-MOTION-REPORT.md">Change and validation report</a><a href="REFERENCE-MOTION-ANALYSIS.md">Reference analysis</a><a href="artifacts/reference-motion/manifest.json">Frozen candidate manifest</a><a href="VISUAL-PASS-3-REVIEW.html">Earlier tree candidate</a></div>
+  </details>
+  <p class="note">Review close movement, expansion, turn response, cloth settling, quiet environmental motion and the clearing-to-forest transition. This candidate awaits your visual approval. No later pass has started.</p>
+</main><script>
+  const before=document.querySelector('#before'),after=document.querySelector('#after');
+  const videos=[before,after];
+  const pause=()=>videos.forEach(v=>v.pause());
+  const seek=time=>{pause();videos.forEach(v=>{v.currentTime=time;});};
+  document.querySelector('#play').addEventListener('click',()=>{before.currentTime=after.currentTime;videos.forEach(v=>v.play().catch(()=>{}));});
+  document.querySelector('#pause').addEventListener('click',pause);
+  document.querySelector('#restart').addEventListener('click',()=>seek(0));
+  document.querySelectorAll('[data-time]').forEach(button=>button.addEventListener('click',()=>seek(Number(button.dataset.time))));
+  after.addEventListener('timeupdate',()=>{
+    document.querySelector('#position').textContent=`${after.currentTime.toFixed(1)} / 39 seconds`;
+    let active=0;document.querySelectorAll('[data-time]').forEach(button=>{if(after.currentTime>=Number(button.dataset.time))active=Number(button.dataset.time);});
+    document.querySelectorAll('[data-time]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.time)===active)));
+    if(!after.paused&&!before.paused&&Math.abs(before.currentTime-after.currentTime)>.22)before.currentTime=after.currentTime;
+  });
+</script></body></html>

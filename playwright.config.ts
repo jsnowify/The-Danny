@@ -5,7 +5,7 @@ export default defineConfig({
   workers: 1,
   expect: { timeout: 15000 },
   use: {
-    baseURL: "http://127.0.0.1:5173",
+    baseURL: "http://127.0.0.1:5174",
     headless: true,
     launchOptions: { args: ["--enable-webgl", "--ignore-gpu-blocklist"] },
     screenshot: "only-on-failure",
@@ -20,8 +20,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev",
-    url: "http://127.0.0.1:5173",
+    command: "npm run dev -- --port 5174 --strictPort",
+    url: "http://127.0.0.1:5174",
     reuseExistingServer: true,
     timeout: 30000,
   },

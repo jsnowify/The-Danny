@@ -1,0 +1,216 @@
+{
+  "recordedAt": "2026-10-10T07:41:12.694Z",
+  "sourceFiles": [
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 790,
+      "sha256": "3583eac29aa009f41b89b3abd0d1209747a9ff2a761a6769cd4d307558062434"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9237,
+      "sha256": "58383d9b2691fb706fac5d6fbc40300f1dc272c3e2ad614f33da359c66799ec6"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 6541,
+      "sha256": "5acaee2930c594b35429439ef96b56d40e2d36664f4b7354a98bee7e5660c932"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "8decc5df6f22f9ed5924825c483373145b8ce5dbaa5189e1603fa58294d516de"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 2631,
+      "sha256": "4bd5f03dd9b0d2976703d05452f5868477061cd40ce0a020c1fcb0fbcad84be7"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 7493,
+      "sha256": "453913a95f97df62a2c4253ee5c9244e5757c76a286152606c0e1a7f7db6d6ca"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9232,
+      "sha256": "8eaffdab41d8a4b3018ffd081b7a5ad6ad8007cdec37af00606483bb1dceb36f"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6675,
+      "sha256": "cfd23e129256a04cc545c28c5c87ec48f7b0387cdce90e88eb7cccee2dc45a27"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6158,
+      "sha256": "2bf5d08bb6977247fca3077fb84638149d17f28f7b95c01115cfa5f49db15b63"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9875,
+      "sha256": "de256665e53ba96d2ee162643d482dfcbcbcdf8237c1ac50b67fa53d3b6b8ed3"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 5429,
+      "sha256": "d8937e5546f35b67572337fe12a99d9e37bdfdd93a4703fac7bfa6c54a0c31f6"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 10982,
+      "sha256": "303e279d2eb5f1ad7c94b2d441ea60aa7617b8535c3350923928e5f10761543c"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1"
+    },
+    {
+      "path": "tests/v4-composition.spec.ts",
+      "bytes": 9876,
+      "sha256": "50e998fe7f2bc1d52c3ecef3f3733ddc0789f616ae41329c57683b4068914df9"
+    },
+    {
+      "path": "tests/v4-painted-forest.spec.ts",
+      "bytes": 4551,
+      "sha256": "2fbabc45b1f432961511f81606b48bb9a656f53a42a6ab08cf712ea2023364c1"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REVIEW.html",
+      "bytes": 11877,
+      "sha256": "fdcc5ca722d41572eec2019f25407781a6889c88b3d26fb5508dd0c049aa9882"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REPORT.md",
+      "bytes": 9464,
+      "sha256": "54a525f27ed3904a52cfb24a344821b909f551fb26fc5da38a2fc54bbc0bc23e"
+    },
+    {
+      "path": "VISUAL-PASS-2-REPORT.md",
+      "bytes": 15278,
+      "sha256": "f05d7007fd75c4bf28b6e5282f50655e81073f2558981238e1881e4e0fce697a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6947,
+      "sha256": "36d317d935d868610bcac0b3e4beee35eaa3f2266ad79a509d68610f9c7a98dc"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca"
+    },
+    {
+      "path": "scripts/capture-pass-3.mjs",
+      "bytes": 12034,
+      "sha256": "4182af13bcc85cd210be5415250f4c7d7fe9b7cb1b04ea9e1ddc4d1ffab52205"
+    },
+    {
+      "path": "scripts/verify-pass-3-baseline.mjs",
+      "bytes": 9581,
+      "sha256": "8d0ad93c2f70e9111c50245a57f5ad10be150d9d72fbebe797c8f9a1a66695d8"
+    },
+    {
+      "path": "scripts/verify-pass-3-experience.mjs",
+      "bytes": 16585,
+      "sha256": "1cc5563a681d58f6e0ae82280ad6cb9ace01a576a141af3e3dc2c7f57c2b8694"
+    },
+    {
+      "path": "scripts/verify-pass-3-lifecycle.mjs",
+      "bytes": 10626,
+      "sha256": "3f1d3122ff44e890341de1349c8f6d6605ae656658d520eb3183fd467672f967"
+    },
+    {
+      "path": "scripts/verify-pass-3-review.mjs",
+      "bytes": 2574,
+      "sha256": "70d029094f6a369a37edea8f57fd1e054c3e2c034e5ef6555cc2cfc0c08336e2"
+    },
+    {
+      "path": "scripts/measure-pass-3.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db"
+    },
+    {
+      "path": "tests/pass-3-trees.spec.ts",
+      "bytes": 4326,
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0"
+    },
+    {
+      "path": "VISUAL-PASS-3-REVIEW.html",
+      "bytes": 9065,
+      "sha256": "10329cbbb33959712f7bf57fe18fcfdd0aa8c1c568dbb5d1b70d47c7b67878f1"
+    },
+    {
+      "path": "VISUAL-PASS-3-REPORT.md",
+      "bytes": 10047,
+      "sha256": "f833ee0d174a5205feeec04c13cf938d72dbde2f748661ebf07d651b44e7898f"
+    }
+  ],
+  "status": "Tree candidate frozen before the new reference-motion directive; pending owner visual approval"
+}

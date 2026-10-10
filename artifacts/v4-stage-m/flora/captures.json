@@ -1,0 +1,188 @@
+[
+  {
+    "kind": "region",
+    "region": "clearing",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-clearing-1280.png",
+    "position": {
+      "x": 0,
+      "z": 5.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "rain-tree",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-rain-tree-1280.png",
+    "position": {
+      "x": -16,
+      "z": 20.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "narra",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-narra-1280.png",
+    "position": {
+      "x": 15,
+      "z": -16.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "bamboo",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-bamboo-1280.png",
+    "position": {
+      "x": -24,
+      "z": 0.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "hollow",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-hollow-1280.png",
+    "position": {
+      "x": -15,
+      "z": -22.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "pond",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-pond-1280.png",
+    "position": {
+      "x": 19,
+      "z": 11.05
+    }
+  },
+  {
+    "kind": "region",
+    "region": "ridge",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-ridge-1280.png",
+    "position": {
+      "x": 27,
+      "z": 28.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "meadow",
+    "captionVerified": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "path": "artifacts/v4-stage-m/flora/region-meadow-1280.png",
+    "position": {
+      "x": 7,
+      "z": 36.5
+    }
+  },
+  {
+    "kind": "guide",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "discovered": 16,
+    "errors": []
+  },
+  {
+    "kind": "region",
+    "region": "bamboo",
+    "captionVerified": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "artifacts/v4-stage-m/flora/region-bamboo-390.png",
+    "position": {
+      "x": -24,
+      "z": 0.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "hollow",
+    "captionVerified": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "artifacts/v4-stage-m/flora/region-hollow-390.png",
+    "position": {
+      "x": -15,
+      "z": -22.5
+    }
+  },
+  {
+    "kind": "region",
+    "region": "pond",
+    "captionVerified": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "artifacts/v4-stage-m/flora/region-pond-390.png",
+    "position": {
+      "x": 19,
+      "z": 11.05
+    }
+  },
+  {
+    "kind": "region",
+    "region": "meadow",
+    "captionVerified": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "artifacts/v4-stage-m/flora/region-meadow-390.png",
+    "position": {
+      "x": 7,
+      "z": 36.5
+    }
+  },
+  {
+    "kind": "guide",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "discovered": 16,
+    "errors": []
+  }
+]

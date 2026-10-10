@@ -1,0 +1,618 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Coding\\JavaScript\\Project\\the-danny\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/experience.spec.ts",
+      "tests/v4-composition.spec.ts",
+      "tests/pass-3-trees.spec.ts",
+      "tests/v4-flora-guide.spec.ts",
+      "tests/v4-painted-forest.spec.ts",
+      "tests/v4-companions.spec.ts",
+      "tests/v4-oscar.spec.ts",
+      "tests/v4-audio-mixer.spec.ts",
+      "--reporter=line,json"
+    ],
+    "configFile": "C:\\Coding\\JavaScript\\Project\\the-danny\\playwright.config.ts",
+    "rootDir": "C:/Coding/JavaScript/Project/the-danny/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Coding/JavaScript/Project/the-danny/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Coding/JavaScript/Project/the-danny/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Coding\\JavaScript\\Project\\the-danny\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Coding\\JavaScript\\Project\\the-danny\\tests",
+        "snapshotDir": "C:\\Coding\\JavaScript\\Project\\the-danny\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 300000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "headless": true,
+          "launchOptions": {
+            "args": [
+              "--enable-webgl",
+              "--ignore-gpu-blocklist"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1100,
+            "height": 760
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5174 --strictPort",
+      "url": "http://127.0.0.1:5174",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "experience.spec.ts",
+      "file": "experience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the complete memory journey, immediate persistence, finale and reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 121207,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Clearing rendering budget: { calls: \u001b[33m73\u001b[39m, triangles: \u001b[33m71363\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T12:58:00.115Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "116f6b4a9defd92cdbb9-eaf85b51315b7d6e0baf",
+          "file": "experience.spec.ts",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "touch layout, focus trap, settings and blocked storage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:00:01.499Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "116f6b4a9defd92cdbb9-503ed20ddeed7f64d085",
+          "file": "experience.spec.ts",
+          "line": 215,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "pass-3-trees.spec.ts",
+      "file": "pass-3-trees.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "painted near and far trees render every material group and retain their silhouettes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:00:24.265Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b1531fc1b4b59f3f43c8-5a3b8cae577f7d2ea475",
+          "file": "pass-3-trees.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-audio-mixer.spec.ts",
+      "file": "v4-audio-mixer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mixer, custom source, fallback and modal ducking preserve audio lifecycle and saved preferences",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 43787,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:00:45.244Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "727cd2b213933dcbd364-d49e1170d0b5057ab7bf",
+          "file": "v4-audio-mixer.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-companions.spec.ts",
+      "file": "v4-companions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all companions stay on navigable terrain and return within their editable home boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:01:29.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c1c1bb772a802634da1-b3b69388b9ab2755834b",
+          "file": "v4-companions.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-composition.spec.ts",
+      "file": "v4-composition.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "collisions cross spatial cell edges and leave every story location accessible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:01:29.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1723d60dcc7d58548ac4-bba4be6eb3445201c873",
+          "file": "v4-composition.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "the exploration camera frames the traveler and all eight pictures across seven viewport shapes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:01:30.202Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1723d60dcc7d58548ac4-df93d12b48982baf8646",
+          "file": "v4-composition.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "pointer rays still reach their world target and move the traveler after camera resizing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32168,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Terrain pointer reprojection {\n  viewport: { width: \u001b[33m1366\u001b[39m, height: \u001b[33m768\u001b[39m },\n  target: { x: \u001b[33m761.5837284266815\u001b[39m, y: \u001b[33m566.9848941316723\u001b[39m },\n  aim: {\n    x: \u001b[33m1.5000002188235886\u001b[39m,\n    z: \u001b[33m5.50000077927441\u001b[39m,\n    held: \u001b[33mtrue\u001b[39m,\n    clientX: \u001b[33m761.583740234375\u001b[39m,\n    clientY: \u001b[33m566.9849243164062\u001b[39m,\n    projectedX: \u001b[33m761.583740234375\u001b[39m,\n    projectedY: \u001b[33m566.9849217222037\u001b[39m\n  }\n}\n"
+                    },
+                    {
+                      "text": "Terrain pointer reprojection {\n  viewport: { width: \u001b[33m390\u001b[39m, height: \u001b[33m844\u001b[39m },\n  target: { x: \u001b[33m277.3372589268803\u001b[39m, y: \u001b[33m606.2811231615476\u001b[39m },\n  aim: {\n    x: \u001b[33m1.4999998377880002\u001b[39m,\n    z: \u001b[33m5.500000050843822\u001b[39m,\n    held: \u001b[33mtrue\u001b[39m,\n    clientX: \u001b[33m277.3372497558594\u001b[39m,\n    clientY: \u001b[33m606.2811279296875\u001b[39m,\n    projectedX: \u001b[33m277.3372497558594\u001b[39m,\n    projectedY: \u001b[33m606.2811252115737\u001b[39m\n  }\n}\n"
+                    },
+                    {
+                      "text": "Terrain pointer reprojection {\n  viewport: { width: \u001b[33m844\u001b[39m, height: \u001b[33m390\u001b[39m },\n  target: { x: \u001b[33m462.01697805997003\u001b[39m, y: \u001b[33m295.72012767388026\u001b[39m },\n  aim: {\n    x: \u001b[33m1.499999625642607\u001b[39m,\n    z: \u001b[33m5.499999676535641\u001b[39m,\n    held: \u001b[33mtrue\u001b[39m,\n    clientX: \u001b[33m462.0169677734375\u001b[39m,\n    clientY: \u001b[33m295.7201232910156\u001b[39m,\n    projectedX: \u001b[33m462.0169677734375\u001b[39m,\n    projectedY: \u001b[33m295.720121969977\u001b[39m\n  }\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:02:06.949Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1723d60dcc7d58548ac4-25782b7cc3f2c02ff1fa",
+          "file": "v4-composition.spec.ts",
+          "line": 213,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-flora-guide.spec.ts",
+      "file": "v4-flora-guide.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all sixteen seeded plant specimens unlock readable Field Guide entries and survive reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 86942,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:02:39.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbdd46e9080b17388013-7130b03728dd5b55b194",
+          "file": "v4-flora-guide.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "species placement is deterministic, landmark trunks collide and every LOD has fewer triangles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1229,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:04:06.407Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbdd46e9080b17388013-460b72d583af93dbfb24",
+          "file": "v4-flora-guide.spec.ts",
+          "line": 106,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-oscar.spec.ts",
+      "file": "v4-oscar.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Oscar has progress-aware fictional dialogue and a persistent optional family encounter",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 55170,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:04:07.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "03dacdb9d17d8cf38a80-ad6603d9e05a16b21beb",
+          "file": "v4-oscar.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-painted-forest.spec.ts",
+      "file": "v4-painted-forest.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "painted LOD batches and eight branch revivals render without changing the real save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 68963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T13:05:02.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "de5d6991b3ea3218e33f-0807f11ac15058eaabc4",
+          "file": "v4-painted-forest.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-10T12:57:58.425Z",
+    "duration": 493786.206,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

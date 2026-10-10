@@ -8,8 +8,17 @@ export type IconName =
   | "arrow"
   | "close"
   | "compass"
-  | "spark";
+  | "spark"
+  | "book"
+  | "fullscreen";
 const paths: Record<IconName, React.ReactNode> = {
+  book: (
+    <>
+      <path d="M3 5q5-2 9 1 4-3 9-1v15q-5-2-9 0-4-2-9 0Z" />
+      <path d="M12 6v14" />
+    </>
+  ),
+  fullscreen: <path d="M3 9V3h6m6 0h6v6m0 6v6h-6M9 21H3v-6" />,
   leaf: (
     <>
       <path d="M19 4C9 3 3 9 6 16c7 4 13-2 13-12Z" />

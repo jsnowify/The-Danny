@@ -1,0 +1,355 @@
+{
+  "recordedAt": "2026-10-10T06:21:57.981Z",
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  "playwright": {
+    "uniqueTestsPassed": 7,
+    "initialRun": {
+      "passed": 5,
+      "failed": 2
+    },
+    "recheck": {
+      "passed": 4,
+      "failed": 0
+    },
+    "correctedAssertions": [
+      "Approved asymmetric tree permits a small horizontal offset near center.",
+      "Approved near crown geometry retains ExtrudeGeometry type."
+    ],
+    "fullJourneyPersistenceFinaleReset": true,
+    "pointerAndKeyboard": true,
+    "compactControls": true,
+    "allStoryLocationsReachable": true,
+    "framingViewportShapes": 7
+  },
+  "baseline": {
+    "allNineFrozenFilesUnchanged": true,
+    "copiedPaintAndGeometryByteIdentical": true,
+    "liveMeshFingerprintsMatched": 10,
+    "originalPaintedMapsMatched": 7,
+    "leafLayerCounts": [
+      28,
+      52,
+      16
+    ],
+    "lightingAndFogMatched": true
+  },
+  "screenshots": {
+    "count": 20,
+    "iteration": "03",
+    "browserErrors": [],
+    "saveUnchanged": true
+  },
+  "mobile": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "frame": {
+        "traveler": {
+          "left": 138.64331033219446,
+          "right": 178.8099093172828,
+          "top": 340.3323304198402,
+          "bottom": 409.61890319346935
+        },
+        "button": {
+          "left": 80,
+          "right": 240,
+          "top": 424,
+          "bottom": 480,
+          "width": 160,
+          "height": 56
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 20,
+          "right": 124,
+          "top": 284.8125,
+          "bottom": 403
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 20,
+            "right": 124,
+            "top": 284.8125,
+            "bottom": 403
+          },
+          {
+            "selector": ".hang-button",
+            "left": 80,
+            "right": 240,
+            "top": 424,
+            "bottom": 480
+          },
+          {
+            "selector": ".toast",
+            "left": 66,
+            "right": 254,
+            "top": 481.21875,
+            "bottom": 548
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 254,
+            "right": 302,
+            "top": 496,
+            "bottom": 544
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 17.206550366731012
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "frame": {
+        "traveler": {
+          "left": 158.42725559796037,
+          "right": 227.21795162046664,
+          "top": 490.14057822455044,
+          "bottom": 608.805883938868
+        },
+        "button": {
+          "left": 175.859375,
+          "right": 372,
+          "top": 629,
+          "bottom": 679,
+          "width": 196.140625,
+          "height": 50
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 20,
+          "right": 152,
+          "top": 579.40625,
+          "bottom": 679
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 20,
+            "right": 152,
+            "top": 579.40625,
+            "bottom": 679
+          },
+          {
+            "selector": ".hang-button",
+            "left": 175.859375,
+            "right": 372,
+            "top": 629,
+            "bottom": 679
+          },
+          {
+            "selector": ".toast",
+            "left": 81.828125,
+            "right": 308.171875,
+            "top": 767.609375,
+            "bottom": 812
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 324,
+            "right": 372,
+            "top": 772,
+            "bottom": 820
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 14.928210143730508
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "frame": {
+        "traveler": {
+          "left": 404.22333124793875,
+          "right": 437.6574547117627,
+          "top": 239.2747429268016,
+          "bottom": 296.94820441301033
+        },
+        "button": {
+          "left": 574,
+          "right": 814,
+          "top": 169.8125,
+          "bottom": 241.8125,
+          "width": 240,
+          "height": 72
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 32,
+          "right": 190.59375,
+          "top": 253.703125,
+          "bottom": 335
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 32,
+            "right": 190.59375,
+            "top": 253.703125,
+            "bottom": 335
+          },
+          {
+            "selector": ".hang-button",
+            "left": 574,
+            "right": 814,
+            "top": 169.8125,
+            "bottom": 241.8125
+          },
+          {
+            "selector": ".toast",
+            "left": 279.328125,
+            "right": 564.671875,
+            "top": 318,
+            "bottom": 370
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 659.234375,
+            "right": 812,
+            "top": 319,
+            "bottom": 366
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 14.193255347237882
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    }
+  ],
+  "production": {
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ]
+  },
+  "lifecycle": {
+    "cycles": 5,
+    "allSceneOwnedGeometryDisposed": true,
+    "texturesAfterUnmount": 0,
+    "contextsLost": true,
+    "engineCaches": "Sprite quad; VSM shadow blur triangle when shadows render"
+  },
+  "review": {
+    "checked": [
+      {
+        "viewport": "1918x918",
+        "view": "clearing-0"
+      },
+      {
+        "viewport": "1918x918",
+        "view": "clearing-8"
+      },
+      {
+        "viewport": "1918x918",
+        "view": "clearing-side-8"
+      },
+      {
+        "viewport": "1918x918",
+        "view": "tree-return-8"
+      },
+      {
+        "viewport": "1918x918",
+        "view": "woodland-0"
+      },
+      {
+        "viewport": "390x844",
+        "view": "clearing-0"
+      },
+      {
+        "viewport": "390x844",
+        "view": "clearing-8"
+      },
+      {
+        "viewport": "390x844",
+        "view": "clearing-side-8"
+      },
+      {
+        "viewport": "390x844",
+        "view": "tree-return-8"
+      },
+      {
+        "viewport": "390x844",
+        "view": "woodland-0"
+      },
+      {
+        "viewport": "320x568",
+        "view": "clearing-0"
+      },
+      {
+        "viewport": "320x568",
+        "view": "clearing-8"
+      },
+      {
+        "viewport": "320x568",
+        "view": "clearing-side-8"
+      },
+      {
+        "viewport": "320x568",
+        "view": "tree-return-8"
+      },
+      {
+        "viewport": "320x568",
+        "view": "woodland-0"
+      },
+      {
+        "viewport": "844x390",
+        "view": "clearing-0"
+      },
+      {
+        "viewport": "844x390",
+        "view": "clearing-8"
+      },
+      {
+        "viewport": "844x390",
+        "view": "clearing-side-8"
+      },
+      {
+        "viewport": "844x390",
+        "view": "tree-return-8"
+      },
+      {
+        "viewport": "844x390",
+        "view": "woodland-0"
+      }
+    ],
+    "keyboardSlider": true,
+    "errors": []
+  },
+  "userApproved": false,
+  "laterPassesAuthorized": false
+}

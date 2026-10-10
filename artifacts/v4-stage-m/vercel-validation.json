@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-10-09T16:54:04.413Z",
+  "schemaURL": "https://openapi.vercel.sh/vercel.json",
+  "draft": "http://json-schema.org/draft-04/schema#",
+  "valid": true,
+  "validatedKeys": [
+    "$schema",
+    "framework",
+    "installCommand",
+    "buildCommand",
+    "outputDirectory",
+    "rewrites",
+    "headers"
+  ],
+  "config": {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "framework": "vite",
+    "installCommand": "npm ci",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/assets/(.*)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/(.*)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600"
+          }
+        ]
+      }
+    ]
+  },
+  "schemaScope": "Unmodified official definitions of every used configuration field. Unused Functions/Services definitions omitted because the published schema mixes draft-04 and draft-07 exclusiveMinimum.",
+  "limits": "No account deployment or remote headers tested."
+}

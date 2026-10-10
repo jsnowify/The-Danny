@@ -1,10 +1,13 @@
+import { useText } from "../hooks/useText";
 import { useState } from "react";
-import { PROJECT_NAME, TEXT } from "../config";
+import { PROJECT_NAME } from "../config";
 import { useStore } from "../store";
 import { Icon } from "./Icons";
 import { TitleBackdrop } from "./TitleBackdrop";
 import { BrandLogo } from "./BrandLogo";
+import { LanguageSwitch } from "./LanguageSwitch";
 export function TitleScreen() {
+  const TEXT = useText();
   const [starting, setStarting] = useState(false);
   const muted = useStore((s) => s.settings.muted);
   const begin = async () => {
@@ -42,6 +45,9 @@ export function TitleScreen() {
         <Icon name={muted ? "mute" : "sound"} />
       </button>
       <div className="title-content">
+        <div className="title-language">
+          <LanguageSwitch />
+        </div>
         <div className="eyebrow">{TEXT.eyebrow}</div>
         <h1>
           {PROJECT_NAME}

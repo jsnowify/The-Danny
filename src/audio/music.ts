@@ -24,6 +24,11 @@ export function createMusic(bus: Tone.Gain) {
     envelope: { attack: 0.1, decay: 1.5, sustain: 0.15, release: 2 },
     volume: -28,
   }).connect(reverb);
+  const upper = new Tone.Synth({
+    oscillator: { type: "sine" },
+    envelope: { attack: 0.06, decay: 2, sustain: 0, release: 2 },
+    volume: -33,
+  }).connect(reverb);
   const transpose = (note: string) =>
     Tone.Frequency(note)
       .transpose(AMBIENT_TRACK_KEY === "F" ? 3 : 0)
@@ -58,6 +63,15 @@ export function createMusic(bus: Tone.Gain) {
         0.2 + growth * 0.22,
       );
   }, "1m").start(0);
+  const bloom = new Tone.Loop((time) => {
+    if (growth > 0.6)
+      upper.triggerAttackRelease(
+        notes[Math.floor(r() * notes.length)],
+        "2n",
+        time,
+        0.12 + (growth - 0.6) * 0.2,
+      );
+  }, "1m").start(0);
   Tone.getTransport().bpm.value = AMBIENT_TRACK_BPM;
   Tone.getTransport().timeSignature = 3;
   return {
@@ -70,9 +84,19 @@ export function createMusic(bus: Tone.Gain) {
       );
     },
     dispose() {
-      [harmony, tune, pulse, pad, melody, bass, delay, reverb, gain].forEach(
-        (node) => node.dispose(),
-      );
+      [
+        harmony,
+        tune,
+        pulse,
+        bloom,
+        upper,
+        pad,
+        melody,
+        bass,
+        delay,
+        reverb,
+        gain,
+      ].forEach((node) => node.dispose());
     },
   };
 }

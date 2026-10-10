@@ -1,0 +1,551 @@
+{
+  "createdAt": "2026-10-10T07:44:33.798Z",
+  "approvedVisualBaseline": 2,
+  "treeCandidate": 3,
+  "treeCandidateApproved": false,
+  "parentManifest": "artifacts/visual-reconstruction/pass-3-approved-baseline/manifest.json",
+  "request": "ref 4.mp4 movement and environment directive",
+  "laterPassesAuthorized": false,
+  "files": [
+    {
+      "path": "src/App.tsx",
+      "bytes": 4807,
+      "sha256": "cc62fa2184032058858c88ca811d48d0d946831e9bb8b996550a1acd896bda3f"
+    },
+    {
+      "path": "src/assets/blue-heaven-flower.svg",
+      "bytes": 2786,
+      "sha256": "8badb9a6acc40f5af34e05e933234a0bcb2dc375e327d35c15a1db6c48275b7e"
+    },
+    {
+      "path": "src/audio/bridge.ts",
+      "bytes": 278,
+      "sha256": "a200e69fd8b1b94f286fa0f783e8433900ac6073fb39b2490bd4a242ea610069"
+    },
+    {
+      "path": "src/audio/engine.ts",
+      "bytes": 7234,
+      "sha256": "a344aa754bde01b098f6ac9505e33e0213478d91c59793fcaa7de0f11c1f1e64"
+    },
+    {
+      "path": "src/audio/music.ts",
+      "bytes": 3105,
+      "sha256": "eb360d6e3a46e6641fa94cf96652a1654df2d0dd3aa3ec41fb2686b0650e08be"
+    },
+    {
+      "path": "src/audio/nature.ts",
+      "bytes": 4992,
+      "sha256": "64110b82ef817a7c66f5c15dfc3b317aa6970fc671fefb0937192d0107a6d807"
+    },
+    {
+      "path": "src/audio/sfx.ts",
+      "bytes": 2554,
+      "sha256": "30871bbdde83b9e8bff58de93d0fb8ac5f08a31ab0a49d3d21bafb90051f119e"
+    },
+    {
+      "path": "src/audio/track.ts",
+      "bytes": 3027,
+      "sha256": "c4f7006149f61ecf5f625431c3f556353a097a48b54e78ebd82e55acf9cd6a61"
+    },
+    {
+      "path": "src/config/audio.ts",
+      "bytes": 571,
+      "sha256": "d3fbb3b52a86cf0a42ee5062bad4e7244080707583e59d1d4ba8f347133a60b3"
+    },
+    {
+      "path": "src/config/companions.ts",
+      "bytes": 4563,
+      "sha256": "86245c3161819cfb632d3b0e900ec96d351935f00d1ed3a47ee1e8e73a445ff0"
+    },
+    {
+      "path": "src/config/discoveries.ts",
+      "bytes": 461,
+      "sha256": "10179dcb03634fa0c357adce10fb86ac63a8a495c0e7a1c5622c46468016ed61"
+    },
+    {
+      "path": "src/config/flora.ts",
+      "bytes": 6937,
+      "sha256": "d6732dc2272f33b5167e45f078cc5b675ffbb726fe066c48151260650729ee2b"
+    },
+    {
+      "path": "src/config/localization.ts",
+      "bytes": 12715,
+      "sha256": "1c7d59ee4d8cb979ea8c4412548e7f83827bf7fa3122f5033d86daa2e4d60cbe"
+    },
+    {
+      "path": "src/config/memorial.ts",
+      "bytes": 1576,
+      "sha256": "b55d66d8a5d8a5733f41969829b1e34f71d9d644927475881d8eb3479791ca96"
+    },
+    {
+      "path": "src/config/memories.ts",
+      "bytes": 1587,
+      "sha256": "f082cbd5390104a558c0b2f312c55f87f8685b6ab52dcc639b5c95561beaec09"
+    },
+    {
+      "path": "src/config/oscar.ts",
+      "bytes": 1000,
+      "sha256": "a62ba9945199252e1f1c5a8f268153a825acfb0337198256693bd09a8b67f544"
+    },
+    {
+      "path": "src/config/regions.ts",
+      "bytes": 2496,
+      "sha256": "78a12f13afe2485a3ad50395e5f77918421966e0a2866f6a65eef7dcfcff19d1"
+    },
+    {
+      "path": "src/config/validation.ts",
+      "bytes": 1440,
+      "sha256": "242d331e357cf9b50783bf2b0a088ec8a27b352c61e22ace94f06c25ecd904e2"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed"
+    },
+    {
+      "path": "src/config/world.ts",
+      "bytes": 624,
+      "sha256": "0e101afedf7b991eb759fdd69544297937ddd19e90b0652dc411e17d62867e0e"
+    },
+    {
+      "path": "src/config.ts",
+      "bytes": 278,
+      "sha256": "d8a75acb84b19b759620c82526033aaa388062ef53efc3432bfbeed770890ce4"
+    },
+    {
+      "path": "src/dev/style-prototype/assets.ts",
+      "bytes": 10841,
+      "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530"
+    },
+    {
+      "path": "src/dev/style-prototype/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/dev/style-prototype/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "src/dev/style-prototype/StylePrototype.tsx",
+      "bytes": 5593,
+      "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7"
+    },
+    {
+      "path": "src/features/animals/Animal.tsx",
+      "bytes": 5895,
+      "sha256": "5009323a956d1332df6fcae1451b1038f66f5a8a4f2aa95ddae6b4e30dbc4c0e"
+    },
+    {
+      "path": "src/features/animals/Companions.tsx",
+      "bytes": 2964,
+      "sha256": "123f1ff42bd30ae2cb4a0b00a9c3511de39c462b3a469af8930c2e707a58c663"
+    },
+    {
+      "path": "src/features/animals/geometry.ts",
+      "bytes": 5778,
+      "sha256": "48441cd6188f663ac3c86c005215e87008466fdef6ea1312e6ebf9f4d9bf5d2a"
+    },
+    {
+      "path": "src/features/animals/simulation.ts",
+      "bytes": 5863,
+      "sha256": "4c9829bf4e087b6399deff9d563fd767d6a4b09bbab7edca7203a9a91b57e52a"
+    },
+    {
+      "path": "src/features/idleClock.ts",
+      "bytes": 756,
+      "sha256": "f6952005c5b21acabcb9008dacb9d94a0b88bf72e284411ab849a708f2b2aee6"
+    },
+    {
+      "path": "src/features/interaction.ts",
+      "bytes": 940,
+      "sha256": "670e8b5225eb6f50460c98cb3b37b1234fe7a5309205ae03b46911ceaa12baf8"
+    },
+    {
+      "path": "src/features/oscar/Oscar.tsx",
+      "bytes": 5639,
+      "sha256": "a611e5ecd27a44948fc3278dcba2dc8c63baaebd9f78b500ffa45a6dea1f562c"
+    },
+    {
+      "path": "src/hooks/useActivity.ts",
+      "bytes": 3141,
+      "sha256": "b5419657b95d6e00652cf0f51ccbf0a3c1da4153778f8fb1acbf6af315754563"
+    },
+    {
+      "path": "src/hooks/useDialog.ts",
+      "bytes": 1703,
+      "sha256": "ad223e9d9fbba62df6e1a29695e53fcfa167c4986c3bf7d484316576b218bdc4"
+    },
+    {
+      "path": "src/hooks/usePlayerControls.ts",
+      "bytes": 2700,
+      "sha256": "ece782ce4a3940bd614ad8e764a47d81f56be7d99994bd79f5edc51c1788add9"
+    },
+    {
+      "path": "src/hooks/useProximity.ts",
+      "bytes": 706,
+      "sha256": "19e63875d5450905168616ac95d4315f81b1066bbab76c1b1d9bd487d3c82465"
+    },
+    {
+      "path": "src/hooks/useQuality.ts",
+      "bytes": 367,
+      "sha256": "ecbe9340d6b32557493b25f2589ff6c7c6a5de974ad049898644d26f7a6b537b"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.ts",
+      "bytes": 440,
+      "sha256": "31fb0a52ec722b6861de9a64e4193d0bec0ef74acaf3415acf0889463aa197e0"
+    },
+    {
+      "path": "src/hooks/useText.ts",
+      "bytes": 174,
+      "sha256": "f2f8e1fda3001406d9f91a1a1b5430e15bef474536a58c69ff1876a852b432a6"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 1262,
+      "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768"
+    },
+    {
+      "path": "src/persistence.ts",
+      "bytes": 5769,
+      "sha256": "d207b9aa5cd58762aea56f45cd13775e4e01a9953edf8148c6c63c56272874b8"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 790,
+      "sha256": "3583eac29aa009f41b89b3abd0d1209747a9ff2a761a6769cd4d307558062434"
+    },
+    {
+      "path": "src/scene/calibration.ts",
+      "bytes": 702,
+      "sha256": "e8c2e4a49e8961a2539468757b877f805bbe72af492c043707866c3b8e11ced4"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 10982,
+      "sha256": "303e279d2eb5f1ad7c94b2d441ea60aa7617b8535c3350923928e5f10761543c"
+    },
+    {
+      "path": "src/scene/DevTools.tsx",
+      "bytes": 12111,
+      "sha256": "170143196994b635996923b048a3c0818d792bf5f6abe690baf6630dd8ddcb3d"
+    },
+    {
+      "path": "src/scene/DevVisualizations.tsx",
+      "bytes": 3046,
+      "sha256": "d8388fd3d8a26dcc18c152f114b4db1fe0b98cb8cfd848cdff7cf615ab57b1c2"
+    },
+    {
+      "path": "src/scene/Effects.tsx",
+      "bytes": 2727,
+      "sha256": "d7eb0c5fa64525379ef366b0ce0a791727d33dec0b049ffa5a363518318d509e"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6675,
+      "sha256": "cfd23e129256a04cc545c28c5c87ec48f7b0387cdce90e88eb7cccee2dc45a27"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "8decc5df6f22f9ed5924825c483373145b8ce5dbaa5189e1603fa58294d516de"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 2631,
+      "sha256": "4bd5f03dd9b0d2976703d05452f5868477061cd40ce0a020c1fcb0fbcad84be7"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9232,
+      "sha256": "8eaffdab41d8a4b3018ffd081b7a5ad6ad8007cdec37af00606483bb1dceb36f"
+    },
+    {
+      "path": "src/scene/paintedGeometry.ts",
+      "bytes": 3227,
+      "sha256": "dd1c02a6f6764dd7e8ad6fe839be4db91865ff3a32511334fa5b83e6a63496e8"
+    },
+    {
+      "path": "src/scene/Particles.tsx",
+      "bytes": 7223,
+      "sha256": "b263f1eee869e17caf4f5a48e0bc4851b9cf004569d4a8d62cf5f75e38dda5e8"
+    },
+    {
+      "path": "src/scene/PlantDiscoveries.tsx",
+      "bytes": 1322,
+      "sha256": "7019e3d2f6a73b16f863e2439631969f763eac3b871a724c8895e68b4c363844"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 7493,
+      "sha256": "453913a95f97df62a2c4253ee5c9244e5757c76a286152606c0e1a7f7db6d6ca"
+    },
+    {
+      "path": "src/scene/Pond.tsx",
+      "bytes": 1178,
+      "sha256": "ad451721a18a9821ccdabc6e6439f862ecfddf8028767d37d99f1beac2353f10"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 6541,
+      "sha256": "5acaee2930c594b35429439ef96b56d40e2d36664f4b7354a98bee7e5660c932"
+    },
+    {
+      "path": "src/scene/runtime.ts",
+      "bytes": 508,
+      "sha256": "5129340fc66c27af91adbba923013fb2744a9897fd1560ab570e52f696d9a076"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9237,
+      "sha256": "58383d9b2691fb706fac5d6fbc40300f1dc272c3e2ad614f33da359c66799ec6"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6158,
+      "sha256": "2bf5d08bb6977247fca3077fb84638149d17f28f7b95c01115cfa5f49db15b63"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df"
+    },
+    {
+      "path": "src/scene/Timeline.tsx",
+      "bytes": 1857,
+      "sha256": "f65d82bf6dad5d74bde7936ae1199cbc7f138f5d47b9111dd04589d9efdb95a8"
+    },
+    {
+      "path": "src/scene/travelerGeometry.ts",
+      "bytes": 3641,
+      "sha256": "7349cdd26f7a93023c1bada20eed0963b76bc775bb488f5cbe634992f3fd75ce"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9875,
+      "sha256": "de256665e53ba96d2ee162643d482dfcbcbcdf8237c1ac50b67fa53d3b6b8ed3"
+    },
+    {
+      "path": "src/shaders/goldenCurrent.ts",
+      "bytes": 3804,
+      "sha256": "1d3bf1869114ab048abd1eee8b6b2774925a4e55203c54299ec7531d2e70fba4"
+    },
+    {
+      "path": "src/shaders/grain.ts",
+      "bytes": 380,
+      "sha256": "bb03775c23d3322785030bcbb56f252e955df6fa76ee60829ed45637dbca56c3"
+    },
+    {
+      "path": "src/shaders/ground.ts",
+      "bytes": 2973,
+      "sha256": "e9a645124247a4afc1c374279a228b91abb10eec83cf9e371822a17bd436c843"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5"
+    },
+    {
+      "path": "src/shaders/water.ts",
+      "bytes": 719,
+      "sha256": "76602a259fce7157294c675d83781d899ae5672edc16a9e972edb8e821ed715f"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 5429,
+      "sha256": "d8937e5546f35b67572337fe12a99d9e37bdfdd93a4703fac7bfa6c54a0c31f6"
+    },
+    {
+      "path": "src/store.ts",
+      "bytes": 12431,
+      "sha256": "a81d930b54c7ff1a5988fc7572d43c8b53c4bb0a08ebae52b04bc00be64b3370"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1"
+    },
+    {
+      "path": "src/textures/memoryArt.ts",
+      "bytes": 6806,
+      "sha256": "a718ad3a0209cf01c09854e21dc347561fc213ab8f19c4a316e8aeb7e49acf47"
+    },
+    {
+      "path": "src/textures/paintTexture.ts",
+      "bytes": 4066,
+      "sha256": "1cc5c5276334080f96011c984fe6a23f37070c2946febdcd07dd2da19e37e7ba"
+    },
+    {
+      "path": "src/ui/BrandLogo.tsx",
+      "bytes": 402,
+      "sha256": "0540c33fff34095f884fd8608fceff9eae40159e638e7eeb0f7f68fbd09a932e"
+    },
+    {
+      "path": "src/ui/CompanionPortrait.tsx",
+      "bytes": 1867,
+      "sha256": "80d61aa7111d35e06190cd13441a25f06e857c7358b19447c896306a92e30bb4"
+    },
+    {
+      "path": "src/ui/Compass.tsx",
+      "bytes": 1437,
+      "sha256": "2218f9d0b9f5f69eb56455901248e4032caa558a3b58d7f9ca6276722fc53c74"
+    },
+    {
+      "path": "src/ui/CustomTrackSetting.tsx",
+      "bytes": 1147,
+      "sha256": "d63438986ab364855fdd5b458b45b6fa744eee190544b78a5933a2cbc6fc4978"
+    },
+    {
+      "path": "src/ui/Dedication.tsx",
+      "bytes": 2783,
+      "sha256": "2f3abf4f0f98a213d8d1e63c9df0d587a0542cda5358df3d5cddca2aee6e600e"
+    },
+    {
+      "path": "src/ui/FieldGuide.tsx",
+      "bytes": 3064,
+      "sha256": "a79ae260af80f977672cc7e800be3c7613202f7b9fbe7816714387eb174b345b"
+    },
+    {
+      "path": "src/ui/Finale.tsx",
+      "bytes": 1382,
+      "sha256": "1d09b06eb8e3fe09e253c1bc5358e2eaec42cb06dab2e749c586c5171b9288d0"
+    },
+    {
+      "path": "src/ui/Hud.tsx",
+      "bytes": 5717,
+      "sha256": "a1041cf48ada0037e2b30bc4ad508f2f1b90d90bd2536d62b90327032181deab"
+    },
+    {
+      "path": "src/ui/Icons.tsx",
+      "bytes": 1580,
+      "sha256": "4fa7aa15beb62a07def33f6a40011fdebabc4f798ee1e8be5bdecb9981fc1a97"
+    },
+    {
+      "path": "src/ui/IdleRest.tsx",
+      "bytes": 609,
+      "sha256": "b1c6ad486aed7cbc6e7de4691301160563485b776484234827d1c378170d4f4d"
+    },
+    {
+      "path": "src/ui/Intro.tsx",
+      "bytes": 816,
+      "sha256": "9dae6af61d5bb2fef1db80b919d58d45c66bd72ec162d629b787df6c0a39cfc8"
+    },
+    {
+      "path": "src/ui/Journal.tsx",
+      "bytes": 7730,
+      "sha256": "8d037b0b676d445cb46903d5b6e4443270bd5c9b96564c09965931d16ec769ab"
+    },
+    {
+      "path": "src/ui/LanguageSwitch.tsx",
+      "bytes": 510,
+      "sha256": "af54dd85ff01e2646dae09361283f863c643f4f171ca3c943396acd0d0130a97"
+    },
+    {
+      "path": "src/ui/LoadingScreen.tsx",
+      "bytes": 953,
+      "sha256": "1c0fbfc99259c87d123aa06e70e28928f8db61ee401c9781b3772ed9004a2293"
+    },
+    {
+      "path": "src/ui/MemorySlots.tsx",
+      "bytes": 1435,
+      "sha256": "44740a4afbe6d245eeabd8dd3271b7d0dbc96e03d87eaac89421a7baa07c463d"
+    },
+    {
+      "path": "src/ui/NearbyCompany.tsx",
+      "bytes": 1930,
+      "sha256": "9bcf142c47f1d974cd5e308181b3feec44723aac359d42777063d4dcd967cacc"
+    },
+    {
+      "path": "src/ui/OscarDialogue.tsx",
+      "bytes": 1097,
+      "sha256": "88c2d3ab710c908ba3f959d9735c9f9fed5b4bbd2bfda9a88ae84975121caae6"
+    },
+    {
+      "path": "src/ui/PauseMenu.tsx",
+      "bytes": 5976,
+      "sha256": "4a1af2089eecc5bdf316b34d2dc9eee5bb26085d2d2e62d2889c4a5aeaee6ded"
+    },
+    {
+      "path": "src/ui/PlantSilhouette.tsx",
+      "bytes": 3925,
+      "sha256": "ef325dd8b2072936abd8b09b88ff88505b1cad36e9eb0e6fd2be09680a2121a3"
+    },
+    {
+      "path": "src/ui/TitleBackdrop.tsx",
+      "bytes": 4875,
+      "sha256": "11f77c986cfe9222f31bc5b12685ceb8ca0303b1a15cb5992da58aeb509ea7b8"
+    },
+    {
+      "path": "src/ui/TitleScreen.tsx",
+      "bytes": 2630,
+      "sha256": "ab4b5c8b3fe549577466285374fd5f3bfdffebe744bd685a5c8f29cc44901b23"
+    },
+    {
+      "path": "src/ui/Toasts.tsx",
+      "bytes": 2582,
+      "sha256": "a49bedf6a66cfc25841b93c374563b6bba41d49c426b3ade13949bc9e4d6c3b0"
+    },
+    {
+      "path": "src/ui/TributeInscription.tsx",
+      "bytes": 396,
+      "sha256": "a363ff2bc51f4d3e7aff85106a221cc171446adee92858333313135bad621baf"
+    },
+    {
+      "path": "src/ui/Viewer.tsx",
+      "bytes": 4216,
+      "sha256": "84c8e5c499d8fe052a3aa7192435e1a6396b107f31ddf90fe2668c5b4a0b6e6a"
+    },
+    {
+      "path": "src/utils/chunks.ts",
+      "bytes": 2018,
+      "sha256": "6bc1007740348425f8f38ae60b5eb64763896f57716eded2df0d63e4eb520172"
+    },
+    {
+      "path": "src/utils/placeholders.ts",
+      "bytes": 1144,
+      "sha256": "d5b3766341a90bcee3adb2e4732af862b174f6148633604c9fe2cc4205b9a7cf"
+    },
+    {
+      "path": "src/utils/progress.ts",
+      "bytes": 744,
+      "sha256": "1dbf6cd628bda307cc7cc86f2d38ff8e699411b9c430a55d9165cafcef8e54f4"
+    },
+    {
+      "path": "src/utils/random.ts",
+      "bytes": 716,
+      "sha256": "6131c88bfa9ca07201483f74d2f2e0090c61102ae9c95bbb6a648c95493c45f6"
+    },
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca"
+    }
+  ]
+}

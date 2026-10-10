@@ -1,0 +1,298 @@
+{
+  "recordedAt": "2026-10-10T05:24:56.062Z",
+  "pass": 2,
+  "status": "Complete; awaiting owner visual review",
+  "nextPass": 3,
+  "laterPassesStarted": false,
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "typescript": "PASS",
+    "modules": 1740,
+    "viteSeconds": 17.64,
+    "completedAt": "2026-10-10T05:18:28.178Z",
+    "artifacts": [
+      {
+        "path": "dist/assets/FieldGuide-BwUOj1n0.js",
+        "bytes": 4526,
+        "sha256": "9527853e60f4ea2b4fe28634dcd9634f5163817a7bc6c375a26f40f29a79425d"
+      },
+      {
+        "path": "dist/assets/Journal-DgaFvffx.js",
+        "bytes": 5201,
+        "sha256": "e48e42c030924a7ddf5e522426d5ee3d6716c6581f5d877ec2cf5239662d294a"
+      },
+      {
+        "path": "dist/assets/OscarDialogue-C_-ZyD6D.js",
+        "bytes": 741,
+        "sha256": "3ec7c0e71267fc32ceedb721dee4896edcf3cecc4b21aeb9cf79ad7b6803a2c7"
+      },
+      {
+        "path": "dist/assets/Scene-DdB7a4BX.js",
+        "bytes": 978654,
+        "sha256": "9d2275a91d46912463a4589ee4a2199c3c15e8a7ba410ca094b5ccfe9f28d22a"
+      },
+      {
+        "path": "dist/assets/engine-BDijs0b3.js",
+        "bytes": 263826,
+        "sha256": "c80ff491a5aa0242f008dab3cc16bffce944c8e64a3fd7e2d034004ca7f3a00a"
+      },
+      {
+        "path": "dist/assets/flora-U3P78QPV.js",
+        "bytes": 5295,
+        "sha256": "4bc15cbc6adda4ea2ddb5c60ff8463f42c1b62af4d3c281bcaca0256fb35eaa9"
+      },
+      {
+        "path": "dist/assets/index-BwmMwVoH.js",
+        "bytes": 213484,
+        "sha256": "f26b459efbb7aaf18ac1c626503656116406266a80fc67a72f42f4b2a8a99e56"
+      },
+      {
+        "path": "dist/assets/index-Fa0NSu9_.css",
+        "bytes": 28990,
+        "sha256": "fc9cd2d59b3f4828ebb73f3843c900160a6534ce32a091eea9d513fe7d1d7458"
+      }
+    ]
+  },
+  "formatting": {
+    "repositoryCommand": "npm run format:check",
+    "repositoryExitCode": 0,
+    "documentsCommand": "npx prettier --check README.md VISUAL-PASS-2-REPORT.md VISUAL-PASS-2-REVIEW.html",
+    "documentsExitCode": 0,
+    "diffCommand": "git -c core.safecrlf=false diff --check",
+    "diffExitCode": 0
+  },
+  "regressions": {
+    "uniquePassedCases": 6,
+    "cases": [
+      {
+        "title": "experience.spec.ts: the complete memory journey, immediate persistence, finale and reset",
+        "passed": true
+      },
+      {
+        "title": "v4-compact-ui.spec.ts: compact portrait keeps every memory reachable and toolbar controls clear",
+        "passed": true
+      },
+      {
+        "title": "v4-composition.spec.ts: collisions cross spatial cell edges and leave every story location accessible",
+        "passed": true
+      },
+      {
+        "title": "v4-composition.spec.ts: the exploration camera frames the traveler and all eight pictures across seven viewport shapes",
+        "passed": true
+      },
+      {
+        "title": "v4-composition.spec.ts: pointer rays still reach their world target and move the traveler after camera resizing",
+        "passed": true
+      },
+      {
+        "title": "v4-painted-forest.spec.ts: painted LOD batches and eight branch revivals render without changing the real save",
+        "passed": true
+      }
+    ],
+    "evidence": [
+      "artifacts/visual-reconstruction/pass-2/regression-first.json",
+      "artifacts/visual-reconstruction/pass-2/framing-regression.json",
+      "artifacts/visual-reconstruction/pass-2/final-camera-regression.json"
+    ],
+    "finalCameraRepeatPassed": 3,
+    "note": "Six distinct targeted cases passed across these runs. Three camera/control cases were repeated after framing correction. The final UI run follows the last portrait CSS repair. The historical 44-case suite was not repeated."
+  },
+  "finalMobileUI": {
+    "evidence": "artifacts/visual-reconstruction/pass-2/ui-verification.json",
+    "viewports": [
+      {
+        "width": 320,
+        "height": 568
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 844,
+        "height": 390
+      }
+    ],
+    "largeText": true,
+    "travelerClear": true,
+    "hudElementsSeparate": true,
+    "minimumActionTarget": 44,
+    "actualFinalHanging": true,
+    "persistedHung": 8,
+    "returnedToExplore": true,
+    "browserErrors": []
+  },
+  "production": {
+    "evidence": "artifacts/visual-reconstruction/pass-2/production-verification.json",
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ],
+    "browserErrors": []
+  },
+  "screenshots": {
+    "iteration": "07",
+    "evidence": "artifacts/visual-reconstruction/pass-2/iteration-07/captures.json",
+    "count": 20,
+    "saveUnchanged": true,
+    "browserErrors": [],
+    "contactSheetsVisuallyInspected": [
+      "1918x918",
+      "390x844",
+      "320x568",
+      "844x390"
+    ]
+  },
+  "review": {
+    "evidence": "artifacts/visual-reconstruction/pass-2/review-verification.json",
+    "recordedAt": "2026-10-10T05:21:34.406Z",
+    "finalIteration": "07",
+    "errors": [],
+    "choices": 20,
+    "comparisonChoices": 2,
+    "referenceChoices": 3,
+    "keyboardReveal": true,
+    "video": {
+      "duration": 20,
+      "videoWidth": 960,
+      "videoHeight": 640
+    },
+    "allImagesLoaded": true
+  },
+  "performance": {
+    "evidence": "artifacts/visual-reconstruction/pass-2/verification.json",
+    "viewport": "960x640",
+    "dpr": 1,
+    "quality": "low",
+    "normalMotion": true,
+    "actualKeyboardWalk": true,
+    "frames": 63,
+    "seconds": 20.867800000000745,
+    "fps": 3.019005357536384,
+    "p95FrameMilliseconds": 357.7999999988824,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "maximumSpanStep": 0.3938948123156454,
+    "allPassCounts": true,
+    "initial": {
+      "x": 0,
+      "z": 11
+    },
+    "final": {
+      "x": 0,
+      "z": 0.48
+    },
+    "note": "The earlier isolated software-WebGL walk is camera-motion evidence, not hardware certification. The final edits affect portrait CSS at widths <=700; the 960-pixel profile is unchanged. No physical-device, GPU/native-audio heap or long-session profile was performed."
+  },
+  "preservation": {
+    "pass1SourceFiles": [
+      {
+        "path": "src/main.tsx",
+        "bytes": 1262,
+        "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768"
+      },
+      {
+        "path": "src/dev/style-prototype/StylePrototype.tsx",
+        "bytes": 5593,
+        "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7"
+      },
+      {
+        "path": "src/dev/style-prototype/assets.ts",
+        "bytes": 10841,
+        "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530"
+      },
+      {
+        "path": "src/dev/style-prototype/geometry.ts",
+        "bytes": 6818,
+        "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+      },
+      {
+        "path": "src/dev/style-prototype/paint.ts",
+        "bytes": 9422,
+        "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+      },
+      {
+        "path": "scripts/capture-style-prototype.mjs",
+        "bytes": 3624,
+        "sha256": "93a0c11f0e05b399debb8ae57610f7621e128b44aeeed4543f46b9dd6350bac1"
+      },
+      {
+        "path": "scripts/verify-style-prototype.mjs",
+        "bytes": 13844,
+        "sha256": "6b442174a2a260c8afe05f0f2cc1d603017b096665056b76a90a77d6d72d25a7"
+      },
+      {
+        "path": "VISUAL-PASS-1-REVIEW.html",
+        "bytes": 9057,
+        "sha256": "93f250b9cbb9c1ad895ae40d8975c64b90365958d8661dab7fb1e41a49dcd085"
+      },
+      {
+        "path": "VISUAL-PASS-1-REPORT.md",
+        "bytes": 11801,
+        "sha256": "96e6f13399ed5064a67cd75dbda7f6cae74ac1d3b9e7793237bd93feb9244d4c"
+      }
+    ],
+    "unmodifiedReferences": [
+      {
+        "original": {
+          "path": "C:/Users/joshu/Pictures/reference/1.png",
+          "bytes": 2398471,
+          "sha256": "90fb499282f89f8ad9bfeff9e05b1f24cf0b45362ac78f8be980e7ac2c245795"
+        },
+        "reviewCopy": {
+          "path": "artifacts/v4-final-comparison/reference-1.png",
+          "bytes": 2398471,
+          "sha256": "90fb499282f89f8ad9bfeff9e05b1f24cf0b45362ac78f8be980e7ac2c245795"
+        },
+        "identical": true
+      },
+      {
+        "original": {
+          "path": "C:/Users/joshu/Pictures/reference/2.png",
+          "bytes": 2375831,
+          "sha256": "9b842f619c9252c200f9a441b43758dd04f6e693ba317626d55cb661b2af9f3a"
+        },
+        "reviewCopy": {
+          "path": "artifacts/v4-final-comparison/reference-2.png",
+          "bytes": 2375831,
+          "sha256": "9b842f619c9252c200f9a441b43758dd04f6e693ba317626d55cb661b2af9f3a"
+        },
+        "identical": true
+      },
+      {
+        "original": {
+          "path": "C:/Users/joshu/Pictures/reference/3.png",
+          "bytes": 2097817,
+          "sha256": "6d5c3fd9a0c5861ae2b6c18432d3424f52825642d22456f9cca3fff25d301346"
+        },
+        "reviewCopy": {
+          "path": "artifacts/v4-final-comparison/reference-3.png",
+          "bytes": 2097817,
+          "sha256": "6d5c3fd9a0c5861ae2b6c18432d3424f52825642d22456f9cca3fff25d301346"
+        },
+        "identical": true
+      }
+    ],
+    "memoryAnchorsUnchanged": true,
+    "progressionAndSaveSchemaUnchanged": true,
+    "noArtIntegrationInPass2": true
+  },
+  "deployment": {
+    "target": "Vercel",
+    "locallyBuiltAndTested": true,
+    "published": false,
+    "configurationUnchanged": true
+  }
+}

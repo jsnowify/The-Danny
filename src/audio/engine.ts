@@ -6,6 +6,7 @@ import { createTrack } from "./track";
 import { createNature } from "./nature";
 import { createSfx } from "./sfx";
 import { registerSound } from "./bridge";
+import { safeUrl } from "../config/validation";
 let engine: { dispose: () => void } | undefined;
 let unlocking: Promise<void> | undefined;
 
@@ -33,10 +34,10 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       sfx = createSfx(sfxBus);
     let track: ReturnType<typeof createTrack> | undefined;
     let generated: ReturnType<typeof createMusic> | undefined;
-    let requested: "track" | "generated" | undefined;
+    let requested: string | undefined;
     let disposed = false;
     const setPlayback = (
-      musicPlayback: "loading" | "track" | "generated" | "fallback",
+      musicPlayback: "loading" | "track" | "generated" | "fallback" | "custom",
     ) => {
       if (useStore.getState().musicPlayback !== musicPlayback)
         useStore.setState({ musicPlayback });
@@ -44,8 +45,12 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
     const sync = () => {
       if (disposed) return;
       const s = useStore.getState();
-      if (requested !== s.settings.musicSource) {
-        requested = s.settings.musicSource;
+      const source = s.settings.musicSource;
+      const requestKey =
+        source +
+        (source === "custom" ? ":" + safeUrl(s.settings.customTrackUrl) : "");
+      if (requested !== requestKey) {
+        requested = requestKey;
         track?.dispose();
         track = undefined;
         generated?.dispose();
@@ -53,14 +58,18 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         Tone.getTransport().stop();
         Tone.getTransport().bpm.value = AMBIENT_TRACK_BPM;
         Tone.getTransport().timeSignature = 3;
-        if (requested === "track" && AMBIENT_TRACK_URL) {
+        const trackURL =
+          source === "custom"
+            ? safeUrl(s.settings.customTrackUrl)
+            : AMBIENT_TRACK_URL;
+        if (source !== "generated" && trackURL) {
           setPlayback("loading");
           track = createTrack(
             musicBus,
-            AMBIENT_TRACK_URL,
+            trackURL,
             () => {
               if (!disposed) {
-                setPlayback("track");
+                setPlayback(source === "custom" ? "custom" : "track");
                 sync();
               }
             },
@@ -75,23 +84,37 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
           );
         } else {
           generated = createMusic(musicBus);
-          setPlayback(requested === "track" ? "fallback" : "generated");
+          setPlayback(source !== "generated" ? "fallback" : "generated");
         }
       }
       const resting = s.phase === "title" || s.phase === "loading";
-      const playing = !s.paused && !resting && !document.hidden;
+      const playing =
+        !s.paused &&
+        !s.fieldGuideOpen &&
+        !s.journalOpen &&
+        !resting &&
+        !document.hidden;
       master.gain.rampTo(
-        s.settings.muted || !playing ? 0 : s.settings.volume,
+        s.settings.muted || !playing
+          ? 0
+          : s.settings.volume * (s.idleStage === 300 ? 0.16 : 1),
         0.25,
       );
       natureBus.gain.rampTo(
-        playing && s.phase !== "dedication" && !s.dedicationOpen ? 0.28 : 0,
+        playing && s.phase !== "dedication" && !s.dedicationOpen
+          ? 0.28 * s.settings.natureVolume * (s.oscarDialogue ? 0.45 : 1)
+          : 0,
         0.3,
       );
       const progress = s.hung.length / 8;
-      track?.update(progress, s.phase === "viewer");
+      musicBus.gain.rampTo(
+        s.settings.musicVolume * (s.idleStage === 45 ? 1.04 : 1),
+        1.5,
+      );
+      sfxBus.gain.rampTo(0.65 * s.settings.effectsVolume, 0.3);
+      track?.update(progress, s.phase === "viewer" || s.oscarDialogue);
       track?.setPlaying(playing);
-      generated?.update(progress, s.phase === "viewer");
+      generated?.update(progress, s.phase === "viewer" || s.oscarDialogue);
       const transport = Tone.getTransport();
       if (!playing || !generated) {
         if (transport.state === "started") transport.pause();
@@ -102,6 +125,8 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       if (
         Tone.getContext().state === "running" &&
         !s.paused &&
+        !s.fieldGuideOpen &&
+        !s.journalOpen &&
         !document.hidden
       )
         sfx.play(sound);
@@ -112,6 +137,10 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         s.hung.length !== prior.hung.length ||
         s.phase !== prior.phase ||
         s.paused !== prior.paused ||
+        s.fieldGuideOpen !== prior.fieldGuideOpen ||
+        s.journalOpen !== prior.journalOpen ||
+        s.oscarDialogue !== prior.oscarDialogue ||
+        s.idleStage !== prior.idleStage ||
         s.dedicationOpen !== prior.dedicationOpen
       )
         sync();
@@ -137,6 +166,8 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         track: track?.diagnostics() ?? null,
         masterGain: master.gain.value,
         natureGain: natureBus.gain.value,
+        musicGain: musicBus.gain.value,
+        effectsGain: sfxBus.gain.value,
         contextState: Tone.getContext().state,
       }),
       seek: (seconds: number) => track?.seek(seconds),

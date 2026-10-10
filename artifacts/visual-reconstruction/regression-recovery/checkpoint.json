@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-10-10T05:44:29.584Z",
+  "status": "Corrected Pass 2 awaits owner visual approval",
+  "approvedSourceUnchanged": [
+    {
+      "path": "src/main.tsx",
+      "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768"
+    },
+    {
+      "path": "src/dev/style-prototype/StylePrototype.tsx",
+      "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7"
+    },
+    {
+      "path": "src/dev/style-prototype/assets.ts",
+      "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530"
+    },
+    {
+      "path": "src/dev/style-prototype/geometry.ts",
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/dev/style-prototype/paint.ts",
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "scripts/capture-style-prototype.mjs",
+      "sha256": "93a0c11f0e05b399debb8ae57610f7621e128b44aeeed4543f46b9dd6350bac1"
+    },
+    {
+      "path": "scripts/verify-style-prototype.mjs",
+      "sha256": "6b442174a2a260c8afe05f0f2cc1d603017b096665056b76a90a77d6d72d25a7"
+    },
+    {
+      "path": "VISUAL-PASS-1-REVIEW.html",
+      "sha256": "93f250b9cbb9c1ad895ae40d8975c64b90365958d8661dab7fb1e41a49dcd085"
+    },
+    {
+      "path": "VISUAL-PASS-1-REPORT.md",
+      "sha256": "96e6f13399ed5064a67cd75dbda7f6cae74ac1d3b9e7793237bd93feb9244d4c"
+    }
+  ],
+  "archivedPass3Files": [
+    "src/textures/treePaint.ts",
+    "src/scene/treeGeometry.ts",
+    "src/shaders/wind.ts",
+    "src/shaders/outline.ts",
+    "src/scene/resources.tsx",
+    "src/scene/Flora.tsx",
+    "src/scene/speciesGeometry.ts",
+    "src/scene/SpeciesFlora.tsx",
+    "src/scene/MemoryTree.tsx",
+    "tests/v4-painted-forest.spec.ts",
+    "scripts/capture-tree-study.mjs"
+  ],
+  "requiresVisualApproval": true,
+  "laterPassesAuthorized": false,
+  "approvedBaseline": "Pass 1",
+  "currentPass": 2,
+  "userApproved": false,
+  "review": "VISUAL-PASS-2-RECOVERY-REVIEW.html",
+  "report": "VISUAL-PASS-2-RECOVERY-REPORT.md"
+}

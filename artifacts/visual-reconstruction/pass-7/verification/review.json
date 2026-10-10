@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-10T13:16:43.863Z",
+  "comparisons": 32,
+  "measurements": 6,
+  "videos": [
+    {
+      "ready": 4,
+      "duration": 20
+    }
+  ],
+  "phonePageFits": true,
+  "keyboardSlider": true,
+  "errors": []
+}

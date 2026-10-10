@@ -1,0 +1,134 @@
+{
+  "recordedAt": "2026-10-10T12:06:53.134Z",
+  "status": "Ready for owner visual review",
+  "authorization": "User: go proceed both 4, 5, and 6",
+  "authorizedPasses": [
+    4,
+    5,
+    6
+  ],
+  "userApproved": false,
+  "pass7Started": false,
+  "baselineAcceptedForContinuation": true,
+  "sourcePreservation": {
+    "protectedExistingRuntimeFiles": 101,
+    "frozenPass1Files": 9,
+    "runtimeFiles": 117,
+    "cumulativeCheckpoints": 3
+  },
+  "stills": {
+    "baseline": 16,
+    "pass4": 16,
+    "pass5": 16,
+    "pass6": 32,
+    "finalIteration": "03",
+    "viewports": [
+      "1918x918",
+      "390x844",
+      "320x568",
+      "844x390"
+    ],
+    "savePreserved": true,
+    "errors": []
+  },
+  "motion": [
+    {
+      "viewport": {
+        "width": 960,
+        "height": 540
+      },
+      "frames": 72,
+      "seconds": 12,
+      "fixedSimulationHz": 30,
+      "capturedFps": 6,
+      "savePreserved": true,
+      "finiteActorTransforms": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "frames": 72,
+      "seconds": 12,
+      "fixedSimulationHz": 30,
+      "capturedFps": 6,
+      "savePreserved": true,
+      "finiteActorTransforms": true
+    }
+  ],
+  "regression": {
+    "uniqueChecksPassed": 12,
+    "primaryRun": {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/playwright.json",
+      "stats": {
+        "startTime": "2026-10-10T11:40:21.562Z",
+        "duration": 634466.308,
+        "expected": 11,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      }
+    },
+    "targetedRecheck": {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/pointer-retest.json",
+      "stats": {
+        "startTime": "2026-10-10T11:56:17.389Z",
+        "duration": 41519.432,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "check": "pointer rays still reach their world target and move the traveler after camera resizing",
+      "reason": "Initial ray sampled synchronously after the pointer-down controller listener, before held-pointer reprojection by the following camera. Screen-pixel accuracy and stricter reprojection to the actual received pointer checked at three sizes. Runtime camera/controller/terrain source unchanged. The initial failed result remains recorded."
+    }
+  },
+  "cleanup": {
+    "cycles": 5,
+    "errors": [],
+    "limits": "Five reset/remount cycles (three Medium plus High/Low), including Medium/High resize; not a long-session soak. Heap excludes native audio/GPU memory. AI timing excludes rendering and is not FPS. The shared Three Sprite geometry and the VSM shadow blur triangle remain engine caches; all scene-owned geometry disposes and the old GL context is destroyed."
+  },
+  "production": {
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ]
+  },
+  "liveBrowser": {
+    "frames": 42,
+    "seconds": 22.10070000000298,
+    "fps": 1.9003922952664094,
+    "p95FrameMilliseconds": 673.7000000029802,
+    "maximumSpanStep": 1.642190473922204,
+    "maximumRelativeSpanRate": 0.4627781285685461,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "limit": "One software-WebGL browser, Low quality, actual held ground pointer for twenty wall-clock seconds. Movement uses short collision substeps; elapsed time is capped at 250 ms for long stalls/resumes. Rendering below 4 FPS still slows simulation. This records live responsiveness, not accelerated simulation or physical GPU performance."
+  },
+  "review": {
+    "comparisons": 64,
+    "videos": 3,
+    "galleryImages": 4,
+    "phonePageFits": true,
+    "keyboardSlider": true,
+    "errors": []
+  },
+  "deployment": {
+    "target": "Vercel",
+    "deployed": false,
+    "addedDependencies": false
+  },
+  "nextAction": "Owner reviews Passes 4–6; wait for approval before beginning Pass 7."
+}

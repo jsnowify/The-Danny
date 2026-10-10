@@ -1,0 +1,1218 @@
+{
+  "recordedAt": "2026-10-10T12:21:22.187Z",
+  "authorization": "User: go all in, following the explanation of Pass 7",
+  "acceptedForContinuation": true,
+  "approvalOfFinalPass7": false,
+  "parentManifest": {
+    "path": "artifacts/visual-reconstruction/passes-4-6/manifest.json",
+    "sha256": "f34756328af5a99044d0fdbf2ae1cb591dd7d9792368c1a9ef31196dd8047345"
+  },
+  "files": [
+    {
+      "path": ".vercelignore",
+      "bytes": 100,
+      "sha256": "49b21b5ef4d792c00449de26dad651e632b21dead65c3d77affc7e32b6f53039",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/.vercelignore"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 2770,
+      "sha256": "ec59362e46b3199e45be3b527dd0086682df404cc855fa332d3e4c82d897f83b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/DEPLOYMENT.md"
+    },
+    {
+      "path": "PERSONALIZATION.md",
+      "bytes": 4920,
+      "sha256": "e77956b598eb58bc78bef5ddcce722b100b84694d8628b9dafe085189852f3d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/PERSONALIZATION.md"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7279,
+      "sha256": "6819aed6cdfec6e71c2dac81364d95511d40b1821d3c3b26cd49f2a465f967e1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/README.md"
+    },
+    {
+      "path": "VISUAL-PASS-4-REPORT.md",
+      "bytes": 2016,
+      "sha256": "2f675af5fd55d06e248df0d2a42ad5d7521387293c411fb4b999edc8bb5ea6be",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/VISUAL-PASS-4-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASS-5-REPORT.md",
+      "bytes": 2681,
+      "sha256": "d12ba338393ccc97de833baa773f7da99a46f6aa7f3675b41be3c2be37bf4317",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/VISUAL-PASS-5-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASS-6-REPORT.md",
+      "bytes": 9974,
+      "sha256": "aa9aff8d9ddb45d2e07a778ea9ecfaf73bbde75620bf4a85648b8dbb6587191e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/VISUAL-PASS-6-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASSES-4-6-REVIEW.html",
+      "bytes": 13445,
+      "sha256": "d62b9058e70f7300218d09597df0ee498dbbb105fea3500d9028e7ef0d885e77",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/VISUAL-PASSES-4-6-REVIEW.html"
+    },
+    {
+      "path": "index.html",
+      "bytes": 460,
+      "sha256": "cc4eb1eafbb32a7ef6705b5fb71d4c906d52dc1334342a3b1491651b6ccbd43a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/index.html"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 125124,
+      "sha256": "19167416a1dbc7ac9c3a7adf55fd2e2f684cc507a757d04146d10aef6bee545c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1077,
+      "sha256": "825d3128fb18ada6eebc2bbd3c96f48ce398be422cc2cb0e22ea8acae5e597a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/package.json"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 683,
+      "sha256": "043713d863becae6d4e8582d0b4dd161494eddeca3760aea249fbfde169aa916",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/playwright.config.ts"
+    },
+    {
+      "path": "scripts/ambient-production-smoke.mjs",
+      "bytes": 4212,
+      "sha256": "bc64c0c461d2d68b52fe0c8ee39a07697c28388df652caf60f917341b7d2f7a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/ambient-production-smoke.mjs"
+    },
+    {
+      "path": "scripts/capture-camera-study.mjs",
+      "bytes": 10961,
+      "sha256": "b78b8f6ef08968ccea0b6b8a8bb5228bc23e175d9d35ab5d82cfe9ae97971e7e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-camera-study.mjs"
+    },
+    {
+      "path": "scripts/capture-integration-motion.mjs",
+      "bytes": 9241,
+      "sha256": "3ad8cbe42ee2e7ae5cbe6cdacb21670f2b5f0a9bd8980911921cc6ffde8f4cc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-integration-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-pass-3.mjs",
+      "bytes": 12034,
+      "sha256": "4182af13bcc85cd210be5415250f4c7d7fe9b7cb1b04ea9e1ddc4d1ffab52205",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-pass-3.mjs"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-motion.mjs",
+      "bytes": 8958,
+      "sha256": "17af3b402f34e58af8bc09d8766facf9d0414405dea3e47089aaea71d7b9b76d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-rest.mjs",
+      "bytes": 12004,
+      "sha256": "708b4c1e5866d894266f48fa39a7dd6ddbf253112ee08a868ae1375c82e5257c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-reference-rest.mjs"
+    },
+    {
+      "path": "scripts/capture-style-prototype.mjs",
+      "bytes": 3624,
+      "sha256": "93a0c11f0e05b399debb8ae57610f7621e128b44aeeed4543f46b9dd6350bac1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-audit.mjs",
+      "bytes": 9647,
+      "sha256": "75e71fee37a1522807515ffe8759f663c249401b37a644b5b463c0578cde08c8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-v4-audit.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-companions.mjs",
+      "bytes": 9264,
+      "sha256": "6f43bc6dadbb7ea70a9e37a098a87359bb5bbb3e889514242e26c96275dbeded",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-v4-companions.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-flora.mjs",
+      "bytes": 10171,
+      "sha256": "72050abd5fee44e610b4efd7acf1438f9c316bff5dfdd8bf1a36b98939c6c96f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-v4-flora.mjs"
+    },
+    {
+      "path": "scripts/capture-visual-integration.mjs",
+      "bytes": 13678,
+      "sha256": "745f97abda9824b0b50b8cba1ee9aeefe4064c7c345dd6b143a51587d121f866",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/capture-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/checkpoint-visual-integration.mjs",
+      "bytes": 2535,
+      "sha256": "d93c0081182e32a4b53080b78893cdbfc656f9a2757bb06fd56ae5d4126361f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/checkpoint-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/export-ambient.mjs",
+      "bytes": 1818,
+      "sha256": "645fd1c78e62b41386d619f52c5877ceb37907bccfbe3c3760e0a544005a90e1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/export-ambient.mjs"
+    },
+    {
+      "path": "scripts/export-source.mjs",
+      "bytes": 7242,
+      "sha256": "e874d65789f0a90ebe628ed95342ba99507d9b83a20197d7c7ea69cf85f4d4ee",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/export-source.mjs"
+    },
+    {
+      "path": "scripts/export-stage-a.mjs",
+      "bytes": 1677,
+      "sha256": "012c2cb2c4598eaf7b3b4eb77df901782df6050403cdfd9cec2282309c4b5b20",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/export-stage-a.mjs"
+    },
+    {
+      "path": "scripts/export-v25-stage-a.mjs",
+      "bytes": 1456,
+      "sha256": "1318174f5ac9c3e41418765e95651116945782a8923e12364b2207f2a71a83aa",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/export-v25-stage-a.mjs"
+    },
+    {
+      "path": "scripts/extract-v4-references.ps1",
+      "bytes": 1132,
+      "sha256": "ba906da749a30945ee7e97dfa1030e55496afcfa665fdebe318645f21aeb4def",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/extract-v4-references.ps1"
+    },
+    {
+      "path": "scripts/measure-pass-3.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/measure-pass-3.mjs"
+    },
+    {
+      "path": "scripts/measure-reference-motion.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/measure-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/performance.mjs",
+      "bytes": 9419,
+      "sha256": "1a5badc76ddd47663f3a2be3a7c6c5df2a9fcc38612a71798a4fb7eb8ae4bcfb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/performance.mjs"
+    },
+    {
+      "path": "scripts/probe-integration-scene.mjs",
+      "bytes": 5481,
+      "sha256": "749ca5d41b96e09ba201bde8f60d94e372c415b8c1409fa742a0ae0506abb5d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/probe-integration-scene.mjs"
+    },
+    {
+      "path": "scripts/production-smoke.mjs",
+      "bytes": 6641,
+      "sha256": "150b9faf9ac3cad01135d0ac0ea8234124fc6f76534cc99a6e764c60ff919292",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/production-smoke.mjs"
+    },
+    {
+      "path": "scripts/render-info.mjs",
+      "bytes": 615,
+      "sha256": "148fc16284d7feff9fa9f169ae5c89a6f322e34f207ce21421920df00d57ca7c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/render-info.mjs"
+    },
+    {
+      "path": "scripts/seal-reference-motion.mjs",
+      "bytes": 6366,
+      "sha256": "de6ed6bd42af20bfb93813c9ca3149c4be5d8f3be011077053969cfb3f8c6f4f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/seal-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/seal-visual-integration.mjs",
+      "bytes": 10515,
+      "sha256": "073da4a0470422dedd313acdd24e208b4fed37d9cd88ee0f75375d1dc47a5f71",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/seal-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/serve-motion-baseline.mjs",
+      "bytes": 953,
+      "sha256": "c3b70ae58f84f89e70490b7a1a38618d199e0714dd2116f5432f7fd73c67265d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/serve-motion-baseline.mjs"
+    },
+    {
+      "path": "scripts/validate-vercel.mjs",
+      "bytes": 2391,
+      "sha256": "bba9eb4cd7e8528c678fee9af71bc584d7c9c807149fe17d6b520c35ee2a220a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/validate-vercel.mjs"
+    },
+    {
+      "path": "scripts/verify-camera-pass.mjs",
+      "bytes": 16567,
+      "sha256": "69f3e2cecbaf1f687db8b01ffbc637dc6d0b2f58d266df11d61e0773d1c2185c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-camera-pass.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-checkpoints.mjs",
+      "bytes": 5621,
+      "sha256": "abef49ebd36966002dc340b8d042b60f35721164a8126e4d1f224506e5ec5be1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-integration-checkpoints.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-experience.mjs",
+      "bytes": 17826,
+      "sha256": "50c9e679f8324377a1befb6c9351c4b2768ae8021e72791f38bf1c6e31f4cb27",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-integration-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-lifecycle.mjs",
+      "bytes": 10625,
+      "sha256": "cde25b1ff94f6efb37b826f976ea0944c933fd2b4513eeae2c0f2300701d23d5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-integration-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-review.mjs",
+      "bytes": 4783,
+      "sha256": "d8be33b059d308cca9d3fdca105edaa7a427081c3dd93b14746fec210154a7e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-integration-review.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-baseline.mjs",
+      "bytes": 9581,
+      "sha256": "8d0ad93c2f70e9111c50245a57f5ad10be150d9d72fbebe797c8f9a1a66695d8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-pass-3-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-experience.mjs",
+      "bytes": 16585,
+      "sha256": "1cc5563a681d58f6e0ae82280ad6cb9ace01a576a141af3e3dc2c7f57c2b8694",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-pass-3-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-lifecycle.mjs",
+      "bytes": 10626,
+      "sha256": "3f1d3122ff44e890341de1349c8f6d6605ae656658d520eb3183fd467672f967",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-pass-3-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-review.mjs",
+      "bytes": 2574,
+      "sha256": "70d029094f6a369a37edea8f57fd1e054c3e2c034e5ef6555cc2cfc0c08336e2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-pass-3-review.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-recovered-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-recovered-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-recovery-review.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-experience.mjs",
+      "bytes": 17395,
+      "sha256": "1e8705204bec49d32f87d4d42a7e8a6eacca8811599cfae89a1f6e275f77d66a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-reference-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-lifecycle.mjs",
+      "bytes": 10594,
+      "sha256": "aa0e8ea4e6571ab03e0829247cab641c95de6de57b6f8dc13ef3416ddb00fd52",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-reference-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-motion.mjs",
+      "bytes": 8019,
+      "sha256": "b9ed42b7cee4c70bebb6d7f2135a96af10e0182cf672d6812708fdde3a40e756",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-review.mjs",
+      "bytes": 4876,
+      "sha256": "450d5a200e13dd2cc69d3dfaf4ca7fd685b648b0b170329e526661a529d7e1fb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-reference-review.mjs"
+    },
+    {
+      "path": "scripts/verify-style-prototype.mjs",
+      "bytes": 13844,
+      "sha256": "6b442174a2a260c8afe05f0f2cc1d603017b096665056b76a90a77d6d72d25a7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-final.mjs",
+      "bytes": 2591,
+      "sha256": "924d530187e5e4ee89f2b0442286245701a85ec56d4e6d68e605d33185632a69",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-v4-final.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-handoff.mjs",
+      "bytes": 3884,
+      "sha256": "fe382708b37ece35006683b5b7f12ebe624dddd6ab59e0fe67d61e88f3eb46ea",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-v4-handoff.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-lifecycle.mjs",
+      "bytes": 10413,
+      "sha256": "cde251cc9f4812ca8bc3ca78236407a6c92a19a7ca9f9af73c6cf5909e8f2577",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-v4-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-navigation.mjs",
+      "bytes": 4393,
+      "sha256": "b7ed2d738683e8b7c3423fa8e5f2dd33938b15a3bef88833ec34a454d77438c0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/scripts/verify-v4-navigation.mjs"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 4807,
+      "sha256": "cc62fa2184032058858c88ca811d48d0d946831e9bb8b996550a1acd896bda3f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/App.tsx"
+    },
+    {
+      "path": "src/assets/blue-heaven-flower.svg",
+      "bytes": 2786,
+      "sha256": "8badb9a6acc40f5af34e05e933234a0bcb2dc375e327d35c15a1db6c48275b7e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/assets/blue-heaven-flower.svg"
+    },
+    {
+      "path": "src/audio/bridge.ts",
+      "bytes": 278,
+      "sha256": "a200e69fd8b1b94f286fa0f783e8433900ac6073fb39b2490bd4a242ea610069",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/bridge.ts"
+    },
+    {
+      "path": "src/audio/engine.ts",
+      "bytes": 7234,
+      "sha256": "a344aa754bde01b098f6ac9505e33e0213478d91c59793fcaa7de0f11c1f1e64",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/engine.ts"
+    },
+    {
+      "path": "src/audio/music.ts",
+      "bytes": 3105,
+      "sha256": "eb360d6e3a46e6641fa94cf96652a1654df2d0dd3aa3ec41fb2686b0650e08be",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/music.ts"
+    },
+    {
+      "path": "src/audio/nature.ts",
+      "bytes": 4992,
+      "sha256": "64110b82ef817a7c66f5c15dfc3b317aa6970fc671fefb0937192d0107a6d807",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/nature.ts"
+    },
+    {
+      "path": "src/audio/sfx.ts",
+      "bytes": 2554,
+      "sha256": "30871bbdde83b9e8bff58de93d0fb8ac5f08a31ab0a49d3d21bafb90051f119e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/sfx.ts"
+    },
+    {
+      "path": "src/audio/track.ts",
+      "bytes": 3027,
+      "sha256": "c4f7006149f61ecf5f625431c3f556353a097a48b54e78ebd82e55acf9cd6a61",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/audio/track.ts"
+    },
+    {
+      "path": "src/config.ts",
+      "bytes": 278,
+      "sha256": "d8a75acb84b19b759620c82526033aaa388062ef53efc3432bfbeed770890ce4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config.ts"
+    },
+    {
+      "path": "src/config/audio.ts",
+      "bytes": 571,
+      "sha256": "d3fbb3b52a86cf0a42ee5062bad4e7244080707583e59d1d4ba8f347133a60b3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/audio.ts"
+    },
+    {
+      "path": "src/config/companions.ts",
+      "bytes": 4563,
+      "sha256": "86245c3161819cfb632d3b0e900ec96d351935f00d1ed3a47ee1e8e73a445ff0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/companions.ts"
+    },
+    {
+      "path": "src/config/discoveries.ts",
+      "bytes": 461,
+      "sha256": "10179dcb03634fa0c357adce10fb86ac63a8a495c0e7a1c5622c46468016ed61",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/discoveries.ts"
+    },
+    {
+      "path": "src/config/flora.ts",
+      "bytes": 6937,
+      "sha256": "d6732dc2272f33b5167e45f078cc5b675ffbb726fe066c48151260650729ee2b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/flora.ts"
+    },
+    {
+      "path": "src/config/localization.ts",
+      "bytes": 12715,
+      "sha256": "1c7d59ee4d8cb979ea8c4412548e7f83827bf7fa3122f5033d86daa2e4d60cbe",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/localization.ts"
+    },
+    {
+      "path": "src/config/memorial.ts",
+      "bytes": 1576,
+      "sha256": "b55d66d8a5d8a5733f41969829b1e34f71d9d644927475881d8eb3479791ca96",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/memorial.ts"
+    },
+    {
+      "path": "src/config/memories.ts",
+      "bytes": 1587,
+      "sha256": "f082cbd5390104a558c0b2f312c55f87f8685b6ab52dcc639b5c95561beaec09",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/memories.ts"
+    },
+    {
+      "path": "src/config/oscar.ts",
+      "bytes": 1000,
+      "sha256": "a62ba9945199252e1f1c5a8f268153a825acfb0337198256693bd09a8b67f544",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/oscar.ts"
+    },
+    {
+      "path": "src/config/regions.ts",
+      "bytes": 2496,
+      "sha256": "78a12f13afe2485a3ad50395e5f77918421966e0a2866f6a65eef7dcfcff19d1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/regions.ts"
+    },
+    {
+      "path": "src/config/validation.ts",
+      "bytes": 1440,
+      "sha256": "242d331e357cf9b50783bf2b0a088ec8a27b352c61e22ace94f06c25ecd904e2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/validation.ts"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/visual.ts"
+    },
+    {
+      "path": "src/config/world.ts",
+      "bytes": 624,
+      "sha256": "0e101afedf7b991eb759fdd69544297937ddd19e90b0652dc411e17d62867e0e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/config/world.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/StylePrototype.tsx",
+      "bytes": 5593,
+      "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/dev/style-prototype/StylePrototype.tsx"
+    },
+    {
+      "path": "src/dev/style-prototype/assets.ts",
+      "bytes": 10841,
+      "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/dev/style-prototype/assets.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/dev/style-prototype/geometry.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/dev/style-prototype/paint.ts"
+    },
+    {
+      "path": "src/features/animals/Animal.tsx",
+      "bytes": 6164,
+      "sha256": "188ac1a506b7a1f34995bbe594c346f48b507d43cfdf0b66deab0a32ff5cef4c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/animals/Animal.tsx"
+    },
+    {
+      "path": "src/features/animals/Companions.tsx",
+      "bytes": 2964,
+      "sha256": "123f1ff42bd30ae2cb4a0b00a9c3511de39c462b3a469af8930c2e707a58c663",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/animals/Companions.tsx"
+    },
+    {
+      "path": "src/features/animals/geometry.ts",
+      "bytes": 5778,
+      "sha256": "48441cd6188f663ac3c86c005215e87008466fdef6ea1312e6ebf9f4d9bf5d2a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/animals/geometry.ts"
+    },
+    {
+      "path": "src/features/animals/simulation.ts",
+      "bytes": 5863,
+      "sha256": "4c9829bf4e087b6399deff9d563fd767d6a4b09bbab7edca7203a9a91b57e52a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/animals/simulation.ts"
+    },
+    {
+      "path": "src/features/idleClock.ts",
+      "bytes": 756,
+      "sha256": "f6952005c5b21acabcb9008dacb9d94a0b88bf72e284411ab849a708f2b2aee6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/idleClock.ts"
+    },
+    {
+      "path": "src/features/interaction.ts",
+      "bytes": 940,
+      "sha256": "670e8b5225eb6f50460c98cb3b37b1234fe7a5309205ae03b46911ceaa12baf8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/interaction.ts"
+    },
+    {
+      "path": "src/features/oscar/Oscar.tsx",
+      "bytes": 6018,
+      "sha256": "78c0cc9db9bdb2a76435d59d45c980512b8438d836868553ad2696719f73c172",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/features/oscar/Oscar.tsx"
+    },
+    {
+      "path": "src/hooks/useActivity.ts",
+      "bytes": 3141,
+      "sha256": "b5419657b95d6e00652cf0f51ccbf0a3c1da4153778f8fb1acbf6af315754563",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useActivity.ts"
+    },
+    {
+      "path": "src/hooks/useDialog.ts",
+      "bytes": 1703,
+      "sha256": "ad223e9d9fbba62df6e1a29695e53fcfa167c4986c3bf7d484316576b218bdc4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useDialog.ts"
+    },
+    {
+      "path": "src/hooks/usePlayerControls.ts",
+      "bytes": 4425,
+      "sha256": "44bdd16e35e458307e603b1a89bac4bd43e2d56b1fe2878384a9bde5e3133d1d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/usePlayerControls.ts"
+    },
+    {
+      "path": "src/hooks/useProximity.ts",
+      "bytes": 706,
+      "sha256": "19e63875d5450905168616ac95d4315f81b1066bbab76c1b1d9bd487d3c82465",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useProximity.ts"
+    },
+    {
+      "path": "src/hooks/useQuality.ts",
+      "bytes": 367,
+      "sha256": "ecbe9340d6b32557493b25f2589ff6c7c6a5de974ad049898644d26f7a6b537b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useQuality.ts"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.ts",
+      "bytes": 440,
+      "sha256": "31fb0a52ec722b6861de9a64e4193d0bec0ef74acaf3415acf0889463aa197e0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useReducedMotion.ts"
+    },
+    {
+      "path": "src/hooks/useText.ts",
+      "bytes": 174,
+      "sha256": "f2f8e1fda3001406d9f91a1a1b5430e15bef474536a58c69ff1876a852b432a6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/hooks/useText.ts"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 1262,
+      "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/main.tsx"
+    },
+    {
+      "path": "src/persistence.ts",
+      "bytes": 5769,
+      "sha256": "d207b9aa5cd58762aea56f45cd13775e4e01a9953edf8148c6c63c56272874b8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/persistence.ts"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 1730,
+      "sha256": "863ad34191efa3438554ca2f6047e6337b3997817ca419106d6682088499b042",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/ApprovedFoundation.tsx"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 12238,
+      "sha256": "598333ec530b7955e1177df757468b30a1fbe86263f0cfcc5fa8b1ef66ed1e6e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Camera.tsx"
+    },
+    {
+      "path": "src/scene/DevTools.tsx",
+      "bytes": 12111,
+      "sha256": "170143196994b635996923b048a3c0818d792bf5f6abe690baf6630dd8ddcb3d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/DevTools.tsx"
+    },
+    {
+      "path": "src/scene/DevVisualizations.tsx",
+      "bytes": 3046,
+      "sha256": "d8388fd3d8a26dcc18c152f114b4db1fe0b98cb8cfd848cdff7cf615ab57b1c2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/DevVisualizations.tsx"
+    },
+    {
+      "path": "src/scene/Effects.tsx",
+      "bytes": 2727,
+      "sha256": "d7eb0c5fa64525379ef366b0ce0a791727d33dec0b049ffa5a363518318d509e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Effects.tsx"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6998,
+      "sha256": "bee1d7806923574e321735751f72723b76d41541319158f511520ee64f632f2e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Flora.tsx"
+    },
+    {
+      "path": "src/scene/ForestDrift.tsx",
+      "bytes": 3392,
+      "sha256": "29b382baa054dffd3b26b0f8795fa2a9b9a3b33337e7329050a160a2c0ccef9c",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/ForestDrift.tsx"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "e8e9e3ab605a384ff5c4787330b8e9821404dee99ba4a339006b3cbd6d7699f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Ground.tsx"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 3788,
+      "sha256": "9a94eae6ebe535606d8ff57384d2fb06eb87fdad9a986bd710758e7eb828eb75",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Lighting.tsx"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/MemoryPicture.tsx"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9313,
+      "sha256": "3cfbf23e312a2e94973edfef0678d7b78961462f1ccc240b4806a842c5ef411a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/MemoryTree.tsx"
+    },
+    {
+      "path": "src/scene/Particles.tsx",
+      "bytes": 7223,
+      "sha256": "b263f1eee869e17caf4f5a48e0bc4851b9cf004569d4a8d62cf5f75e38dda5e8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Particles.tsx"
+    },
+    {
+      "path": "src/scene/PlantDiscoveries.tsx",
+      "bytes": 1322,
+      "sha256": "7019e3d2f6a73b16f863e2439631969f763eac3b871a724c8895e68b4c363844",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/PlantDiscoveries.tsx"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 11315,
+      "sha256": "8af8ecff55c2b7f67d7ccff1f8bf5346582654e5c3fcc737b8dc41cf16d0eb60",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Player.tsx"
+    },
+    {
+      "path": "src/scene/Pond.tsx",
+      "bytes": 1436,
+      "sha256": "8cc320c1cd8772d4f8726b195538f4f7f34c8cb5a2b1aa3af7bd06fe9f52f39f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Pond.tsx"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9304,
+      "sha256": "1516cf19f5aaf732fe27126bff1d4fdcad6a3a5bbe310926dbe2ea23090d4bfe",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Scene.tsx"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6233,
+      "sha256": "aec7885e0ace91f2ff85c9199cdcf6d32f39efb47edce14a1c05f446c3ec1753",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/SpeciesFlora.tsx"
+    },
+    {
+      "path": "src/scene/Timeline.tsx",
+      "bytes": 1857,
+      "sha256": "f65d82bf6dad5d74bde7936ae1199cbc7f138f5d47b9111dd04589d9efdb95a8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/Timeline.tsx"
+    },
+    {
+      "path": "src/scene/breeze.ts",
+      "bytes": 1615,
+      "sha256": "7738496de5daf0e05b7b65fc20fc4b5a4cf2171ff57bd60db20a0c7c1f727d66",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/breeze.ts"
+    },
+    {
+      "path": "src/scene/calibration.ts",
+      "bytes": 702,
+      "sha256": "e8c2e4a49e8961a2539468757b877f805bbe72af492c043707866c3b8e11ced4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/calibration.ts"
+    },
+    {
+      "path": "src/scene/clothMotion.ts",
+      "bytes": 3340,
+      "sha256": "49d6c9dcaffed912eca655841b433c7942512e82dbafe6c1e4b72cf956d0f9df",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/clothMotion.ts"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/forestGeometry.ts"
+    },
+    {
+      "path": "src/scene/paintedGeometry.ts",
+      "bytes": 3227,
+      "sha256": "dd1c02a6f6764dd7e8ad6fe839be4db91865ff3a32511334fa5b83e6a63496e8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/paintedGeometry.ts"
+    },
+    {
+      "path": "src/scene/propGeometry.ts",
+      "bytes": 1385,
+      "sha256": "5005820fe3ff63d03b2c56e9a006c502c91b3390b93684aa3b6ce26479fc18f1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/propGeometry.ts"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 7430,
+      "sha256": "6b7a0df1e02cf9ac9db661c33c7079d95e83d4c853d1383e15145b990548a55f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/resources.tsx"
+    },
+    {
+      "path": "src/scene/runtime.ts",
+      "bytes": 675,
+      "sha256": "f44eefa88456a7a111979af6cd626c5d6a9e17670dc76260a7dd3c82f9e461de",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/runtime.ts"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/speciesGeometry.ts"
+    },
+    {
+      "path": "src/scene/travelerGeometry.ts",
+      "bytes": 3641,
+      "sha256": "7349cdd26f7a93023c1bada20eed0963b76bc775bb488f5cbe634992f3fd75ce",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/travelerGeometry.ts"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9901,
+      "sha256": "8e15a770e411fab66cbf37d369686a063c9111cc7d037e4247704ae5cafc9533",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/scene/world.ts"
+    },
+    {
+      "path": "src/shaders/goldenCurrent.ts",
+      "bytes": 3804,
+      "sha256": "1d3bf1869114ab048abd1eee8b6b2774925a4e55203c54299ec7531d2e70fba4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/goldenCurrent.ts"
+    },
+    {
+      "path": "src/shaders/grain.ts",
+      "bytes": 380,
+      "sha256": "bb03775c23d3322785030bcbb56f252e955df6fa76ee60829ed45637dbca56c3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/grain.ts"
+    },
+    {
+      "path": "src/shaders/ground.ts",
+      "bytes": 2973,
+      "sha256": "e9a645124247a4afc1c374279a228b91abb10eec83cf9e371822a17bd436c843",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/ground.ts"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/outline.ts"
+    },
+    {
+      "path": "src/shaders/water.ts",
+      "bytes": 1008,
+      "sha256": "d0069107d7bf8ffcf157f521371540891e730579e6149dc4da6f4a67eb581fc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/water.ts"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 6535,
+      "sha256": "345ef15f1a65914266ee463c8c46d6fc7a25454ad4bb120477ea3d289b3eb86d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/shaders/wind.ts"
+    },
+    {
+      "path": "src/store.ts",
+      "bytes": 12431,
+      "sha256": "a81d930b54c7ff1a5988fc7572d43c8b53c4bb0a08ebae52b04bc00be64b3370",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/store.ts"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/styles.css"
+    },
+    {
+      "path": "src/textures/memoryArt.ts",
+      "bytes": 6806,
+      "sha256": "a718ad3a0209cf01c09854e21dc347561fc213ab8f19c4a316e8aeb7e49acf47",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/textures/memoryArt.ts"
+    },
+    {
+      "path": "src/textures/paintTexture.ts",
+      "bytes": 4066,
+      "sha256": "1cc5c5276334080f96011c984fe6a23f37070c2946febdcd07dd2da19e37e7ba",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/textures/paintTexture.ts"
+    },
+    {
+      "path": "src/ui/BrandLogo.tsx",
+      "bytes": 402,
+      "sha256": "0540c33fff34095f884fd8608fceff9eae40159e638e7eeb0f7f68fbd09a932e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/BrandLogo.tsx"
+    },
+    {
+      "path": "src/ui/CompanionPortrait.tsx",
+      "bytes": 1867,
+      "sha256": "80d61aa7111d35e06190cd13441a25f06e857c7358b19447c896306a92e30bb4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/CompanionPortrait.tsx"
+    },
+    {
+      "path": "src/ui/Compass.tsx",
+      "bytes": 1437,
+      "sha256": "2218f9d0b9f5f69eb56455901248e4032caa558a3b58d7f9ca6276722fc53c74",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Compass.tsx"
+    },
+    {
+      "path": "src/ui/CustomTrackSetting.tsx",
+      "bytes": 1147,
+      "sha256": "d63438986ab364855fdd5b458b45b6fa744eee190544b78a5933a2cbc6fc4978",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/CustomTrackSetting.tsx"
+    },
+    {
+      "path": "src/ui/Dedication.tsx",
+      "bytes": 2783,
+      "sha256": "2f3abf4f0f98a213d8d1e63c9df0d587a0542cda5358df3d5cddca2aee6e600e",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Dedication.tsx"
+    },
+    {
+      "path": "src/ui/FieldGuide.tsx",
+      "bytes": 3064,
+      "sha256": "a79ae260af80f977672cc7e800be3c7613202f7b9fbe7816714387eb174b345b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/FieldGuide.tsx"
+    },
+    {
+      "path": "src/ui/Finale.tsx",
+      "bytes": 1382,
+      "sha256": "1d09b06eb8e3fe09e253c1bc5358e2eaec42cb06dab2e749c586c5171b9288d0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Finale.tsx"
+    },
+    {
+      "path": "src/ui/Hud.tsx",
+      "bytes": 5717,
+      "sha256": "a1041cf48ada0037e2b30bc4ad508f2f1b90d90bd2536d62b90327032181deab",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Hud.tsx"
+    },
+    {
+      "path": "src/ui/Icons.tsx",
+      "bytes": 1580,
+      "sha256": "4fa7aa15beb62a07def33f6a40011fdebabc4f798ee1e8be5bdecb9981fc1a97",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Icons.tsx"
+    },
+    {
+      "path": "src/ui/IdleRest.tsx",
+      "bytes": 609,
+      "sha256": "b1c6ad486aed7cbc6e7de4691301160563485b776484234827d1c378170d4f4d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/IdleRest.tsx"
+    },
+    {
+      "path": "src/ui/Intro.tsx",
+      "bytes": 816,
+      "sha256": "9dae6af61d5bb2fef1db80b919d58d45c66bd72ec162d629b787df6c0a39cfc8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Intro.tsx"
+    },
+    {
+      "path": "src/ui/Journal.tsx",
+      "bytes": 7730,
+      "sha256": "8d037b0b676d445cb46903d5b6e4443270bd5c9b96564c09965931d16ec769ab",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Journal.tsx"
+    },
+    {
+      "path": "src/ui/LanguageSwitch.tsx",
+      "bytes": 510,
+      "sha256": "af54dd85ff01e2646dae09361283f863c643f4f171ca3c943396acd0d0130a97",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/LanguageSwitch.tsx"
+    },
+    {
+      "path": "src/ui/LoadingScreen.tsx",
+      "bytes": 953,
+      "sha256": "1c0fbfc99259c87d123aa06e70e28928f8db61ee401c9781b3772ed9004a2293",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/LoadingScreen.tsx"
+    },
+    {
+      "path": "src/ui/MemorySlots.tsx",
+      "bytes": 1435,
+      "sha256": "44740a4afbe6d245eeabd8dd3271b7d0dbc96e03d87eaac89421a7baa07c463d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/MemorySlots.tsx"
+    },
+    {
+      "path": "src/ui/NearbyCompany.tsx",
+      "bytes": 1930,
+      "sha256": "9bcf142c47f1d974cd5e308181b3feec44723aac359d42777063d4dcd967cacc",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/NearbyCompany.tsx"
+    },
+    {
+      "path": "src/ui/OscarDialogue.tsx",
+      "bytes": 1097,
+      "sha256": "88c2d3ab710c908ba3f959d9735c9f9fed5b4bbd2bfda9a88ae84975121caae6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/OscarDialogue.tsx"
+    },
+    {
+      "path": "src/ui/PauseMenu.tsx",
+      "bytes": 5976,
+      "sha256": "4a1af2089eecc5bdf316b34d2dc9eee5bb26085d2d2e62d2889c4a5aeaee6ded",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/PauseMenu.tsx"
+    },
+    {
+      "path": "src/ui/PlantSilhouette.tsx",
+      "bytes": 3925,
+      "sha256": "ef325dd8b2072936abd8b09b88ff88505b1cad36e9eb0e6fd2be09680a2121a3",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/PlantSilhouette.tsx"
+    },
+    {
+      "path": "src/ui/TitleBackdrop.tsx",
+      "bytes": 4875,
+      "sha256": "11f77c986cfe9222f31bc5b12685ceb8ca0303b1a15cb5992da58aeb509ea7b8",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/TitleBackdrop.tsx"
+    },
+    {
+      "path": "src/ui/TitleScreen.tsx",
+      "bytes": 2630,
+      "sha256": "ab4b5c8b3fe549577466285374fd5f3bfdffebe744bd685a5c8f29cc44901b23",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/TitleScreen.tsx"
+    },
+    {
+      "path": "src/ui/Toasts.tsx",
+      "bytes": 2582,
+      "sha256": "a49bedf6a66cfc25841b93c374563b6bba41d49c426b3ade13949bc9e4d6c3b0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Toasts.tsx"
+    },
+    {
+      "path": "src/ui/TributeInscription.tsx",
+      "bytes": 396,
+      "sha256": "a363ff2bc51f4d3e7aff85106a221cc171446adee92858333313135bad621baf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/TributeInscription.tsx"
+    },
+    {
+      "path": "src/ui/Viewer.tsx",
+      "bytes": 4216,
+      "sha256": "84c8e5c499d8fe052a3aa7192435e1a6396b107f31ddf90fe2668c5b4a0b6e6a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/ui/Viewer.tsx"
+    },
+    {
+      "path": "src/utils/chunks.ts",
+      "bytes": 2018,
+      "sha256": "6bc1007740348425f8f38ae60b5eb64763896f57716eded2df0d63e4eb520172",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/utils/chunks.ts"
+    },
+    {
+      "path": "src/utils/placeholders.ts",
+      "bytes": 1144,
+      "sha256": "d5b3766341a90bcee3adb2e4732af862b174f6148633604c9fe2cc4205b9a7cf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/utils/placeholders.ts"
+    },
+    {
+      "path": "src/utils/progress.ts",
+      "bytes": 744,
+      "sha256": "1dbf6cd628bda307cc7cc86f2d38ff8e699411b9c430a55d9165cafcef8e54f4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/utils/progress.ts"
+    },
+    {
+      "path": "src/utils/random.ts",
+      "bytes": 716,
+      "sha256": "6131c88bfa9ca07201483f74d2f2e0090c61102ae9c95bbb6a648c95493c45f6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/utils/random.ts"
+    },
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/approved/assets.ts"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/approved/geometry.ts"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/approved/paint.ts"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/forestPaint.ts"
+    },
+    {
+      "path": "src/visual/heroClearance.ts",
+      "bytes": 1691,
+      "sha256": "ab4f83d7cca9d83fbafe6bedb1f75ac771bf9048f14bd63b97445cde0fa99393",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/heroClearance.ts"
+    },
+    {
+      "path": "src/visual/landscapePaint.ts",
+      "bytes": 5914,
+      "sha256": "fd9b161621f1e504370e89b24bb9bee64948825e681836abb502c95bda8b3f1b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/landscapePaint.ts"
+    },
+    {
+      "path": "src/visual/memoryCurrent.ts",
+      "bytes": 6114,
+      "sha256": "19a695eb723ac309718307cef83e45da30bffd3764fbe276e282d8b7bced071d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/memoryCurrent.ts"
+    },
+    {
+      "path": "src/visual/paintedSurface.ts",
+      "bytes": 1619,
+      "sha256": "9e1a080736624f0567e66a667e0a78407b2765bc03d285b8f5d03444051d0c81",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/paintedSurface.ts"
+    },
+    {
+      "path": "src/visual/propPaint.ts",
+      "bytes": 2450,
+      "sha256": "155613384550846aea8c9196f1686d914e8f9ad240111d413c56d1ba723aea6b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/src/visual/propPaint.ts"
+    },
+    {
+      "path": "tests/audio.spec.ts",
+      "bytes": 9312,
+      "sha256": "b2bf0a974a637ffaf5bab4e28e20f9f42d6004c0fee33e8a27651e9a0d54948a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/audio.spec.ts"
+    },
+    {
+      "path": "tests/experience.spec.ts",
+      "bytes": 8842,
+      "sha256": "3977b3bb9b85906cb01d633b82f7da816ba1f6a57004bdf6c4e49e589591d2c6",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/experience.spec.ts"
+    },
+    {
+      "path": "tests/pass-3-trees.spec.ts",
+      "bytes": 4326,
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/pass-3-trees.spec.ts"
+    },
+    {
+      "path": "tests/persistence.spec.ts",
+      "bytes": 11293,
+      "sha256": "2da691f0dfcec80a7e48e305be1e6b33710f6fc95aa2fcb23968e57917b50dfc",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/persistence.spec.ts"
+    },
+    {
+      "path": "tests/robustness.spec.ts",
+      "bytes": 2763,
+      "sha256": "63e8ea6cf2e4dcf992028d5d9e5e6c0d99e89ee514354c64c110d745a67c03d9",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/robustness.spec.ts"
+    },
+    {
+      "path": "tests/stage-a.spec.ts",
+      "bytes": 7624,
+      "sha256": "65f8392b3deb5d5f9f60e79a5ba834c9d3acb4b2f2e159d34e72bdd212e62f8d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/stage-a.spec.ts"
+    },
+    {
+      "path": "tests/v3-foundation.spec.ts",
+      "bytes": 9134,
+      "sha256": "35bba14dea5f0cc879df4145ab78bfaf3c5c77f96153e8a300a05aa3b771ecb4",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v3-foundation.spec.ts"
+    },
+    {
+      "path": "tests/v4-audio-mixer.spec.ts",
+      "bytes": 3748,
+      "sha256": "6c968334041e6dd8b6181d771d0e32b8d0ea21ea679b7fdb9d8bb4ccd7ab9ec2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-audio-mixer.spec.ts"
+    },
+    {
+      "path": "tests/v4-audit.spec.ts",
+      "bytes": 8785,
+      "sha256": "16e325ff0d2da8a41c49e033e063fdf85170df6c57422d1c9e67266f5b8c9e34",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-audit.spec.ts"
+    },
+    {
+      "path": "tests/v4-compact-ui.spec.ts",
+      "bytes": 3315,
+      "sha256": "4e65649a36ec3905900de84c4bf101fe3e20436f99e4ecf6d8e05c58a676c61f",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-compact-ui.spec.ts"
+    },
+    {
+      "path": "tests/v4-companions.spec.ts",
+      "bytes": 1391,
+      "sha256": "1962815a6214ef73187e1b17e96aa1d8a55f5cac1c4b66e829cb2d8ee4afe910",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-companions.spec.ts"
+    },
+    {
+      "path": "tests/v4-composition.spec.ts",
+      "bytes": 12210,
+      "sha256": "409ec31eda4b9a98cefeb3d82140bd5deb1e137b5ee96bd5d93a4ed8b4b1888d",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-composition.spec.ts"
+    },
+    {
+      "path": "tests/v4-flora-guide.spec.ts",
+      "bytes": 6035,
+      "sha256": "44cca1a0bb2b786e9428f48b050a1123658a2bc782924c3e7715cf6ec86c5b1b",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-flora-guide.spec.ts"
+    },
+    {
+      "path": "tests/v4-idle.spec.ts",
+      "bytes": 3016,
+      "sha256": "247e38d62d8dbf9bc7d1908af9c68aadaeaea3a08040ff0b0cd49e9ba737c36a",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-idle.spec.ts"
+    },
+    {
+      "path": "tests/v4-journal.spec.ts",
+      "bytes": 3514,
+      "sha256": "ef00b097a26c6c5bcf235dfefd25d3b579a3848f8811ca44be80ed55b8618fdf",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-journal.spec.ts"
+    },
+    {
+      "path": "tests/v4-living-world.spec.ts",
+      "bytes": 5154,
+      "sha256": "d2d75c539983ca9e30813c0964f35e41d50b8733c89a1afdd68fc5b19fc82bc7",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-living-world.spec.ts"
+    },
+    {
+      "path": "tests/v4-nearby.spec.ts",
+      "bytes": 3078,
+      "sha256": "b0269417d78cd5527c286293161c59c7e6add83c53b98fb4f5ededb4bef306f1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-nearby.spec.ts"
+    },
+    {
+      "path": "tests/v4-oscar.spec.ts",
+      "bytes": 2781,
+      "sha256": "33add16d04789d4df3725e211d70ee0e17f440d527f70814879cfc55270d0250",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-oscar.spec.ts"
+    },
+    {
+      "path": "tests/v4-painted-forest.spec.ts",
+      "bytes": 4551,
+      "sha256": "2fbabc45b1f432961511f81606b48bb9a656f53a42a6ab08cf712ea2023364c1",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tests/v4-painted-forest.spec.ts"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 510,
+      "sha256": "53ff85d717be27e224fbde12c9297a63443d81ba55c1fa501af391fe38b9acae",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/tsconfig.json"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 636,
+      "sha256": "7c0579127b2dc70592bb93b3c1acc95c0ff7bc49a915327ad6e71df9d74a54a2",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/vercel.json"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 196,
+      "sha256": "f2de674d90f68188e2547039865510537347356c0cb10c40f6a85c7a27a0c4f9",
+      "snapshot": "artifacts/visual-reconstruction/pass-7/baseline-source/vite.config.ts"
+    }
+  ]
+}

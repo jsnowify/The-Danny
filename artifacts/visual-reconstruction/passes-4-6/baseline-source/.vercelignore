@@ -1,0 +1,7 @@
+artifacts/
+test-results/
+playwright-report/
+node_modules/
+dist/
+source-snapshot.html
+source-export/

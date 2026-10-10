@@ -342,7 +342,7 @@ def render(seed, bpm, key, mix_name, outdir):
 
 
 def main():
-    config = (ROOT / "src" / "config.ts").read_text(encoding="utf-8")
+    config = (ROOT / "src" / "config" / "audio.ts").read_text(encoding="utf-8")
     default_key = re.search(r'AMBIENT_TRACK_KEY[^=]*=\s*"([DF])"', config).group(1)
     default_bpm = float(re.search(r'AMBIENT_TRACK_BPM\s*=\s*([\d.]+)', config).group(1))
     default_seed = int(re.search(r'AMBIENT_TRACK_SEED\s*=\s*(\d+)', config).group(1))

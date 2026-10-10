@@ -1,0 +1,203 @@
+{
+  "recordedAt": "2026-10-10T05:16:17.755Z",
+  "ui": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "frame": {
+        "traveler": {
+          "left": 146.29093746843728,
+          "right": 175.18036906818747,
+          "top": 368.71156218396703,
+          "bottom": 411.9516617572966
+        },
+        "button": {
+          "left": 80,
+          "right": 240,
+          "top": 424,
+          "bottom": 480,
+          "width": 160,
+          "height": 56
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 20,
+          "right": 124,
+          "top": 284.8125,
+          "bottom": 403
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 20,
+            "right": 124,
+            "top": 284.8125,
+            "bottom": 403
+          },
+          {
+            "selector": ".hang-button",
+            "left": 80,
+            "right": 240,
+            "top": 424,
+            "bottom": 480
+          },
+          {
+            "selector": ".toast",
+            "left": 66,
+            "right": 254,
+            "top": 481.21875,
+            "bottom": 548
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 254,
+            "right": 302,
+            "top": 496,
+            "bottom": 544
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 18.56014391070677
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "frame": {
+        "traveler": {
+          "left": 171.52054897602815,
+          "right": 220.99935124970904,
+          "top": 538.7466778040293,
+          "bottom": 612.8038059166346
+        },
+        "button": {
+          "left": 175.859375,
+          "right": 372,
+          "top": 629,
+          "bottom": 679,
+          "width": 196.140625,
+          "height": 50
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 20,
+          "right": 152,
+          "top": 579.40625,
+          "bottom": 679
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 20,
+            "right": 152,
+            "top": 579.40625,
+            "bottom": 679
+          },
+          {
+            "selector": ".hang-button",
+            "left": 175.859375,
+            "right": 372,
+            "top": 629,
+            "bottom": 679
+          },
+          {
+            "selector": ".toast",
+            "left": 81.828125,
+            "right": 308.171875,
+            "top": 767.609375,
+            "bottom": 812
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 324,
+            "right": 372,
+            "top": 772,
+            "bottom": 820
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 16.102572723270967
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "frame": {
+        "traveler": {
+          "left": 410.5886816159278,
+          "right": 434.63602264749915,
+          "top": 262.89750941591706,
+          "bottom": 298.89023627482663
+        },
+        "button": {
+          "left": 574,
+          "right": 814,
+          "top": 169.8125,
+          "bottom": 241.8125,
+          "width": 240,
+          "height": 72
+        },
+        "overlapsTraveler": false,
+        "forestLabel": {
+          "left": 32,
+          "right": 190.59375,
+          "top": 253.703125,
+          "bottom": 335
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 32,
+            "right": 190.59375,
+            "top": 253.703125,
+            "bottom": 335
+          },
+          {
+            "selector": ".hang-button",
+            "left": 574,
+            "right": 814,
+            "top": 169.8125,
+            "bottom": 241.8125
+          },
+          {
+            "selector": ".toast",
+            "left": 279.328125,
+            "right": 564.671875,
+            "top": 318,
+            "bottom": 370
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 659.234375,
+            "right": 812,
+            "top": 319,
+            "bottom": 366
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 15.309800988086785
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    }
+  ],
+  "production": null,
+  "motion": null,
+  "errors": []
+}

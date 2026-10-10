@@ -1,0 +1,865 @@
+{
+  "recordedAt": "2026-10-10T12:51:42.713Z",
+  "complete": true,
+  "method": "Sequential isolated Chromium pages, unchanged viewport and explicit quality, 4-second settling then 15-second wall-clock sampling of every renderer pass. Frozen Pass 6 then Pass 7. Software WebGL; no physical GPU claim.",
+  "results": [
+    {
+      "case": {
+        "name": "clearing-low",
+        "tier": "low",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0,
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "tier": "low",
+        "frames": 33,
+        "fps": 2.12,
+        "calls": 108,
+        "triangles": 377594,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15561,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 466.1,
+          "p95": 557.1,
+          "p99": 582,
+          "max": 582
+        },
+        "geometries": 88,
+        "textures": 15,
+        "heapUsedBytes": 27945280,
+        "heapTotalBytes": 64315392,
+        "titleReadyMs": 676.2000000029802,
+        "forestReadyMs": 3622,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x4f3400433400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4f3400433400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4f3400433400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4f3400433400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:44:27.231Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 23.418666666666667,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "low",
+        "frames": 50,
+        "fps": 3.21,
+        "calls": 83,
+        "triangles": 77144,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15534,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 309,
+          "p95": 347.2,
+          "p99": 413.3,
+          "max": 413.3
+        },
+        "geometries": 88,
+        "textures": 15,
+        "heapUsedBytes": 27615660,
+        "heapTotalBytes": 65101824,
+        "titleReadyMs": 780.1000000014901,
+        "forestReadyMs": 3738,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x4b0400b6ae00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4b0400b6ae00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4b0400b6ae00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4b0400b6ae00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:45:00.762Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 22.520000000000003,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 79.57,
+      "fpsChangePercent": 51.42
+    },
+    {
+      "case": {
+        "name": "clearing-medium",
+        "tier": "medium",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0,
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "tier": "medium",
+        "frames": 21,
+        "fps": 1.26,
+        "calls": 201,
+        "triangles": 853388,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 16686,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 786.8,
+          "p95": 903.1,
+          "p99": 903.1,
+          "max": 903.1
+        },
+        "geometries": 89,
+        "textures": 17,
+        "heapUsedBytes": 32094948,
+        "heapTotalBytes": 63528960,
+        "titleReadyMs": 752.3000000044703,
+        "forestReadyMs": 3908,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x40dc00b26600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x40dc00b26600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x40dc00b26600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x40dc00b26600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:45:39.908Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 27.544000000000004,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "medium",
+        "frames": 34,
+        "fps": 2.17,
+        "calls": 134,
+        "triangles": 182432,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15642,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 461,
+          "p95": 489.4,
+          "p99": 550.7,
+          "max": 550.7
+        },
+        "geometries": 89,
+        "textures": 17,
+        "heapUsedBytes": 41625292,
+        "heapTotalBytes": 64839680,
+        "titleReadyMs": 828.3999999985099,
+        "forestReadyMs": 3897,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x7d9c00c0e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7d9c00c0e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7d9c00c0e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7d9c00c0e800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:46:17.337Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 24.50133333333333,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 78.62,
+      "fpsChangePercent": 72.22
+    },
+    {
+      "case": {
+        "name": "clearing-high-complete",
+        "tier": "high",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8,
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "tier": "high",
+        "frames": 15,
+        "fps": 0.89,
+        "calls": 225,
+        "triangles": 886574,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 16854,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 1086.9,
+          "p95": 1649.9,
+          "p99": 1649.9,
+          "max": 1649.9
+        },
+        "geometries": 98,
+        "textures": 24,
+        "heapUsedBytes": 26975024,
+        "heapTotalBytes": 33120256,
+        "titleReadyMs": 807.3000000044703,
+        "forestReadyMs": 3807,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x4bc400b0de00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4bc400b0de00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4bc400b0de00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4bc400b0de00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:46:56.609Z",
+        "build": "Vite development",
+        "progress": "8/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 28.240000000000002,
+            "duration": 202.5,
+            "gain": 0.58,
+            "targetGain": 0.58,
+            "cutoff": 4600,
+            "targetCutoff": 4600,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "high",
+        "frames": 20,
+        "fps": 1.23,
+        "calls": 161,
+        "triangles": 281425,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 16220,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 788.2,
+          "p95": 1238.3,
+          "p99": 1238.3,
+          "max": 1238.3
+        },
+        "geometries": 98,
+        "textures": 24,
+        "heapUsedBytes": 36612940,
+        "heapTotalBytes": 64053248,
+        "titleReadyMs": 812.2999999970198,
+        "forestReadyMs": 5020,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x2f0400bba200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x2f0400bba200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x2f0400bba200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x2f0400bba200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:47:37.923Z",
+        "build": "Vite development",
+        "progress": "8/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 26.088,
+            "duration": 202.5,
+            "gain": 0.58,
+            "targetGain": 0.58,
+            "cutoff": 4600,
+            "targetCutoff": 4600,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 68.26,
+      "fpsChangePercent": 38.2
+    },
+    {
+      "case": {
+        "name": "portrait-low",
+        "tier": "low",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0,
+        "width": 390,
+        "height": 844
+      },
+      "before": {
+        "tier": "low",
+        "frames": 44,
+        "fps": 2.81,
+        "calls": 87,
+        "triangles": 371122,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "390x844",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15698,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 353.2,
+          "p95": 389.4,
+          "p99": 404.2,
+          "max": 404.2
+        },
+        "geometries": 73,
+        "textures": 14,
+        "heapUsedBytes": 29789700,
+        "heapTotalBytes": 64315392,
+        "titleReadyMs": 838.7000000029802,
+        "forestReadyMs": 4952,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x4284019e9400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4284019e9400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4284019e9400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x4284019e9400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:48:14.606Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 23.160000000000004,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "low",
+        "frames": 84,
+        "fps": 5.6,
+        "calls": 38,
+        "triangles": 51532,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "390x844",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15014,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 177.9,
+          "p95": 198.6,
+          "p99": 222.3,
+          "max": 222.3
+        },
+        "geometries": 73,
+        "textures": 14,
+        "heapUsedBytes": 32371524,
+        "heapTotalBytes": 65101824,
+        "titleReadyMs": 738.8999999985099,
+        "forestReadyMs": 4822,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x7c2c0042c200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7c2c0042c200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7c2c0042c200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x7c2c0042c200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:48:47.394Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary clearing",
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 20.640000000000004,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 86.11,
+      "fpsChangePercent": 99.29
+    },
+    {
+      "case": {
+        "name": "bamboo-medium",
+        "tier": "medium",
+        "x": -20,
+        "z": 0,
+        "progress": 0,
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "tier": "medium",
+        "frames": 17,
+        "fps": 1.02,
+        "calls": 149,
+        "triangles": 991534,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 16583,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 982.1,
+          "p95": 1035.2,
+          "p99": 1035.2,
+          "max": 1035.2
+        },
+        "geometries": 89,
+        "textures": 18,
+        "heapUsedBytes": 38955016,
+        "heapTotalBytes": 64839680,
+        "titleReadyMs": 857.8999999985099,
+        "forestReadyMs": 4238,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:49:36.526Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary regional scene",
+        "position": {
+          "x": -20,
+          "z": 0
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 38.69066666666667,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "medium",
+        "frames": 27,
+        "fps": 1.71,
+        "calls": 91,
+        "triangles": 274610,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15850,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 588.5,
+          "p95": 621.3,
+          "p99": 658.9,
+          "max": 658.9
+        },
+        "geometries": 89,
+        "textures": 18,
+        "heapUsedBytes": 37573808,
+        "heapTotalBytes": 65101824,
+        "titleReadyMs": 731.3000000044703,
+        "forestReadyMs": 4018,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x79fc00e80000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x79fc00e80000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x79fc00e80000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x79fc00e80000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:50:22.835Z",
+        "build": "Vite development",
+        "progress": "0/8, stationary regional scene",
+        "position": {
+          "x": -20,
+          "z": 0
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 31.35466666666667,
+            "duration": 202.5,
+            "gain": 0.48,
+            "targetGain": 0.48,
+            "cutoff": 2800,
+            "targetCutoff": 2800,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 72.3,
+      "fpsChangePercent": 67.65
+    },
+    {
+      "case": {
+        "name": "pond-low-complete",
+        "tier": "low",
+        "x": 19,
+        "z": 9,
+        "progress": 8,
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "tier": "low",
+        "frames": 32,
+        "fps": 2.01,
+        "calls": 74,
+        "triangles": 419554,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15917,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 494,
+          "p95": 524.5,
+          "p99": 525.2,
+          "max": 525.2
+        },
+        "geometries": 99,
+        "textures": 22,
+        "heapUsedBytes": 31596856,
+        "heapTotalBytes": 64053248,
+        "titleReadyMs": 789.8999999985099,
+        "forestReadyMs": 3932,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x657400b3ea00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x657400b3ea00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x657400b3ea00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x657400b3ea00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:51:03.578Z",
+        "build": "Vite development",
+        "progress": "8/8, stationary regional scene",
+        "position": {
+          "x": 19,
+          "z": 11.05
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 28.752000000000002,
+            "duration": 202.5,
+            "gain": 0.58,
+            "targetGain": 0.58,
+            "cutoff": 4600,
+            "targetCutoff": 4600,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "after": {
+        "tier": "low",
+        "frames": 50,
+        "fps": 3.26,
+        "calls": 45,
+        "triangles": 69920,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "960x640",
+        "deviceScaleFactor": 1,
+        "sampleMs": 15326,
+        "settleMs": 4000,
+        "frameTimeMs": {
+          "p50": 303.4,
+          "p95": 334.4,
+          "p99": 342.4,
+          "max": 342.4
+        },
+        "geometries": 99,
+        "textures": 22,
+        "heapUsedBytes": 30210496,
+        "heapTotalBytes": 65363968,
+        "titleReadyMs": 872.6999999955297,
+        "forestReadyMs": 3717,
+        "errors": [],
+        "warnings": [
+          "[.WebGL-0x621400bc0c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x621400bc0c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x621400bc0c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+          "[.WebGL-0x621400bc0c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        ],
+        "browser": "156.0.8078.4",
+        "node": "v24.16.0",
+        "platform": "win32",
+        "recordedAt": "2026-10-10T12:51:41.307Z",
+        "build": "Vite development",
+        "progress": "8/8, stationary regional scene",
+        "position": {
+          "x": 19,
+          "z": 11.05
+        },
+        "motion": "normal",
+        "audio": "muted; Track selected",
+        "audioState": {
+          "source": "track",
+          "generatedActive": false,
+          "track": {
+            "loaded": true,
+            "playing": true,
+            "position": 25.429333333333336,
+            "duration": 202.5,
+            "gain": 0.58,
+            "targetGain": 0.58,
+            "cutoff": 4600,
+            "targetCutoff": 4600,
+            "loop": true,
+            "fadeIn": 3
+          },
+          "masterGain": 0,
+          "natureGain": 0.28,
+          "musicGain": 1,
+          "effectsGain": 0.65,
+          "contextState": "running"
+        },
+        "activity": "periodic pointer movement; no traveler movement"
+      },
+      "triangleReductionPercent": 83.33,
+      "fpsChangePercent": 62.19
+    }
+  ]
+}

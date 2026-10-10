@@ -1,7 +1,8 @@
+import { useText } from "../hooks/useText";
 import { useEffect, useState } from "react";
-import { TEXT } from "../config";
 import { useStore } from "../store";
 export function Intro() {
+  const TEXT = useText();
   const ready = useStore((s) => s.sceneReady),
     paused = useStore((s) => s.paused);
   const [line, setLine] = useState(0);

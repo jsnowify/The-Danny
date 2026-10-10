@@ -1,0 +1,559 @@
+{
+  "recordedAt": "2026-10-10T06:21:57.986Z",
+  "status": "Corrected Pass 2 awaits owner visual approval",
+  "approvedBaseline": {
+    "pass": 1,
+    "confirmedBy": "User: The visual result from Pass 1 was already correct and approved",
+    "manifest": "artifacts/visual-reconstruction/pass-1/manifest.json",
+    "manifestSha256": "dc717b888d604335a9dad903b8f433afd27fa3af0c241410c6dcf75233d69d96"
+  },
+  "currentPass": 2,
+  "userApproved": false,
+  "laterPassesAuthorized": false,
+  "nextAction": "Wait for owner visual approval; do not resume Pass 3.",
+  "sourceFiles": [
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 790,
+      "sha256": "3583eac29aa009f41b89b3abd0d1209747a9ff2a761a6769cd4d307558062434"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9237,
+      "sha256": "58383d9b2691fb706fac5d6fbc40300f1dc272c3e2ad614f33da359c66799ec6"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 6824,
+      "sha256": "618bb76ee21a426e394ad90842f871075a5a9412cb6afc3407a255e12ba98db9"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "8decc5df6f22f9ed5924825c483373145b8ce5dbaa5189e1603fa58294d516de"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 2631,
+      "sha256": "4bd5f03dd9b0d2976703d05452f5868477061cd40ce0a020c1fcb0fbcad84be7"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 7493,
+      "sha256": "453913a95f97df62a2c4253ee5c9244e5757c76a286152606c0e1a7f7db6d6ca"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9232,
+      "sha256": "8eaffdab41d8a4b3018ffd081b7a5ad6ad8007cdec37af00606483bb1dceb36f"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6336,
+      "sha256": "05604accd1c01739fbe55ffe70da5ef59eca5c77f0fd6afd68ef182d1a70ce44"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 5557,
+      "sha256": "ca0579a53563bb640d1a9329416f5897e926e8c380c390b6c3fc67cdefd3cb2e"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 10590,
+      "sha256": "d2f1613ce50510adb19a3f47a7762d2f8e55f15d10fd3c1a1f847f3ae777402f"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9875,
+      "sha256": "de256665e53ba96d2ee162643d482dfcbcbcdf8237c1ac50b67fa53d3b6b8ed3"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 3865,
+      "sha256": "93b5d6ca7606051c6b07e70c11abc8820469aebb6e8efc89b6f6436a33f05ce0"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 10982,
+      "sha256": "303e279d2eb5f1ad7c94b2d441ea60aa7617b8535c3350923928e5f10761543c"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1"
+    },
+    {
+      "path": "tests/v4-composition.spec.ts",
+      "bytes": 9876,
+      "sha256": "50e998fe7f2bc1d52c3ecef3f3733ddc0789f616ae41329c57683b4068914df9"
+    },
+    {
+      "path": "tests/v4-painted-forest.spec.ts",
+      "bytes": 4551,
+      "sha256": "2fbabc45b1f432961511f81606b48bb9a656f53a42a6ab08cf712ea2023364c1"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REVIEW.html",
+      "bytes": 11877,
+      "sha256": "fdcc5ca722d41572eec2019f25407781a6889c88b3d26fb5508dd0c049aa9882"
+    },
+    {
+      "path": "VISUAL-PASS-2-RECOVERY-REPORT.md",
+      "bytes": 9464,
+      "sha256": "54a525f27ed3904a52cfb24a344821b909f551fb26fc5da38a2fc54bbc0bc23e"
+    },
+    {
+      "path": "VISUAL-PASS-2-REPORT.md",
+      "bytes": 15278,
+      "sha256": "f05d7007fd75c4bf28b6e5282f50655e81073f2558981238e1881e4e0fce697a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6996,
+      "sha256": "bc916c7a0337e3fee2245af9c6aa0c234fcd3a09a6b0addac7e3cbf9cdb3e2e6"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/after-finale-320x568.png",
+      "bytes": 210706,
+      "sha256": "ed24a079dab24bade6545e05bcbd8cb275fa22016070b26a1627b379aa76581d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/after-finale-390x844.png",
+      "bytes": 384261,
+      "sha256": "2ef7a0b2908147db657a4ee9eaa0ebde50e209d9df509fa4dcee3016a53b0a46"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/after-finale-844x390.png",
+      "bytes": 389819,
+      "sha256": "c403149f317f4da198d3ce8ea2e25dab9f1b6aad7dc2dc7351f93af79ea62b90"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/baseline-verification.json",
+      "bytes": 16855,
+      "sha256": "966ee8bee1bb07354d1ec1c33a097e7aade484eb6832889a8db75579e14eed5f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/captures.json",
+      "bytes": 52480,
+      "sha256": "dc34fc2876eabc9fa33c094eb9722abbaf1a18831c38731a2feacc792a9950bf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2110851,
+      "sha256": "694cd084b3ea03e85807532bec902dfc5aefb132835487e82ae31c627916834a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 375812,
+      "sha256": "c17563c852500f87e6cc6ac9d563a448ee52ac29f51caf6c56f2935a8c0d08ab"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2134002,
+      "sha256": "2e5b22756c4f833c50894f9d6771913ab650c5621b4c3d9ddd68263ae684807d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 388581,
+      "sha256": "3aaee33f6a79f673021ec6454a24e6828e6689af1c934a45fa6ad212296f3620"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 2014316,
+      "sha256": "5a5c737e7d5de541294b78a93a2ab5cdfbf24ebfce86f5e685ac2b4b42e144c4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 398310,
+      "sha256": "c5d14b0bceb7e048ee2503e160553e7df0e85437205370ca45bc7b3dcc0da0db"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 2051512,
+      "sha256": "f4cb2ec595b26e0a43ee42bac398f1331a0d06f0268b3d8367eb568e508dd28a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 381328,
+      "sha256": "2148e0859a7ed0bd825873a14f0b731b954d1b96e8e3311ed115721f7d446e12"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1771610,
+      "sha256": "ae580701631c0df32d59317d7b07a2209f0a33ec45a35ff614efc3179cbc38f9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 431402,
+      "sha256": "d505ec7038882d12c88d4472ed9d2bbf7cbb7757958c2224224764a79471dd53"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/captures.json",
+      "bytes": 104818,
+      "sha256": "f9464d65f21337a30c1d030fa6c77ccfa14be435da0eeadcb4a0add3d77c2b40"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-0-1918x918.png",
+      "bytes": 2009433,
+      "sha256": "b03cdcdd1549121bd8ee71b2acdbdca4f1f722244e4af3ab165925db9af1418e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-0-320x568.png",
+      "bytes": 200707,
+      "sha256": "9e80c22dcd66a869a231b9cf1565bf12adf72aaa0acd2c4fc309e85b5f3e5fcd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-0-390x844.png",
+      "bytes": 364946,
+      "sha256": "7a91734637d8c96d300f7201d72a7781301d95d88d83c8a3d710e02752580b5a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-0-844x390.png",
+      "bytes": 392105,
+      "sha256": "d16aab2379d1a6b43d00ade43c333bfb94b95157c4a3e4bb652de3cd4267313c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-8-1918x918.png",
+      "bytes": 2030899,
+      "sha256": "d03e5a56def37e5e59089417ba21008578f887cadde5f08d5a0234c13f4f60db"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-8-320x568.png",
+      "bytes": 208861,
+      "sha256": "299bc87aa15b655ac6ce330c807c2c313c573d6341a03d9dd4d0bfb2e45b59f8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-8-390x844.png",
+      "bytes": 377497,
+      "sha256": "35f3df9162a10122e4da1c235596c38344cc60611d4569e41a5b1b87c97c2b16"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-8-844x390.png",
+      "bytes": 401918,
+      "sha256": "6b43c030e4595dc6b7956f786e5c92e60e794605bc80cb090dbcf7f2f4d305c8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-side-8-1918x918.png",
+      "bytes": 1920888,
+      "sha256": "4ce3c47dc92ed946d0a85bd937897001f36444add85567895286d3c457b50558"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-side-8-320x568.png",
+      "bytes": 206833,
+      "sha256": "47e69c069d65689e67b20b573fc289889e695efb35a1f6bdd5ea36da5db8755e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-side-8-390x844.png",
+      "bytes": 384882,
+      "sha256": "9a243b2544403ed80df9cc4715c14dd26b85422b98ac34fbe4bb970cbd098e8a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-clearing-side-8-844x390.png",
+      "bytes": 393547,
+      "sha256": "3c53fa2193491a908d4932ea3cae5512069d64b12d7eb728a45ffe463c08118f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-tree-return-8-1918x918.png",
+      "bytes": 1958570,
+      "sha256": "c824c4d6617de256db565f36ec31449ee0ea191aa4d1cfaadb226e2119d02330"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-tree-return-8-320x568.png",
+      "bytes": 216491,
+      "sha256": "deb85f93290a597007bf9101c2bce7d602d9e1511f2b0e0ecf3085860e09b85c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-tree-return-8-390x844.png",
+      "bytes": 377735,
+      "sha256": "6c5217f98e23ee2f014f33c6cb036b6cb386758992ae114d7da46afbdc717324"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-tree-return-8-844x390.png",
+      "bytes": 398150,
+      "sha256": "35616d79eccc869d99199d006c2d158650c7ad2cc8d43b59c7458ee10aab15c0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-woodland-0-1918x918.png",
+      "bytes": 1732731,
+      "sha256": "37def5b18aced1a5d258507ec8060c74d1818fdf8bcc9abbea0eeeb19c847088"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-woodland-0-320x568.png",
+      "bytes": 245078,
+      "sha256": "fb2940df0147fd68846cc0285e18e84c243bedb018c2d9d2fc86268700e6f3c6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-woodland-0-390x844.png",
+      "bytes": 426955,
+      "sha256": "fa07663ef769b490eb799cc3adbbbe56c44542090a02c91ae41aa4e96ff03cff"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-02/live-woodland-0-844x390.png",
+      "bytes": 357626,
+      "sha256": "45232d6c26a471389a7f135305bf7964d62d15fae3615673ed870925cbdff2b9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/captures.json",
+      "bytes": 104821,
+      "sha256": "a4a7a78a3aa40d599de71794fd3b2fee5d47fe092753ddef2bb3d7acb14dd5f9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-0-1918x918.png",
+      "bytes": 2005638,
+      "sha256": "de723cefd5e376b9b1264bd838b79b51d54b69438bea9320d279ee289d567d50"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-0-320x568.png",
+      "bytes": 209260,
+      "sha256": "a3d9766f2c88c5bf558835c9c6e0a7dd6e367b473e77e0fe9b35d3389ee95fcf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-0-390x844.png",
+      "bytes": 376474,
+      "sha256": "f14d2e270dd57cf0bcce5ebdae2318756d10e8d0a7992e0deec0bf6e762c3235"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-0-844x390.png",
+      "bytes": 390365,
+      "sha256": "807a09619bf58f16516ff0a9044b6bd0e32930351a2e4f129afa1ce0a91b98b1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-8-1918x918.png",
+      "bytes": 2027177,
+      "sha256": "c8d6fd4ca86a94a908ee19a5038b890c2d7d66b58e1ec1e6d423fb7d2ffb63ef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-8-320x568.png",
+      "bytes": 215825,
+      "sha256": "d9c444425c1cfc2709720f112589048582b934de8a94d013864d7e339b3047bd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-8-390x844.png",
+      "bytes": 389731,
+      "sha256": "727b2fcdc7d55929bbcc321a8fc490e74e75e70a4869474020ef6f58d8cd89e1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-8-844x390.png",
+      "bytes": 400697,
+      "sha256": "751a204db9874227d2a108b4bb993c25aecf333daef494853d3ff4b524b37463"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-side-8-1918x918.png",
+      "bytes": 1919159,
+      "sha256": "643df963d60438112a3292eed58649a320dcd9fb9a2f375aa0faf6e4f72b7bb9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-side-8-320x568.png",
+      "bytes": 211133,
+      "sha256": "b1ea234b3cc889757e03e350dee4f28128319574f9f18c021fcad045da088faf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-side-8-390x844.png",
+      "bytes": 392134,
+      "sha256": "c905cebb67c8febf4fbaebaef233e58c15807de16f5d2051bbfd0c75dc813529"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-clearing-side-8-844x390.png",
+      "bytes": 392719,
+      "sha256": "4c3855c288c4a11c412699c436bf20be8ea4be1f325c4417344fdae96808a5a3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-tree-return-8-1918x918.png",
+      "bytes": 1956389,
+      "sha256": "89cd05fda991ecdd704f4e65e1917239f2747a9aed41735ff68a0a5ac7fd2217"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-tree-return-8-320x568.png",
+      "bytes": 222368,
+      "sha256": "5a5d189bc8fd5a607bee0df12e6b541281e4bd3ebfc55be45a7927ccb78917e4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-tree-return-8-390x844.png",
+      "bytes": 384821,
+      "sha256": "22c3e6169cf286ab0e2ad19731ba22651c77eb08c1193a86b0ca76ffa6065155"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-tree-return-8-844x390.png",
+      "bytes": 397458,
+      "sha256": "cb1dd94a194db687be0a176da4bde7fc2ad9199dce6b8fc86c460b59d51b3101"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-woodland-0-1918x918.png",
+      "bytes": 1724543,
+      "sha256": "94420de3adf3f1620f2a2b8675b4a5a502b09c710d6652d466bb813d90396c06"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-woodland-0-320x568.png",
+      "bytes": 242202,
+      "sha256": "8962a80768daf0c18dd61cd107f659ef1961de04e6db7826ccb32f0cbe2ecdad"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-woodland-0-390x844.png",
+      "bytes": 422757,
+      "sha256": "8b9bec022162038b185249beb090ebf3fa7cc2aacfbd8b64284cba3dd13bbe08"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/iteration-03/live-woodland-0-844x390.png",
+      "bytes": 355758,
+      "sha256": "8b7180c675a81ceb598204996f1c2d9c7aca19e3988b65067c397bc2c582b9be"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/lifecycle/latest-cycle.json",
+      "bytes": 451,
+      "sha256": "ca5c2c2b2ee39c2ebeef9355896ab120409ca83b337f530dab8b50845f08a7fa"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/lifecycle/verification.json",
+      "bytes": 6087,
+      "sha256": "0c21226429c51daffcf485a42c3d6ec102e739ba2081e4d265c592882b6a91bf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/pending-memory-320x568.png",
+      "bytes": 208060,
+      "sha256": "68dd4bc6147205dac8797fed539d107838ccfdd6f11c6e34ffe6fcc93cf80f0e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/pending-memory-390x844.png",
+      "bytes": 379007,
+      "sha256": "0d7929e78c3d82270bcfa3b62b2abb0f3464f3a8e72313be18ca49987a411a68"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/pending-memory-844x390.png",
+      "bytes": 384559,
+      "sha256": "8a4af79e13acbae47f9fd938478c67b08cc1293d9051d8373aa7d1de307a1765"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/production-1918x918.png",
+      "bytes": 2029453,
+      "sha256": "63c95e2b12dd427129ed0b71d91878d357ddb06dbc43c5e7b289aa7c90203afc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/production-320x568.png",
+      "bytes": 216371,
+      "sha256": "a6e0642494f9231dcc144c4ac9587e1a1b16bfd4ae084dd0f259e216909d0100"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/production-844x390.png",
+      "bytes": 400367,
+      "sha256": "89a7f0cc650961485d46fe3dd33f6bdd3200c0c56a5926d57057b63ceb24877f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/production-verification.json",
+      "bytes": 490,
+      "sha256": "8741b06f2f7c54bd48e7c56b4d9c8e9067f49e6a6516cd4c316158a770f5b637"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/recheck-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/review-verification.json",
+      "bytes": 1481,
+      "sha256": "ebefdd233e94ee419b0e47cb5e924caeca4137ae74388bf9045d06d31270a9ff"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/.last-run.json",
+      "bytes": 145,
+      "sha256": "f601a4c8ee9a7cef9898fa0e97d95e8bc0b5b9afecfdc01d9e546d46fd86fc20"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-compact-ui-compact-port-a3350--and-toolbar-controls-clear-desktop/compact-320x568.png",
+      "bytes": 214142,
+      "sha256": "bd7b49659f68493bb022ff217a9b72a6b1db1b3cde5d6bb1339551ec8e15afec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-compact-ui-compact-port-a3350--and-toolbar-controls-clear-desktop/compact-320x844.png",
+      "bytes": 318765,
+      "sha256": "f6319a85d87f6bd88def3b94470444cddce7b8c9587dbc07e1b935b2acab056c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-compact-ui-compact-port-a3350--and-toolbar-controls-clear-desktop/compact-390x568.png",
+      "bytes": 257814,
+      "sha256": "03f847a3d06e46521700500390326bbad44450e58ae030666248c9ffabdd7cdf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-composition-the-explora-ee93c-cross-seven-viewport-shapes-desktop/error-context.md",
+      "bytes": 10752,
+      "sha256": "5b283681cec79962f03508891bb144aedd48f05821b871c2c5957c66602a2bda"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-composition-the-explora-ee93c-cross-seven-viewport-shapes-desktop/test-failed-1.png",
+      "bytes": 387157,
+      "sha256": "e94301dc9b89e1b32b9214eff9f85c8607fa85cde59debd43191e104efd8bd2b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/test-results/v4-painted-forest-painted--4ef6b-hout-changing-the-real-save-desktop/error-context.md",
+      "bytes": 8059,
+      "sha256": "8fbecd4d019990615f7baef1df29574509c73fb04764b0df08fdc6f7c1e0e44e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/ui-verification.json",
+      "bytes": 4807,
+      "sha256": "51cdb367068084ed2006c508578c3f6807310dfad3e0a2180e9a3e44da13ca9c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/regression-recovery/validation.json",
+      "bytes": 8098,
+      "sha256": "a2875d8b2029c02f2312dc13c70bd10ea47874b02449023e24e7e9aa011f5f18"
+    }
+  ],
+  "snapshotDirectory": "artifacts/visual-reconstruction/regression-recovery/reviewed-source"
+}

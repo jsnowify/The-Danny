@@ -2,13 +2,12 @@ import { createContext, useContext, useEffect, useMemo } from "react";
 import {
   BufferAttribute,
   CanvasTexture,
-  ConeGeometry,
   CylinderGeometry,
-  IcosahedronGeometry,
-  CircleGeometry,
   PlaneGeometry,
   MeshStandardMaterial,
   MeshBasicMaterial,
+  MeshDepthMaterial,
+  RGBADepthPacking,
   SRGBColorSpace,
   RepeatWrapping,
   SphereGeometry,
@@ -16,14 +15,28 @@ import {
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import type { BufferGeometry } from "three";
-import { windMaterial } from "../shaders/wind";
-import { groundMaterial } from "../shaders/ground";
+import { applyWindShader, windMaterial } from "../shaders/wind";
 import { outlineMaterial } from "../shaders/outline";
 import { paintTexture } from "../textures/paintTexture";
 import { memoryArt } from "../textures/memoryArt";
 import { MEMORIES } from "../config";
+import { grassStrokes, paintedLeaf } from "./paintedGeometry";
+import { createApprovedAssets } from "../visual/approved/assets";
+import { createForestPaint } from "../visual/forestPaint";
+import { curvedStem, forestCrown } from "./forestGeometry";
+import { landscapePaint } from "../visual/landscapePaint";
+import { heroClearance } from "../visual/heroClearance";
+import { memoryCurrent } from "../visual/memoryCurrent";
+import { createPropPaint } from "../visual/propPaint";
+import { brushShrub, illustratedStone, paintedLily } from "./propGeometry";
+import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
 
-function flex(geometry: BufferGeometry, strength: number, grass = 0) {
+function flex(
+  geometry: BufferGeometry,
+  strength: number,
+  grass = 0,
+  isCanopy = false,
+) {
   const positions = geometry.getAttribute("position"),
     values = new Float32Array(positions.count),
     lod = new Float32Array(positions.count);
@@ -32,7 +45,7 @@ function flex(geometry: BufferGeometry, strength: number, grass = 0) {
     lod[i] = grass;
   }
   const canopy = new Float32Array(positions.count);
-  if (strength === 0.15 || strength === 0.8) canopy.fill(1);
+  if (isCanopy) canopy.fill(1);
   geometry.setAttribute("aFlex", new BufferAttribute(values, 1));
   geometry.setAttribute("aGrass", new BufferAttribute(lod, 1));
   geometry.setAttribute("aCanopy", new BufferAttribute(canopy, 1));
@@ -44,54 +57,66 @@ function combine(geometries: BufferGeometry[]) {
   return merged;
 }
 function buildResources() {
-  const tuft = Array.from({ length: 3 }, (_, i) => {
-    const blade = new ConeGeometry(0.11, 1, 3, 1);
-    blade.translate(0, 0.5, 0);
-    blade.rotateZ((i - 1) * 0.23);
-    blade.rotateY(i * 2.1);
-    return blade;
-  });
+  const approved = createApprovedAssets();
+  approved.root.name = "approved-pass-1-foundation";
+  approved.root.position.set(0.35, 0, 1.6);
+  approved.ground.visible = false; // Same painted map extends over the walkable world.
+  approved.memory.removeFromParent();
+  approved.memory.name = "memory-tree-limbs";
+  approved.memory.position.set(0, 0, 0);
+  approved.traveler.removeFromParent();
+  approved.traveler.position.set(0, 0, 0);
+  approved.shadow.removeFromParent();
+  approved.shadow.position.set(0, 0.012, 0);
+  const trunk = curvedStem(0, 0, 0.08, 1, 1);
+  const forest = createForestPaint(
+    approved.trees,
+    approved.memory.material as MeshStandardMaterial,
+  );
+  const clearingClearance = heroClearance(approved.trees, forest.depth);
+  const current = memoryCurrent(approved.root);
+  const props = createPropPaint(approved.root);
   const stem = new CylinderGeometry(0.025, 0.04, 0.6, 4);
   stem.translate(0, 0.3, 0);
   const petals = Array.from({ length: 5 }, (_, i) => {
-    const g = new SphereGeometry(0.12, 5, 3);
+    const g = new SphereGeometry(0.12, 12, 7);
     g.scale(1, 0.45, 1);
     g.translate(Math.cos(i * 1.256) * 0.12, 0.65, Math.sin(i * 1.256) * 0.12);
     return g;
   });
   const mushroomStem = new CylinderGeometry(0.13, 0.17, 0.5, 7);
   mushroomStem.translate(0, 0.25, 0);
-  const cap = new SphereGeometry(0.42, 8, 4, 0, Math.PI * 2, 0, Math.PI / 2);
+  const cap = new SphereGeometry(0.42, 12, 7, 0, Math.PI * 2, 0, Math.PI / 2);
   cap.scale(1, 0.7, 1);
   cap.translate(0, 0.52, 0);
-  const reed = new ConeGeometry(0.08, 1.8, 3);
-  reed.translate(0, 0.9, 0);
-  const trunk = new CylinderGeometry(1, 1.3, 1, 7);
-  trunk.translate(0, 0.5, 0);
-  const pine = new ConeGeometry(1, 1, 7);
-  pine.translate(0, 0.5, 0);
-  const log = new CylinderGeometry(0.5, 0.5, 1.8, 7);
+  const reed = grassStrokes().scale(0.28, 1.8, 0.28);
+  const log = new CylinderGeometry(0.5, 0.5, 1.8, 14);
   log.rotateZ(Math.PI / 2);
   log.translate(0, 0.22, 0);
-  const lily = new CircleGeometry(1, 12, 0.25, Math.PI * 2 - 0.5);
-  lily.rotateX(-Math.PI / 2);
+  const lily = paintedLily();
   const geometries = {
-    grass: flex(combine(tuft), 1, 1),
-    pine: flex(pine, 0.8),
-    crown: flex(new IcosahedronGeometry(1, 1), 0.15),
-    trunk: flex(trunk, 0),
-    bush: flex(new IcosahedronGeometry(1, 1), 0.35),
+    grass: flex(grassStrokes(), 1, 1),
+    pine: flex(forestCrown(1), 0.08, 0, true),
+    crown: flex(forestCrown(0), 0.06, 0, true),
+    pineFar: flex(forestCrown(1, true), 0.08, 0, true),
+    crownFar: flex(forestCrown(0, true), 0.06, 0, true),
+    leaf: flex(paintedLeaf(), 0.18, 0, true),
+    trunk: flex(trunk, 0, 0, true),
+    bush: flex(brushShrub(), 0.2),
     flower: flex(combine([stem, ...petals]), 0.6),
     mushroom: flex(combine([mushroomStem, cap]), 0.15),
-    rock: flex(new IcosahedronGeometry(1, 0), 0),
+    rock: flex(illustratedStone(), 0),
     log: flex(log, 0),
-    reed: flex(reed, 0.9),
+    reed: flex(reed, 0.28),
     lily: flex(lily, 0),
+    benchSeat: new RoundedBoxGeometry(2.3, 0.15, 0.65, 2, 0.035),
+    benchBack: new RoundedBoxGeometry(2.3, 0.45, 0.13, 2, 0.035),
+    benchLeg: new RoundedBoxGeometry(0.15, 0.55, 0.5, 2, 0.028),
   };
-  const groundTexture = new CanvasTexture(paintTexture("ground"));
-  groundTexture.wrapS = groundTexture.wrapT = RepeatWrapping;
-  groundTexture.repeat.set(24, 24);
-  groundTexture.colorSpace = SRGBColorSpace;
+  const groundTexture = (approved.ground.material as MeshStandardMaterial).map!;
+  const landscape = landscapePaint(
+    approved.ground.material as MeshStandardMaterial,
+  );
   const paper = new CanvasTexture(paintTexture("grain"));
   paper.wrapS = paper.wrapT = RepeatWrapping;
   const glow = new CanvasTexture(paintTexture("glow"));
@@ -101,15 +126,21 @@ function buildResources() {
     t.colorSpace = SRGBColorSpace;
     return t;
   });
+  const leafTexture = new CanvasTexture(paintTexture("leaf"));
+  leafTexture.colorSpace = SRGBColorSpace;
   const materials = {
     foliage: windMaterial(),
-    ground: groundMaterial(groundTexture),
+    leaves: windMaterial(leafTexture),
+    depth: applyWindShader(
+      new MeshDepthMaterial({
+        depthPacking: RGBADepthPacking,
+        side: DoubleSide,
+      }),
+      false,
+    ),
+    ground: landscape.material,
     outline: outlineMaterial(),
-    bark: new MeshStandardMaterial({
-      color: "#806348",
-      roughness: 1,
-      flatShading: true,
-    }),
+    bark: approved.memory.material as MeshStandardMaterial,
     paper: new MeshBasicMaterial({ color: "#fff1cc", side: DoubleSide }),
     glow: new MeshBasicMaterial({
       map: glow,
@@ -120,12 +151,20 @@ function buildResources() {
     }),
   };
   return {
+    lease: 0,
+    approved,
+    forest,
+    clearingClearance,
+    current,
+    props,
+    landscape,
     geometries,
     materials,
     groundTexture,
     paper,
     glow,
     pictures,
+    leafTexture,
     pictureGeometry: new PlaneGeometry(1.05, 1.23),
     particleGeometry: new PlaneGeometry(1, 1),
   };
@@ -135,20 +174,35 @@ export const AssetsContext = createContext<Assets | null>(null);
 export const useAssets = () => useContext(AssetsContext)!;
 export function useResources() {
   const assets = useMemo(buildResources, []);
-  useEffect(
-    () => () => {
-      Object.values(assets.geometries).forEach((g) => g.dispose());
-      Object.values(assets.materials).forEach((m) => m.dispose());
-      [
-        assets.groundTexture,
-        assets.paper,
-        assets.glow,
-        ...assets.pictures,
-      ].forEach((t) => t.dispose());
-      assets.pictureGeometry.dispose();
-      assets.particleGeometry.dispose();
-    },
-    [assets],
-  );
+  useEffect(() => {
+    const lease = ++assets.lease;
+    return () =>
+      queueMicrotask(() => {
+        if (lease !== assets.lease) return;
+        Object.values(assets.geometries).forEach((g) => g.dispose());
+        new Set(Object.values(assets.materials)).forEach((m) => {
+          if (
+            m !== assets.approved.ground.material &&
+            m !== assets.landscape.material &&
+            m !== assets.approved.memory.material
+          )
+            m.dispose();
+        });
+        [
+          assets.paper,
+          assets.glow,
+          assets.leafTexture,
+          ...assets.pictures,
+        ].forEach((t) => t.dispose());
+        assets.pictureGeometry.dispose();
+        assets.particleGeometry.dispose();
+        assets.forest.dispose();
+        assets.clearingClearance.dispose();
+        assets.current.dispose();
+        assets.props.dispose();
+        assets.landscape.dispose();
+        assets.approved.dispose();
+      });
+  }, [assets]);
   return assets;
 }

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import {
   AdaptiveDpr,
@@ -6,11 +6,16 @@ import {
   PerformanceMonitor,
   useProgress,
 } from "@react-three/drei";
+import { useText } from "../hooks/useText";
 import { useStore } from "../store";
-import { QUALITY, TEXT } from "../config";
+import { CAMERA, QUALITY } from "../config";
 import { AssetsContext, useResources } from "./resources";
 import { createWorld } from "./world";
 import { Flora } from "./Flora";
+import { SpeciesFlora } from "./SpeciesFlora";
+import { PlantDiscoveries } from "./PlantDiscoveries";
+import { Companions } from "../features/animals/Companions";
+import { Oscar } from "../features/oscar/Oscar";
 import { Ground } from "./Ground";
 import { Pond } from "./Pond";
 import { Player } from "./Player";
@@ -18,14 +23,17 @@ import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
 import { MemoryTree } from "./MemoryTree";
 import { Memories } from "./MemoryPicture";
-import { Particles } from "./Particles";
-import { Effects } from "./Effects";
+import { ApprovedFoundation } from "./ApprovedFoundation";
+import { ForestDrift } from "./ForestDrift";
+import { VSMShadowMap } from "three";
 import { Timeline } from "./Timeline";
 import { LoadingScreen } from "../ui/LoadingScreen";
 import { changeQuality } from "../hooks/useQuality";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 import { input, traveler } from "./runtime";
-const DevTools = import.meta.env.DEV ? lazy(() => import("./DevTools")) : null;
+import { WORLD_CALIBRATION_EVENT } from "./calibration";
+type DevelopmentModule = typeof import("./DevTools");
+const loadDevelopment = import.meta.env.DEV ? () => import("./DevTools") : null;
 const map = [
   { name: "forward", keys: ["KeyW", "ArrowUp"] },
   { name: "back", keys: ["KeyS", "ArrowDown"] },
@@ -33,13 +41,22 @@ const map = [
   { name: "right", keys: ["KeyD", "ArrowRight"] },
   { name: "interact", keys: ["KeyE", "Space"] },
 ];
-function Forest() {
-  const assets = useResources(),
-    world = useMemo(createWorld, []);
+function Forest({ development }: { development: DevelopmentModule | null }) {
+  const TEXT = useText();
+  const DevTools = development?.default;
+  const assets = useResources();
+  const [world, setWorld] = useState(createWorld);
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    const regenerate = () => setWorld(createWorld());
+    window.addEventListener(WORLD_CALIBRATION_EVENT, regenerate);
+    return () =>
+      window.removeEventListener(WORLD_CALIBRATION_EVENT, regenerate);
+  }, []);
   const gl = useThree((s) => s.gl);
   useEffect(() => {
     gl.domElement.tabIndex = 0;
-    gl.domElement.setAttribute("aria-label", TEXT.canvasLabel);
+
     let removeDiagnostics: (() => void) | undefined;
     if (
       import.meta.env.DEV &&
@@ -86,25 +103,28 @@ function Forest() {
       document.body.style.cursor = "";
     };
   }, [gl]);
+  useEffect(() => {
+    gl.domElement.setAttribute("aria-label", TEXT.canvasLabel);
+  }, [gl, TEXT.canvasLabel]);
   return (
     <AssetsContext.Provider value={assets}>
-      <Lighting />
+      <Player world={world} />
       <Camera />
+      <Lighting />
       <Ground />
       <Flora world={world} />
+      <SpeciesFlora world={world} />
+      <PlantDiscoveries world={world} />
       <Pond />
       <MemoryTree />
       <Memories />
-      <Player world={world} />
-      <Particles />
+      <Companions world={world} />
+      <Oscar world={world} />
+      <ApprovedFoundation />
+      <ForestDrift />
       <Timeline />
-      <Effects />
       <AdaptiveDpr pixelated />
-      {DevTools && new URLSearchParams(location.search).has("debug") && (
-        <Suspense fallback={null}>
-          <DevTools />
-        </Suspense>
-      )}
+      {DevTools && <DevTools world={world} />}
     </AssetsContext.Provider>
   );
 }
@@ -124,14 +144,46 @@ function canRender() {
   }
 }
 export default function Scene() {
+  const TEXT = useText();
   const paused = useStore((s) => s.paused),
+    idleStage = useStore((s) => s.idleStage),
     dedication = useStore((s) => s.dedicationOpen),
+    fieldGuide = useStore((s) => s.fieldGuideOpen),
+    journal = useStore((s) => s.journalOpen),
+    dialogue = useStore((s) => s.oscarDialogue),
     phase = useStore((s) => s.phase),
     tier = useStore((s) => s.tier),
     ready = useStore((s) => s.sceneReady);
   const [hidden, setHidden] = useState(document.hidden),
     [lost, setLost] = useState(false),
     [supported] = useState(canRender);
+  const debug =
+    import.meta.env.DEV && new URLSearchParams(location.search).has("debug");
+  const [development, setDevelopment] = useState<DevelopmentModule | null>(
+      null,
+    ),
+    [developmentError, setDevelopmentError] = useState<Error | null>(null);
+  // Load both developer renderers before starting the canvas. A DOM Suspense
+  // retry can otherwise be starved by continuous software-WebGL frames.
+  useEffect(() => {
+    if (!debug || !loadDevelopment) return;
+    let active = true;
+    loadDevelopment().then(
+      (module) => {
+        if (active) setDevelopment(module);
+      },
+      (error) => {
+        if (active)
+          setDevelopmentError(
+            error instanceof Error ? error : new Error(String(error)),
+          );
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, [debug]);
+  const DevelopmentPanel = development?.DevelopmentPanel;
   useReducedMotion();
   useEffect(() => {
     const change = () => setHidden(document.hidden);
@@ -142,6 +194,7 @@ export default function Scene() {
     if (!lost) return;
     useStore.setState({ paused: true });
   }, [lost]);
+  if (developmentError) throw developmentError;
   if (!supported)
     return (
       <div className="fallback">
@@ -149,15 +202,30 @@ export default function Scene() {
         <p>{TEXT.fallback}</p>
       </div>
     );
+  if (debug && !development) return <LoadingScreen progress={15} />;
   return (
     <div className="scene">
       <KeyboardControls map={map}>
         <Canvas
-          camera={{ position: [0, 23, 21], fov: 43, near: 0.1, far: 130 }}
+          orthographic
+          camera={{
+            position: [0, 14.7, 14.6],
+            fov: CAMERA.fov,
+            near: 0.1,
+            far: 110,
+          }}
           dpr={[1, QUALITY[tier].dpr]}
-          shadows={tier !== "low"}
+          shadows={tier !== "low" ? { type: VSMShadowMap } : false}
           frameloop={
-            hidden || paused || dedication || phase === "viewer" || lost
+            hidden ||
+            paused ||
+            dedication ||
+            fieldGuide ||
+            journal ||
+            dialogue ||
+            idleStage === 300 ||
+            phase === "viewer" ||
+            lost
               ? "never"
               : "always"
           }
@@ -167,6 +235,8 @@ export default function Scene() {
             powerPreference: "high-performance",
           }}
           onCreated={({ gl }) => {
+            gl.setClearColor("#d8dfd5");
+            gl.shadowMap.type = VSMShadowMap;
             gl.domElement.addEventListener("webglcontextlost", (e) => {
               e.preventDefault();
               setLost(true);
@@ -188,11 +258,12 @@ export default function Scene() {
                   useStore.setState({ tier: "low" });
               }}
             >
-              <Forest />
+              <Forest development={development} />
             </PerformanceMonitor>
           </Suspense>
         </Canvas>
       </KeyboardControls>
+      {DevelopmentPanel && <DevelopmentPanel />}
       {!ready && <ForestLoader />}
       {lost && (
         <div className="fallback">

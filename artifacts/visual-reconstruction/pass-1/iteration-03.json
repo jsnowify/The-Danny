@@ -1,0 +1,329 @@
+[
+  {
+    "path": "artifacts/visual-reconstruction/pass-1/prototype-03-1918-t0.png",
+    "time": 0,
+    "reduced": false,
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "camera": {
+      "position": [
+        0,
+        17,
+        16.5
+      ],
+      "target": [
+        0,
+        0.8,
+        0.3
+      ],
+      "projection": "OrthographicCamera",
+      "frustum": [
+        -12.5359477124183,
+        12.5359477124183,
+        6,
+        -6
+      ]
+    },
+    "metrics": {
+      "calls": 25,
+      "triangles": 35814,
+      "geometries": 18,
+      "textures": 8
+    },
+    "renderer": "WebKit WebGL",
+    "objects": [
+      "HemisphereLight",
+      "DirectionalLight",
+      "visual-style-prototype"
+    ],
+    "inventory": {
+      "memoryTrees": 1,
+      "surroundingTrees": 2,
+      "travelers": 1,
+      "rocks": 3,
+      "groundSurfaces": 1,
+      "leaves": 96,
+      "ambientParticles": 0
+    },
+    "persistedSaveUnchanged": true,
+    "canary": "preserve",
+    "audioRequests": 0,
+    "gameplayHud": 0,
+    "errors": [],
+    "warnings": [
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    ]
+  },
+  {
+    "path": "artifacts/visual-reconstruction/pass-1/prototype-03-1918-t8.png",
+    "time": 8,
+    "reduced": false,
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "camera": {
+      "position": [
+        0,
+        17,
+        16.5
+      ],
+      "target": [
+        0,
+        0.8,
+        0.3
+      ],
+      "projection": "OrthographicCamera",
+      "frustum": [
+        -12.5359477124183,
+        12.5359477124183,
+        6,
+        -6
+      ]
+    },
+    "metrics": {
+      "calls": 25,
+      "triangles": 35814,
+      "geometries": 18,
+      "textures": 8
+    },
+    "renderer": "WebKit WebGL",
+    "objects": [
+      "HemisphereLight",
+      "DirectionalLight",
+      "visual-style-prototype"
+    ],
+    "inventory": {
+      "memoryTrees": 1,
+      "surroundingTrees": 2,
+      "travelers": 1,
+      "rocks": 3,
+      "groundSurfaces": 1,
+      "leaves": 96,
+      "ambientParticles": 0
+    },
+    "persistedSaveUnchanged": true,
+    "canary": "preserve",
+    "audioRequests": 0,
+    "gameplayHud": 0,
+    "errors": [],
+    "warnings": [
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    ]
+  },
+  {
+    "path": "artifacts/visual-reconstruction/pass-1/prototype-03-1918-t16.png",
+    "time": 16,
+    "reduced": false,
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "camera": {
+      "position": [
+        0,
+        17,
+        16.5
+      ],
+      "target": [
+        0,
+        0.8,
+        0.3
+      ],
+      "projection": "OrthographicCamera",
+      "frustum": [
+        -12.5359477124183,
+        12.5359477124183,
+        6,
+        -6
+      ]
+    },
+    "metrics": {
+      "calls": 25,
+      "triangles": 35814,
+      "geometries": 18,
+      "textures": 8
+    },
+    "renderer": "WebKit WebGL",
+    "objects": [
+      "HemisphereLight",
+      "DirectionalLight",
+      "visual-style-prototype"
+    ],
+    "inventory": {
+      "memoryTrees": 1,
+      "surroundingTrees": 2,
+      "travelers": 1,
+      "rocks": 3,
+      "groundSurfaces": 1,
+      "leaves": 96,
+      "ambientParticles": 0
+    },
+    "persistedSaveUnchanged": true,
+    "canary": "preserve",
+    "audioRequests": 0,
+    "gameplayHud": 0,
+    "errors": [],
+    "warnings": [
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x420400425000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    ]
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "reducedMotion": {
+      "time": 16.05059999999963,
+      "reduced": true,
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "camera": {
+        "position": [
+          0,
+          17,
+          16.5
+        ],
+        "target": [
+          0,
+          0.8,
+          0.3
+        ],
+        "projection": "OrthographicCamera",
+        "frustum": [
+          -12.5359477124183,
+          12.5359477124183,
+          6,
+          -6
+        ]
+      },
+      "metrics": {
+        "calls": 25,
+        "triangles": 35814,
+        "geometries": 18,
+        "textures": 8
+      },
+      "renderer": "WebKit WebGL",
+      "objects": [
+        "HemisphereLight",
+        "DirectionalLight",
+        "visual-style-prototype"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "path": "artifacts/visual-reconstruction/pass-1/prototype-03-390-t0.png",
+    "time": 0,
+    "reduced": false,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "camera": {
+      "position": [
+        0,
+        17,
+        16.5
+      ],
+      "target": [
+        0,
+        0.8,
+        0.3
+      ],
+      "projection": "OrthographicCamera",
+      "frustum": [
+        -4.066350710900474,
+        4.066350710900474,
+        8.8,
+        -8.8
+      ]
+    },
+    "metrics": {
+      "calls": 25,
+      "triangles": 35814,
+      "geometries": 18,
+      "textures": 8
+    },
+    "renderer": "WebKit WebGL",
+    "objects": [
+      "HemisphereLight",
+      "DirectionalLight",
+      "visual-style-prototype"
+    ],
+    "inventory": {
+      "memoryTrees": 1,
+      "surroundingTrees": 2,
+      "travelers": 1,
+      "rocks": 3,
+      "groundSurfaces": 1,
+      "leaves": 96,
+      "ambientParticles": 0
+    },
+    "persistedSaveUnchanged": true,
+    "canary": "preserve",
+    "audioRequests": 0,
+    "gameplayHud": 0,
+    "errors": [],
+    "warnings": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "reducedMotion": {
+      "time": 0.05079999999981374,
+      "reduced": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "camera": {
+        "position": [
+          0,
+          17,
+          16.5
+        ],
+        "target": [
+          0,
+          0.8,
+          0.3
+        ],
+        "projection": "OrthographicCamera",
+        "frustum": [
+          -4.066350710900474,
+          4.066350710900474,
+          8.8,
+          -8.8
+        ]
+      },
+      "metrics": {
+        "calls": 25,
+        "triangles": 35814,
+        "geometries": 18,
+        "textures": 8
+      },
+      "renderer": "WebKit WebGL",
+      "objects": [
+        "HemisphereLight",
+        "DirectionalLight",
+        "visual-style-prototype"
+      ]
+    },
+    "errors": []
+  }
+]

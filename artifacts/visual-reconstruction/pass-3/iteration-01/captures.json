@@ -1,0 +1,1896 @@
+{
+  "recordedAt": "2026-10-10T05:34:43.429Z",
+  "note": "Settled reduced-motion stills; drawing frozen only for serialization. Synthetic preview, isolated browser save.",
+  "errors": [],
+  "saveUnchanged": true,
+  "records": [
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-0-1918x918.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.644235435611321,
+          13.101648457076868
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 30.481092643794543,
+          "height": 14.588969263296867
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "foot": {
+          "x": 0.5007830963920344,
+          "y": 0.74
+        },
+        "bounds": {
+          "left": 0.4802654603102698,
+          "right": 0.521300732473799,
+          "top": 0.6498517245899589,
+          "bottom": 0.7665805191810435,
+          "heightPixels": 107.15703343461571,
+          "widthPixels": 78.70565200964911
+        }
+      },
+      "tree": {
+        "left": 0.44081373558552517,
+        "right": 0.5591862644144748,
+        "top": 0.20497788822850244,
+        "bottom": 0.49658032772720617,
+        "heightPixels": 267.69103945981004,
+        "widthPixels": 227.03851029392544
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.8124927235265481,
+            "right": 0.8452179268634943,
+            "top": 0.8045521056919381,
+            "bottom": 0.8846468674966353,
+            "heightPixels": 73.52699133671204,
+            "widthPixels": 62.766940000262764
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": -0.007687848480918857,
+            "right": 0.02503735485602726,
+            "top": 0.9147424509770221,
+            "bottom": 0.9948372127817193,
+            "heightPixels": 73.52699133671204,
+            "widthPixels": 62.76694000026266
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": -0.302952854403607,
+            "right": -0.2702276510666608,
+            "top": 0.05874236132214594,
+            "bottom": 0.13883712312684315,
+            "heightPixels": 73.52699133671204,
+            "widthPixels": 62.766940000262764
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 1.2717938438507295,
+            "right": 1.3045190471876758,
+            "top": -0.059159663892391134,
+            "bottom": 0.020935097912306078,
+            "heightPixels": 73.52699133671204,
+            "widthPixels": 62.76694000026298
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.9765288379280415,
+            "right": 1.0092540412649877,
+            "top": -0.787017688756769,
+            "bottom": -0.706922926952072,
+            "heightPixels": 73.52699133671183,
+            "widthPixels": 62.76694000026298
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.15634826592057455,
+            "right": 0.18907346925752067,
+            "top": -0.9332857369659211,
+            "bottom": -0.8531909751612241,
+            "heightPixels": 73.52699133671183,
+            "widthPixels": 62.76694000026266
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 1.4686371811325216,
+            "right": 1.501362384469468,
+            "top": 1.3701075265247513,
+            "bottom": 1.4502022883294488,
+            "heightPixels": 73.52699133671224,
+            "widthPixels": 62.76694000026298
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": -0.5982178603262951,
+            "right": -0.5654926569893488,
+            "top": 1.6005185578855228,
+            "bottom": 1.6806133196902198,
+            "heightPixels": 73.52699133671183,
+            "widthPixels": 62.76694000026298
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.1579520697167756
+      },
+      "resources": {
+        "geometries": 87,
+        "textures": 10
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [],
+        "hung": [],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 0,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-8-1918x918.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.644235435611321,
+          13.101648457076868
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 30.481092643794543,
+          "height": 14.588969263296867
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "foot": {
+          "x": 0.5007830963920344,
+          "y": 0.74
+        },
+        "bounds": {
+          "left": 0.4802654603102698,
+          "right": 0.521300732473799,
+          "top": 0.6498517245899589,
+          "bottom": 0.7665805191810435,
+          "heightPixels": 107.15703343461571,
+          "widthPixels": 78.70565200964911
+        }
+      },
+      "tree": {
+        "left": 0.44081373558552517,
+        "right": 0.5591862644144748,
+        "top": 0.20497788822850244,
+        "bottom": 0.49658032772720617,
+        "heightPixels": 267.69103945981004,
+        "widthPixels": 227.03851029392544
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.4280248784358909,
+            "right": 0.45386056528084834,
+            "top": 0.36890518917909043,
+            "bottom": 0.454420089885575,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862841
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.5461308808049661,
+            "right": 0.5719665676499236,
+            "top": 0.34983172052438594,
+            "bottom": 0.4353466212308705,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862852
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.44534709211668855,
+            "right": 0.47118277896164606,
+            "top": 0.27572951154569303,
+            "bottom": 0.3612444122521775,
+            "heightPixels": 78.50267884855276,
+            "widthPixels": 49.55284736862852
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.5272339204259141,
+            "right": 0.5530696072708715,
+            "top": 0.2544544981124943,
+            "bottom": 0.3399693988189788,
+            "heightPixels": 78.50267884855276,
+            "widthPixels": 49.552847368628306
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.47054303928875796,
+            "right": 0.4963787261337154,
+            "top": 0.2542208588464052,
+            "bottom": 0.33973575955288976,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862841
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.508336960046862,
+            "right": 0.5341726468918195,
+            "top": 0.2092158896586857,
+            "bottom": 0.29473079036517025,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862852
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.4343238652289082,
+            "right": 0.4601595520738657,
+            "top": 0.2578637557749109,
+            "bottom": 0.34337865648139543,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862852
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.5382571473136945,
+            "right": 0.564092834158652,
+            "top": 0.24612547666906437,
+            "bottom": 0.3316403773755489,
+            "heightPixels": 78.5026788485528,
+            "widthPixels": 49.55284736862852
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.1579520697167756
+      },
+      "resources": {
+        "geometries": 96,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-side-8-1918x918.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          1.0110341787338257,
+          11.690028603147704,
+          11.976774613336346
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 25.383369567726213,
+          "height": 12.149078865053527
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 3.2,
+          "z": 3.5
+        },
+        "foot": {
+          "x": 0.586236219168055,
+          "y": 0.7400000000000002
+        },
+        "bounds": {
+          "left": 0.5615980416175419,
+          "right": 0.610874396718568,
+          "top": 0.631747314038815,
+          "bottom": 0.7719186649162484,
+          "heightPixels": 128.67730010548385,
+          "widthPixels": 94.5120490837681
+        }
+      },
+      "tree": {
+        "left": 0.3881564634793094,
+        "right": 0.5303016585090117,
+        "top": 0.21048421966305053,
+        "bottom": 0.5606489584224635,
+        "heightPixels": 321.4512301811411,
+        "widthPixels": 272.634484066969
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.37279922973828966,
+            "right": 0.40382347819892284,
+            "top": 0.40733291753943945,
+            "bottom": 0.5100217116297797,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749443
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.5146243719990411,
+            "right": 0.5456486204596743,
+            "top": 0.3844289384774257,
+            "bottom": 0.48711773256776597,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749454
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.39360025060319986,
+            "right": 0.42462449906383304,
+            "top": 0.2954448384365384,
+            "bottom": 0.3981336325268787,
+            "heightPixels": 94.26831297493241,
+            "widthPixels": 59.50450854749443
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.4919323492373209,
+            "right": 0.5229565976979541,
+            "top": 0.26989718000903695,
+            "bottom": 0.3725859740993772,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749454
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.42385628095216016,
+            "right": 0.45488052941279333,
+            "top": 0.2696166191443382,
+            "bottom": 0.3723054132346785,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749443
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.46924032647560066,
+            "right": 0.5002645749362339,
+            "top": 0.21557333574250892,
+            "bottom": 0.3182621298328492,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749454
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.38036323732552973,
+            "right": 0.4113874857861629,
+            "top": 0.2739911163312979,
+            "bottom": 0.3766799104216382,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749443
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.505169362514991,
+            "right": 0.5361936109756242,
+            "top": 0.2598954474348033,
+            "bottom": 0.36258424152514357,
+            "heightPixels": 94.26831297493236,
+            "widthPixels": 59.50450854749454
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.1579520697167756
+      },
+      "resources": {
+        "geometries": 96,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "tree-return-8",
+        "x": 0,
+        "z": 1.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-tree-return-8-1918x918.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.582862465197541,
+          10.382290150915411
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 23.021189099418834,
+          "height": 11.018483625269287
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 1.5
+        },
+        "foot": {
+          "x": 0.5010368549413994,
+          "y": 0.74
+        },
+        "bounds": {
+          "left": 0.47387057940545335,
+          "right": 0.5282031304773454,
+          "top": 0.6206396175894695,
+          "bottom": 0.7751938062008275,
+          "heightPixels": 141.8807451452266,
+          "widthPixels": 104.20983295588886
+        }
+      },
+      "tree": {
+        "left": 0.42163471656191426,
+        "right": 0.5783652834380858,
+        "top": 0.2703793244377725,
+        "bottom": 0.6564741058641962,
+        "heightPixels": 354.43500934945695,
+        "widthPixels": 300.609227268497
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.4047016929069329,
+            "right": 0.43890930750217955,
+            "top": 0.4874264641638522,
+            "bottom": 0.6006520494975416,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368302
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.5610793667296496,
+            "right": 0.5952869813248962,
+            "top": 0.462172331434573,
+            "bottom": 0.5753979167682624,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368293
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.427637085067598,
+            "right": 0.4618446996628447,
+            "top": 0.36405766467105716,
+            "bottom": 0.4772832500047465,
+            "heightPixels": 103.94108733632679,
+            "widthPixels": 65.61020479368314
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.5360589389180149,
+            "right": 0.5702665535132616,
+            "top": 0.3358885873634182,
+            "bottom": 0.4491141726971075,
+            "heightPixels": 103.94108733632679,
+            "widthPixels": 65.61020479368314
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.4609976554831109,
+            "right": 0.4952052700783576,
+            "top": 0.3355792384377769,
+            "bottom": 0.4488048237714663,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368314
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.5110385111063802,
+            "right": 0.5452461257016269,
+            "top": 0.27599062946898006,
+            "bottom": 0.38921621480266944,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368314
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.41304183551081114,
+            "right": 0.44724945010605777,
+            "top": 0.34040259826901953,
+            "bottom": 0.4536281836027089,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368302
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.5506541884748019,
+            "right": 0.5848618030700485,
+            "top": 0.32486058732602013,
+            "bottom": 0.4380861726597095,
+            "heightPixels": 103.94108733632685,
+            "widthPixels": 65.61020479368314
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.1579520697167756
+      },
+      "resources": {
+        "geometries": 96,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "woodland-0",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-woodland-0-1918x918.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -10,
+          11.52736148689731,
+          21.99031720763831
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 23.021189099418834,
+          "height": 11.018483625269287
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": -10,
+          "z": 12
+        },
+        "foot": {
+          "x": 0.5,
+          "y": 0.6727117195485334
+        },
+        "bounds": {
+          "left": 0.472833724464054,
+          "right": 0.527166275535946,
+          "top": 0.5533513371380028,
+          "bottom": 0.7079055257493607,
+          "heightPixels": 141.8807451452266,
+          "widthPixels": 104.20983295588886
+        }
+      },
+      "tree": {
+        "left": 0.8549802889058391,
+        "right": 1.0117108557820105,
+        "top": -0.438296362116777,
+        "bottom": -0.05220158069035341,
+        "heightPixels": 354.4350093494569,
+        "widthPixels": 300.6092272684967
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 1.347100031993659,
+            "right": 1.390429677147638,
+            "top": 0.3555669431368584,
+            "bottom": 0.46161602011148195,
+            "heightPixels": 97.35305266270444,
+            "widthPixels": 83.10625940533187
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.2611439637803483,
+            "right": 0.3044736089343274,
+            "top": 0.5014639299771753,
+            "bottom": 0.6075130069517988,
+            "heightPixels": 97.35305266270439,
+            "widthPixels": 83.10625940533187
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": -0.1298002207764436,
+            "right": -0.0864705756224643,
+            "top": -0.6319187950935032,
+            "bottom": -0.5258697181188798,
+            "heightPixels": 97.35305266270429,
+            "widthPixels": 83.1062594053323
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 1.9552354301931127,
+            "right": 1.998565075347092,
+            "top": -0.7880263939640599,
+            "bottom": -0.6819773169894361,
+            "heightPixels": 97.35305266270468,
+            "widthPixels": 83.1062594053323
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 1.564291245636321,
+            "right": 1.6076208907903002,
+            "top": -1.7517432459306899,
+            "bottom": -1.6456941689560667,
+            "heightPixels": 97.35305266270407,
+            "widthPixels": 83.1062594053323
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.47833517742301046,
+            "right": 0.5216648225769895,
+            "top": -1.945408738579057,
+            "bottom": -1.8393596616044334,
+            "heightPixels": 97.35305266270448,
+            "widthPixels": 83.10625940533187
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 2.215864886564307,
+            "right": 2.2591945317182867,
+            "top": 1.104387827373476,
+            "bottom": 1.2104369043480996,
+            "heightPixels": 97.35305266270448,
+            "widthPixels": 83.10625940533272
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": -0.5207444053332353,
+            "right": -0.4774147601792561,
+            "top": 1.4094624246381855,
+            "bottom": 1.515511501612809,
+            "heightPixels": 97.35305266270429,
+            "widthPixels": 83.10625940533208
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.1579520697167756
+      },
+      "resources": {
+        "geometries": 92,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [],
+        "hung": [],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 0,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-0-390x844.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.644235435611321,
+          12.972751557993359
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 7.535354257533292,
+          "height": 16.30727947014897
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "foot": {
+          "x": 0.5031676856666372,
+          "y": 0.72
+        },
+        "bounds": {
+          "left": 0.4201722557417998,
+          "right": 0.5861631155914745,
+          "top": 0.6393507156418228,
+          "bottom": 0.743779710039591,
+          "heightPixels": 88.13807127171637,
+          "widthPixels": 64.73643534137314
+        }
+      },
+      "tree": {
+        "left": 0.2605869681502819,
+        "right": 0.7394130318497181,
+        "top": 0.2413535673987407,
+        "bottom": 0.5022296402431653,
+        "heightPixels": 220.17940548069436,
+        "widthPixels": 186.7421648427801
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 1.7640573131385129,
+            "right": 1.8964332998020785,
+            "top": 0.7777502021440597,
+            "bottom": 0.849405319127784,
+            "heightPixels": 60.47691873426339,
+            "widthPixels": 51.626634798790604
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": -1.5536367388706336,
+            "right": -1.421260752207068,
+            "top": 0.8763297085184282,
+            "bottom": 0.9479848255021526,
+            "heightPixels": 60.47691873426339,
+            "widthPixels": 51.626634798790604
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": -2.7480065975939265,
+            "right": -2.6156306109303604,
+            "top": 0.11052698708875303,
+            "bottom": 0.18218210407247737,
+            "heightPixels": 60.47691873426334,
+            "widthPixels": 51.626634798790775
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 3.6219659822636348,
+            "right": 3.754341968927201,
+            "top": 0.005048386253832693,
+            "bottom": 0.07670350323755715,
+            "heightPixels": 60.47691873426344,
+            "widthPixels": 51.626634798790775
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 2.4275961235403423,
+            "right": 2.559972110203908,
+            "top": -0.6461146953765684,
+            "bottom": -0.5744595783928441,
+            "heightPixels": 60.4769187342633,
+            "widthPixels": 51.626634798790604
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": -0.8900979284688042,
+            "right": -0.7577219418052386,
+            "top": -0.7769703701954074,
+            "bottom": -0.7053152532116831,
+            "heightPixels": 60.4769187342633,
+            "widthPixels": 51.626634798790604
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 4.41821255474583,
+            "right": 4.550588541409396,
+            "top": 1.2837126262457828,
+            "bottom": 1.3553677432295073,
+            "heightPixels": 60.476918734263485,
+            "widthPixels": 51.626634798790604
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": -3.942376456317219,
+            "right": -3.8100004696536534,
+            "top": 1.489845075291014,
+            "bottom": 1.561500192274738,
+            "heightPixels": 60.47691873426311,
+            "widthPixels": 51.626634798790604
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.19549763033175355
+      },
+      "resources": {
+        "geometries": 97,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [],
+        "hung": [],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 0,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-8-390x844.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.644235435611321,
+          12.972751557993359
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 7.535354257533292,
+          "height": 16.30727947014897
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 5.5
+        },
+        "foot": {
+          "x": 0.5031676856666372,
+          "y": 0.72
+        },
+        "bounds": {
+          "left": 0.4201722557417998,
+          "right": 0.5861631155914745,
+          "top": 0.6393507156418228,
+          "bottom": 0.743779710039591,
+          "heightPixels": 88.13807127171637,
+          "widthPixels": 64.73643534137314
+        }
+      },
+      "tree": {
+        "left": 0.2605869681502819,
+        "right": 0.7394130318497181,
+        "top": 0.2413535673987407,
+        "bottom": 0.5022296402431653,
+        "heightPixels": 220.17940548069436,
+        "widthPixels": 186.7421648427801
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.2088550486859055,
+            "right": 0.31336240657819425,
+            "top": 0.38800772631967667,
+            "bottom": 0.4645118581244031,
+            "heightPixels": 64.5694872431891,
+            "widthPixels": 40.75786957799262
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.6866029921752226,
+            "right": 0.7911103500675112,
+            "top": 0.3709440432904314,
+            "bottom": 0.4474481750951579,
+            "heightPixels": 64.56948724318916,
+            "widthPixels": 40.75786957799255
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.2789247470643387,
+            "right": 0.3834321049566274,
+            "top": 0.30465003936957535,
+            "bottom": 0.3811541711743017,
+            "heightPixels": 64.56948724318906,
+            "widthPixels": 40.757869577992594
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.6101633212169318,
+            "right": 0.7146706791092206,
+            "top": 0.2856167899780182,
+            "bottom": 0.36212092178274463,
+            "heightPixels": 64.5694872431891,
+            "widthPixels": 40.757869577992594
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.3808443083420596,
+            "right": 0.48535166623434833,
+            "top": 0.28540776945574703,
+            "bottom": 0.36191190126047346,
+            "heightPixels": 64.5694872431891,
+            "widthPixels": 40.757869577992594
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.5337236502586411,
+            "right": 0.6382310081509298,
+            "top": 0.24514500745567536,
+            "bottom": 0.32164913926040184,
+            "heightPixels": 64.56948724318916,
+            "widthPixels": 40.757869577992594
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.23433493900533575,
+            "right": 0.33884229689762446,
+            "top": 0.2886668116164345,
+            "bottom": 0.3651709434211609,
+            "heightPixels": 64.5694872431891,
+            "widthPixels": 40.757869577992594
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.6547531292759348,
+            "right": 0.7592604871682235,
+            "top": 0.27816540373949994,
+            "bottom": 0.3546695355442264,
+            "heightPixels": 64.56948724318916,
+            "widthPixels": 40.757869577992594
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.19549763033175355
+      },
+      "resources": {
+        "geometries": 105,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "clearing-side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-clearing-side-8-390x844.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          1.0110341787338257,
+          11.690028603147704,
+          10.47838544426546
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 8.230153072712033,
+          "height": 17.81089536761271
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 3.2,
+          "z": 3.5
+        },
+        "foot": {
+          "x": 0.7659690289994641,
+          "y": 0.72
+        },
+        "bounds": {
+          "left": 0.6899801669801766,
+          "right": 0.8419578910187514,
+          "top": 0.6461592192895695,
+          "bottom": 0.7417722000680471,
+          "heightPixels": 80.69735577703507,
+          "widthPixels": 59.27131237504417
+        }
+      },
+      "tree": {
+        "left": 0.15505309607435203,
+        "right": 0.5934561228271085,
+        "top": 0.35880934434649775,
+        "bottom": 0.597661964562591,
+        "heightPixels": 201.59161146238273,
+        "widthPixels": 170.977180433575
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.10768844366238867,
+            "right": 0.2033731724006979,
+            "top": 0.4930827935820762,
+            "bottom": 0.5631283601979675,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.317044207940604
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.5451043663304846,
+            "right": 0.6407890950687939,
+            "top": 0.4774596459410019,
+            "bottom": 0.5475052125568932,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.317044207940604
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.1718427789870427,
+            "right": 0.26752750772535194,
+            "top": 0.41676225668462696,
+            "bottom": 0.48680782330051836,
+            "heightPixels": 59.11845822381234,
+            "widthPixels": 37.317044207940604
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.4751178187035893,
+            "right": 0.5708025474418985,
+            "top": 0.39933581569741194,
+            "bottom": 0.4693813823133033,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.31704420794058
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.26515817582290324,
+            "right": 0.36084290456121243,
+            "top": 0.3991444409236389,
+            "bottom": 0.4691900075395302,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.31704420794058
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.40513127107669394,
+            "right": 0.5008159998150032,
+            "top": 0.3622807067528583,
+            "bottom": 0.4323262733687496,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.317044207940626
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.13101729287135383,
+            "right": 0.22670202160966296,
+            "top": 0.4021283510652912,
+            "bottom": 0.47217391768118255,
+            "heightPixels": 59.11845822381229,
+            "widthPixels": 37.31704420794056
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.5159433048192783,
+            "right": 0.6116280335575875,
+            "top": 0.39251348389861335,
+            "bottom": 0.46255905051450463,
+            "heightPixels": 59.11845822381225,
+            "widthPixels": 37.317044207940604
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.19549763033175355
+      },
+      "resources": {
+        "geometries": 105,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "tree-return-8",
+        "x": 0,
+        "z": 1.5,
+        "progress": 8
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-tree-return-8-390x844.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -0.023869633674621582,
+          11.582862465197541,
+          10.190848285425622
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 5.823400020599366,
+          "height": 12.602434916374014
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": 0,
+          "z": 1.5
+        },
+        "foot": {
+          "x": 0.5040989170570778,
+          "y": 0.72
+        },
+        "bounds": {
+          "left": 0.3967046175022344,
+          "right": 0.6114932166119211,
+          "top": 0.6156415622993978,
+          "bottom": 0.7507704328495188,
+          "heightPixels": 114.04876674430214,
+          "widthPixels": 83.76755365277782
+        }
+      },
+      "tree": {
+        "left": 0.19020469099217985,
+        "right": 0.8097953090078202,
+        "top": 0.3094041303837879,
+        "bottom": 0.6469721523714778,
+        "heightPixels": 284.90741055761026,
+        "widthPixels": 241.64034102609972
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 0.12326470091639313,
+            "right": 0.2584949721413743,
+            "top": 0.499171454782035,
+            "bottom": 0.5981661543174276,
+            "heightPixels": 83.55152640787134,
+            "widthPixels": 52.73980577774265
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": 0.7414602545904603,
+            "right": 0.8766905258154414,
+            "top": 0.4770914162978528,
+            "bottom": 0.5760861158332454,
+            "heightPixels": 83.55152640787139,
+            "widthPixels": 52.73980577774263
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": 0.21393338212192292,
+            "right": 0.3491636533469041,
+            "top": 0.39130840243535386,
+            "bottom": 0.4903031019707465,
+            "heightPixels": 83.55152640787139,
+            "widthPixels": 52.73980577774265
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 0.6425489660026096,
+            "right": 0.7777792372275907,
+            "top": 0.36667978748016805,
+            "bottom": 0.4656744870155607,
+            "heightPixels": 83.55152640787139,
+            "widthPixels": 52.73980577774263
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 0.34581510023905726,
+            "right": 0.4810453714640384,
+            "top": 0.3664093194242495,
+            "bottom": 0.4654040189596421,
+            "heightPixels": 83.55152640787139,
+            "widthPixels": 52.73980577774265
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.5436376774147588,
+            "right": 0.67886794863974,
+            "top": 0.3143101721934083,
+            "bottom": 0.413304871728801,
+            "heightPixels": 83.55152640787144,
+            "widthPixels": 52.739805777742674
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 0.15623513044567672,
+            "right": 0.2914654016706578,
+            "top": 0.3706264498178591,
+            "bottom": 0.4696211493532517,
+            "heightPixels": 83.55152640787139,
+            "widthPixels": 52.73980577774263
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": 0.7002472176788559,
+            "right": 0.835477488903837,
+            "top": 0.3570378541047644,
+            "bottom": 0.456032553640157,
+            "heightPixels": 83.55152640787134,
+            "widthPixels": 52.73980577774263
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.19549763033175355
+      },
+      "resources": {
+        "geometries": 105,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "hung": [
+          "lake",
+          "sunrise",
+          "dinner",
+          "boat",
+          "garden",
+          "guitar",
+          "road",
+          "fire"
+        ],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 160,
+        "previewing": true
+      }
+    },
+    {
+      "configuration": {
+        "name": "live",
+        "values": null
+      },
+      "shot": {
+        "name": "woodland-0",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "artifacts/visual-reconstruction/pass-3/iteration-01/live-woodland-0-390x844.png",
+      "camera": {
+        "projection": "OrthographicCamera",
+        "position": [
+          -10,
+          11.52736148689731,
+          20.7074979644293
+        ],
+        "pitch": 42,
+        "equivalentFov": 38,
+        "span": {
+          "width": 5.8,
+          "height": 12.551794871794872
+        },
+        "viewOffset": null
+      },
+      "traveler": {
+        "position": {
+          "x": -10,
+          "z": 12
+        },
+        "foot": {
+          "x": 0.5,
+          "y": 0.72
+        },
+        "bounds": {
+          "left": 0.3921724196138054,
+          "right": 0.6078275803861947,
+          "top": 0.6152205296111372,
+          "bottom": 0.7508945757396102,
+          "heightPixels": 114.50889493243122,
+          "widthPixels": 84.10551270123182
+        }
+      },
+      "tree": {
+        "left": 1.9089773030116641,
+        "right": 2.531067650893639,
+        "top": -0.2552887519600252,
+        "bottom": 0.08364118359114725,
+        "heightPixels": 286.05686560518956,
+        "widthPixels": 242.61523567397026
+      },
+      "memoryPictures": [
+        {
+          "id": "lake",
+          "bounds": {
+            "left": 3.8622844866637527,
+            "right": 4.034267237474179,
+            "top": 0.44159722482526254,
+            "bottom": 0.5346914818661856,
+            "heightPixels": 78.5715529425391,
+            "widthPixels": 67.0732728160662
+          }
+        },
+        {
+          "id": "sunrise",
+          "bounds": {
+            "left": -0.4480603409224543,
+            "right": -0.2760775901120286,
+            "top": 0.5696716219051985,
+            "bottom": 0.6627658789461215,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.07327281606602
+          }
+        },
+        {
+          "id": "dinner",
+          "bounds": {
+            "left": -1.9997844788534893,
+            "right": -1.8278017280430627,
+            "top": -0.42525851556991945,
+            "bottom": -0.33216425852899645,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.07327281606636
+          }
+        },
+        {
+          "id": "boat",
+          "bounds": {
+            "left": 6.2760775901120285,
+            "right": 6.448060340922455,
+            "top": -0.5622962093423456,
+            "bottom": -0.4692019523014226,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.0732728160662
+          }
+        },
+        {
+          "id": "garden",
+          "bounds": {
+            "left": 4.724353452180994,
+            "right": 4.896336202991421,
+            "top": -1.4082866402927148,
+            "bottom": -1.3151923832517922,
+            "heightPixels": 78.57155294253863,
+            "widthPixels": 67.07327281606653
+          }
+        },
+        {
+          "id": "guitar",
+          "bounds": {
+            "left": 0.41400862459478716,
+            "right": 0.5859913754052128,
+            "top": -1.578294203459703,
+            "bottom": -1.48519994641878,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.07327281606602
+          }
+        },
+        {
+          "id": "road",
+          "bounds": {
+            "left": 7.310560348732718,
+            "right": 7.482543099543145,
+            "top": 1.0989431052747083,
+            "bottom": 1.1920373623156313,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.07327281606653
+          }
+        },
+        {
+          "id": "fire",
+          "bounds": {
+            "left": -3.551508616784524,
+            "right": -3.3795258659740974,
+            "top": 1.366750178986561,
+            "bottom": 1.459844436027484,
+            "heightPixels": 78.57155294253901,
+            "widthPixels": 67.07327281606636
+          }
+        }
+      ],
+      "hud": {
+        "collectionBottom": 0.19549763033175355
+      },
+      "resources": {
+        "geometries": 97,
+        "textures": 16
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "state": {
+        "phase": "explore",
+        "sceneReady": true,
+        "collected": [],
+        "hung": [],
+        "nearMemory": null,
+        "settings": {
+          "muted": true,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "medium",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        },
+        "revivalRadius": 0,
+        "previewing": true
+      }
+    }
+  ]
+}

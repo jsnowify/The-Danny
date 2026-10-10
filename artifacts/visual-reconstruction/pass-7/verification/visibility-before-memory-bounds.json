@@ -1,0 +1,3033 @@
+{
+  "recordedAt": "2026-10-10T12:36:59.774Z",
+  "complete": true,
+  "records": [
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 11,
+        "calls": 83,
+        "triangles": 76004,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 12,
+        "calls": 105,
+        "triangles": 288134,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 13,
+        "calls": 83,
+        "triangles": 76004,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 14,
+        "calls": 86,
+        "triangles": 164324,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 34298,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 15,
+        "calls": 110,
+        "triangles": 164528,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 16,
+        "calls": 132,
+        "triangles": 376658,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 17,
+        "calls": 110,
+        "triangles": 164528,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 18,
+        "calls": 110,
+        "triangles": 164528,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 34461,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 19,
+        "calls": 99,
+        "triangles": 157795,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 20,
+        "calls": 128,
+        "triangles": 365777,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 21,
+        "calls": 99,
+        "triangles": 157795,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 22,
+        "calls": 99,
+        "triangles": 157795,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 35464,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 23,
+        "calls": 67,
+        "triangles": 73500,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 24,
+        "calls": 103,
+        "triangles": 316907,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 25,
+        "calls": 67,
+        "triangles": 73500,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 26,
+        "calls": 70,
+        "triangles": 161820,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 29586,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 27,
+        "calls": 35,
+        "triangles": 155774,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 28,
+        "calls": 66,
+        "triangles": 386475,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 29,
+        "calls": 35,
+        "triangles": 155774,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 30,
+        "calls": 38,
+        "triangles": 244094,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 20091,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 31,
+        "calls": 48,
+        "triangles": 156064,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 32,
+        "calls": 73,
+        "triangles": 416930,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 33,
+        "calls": 48,
+        "triangles": 156064,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 34,
+        "calls": 48,
+        "triangles": 156064,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 28610,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 35,
+        "calls": 50,
+        "triangles": 224614,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 36,
+        "calls": 69,
+        "triangles": 475635,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 37,
+        "calls": 50,
+        "triangles": 224614,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 38,
+        "calls": 50,
+        "triangles": 224614,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 31752,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 39,
+        "calls": 43,
+        "triangles": 112818,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 40,
+        "calls": 71,
+        "triangles": 320762,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 41,
+        "calls": 43,
+        "triangles": 112818,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 42,
+        "calls": 46,
+        "triangles": 201138,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 26846,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 43,
+        "calls": 35,
+        "triangles": 48564,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 44,
+        "calls": 81,
+        "triangles": 279834,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 45,
+        "calls": 35,
+        "triangles": 48564,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 46,
+        "calls": 38,
+        "triangles": 136884,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 19587,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 47,
+        "calls": 64,
+        "triangles": 137092,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 48,
+        "calls": 110,
+        "triangles": 368362,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 49,
+        "calls": 64,
+        "triangles": 137092,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 50,
+        "calls": 64,
+        "triangles": 137092,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 24576,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 51,
+        "calls": 70,
+        "triangles": 140050,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 52,
+        "calls": 109,
+        "triangles": 359309,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 53,
+        "calls": 70,
+        "triangles": 140050,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 54,
+        "calls": 70,
+        "triangles": 140050,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 23693,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 55,
+        "calls": 46,
+        "triangles": 53944,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 56,
+        "calls": 81,
+        "triangles": 306171,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 57,
+        "calls": 46,
+        "triangles": 53944,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 58,
+        "calls": 49,
+        "triangles": 142264,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 17619,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 59,
+        "calls": 33,
+        "triangles": 92314,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 60,
+        "calls": 64,
+        "triangles": 386471,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 61,
+        "calls": 33,
+        "triangles": 92314,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 62,
+        "calls": 36,
+        "triangles": 180634,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 14215,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 63,
+        "calls": 31,
+        "triangles": 126446,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 64,
+        "calls": 73,
+        "triangles": 416930,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 65,
+        "calls": 31,
+        "triangles": 126446,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 66,
+        "calls": 31,
+        "triangles": 126446,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 12446,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 67,
+        "calls": 45,
+        "triangles": 184846,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 68,
+        "calls": 65,
+        "triangles": 473743,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 69,
+        "calls": 45,
+        "triangles": 184846,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 70,
+        "calls": 45,
+        "triangles": 184846,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22407,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "low",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 71,
+        "calls": 37,
+        "triangles": 88586,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 72,
+        "calls": 69,
+        "triangles": 319960,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 73,
+        "calls": 37,
+        "triangles": 88586,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 74,
+        "calls": 40,
+        "triangles": 176906,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 12871,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 75,
+        "calls": 124,
+        "triangles": 144442,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 76,
+        "calls": 198,
+        "triangles": 763130,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 77,
+        "calls": 134,
+        "triangles": 180494,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 78,
+        "calls": 137,
+        "triangles": 268814,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 39544,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 79,
+        "calls": 161,
+        "triangles": 269018,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 80,
+        "calls": 225,
+        "triangles": 851654,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 81,
+        "calls": 161,
+        "triangles": 269018,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 82,
+        "calls": 161,
+        "triangles": 269018,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 40110,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 83,
+        "calls": 152,
+        "triangles": 252334,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 84,
+        "calls": 224,
+        "triangles": 875302,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 85,
+        "calls": 152,
+        "triangles": 252334,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 86,
+        "calls": 152,
+        "triangles": 252334,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 41321,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 87,
+        "calls": 112,
+        "triangles": 151378,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 88,
+        "calls": 181,
+        "triangles": 794518,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 89,
+        "calls": 112,
+        "triangles": 151378,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 90,
+        "calls": 115,
+        "triangles": 239698,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 34294,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 91,
+        "calls": 91,
+        "triangles": 442624,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 92,
+        "calls": 126,
+        "triangles": 1020876,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 93,
+        "calls": 91,
+        "triangles": 442624,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 94,
+        "calls": 94,
+        "triangles": 530944,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22158,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 95,
+        "calls": 106,
+        "triangles": 257944,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 96,
+        "calls": 142,
+        "triangles": 890374,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 97,
+        "calls": 106,
+        "triangles": 257944,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 98,
+        "calls": 106,
+        "triangles": 257944,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 29454,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 99,
+        "calls": 89,
+        "triangles": 422218,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 100,
+        "calls": 125,
+        "triangles": 975298,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 101,
+        "calls": 89,
+        "triangles": 422218,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 102,
+        "calls": 89,
+        "triangles": 422218,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 35483,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 103,
+        "calls": 93,
+        "triangles": 273920,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 104,
+        "calls": 147,
+        "triangles": 902076,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 105,
+        "calls": 93,
+        "triangles": 273920,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 106,
+        "calls": 96,
+        "triangles": 362240,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 30184,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 107,
+        "calls": 103,
+        "triangles": 155422,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 108,
+        "calls": 175,
+        "triangles": 755630,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 109,
+        "calls": 103,
+        "triangles": 155422,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 110,
+        "calls": 106,
+        "triangles": 243742,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22691,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 111,
+        "calls": 133,
+        "triangles": 245490,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 112,
+        "calls": 205,
+        "triangles": 845698,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 113,
+        "calls": 133,
+        "triangles": 245490,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 114,
+        "calls": 133,
+        "triangles": 245490,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 28117,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 115,
+        "calls": 134,
+        "triangles": 245434,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 116,
+        "calls": 206,
+        "triangles": 870682,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 117,
+        "calls": 134,
+        "triangles": 245434,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 118,
+        "calls": 134,
+        "triangles": 245434,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 26831,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 119,
+        "calls": 83,
+        "triangles": 132962,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 120,
+        "calls": 154,
+        "triangles": 782910,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 121,
+        "calls": 83,
+        "triangles": 132962,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 122,
+        "calls": 86,
+        "triangles": 221282,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 20169,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 123,
+        "calls": 88,
+        "triangles": 386688,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 124,
+        "calls": 123,
+        "triangles": 1020076,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 125,
+        "calls": 88,
+        "triangles": 386688,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 126,
+        "calls": 91,
+        "triangles": 475008,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 15755,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 127,
+        "calls": 97,
+        "triangles": 234840,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 128,
+        "calls": 142,
+        "triangles": 890374,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 129,
+        "calls": 97,
+        "triangles": 234840,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 130,
+        "calls": 97,
+        "triangles": 234840,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 12626,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 131,
+        "calls": 83,
+        "triangles": 405482,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 132,
+        "calls": 119,
+        "triangles": 973118,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 133,
+        "calls": 83,
+        "triangles": 405482,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 134,
+        "calls": 83,
+        "triangles": 405482,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 24005,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "medium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 135,
+        "calls": 91,
+        "triangles": 250922,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 136,
+        "calls": 145,
+        "triangles": 901274,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 137,
+        "calls": 91,
+        "triangles": 250922,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 138,
+        "calls": 94,
+        "triangles": 339242,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 15165,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 139,
+        "calls": 124,
+        "triangles": 152380,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 140,
+        "calls": 198,
+        "triangles": 793604,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 141,
+        "calls": 134,
+        "triangles": 188432,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 142,
+        "calls": 137,
+        "triangles": 276752,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 39484,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 143,
+        "calls": 161,
+        "triangles": 276956,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 144,
+        "calls": 225,
+        "triangles": 882128,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 145,
+        "calls": 161,
+        "triangles": 276956,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 146,
+        "calls": 161,
+        "triangles": 276956,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 39933,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 147,
+        "calls": 152,
+        "triangles": 259048,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 148,
+        "calls": 224,
+        "triangles": 906160,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 149,
+        "calls": 152,
+        "triangles": 259048,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 150,
+        "calls": 152,
+        "triangles": 259048,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 40970,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 151,
+        "calls": 110,
+        "triangles": 157692,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 152,
+        "calls": 179,
+        "triangles": 824088,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 153,
+        "calls": 110,
+        "triangles": 157692,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 154,
+        "calls": 113,
+        "triangles": 246012,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 34649,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 155,
+        "calls": 91,
+        "triangles": 449074,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 156,
+        "calls": 126,
+        "triangles": 1053582,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 157,
+        "calls": 91,
+        "triangles": 449074,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 158,
+        "calls": 94,
+        "triangles": 537394,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22694,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 159,
+        "calls": 106,
+        "triangles": 263650,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 160,
+        "calls": 142,
+        "triangles": 921760,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 161,
+        "calls": 106,
+        "triangles": 263650,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 162,
+        "calls": 106,
+        "triangles": 263650,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 29685,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 163,
+        "calls": 87,
+        "triangles": 428620,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 164,
+        "calls": 123,
+        "triangles": 1007092,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 165,
+        "calls": 87,
+        "triangles": 428620,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 166,
+        "calls": 87,
+        "triangles": 428620,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 34992,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 960,
+        "height": 640
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 167,
+        "calls": 93,
+        "triangles": 280706,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 168,
+        "calls": 147,
+        "triangles": 933750,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 169,
+        "calls": 93,
+        "triangles": 280706,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 170,
+        "calls": 96,
+        "triangles": 369026,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        960,
+        640
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 31220,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-0",
+        "x": 0,
+        "z": 5.5,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 171,
+        "calls": 102,
+        "triangles": 159776,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 172,
+        "calls": 174,
+        "triangles": 785304,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 173,
+        "calls": 102,
+        "triangles": 159776,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 174,
+        "calls": 105,
+        "triangles": 248096,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22017,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "clearing-8",
+        "x": 0,
+        "z": 5.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 175,
+        "calls": 131,
+        "triangles": 248304,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 176,
+        "calls": 203,
+        "triangles": 873832,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 177,
+        "calls": 131,
+        "triangles": 248304,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 178,
+        "calls": 131,
+        "triangles": 248304,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 27748,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "side-8",
+        "x": 3.2,
+        "z": 3.5,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 179,
+        "calls": 134,
+        "triangles": 251020,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 180,
+        "calls": 206,
+        "triangles": 901540,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 181,
+        "calls": 134,
+        "triangles": 251020,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 182,
+        "calls": 134,
+        "triangles": 251020,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 27006,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "woodland",
+        "x": -10,
+        "z": 12,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 183,
+        "calls": 97,
+        "triangles": 143480,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 184,
+        "calls": 168,
+        "triangles": 817884,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 185,
+        "calls": 97,
+        "triangles": 143480,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 186,
+        "calls": 100,
+        "triangles": 231800,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 22445,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "deep-forest",
+        "x": -15,
+        "z": -23,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 187,
+        "calls": 88,
+        "triangles": 391962,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 188,
+        "calls": 123,
+        "triangles": 1052782,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 189,
+        "calls": 88,
+        "triangles": 391962,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 190,
+        "calls": 91,
+        "triangles": 480282,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 16042,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "pond",
+        "x": 19,
+        "z": 9,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 191,
+        "calls": 97,
+        "triangles": 239682,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 192,
+        "calls": 142,
+        "triangles": 921760,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 193,
+        "calls": 97,
+        "triangles": 239682,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 194,
+        "calls": 97,
+        "triangles": 239682,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 12942,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "grove",
+        "x": 30,
+        "z": 20,
+        "progress": 8
+      },
+      "culled": {
+        "frame": 195,
+        "calls": 83,
+        "triangles": 410828,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 196,
+        "calls": 119,
+        "triangles": 1005200,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 197,
+        "calls": 83,
+        "triangles": 410828,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 198,
+        "calls": 83,
+        "triangles": 410828,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 24171,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 0
+    },
+    {
+      "tier": "high",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "view": {
+        "name": "bamboo",
+        "x": -20,
+        "z": 0,
+        "progress": 0
+      },
+      "culled": {
+        "frame": 199,
+        "calls": 92,
+        "triangles": 257164,
+        "points": 0,
+        "lines": 0
+      },
+      "unculled": {
+        "frame": 200,
+        "calls": 146,
+        "triangles": 933748,
+        "points": 0,
+        "lines": 0
+      },
+      "restored": {
+        "frame": 201,
+        "calls": 92,
+        "triangles": 257164,
+        "points": 0,
+        "lines": 0
+      },
+      "zeroScale": {
+        "frame": 202,
+        "calls": 95,
+        "triangles": 345484,
+        "points": 0,
+        "lines": 0
+      },
+      "size": [
+        390,
+        844
+      ],
+      "cullingDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "restorationDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "zeroScaleDifference": {
+        "pixelsChanged": 0,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0
+      },
+      "distinctColors": 15710,
+      "invalidTransforms": [],
+      "hiddenFlowerBatches": 3
+    }
+  ],
+  "errors": [],
+  "saveProgressPreserved": true,
+  "tolerance": "No pixel may differ by more than 2/255 in any RGB channel. Same instant, camera, actors and shaders; only instance packing toggled in an isolated development browser."
+}

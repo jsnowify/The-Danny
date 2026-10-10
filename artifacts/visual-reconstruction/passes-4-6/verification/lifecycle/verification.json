@@ -1,0 +1,245 @@
+{
+  "recordedAt": "2026-10-10T11:58:23.291Z",
+  "browser": "156.0.8078.4",
+  "node": "v24.16.0",
+  "viewport": "960x640",
+  "quality": "medium x3, high, low",
+  "cycles": [
+    {
+      "cycle": 1,
+      "tier": "medium",
+      "resized": false,
+      "mounted": {
+        "animals": 8,
+        "geometries": 89,
+        "textures": 17,
+        "ownedCompanionGeometries": 41
+      },
+      "mountedHeap": 25172428,
+      "removed": {
+        "animals": 0,
+        "geometryDisposals": 41,
+        "rigDisposals": 8,
+        "geometries": 2,
+        "textures": 0,
+        "diagnosticsPresent": false,
+        "contextLost": true,
+        "undisposedSceneGeometries": [
+          {
+            "type": "BufferGeometry",
+            "object": "Sprite",
+            "disposed": false
+          }
+        ]
+      },
+      "removedHeap": 23143448
+    },
+    {
+      "cycle": 2,
+      "tier": "medium",
+      "resized": false,
+      "mounted": {
+        "animals": 8,
+        "geometries": 89,
+        "textures": 17,
+        "ownedCompanionGeometries": 41
+      },
+      "mountedHeap": 26235280,
+      "removed": {
+        "animals": 0,
+        "geometryDisposals": 41,
+        "rigDisposals": 8,
+        "geometries": 2,
+        "textures": 0,
+        "diagnosticsPresent": false,
+        "contextLost": true,
+        "undisposedSceneGeometries": [
+          {
+            "type": "BufferGeometry",
+            "object": "Sprite",
+            "disposed": false
+          }
+        ]
+      },
+      "removedHeap": 24210452
+    },
+    {
+      "cycle": 3,
+      "tier": "medium",
+      "resized": true,
+      "mounted": {
+        "animals": 8,
+        "geometries": 92,
+        "textures": 23,
+        "ownedCompanionGeometries": 41
+      },
+      "mountedHeap": 27050692,
+      "removed": {
+        "animals": 0,
+        "geometryDisposals": 41,
+        "rigDisposals": 8,
+        "geometries": 2,
+        "textures": 0,
+        "diagnosticsPresent": false,
+        "contextLost": true,
+        "undisposedSceneGeometries": [
+          {
+            "type": "BufferGeometry",
+            "object": "Sprite",
+            "disposed": false
+          }
+        ]
+      },
+      "removedHeap": 24866320
+    },
+    {
+      "cycle": 4,
+      "tier": "high",
+      "resized": true,
+      "mounted": {
+        "animals": 8,
+        "geometries": 92,
+        "textures": 23,
+        "ownedCompanionGeometries": 41
+      },
+      "mountedHeap": 27533504,
+      "removed": {
+        "animals": 0,
+        "geometryDisposals": 41,
+        "rigDisposals": 8,
+        "geometries": 2,
+        "textures": 0,
+        "diagnosticsPresent": false,
+        "contextLost": true,
+        "undisposedSceneGeometries": [
+          {
+            "type": "BufferGeometry",
+            "object": "Sprite",
+            "disposed": false
+          }
+        ]
+      },
+      "removedHeap": 25180568
+    },
+    {
+      "cycle": 5,
+      "tier": "low",
+      "resized": false,
+      "mounted": {
+        "animals": 8,
+        "geometries": 88,
+        "textures": 15,
+        "ownedCompanionGeometries": 41
+      },
+      "mountedHeap": 27568980,
+      "removed": {
+        "animals": 0,
+        "geometryDisposals": 41,
+        "rigDisposals": 8,
+        "geometries": 1,
+        "textures": 0,
+        "diagnosticsPresent": false,
+        "contextLost": true,
+        "undisposedSceneGeometries": [
+          {
+            "type": "BufferGeometry",
+            "object": "Sprite",
+            "disposed": false
+          }
+        ]
+      },
+      "removedHeap": 25581960
+    }
+  ],
+  "ai": {
+    "rows": [
+      {
+        "id": "snowa",
+        "elapsedMs": 10,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 2.3850030839063687,
+        "homeRadius": 2.6
+      },
+      {
+        "id": "hoshi",
+        "elapsedMs": 13.699999995529652,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 3.7437284192019837,
+        "homeRadius": 4
+      },
+      {
+        "id": "thoma",
+        "elapsedMs": 10.800000004470348,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 2.305295835621609,
+        "homeRadius": 3
+      },
+      {
+        "id": "simba",
+        "elapsedMs": 10.899999998509884,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 3.74503855074052,
+        "homeRadius": 4
+      },
+      {
+        "id": "star",
+        "elapsedMs": 6.899999998509884,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 2.8969802124517923,
+        "homeRadius": 3
+      },
+      {
+        "id": "nano",
+        "elapsedMs": 10.399999998509884,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 3.7408303925327715,
+        "homeRadius": 4
+      },
+      {
+        "id": "doreamon",
+        "elapsedMs": 15.799999997019768,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 2.885427160982335,
+        "homeRadius": 3
+      },
+      {
+        "id": "max",
+        "elapsedMs": 26,
+        "steps": 6000,
+        "simulatedSeconds": 300,
+        "invalid": 0,
+        "maxDistance": 3.732666609307244,
+        "homeRadius": 4
+      }
+    ],
+    "together": {
+      "simulatedSeconds": 300,
+      "actorSteps": 48000,
+      "elapsedMs": 88.69999999552965,
+      "invalid": 0,
+      "closestPair": 2.744605997612983
+    },
+    "shortApproach": {
+      "approached": true,
+      "safe": true,
+      "finalHomeDistance": 0.9224839483818731,
+      "homeRadius": 2.6
+    }
+  },
+  "errors": [],
+  "limits": "Five reset/remount cycles (three Medium plus High/Low), including Medium/High resize; not a long-session soak. Heap excludes native audio/GPU memory. AI timing excludes rendering and is not FPS. The shared Three Sprite geometry and the VSM shadow blur triangle remain engine caches; all scene-owned geometry disposes and the old GL context is destroyed."
+}

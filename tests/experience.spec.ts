@@ -69,7 +69,16 @@ async function begin(page: Page, skip = true) {
   await page.evaluate(() => window.__DANNY_TEST__.quality());
   if (!skip) {
     await expect(page.locator(".intro-ui")).toBeVisible();
-    await page.getByRole("button", { name: "Skip intro" }).click();
+    try {
+      await page.getByRole("button", { name: "Skip intro" }).click({
+        timeout: 5000,
+      });
+    } catch (error) {
+      // Shader compilation can outlast the intro. A detached Skip button is
+      // valid only when the automatic transition actually reached exploration.
+      if ((await state(page)).phase !== "explore") throw error;
+    }
+    await expect.poll(async () => (await state(page)).phase).toBe("explore");
   }
 }
 
@@ -108,16 +117,27 @@ test("the complete memory journey, immediate persistence, finale and reset", asy
   expect(
     await page.evaluate(() => window.__DANNY_TEST__.position().x),
   ).toBeGreaterThan(0.3);
-  await page.mouse.move(1000, 700);
+  const beforeMouse = await page.evaluate(() =>
+    window.__DANNY_TEST__.position(),
+  );
+  await page.mouse.move(950, 610);
   await page.mouse.down();
-  await page.waitForTimeout(500);
+  await expect
+    .poll(
+      async () => {
+        const p = await page.evaluate(() => window.__DANNY_TEST__.position());
+        return Math.hypot(p.x - beforeMouse.x, p.z - beforeMouse.z);
+      },
+      { timeout: 20000 },
+    )
+    .toBeGreaterThan(0.15);
   await page.mouse.up();
   await place(page, 10, 10);
   await expect(page.getByRole("button", { name: /Tap to view/ })).toBeVisible();
   await canvas.focus();
   await page.keyboard.press("KeyE");
   await expect(
-    page.getByRole("dialog", { name: "[MEMORY TITLE]" }),
+    page.getByRole("dialog", { name: "A quiet fishing morning" }),
   ).toBeVisible();
   await page.screenshot({
     path: "test-results/viewer.png",
@@ -162,7 +182,7 @@ test("the complete memory journey, immediate persistence, finale and reset", asy
     .getByRole("button", { name: "Hang your memories on the tree" })
     .click();
   await expect(
-    page.getByRole("dialog", { name: "[Thank you for remembering him.]" }),
+    page.getByRole("dialog", { name: "Thank you for remembering him." }),
   ).toBeVisible({ timeout: 120000 });
   expect((await state(page)).hung.length).toBe(8);
   await expect(page.locator(".finale .tribute-name")).toHaveText(TRIBUTE_NAME);

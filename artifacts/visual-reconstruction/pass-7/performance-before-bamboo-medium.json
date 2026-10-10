@@ -1,0 +1,67 @@
+[
+  {
+    "tier": "medium",
+    "frames": 17,
+    "fps": 1.02,
+    "calls": 149,
+    "triangles": 991534,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "viewport": "960x640",
+    "deviceScaleFactor": 1,
+    "sampleMs": 16583,
+    "settleMs": 4000,
+    "frameTimeMs": {
+      "p50": 982.1,
+      "p95": 1035.2,
+      "p99": 1035.2,
+      "max": 1035.2
+    },
+    "geometries": 89,
+    "textures": 18,
+    "heapUsedBytes": 38955016,
+    "heapTotalBytes": 64839680,
+    "titleReadyMs": 857.8999999985099,
+    "forestReadyMs": 4238,
+    "errors": [],
+    "warnings": [
+      "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x1ba400bc9000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    ],
+    "browser": "156.0.8078.4",
+    "node": "v24.16.0",
+    "platform": "win32",
+    "recordedAt": "2026-10-10T12:49:36.526Z",
+    "build": "Vite development",
+    "progress": "0/8, stationary regional scene",
+    "position": {
+      "x": -20,
+      "z": 0
+    },
+    "motion": "normal",
+    "audio": "muted; Track selected",
+    "audioState": {
+      "source": "track",
+      "generatedActive": false,
+      "track": {
+        "loaded": true,
+        "playing": true,
+        "position": 38.69066666666667,
+        "duration": 202.5,
+        "gain": 0.48,
+        "targetGain": 0.48,
+        "cutoff": 2800,
+        "targetCutoff": 2800,
+        "loop": true,
+        "fadeIn": 3
+      },
+      "masterGain": 0,
+      "natureGain": 0.28,
+      "musicGain": 1,
+      "effectsGain": 0.65,
+      "contextState": "running"
+    },
+    "activity": "periodic pointer movement; no traveler movement"
+  }
+]

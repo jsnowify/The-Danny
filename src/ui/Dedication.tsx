@@ -1,14 +1,11 @@
-import {
-  DEDICATION_MESSAGE,
-  DEDICATION_TEXT,
-  LIFE_YEARS,
-  TEXT,
-} from "../config";
+import { useText } from "../hooks/useText";
+import { DEDICATION_MESSAGE, DEDICATION_TEXT, LIFE_YEARS } from "../config";
 import { useStore } from "../store";
 import { useDialog } from "../hooks/useDialog";
 import { Icon } from "./Icons";
 import { BrandLogo } from "./BrandLogo";
 export function Dedication({ reopened = false }: { reopened?: boolean }) {
+  const TEXT = useText();
   const seen = useStore((s) => s.introSeen),
     skip = useStore((s) => s.settings.skipIntro);
   const muted = useStore((s) => s.settings.muted);
@@ -60,7 +57,7 @@ export function Dedication({ reopened = false }: { reopened?: boolean }) {
             </>
           )}
         </h2>
-        <p>{DEDICATION_MESSAGE}</p>
+        {DEDICATION_MESSAGE && <p>{DEDICATION_MESSAGE}</p>}
         <div className="small-rule" />
         <button className="primary" onClick={proceed}>
           {TEXT.continue}

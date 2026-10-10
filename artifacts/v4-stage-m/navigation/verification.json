@@ -1,0 +1,460 @@
+{
+  "recordedAt": "2026-10-10T01:10:07.244Z",
+  "bound": 76,
+  "step": 0.5,
+  "playerRadius": 0.35,
+  "reachedCells": 86856,
+  "elapsedMs": 486.70000000018626,
+  "routes": [
+    {
+      "kind": "memory",
+      "id": "lake",
+      "position": [
+        10,
+        10
+      ],
+      "nearestReachable": {
+        "x": 10,
+        "z": 10
+      },
+      "distance": 0,
+      "routeLength": 14.5
+    },
+    {
+      "kind": "memory",
+      "id": "sunrise",
+      "position": [
+        -15,
+        12
+      ],
+      "nearestReachable": {
+        "x": -15,
+        "z": 12
+      },
+      "distance": 0,
+      "routeLength": 21.5
+    },
+    {
+      "kind": "memory",
+      "id": "dinner",
+      "position": [
+        -24,
+        -7
+      ],
+      "nearestReachable": {
+        "x": -24,
+        "z": -7
+      },
+      "distance": 0,
+      "routeLength": 36.5
+    },
+    {
+      "kind": "memory",
+      "id": "boat",
+      "position": [
+        24,
+        -9
+      ],
+      "nearestReachable": {
+        "x": 24,
+        "z": -9
+      },
+      "distance": 0,
+      "routeLength": 38.5
+    },
+    {
+      "kind": "memory",
+      "id": "garden",
+      "position": [
+        15,
+        -25
+      ],
+      "nearestReachable": {
+        "x": 15,
+        "z": -25
+      },
+      "distance": 0,
+      "routeLength": 45.5
+    },
+    {
+      "kind": "memory",
+      "id": "guitar",
+      "position": [
+        -10,
+        -28
+      ],
+      "nearestReachable": {
+        "x": -10,
+        "z": -28
+      },
+      "distance": 0,
+      "routeLength": 43.5
+    },
+    {
+      "kind": "memory",
+      "id": "road",
+      "position": [
+        30,
+        22
+      ],
+      "nearestReachable": {
+        "x": 30,
+        "z": 22
+      },
+      "distance": 0,
+      "routeLength": 46.5
+    },
+    {
+      "kind": "memory",
+      "id": "fire",
+      "position": [
+        -33,
+        27
+      ],
+      "nearestReachable": {
+        "x": -33,
+        "z": 27
+      },
+      "distance": 0,
+      "routeLength": 54.5
+    },
+    {
+      "kind": "region",
+      "id": "clearing",
+      "position": [
+        0,
+        5.5
+      ],
+      "nearestReachable": {
+        "x": 0,
+        "z": 5.5
+      },
+      "distance": 0,
+      "routeLength": 0
+    },
+    {
+      "kind": "region",
+      "id": "rain-tree",
+      "position": [
+        -16,
+        20.5
+      ],
+      "nearestReachable": {
+        "x": -16,
+        "z": 20.5
+      },
+      "distance": 0,
+      "routeLength": 31
+    },
+    {
+      "kind": "region",
+      "id": "narra",
+      "position": [
+        15,
+        -16.5
+      ],
+      "nearestReachable": {
+        "x": 15,
+        "z": -16.5
+      },
+      "distance": 0,
+      "routeLength": 37
+    },
+    {
+      "kind": "region",
+      "id": "bamboo",
+      "position": [
+        -24,
+        0.5
+      ],
+      "nearestReachable": {
+        "x": -24,
+        "z": 0.5
+      },
+      "distance": 0,
+      "routeLength": 29
+    },
+    {
+      "kind": "region",
+      "id": "hollow",
+      "position": [
+        -15,
+        -22.5
+      ],
+      "nearestReachable": {
+        "x": -15,
+        "z": -22.5
+      },
+      "distance": 0,
+      "routeLength": 43
+    },
+    {
+      "kind": "region",
+      "id": "pond",
+      "position": [
+        19,
+        10.5
+      ],
+      "nearestReachable": {
+        "x": 19,
+        "z": 11.5
+      },
+      "distance": 1,
+      "routeLength": 25
+    },
+    {
+      "kind": "region",
+      "id": "ridge",
+      "position": [
+        27,
+        28.5
+      ],
+      "nearestReachable": {
+        "x": 27,
+        "z": 28.5
+      },
+      "distance": 0,
+      "routeLength": 50
+    },
+    {
+      "kind": "region",
+      "id": "meadow",
+      "position": [
+        7,
+        36.5
+      ],
+      "nearestReachable": {
+        "x": 7,
+        "z": 36.5
+      },
+      "distance": 0,
+      "routeLength": 38
+    },
+    {
+      "kind": "plant",
+      "id": "narra",
+      "position": [
+        12,
+        -19
+      ],
+      "nearestReachable": {
+        "x": 11.5,
+        "z": -18.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 35.5
+    },
+    {
+      "kind": "plant",
+      "id": "acacia",
+      "position": [
+        -12,
+        15
+      ],
+      "nearestReachable": {
+        "x": -11.5,
+        "z": 14.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 20.5
+    },
+    {
+      "kind": "plant",
+      "id": "mango",
+      "position": [
+        9,
+        18
+      ],
+      "nearestReachable": {
+        "x": 8.5,
+        "z": 17.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 20.5
+    },
+    {
+      "kind": "plant",
+      "id": "coconut",
+      "position": [
+        26,
+        8
+      ],
+      "nearestReachable": {
+        "x": 26,
+        "z": 8.5
+      },
+      "distance": 0.5,
+      "routeLength": 35
+    },
+    {
+      "kind": "plant",
+      "id": "banana",
+      "position": [
+        29,
+        -4
+      ],
+      "nearestReachable": {
+        "x": 28.5,
+        "z": -3.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 37.5
+    },
+    {
+      "kind": "plant",
+      "id": "bamboo",
+      "position": [
+        -20,
+        -4
+      ],
+      "nearestReachable": {
+        "x": -20,
+        "z": -3
+      },
+      "distance": 1,
+      "routeLength": 28.5
+    },
+    {
+      "kind": "plant",
+      "id": "balete",
+      "position": [
+        -15,
+        -27
+      ],
+      "nearestReachable": {
+        "x": -14.5,
+        "z": -26.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 46.5
+    },
+    {
+      "kind": "plant",
+      "id": "talisay",
+      "position": [
+        30,
+        16
+      ],
+      "nearestReachable": {
+        "x": 29.5,
+        "z": 15.5
+      },
+      "distance": 0.7071067811865476,
+      "routeLength": 39.5
+    },
+    {
+      "kind": "plant",
+      "id": "agoho",
+      "position": [
+        -31,
+        19
+      ],
+      "nearestReachable": {
+        "x": -31,
+        "z": 18.5
+      },
+      "distance": 0.5,
+      "routeLength": 45
+    },
+    {
+      "kind": "plant",
+      "id": "kalachuchi",
+      "position": [
+        10,
+        29
+      ],
+      "nearestReachable": {
+        "x": 10,
+        "z": 29
+      },
+      "distance": 0,
+      "routeLength": 33.5
+    },
+    {
+      "kind": "plant",
+      "id": "sampaguita",
+      "position": [
+        -6,
+        7.8
+      ],
+      "nearestReachable": {
+        "x": -6,
+        "z": 8
+      },
+      "distance": 0.20000000000000018,
+      "routeLength": 8.5
+    },
+    {
+      "kind": "plant",
+      "id": "fern",
+      "position": [
+        -12,
+        -23
+      ],
+      "nearestReachable": {
+        "x": -12,
+        "z": -23
+      },
+      "distance": 0,
+      "routeLength": 40.5
+    },
+    {
+      "kind": "plant",
+      "id": "gabi",
+      "position": [
+        12,
+        3
+      ],
+      "nearestReachable": {
+        "x": 12,
+        "z": 3
+      },
+      "distance": 0,
+      "routeLength": 14.5
+    },
+    {
+      "kind": "plant",
+      "id": "cogon",
+      "position": [
+        25,
+        26
+      ],
+      "nearestReachable": {
+        "x": 25,
+        "z": 25.5
+      },
+      "distance": 0.5,
+      "routeLength": 45
+    },
+    {
+      "kind": "plant",
+      "id": "santan",
+      "position": [
+        17,
+        30
+      ],
+      "nearestReachable": {
+        "x": 17,
+        "z": 30
+      },
+      "distance": 0,
+      "routeLength": 41.5
+    },
+    {
+      "kind": "plant",
+      "id": "gumamela",
+      "position": [
+        26,
+        27
+      ],
+      "nearestReachable": {
+        "x": 26.5,
+        "z": 27
+      },
+      "distance": 0.5,
+      "routeLength": 49
+    }
+  ],
+  "method": "Independent cardinal flood fill of the real seeded CollisionGrid at 0.5-unit spacing, with three intermediate checks per edge and the actual 0.35 player radius. Reachable point within 1.4 units of every memory, region view and plant specimen.",
+  "limits": "Static collision reachability, not a real-device walkthrough. Input, interactions and saved progression are exercised separately by Playwright."
+}

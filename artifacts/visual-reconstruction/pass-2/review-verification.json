@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-10T05:21:34.406Z",
+  "finalIteration": "07",
+  "errors": [],
+  "choices": 20,
+  "comparisonChoices": 2,
+  "referenceChoices": 3,
+  "keyboardReveal": true,
+  "video": {
+    "duration": 20,
+    "videoWidth": 960,
+    "videoHeight": 640
+  },
+  "allImagesLoaded": true
+}

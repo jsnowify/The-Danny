@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny - Passes 4–6 review</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #eeeadd;
+        color: #293e34;
+        font:
+          16px/1.55 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1280px;
+        margin: auto;
+        padding: 30px 24px 56px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(30px, 4vw, 48px);
+        margin: 12px 0;
+      }
+      h2 {
+        margin-top: 38px;
+      }
+      p {
+        max-width: 900px;
+      }
+      a {
+        color: #315d4b;
+        text-underline-offset: 3px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .status {
+        display: inline-block;
+        padding: 7px 12px;
+        border: 1px solid #78826b;
+        border-radius: 24px;
+        font-size: 13px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        margin: 22px 0;
+      }
+      .controls {
+        display: grid;
+        grid-template-columns: 1.25fr 1.4fr 1fr;
+        gap: 14px;
+        margin: 24px 0 14px;
+      }
+      label {
+        display: grid;
+        gap: 5px;
+        font-size: 14px;
+      }
+      select {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        border: 1px solid #a2a78f;
+        border-radius: 8px;
+        background: #faf7ec;
+        padding: 9px;
+        color: inherit;
+        font: inherit;
+      }
+      .comparison {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid #b3b7a0;
+        background: #68705c;
+      }
+      .comparison img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #after {
+        clip-path: inset(0 50% 0 0);
+      }
+      .image-label {
+        position: absolute;
+        top: 8px;
+        padding: 4px 9px;
+        border-radius: 5px;
+        background: #f7f3e8eb;
+        font-size: 12px;
+      }
+      #after-label {
+        left: 8px;
+      }
+      #before-label {
+        right: 8px;
+      }
+      #divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: #fff8de;
+        pointer-events: none;
+      }
+      .slider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 14px 0;
+      }
+      .slider label {
+        display: block;
+        white-space: nowrap;
+      }
+      input[type="range"] {
+        flex: 1;
+        min-width: 40px;
+        accent-color: #3c6450;
+      }
+      output {
+        width: 42px;
+      }
+      .note {
+        font-size: 14px;
+        color: #56634e;
+      }
+      .videos {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+      figure {
+        margin: 0;
+      }
+      video {
+        width: 100%;
+        max-height: 560px;
+        display: block;
+        background: #4c5848;
+      }
+      figcaption {
+        margin-top: 8px;
+        font-size: 14px;
+      }
+      #live-motion {
+        max-width: 960px;
+      }
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-items: start;
+      }
+      #gallery img {
+        display: block;
+        max-width: 100%;
+        max-height: 620px;
+        width: auto;
+        margin: auto;
+      }
+      .limits {
+        padding: 15px 20px;
+        background: #e0e2d0;
+        border-radius: 10px;
+      }
+      :focus-visible {
+        outline: 3px solid #8d5b20;
+        outline-offset: 3px;
+      }
+      @media (max-width: 650px) {
+        main {
+          padding: 20px 14px 36px;
+        }
+        .controls,
+        .videos,
+        #gallery {
+          grid-template-columns: 1fr;
+        }
+        .image-label {
+          max-width: 44%;
+          font-size: 10px;
+        }
+        .slider {
+          gap: 8px;
+        }
+        .slider label {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">The Danny · Cumulative visual reconstruction</div>
+      <h1>Ground, leaves, and a painted forest.</h1>
+      <div class="status">
+        Passes 4–6 ready for visual review · Stop before Pass 7
+      </div>
+      <p>
+        The accepted traveler, illustrated trees, clearing painting, camera and
+        movement remain the foundation. Pass 4 refines outer ground and forest
+        lighting; Pass 5 composes the leaf current; Pass 6 carries the painted
+        surfaces through props, water, companions and Oscar.
+      </p>
+      <nav aria-label="Review links">
+        <a href="/">Open the live game</a>
+        <a href="VISUAL-PASS-4-REPORT.md">Pass 4 report</a>
+        <a href="VISUAL-PASS-5-REPORT.md">Pass 5 report</a>
+        <a href="VISUAL-PASS-6-REPORT.md">Pass 6 report</a>
+        <a href="artifacts/visual-reconstruction/passes-4-6/manifest.json"
+          >Source and evidence manifest</a
+        >
+      </nav>
+
+      <div class="controls">
+        <label
+          >Checkpoint comparison
+          <select id="pass">
+            <option value="complete">
+              Complete: accepted baseline → Pass 6
+            </option>
+            <option value="4">Pass 4: ground and lighting</option>
+            <option value="5">Pass 5: leaves and particles</option>
+            <option value="6">Pass 6: scene integration</option>
+          </select>
+        </label>
+        <label
+          >Scene
+          <select id="view">
+            <option value="clearing-0">Clearing · 0/8 memories</option>
+            <option value="clearing-8" selected>Clearing · 8/8 memories</option>
+            <option value="clearing-side-8">Side approach · 8/8</option>
+            <option value="tree-return-8">Return to the tree · 8/8</option>
+            <option value="woodland-0">Near woodland · 0/8</option>
+            <option value="deep-forest-0">Deep forest · 0/8</option>
+            <option value="pond-8">Pond · 8/8</option>
+            <option value="grove-8">Grove · 8/8</option>
+          </select>
+        </label>
+        <label
+          >Captured screen
+          <select id="viewport">
+            <option value="1918x918">Desktop · 1918 × 918</option>
+            <option value="390x844">Phone · 390 × 844</option>
+          </select>
+        </label>
+      </div>
+      <div class="comparison" id="comparison">
+        <img id="before" alt="Accepted reference-motion baseline" />
+        <img id="after" alt="Cumulative Pass 6 scene integration" />
+        <div id="divider"></div>
+        <span class="image-label" id="after-label">Pass 6</span>
+        <span class="image-label" id="before-label">Accepted baseline</span>
+      </div>
+      <div class="slider">
+        <label for="reveal">Show later pass</label>
+        <input id="reveal" type="range" min="0" max="100" value="50" />
+        <output id="percent" for="reveal">50%</output>
+      </div>
+      <p id="comparison-note" class="note">
+        Actual game screenshots from consecutive saved checkpoints. Autonomous
+        actors may be in different poses. The final scene uses fixed settling
+        time and reduced motion; framing and picture anchors are preserved.
+      </p>
+
+      <h2>The leaf current in the integrated scene</h2>
+      <p>
+        Each recording shows six seconds at 0/8, then six seconds at 8/8. Watch
+        the irregular circulation and openings around the traveler and pictures.
+        These actual renders use a 30 Hz simulation and six captured frames per
+        simulation second. Playback rate is not measured browser FPS.
+      </p>
+      <div class="videos">
+        <figure>
+          <video
+            id="desktop-motion"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/motion/leaves.mp4"
+          ></video>
+          <figcaption>
+            Final Pass 6 · desktop · 960 × 540 · 12 seconds
+          </figcaption>
+        </figure>
+        <figure>
+          <video
+            id="phone-motion"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/leaves.mp4"
+          ></video>
+          <figcaption>Final Pass 6 · phone · 390 × 844 · 12 seconds</figcaption>
+        </figure>
+      </div>
+
+      <h2>Normal browser movement</h2>
+      <video
+        id="live-motion"
+        controls
+        muted
+        playsinline
+        preload="metadata"
+        src="artifacts/visual-reconstruction/passes-4-6/verification/camera-walk.webm"
+      ></video>
+      <p class="note">
+        Twenty-second excerpt from a real held-pointer walk, Low quality,
+        software WebGL. The measured walk rendered 42 frames in 22.10 seconds:
+        1.90 FPS, with a 673.7 ms p95 frame interval. This shows current
+        responsiveness without a fixed simulation clock. Physical GPU
+        performance remains unverified. The accepted movement controller and
+        camera source are unchanged.
+      </p>
+
+      <h2>Small-screen composition</h2>
+      <div id="gallery">
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-320x568.png"
+            alt="Final empty clearing at 320 by 568"
+            loading="lazy"
+          />
+          <figcaption>320 × 568 · 0/8</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-320x568.png"
+            alt="Final full clearing at 320 by 568"
+            loading="lazy"
+          />
+          <figcaption>320 × 568 · 8/8</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-844x390.png"
+            alt="Final empty clearing at 844 by 390"
+            loading="lazy"
+          />
+          <figcaption>844 × 390 · 0/8</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-844x390.png"
+            alt="Final full clearing at 844 by 390"
+            loading="lazy"
+          />
+          <figcaption>844 × 390 · 8/8</figcaption>
+        </figure>
+      </div>
+
+      <h2>Review boundaries</h2>
+      <div class="limits">
+        <p>
+          Dense stands still repeat branch motifs, and ordered tree clearance
+          remains visible at overlaps. Companions and Oscar keep their
+          articulated volumes; the pond keeps its circular gameplay boundary.
+          Hardware performance and long-session behavior remain unverified.
+        </p>
+        <p>
+          All three checkpoints are saved with their preceding source hashes.
+          Technical checks support this review; owner visual approval is still
+          pending. Pass 7 has not begun.
+        </p>
+      </div>
+    </main>
+    <script>
+      const root = "artifacts/visual-reconstruction/passes-4-6/";
+      const steps = {
+        complete: [
+          "pass-baseline/iteration-01",
+          "pass-6/iteration-03",
+          "Accepted baseline",
+          "Pass 6",
+        ],
+        4: [
+          "pass-baseline/iteration-01",
+          "pass-4/iteration-01",
+          "Accepted baseline",
+          "Pass 4",
+        ],
+        5: ["pass-4/iteration-01", "pass-5/iteration-01", "Pass 4", "Pass 5"],
+        6: ["pass-5/iteration-01", "pass-6/iteration-03", "Pass 5", "Pass 6"],
+      };
+      const byId = (id) => document.getElementById(id);
+      function update() {
+        const [previous, later, previousLabel, laterLabel] =
+          steps[byId("pass").value];
+        const viewport = byId("viewport").value;
+        const file = `/live-${byId("view").value}-${viewport}.png`;
+        byId("before").src = root + previous + file;
+        byId("after").src = root + later + file;
+        byId("before").alt =
+          `${previousLabel}: ${byId("view").selectedOptions[0].text}, ${viewport}`;
+        byId("after").alt =
+          `${laterLabel}: ${byId("view").selectedOptions[0].text}, ${viewport}`;
+        byId("before-label").textContent = previousLabel;
+        byId("after-label").textContent = laterLabel;
+        const [width, height] = viewport.split("x").map(Number);
+        byId("comparison").style.aspectRatio = `${width} / ${height}`;
+        byId("comparison").style.maxWidth = width < height ? "390px" : "none";
+      }
+      for (const id of ["pass", "view", "viewport"])
+        byId(id).addEventListener("change", update);
+      byId("reveal").addEventListener("input", (event) => {
+        const value = event.target.value;
+        byId("after").style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+        byId("divider").style.left = `${value}%`;
+        byId("percent").textContent = `${value}%`;
+      });
+      update();
+    </script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
+import { useText } from "../hooks/useText";
 import { useMemo } from "react";
-import { MEMORIES, TEXT } from "../config";
+import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { memoryUrl } from "../textures/memoryArt";
 import { useDialog } from "../hooks/useDialog";
@@ -7,6 +8,7 @@ import { Icon } from "./Icons";
 import { BrandLogo } from "./BrandLogo";
 import { playSound } from "../audio/bridge";
 export function Viewer() {
+  const TEXT = useText();
   const muted = useStore((s) => s.settings.muted);
   const id = useStore((s) => s.activeMemory),
     collected = useStore((s) => s.collected);

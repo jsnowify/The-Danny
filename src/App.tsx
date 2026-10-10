@@ -1,6 +1,6 @@
 import { Component, lazy, Suspense, useEffect, type ReactNode } from "react";
 import { useStore } from "./store";
-import { TEXT } from "./config";
+import { useText } from "./hooks/useText";
 import { TitleScreen } from "./ui/TitleScreen";
 import { Dedication } from "./ui/Dedication";
 import { Viewer } from "./ui/Viewer";
@@ -10,7 +10,31 @@ import { Toasts } from "./ui/Toasts";
 import { Intro } from "./ui/Intro";
 import { Finale } from "./ui/Finale";
 import { LoadingScreen } from "./ui/LoadingScreen";
+import { useActivity } from "./hooks/useActivity";
+import { IdleRest } from "./ui/IdleRest";
 const Scene = lazy(() => import("./scene/Scene"));
+const OscarDialogue = lazy(async () => ({
+  default: (await import("./ui/OscarDialogue")).OscarDialogue,
+}));
+const Journal = lazy(async () => ({
+  default: (await import("./ui/Journal")).Journal,
+}));
+const FieldGuide = lazy(async () => ({
+  default: (await import("./ui/FieldGuide")).FieldGuide,
+}));
+
+function ForestFallback() {
+  const TEXT = useText();
+  return (
+    <div className="fallback">
+      <h2>{TEXT.unavailable}</h2>
+      <p>{TEXT.fallback}</p>
+      <button className="primary" onClick={() => location.reload()}>
+        {TEXT.retry}
+      </button>
+    </div>
+  );
+}
 
 class ForestBoundary extends Component<
   { children: ReactNode },
@@ -24,23 +48,22 @@ class ForestBoundary extends Component<
     console.error("Forest error:", error);
   }
   render() {
-    return this.state.failed ? (
-      <div className="fallback">
-        <h2>{TEXT.unavailable}</h2>
-        <p>{TEXT.fallback}</p>
-        <button className="primary" onClick={() => location.reload()}>
-          {TEXT.retry}
-        </button>
-      </div>
-    ) : (
-      this.props.children
-    );
+    return this.state.failed ? <ForestFallback /> : this.props.children;
   }
 }
 export default function App() {
+  useActivity();
+  const idleStage = useStore((s) => s.idleStage);
+  const language = useStore((s) => s.language);
+  useEffect(() => {
+    document.documentElement.lang = language === "fil" ? "fil" : "en";
+  }, [language]);
   const phase = useStore((s) => s.phase),
     paused = useStore((s) => s.paused),
     dedication = useStore((s) => s.dedicationOpen),
+    fieldGuide = useStore((s) => s.fieldGuideOpen),
+    journal = useStore((s) => s.journalOpen),
+    dialogue = useStore((s) => s.oscarDialogue),
     ready = useStore((s) => s.sceneReady),
     large = useStore((s) => s.settings.largeText),
     reduced = useStore((s) => s.settings.reducedMotion);
@@ -57,7 +80,10 @@ export default function App() {
     const key = (e: KeyboardEvent) => {
       if (e.key !== "Escape" || e.defaultPrevented) return;
       const s = useStore.getState();
-      if (s.phase === "viewer") s.closeMemory();
+      if (s.journalOpen) useStore.setState({ journalOpen: false });
+      else if (s.oscarDialogue) useStore.setState({ oscarDialogue: false });
+      else if (s.fieldGuideOpen) useStore.setState({ fieldGuideOpen: false });
+      else if (s.phase === "viewer") s.closeMemory();
       else if (s.dedicationOpen) useStore.setState({ dedicationOpen: false });
       else if (["explore", "intro", "hanging"].includes(s.phase))
         useStore.setState({ paused: !s.paused });
@@ -66,6 +92,15 @@ export default function App() {
     return () => window.removeEventListener("keydown", key);
   }, []);
   const inForest = !["loading", "title", "dedication"].includes(phase);
+  const showHud =
+    ready &&
+    !dedication &&
+    !paused &&
+    !fieldGuide &&
+    !journal &&
+    !dialogue &&
+    idleStage !== 300 &&
+    (phase === "explore" || phase === "hanging");
   return (
     <div
       className={`app ${large ? "large-text" : ""} ${reduced ? "reduced-motion" : ""}`}
@@ -80,13 +115,29 @@ export default function App() {
               <Scene />
             </Suspense>
           </ForestBoundary>
-          {ready && !dedication && <Hud />}
+          {showHud && <Hud />}
           {ready && <Toasts />}
+          {idleStage === 300 && <IdleRest />}
           {ready && phase === "intro" && <Intro />}
           {phase === "viewer" && <Viewer />}
           {phase === "finale" && <Finale />}
           {paused && <PauseMenu />}
           {dedication && <Dedication reopened />}
+          {fieldGuide && (
+            <Suspense fallback={null}>
+              <FieldGuide />
+            </Suspense>
+          )}
+          {journal && (
+            <Suspense fallback={null}>
+              <Journal />
+            </Suspense>
+          )}
+          {dialogue && (
+            <Suspense fallback={null}>
+              <OscarDialogue />
+            </Suspense>
+          )}
         </>
       )}
     </div>

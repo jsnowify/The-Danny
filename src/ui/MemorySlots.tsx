@@ -1,14 +1,21 @@
+import { useText } from "../hooks/useText";
 import { useMemo } from "react";
-import { MEMORIES, TEXT } from "../config";
+import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { memoryUrl } from "../textures/memoryArt";
 export function MemorySlots() {
+  const TEXT = useText();
   const collected = useStore((s) => s.collected),
     hung = useStore((s) => s.hung);
   const urls = useMemo(() => MEMORIES.map((_, i) => memoryUrl(i)), []);
   return (
     <div className="memory-collection">
-      <div className="slots">
+      <div
+        className="slots"
+        role="group"
+        aria-label={TEXT.memorySlots}
+        tabIndex={0}
+      >
         {MEMORIES.map((m, i) => (
           <button
             key={m.id}

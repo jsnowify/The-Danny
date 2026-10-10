@@ -10,7 +10,20 @@ import {
   normalizeProgress,
   LEGACY_SAVE_KEY,
   SAVE_KEY,
+  SAVE_VERSION,
 } from "../src/persistence";
+import { SPECIES_IDS } from "../src/config/discoveries";
+
+const extendedDefaults = {
+  discoveredSpecies: [],
+  discoveredCats: [],
+  interactedCats: [],
+  discoveredDogs: [],
+  interactedDogs: [],
+  metOscar: false,
+  finaleSeen: false,
+  language: "en",
+};
 
 function memoryStorage(entries: Record<string, string> = {}) {
   const values = new Map(Object.entries(entries));
@@ -51,7 +64,10 @@ test("v1 is copied immediately to v2 without changing the legacy backup", async 
   const fake = memoryStorage({ [LEGACY_SAVE_KEY]: legacy });
   const storage = createCompatibleStorage(() => fake.browserStorage);
   const upgraded = JSON.parse((await storage.getItem(SAVE_KEY))!);
-  expect(upgraded).toEqual({ version: 2, state: JSON.parse(legacy).state });
+  expect(upgraded).toEqual({
+    version: SAVE_VERSION,
+    state: { ...JSON.parse(legacy).state, ...extendedDefaults },
+  });
   expect(fake.values.get(SAVE_KEY)).toBe(JSON.stringify(upgraded));
   expect(fake.values.get(LEGACY_SAVE_KEY)).toBe(legacy);
   expect(fake.writes()).toBe(1);
@@ -77,6 +93,7 @@ test("validation deduplicates IDs, preserves hung memories, and checks settings"
       },
     }),
   ).toEqual({
+    ...extendedDefaults,
     collected: ["lake", "garden"],
     hung: ["garden"],
     introSeen: false,
@@ -88,6 +105,7 @@ test("validation deduplicates IDs, preserves hung memories, and checks settings"
     },
   });
   expect(normalizeProgress(null)).toEqual({
+    ...extendedDefaults,
     collected: [],
     hung: [],
     introSeen: false,
@@ -181,7 +199,17 @@ test("browser migrates v1, shows the identity, restores v2, and keeps reset empt
   await expect(page.locator(".title-content")).toBeVisible();
   const readSave = () =>
     page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), SAVE_KEY);
-  expect((await readSave()).state).toEqual(JSON.parse(legacy).state);
+  expect((await readSave()).state).toEqual({
+    ...JSON.parse(legacy).state,
+    ...extendedDefaults,
+    settings: {
+      ...preferences,
+      musicVolume: 1,
+      natureVolume: 1,
+      effectsVolume: 1,
+      customTrackUrl: "",
+    },
+  });
   await page.getByRole("button", { name: "Tap to begin" }).click();
   const dedication = page.getByRole("dialog");
   await expect(dedication.locator("#dedication-heading")).toHaveText(
@@ -227,8 +255,25 @@ test("browser migrates v1, shows the identity, restores v2, and keeps reset empt
     page.getByLabel("Reduced motion", { exact: true }),
   ).toBeChecked();
   await expect(page.getByLabel("Large text", { exact: true })).toBeChecked();
+  // Entering the forest can discover nearby plants. Migration preserves the
+  // legacy fields, and reload must also preserve legitimate new discoveries.
+  const exploredSave = (await readSave()).state;
+  for (const id of exploredSave.discoveredSpecies)
+    expect(SPECIES_IDS).toContain(id);
+  expect(exploredSave).toEqual({
+    ...JSON.parse(legacy).state,
+    ...extendedDefaults,
+    discoveredSpecies: exploredSave.discoveredSpecies,
+    settings: {
+      ...preferences,
+      musicVolume: 1,
+      natureVolume: 1,
+      effectsVolume: 1,
+      customTrackUrl: "",
+    },
+  });
   await page.reload();
-  expect((await readSave()).state).toEqual(JSON.parse(legacy).state);
+  expect((await readSave()).state).toEqual(exploredSave);
   await page.getByRole("button", { name: "Tap to begin" }).click();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect
@@ -249,8 +294,15 @@ test("browser migrates v1, shows the identity, restores v2, and keeps reset empt
   const reset = (await readSave()).state;
   expect(reset.collected).toEqual([]);
   expect(reset.hung).toEqual([]);
+  expect(reset.discoveredSpecies).toEqual([]);
   expect(reset.introSeen).toBe(false);
-  expect(reset.settings).toEqual(preferences);
+  expect(reset.settings).toEqual({
+    ...preferences,
+    musicVolume: 1,
+    natureVolume: 1,
+    effectsVolume: 1,
+    customTrackUrl: "",
+  });
   expect(
     await page.evaluate((key) => localStorage.getItem(key), LEGACY_SAVE_KEY),
   ).toBeNull();
@@ -279,7 +331,20 @@ for (const version of [2, 1]) {
       (key) => JSON.parse(localStorage.getItem(key)!),
       SAVE_KEY,
     );
-    expect(current).toEqual({ version: 2, state });
+    expect(current).toEqual({
+      version: SAVE_VERSION,
+      state: {
+        ...state,
+        ...extendedDefaults,
+        settings: {
+          ...preferences,
+          musicVolume: 1,
+          natureVolume: 1,
+          effectsVolume: 1,
+          customTrackUrl: "",
+        },
+      },
+    });
   });
 }
 

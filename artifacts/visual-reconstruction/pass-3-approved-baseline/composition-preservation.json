@@ -1,0 +1,173 @@
+{
+  "recordedAt": "2026-10-10T07:30:23.295Z",
+  "tolerance": 0.000001,
+  "unchanged": [
+    "camera",
+    "traveler foot and position",
+    "tree",
+    "pictures",
+    "HUD"
+  ],
+  "matched": [
+    {
+      "view": "clearing-0",
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-8",
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "woodland-0",
+      "viewport": {
+        "width": 1918,
+        "height": 918
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "woodland-0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-0",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-8",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "woodland-0",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-0",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-8",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "travelerPoseHeightDriftPixels": 0
+    },
+    {
+      "view": "woodland-0",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "travelerPoseHeightDriftPixels": 0
+    }
+  ]
+}

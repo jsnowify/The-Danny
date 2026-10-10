@@ -1,11 +1,14 @@
+import { useText } from "../hooks/useText";
 import { useState } from "react";
-import { MUSIC_CREDIT, TEXT } from "../config";
+import { MUSIC_CREDIT } from "../config";
 import { useStore } from "../store";
 import { useDialog } from "../hooks/useDialog";
 import { Icon } from "./Icons";
 import { TributeInscription } from "./TributeInscription";
 import { BrandLogo } from "./BrandLogo";
+import { CustomTrackSetting } from "./CustomTrackSetting";
 export function PauseMenu() {
+  const TEXT = useText();
   const settings = useStore((s) => s.settings),
     update = useStore((s) => s.setSettings),
     musicPlayback = useStore((s) => s.musicPlayback);
@@ -74,6 +77,23 @@ export function PauseMenu() {
           {musicPlayback === "fallback" && (
             <p role="status">{TEXT.trackFallback}</p>
           )}
+          {(["musicVolume", "natureVolume", "effectsVolume"] as const).map(
+            (key) => (
+              <label key={key}>
+                {TEXT[key]}
+                <input
+                  aria-label={TEXT[key]}
+                  type="range"
+                  min="0"
+                  max="1"
+                  step=".05"
+                  value={settings[key]}
+                  onChange={(e) => update({ [key]: Number(e.target.value) })}
+                />
+              </label>
+            ),
+          )}
+          {settings.musicSource === "custom" && <CustomTrackSetting />}
           <label>
             {TEXT.detail}
             <select
@@ -116,6 +136,23 @@ export function PauseMenu() {
           </label>
         </div>
         <p>{MUSIC_CREDIT}</p>
+        {document.fullscreenEnabled && (
+          <button
+            className="text-button"
+            onClick={() =>
+              void (
+                document.fullscreenElement
+                  ? document.exitFullscreen()
+                  : document.documentElement.requestFullscreen()
+              ).catch(() =>
+                useStore.setState({ toast: TEXT.fullscreenUnavailable }),
+              )
+            }
+          >
+            {TEXT.fullscreen}
+            <Icon name="fullscreen" />
+          </button>
+        )}
         <button
           className="text-button"
           onClick={() => {

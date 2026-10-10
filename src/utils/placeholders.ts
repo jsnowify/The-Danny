@@ -36,6 +36,6 @@ export function warnPersonalTextPlaceholders(): void {
   const fields = personalTextPlaceholders();
   if (fields.length)
     console.warn(
-      `The Danny: personalize the bracketed text in src/config.ts: ${fields.join(", ")}`,
+      `The Danny: review personal text in src/config/: ${fields.join(", ")}`,
     );
 }

@@ -1,0 +1,1208 @@
+[
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-0-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 87,
+      "textures": 10
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:41:08.952Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-8-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 96,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:41:36.563Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-m/verification/woodland-0-1918.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 89,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:41:55.078Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-4",
+      "progress": 4,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-4-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 93,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 56.43330383813196,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:42:10.746Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "woodland-8",
+      "progress": 8,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-m/verification/woodland-8-1918.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 93,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:42:26.775Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "obstruction-0",
+      "progress": 0,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-m/verification/obstruction-0-1918.png",
+    "camera": {
+      "position": [
+        8.574081420898438,
+        14.82382147116359,
+        11.718312037529095
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 89,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:42:44.540Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "obstruction-8",
+      "progress": 8,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-m/verification/obstruction-8-1918.png",
+    "camera": {
+      "position": [
+        8.574081420898438,
+        14.82382147116359,
+        11.718312037529095
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 27.37627095382651,
+        "height": 13.102928433583283
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6510646935758919
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 97,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:42:58.690Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-0-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 74,
+      "textures": 9
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:10.815Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-8-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 85,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:16.121Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-m/verification/woodland-0-390.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 78,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:21.271Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-4",
+      "progress": 4,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-m/verification/clearing-4-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 82,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 56.43330383813196,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:26.036Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "woodland-8",
+      "progress": 8,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-m/verification/woodland-8-390.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 82,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:30.713Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "obstruction-0",
+      "progress": 0,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-m/verification/obstruction-0-390.png",
+    "camera": {
+      "position": [
+        8.574081420898438,
+        14.82382147116359,
+        11.718312037529095
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 78,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:33.927Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "obstruction-8",
+      "progress": 8,
+      "x": 8.574081420898438,
+      "z": 2.648135063171387
+    },
+    "path": "artifacts/v4-stage-m/verification/obstruction-8-390.png",
+    "camera": {
+      "position": [
+        8.574081420898438,
+        14.82382147116359,
+        11.718312037529095
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "projection": "orthographic",
+      "fov": 40,
+      "fovDescription": "equivalent framing angle; orthographic projection has no lens FOV",
+      "orthographicSpan": {
+        "width": 7.507791694882555,
+        "height": 16.247631257643274
+      },
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.49999999999999994,
+      "y": 0.6818263657870096
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 78,
+      "textures": 17
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "musicVolume": 1,
+        "natureVolume": 1,
+        "effectsVolume": 1,
+        "customTrackUrl": "",
+        "quality": "medium",
+        "reducedMotion": false,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    },
+    "recordedAt": "2026-10-10T00:43:37.950Z",
+    "motion": "normal",
+    "settling": "temporary reduced motion during teleport; requested mode restored before evidence",
+    "observation": "drawing frozen after settling for metadata/screenshot only"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": []
+  }
+]

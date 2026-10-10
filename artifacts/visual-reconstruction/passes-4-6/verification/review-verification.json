@@ -1,0 +1,353 @@
+{
+  "recordedAt": "2026-10-10T12:05:15.887Z",
+  "checked": [
+    {
+      "pass": "complete",
+      "view": "clearing-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "clearing-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "clearing-side-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "tree-return-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "woodland-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "deep-forest-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "pond-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "grove-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "complete",
+      "view": "clearing-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "clearing-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "clearing-side-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "tree-return-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "woodland-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "deep-forest-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "pond-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "complete",
+      "view": "grove-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-side-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "tree-return-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "woodland-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "deep-forest-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "pond-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "grove-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "clearing-side-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "tree-return-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "woodland-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "deep-forest-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "pond-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "4",
+      "view": "grove-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-side-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "tree-return-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "woodland-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "deep-forest-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "pond-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "grove-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "clearing-side-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "tree-return-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "woodland-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "deep-forest-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "pond-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "5",
+      "view": "grove-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-side-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "tree-return-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "woodland-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "deep-forest-0",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "pond-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "grove-8",
+      "viewport": "1918x918"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "clearing-side-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "tree-return-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "woodland-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "deep-forest-0",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "pond-8",
+      "viewport": "390x844"
+    },
+    {
+      "pass": "6",
+      "view": "grove-8",
+      "viewport": "390x844"
+    }
+  ],
+  "videos": [
+    {
+      "id": "desktop-motion",
+      "duration": 12,
+      "playedTo": 0.2647,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "phone-motion",
+      "duration": 12,
+      "playedTo": 0.2812,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "live-motion",
+      "duration": 20,
+      "playedTo": 0.2731,
+      "width": 960,
+      "height": 640
+    }
+  ],
+  "galleryImages": 4,
+  "keyboardSlider": true,
+  "phonePageFits": true,
+  "reportAndManifestLinks": true,
+  "errors": []
+}

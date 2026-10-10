@@ -1,0 +1,430 @@
+[
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-c/verification/clearing-0-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 2.0893246187363834,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566448
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 32,
+      "textures": 6
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-c/verification/clearing-8-1918.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 2.0893246187363834,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566448
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 34,
+      "textures": 6
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-c/verification/woodland-0-1918.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 2.0893246187363834,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566449
+    },
+    "size": {
+      "width": 1918,
+      "height": 918,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 33,
+      "textures": 11
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1918,
+      "height": 918
+    },
+    "errors": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-0",
+      "progress": 0,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-c/verification/clearing-0-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 0.46208530805687204,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566448
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 28,
+      "textures": 5
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "clearing-8",
+      "progress": 8,
+      "x": 0,
+      "z": 5.5
+    },
+    "path": "artifacts/v4-stage-c/verification/clearing-8-390.png",
+    "camera": {
+      "position": [
+        0,
+        14.676945710011193,
+        14.57017697435771
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 0.46208530805687204,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566448
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 33,
+      "textures": 8
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "hung": [
+        "lake",
+        "sunrise",
+        "dinner",
+        "boat",
+        "garden",
+        "guitar",
+        "road",
+        "fire"
+      ],
+      "nearMemory": null,
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 160,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scene": {
+      "name": "woodland-0",
+      "progress": 0,
+      "x": -24,
+      "z": -7
+    },
+    "path": "artifacts/v4-stage-c/verification/woodland-0-390.png",
+    "camera": {
+      "position": [
+        -24,
+        14.209746704589218,
+        2.070176974357709
+      ],
+      "direction": [
+        0,
+        -0.766044443118978,
+        -0.6427876096865395
+      ],
+      "fov": 40,
+      "aspect": 0.46208530805687204,
+      "pitchDegrees": 50,
+      "near": 0.1,
+      "far": 110
+    },
+    "playerScreen": {
+      "x": 0.5,
+      "y": 0.6651016804566449
+    },
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0,
+      "updateStyle": true
+    },
+    "resources": {
+      "geometries": 31,
+      "textures": 13
+    },
+    "state": {
+      "phase": "explore",
+      "sceneReady": true,
+      "collected": [],
+      "hung": [],
+      "nearMemory": "dinner",
+      "settings": {
+        "muted": true,
+        "volume": 0.65,
+        "quality": "medium",
+        "reducedMotion": true,
+        "largeText": false,
+        "skipIntro": true,
+        "musicSource": "track"
+      },
+      "revivalRadius": 0,
+      "previewing": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "errors": []
+  }
+]

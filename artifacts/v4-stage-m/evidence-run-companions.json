@@ -1,0 +1,21 @@
+[
+  {
+    "name": "companions",
+    "command": [
+      "node",
+      "scripts/capture-v4-companions.mjs",
+      "--stage=m"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 63328
+  },
+  {
+    "name": "lifecycle",
+    "command": [
+      "node",
+      "scripts/verify-v4-lifecycle.mjs"
+    ],
+    "exitCode": 1,
+    "elapsedMs": 10577
+  }
+]

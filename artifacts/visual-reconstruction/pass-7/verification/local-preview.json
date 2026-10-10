@@ -1,0 +1,130 @@
+{
+  "recordedAt": "2026-10-10T13:21:13.226Z",
+  "origin": "http://localhost:4173",
+  "previewCommand": "node scripts/serve-local-production.mjs",
+  "files": [
+    {
+      "path": "dist/assets/FieldGuide-orVL8cY5.js",
+      "route": "/assets/FieldGuide-orVL8cY5.js",
+      "bytes": 4526,
+      "sha256": "3dfa298f707b3b36fd04427deca1233f12adea7bf824ad22252ee01bba9a3f1d"
+    },
+    {
+      "path": "dist/assets/Journal-C2G5Eejh.js",
+      "route": "/assets/Journal-C2G5Eejh.js",
+      "bytes": 5201,
+      "sha256": "7e5050c6807d6752f5f63652629acf3c87683e0120f3f227082390d582b91227"
+    },
+    {
+      "path": "dist/assets/OscarDialogue-CwmXj5Ji.js",
+      "route": "/assets/OscarDialogue-CwmXj5Ji.js",
+      "bytes": 741,
+      "sha256": "4ba833435bd2cb4af7861bd0fbc918b647951b7d6620e556fd5c8b35e809e69f"
+    },
+    {
+      "path": "dist/assets/Scene-Czx1bhTO.js",
+      "route": "/assets/Scene-Czx1bhTO.js",
+      "bytes": 939587,
+      "sha256": "addc5f95c8ec0a401606d5a4aeaa15e18c2487bd28fdcb9f4e5f02896d36460e"
+    },
+    {
+      "path": "dist/assets/engine-DHpoh1PL.js",
+      "route": "/assets/engine-DHpoh1PL.js",
+      "bytes": 263704,
+      "sha256": "6d08255d0ce0a374f4f6b256f38bc223452ec7a6b4da5f4d68bcaa2831a66805"
+    },
+    {
+      "path": "dist/assets/flora-CDe2SlT-.js",
+      "route": "/assets/flora-CDe2SlT-.js",
+      "bytes": 5295,
+      "sha256": "710cc8fbcd079eb510618cc7694b19cc7170aee2de88a39c7222c3cf253ca95e"
+    },
+    {
+      "path": "dist/assets/index-Bxz-AyIC.js",
+      "route": "/assets/index-Bxz-AyIC.js",
+      "bytes": 213530,
+      "sha256": "ebcaee97c5b9b287703c478b40b539509f3412ccccb309810c82bbc029b9adc3"
+    },
+    {
+      "path": "dist/assets/index-Fa0NSu9_.css",
+      "route": "/assets/index-Fa0NSu9_.css",
+      "bytes": 28990,
+      "sha256": "fc9cd2d59b3f4828ebb73f3843c900160a6534ce32a091eea9d513fe7d1d7458"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-BVbkICAY.woff",
+      "route": "/assets/instrument-serif-latin-400-normal-BVbkICAY.woff",
+      "bytes": 18336,
+      "sha256": "6d0b022af858becb27f1a033de5d3c0604fc6f2191a7f3ff4dba5d3515e95051"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "route": "/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-C2je3j2s.woff2",
+      "route": "/assets/instrument-serif-latin-ext-400-normal-C2je3j2s.woff2",
+      "bytes": 11604,
+      "sha256": "290e6267dd833bf5f899eba4c29ad0a9b09dbe53f6075b18af38057159e1ff20"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-CFCUzsTy.woff",
+      "route": "/assets/instrument-serif-latin-ext-400-normal-CFCUzsTy.woff",
+      "bytes": 9860,
+      "sha256": "1719ae18b98d033d2555f5a5971a30f5bb610ed849fc5a1119fe39db6d40eb3e"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-a.mp3",
+      "route": "/audio/ambient-lullaby-a.mp3",
+      "bytes": 4051183,
+      "sha256": "b4d2a9ff1fc4ac985839e3666d5c0e445d02abfe39dd0b04ce1b7fcba6be25f5"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-b.mp3",
+      "route": "/audio/ambient-lullaby-b.mp3",
+      "bytes": 4051183,
+      "sha256": "75a4143cea85d2945bb28cefa24644a7365a74d4003ec86fa4b342f0039e8046"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-c.mp3",
+      "route": "/audio/ambient-lullaby-c.mp3",
+      "bytes": 4051183,
+      "sha256": "76260db78d1a02261b4bda9a503fb9d85aa3834fa52cc841d8dab61df9305fe1"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.mp3",
+      "route": "/audio/ambient-lullaby.mp3",
+      "bytes": 4051183,
+      "sha256": "63d8a2c7544881a4b24e8a72c21d5b440b41139e5cb6b6ea15ab2cc2e89f7051"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.wav",
+      "route": "/audio/ambient-lullaby.wav",
+      "bytes": 35721044,
+      "sha256": "1b3b34972af27f8001496f7494f8b3b17e4bed5e44f7557c8a9a005d4f7aa5c2"
+    },
+    {
+      "path": "dist/audio/ambient-render-report.json",
+      "route": "/audio/ambient-render-report.json",
+      "bytes": 11942,
+      "sha256": "4075cc0a11551b89f1c92f486c0dd41409dea0dc4d9a96a89336b27fe498c011"
+    },
+    {
+      "path": "dist/fonts/instrument-serif-LICENSE.txt",
+      "route": "/fonts/instrument-serif-LICENSE.txt",
+      "bytes": 4532,
+      "sha256": "b6106a757902d2d412e09d94dc4a226fe3da80485208a98003969f1b8b6b1d74"
+    },
+    {
+      "path": "dist/index.html",
+      "route": "/",
+      "bytes": 558,
+      "sha256": "9d0a6b226e661f63cd847aeab9d5ffa8ecb2d30e931e25306e1956c5e14195a1"
+    }
+  ],
+  "allBuiltFilesMatchServedBytes": true,
+  "editorInjectionAbsent": true,
+  "errors": []
+}

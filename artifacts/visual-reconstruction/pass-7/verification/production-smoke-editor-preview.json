@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-10-10T13:14:54.711Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "driverWarnings": [
+    "[.WebGL-0x1d2400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d2400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d2400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1d2400427400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "saveVersion": 4,
+  "journalAbout": true,
+  "languageSwitch": true,
+  "mixer": true,
+  "noDevelopmentDiagnostics": true,
+  "reset": {
+    "legacy": null,
+    "current": {
+      "state": {
+        "collected": [],
+        "hung": [],
+        "introSeen": false,
+        "discoveredSpecies": [],
+        "discoveredCats": [],
+        "interactedCats": [],
+        "discoveredDogs": [],
+        "interactedDogs": [],
+        "metOscar": false,
+        "finaleSeen": false,
+        "language": "en",
+        "settings": {
+          "muted": false,
+          "volume": 0.65,
+          "musicVolume": 1,
+          "natureVolume": 1,
+          "effectsVolume": 1,
+          "customTrackUrl": "",
+          "quality": "low",
+          "reducedMotion": true,
+          "largeText": false,
+          "skipIntro": true,
+          "musicSource": "track"
+        }
+      },
+      "version": 4
+    }
+  },
+  "audioAssetStatus": 200,
+  "limits": "Local production preview; no Vercel account deployment or remote CDN validation."
+}

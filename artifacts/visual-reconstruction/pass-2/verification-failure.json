@@ -1,0 +1,74 @@
+{
+  "recordedAt": "2026-10-10T05:15:28.786Z",
+  "ui": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "frame": {
+        "traveler": {
+          "left": 146.29093746843728,
+          "right": 175.18036906818747,
+          "top": 368.71156218396703,
+          "bottom": 411.9516617572966
+        },
+        "button": {
+          "left": 80,
+          "right": 240,
+          "top": 408,
+          "bottom": 470,
+          "width": 160,
+          "height": 62
+        },
+        "overlapsTraveler": true,
+        "forestLabel": {
+          "left": 20,
+          "right": 124,
+          "top": 284.8125,
+          "bottom": 403
+        },
+        "overlapsForestLabel": false,
+        "hudRects": [
+          {
+            "selector": ".forest-label",
+            "left": 20,
+            "right": 124,
+            "top": 284.8125,
+            "bottom": 403
+          },
+          {
+            "selector": ".hang-button",
+            "left": 80,
+            "right": 240,
+            "top": 408,
+            "bottom": 470
+          },
+          {
+            "selector": ".toast",
+            "left": 66,
+            "right": 254,
+            "top": 481.21875,
+            "bottom": 548
+          },
+          {
+            "selector": ".field-guide-button",
+            "left": 254,
+            "right": 302,
+            "top": 496,
+            "bottom": 544
+          }
+        ],
+        "hudOverlaps": [],
+        "span": 18.56014391070677
+      },
+      "finale": false,
+      "returnedToExplore": false,
+      "saveContainsEightHung": false
+    }
+  ],
+  "production": null,
+  "motion": null,
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Hang prompt covers traveler at 320x568\n\ntrue !== false\n"
+}

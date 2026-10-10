@@ -1,0 +1,1709 @@
+{
+  "objects": [
+    {
+      "name": "flora-rock",
+      "instances": 90,
+      "triangles": 172440,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "memory-tree",
+      "instances": 64,
+      "triangles": 47104,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "memory-tree",
+      "instances": 32,
+      "triangles": 23552,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "memory-tree",
+      "instances": 24,
+      "triangles": 17664,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "painted-ground",
+      "instances": 1,
+      "triangles": 12800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-trunk",
+      "instances": 38,
+      "triangles": 11704,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "flora-flower",
+      "instances": 11,
+      "triangles": 8096,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-grass",
+      "instances": 268,
+      "triangles": 6432,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-mango-near",
+      "instances": 4,
+      "triangles": 4096,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-mango-outline",
+      "instances": 4,
+      "triangles": 4096,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-embroidered-cloak",
+      "instances": 1,
+      "triangles": 3746,
+      "groups": 0,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "memory-tree-limbs",
+      "instances": 1,
+      "triangles": 3520,
+      "groups": 0,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "flora-crown",
+      "instances": 3,
+      "triangles": 3012,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "flora-crown-outline",
+      "instances": 3,
+      "triangles": 3012,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2936,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2936,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2936,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2796,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-painted-crown",
+      "instances": 1,
+      "triangles": 2684,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "prototype-painted-crown",
+      "instances": 1,
+      "triangles": 2684,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2628,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2628,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2628,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2628,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-sampaguita-near",
+      "instances": 3,
+      "triangles": 2268,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-cream-contour",
+      "instances": 1,
+      "triangles": 2000,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-cream-contour",
+      "instances": 1,
+      "triangles": 2000,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-rock-1",
+      "instances": 1,
+      "triangles": 1916,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "prototype-rock-2",
+      "instances": 1,
+      "triangles": 1916,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "prototype-rock-3",
+      "instances": 1,
+      "triangles": 1916,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1848,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1848,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1848,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-kalachuchi-near",
+      "instances": 2,
+      "triangles": 1656,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-acacia-near",
+      "instances": 1,
+      "triangles": 1640,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-acacia-outline",
+      "instances": 1,
+      "triangles": 1640,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1540,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1540,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1540,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1540,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 1540,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "forest-loose-leaves",
+      "instances": 25,
+      "triangles": 1425,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-reed",
+      "instances": 55,
+      "triangles": 1320,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-balete-far",
+      "instances": 15,
+      "triangles": 1245,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-pointed-hat",
+      "instances": 1,
+      "triangles": 1148,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "flora-pine",
+      "instances": 1,
+      "triangles": 1004,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "flora-pine-outline",
+      "instances": 1,
+      "triangles": 1004,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-crownFar",
+      "instances": 26,
+      "triangles": 858,
+      "groups": 1,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-talisay-far",
+      "instances": 13,
+      "triangles": 819,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 4,
+      "triangles": 800,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "instances": 1,
+      "triangles": 796,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "instances": 1,
+      "triangles": 796,
+      "groups": 2,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-mango-far",
+      "instances": 24,
+      "triangles": 792,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-narra-far",
+      "instances": 12,
+      "triangles": 696,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-banana-far",
+      "instances": 8,
+      "triangles": 640,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-acacia-far",
+      "instances": 12,
+      "triangles": 636,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-leaf-current-1",
+      "instances": 11,
+      "triangles": 627,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-bamboo-far",
+      "instances": 6,
+      "triangles": 624,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-agoho-far",
+      "instances": 11,
+      "triangles": 528,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "memory-tree-leaves",
+      "instances": 32,
+      "triangles": 448,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-shadow-face",
+      "instances": 1,
+      "triangles": 440,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-bush",
+      "instances": 10,
+      "triangles": 420,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-log",
+      "instances": 7,
+      "triangles": 392,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-mushroom",
+      "instances": 2,
+      "triangles": 368,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-lily",
+      "instances": 15,
+      "triangles": 360,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-leaf-current-0",
+      "instances": 6,
+      "triangles": 342,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 336,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-gabi-near",
+      "instances": 2,
+      "triangles": 300,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "memory-bench",
+      "instances": 1,
+      "triangles": 300,
+      "groups": 6,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "memory-bench",
+      "instances": 1,
+      "triangles": 300,
+      "groups": 6,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "memory-bench",
+      "instances": 1,
+      "triangles": 300,
+      "groups": 6,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "memory-bench",
+      "instances": 1,
+      "triangles": 300,
+      "groups": 6,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "memory-tree",
+      "instances": 1,
+      "triangles": 288,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 272,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "flora-pineFar",
+      "instances": 8,
+      "triangles": 264,
+      "groups": 1,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-leaf-current-2",
+      "instances": 3,
+      "triangles": 171,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-boot",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-boot",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 168,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 156,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 156,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 156,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 156,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 24,
+      "triangles": 144,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-coconut-far",
+      "instances": 1,
+      "triangles": 128,
+      "groups": 2,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "forest-companions",
+      "instances": 8,
+      "triangles": 128,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 120,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-sampaguita-far",
+      "instances": 1,
+      "triangles": 76,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "pond-water",
+      "instances": 1,
+      "triangles": 64,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 36,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 36,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "prototype-traveler-contact",
+      "instances": 1,
+      "triangles": 32,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "Mesh",
+      "instances": 1,
+      "triangles": 2,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-narra-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-narra-outline",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-coconut-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-banana-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-bamboo-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-balete-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-balete-outline",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-talisay-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-talisay-outline",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-agoho-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": true,
+      "visible": true
+    },
+    {
+      "name": "species-agoho-outline",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 3,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-kalachuchi-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-fern-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-fern-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-gabi-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-cogon-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-cogon-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-santan-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-santan-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-gumamela-near",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    },
+    {
+      "name": "species-gumamela-far",
+      "instances": 0,
+      "triangles": 0,
+      "groups": 0,
+      "castShadow": false,
+      "visible": true
+    }
+  ],
+  "draws": [
+    {
+      "name": "flora-rock",
+      "triangles": 172440
+    },
+    {
+      "name": "memory-tree",
+      "triangles": 47104
+    },
+    {
+      "name": "memory-tree",
+      "triangles": 23552
+    },
+    {
+      "name": "memory-tree",
+      "triangles": 17664
+    },
+    {
+      "name": "painted-ground",
+      "triangles": 12800
+    },
+    {
+      "name": "flora-trunk",
+      "triangles": 11704
+    },
+    {
+      "name": "flora-flower",
+      "triangles": 8096
+    },
+    {
+      "name": "flora-grass",
+      "triangles": 6432
+    },
+    {
+      "name": "species-mango-outline",
+      "triangles": 4096
+    },
+    {
+      "name": "prototype-embroidered-cloak",
+      "triangles": 3746
+    },
+    {
+      "name": "memory-tree-limbs",
+      "triangles": 3520
+    },
+    {
+      "name": "flora-crown-outline",
+      "triangles": 3012
+    },
+    {
+      "name": "flora-crown",
+      "triangles": 2520
+    },
+    {
+      "name": "species-mango-near",
+      "triangles": 2400
+    },
+    {
+      "name": "prototype-painted-crown",
+      "triangles": 2352
+    },
+    {
+      "name": "prototype-painted-crown",
+      "triangles": 2352
+    },
+    {
+      "name": "species-sampaguita-near",
+      "triangles": 2268
+    },
+    {
+      "name": "prototype-cream-contour",
+      "triangles": 2000
+    },
+    {
+      "name": "prototype-cream-contour",
+      "triangles": 2000
+    },
+    {
+      "name": "prototype-rock-1",
+      "triangles": 1916
+    },
+    {
+      "name": "prototype-rock-2",
+      "triangles": 1916
+    },
+    {
+      "name": "prototype-rock-3",
+      "triangles": 1916
+    },
+    {
+      "name": "Mesh",
+      "triangles": 1848
+    },
+    {
+      "name": "species-kalachuchi-near",
+      "triangles": 1656
+    },
+    {
+      "name": "species-acacia-outline",
+      "triangles": 1640
+    },
+    {
+      "name": "Mesh",
+      "triangles": 1540
+    },
+    {
+      "name": "Mesh",
+      "triangles": 1540
+    },
+    {
+      "name": "forest-loose-leaves",
+      "triangles": 1425
+    },
+    {
+      "name": "flora-reed",
+      "triangles": 1320
+    },
+    {
+      "name": "species-mango-near",
+      "triangles": 1232
+    },
+    {
+      "name": "prototype-pointed-hat",
+      "triangles": 1148
+    },
+    {
+      "name": "flora-pine-outline",
+      "triangles": 1004
+    },
+    {
+      "name": "species-acacia-near",
+      "triangles": 924
+    },
+    {
+      "name": "species-balete-far",
+      "triangles": 900
+    },
+    {
+      "name": "flora-crownFar",
+      "triangles": 858
+    },
+    {
+      "name": "flora-pine",
+      "triangles": 840
+    },
+    {
+      "name": "Mesh",
+      "triangles": 800
+    },
+    {
+      "name": "Mesh",
+      "triangles": 800
+    },
+    {
+      "name": "Mesh",
+      "triangles": 800
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "triangles": 796
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "triangles": 796
+    },
+    {
+      "name": "species-talisay-far",
+      "triangles": 689
+    },
+    {
+      "name": "prototype-leaf-current-1",
+      "triangles": 627
+    },
+    {
+      "name": "species-acacia-near",
+      "triangles": 600
+    },
+    {
+      "name": "species-banana-far",
+      "triangles": 560
+    },
+    {
+      "name": "species-mango-far",
+      "triangles": 552
+    },
+    {
+      "name": "flora-crown",
+      "triangles": 492
+    },
+    {
+      "name": "species-mango-near",
+      "triangles": 464
+    },
+    {
+      "name": "memory-tree-leaves",
+      "triangles": 448
+    },
+    {
+      "name": "prototype-shadow-face",
+      "triangles": 440
+    },
+    {
+      "name": "flora-bush",
+      "triangles": 420
+    },
+    {
+      "name": "species-agoho-far",
+      "triangles": 418
+    },
+    {
+      "name": "flora-log",
+      "triangles": 392
+    },
+    {
+      "name": "species-bamboo-far",
+      "triangles": 384
+    },
+    {
+      "name": "flora-mushroom",
+      "triangles": 368
+    },
+    {
+      "name": "species-acacia-far",
+      "triangles": 360
+    },
+    {
+      "name": "species-narra-far",
+      "triangles": 360
+    },
+    {
+      "name": "flora-lily",
+      "triangles": 360
+    },
+    {
+      "name": "species-balete-far",
+      "triangles": 345
+    },
+    {
+      "name": "prototype-leaf-current-0",
+      "triangles": 342
+    },
+    {
+      "name": "species-narra-far",
+      "triangles": 336
+    },
+    {
+      "name": "prototype-painted-crown",
+      "triangles": 332
+    },
+    {
+      "name": "prototype-painted-crown",
+      "triangles": 332
+    },
+    {
+      "name": "memory-bench",
+      "triangles": 300
+    },
+    {
+      "name": "memory-bench",
+      "triangles": 300
+    },
+    {
+      "name": "memory-bench",
+      "triangles": 300
+    },
+    {
+      "name": "memory-bench",
+      "triangles": 300
+    },
+    {
+      "name": "species-gabi-near",
+      "triangles": 300
+    },
+    {
+      "name": "memory-tree",
+      "triangles": 288
+    },
+    {
+      "name": "species-acacia-far",
+      "triangles": 276
+    },
+    {
+      "name": "Mesh",
+      "triangles": 272
+    },
+    {
+      "name": "flora-pineFar",
+      "triangles": 264
+    },
+    {
+      "name": "species-mango-far",
+      "triangles": 240
+    },
+    {
+      "name": "species-bamboo-far",
+      "triangles": 240
+    },
+    {
+      "name": "prototype-leaf-current-2",
+      "triangles": 171
+    },
+    {
+      "name": "prototype-boot",
+      "triangles": 168
+    },
+    {
+      "name": "prototype-boot",
+      "triangles": 168
+    },
+    {
+      "name": "Mesh",
+      "triangles": 168
+    },
+    {
+      "name": "Mesh",
+      "triangles": 168
+    },
+    {
+      "name": "Mesh",
+      "triangles": 168
+    },
+    {
+      "name": "Mesh",
+      "triangles": 168
+    },
+    {
+      "name": "Mesh",
+      "triangles": 168
+    },
+    {
+      "name": "flora-pine",
+      "triangles": 164
+    },
+    {
+      "name": "Mesh",
+      "triangles": 156
+    },
+    {
+      "name": "Mesh",
+      "triangles": 156
+    },
+    {
+      "name": "Mesh",
+      "triangles": 156
+    },
+    {
+      "name": "Mesh",
+      "triangles": 156
+    },
+    {
+      "name": "Mesh",
+      "triangles": 144
+    },
+    {
+      "name": "species-talisay-far",
+      "triangles": 130
+    },
+    {
+      "name": "forest-companions",
+      "triangles": 128
+    },
+    {
+      "name": "Mesh",
+      "triangles": 120
+    },
+    {
+      "name": "Mesh",
+      "triangles": 120
+    },
+    {
+      "name": "Mesh",
+      "triangles": 120
+    },
+    {
+      "name": "species-acacia-near",
+      "triangles": 116
+    },
+    {
+      "name": "species-agoho-far",
+      "triangles": 110
+    },
+    {
+      "name": "species-coconut-far",
+      "triangles": 80
+    },
+    {
+      "name": "species-banana-far",
+      "triangles": 80
+    },
+    {
+      "name": "species-sampaguita-far",
+      "triangles": 76
+    },
+    {
+      "name": "species-coconut-far",
+      "triangles": 48
+    },
+    {
+      "name": "Mesh",
+      "triangles": 36
+    },
+    {
+      "name": "Mesh",
+      "triangles": 36
+    },
+    {
+      "name": "prototype-traveler-contact",
+      "triangles": 32
+    },
+    {
+      "name": "Mesh",
+      "triangles": 2
+    },
+    {
+      "name": "species-narra-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-coconut-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-banana-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-bamboo-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-balete-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-talisay-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-agoho-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-narra-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-talisay-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-narra-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-talisay-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-banana-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-banana-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-coconut-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-bamboo-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-balete-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-agoho-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-coconut-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-bamboo-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-balete-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-agoho-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-kalachuchi-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-fern-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-fern-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-gabi-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-cogon-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-cogon-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-santan-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-santan-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-gumamela-near",
+      "triangles": 0
+    },
+    {
+      "name": "species-gumamela-far",
+      "triangles": 0
+    },
+    {
+      "name": "species-narra-outline",
+      "triangles": 0
+    },
+    {
+      "name": "species-balete-outline",
+      "triangles": 0
+    },
+    {
+      "name": "species-talisay-outline",
+      "triangles": 0
+    },
+    {
+      "name": "species-agoho-outline",
+      "triangles": 0
+    }
+  ],
+  "metrics": {
+    "frame": 4,
+    "calls": 108,
+    "triangles": 376454,
+    "points": 0,
+    "lines": 0
+  }
+}

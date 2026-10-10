@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-10T13:07:30.955Z",
+  "command": "npm run build",
+  "exitCode": 0,
+  "typescript": true,
+  "transformedModules": 1681,
+  "productionJavaScriptChunks": 7,
+  "sceneBundleKilobytes": 939.59,
+  "sceneBundleGzipKilobytes": 262.42,
+  "formatCheckPassed": true,
+  "formatCommand": "node node_modules/prettier/bin/prettier.cjs --check src tests scripts *.ts *.json index.html VISUAL-PASS-7-REVIEW.html",
+  "functionalStats": {
+    "startTime": "2026-10-10T12:57:58.425Z",
+    "duration": 493786.206,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "beforeCaptures": 32,
+  "afterCaptures": 32,
+  "sourceEditsCompletedBeforeBuild": true
+}

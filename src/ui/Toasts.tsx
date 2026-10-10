@@ -1,9 +1,15 @@
+import { useText } from "../hooks/useText";
 import { useEffect, useRef, useState } from "react";
 import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { progressHint } from "../utils/progress";
 import { BrandLogo } from "./BrandLogo";
 export function Toasts() {
+  const textDictionary = useText();
+  const idleStage = useStore((s) => s.idleStage);
+  const guide = useStore((s) => s.fieldGuideOpen),
+    journal = useStore((s) => s.journalOpen),
+    dialogue = useStore((s) => s.oscarDialogue);
   const toast = useStore((s) => s.toast),
     phase = useStore((s) => s.phase),
     ready = useStore((s) => s.sceneReady),
@@ -15,7 +21,14 @@ export function Toasts() {
   const key = complete ? "complete" : `${collected}:${hung}`;
   const completionSeen = useRef(false);
   const [hint, setHint] = useState({ key, index: 0 });
-  const active = phase === "explore" && ready && !paused && !dedication;
+  const active =
+    phase === "explore" &&
+    ready &&
+    !paused &&
+    !dedication &&
+    !guide &&
+    !journal &&
+    !dialogue;
   const index =
     hint.key === key ? hint.index : complete && completionSeen.current ? 1 : 0;
   const text = progressHint(
@@ -23,6 +36,7 @@ export function Toasts() {
     hung,
     index,
     matchMedia("(pointer: coarse)").matches,
+    textDictionary,
   );
 
   useEffect(() => {
@@ -51,7 +65,13 @@ export function Toasts() {
     return () => clearTimeout(timer);
   }, [toast, active]);
 
-  const message = toast ?? text;
+  const message =
+    toast ??
+    (idleStage >= 20 && idleStage < 300 && !complete
+      ? collected > hung
+        ? textDictionary.hints[1]
+        : textDictionary.idleHint
+      : text);
   return active && message ? (
     <div className="toast" key={message} role="status">
       <BrandLogo />

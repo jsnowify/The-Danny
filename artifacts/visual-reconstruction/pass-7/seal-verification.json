@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-10-10T13:46:13.387Z",
+  "sourceSnapshots": 163,
+  "evidenceFiles": 112,
+  "productionFiles": 20,
+  "allHashesMatch": true,
+  "parentCheckpointPreserved": true,
+  "ownerVisualApproval": false,
+  "remoteDeployment": false
+}

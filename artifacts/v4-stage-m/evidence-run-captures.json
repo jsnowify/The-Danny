@@ -1,0 +1,35 @@
+[
+  {
+    "name": "captures",
+    "command": [
+      "node",
+      "scripts/capture-v4-audit.mjs",
+      "--stage=m",
+      "--label=verification",
+      "--extra",
+      "--motion=normal"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 186382
+  },
+  {
+    "name": "flora",
+    "command": [
+      "node",
+      "scripts/capture-v4-flora.mjs",
+      "--stage=m"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 151742
+  },
+  {
+    "name": "companions",
+    "command": [
+      "node",
+      "scripts/capture-v4-companions.mjs",
+      "--stage=m"
+    ],
+    "exitCode": 1,
+    "elapsedMs": 98966
+  }
+]

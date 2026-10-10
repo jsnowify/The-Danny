@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">The Danny Flower</title>
+  <desc id="desc">Five-petal flower emblem with sage and emerald petals, golden stamens and a luminous cream center, colored for The Danny's memorial forest.</desc>
+  <defs>
+    <radialGradient id="petal" cx="50%" cy="96%" r="98%" fx="50%" fy="96%">
+      <stop offset="0" stop-color="#fff2d3"/>
+      <stop offset="0.24" stop-color="#e6ecd8"/>
+      <stop offset="0.47" stop-color="#b8cf76"/>
+      <stop offset="0.72" stop-color="#87a878"/>
+      <stop offset="1" stop-color="#39765a"/>
+    </radialGradient>
+    <linearGradient id="stamen" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#fff2d3"/>
+      <stop offset="1" stop-color="#e9be74"/>
+    </linearGradient>
+    <linearGradient id="anther" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9be74"/><stop offset="1" stop-color="#b08b4d"/></linearGradient>
+    <path id="petalShape" d="M512 513 C471 482 410 408 402 312 C392 199 436 106 512 91 C588 106 632 199 622 312 C614 408 553 482 512 513 Z"/>
+    <path id="filament" d="M512 526 Q498 459 475 416" fill="none" stroke="url(#stamen)" stroke-width="9" stroke-linecap="round"/>
+    <ellipse id="tip" cx="475" cy="415" rx="12" ry="23" transform="rotate(-24 475 415)" fill="url(#anther)"/>
+  </defs>
+  <!-- Each petal remains a clean, editable vector path. -->
+  <g stroke="#fff2d3" stroke-opacity=".6" stroke-width="4" stroke-linejoin="round">
+    <use href="#petalShape" fill="url(#petal)"/>
+    <use href="#petalShape" transform="rotate(72 512 512)" fill="url(#petal)"/>
+    <use href="#petalShape" transform="rotate(144 512 512)" fill="url(#petal)"/>
+    <use href="#petalShape" transform="rotate(216 512 512)" fill="url(#petal)"/>
+    <use href="#petalShape" transform="rotate(288 512 512)" fill="url(#petal)"/>
+  </g>
+  <!-- Filaments and anthers -->
+  <g>
+    <use href="#filament"/><use href="#filament" transform="rotate(58 512 512)"/>
+    <use href="#filament" transform="rotate(116 512 512)"/>
+    <use href="#filament" transform="rotate(174 512 512)"/>
+    <use href="#filament" transform="rotate(232 512 512)"/>
+    <use href="#filament" transform="rotate(290 512 512)"/>
+    <use href="#tip"/><use href="#tip" transform="rotate(58 512 512)"/>
+    <use href="#tip" transform="rotate(116 512 512)"/>
+    <use href="#tip" transform="rotate(174 512 512)"/>
+    <use href="#tip" transform="rotate(232 512 512)"/>
+    <use href="#tip" transform="rotate(290 512 512)"/>
+  </g>
+  <g fill="#fff2d3"><circle cx="512" cy="512" r="16"/><circle cx="493" cy="513" r="10"/><circle cx="532" cy="513" r="10"/><circle cx="505" cy="494" r="10"/><circle cx="524" cy="494" r="10"/></g>
+</svg>

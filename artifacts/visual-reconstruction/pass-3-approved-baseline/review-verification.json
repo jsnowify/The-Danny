@@ -1,0 +1,159 @@
+{
+  "checked": [
+    {
+      "view": "woodland-0",
+      "viewport": "1918x918"
+    },
+    {
+      "view": "clearing-0",
+      "viewport": "1918x918"
+    },
+    {
+      "view": "clearing-8",
+      "viewport": "1918x918"
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": "1918x918"
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": "1918x918"
+    },
+    {
+      "view": "woodland-0",
+      "viewport": "390x844"
+    },
+    {
+      "view": "clearing-0",
+      "viewport": "390x844"
+    },
+    {
+      "view": "clearing-8",
+      "viewport": "390x844"
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": "390x844"
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": "390x844"
+    },
+    {
+      "view": "woodland-0",
+      "viewport": "320x568"
+    },
+    {
+      "view": "clearing-0",
+      "viewport": "320x568"
+    },
+    {
+      "view": "clearing-8",
+      "viewport": "320x568"
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": "320x568"
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": "320x568"
+    },
+    {
+      "view": "woodland-0",
+      "viewport": "844x390"
+    },
+    {
+      "view": "clearing-0",
+      "viewport": "844x390"
+    },
+    {
+      "view": "clearing-8",
+      "viewport": "844x390"
+    },
+    {
+      "view": "clearing-side-8",
+      "viewport": "844x390"
+    },
+    {
+      "view": "tree-return-8",
+      "viewport": "844x390"
+    },
+    {
+      "view": "narra",
+      "progress": "0"
+    },
+    {
+      "view": "narra",
+      "progress": "8"
+    },
+    {
+      "view": "acacia",
+      "progress": "0"
+    },
+    {
+      "view": "acacia",
+      "progress": "8"
+    },
+    {
+      "view": "mango",
+      "progress": "0"
+    },
+    {
+      "view": "mango",
+      "progress": "8"
+    },
+    {
+      "view": "balete",
+      "progress": "0"
+    },
+    {
+      "view": "balete",
+      "progress": "8"
+    },
+    {
+      "view": "talisay",
+      "progress": "0"
+    },
+    {
+      "view": "talisay",
+      "progress": "8"
+    },
+    {
+      "view": "agoho",
+      "progress": "0"
+    },
+    {
+      "view": "agoho",
+      "progress": "8"
+    },
+    {
+      "view": "coconut",
+      "progress": "0"
+    },
+    {
+      "view": "coconut",
+      "progress": "8"
+    },
+    {
+      "view": "banana",
+      "progress": "0"
+    },
+    {
+      "view": "banana",
+      "progress": "8"
+    },
+    {
+      "view": "bamboo",
+      "progress": "0"
+    },
+    {
+      "view": "bamboo",
+      "progress": "8"
+    }
+  ],
+  "keyboardSlider": true,
+  "phonePageFits": true,
+  "errors": []
+}

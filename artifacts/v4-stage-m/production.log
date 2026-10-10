@@ -1,0 +1,2 @@
+Production smoke: title → dedication → forest → reset; single dedication/nonbreaking years, v1 migration and legacy cleanup verified; no raw placeholders or application warnings; no browser errors or test API.
+Chromium software-GL driver diagnostics: 4 ReadPixels stall warnings.

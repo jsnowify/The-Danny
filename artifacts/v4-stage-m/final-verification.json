@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-10T01:24:36.198Z",
+  "completedScope": "E-M and specification sections 41-45",
+  "build": "PASS",
+  "format": "PASS",
+  "diffWhitespace": "PASS",
+  "lint": "NOT CONFIGURED",
+  "fullSuite": {
+    "startTime": "2026-10-10T00:17:39.119Z",
+    "duration": 983758.103,
+    "expected": 44,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "focusedAfterCleanup": {
+    "startTime": "2026-10-10T01:08:16.919Z",
+    "duration": 92582.789,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "compact": "PASS",
+  "uniqueTestCasesCovered": 45,
+  "full45CaseRunClaimed": false,
+  "vercelUsedConfigFields": true,
+  "localProduction": "PASS",
+  "referenceComparisonAndFinale": "PASS",
+  "isolatedPerformanceSamples": 5,
+  "resourceCycles": 5,
+  "staticRouteGoals": 32,
+  "regressionChecklistItems": 52,
+  "visualComparisonAspects": 15,
+  "remoteDeployment": false,
+  "limits": "Physical desktop/mobile FPS, actual phones, native-speaker/personal content review, long-session memory stability and live Vercel behavior remain unverified."
+}

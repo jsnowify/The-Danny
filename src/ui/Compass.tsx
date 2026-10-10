@@ -1,9 +1,11 @@
+import { useText } from "../hooks/useText";
 import { useEffect, useRef } from "react";
-import { MEMORIES, TEXT } from "../config";
+import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { traveler } from "../scene/runtime";
 import { Icon } from "./Icons";
 export function Compass() {
+  const TEXT = useText();
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let frame = 0;
@@ -23,7 +25,9 @@ export function Compass() {
       }
       if (ref.current) {
         ref.current.style.opacity =
-          nearest !== Infinity && traveler.idle > 4 ? "1" : "0.35";
+          nearest !== Infinity && useStore.getState().idleStage >= 10
+            ? "1"
+            : "0.35";
         ref.current.style.setProperty("--bearing", `${angle}rad`);
       }
       frame = requestAnimationFrame(update);

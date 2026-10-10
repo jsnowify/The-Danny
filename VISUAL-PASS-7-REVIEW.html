@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny — Pass 7 review</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #26392e;
+        background: #f3f1e7;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 1120px;
+        margin: auto;
+        padding: 28px 20px 60px;
+      }
+      h1 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(30px, 5vw, 48px);
+        margin: 10px 0;
+      }
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        margin-top: 36px;
+      }
+      p {
+        max-width: 80ch;
+        line-height: 1.65;
+      }
+      a {
+        color: #315f48;
+      }
+      .links,
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 22px 0;
+      }
+      .links a {
+        padding: 11px 16px;
+        border: 1px solid #8d9c87;
+        border-radius: 7px;
+        text-decoration: none;
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 14px;
+      }
+      select {
+        padding: 9px;
+        color: inherit;
+        background: #fffdf6;
+        border: 1px solid #8d9c87;
+        border-radius: 5px;
+        max-width: 100%;
+      }
+      .frame {
+        position: relative;
+        background: #d8dfd5;
+        overflow: hidden;
+        border-radius: 9px;
+      }
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      #before {
+        position: absolute;
+        inset: 0;
+        clip-path: inset(0 50% 0 0);
+      }
+      .badge {
+        position: absolute;
+        top: 12px;
+        padding: 7px 10px;
+        background: #f8f5e9ed;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+      .before {
+        left: 12px;
+      }
+      .after {
+        right: 12px;
+      }
+      #divider {
+        position: absolute;
+        inset: 0;
+        left: 50%;
+        border-left: 2px solid #f8f5e9;
+        pointer-events: none;
+      }
+      .slider {
+        margin-top: 14px;
+      }
+      input {
+        width: 100%;
+        accent-color: #477459;
+      }
+      video {
+        width: 100%;
+        border-radius: 9px;
+        background: #d8dfd5;
+      }
+      .table {
+        overflow-x: auto;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 9px;
+        border-bottom: 1px solid #c5cbb9;
+        white-space: nowrap;
+      }
+      :focus-visible {
+        outline: 3px solid #8c722c;
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>THE DANNY / FINAL VISUAL PASS</p>
+      <h1>Performance and regression</h1>
+      <p>
+        Passes 4–6 are the frozen foundation. Pass 7 preserves the painterly
+        geometry, pigments, paper textures, lighting and camera. It skips forest
+        instances outside both the view and shadow volume, and avoids rendering
+        flowers with zero scale or growth batches outside the camera.
+      </p>
+      <div class="links">
+        <a href="http://localhost:4173/">Test the local production build</a>
+        <a href="VISUAL-PASS-7-REPORT.md">Read the verification report</a>
+        <a href="artifacts/visual-reconstruction/pass-7/manifest.json"
+          >Open the sealed checkpoint</a
+        >
+      </div>
+      <div class="controls">
+        <label
+          >Scene<select id="scene">
+            <option value="clearing-0">Empty clearing</option>
+            <option value="clearing-8">Completed clearing</option>
+            <option value="clearing-side-8">Clearing from the side</option>
+            <option value="tree-return-8">Returning to the tree</option>
+            <option value="woodland-0">Woodland</option>
+            <option value="deep-forest-0">Deep forest</option>
+            <option value="pond-8">Pond</option>
+            <option value="grove-8">Grove</option>
+          </select></label
+        >
+        <label
+          >Viewport<select id="viewport">
+            <option value="1918x918">Desktop · 1918 × 918</option>
+            <option value="390x844">Portrait · 390 × 844</option>
+            <option value="320x568">Small portrait · 320 × 568</option>
+            <option value="844x390">Landscape phone · 844 × 390</option>
+          </select></label
+        >
+      </div>
+      <div class="frame" id="frame">
+        <img id="after" alt="Pass 7 render" /><img
+          id="before"
+          alt="Frozen Pass 6 render"
+        />
+        <span class="badge before">Pass 6 baseline</span
+        ><span class="badge after">Pass 7</span>
+        <div id="divider"></div>
+      </div>
+      <label class="slider" for="split"
+        >Compare baseline and Pass 7<input
+          id="split"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+      /></label>
+      <p>
+        The 32 pairs use identical camera settings and three seconds of
+        reduced-motion settling. Separate checks render the same scene instant
+        with optimization enabled and disabled: 48 combinations of scene,
+        quality and viewport preserve visible pixels. Actor routines can be at
+        different moments in the independent screenshots.
+      </p>
+      <h2>Actual movement</h2>
+      <video
+        controls
+        muted
+        playsinline
+        preload="metadata"
+        src="artifacts/visual-reconstruction/pass-7/verification/camera-walk.webm"
+      ></video>
+      <p>
+        Recorded browser movement with a held ground pointer. Playback duration
+        and browser rendering measurements are recorded in the report.
+      </p>
+      <h2>Measured rendering</h2>
+      <p>
+        One software WebGL browser, explicit quality settings, matching
+        viewports, sequential 15-second observations after settling. These
+        figures describe this test environment; physical GPU performance remains
+        unmeasured.
+      </p>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Scene / tier</th>
+              <th>Baseline FPS</th>
+              <th>Pass 7 FPS</th>
+              <th>Triangles removed</th>
+            </tr>
+          </thead>
+          <tbody id="measurements"></tbody>
+        </table>
+      </div>
+      <p>
+        <a href="artifacts/visual-reconstruction/pass-7/performance.json"
+          >Raw measurements</a
+        >
+        ·
+        <a
+          href="artifacts/visual-reconstruction/pass-7/verification/visibility.json"
+          >Pixel equivalence checks</a
+        >
+      </p>
+    </main>
+    <script>
+      const frame = document.querySelector("#frame"),
+        before = document.querySelector("#before"),
+        after = document.querySelector("#after");
+      function show() {
+        const scene = document.querySelector("#scene").value,
+          viewport = document.querySelector("#viewport").value;
+        const [width, height] = viewport.split("x").map(Number);
+        frame.style.aspectRatio = `${width} / ${height}`;
+        before.src = `artifacts/visual-reconstruction/pass-7/before/iteration-01/live-${scene}-${viewport}.png`;
+        after.src = `artifacts/visual-reconstruction/pass-7/after/iteration-01/live-${scene}-${viewport}.png`;
+        before.alt = `Pass 6 baseline: ${scene}, ${viewport}`;
+        after.alt = `Pass 7: ${scene}, ${viewport}`;
+      }
+      document.querySelector("#scene").addEventListener("change", show);
+      document.querySelector("#viewport").addEventListener("change", show);
+      document.querySelector("#split").addEventListener("input", (event) => {
+        const split = event.target.value;
+        before.style.clipPath = `inset(0 ${100 - split}% 0 0)`;
+        document.querySelector("#divider").style.left = `${split}%`;
+      });
+      show();
+      fetch("artifacts/visual-reconstruction/pass-7/performance.json")
+        .then((r) => {
+          if (!r.ok) throw new Error("Measurements unavailable");
+          return r.json();
+        })
+        .then((data) => {
+          for (const item of data.results) {
+            const row = document.createElement("tr");
+            for (const value of [
+              item.case.name,
+              item.before.fps.toFixed(2),
+              item.after.fps.toFixed(2),
+              `${item.triangleReductionPercent.toFixed(1)}%`,
+            ]) {
+              const cell = document.createElement("td");
+              cell.textContent = value;
+              row.append(cell);
+            }
+            document.querySelector("#measurements").append(row);
+          }
+        })
+        .catch(() => {
+          document.querySelector("#measurements").textContent =
+            "Measurements are being prepared.";
+        });
+    </script>
+  </body>
+</html>

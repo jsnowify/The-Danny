@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-10-10T02:47:09.487Z",
+  "ui": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "frame": {
+        "traveler": {
+          "left": 145.66287265815112,
+          "right": 175.8758400821196,
+          "top": 378.2276266556958,
+          "bottom": 423.4487212731979
+        },
+        "button": {
+          "left": 66,
+          "right": 254,
+          "top": 433,
+          "bottom": 483,
+          "width": 188,
+          "height": 50
+        },
+        "overlapsTraveler": false,
+        "span": 17.747081922330906
+      },
+      "finale": true,
+      "returnedToExplore": true,
+      "saveContainsEightHung": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "frame": {
+        "traveler": {
+          "left": 170.58729774384238,
+          "right": 222.03276240421383,
+          "top": 552.8867454345558,
+          "bottom": 629.8874647747696
+        },
+        "button": {
+          "left": 96.9296875,
+          "right": 293.0703125,
+          "top": 629,
+          "bottom": 679,
+          "width": 196.140625,
+          "height": 50
+        },
+        "overlapsTraveler": true,
+        "span": 15.487001956967827
+      },
+      "finale": false,
+      "returnedToExplore": false,
+      "saveContainsEightHung": false
+    }
+  ],
+  "production": null,
+  "motion": null,
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: Hang prompt covers traveler at 390x844\n\ntrue !== false\n"
+}

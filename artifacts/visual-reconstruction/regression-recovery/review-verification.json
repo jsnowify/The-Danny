@@ -1,0 +1,86 @@
+{
+  "checked": [
+    {
+      "viewport": "1918x918",
+      "view": "clearing-0"
+    },
+    {
+      "viewport": "1918x918",
+      "view": "clearing-8"
+    },
+    {
+      "viewport": "1918x918",
+      "view": "clearing-side-8"
+    },
+    {
+      "viewport": "1918x918",
+      "view": "tree-return-8"
+    },
+    {
+      "viewport": "1918x918",
+      "view": "woodland-0"
+    },
+    {
+      "viewport": "390x844",
+      "view": "clearing-0"
+    },
+    {
+      "viewport": "390x844",
+      "view": "clearing-8"
+    },
+    {
+      "viewport": "390x844",
+      "view": "clearing-side-8"
+    },
+    {
+      "viewport": "390x844",
+      "view": "tree-return-8"
+    },
+    {
+      "viewport": "390x844",
+      "view": "woodland-0"
+    },
+    {
+      "viewport": "320x568",
+      "view": "clearing-0"
+    },
+    {
+      "viewport": "320x568",
+      "view": "clearing-8"
+    },
+    {
+      "viewport": "320x568",
+      "view": "clearing-side-8"
+    },
+    {
+      "viewport": "320x568",
+      "view": "tree-return-8"
+    },
+    {
+      "viewport": "320x568",
+      "view": "woodland-0"
+    },
+    {
+      "viewport": "844x390",
+      "view": "clearing-0"
+    },
+    {
+      "viewport": "844x390",
+      "view": "clearing-8"
+    },
+    {
+      "viewport": "844x390",
+      "view": "clearing-side-8"
+    },
+    {
+      "viewport": "844x390",
+      "view": "tree-return-8"
+    },
+    {
+      "viewport": "844x390",
+      "view": "woodland-0"
+    }
+  ],
+  "keyboardSlider": true,
+  "errors": []
+}

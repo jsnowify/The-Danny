@@ -10,13 +10,14 @@ export function progressHint(
   hung: number,
   index: number,
   touch: boolean,
+  text: typeof TEXT = TEXT,
 ): string | null {
-  if (hung >= MEMORIES.length) return index === 0 ? TEXT.home : null;
-  if (collected > hung) return index === 0 ? TEXT.hints[1] : null;
+  if (hung >= MEMORIES.length) return index === 0 ? text.home : null;
+  if (collected > hung) return index === 0 ? text.hints[1] : null;
   if (collected === 0) {
-    if (index === 0) return touch ? TEXT.touchWalk : TEXT.walk;
-    if (index === 1) return TEXT.hints[0];
+    if (index === 0) return touch ? text.touchWalk : text.walk;
+    if (index === 1) return text.hints[0];
     return null;
   }
-  return index === 0 ? TEXT.hints[0] : null;
+  return index === 0 ? text.hints[0] : null;
 }

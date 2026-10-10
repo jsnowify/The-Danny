@@ -3,12 +3,21 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import { MEMORIES } from "./config";
 import { playSound } from "./audio/bridge";
 import { revivalRadiusFor } from "./utils/progress";
+import { SPECIES_IDS } from "./config/discoveries";
+import { COMPANION_BY_ID } from "./config/companions";
+import { animals } from "./features/animals/simulation";
+import { traveler } from "./scene/runtime";
+import { DICTIONARIES } from "./config/localization";
+import type { IdleStage } from "./features/idleClock";
+import type { RegionId } from "./config/regions";
 import {
   createCompatibleStorage,
   normalizeProgress,
   LEGACY_SAVE_KEY,
   SAVE_KEY,
   SAVE_VERSION,
+  emptyDiscoveries,
+  type DiscoveryProgress,
 } from "./persistence";
 
 export type Phase =
@@ -24,13 +33,17 @@ export type Tier = "high" | "medium" | "low";
 export type Settings = {
   muted: boolean;
   volume: number;
+  musicVolume: number;
+  natureVolume: number;
+  effectsVolume: number;
+  customTrackUrl: string;
   quality: "auto" | Tier;
   reducedMotion: boolean;
   largeText: boolean;
   skipIntro: boolean;
-  musicSource: "track" | "generated";
+  musicSource: "track" | "generated" | "custom";
 };
-type PreviewBackup = {
+type PreviewBackup = Omit<DiscoveryProgress, "language"> & {
   collected: string[];
   hung: string[];
   introSeen: boolean;
@@ -39,7 +52,7 @@ type PreviewBackup = {
   activeMemory: string | null;
   toast: string | null;
 };
-type State = {
+type State = DiscoveryProgress & {
   phase: Phase;
   collected: string[];
   hung: string[];
@@ -49,13 +62,26 @@ type State = {
   tier: Tier;
   paused: boolean;
   dedicationOpen: boolean;
+  fieldGuideOpen: boolean;
+  journalOpen: boolean;
+  journalTab: string;
+  nearCompanion: string | null;
+  nearCompanions: string[];
+  nearOscar: boolean;
+  oscarDialogue: boolean;
+  idleStage: IdleStage;
+  discoverCompanions: (ids: string[]) => void;
+  interactCompanion: (id: string) => void;
+  talkOscar: () => void;
+  regionId: RegionId;
+  discoverSpecies: (ids: string[]) => void;
   sceneReady: boolean;
   activeMemory: string | null;
   nearMemory: string | null;
   nearTree: boolean;
   toast: string | null;
   audioFailed: boolean;
-  musicPlayback: "loading" | "track" | "generated" | "fallback";
+  musicPlayback: "loading" | "track" | "generated" | "fallback" | "custom";
   revivalRadius: number;
   previewBackup: PreviewBackup | null;
   previewProgress?: (count: number | null) => void;
@@ -84,9 +110,14 @@ export const useStore = create<State>()(
       hung: [],
       hanging: [],
       introSeen: false,
+      ...emptyDiscoveries(),
       settings: {
         muted: false,
         volume: 0.65,
+        musicVolume: 1,
+        natureVolume: 1,
+        effectsVolume: 1,
+        customTrackUrl: "",
         quality: "auto",
         reducedMotion: reduced,
         largeText: false,
@@ -96,6 +127,103 @@ export const useStore = create<State>()(
       tier: mobile ? "medium" : "high",
       paused: false,
       dedicationOpen: false,
+      fieldGuideOpen: false,
+      journalOpen: false,
+      journalTab: "companions",
+      nearCompanion: null,
+      nearCompanions: [],
+      nearOscar: false,
+      oscarDialogue: false,
+      idleStage: 0,
+      discoverCompanions: (ids) => {
+        const s = get();
+        if (
+          s.previewBackup ||
+          s.phase !== "explore" ||
+          s.paused ||
+          s.fieldGuideOpen ||
+          s.journalOpen
+        )
+          return;
+        const cats = [
+          ...new Set([
+            ...s.discoveredCats,
+            ...ids.filter((id) => COMPANION_BY_ID[id]?.species === "cat"),
+          ]),
+        ];
+        const dogs = [
+          ...new Set([
+            ...s.discoveredDogs,
+            ...ids.filter((id) => COMPANION_BY_ID[id]?.species === "dog"),
+          ]),
+        ];
+        if (
+          cats.length !== s.discoveredCats.length ||
+          dogs.length !== s.discoveredDogs.length
+        )
+          set({ discoveredCats: cats, discoveredDogs: dogs });
+      },
+      interactCompanion: (id) => {
+        const s = get(),
+          a = animals.get(id),
+          c = COMPANION_BY_ID[id];
+        if (
+          !a ||
+          !c ||
+          s.previewBackup ||
+          s.phase !== "explore" ||
+          s.paused ||
+          s.journalOpen ||
+          s.fieldGuideOpen ||
+          s.oscarDialogue ||
+          Math.hypot(a.x - traveler.x, a.z - traveler.z) > 2.7
+        )
+          return;
+        a.interaction = 3;
+        a.followUntil = a.clock + 12;
+        get().discoverCompanions([id]);
+        if (c.species === "cat")
+          set({ interactedCats: [...new Set([...s.interactedCats, id])] });
+        else set({ interactedDogs: [...new Set([...s.interactedDogs, id])] });
+        set({ toast: `${DICTIONARIES[s.language].sharedMoment} ${c.name}.` });
+        playSound(c.species === "cat" ? "cat" : "dog");
+      },
+      talkOscar: () => {
+        const s = get();
+        if (
+          s.phase === "explore" &&
+          s.nearOscar &&
+          !s.paused &&
+          !s.journalOpen &&
+          !s.fieldGuideOpen
+        ) {
+          set({
+            oscarDialogue: true,
+            ...(s.previewBackup ? {} : { metOscar: true }),
+          });
+        }
+      },
+      regionId: "clearing",
+      discoverSpecies: (ids) => {
+        const s = get();
+        if (
+          s.previewBackup ||
+          s.phase !== "explore" ||
+          s.paused ||
+          s.fieldGuideOpen
+        )
+          return;
+        const next = [
+          ...new Set([
+            ...s.discoveredSpecies,
+            ...ids.filter((id) =>
+              (SPECIES_IDS as readonly string[]).includes(id),
+            ),
+          ]),
+        ];
+        if (next.length !== s.discoveredSpecies.length)
+          set({ discoveredSpecies: next });
+      },
       sceneReady: false,
       activeMemory: null,
       nearMemory: null,
@@ -132,6 +260,13 @@ export const useStore = create<State>()(
                 hanging: s.hanging,
                 activeMemory: s.activeMemory,
                 toast: s.toast,
+                discoveredSpecies: s.discoveredSpecies,
+                discoveredCats: s.discoveredCats,
+                interactedCats: s.interactedCats,
+                discoveredDogs: s.discoveredDogs,
+                interactedDogs: s.interactedDogs,
+                metOscar: s.metOscar,
+                finaleSeen: s.finaleSeen,
               };
               set({
                 previewBackup: backup,
@@ -158,7 +293,11 @@ export const useStore = create<State>()(
         if (
           validIds.has(id) &&
           (s.phase === "explore" || s.phase === "finale") &&
-          !s.paused
+          !s.paused &&
+          !s.journalOpen &&
+          !s.fieldGuideOpen &&
+          !s.oscarDialogue &&
+          !s.dedicationOpen
         ) {
           playSound("paper");
           set({ activeMemory: id, phase: "viewer" });
@@ -195,10 +334,13 @@ export const useStore = create<State>()(
         set((s) => ({
           hanging: [],
           phase: s.hung.length === MEMORIES.length ? "finale" : "explore",
+          finaleSeen: s.finaleSeen || s.hung.length === MEMORIES.length,
         })),
       reset: () => {
         safeStorage.removeItem(LEGACY_SAVE_KEY);
         set({
+          ...emptyDiscoveries(),
+          language: get().language,
           collected: [],
           hung: [],
           hanging: [],
@@ -210,6 +352,14 @@ export const useStore = create<State>()(
           toast: null,
           sceneReady: false,
           dedicationOpen: false,
+          fieldGuideOpen: false,
+          journalOpen: false,
+          nearCompanion: null,
+          nearCompanions: [],
+          nearOscar: false,
+          oscarDialogue: false,
+          idleStage: 0,
+          regionId: "clearing",
           revivalRadius: 0,
           previewBackup: null,
         });
@@ -224,6 +374,15 @@ export const useStore = create<State>()(
         collected: s.previewBackup?.collected ?? s.collected,
         hung: s.previewBackup?.hung ?? s.hung,
         introSeen: s.previewBackup?.introSeen ?? s.introSeen,
+        discoveredSpecies:
+          s.previewBackup?.discoveredSpecies ?? s.discoveredSpecies,
+        discoveredCats: s.previewBackup?.discoveredCats ?? s.discoveredCats,
+        interactedCats: s.previewBackup?.interactedCats ?? s.interactedCats,
+        discoveredDogs: s.previewBackup?.discoveredDogs ?? s.discoveredDogs,
+        interactedDogs: s.previewBackup?.interactedDogs ?? s.interactedDogs,
+        metOscar: s.previewBackup?.metOscar ?? s.metOscar,
+        finaleSeen: s.previewBackup?.finaleSeen ?? s.finaleSeen,
+        language: s.language,
         settings: s.settings,
       }),
       migrate: (persisted) => normalizeProgress(persisted),

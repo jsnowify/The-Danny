@@ -1,0 +1,3806 @@
+{
+  "recordedAt": "2026-10-10T12:06:53.134Z",
+  "status": "Ready for owner visual review",
+  "authorizedPasses": [
+    4,
+    5,
+    6
+  ],
+  "userApproved": false,
+  "pass7Started": false,
+  "baseline": {
+    "path": "artifacts/visual-reconstruction/passes-4-6/baseline.json",
+    "bytes": 30308,
+    "sha256": "177d6aecb563f38ddcfe4396fc00aa5d1651e2dd7dab81881df8e694932347c1"
+  },
+  "parentManifest": {
+    "path": "artifacts/reference-motion/manifest.json",
+    "sha256": "d0f476bf25517728a6c48479bbb3d3ad1219c312f1560e45ae34001a7d5c822d"
+  },
+  "checkpointFiles": [
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/manifest.json",
+      "bytes": 30952,
+      "sha256": "6ae0f5ecd6beb71595e80678d06bd4b97a2172ae2f64461291a4705da106ed5c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/manifest.json",
+      "bytes": 31309,
+      "sha256": "61f7db1a691438ea7faf84d4c7ece76c6b6f150eca98c101ba8f6917b53e59c8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/manifest.json",
+      "bytes": 32345,
+      "sha256": "a0301253d23a99d1062e5b1437175f701e69d235537d12b3463c3fc6ffcdccff"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".vercelignore",
+      "bytes": 100,
+      "sha256": "49b21b5ef4d792c00449de26dad651e632b21dead65c3d77affc7e32b6f53039",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/.vercelignore"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 2770,
+      "sha256": "ec59362e46b3199e45be3b527dd0086682df404cc855fa332d3e4c82d897f83b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/DEPLOYMENT.md"
+    },
+    {
+      "path": "PERSONALIZATION.md",
+      "bytes": 4920,
+      "sha256": "e77956b598eb58bc78bef5ddcce722b100b84694d8628b9dafe085189852f3d8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/PERSONALIZATION.md"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7279,
+      "sha256": "6819aed6cdfec6e71c2dac81364d95511d40b1821d3c3b26cd49f2a465f967e1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/README.md"
+    },
+    {
+      "path": "VISUAL-PASS-4-REPORT.md",
+      "bytes": 2016,
+      "sha256": "2f675af5fd55d06e248df0d2a42ad5d7521387293c411fb4b999edc8bb5ea6be",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/VISUAL-PASS-4-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASS-5-REPORT.md",
+      "bytes": 2681,
+      "sha256": "d12ba338393ccc97de833baa773f7da99a46f6aa7f3675b41be3c2be37bf4317",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/VISUAL-PASS-5-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASS-6-REPORT.md",
+      "bytes": 9974,
+      "sha256": "aa9aff8d9ddb45d2e07a778ea9ecfaf73bbde75620bf4a85648b8dbb6587191e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/VISUAL-PASS-6-REPORT.md"
+    },
+    {
+      "path": "VISUAL-PASSES-4-6-REVIEW.html",
+      "bytes": 13445,
+      "sha256": "d62b9058e70f7300218d09597df0ee498dbbb105fea3500d9028e7ef0d885e77",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/VISUAL-PASSES-4-6-REVIEW.html"
+    },
+    {
+      "path": "index.html",
+      "bytes": 460,
+      "sha256": "cc4eb1eafbb32a7ef6705b5fb71d4c906d52dc1334342a3b1491651b6ccbd43a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/index.html"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 125124,
+      "sha256": "19167416a1dbc7ac9c3a7adf55fd2e2f684cc507a757d04146d10aef6bee545c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1077,
+      "sha256": "825d3128fb18ada6eebc2bbd3c96f48ce398be422cc2cb0e22ea8acae5e597a7",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/package.json"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 683,
+      "sha256": "043713d863becae6d4e8582d0b4dd161494eddeca3760aea249fbfde169aa916",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/playwright.config.ts"
+    },
+    {
+      "path": "scripts/ambient-production-smoke.mjs",
+      "bytes": 4212,
+      "sha256": "bc64c0c461d2d68b52fe0c8ee39a07697c28388df652caf60f917341b7d2f7a7",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/ambient-production-smoke.mjs"
+    },
+    {
+      "path": "scripts/capture-camera-study.mjs",
+      "bytes": 10961,
+      "sha256": "b78b8f6ef08968ccea0b6b8a8bb5228bc23e175d9d35ab5d82cfe9ae97971e7e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-camera-study.mjs"
+    },
+    {
+      "path": "scripts/capture-integration-motion.mjs",
+      "bytes": 9241,
+      "sha256": "3ad8cbe42ee2e7ae5cbe6cdacb21670f2b5f0a9bd8980911921cc6ffde8f4cc8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-integration-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-pass-3.mjs",
+      "bytes": 12034,
+      "sha256": "4182af13bcc85cd210be5415250f4c7d7fe9b7cb1b04ea9e1ddc4d1ffab52205",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-pass-3.mjs"
+    },
+    {
+      "path": "scripts/capture-recovered-pass-2.mjs",
+      "bytes": 11044,
+      "sha256": "1842fe348566248790ab0d2b8fe107e6dc5a96d24045fef7e16cb2c06ad42943",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-motion.mjs",
+      "bytes": 8958,
+      "sha256": "17af3b402f34e58af8bc09d8766facf9d0414405dea3e47089aaea71d7b9b76d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/capture-reference-rest.mjs",
+      "bytes": 12004,
+      "sha256": "708b4c1e5866d894266f48fa39a7dd6ddbf253112ee08a868ae1375c82e5257c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-reference-rest.mjs"
+    },
+    {
+      "path": "scripts/capture-style-prototype.mjs",
+      "bytes": 3624,
+      "sha256": "93a0c11f0e05b399debb8ae57610f7621e128b44aeeed4543f46b9dd6350bac1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-audit.mjs",
+      "bytes": 9647,
+      "sha256": "75e71fee37a1522807515ffe8759f663c249401b37a644b5b463c0578cde08c8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-v4-audit.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-companions.mjs",
+      "bytes": 9264,
+      "sha256": "6f43bc6dadbb7ea70a9e37a098a87359bb5bbb3e889514242e26c96275dbeded",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-v4-companions.mjs"
+    },
+    {
+      "path": "scripts/capture-v4-flora.mjs",
+      "bytes": 10171,
+      "sha256": "72050abd5fee44e610b4efd7acf1438f9c316bff5dfdd8bf1a36b98939c6c96f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-v4-flora.mjs"
+    },
+    {
+      "path": "scripts/capture-visual-integration.mjs",
+      "bytes": 13678,
+      "sha256": "745f97abda9824b0b50b8cba1ee9aeefe4064c7c345dd6b143a51587d121f866",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/capture-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/checkpoint-visual-integration.mjs",
+      "bytes": 2535,
+      "sha256": "d93c0081182e32a4b53080b78893cdbfc656f9a2757bb06fd56ae5d4126361f6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/checkpoint-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/export-ambient.mjs",
+      "bytes": 1818,
+      "sha256": "645fd1c78e62b41386d619f52c5877ceb37907bccfbe3c3760e0a544005a90e1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/export-ambient.mjs"
+    },
+    {
+      "path": "scripts/export-source.mjs",
+      "bytes": 7242,
+      "sha256": "e874d65789f0a90ebe628ed95342ba99507d9b83a20197d7c7ea69cf85f4d4ee",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/export-source.mjs"
+    },
+    {
+      "path": "scripts/export-stage-a.mjs",
+      "bytes": 1677,
+      "sha256": "012c2cb2c4598eaf7b3b4eb77df901782df6050403cdfd9cec2282309c4b5b20",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/export-stage-a.mjs"
+    },
+    {
+      "path": "scripts/export-v25-stage-a.mjs",
+      "bytes": 1456,
+      "sha256": "1318174f5ac9c3e41418765e95651116945782a8923e12364b2207f2a71a83aa",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/export-v25-stage-a.mjs"
+    },
+    {
+      "path": "scripts/extract-v4-references.ps1",
+      "bytes": 1132,
+      "sha256": "ba906da749a30945ee7e97dfa1030e55496afcfa665fdebe318645f21aeb4def",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/extract-v4-references.ps1"
+    },
+    {
+      "path": "scripts/measure-pass-3.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/measure-pass-3.mjs"
+    },
+    {
+      "path": "scripts/measure-reference-motion.mjs",
+      "bytes": 9443,
+      "sha256": "f6cf554be2b352eb8c2c349b453c639ecf9c3a3fc38b2adf85edca0eb0a215db",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/measure-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/performance.mjs",
+      "bytes": 9419,
+      "sha256": "1a5badc76ddd47663f3a2be3a7c6c5df2a9fcc38612a71798a4fb7eb8ae4bcfb",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/performance.mjs"
+    },
+    {
+      "path": "scripts/probe-integration-scene.mjs",
+      "bytes": 5481,
+      "sha256": "749ca5d41b96e09ba201bde8f60d94e372c415b8c1409fa742a0ae0506abb5d8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/probe-integration-scene.mjs"
+    },
+    {
+      "path": "scripts/production-smoke.mjs",
+      "bytes": 6641,
+      "sha256": "150b9faf9ac3cad01135d0ac0ea8234124fc6f76534cc99a6e764c60ff919292",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/production-smoke.mjs"
+    },
+    {
+      "path": "scripts/render-info.mjs",
+      "bytes": 615,
+      "sha256": "148fc16284d7feff9fa9f169ae5c89a6f322e34f207ce21421920df00d57ca7c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/render-info.mjs"
+    },
+    {
+      "path": "scripts/seal-reference-motion.mjs",
+      "bytes": 6366,
+      "sha256": "de6ed6bd42af20bfb93813c9ca3149c4be5d8f3be011077053969cfb3f8c6f4f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/seal-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/seal-visual-integration.mjs",
+      "bytes": 10515,
+      "sha256": "073da4a0470422dedd313acdd24e208b4fed37d9cd88ee0f75375d1dc47a5f71",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/seal-visual-integration.mjs"
+    },
+    {
+      "path": "scripts/serve-motion-baseline.mjs",
+      "bytes": 953,
+      "sha256": "c3b70ae58f84f89e70490b7a1a38618d199e0714dd2116f5432f7fd73c67265d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/serve-motion-baseline.mjs"
+    },
+    {
+      "path": "scripts/validate-vercel.mjs",
+      "bytes": 2391,
+      "sha256": "bba9eb4cd7e8528c678fee9af71bc584d7c9c807149fe17d6b520c35ee2a220a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/validate-vercel.mjs"
+    },
+    {
+      "path": "scripts/verify-camera-pass.mjs",
+      "bytes": 16567,
+      "sha256": "69f3e2cecbaf1f687db8b01ffbc637dc6d0b2f58d266df11d61e0773d1c2185c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-camera-pass.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-checkpoints.mjs",
+      "bytes": 5621,
+      "sha256": "abef49ebd36966002dc340b8d042b60f35721164a8126e4d1f224506e5ec5be1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-integration-checkpoints.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-experience.mjs",
+      "bytes": 17826,
+      "sha256": "50c9e679f8324377a1befb6c9351c4b2768ae8021e72791f38bf1c6e31f4cb27",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-integration-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-lifecycle.mjs",
+      "bytes": 10625,
+      "sha256": "cde25b1ff94f6efb37b826f976ea0944c933fd2b4513eeae2c0f2300701d23d5",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-integration-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-integration-review.mjs",
+      "bytes": 4783,
+      "sha256": "d8be33b059d308cca9d3fdca105edaa7a427081c3dd93b14746fec210154a7e5",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-integration-review.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-baseline.mjs",
+      "bytes": 9581,
+      "sha256": "8d0ad93c2f70e9111c50245a57f5ad10be150d9d72fbebe797c8f9a1a66695d8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-pass-3-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-experience.mjs",
+      "bytes": 16585,
+      "sha256": "1cc5563a681d58f6e0ae82280ad6cb9ace01a576a141af3e3dc2c7f57c2b8694",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-pass-3-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-lifecycle.mjs",
+      "bytes": 10626,
+      "sha256": "3f1d3122ff44e890341de1349c8f6d6605ae656658d520eb3183fd467672f967",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-pass-3-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-pass-3-review.mjs",
+      "bytes": 2574,
+      "sha256": "70d029094f6a369a37edea8f57fd1e054c3e2c034e5ef6555cc2cfc0c08336e2",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-pass-3-review.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-baseline.mjs",
+      "bytes": 6864,
+      "sha256": "20cb42cba8483d5457675cafa92963a8dde8f70a5514ce5c3b7c686854f2bdba",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-recovered-baseline.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-lifecycle.mjs",
+      "bytes": 10621,
+      "sha256": "5b5cbaa1e5be759af16ae3e8a7094a54796494d8b47492f6a15aa7abf8c5b01b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-recovered-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-recovered-pass-2.mjs",
+      "bytes": 16580,
+      "sha256": "a37568ab57d9f6ae0931ac5c8b27f05b7e137350e8c68501f48108e9107f5d2c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-recovered-pass-2.mjs"
+    },
+    {
+      "path": "scripts/verify-recovery-review.mjs",
+      "bytes": 2037,
+      "sha256": "6637e15acf057dbca9c880de0451b0d56b4dcd3fe1a27b8a7afc46f9d2884373",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-recovery-review.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-experience.mjs",
+      "bytes": 17395,
+      "sha256": "1e8705204bec49d32f87d4d42a7e8a6eacca8811599cfae89a1f6e275f77d66a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-reference-experience.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-lifecycle.mjs",
+      "bytes": 10594,
+      "sha256": "aa0e8ea4e6571ab03e0829247cab641c95de6de57b6f8dc13ef3416ddb00fd52",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-reference-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-motion.mjs",
+      "bytes": 8019,
+      "sha256": "b9ed42b7cee4c70bebb6d7f2135a96af10e0182cf672d6812708fdde3a40e756",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-reference-motion.mjs"
+    },
+    {
+      "path": "scripts/verify-reference-review.mjs",
+      "bytes": 4876,
+      "sha256": "450d5a200e13dd2cc69d3dfaf4ca7fd685b648b0b170329e526661a529d7e1fb",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-reference-review.mjs"
+    },
+    {
+      "path": "scripts/verify-style-prototype.mjs",
+      "bytes": 13844,
+      "sha256": "6b442174a2a260c8afe05f0f2cc1d603017b096665056b76a90a77d6d72d25a7",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-style-prototype.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-final.mjs",
+      "bytes": 2591,
+      "sha256": "924d530187e5e4ee89f2b0442286245701a85ec56d4e6d68e605d33185632a69",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-v4-final.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-handoff.mjs",
+      "bytes": 3884,
+      "sha256": "fe382708b37ece35006683b5b7f12ebe624dddd6ab59e0fe67d61e88f3eb46ea",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-v4-handoff.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-lifecycle.mjs",
+      "bytes": 10413,
+      "sha256": "cde251cc9f4812ca8bc3ca78236407a6c92a19a7ca9f9af73c6cf5909e8f2577",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-v4-lifecycle.mjs"
+    },
+    {
+      "path": "scripts/verify-v4-navigation.mjs",
+      "bytes": 4393,
+      "sha256": "b7ed2d738683e8b7c3423fa8e5f2dd33938b15a3bef88833ec34a454d77438c0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/scripts/verify-v4-navigation.mjs"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 4807,
+      "sha256": "cc62fa2184032058858c88ca811d48d0d946831e9bb8b996550a1acd896bda3f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/App.tsx"
+    },
+    {
+      "path": "src/assets/blue-heaven-flower.svg",
+      "bytes": 2786,
+      "sha256": "8badb9a6acc40f5af34e05e933234a0bcb2dc375e327d35c15a1db6c48275b7e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/assets/blue-heaven-flower.svg"
+    },
+    {
+      "path": "src/audio/bridge.ts",
+      "bytes": 278,
+      "sha256": "a200e69fd8b1b94f286fa0f783e8433900ac6073fb39b2490bd4a242ea610069",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/bridge.ts"
+    },
+    {
+      "path": "src/audio/engine.ts",
+      "bytes": 7234,
+      "sha256": "a344aa754bde01b098f6ac9505e33e0213478d91c59793fcaa7de0f11c1f1e64",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/engine.ts"
+    },
+    {
+      "path": "src/audio/music.ts",
+      "bytes": 3105,
+      "sha256": "eb360d6e3a46e6641fa94cf96652a1654df2d0dd3aa3ec41fb2686b0650e08be",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/music.ts"
+    },
+    {
+      "path": "src/audio/nature.ts",
+      "bytes": 4992,
+      "sha256": "64110b82ef817a7c66f5c15dfc3b317aa6970fc671fefb0937192d0107a6d807",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/nature.ts"
+    },
+    {
+      "path": "src/audio/sfx.ts",
+      "bytes": 2554,
+      "sha256": "30871bbdde83b9e8bff58de93d0fb8ac5f08a31ab0a49d3d21bafb90051f119e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/sfx.ts"
+    },
+    {
+      "path": "src/audio/track.ts",
+      "bytes": 3027,
+      "sha256": "c4f7006149f61ecf5f625431c3f556353a097a48b54e78ebd82e55acf9cd6a61",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/audio/track.ts"
+    },
+    {
+      "path": "src/config.ts",
+      "bytes": 278,
+      "sha256": "d8a75acb84b19b759620c82526033aaa388062ef53efc3432bfbeed770890ce4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config.ts"
+    },
+    {
+      "path": "src/config/audio.ts",
+      "bytes": 571,
+      "sha256": "d3fbb3b52a86cf0a42ee5062bad4e7244080707583e59d1d4ba8f347133a60b3",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/audio.ts"
+    },
+    {
+      "path": "src/config/companions.ts",
+      "bytes": 4563,
+      "sha256": "86245c3161819cfb632d3b0e900ec96d351935f00d1ed3a47ee1e8e73a445ff0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/companions.ts"
+    },
+    {
+      "path": "src/config/discoveries.ts",
+      "bytes": 461,
+      "sha256": "10179dcb03634fa0c357adce10fb86ac63a8a495c0e7a1c5622c46468016ed61",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/discoveries.ts"
+    },
+    {
+      "path": "src/config/flora.ts",
+      "bytes": 6937,
+      "sha256": "d6732dc2272f33b5167e45f078cc5b675ffbb726fe066c48151260650729ee2b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/flora.ts"
+    },
+    {
+      "path": "src/config/localization.ts",
+      "bytes": 12715,
+      "sha256": "1c7d59ee4d8cb979ea8c4412548e7f83827bf7fa3122f5033d86daa2e4d60cbe",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/localization.ts"
+    },
+    {
+      "path": "src/config/memorial.ts",
+      "bytes": 1576,
+      "sha256": "b55d66d8a5d8a5733f41969829b1e34f71d9d644927475881d8eb3479791ca96",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/memorial.ts"
+    },
+    {
+      "path": "src/config/memories.ts",
+      "bytes": 1587,
+      "sha256": "f082cbd5390104a558c0b2f312c55f87f8685b6ab52dcc639b5c95561beaec09",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/memories.ts"
+    },
+    {
+      "path": "src/config/oscar.ts",
+      "bytes": 1000,
+      "sha256": "a62ba9945199252e1f1c5a8f268153a825acfb0337198256693bd09a8b67f544",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/oscar.ts"
+    },
+    {
+      "path": "src/config/regions.ts",
+      "bytes": 2496,
+      "sha256": "78a12f13afe2485a3ad50395e5f77918421966e0a2866f6a65eef7dcfcff19d1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/regions.ts"
+    },
+    {
+      "path": "src/config/validation.ts",
+      "bytes": 1440,
+      "sha256": "242d331e357cf9b50783bf2b0a088ec8a27b352c61e22ace94f06c25ecd904e2",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/validation.ts"
+    },
+    {
+      "path": "src/config/visual.ts",
+      "bytes": 935,
+      "sha256": "a021a2ca7fbc0668991a8a2284c1681d9123782db5f384e0a2f166eedb3487ed",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/visual.ts"
+    },
+    {
+      "path": "src/config/world.ts",
+      "bytes": 624,
+      "sha256": "0e101afedf7b991eb759fdd69544297937ddd19e90b0652dc411e17d62867e0e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/config/world.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/StylePrototype.tsx",
+      "bytes": 5593,
+      "sha256": "13498d591f4e793e950e9e10a83323522857a4f789e14ebef006e5c3bdd2a7d7",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/dev/style-prototype/StylePrototype.tsx"
+    },
+    {
+      "path": "src/dev/style-prototype/assets.ts",
+      "bytes": 10841,
+      "sha256": "a7f4da2067e841fcab7e5a257f3a9be78069b39c36dba220f7506db3b6a0c530",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/dev/style-prototype/assets.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/dev/style-prototype/geometry.ts"
+    },
+    {
+      "path": "src/dev/style-prototype/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/dev/style-prototype/paint.ts"
+    },
+    {
+      "path": "src/features/animals/Animal.tsx",
+      "bytes": 6164,
+      "sha256": "188ac1a506b7a1f34995bbe594c346f48b507d43cfdf0b66deab0a32ff5cef4c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/animals/Animal.tsx"
+    },
+    {
+      "path": "src/features/animals/Companions.tsx",
+      "bytes": 2964,
+      "sha256": "123f1ff42bd30ae2cb4a0b00a9c3511de39c462b3a469af8930c2e707a58c663",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/animals/Companions.tsx"
+    },
+    {
+      "path": "src/features/animals/geometry.ts",
+      "bytes": 5778,
+      "sha256": "48441cd6188f663ac3c86c005215e87008466fdef6ea1312e6ebf9f4d9bf5d2a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/animals/geometry.ts"
+    },
+    {
+      "path": "src/features/animals/simulation.ts",
+      "bytes": 5863,
+      "sha256": "4c9829bf4e087b6399deff9d563fd767d6a4b09bbab7edca7203a9a91b57e52a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/animals/simulation.ts"
+    },
+    {
+      "path": "src/features/idleClock.ts",
+      "bytes": 756,
+      "sha256": "f6952005c5b21acabcb9008dacb9d94a0b88bf72e284411ab849a708f2b2aee6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/idleClock.ts"
+    },
+    {
+      "path": "src/features/interaction.ts",
+      "bytes": 940,
+      "sha256": "670e8b5225eb6f50460c98cb3b37b1234fe7a5309205ae03b46911ceaa12baf8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/interaction.ts"
+    },
+    {
+      "path": "src/features/oscar/Oscar.tsx",
+      "bytes": 6018,
+      "sha256": "78c0cc9db9bdb2a76435d59d45c980512b8438d836868553ad2696719f73c172",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/features/oscar/Oscar.tsx"
+    },
+    {
+      "path": "src/hooks/useActivity.ts",
+      "bytes": 3141,
+      "sha256": "b5419657b95d6e00652cf0f51ccbf0a3c1da4153778f8fb1acbf6af315754563",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useActivity.ts"
+    },
+    {
+      "path": "src/hooks/useDialog.ts",
+      "bytes": 1703,
+      "sha256": "ad223e9d9fbba62df6e1a29695e53fcfa167c4986c3bf7d484316576b218bdc4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useDialog.ts"
+    },
+    {
+      "path": "src/hooks/usePlayerControls.ts",
+      "bytes": 4425,
+      "sha256": "44bdd16e35e458307e603b1a89bac4bd43e2d56b1fe2878384a9bde5e3133d1d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/usePlayerControls.ts"
+    },
+    {
+      "path": "src/hooks/useProximity.ts",
+      "bytes": 706,
+      "sha256": "19e63875d5450905168616ac95d4315f81b1066bbab76c1b1d9bd487d3c82465",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useProximity.ts"
+    },
+    {
+      "path": "src/hooks/useQuality.ts",
+      "bytes": 367,
+      "sha256": "ecbe9340d6b32557493b25f2589ff6c7c6a5de974ad049898644d26f7a6b537b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useQuality.ts"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.ts",
+      "bytes": 440,
+      "sha256": "31fb0a52ec722b6861de9a64e4193d0bec0ef74acaf3415acf0889463aa197e0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useReducedMotion.ts"
+    },
+    {
+      "path": "src/hooks/useText.ts",
+      "bytes": 174,
+      "sha256": "f2f8e1fda3001406d9f91a1a1b5430e15bef474536a58c69ff1876a852b432a6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/hooks/useText.ts"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 1262,
+      "sha256": "269bfef81966be99ed18dd75309fba12999035ac60f8e3fb5a09857ab49a8768",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/main.tsx"
+    },
+    {
+      "path": "src/persistence.ts",
+      "bytes": 5769,
+      "sha256": "d207b9aa5cd58762aea56f45cd13775e4e01a9953edf8148c6c63c56272874b8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/persistence.ts"
+    },
+    {
+      "path": "src/scene/ApprovedFoundation.tsx",
+      "bytes": 1730,
+      "sha256": "863ad34191efa3438554ca2f6047e6337b3997817ca419106d6682088499b042",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/ApprovedFoundation.tsx"
+    },
+    {
+      "path": "src/scene/Camera.tsx",
+      "bytes": 12238,
+      "sha256": "598333ec530b7955e1177df757468b30a1fbe86263f0cfcc5fa8b1ef66ed1e6e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Camera.tsx"
+    },
+    {
+      "path": "src/scene/DevTools.tsx",
+      "bytes": 12111,
+      "sha256": "170143196994b635996923b048a3c0818d792bf5f6abe690baf6630dd8ddcb3d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/DevTools.tsx"
+    },
+    {
+      "path": "src/scene/DevVisualizations.tsx",
+      "bytes": 3046,
+      "sha256": "d8388fd3d8a26dcc18c152f114b4db1fe0b98cb8cfd848cdff7cf615ab57b1c2",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/DevVisualizations.tsx"
+    },
+    {
+      "path": "src/scene/Effects.tsx",
+      "bytes": 2727,
+      "sha256": "d7eb0c5fa64525379ef366b0ce0a791727d33dec0b049ffa5a363518318d509e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Effects.tsx"
+    },
+    {
+      "path": "src/scene/Flora.tsx",
+      "bytes": 6998,
+      "sha256": "bee1d7806923574e321735751f72723b76d41541319158f511520ee64f632f2e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Flora.tsx"
+    },
+    {
+      "path": "src/scene/ForestDrift.tsx",
+      "bytes": 3392,
+      "sha256": "29b382baa054dffd3b26b0f8795fa2a9b9a3b33337e7329050a160a2c0ccef9c",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/ForestDrift.tsx"
+    },
+    {
+      "path": "src/scene/Ground.tsx",
+      "bytes": 1117,
+      "sha256": "e8e9e3ab605a384ff5c4787330b8e9821404dee99ba4a339006b3cbd6d7699f6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Ground.tsx"
+    },
+    {
+      "path": "src/scene/Lighting.tsx",
+      "bytes": 3788,
+      "sha256": "9a94eae6ebe535606d8ff57384d2fb06eb87fdad9a986bd710758e7eb828eb75",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Lighting.tsx"
+    },
+    {
+      "path": "src/scene/MemoryPicture.tsx",
+      "bytes": 7051,
+      "sha256": "a257ffc2af534f5dd6e78b2f2d6dd70ccd31be3daa67997abf1a8163e3f22385",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/MemoryPicture.tsx"
+    },
+    {
+      "path": "src/scene/MemoryTree.tsx",
+      "bytes": 9313,
+      "sha256": "3cfbf23e312a2e94973edfef0678d7b78961462f1ccc240b4806a842c5ef411a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/MemoryTree.tsx"
+    },
+    {
+      "path": "src/scene/Particles.tsx",
+      "bytes": 7223,
+      "sha256": "b263f1eee869e17caf4f5a48e0bc4851b9cf004569d4a8d62cf5f75e38dda5e8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Particles.tsx"
+    },
+    {
+      "path": "src/scene/PlantDiscoveries.tsx",
+      "bytes": 1322,
+      "sha256": "7019e3d2f6a73b16f863e2439631969f763eac3b871a724c8895e68b4c363844",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/PlantDiscoveries.tsx"
+    },
+    {
+      "path": "src/scene/Player.tsx",
+      "bytes": 11315,
+      "sha256": "8af8ecff55c2b7f67d7ccff1f8bf5346582654e5c3fcc737b8dc41cf16d0eb60",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Player.tsx"
+    },
+    {
+      "path": "src/scene/Pond.tsx",
+      "bytes": 1436,
+      "sha256": "8cc320c1cd8772d4f8726b195538f4f7f34c8cb5a2b1aa3af7bd06fe9f52f39f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Pond.tsx"
+    },
+    {
+      "path": "src/scene/Scene.tsx",
+      "bytes": 9304,
+      "sha256": "1516cf19f5aaf732fe27126bff1d4fdcad6a3a5bbe310926dbe2ea23090d4bfe",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Scene.tsx"
+    },
+    {
+      "path": "src/scene/SpeciesFlora.tsx",
+      "bytes": 6233,
+      "sha256": "aec7885e0ace91f2ff85c9199cdcf6d32f39efb47edce14a1c05f446c3ec1753",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/SpeciesFlora.tsx"
+    },
+    {
+      "path": "src/scene/Timeline.tsx",
+      "bytes": 1857,
+      "sha256": "f65d82bf6dad5d74bde7936ae1199cbc7f138f5d47b9111dd04589d9efdb95a8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/Timeline.tsx"
+    },
+    {
+      "path": "src/scene/breeze.ts",
+      "bytes": 1615,
+      "sha256": "7738496de5daf0e05b7b65fc20fc4b5a4cf2171ff57bd60db20a0c7c1f727d66",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/breeze.ts"
+    },
+    {
+      "path": "src/scene/calibration.ts",
+      "bytes": 702,
+      "sha256": "e8c2e4a49e8961a2539468757b877f805bbe72af492c043707866c3b8e11ced4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/calibration.ts"
+    },
+    {
+      "path": "src/scene/clothMotion.ts",
+      "bytes": 3340,
+      "sha256": "49d6c9dcaffed912eca655841b433c7942512e82dbafe6c1e4b72cf956d0f9df",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/clothMotion.ts"
+    },
+    {
+      "path": "src/scene/forestGeometry.ts",
+      "bytes": 9261,
+      "sha256": "24d480d69c36b35f1e5ea5599aa35150cb810d58baa268e16ae972f1c79c9ef3",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/forestGeometry.ts"
+    },
+    {
+      "path": "src/scene/paintedGeometry.ts",
+      "bytes": 3227,
+      "sha256": "dd1c02a6f6764dd7e8ad6fe839be4db91865ff3a32511334fa5b83e6a63496e8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/paintedGeometry.ts"
+    },
+    {
+      "path": "src/scene/propGeometry.ts",
+      "bytes": 1385,
+      "sha256": "5005820fe3ff63d03b2c56e9a006c502c91b3390b93684aa3b6ce26479fc18f1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/propGeometry.ts"
+    },
+    {
+      "path": "src/scene/resources.tsx",
+      "bytes": 7430,
+      "sha256": "6b7a0df1e02cf9ac9db661c33c7079d95e83d4c853d1383e15145b990548a55f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/resources.tsx"
+    },
+    {
+      "path": "src/scene/runtime.ts",
+      "bytes": 675,
+      "sha256": "f44eefa88456a7a111979af6cd626c5d6a9e17670dc76260a7dd3c82f9e461de",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/runtime.ts"
+    },
+    {
+      "path": "src/scene/speciesGeometry.ts",
+      "bytes": 9511,
+      "sha256": "ae8920f1ddaf9ddd6f4631f18eb756711e1bfd308e519ff3dffd0817f208f1df",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/speciesGeometry.ts"
+    },
+    {
+      "path": "src/scene/travelerGeometry.ts",
+      "bytes": 3641,
+      "sha256": "7349cdd26f7a93023c1bada20eed0963b76bc775bb488f5cbe634992f3fd75ce",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/travelerGeometry.ts"
+    },
+    {
+      "path": "src/scene/world.ts",
+      "bytes": 9901,
+      "sha256": "8e15a770e411fab66cbf37d369686a063c9111cc7d037e4247704ae5cafc9533",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/scene/world.ts"
+    },
+    {
+      "path": "src/shaders/goldenCurrent.ts",
+      "bytes": 3804,
+      "sha256": "1d3bf1869114ab048abd1eee8b6b2774925a4e55203c54299ec7531d2e70fba4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/goldenCurrent.ts"
+    },
+    {
+      "path": "src/shaders/grain.ts",
+      "bytes": 380,
+      "sha256": "bb03775c23d3322785030bcbb56f252e955df6fa76ee60829ed45637dbca56c3",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/grain.ts"
+    },
+    {
+      "path": "src/shaders/ground.ts",
+      "bytes": 2973,
+      "sha256": "e9a645124247a4afc1c374279a228b91abb10eec83cf9e371822a17bd436c843",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/ground.ts"
+    },
+    {
+      "path": "src/shaders/outline.ts",
+      "bytes": 369,
+      "sha256": "8271d27d273c16b90dfd745baaabb3da3973f6158ebdf39af1ba7a1bfe6035e5",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/outline.ts"
+    },
+    {
+      "path": "src/shaders/water.ts",
+      "bytes": 1008,
+      "sha256": "d0069107d7bf8ffcf157f521371540891e730579e6149dc4da6f4a67eb581fc8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/water.ts"
+    },
+    {
+      "path": "src/shaders/wind.ts",
+      "bytes": 6535,
+      "sha256": "345ef15f1a65914266ee463c8c46d6fc7a25454ad4bb120477ea3d289b3eb86d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/shaders/wind.ts"
+    },
+    {
+      "path": "src/store.ts",
+      "bytes": 12431,
+      "sha256": "a81d930b54c7ff1a5988fc7572d43c8b53c4bb0a08ebae52b04bc00be64b3370",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/store.ts"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 36341,
+      "sha256": "1c40d4c8dafbf5d3b78660cccf2fd4f5a601c530167b620cb68745d1efbc00e1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/styles.css"
+    },
+    {
+      "path": "src/textures/memoryArt.ts",
+      "bytes": 6806,
+      "sha256": "a718ad3a0209cf01c09854e21dc347561fc213ab8f19c4a316e8aeb7e49acf47",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/textures/memoryArt.ts"
+    },
+    {
+      "path": "src/textures/paintTexture.ts",
+      "bytes": 4066,
+      "sha256": "1cc5c5276334080f96011c984fe6a23f37070c2946febdcd07dd2da19e37e7ba",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/textures/paintTexture.ts"
+    },
+    {
+      "path": "src/ui/BrandLogo.tsx",
+      "bytes": 402,
+      "sha256": "0540c33fff34095f884fd8608fceff9eae40159e638e7eeb0f7f68fbd09a932e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/BrandLogo.tsx"
+    },
+    {
+      "path": "src/ui/CompanionPortrait.tsx",
+      "bytes": 1867,
+      "sha256": "80d61aa7111d35e06190cd13441a25f06e857c7358b19447c896306a92e30bb4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/CompanionPortrait.tsx"
+    },
+    {
+      "path": "src/ui/Compass.tsx",
+      "bytes": 1437,
+      "sha256": "2218f9d0b9f5f69eb56455901248e4032caa558a3b58d7f9ca6276722fc53c74",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Compass.tsx"
+    },
+    {
+      "path": "src/ui/CustomTrackSetting.tsx",
+      "bytes": 1147,
+      "sha256": "d63438986ab364855fdd5b458b45b6fa744eee190544b78a5933a2cbc6fc4978",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/CustomTrackSetting.tsx"
+    },
+    {
+      "path": "src/ui/Dedication.tsx",
+      "bytes": 2783,
+      "sha256": "2f3abf4f0f98a213d8d1e63c9df0d587a0542cda5358df3d5cddca2aee6e600e",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Dedication.tsx"
+    },
+    {
+      "path": "src/ui/FieldGuide.tsx",
+      "bytes": 3064,
+      "sha256": "a79ae260af80f977672cc7e800be3c7613202f7b9fbe7816714387eb174b345b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/FieldGuide.tsx"
+    },
+    {
+      "path": "src/ui/Finale.tsx",
+      "bytes": 1382,
+      "sha256": "1d09b06eb8e3fe09e253c1bc5358e2eaec42cb06dab2e749c586c5171b9288d0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Finale.tsx"
+    },
+    {
+      "path": "src/ui/Hud.tsx",
+      "bytes": 5717,
+      "sha256": "a1041cf48ada0037e2b30bc4ad508f2f1b90d90bd2536d62b90327032181deab",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Hud.tsx"
+    },
+    {
+      "path": "src/ui/Icons.tsx",
+      "bytes": 1580,
+      "sha256": "4fa7aa15beb62a07def33f6a40011fdebabc4f798ee1e8be5bdecb9981fc1a97",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Icons.tsx"
+    },
+    {
+      "path": "src/ui/IdleRest.tsx",
+      "bytes": 609,
+      "sha256": "b1c6ad486aed7cbc6e7de4691301160563485b776484234827d1c378170d4f4d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/IdleRest.tsx"
+    },
+    {
+      "path": "src/ui/Intro.tsx",
+      "bytes": 816,
+      "sha256": "9dae6af61d5bb2fef1db80b919d58d45c66bd72ec162d629b787df6c0a39cfc8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Intro.tsx"
+    },
+    {
+      "path": "src/ui/Journal.tsx",
+      "bytes": 7730,
+      "sha256": "8d037b0b676d445cb46903d5b6e4443270bd5c9b96564c09965931d16ec769ab",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Journal.tsx"
+    },
+    {
+      "path": "src/ui/LanguageSwitch.tsx",
+      "bytes": 510,
+      "sha256": "af54dd85ff01e2646dae09361283f863c643f4f171ca3c943396acd0d0130a97",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/LanguageSwitch.tsx"
+    },
+    {
+      "path": "src/ui/LoadingScreen.tsx",
+      "bytes": 953,
+      "sha256": "1c0fbfc99259c87d123aa06e70e28928f8db61ee401c9781b3772ed9004a2293",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/LoadingScreen.tsx"
+    },
+    {
+      "path": "src/ui/MemorySlots.tsx",
+      "bytes": 1435,
+      "sha256": "44740a4afbe6d245eeabd8dd3271b7d0dbc96e03d87eaac89421a7baa07c463d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/MemorySlots.tsx"
+    },
+    {
+      "path": "src/ui/NearbyCompany.tsx",
+      "bytes": 1930,
+      "sha256": "9bcf142c47f1d974cd5e308181b3feec44723aac359d42777063d4dcd967cacc",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/NearbyCompany.tsx"
+    },
+    {
+      "path": "src/ui/OscarDialogue.tsx",
+      "bytes": 1097,
+      "sha256": "88c2d3ab710c908ba3f959d9735c9f9fed5b4bbd2bfda9a88ae84975121caae6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/OscarDialogue.tsx"
+    },
+    {
+      "path": "src/ui/PauseMenu.tsx",
+      "bytes": 5976,
+      "sha256": "4a1af2089eecc5bdf316b34d2dc9eee5bb26085d2d2e62d2889c4a5aeaee6ded",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/PauseMenu.tsx"
+    },
+    {
+      "path": "src/ui/PlantSilhouette.tsx",
+      "bytes": 3925,
+      "sha256": "ef325dd8b2072936abd8b09b88ff88505b1cad36e9eb0e6fd2be09680a2121a3",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/PlantSilhouette.tsx"
+    },
+    {
+      "path": "src/ui/TitleBackdrop.tsx",
+      "bytes": 4875,
+      "sha256": "11f77c986cfe9222f31bc5b12685ceb8ca0303b1a15cb5992da58aeb509ea7b8",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/TitleBackdrop.tsx"
+    },
+    {
+      "path": "src/ui/TitleScreen.tsx",
+      "bytes": 2630,
+      "sha256": "ab4b5c8b3fe549577466285374fd5f3bfdffebe744bd685a5c8f29cc44901b23",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/TitleScreen.tsx"
+    },
+    {
+      "path": "src/ui/Toasts.tsx",
+      "bytes": 2582,
+      "sha256": "a49bedf6a66cfc25841b93c374563b6bba41d49c426b3ade13949bc9e4d6c3b0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Toasts.tsx"
+    },
+    {
+      "path": "src/ui/TributeInscription.tsx",
+      "bytes": 396,
+      "sha256": "a363ff2bc51f4d3e7aff85106a221cc171446adee92858333313135bad621baf",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/TributeInscription.tsx"
+    },
+    {
+      "path": "src/ui/Viewer.tsx",
+      "bytes": 4216,
+      "sha256": "84c8e5c499d8fe052a3aa7192435e1a6396b107f31ddf90fe2668c5b4a0b6e6a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/ui/Viewer.tsx"
+    },
+    {
+      "path": "src/utils/chunks.ts",
+      "bytes": 2018,
+      "sha256": "6bc1007740348425f8f38ae60b5eb64763896f57716eded2df0d63e4eb520172",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/utils/chunks.ts"
+    },
+    {
+      "path": "src/utils/placeholders.ts",
+      "bytes": 1144,
+      "sha256": "d5b3766341a90bcee3adb2e4732af862b174f6148633604c9fe2cc4205b9a7cf",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/utils/placeholders.ts"
+    },
+    {
+      "path": "src/utils/progress.ts",
+      "bytes": 744,
+      "sha256": "1dbf6cd628bda307cc7cc86f2d38ff8e699411b9c430a55d9165cafcef8e54f4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/utils/progress.ts"
+    },
+    {
+      "path": "src/utils/random.ts",
+      "bytes": 716,
+      "sha256": "6131c88bfa9ca07201483f74d2f2e0090c61102ae9c95bbb6a648c95493c45f6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/utils/random.ts"
+    },
+    {
+      "path": "src/visual/approved/assets.ts",
+      "bytes": 11035,
+      "sha256": "a02f4dbfe68dd52339d9acb7d5713dfec674c079b54d1ff2ef0752fbd1bde8e5",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/approved/assets.ts"
+    },
+    {
+      "path": "src/visual/approved/geometry.ts",
+      "bytes": 6818,
+      "sha256": "9dbf867ca9e06fcea4b6639ce1be4d375c00c9784d98c67fee4a91cc9e4deef0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/approved/geometry.ts"
+    },
+    {
+      "path": "src/visual/approved/paint.ts",
+      "bytes": 9422,
+      "sha256": "e20c7037679e29a1b72db6db243636a673e8f3da4416999e4bb37107de4f0efb",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/approved/paint.ts"
+    },
+    {
+      "path": "src/visual/forestPaint.ts",
+      "bytes": 3585,
+      "sha256": "d6287a7cbdf90739470d9357e62cab921b6f0c5998ed6dbdf2a6e74a9b47a3ca",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/forestPaint.ts"
+    },
+    {
+      "path": "src/visual/heroClearance.ts",
+      "bytes": 1691,
+      "sha256": "ab4f83d7cca9d83fbafe6bedb1f75ac771bf9048f14bd63b97445cde0fa99393",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/heroClearance.ts"
+    },
+    {
+      "path": "src/visual/landscapePaint.ts",
+      "bytes": 5914,
+      "sha256": "fd9b161621f1e504370e89b24bb9bee64948825e681836abb502c95bda8b3f1b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/landscapePaint.ts"
+    },
+    {
+      "path": "src/visual/memoryCurrent.ts",
+      "bytes": 6114,
+      "sha256": "19a695eb723ac309718307cef83e45da30bffd3764fbe276e282d8b7bced071d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/memoryCurrent.ts"
+    },
+    {
+      "path": "src/visual/paintedSurface.ts",
+      "bytes": 1619,
+      "sha256": "9e1a080736624f0567e66a667e0a78407b2765bc03d285b8f5d03444051d0c81",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/paintedSurface.ts"
+    },
+    {
+      "path": "src/visual/propPaint.ts",
+      "bytes": 2450,
+      "sha256": "155613384550846aea8c9196f1686d914e8f9ad240111d413c56d1ba723aea6b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/src/visual/propPaint.ts"
+    },
+    {
+      "path": "tests/audio.spec.ts",
+      "bytes": 9312,
+      "sha256": "b2bf0a974a637ffaf5bab4e28e20f9f42d6004c0fee33e8a27651e9a0d54948a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/audio.spec.ts"
+    },
+    {
+      "path": "tests/experience.spec.ts",
+      "bytes": 8842,
+      "sha256": "3977b3bb9b85906cb01d633b82f7da816ba1f6a57004bdf6c4e49e589591d2c6",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/experience.spec.ts"
+    },
+    {
+      "path": "tests/pass-3-trees.spec.ts",
+      "bytes": 4326,
+      "sha256": "300b71298808e15ac590ce19ccd742698d624d163b65abeafe746b9ce8672cd0",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/pass-3-trees.spec.ts"
+    },
+    {
+      "path": "tests/persistence.spec.ts",
+      "bytes": 11293,
+      "sha256": "2da691f0dfcec80a7e48e305be1e6b33710f6fc95aa2fcb23968e57917b50dfc",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/persistence.spec.ts"
+    },
+    {
+      "path": "tests/robustness.spec.ts",
+      "bytes": 2763,
+      "sha256": "63e8ea6cf2e4dcf992028d5d9e5e6c0d99e89ee514354c64c110d745a67c03d9",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/robustness.spec.ts"
+    },
+    {
+      "path": "tests/stage-a.spec.ts",
+      "bytes": 7624,
+      "sha256": "65f8392b3deb5d5f9f60e79a5ba834c9d3acb4b2f2e159d34e72bdd212e62f8d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/stage-a.spec.ts"
+    },
+    {
+      "path": "tests/v3-foundation.spec.ts",
+      "bytes": 9134,
+      "sha256": "35bba14dea5f0cc879df4145ab78bfaf3c5c77f96153e8a300a05aa3b771ecb4",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v3-foundation.spec.ts"
+    },
+    {
+      "path": "tests/v4-audio-mixer.spec.ts",
+      "bytes": 3748,
+      "sha256": "6c968334041e6dd8b6181d771d0e32b8d0ea21ea679b7fdb9d8bb4ccd7ab9ec2",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-audio-mixer.spec.ts"
+    },
+    {
+      "path": "tests/v4-audit.spec.ts",
+      "bytes": 8785,
+      "sha256": "16e325ff0d2da8a41c49e033e063fdf85170df6c57422d1c9e67266f5b8c9e34",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-audit.spec.ts"
+    },
+    {
+      "path": "tests/v4-compact-ui.spec.ts",
+      "bytes": 3315,
+      "sha256": "4e65649a36ec3905900de84c4bf101fe3e20436f99e4ecf6d8e05c58a676c61f",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-compact-ui.spec.ts"
+    },
+    {
+      "path": "tests/v4-companions.spec.ts",
+      "bytes": 1391,
+      "sha256": "1962815a6214ef73187e1b17e96aa1d8a55f5cac1c4b66e829cb2d8ee4afe910",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-companions.spec.ts"
+    },
+    {
+      "path": "tests/v4-composition.spec.ts",
+      "bytes": 12210,
+      "sha256": "409ec31eda4b9a98cefeb3d82140bd5deb1e137b5ee96bd5d93a4ed8b4b1888d",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-composition.spec.ts"
+    },
+    {
+      "path": "tests/v4-flora-guide.spec.ts",
+      "bytes": 6035,
+      "sha256": "44cca1a0bb2b786e9428f48b050a1123658a2bc782924c3e7715cf6ec86c5b1b",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-flora-guide.spec.ts"
+    },
+    {
+      "path": "tests/v4-idle.spec.ts",
+      "bytes": 3016,
+      "sha256": "247e38d62d8dbf9bc7d1908af9c68aadaeaea3a08040ff0b0cd49e9ba737c36a",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-idle.spec.ts"
+    },
+    {
+      "path": "tests/v4-journal.spec.ts",
+      "bytes": 3514,
+      "sha256": "ef00b097a26c6c5bcf235dfefd25d3b579a3848f8811ca44be80ed55b8618fdf",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-journal.spec.ts"
+    },
+    {
+      "path": "tests/v4-living-world.spec.ts",
+      "bytes": 5154,
+      "sha256": "d2d75c539983ca9e30813c0964f35e41d50b8733c89a1afdd68fc5b19fc82bc7",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-living-world.spec.ts"
+    },
+    {
+      "path": "tests/v4-nearby.spec.ts",
+      "bytes": 3078,
+      "sha256": "b0269417d78cd5527c286293161c59c7e6add83c53b98fb4f5ededb4bef306f1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-nearby.spec.ts"
+    },
+    {
+      "path": "tests/v4-oscar.spec.ts",
+      "bytes": 2781,
+      "sha256": "33add16d04789d4df3725e211d70ee0e17f440d527f70814879cfc55270d0250",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-oscar.spec.ts"
+    },
+    {
+      "path": "tests/v4-painted-forest.spec.ts",
+      "bytes": 4551,
+      "sha256": "2fbabc45b1f432961511f81606b48bb9a656f53a42a6ab08cf712ea2023364c1",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tests/v4-painted-forest.spec.ts"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 510,
+      "sha256": "53ff85d717be27e224fbde12c9297a63443d81ba55c1fa501af391fe38b9acae",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/tsconfig.json"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 636,
+      "sha256": "7c0579127b2dc70592bb93b3c1acc95c0ff7bc49a915327ad6e71df9d74a54a2",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/vercel.json"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 196,
+      "sha256": "f2de674d90f68188e2547039865510537347356c0cb10c40f6a85c7a27a0c4f9",
+      "snapshot": "artifacts/visual-reconstruction/passes-4-6/reviewed-source/vite.config.ts"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/baseline.json",
+      "bytes": 30308,
+      "sha256": "177d6aecb563f38ddcfe4396fc00aa5d1651e2dd7dab81881df8e694932347c1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/captures.json",
+      "bytes": 85166,
+      "sha256": "206923700b705f2da5e97156ca34240813f8e81b66ef507e124322c49e78a565"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2049113,
+      "sha256": "c638a6afa5b172d8a80937d22b94e37a2e1b754c847041453d523a7053fcb86d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 384726,
+      "sha256": "5874ddc90cc3a20ac2d9d8e06e00b3799fa442f6acca66b803d631a340626402"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2066404,
+      "sha256": "f8dbd76e6e2c77d39fa089412d5480fa391fbb97db612af8c40a43e49fe36b85"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 395102,
+      "sha256": "aba48a271683ac62fa1055373607e27a6baa99a80cf3a30cb076180e538d17ec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1953198,
+      "sha256": "c2b275cde31b4c0d686db2d48d05c43a40979f4c0e726f72e6d1571fd83fcbee"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 404207,
+      "sha256": "25a015c545254634944c246b79bf25fc8e496eada107abc0d4f186768597b2ec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1452825,
+      "sha256": "4180ac9bbd62ea2483d9390a24c6e3be51f444a7fb0353ff757336230f388e39"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 308253,
+      "sha256": "7c4c75b69830325b8b8e165bea936451758ade1062b271c2765f88a1ff4f8162"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1543350,
+      "sha256": "0d882dc5ab7aeacb5f202c1a63e338e387701e7b1fff742537e2f9ea0d61e500"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-grove-8-390x844.png",
+      "bytes": 343554,
+      "sha256": "ae72c4348a7e7968b24c318317efed144e1e169d7689014aba1daf7d2c82e8bd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1640794,
+      "sha256": "ef789f9682973b69adb550900c5e7f3cee671c2f86f6e17dae38b92e7b097d9b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-pond-8-390x844.png",
+      "bytes": 254576,
+      "sha256": "3b91046984bc717f94f042e84cf488d5f0ce47c89d2e3fad2500ef578e9a8555"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1983150,
+      "sha256": "b7c3856d3bc3412841417d70f26524d4516ec49687bbe804661d179a63031d90"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 388685,
+      "sha256": "865989370572eefd5c26ce89da8c0b98bdd6a8e4622b615395756a5e6d5c36a0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1893808,
+      "sha256": "84d379e7ab6b1d8056377d85b97e1e7e13720eb64b4ee449fadef9e9c89445a8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 435249,
+      "sha256": "04ec56943048e45f6febd0eb53f5e1d22d7ec520e098a4e9dace1d22da88b22b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-4/manifest.json",
+      "bytes": 30952,
+      "sha256": "6ae0f5ecd6beb71595e80678d06bd4b97a2172ae2f64461291a4705da106ed5c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/captures.json",
+      "bytes": 85166,
+      "sha256": "5aa170e7707ea715991ba26aa69ae8e9a1eafaa39da371f85b40093f5710731a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2041198,
+      "sha256": "3edabaea0d083c49427b658950a2857d3553e6dcf5479302410b76ac1d69972b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 380551,
+      "sha256": "656403fa6224ccebfc2e88d9aeab2cf608d1165880fcc44be3cfdef7e574354d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2058709,
+      "sha256": "87e88907657808672c2178a01ff0fe055c6734092a409c95028746e06ad03614"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 391236,
+      "sha256": "4479fa7db947778219d796c0fd26c79ba4069aeaac0307269b5620de2840a35c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1943608,
+      "sha256": "c395d22edc9971a50c7eba7ba06e04511d493f88c56f20b5b417e8c1f2dd14ab"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 401892,
+      "sha256": "bd9e87d419cb3f218cf532e08c2cca256de568a49a90e972cdacc097f13ff43d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1454650,
+      "sha256": "995adb5fe84977a7a544aedc0a50d06028299afed20de007a6cec05e4e57f4a8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 308253,
+      "sha256": "7c4c75b69830325b8b8e165bea936451758ade1062b271c2765f88a1ff4f8162"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1543358,
+      "sha256": "654cbe2b032214de4a18d4d17ee6825a2a9a6141f60af6353a08bd1c125680df"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-grove-8-390x844.png",
+      "bytes": 343518,
+      "sha256": "979be5f565ff312e976325192a708633ea9ae9ae66f5b44a1f466beeb241a4f8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1640754,
+      "sha256": "d7e013827c9574578a469ecfdc07187174e4cb205320622a9a0a8165e6591110"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-pond-8-390x844.png",
+      "bytes": 254558,
+      "sha256": "835c9644a1e0829d823da2e4bf7723a3d7d4d50e6e8f8c1c4c1581432a963e83"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1974064,
+      "sha256": "1dc722bf7651e0e566de1abb9b77ba69a1aba724fca4224f937a4b5a311f4e2a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 386074,
+      "sha256": "0a4717af2fc2630ddf1370b07c3858c3925f7ba5cbcf47a040c479a5b10e230f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1891943,
+      "sha256": "74ea2ef50bef090f1769b675002aa1d7dd2c2caa50226005c7b80126557b3b19"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 435030,
+      "sha256": "f0313ce7f1212aba7effb9d145d39ad3d99aa872ecf2df1e2ccb2136fa434eab"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/manifest.json",
+      "bytes": 31309,
+      "sha256": "61f7db1a691438ea7faf84d4c7ece76c6b6f150eca98c101ba8f6917b53e59c8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/capture.json",
+      "bytes": 128919,
+      "sha256": "eaa68382ada95ff68c7f145fb95da8729cfff7c9826009a3a8925f29a94e82ce"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/eight-pictures.png",
+      "bytes": 394052,
+      "sha256": "a8994b1c5914957589a28bcba1d278f31a923aee064cb2365109371513135fa8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/empty-tree.png",
+      "bytes": 386959,
+      "sha256": "96513841f0f15ad6735f50c03c1aff904133194781c2e87cd889737d381509a7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0000.jpg",
+      "bytes": 49318,
+      "sha256": "3285df760de979d6cfbf9673c59899f5cb30e4ab435cd55a45074e7e5996e33d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0001.jpg",
+      "bytes": 49319,
+      "sha256": "e6a7e3bc7a9652284bbff761f6e27ebfcda79e2ee18c2ae1573c994c00337725"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0002.jpg",
+      "bytes": 49275,
+      "sha256": "ca6a4ae7405795820ab65e6e26faba6f3bcf66f228526235ba408e90dfdbd8e4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0003.jpg",
+      "bytes": 49299,
+      "sha256": "a50c4c7e7fa039bc733d60b2259dd0a90cbc063faad41c661e7092166150a0c9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0004.jpg",
+      "bytes": 49356,
+      "sha256": "63d55d1137b32a544e663022656bfb97b57d8c67485041f6de0777609d9713c7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0005.jpg",
+      "bytes": 49293,
+      "sha256": "bc87c3dbb073f6c8de5365eab8348e299b3262ff15ed8ad23312d23bed196871"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0006.jpg",
+      "bytes": 49260,
+      "sha256": "b137ef3490a59e267919bae36386cae44726339ecc287abe4c0d630da3b98cd2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0007.jpg",
+      "bytes": 49254,
+      "sha256": "63f6a6867bf66dce060cda0470fac363a3604b07c9619932c009d05a31792272"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0008.jpg",
+      "bytes": 49271,
+      "sha256": "adf8dabec45f9ab16c7a8778e9ee8c971036c89358cbb93f6ccbfd6b503f3521"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0009.jpg",
+      "bytes": 49371,
+      "sha256": "1b33735fe3183bddcf50748bb76427536f85fd28df254f99081883dbdb76ac98"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0010.jpg",
+      "bytes": 49331,
+      "sha256": "7c77fe29acb6e8e0de6922ad7ad373db0005fe6aa34f48716bf85b3d185d1ba7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0011.jpg",
+      "bytes": 49372,
+      "sha256": "8f97b4afcf19de9f171fd527de6d5b4a2ab7c5668ad7ac4d8f6afb6b3b97b383"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0012.jpg",
+      "bytes": 49366,
+      "sha256": "b3d87ba0c7bd55fb4371466f69f2720ea5481aa0bde7e006e22908d176465c2f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0013.jpg",
+      "bytes": 47669,
+      "sha256": "8b78b9225f3732ff2ab0add481059affaceb0d5326578659cf855558e6d21147"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0014.jpg",
+      "bytes": 47506,
+      "sha256": "031d4eef1bf552edff4779d4f0eece7330a89e746fe85effd931ba0ee808d207"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0015.jpg",
+      "bytes": 47679,
+      "sha256": "cdc44c7cc058c05e1da3f1219d832c53064da49e2e77738dfae6acee13698180"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0016.jpg",
+      "bytes": 47726,
+      "sha256": "2b3977793632900f71a7150eaa2e7a643ab96cf0e86f9f738700ec51307af837"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0017.jpg",
+      "bytes": 47770,
+      "sha256": "15768815e02b9eaa77407cd32b84df450a20f4300a6f192759275393e1ef0a64"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0018.jpg",
+      "bytes": 47738,
+      "sha256": "4a3ae838df95e0599e87284b1d74b86bf8dce322390633d2ae6a21eb17209363"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0019.jpg",
+      "bytes": 47781,
+      "sha256": "b0a93e7065933c9f85a4da6637366e369755589184814a953da7a5c067ccf54d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0020.jpg",
+      "bytes": 47786,
+      "sha256": "d6efa458b1fad9e43d238a1c49c85ce67d6554ba007fbebaa32bc0e086a0a2c1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0021.jpg",
+      "bytes": 47802,
+      "sha256": "dececb19e0b96855ea2cefdca2d97a41f88ec3045dee60929a0efc87c8322e63"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0022.jpg",
+      "bytes": 47774,
+      "sha256": "1e45c267b974739d183d61bec9d7e3ac4f4f9b197337ae1d8ff12328cc7c9a87"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0023.jpg",
+      "bytes": 47771,
+      "sha256": "e8b7a34f5a23ffa079c0cc59022e76ae998fdcb217310ff6604f77d58b67ae67"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0024.jpg",
+      "bytes": 47679,
+      "sha256": "f846cac3d825f3fc2dc6fe256813deb8bf5d1902b5c19795e5c53d9c3ad566ae"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0025.jpg",
+      "bytes": 47711,
+      "sha256": "cbe186d43db23d219127d8e2df2e7396188d6c3bd4a37556fb548e5d29145233"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0026.jpg",
+      "bytes": 47793,
+      "sha256": "81f67e2e6a75373fd0cdc67f32deda44255682a59b4f38909db00e3894da5a9c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0027.jpg",
+      "bytes": 47704,
+      "sha256": "1b2d8d793aee077983dc0e9363594ba9d8cf281eb65b9810cf2ce2cba571f990"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0028.jpg",
+      "bytes": 47761,
+      "sha256": "397d347aa0da6debef08429d4a8737a22ed73474e8650f2ed133cdef1f93ab28"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0029.jpg",
+      "bytes": 47739,
+      "sha256": "831c11ec2df4249215dd219b5775a7b9d5e1dce2bf24051404d10cec6deb5f45"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0030.jpg",
+      "bytes": 47905,
+      "sha256": "e02db3127bd4eed0c2f065931d5a46d85baba92b52d5c8c3a29e61ededdaaad2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0031.jpg",
+      "bytes": 47879,
+      "sha256": "946fba134958a1631aa8375bc9a03cef04b19ba42ba529f3cda106d8e4558d51"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0032.jpg",
+      "bytes": 47853,
+      "sha256": "3400cb28c443e3897e205016f2d861c69979b878e9dc7243abad17356c021ab9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0033.jpg",
+      "bytes": 47772,
+      "sha256": "d0f837776b2ca7c07105971fcd79cd3d9ed799c693d9d603dd44a40ef2ab25b5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0034.jpg",
+      "bytes": 47740,
+      "sha256": "9dfa312208a3292c359e7cee8d7389321a1134e6a6d26a462db506d686f680b5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0035.jpg",
+      "bytes": 47627,
+      "sha256": "14dd019d7a21ccc8c3475a0ebf964ba7308d353c7ab5f87b12f64582519646a2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0036.jpg",
+      "bytes": 50635,
+      "sha256": "1e3afe61e8e455a871897f2b939569248e606b1f7886e7691b33d9e75392c29b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0037.jpg",
+      "bytes": 51627,
+      "sha256": "974a9efb96fb848b0dd2b3b8f8fdcfecd16c9693883e2f8f496e93f4585b541b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0038.jpg",
+      "bytes": 52525,
+      "sha256": "5323b586ae25e86b4ef24501b32dccd0229ab445d7f47506826f39a6f33531ac"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0039.jpg",
+      "bytes": 52051,
+      "sha256": "15730114588a769fe489cd405848d8e1b790fa92692e78bf51965f4a3c615b18"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0040.jpg",
+      "bytes": 52210,
+      "sha256": "60a106b3af765ecd20530a152cda1bed729c88af05480b1d4c613f63981ebce3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0041.jpg",
+      "bytes": 52248,
+      "sha256": "a2b4200ca1b366f3651d2843db0a82e1afcf6c95d393d2da6337293a20f99278"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0042.jpg",
+      "bytes": 52222,
+      "sha256": "0af9119102a01d23f0c92a8bc9728856284fca1d335c8e0a780b6f1ca07d91fe"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0043.jpg",
+      "bytes": 52237,
+      "sha256": "ea8c219afa3da7c2aa5e91a3d1c2a4c6dbd3a0ff57f802ba5c66b8640d2db5ca"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0044.jpg",
+      "bytes": 52214,
+      "sha256": "94f0932bda98315488b029b4b930b7ed18a7be2b3bd225f41c9afd6e35f10aa4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0045.jpg",
+      "bytes": 52227,
+      "sha256": "547874ae7dfe00740fc969198401d5148eb46d75093ea474effed6b927da76f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0046.jpg",
+      "bytes": 52181,
+      "sha256": "da06d4a27d79dad29eed8f7df91ad3ad3ee1f1a5a5b5f1d1b644b13eb703030e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0047.jpg",
+      "bytes": 52112,
+      "sha256": "603ec777f855f1fa9101fda416bf2a22b58d8e8a40f5ecd8cb918e4e0e360444"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0048.jpg",
+      "bytes": 52144,
+      "sha256": "2b2a38533406ab9b641c9cfc0b2bef053f23a2d0108c08772e47b34fa533b571"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0049.jpg",
+      "bytes": 52092,
+      "sha256": "68b7973eaad0ee104f8e534110686f854cf90d3895b2dab29373b0cbf016e77f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0050.jpg",
+      "bytes": 52139,
+      "sha256": "733469b65a33f5407ccf9bff08603b84e25afc7e0bb082354a7bf5da12393c9f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0051.jpg",
+      "bytes": 52137,
+      "sha256": "9e065d196cbc6ce8c71addecd0d86f6c4523f4971bdf173b72e5dce595189b70"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0052.jpg",
+      "bytes": 52152,
+      "sha256": "7c5c2e3e74c385b62ef7ed8ed2154db068466fed034394ce3f989f4e16c683fb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0053.jpg",
+      "bytes": 52182,
+      "sha256": "fa1a709aedf88646b8c0f27195052d464eb758382e38be8ddc28b7bc5b5a8b08"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0054.jpg",
+      "bytes": 52074,
+      "sha256": "5c8cdc907e7d825f281253cee7e3187625fb5e2c8a294cf82a9cfc5ab23227cd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0055.jpg",
+      "bytes": 52201,
+      "sha256": "3faefc753a90d56734188b5a81bc52062dd469194a29360f07ab346281919ad4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0056.jpg",
+      "bytes": 52172,
+      "sha256": "69b4dc56e9c170aa00fd988968d36948c8eb94d818557628e8cab447c4569882"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0057.jpg",
+      "bytes": 52187,
+      "sha256": "318d3e583950eb05bccbb9f90423a2915b447c99859990a422bdb5bdea6209f0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0058.jpg",
+      "bytes": 52152,
+      "sha256": "6d3a4c45182104a6153896e8e1240e88bd97bd8c6a7be8c5b691b74ccf2dfd7d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0059.jpg",
+      "bytes": 52137,
+      "sha256": "4bccd2b655dbbac838631e8957e6c06f9b6eec69cde7eea93cc3d25b5943267d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0060.jpg",
+      "bytes": 52101,
+      "sha256": "c020455893f7c77d20d281b35ea4b26c4f84abedd74ee5762aae4e5f6a1bd206"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0061.jpg",
+      "bytes": 52152,
+      "sha256": "7bad06ae689741d54bf0466cc4e22f29bd4239b2033bf8c089369c56b4cd658e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0062.jpg",
+      "bytes": 52146,
+      "sha256": "4cff9bb9abfe6eb29a7b224530ed25d81be66120d4806e3b469a7948e07e9323"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0063.jpg",
+      "bytes": 52169,
+      "sha256": "995ddd3cf9a9eefec3a05e4b0f21210164da76d0afa064e7be0b0605d006c6b5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0064.jpg",
+      "bytes": 52086,
+      "sha256": "1236e9466731d45aa744faa5a117d0de36bf6d76f39d156fc547a9977414a32e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0065.jpg",
+      "bytes": 52106,
+      "sha256": "6d4bd4796985d9aafe7da6b7ccbb02184182a2d61942adbf5c2a4f28085a8c67"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0066.jpg",
+      "bytes": 52221,
+      "sha256": "620b83d5f775f97a0f33cdc0e9c2b9f0cff99169d65b5ceb7d8ae7ccb262e84f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0067.jpg",
+      "bytes": 52187,
+      "sha256": "63ce9df0130731765c607d0e08a68b506b869450ad9ec29a4e804c45210b0cbc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0068.jpg",
+      "bytes": 52147,
+      "sha256": "8fd2c94b3056851eae91121a40c95611269ad44571ea9f10def4a0d42cb5fec2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0069.jpg",
+      "bytes": 52216,
+      "sha256": "6a438ce9fa0886d9945626cd62015e5a85b21c1c636033537dbc86a95ea4c9e1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0070.jpg",
+      "bytes": 52192,
+      "sha256": "adb33b920c78cc707aa8159e46c4e84d097967f3bbcee72fb5034a5b3f0ca5c3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/frame-0071.jpg",
+      "bytes": 52008,
+      "sha256": "8b862b7109492ae89513a73a6cfddbc26fa9ed93fec25d7d568d534bc0924d36"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/leaves.mp4",
+      "bytes": 491266,
+      "sha256": "3420753854d135c99705ebb11e167f2b4946bf9ebc9a9ab4c35e9aef61b3cc7d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion-phone/sheet.jpg",
+      "bytes": 68153,
+      "sha256": "a436da4c4365b0c2563fe067c0f6c7ec072000f98ea90977c4e4ad2e9059626c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/capture.json",
+      "bytes": 128920,
+      "sha256": "182d190d896971264ad1190057c3760d44d6d2b196a36d8540a0aab147422331"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/eight-pictures.png",
+      "bytes": 623079,
+      "sha256": "b544377f5f8ec6e14cb0fe4f4f6ab51cd0b2be7a7af3f2f985ec0b94f47a6704"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/empty-tree.png",
+      "bytes": 617308,
+      "sha256": "9228f85939095cf230b24830361873e13e3387275c0a32a68ada63ddb7579403"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0000.jpg",
+      "bytes": 87591,
+      "sha256": "9e60f04abff8b980005b5f98855cefcf81116da0f5df815cb7c1e48c4cce98ab"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0001.jpg",
+      "bytes": 87528,
+      "sha256": "ba7eda3a29081514401b7ceefebca3fcd8b991a4ac06119a0e680c8bb86521ad"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0002.jpg",
+      "bytes": 87505,
+      "sha256": "fb3a43ac06e7df66493e6ab9d141b200d424261ad5288378a5365989c7cb4a84"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0003.jpg",
+      "bytes": 87480,
+      "sha256": "97aeefbefe9138245e2ec2f74ec6956ef5971634463c9fec72a4141229f6b8fb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0004.jpg",
+      "bytes": 87556,
+      "sha256": "cc092db32b6fe9589c8c6cd82168e1dd855a273e5d514fafc116c890616d4169"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0005.jpg",
+      "bytes": 87538,
+      "sha256": "35532ec93f913b02d7e4b73c5ceb92d84bd8bd8e2c309e6ec3309d15d8de2b89"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0006.jpg",
+      "bytes": 87544,
+      "sha256": "cf44b3df92f5907d221868b098280158617156d5e725a925a9cd54b76a9b3434"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0007.jpg",
+      "bytes": 87542,
+      "sha256": "766b4ace5a3d120c4a305ad9ba3488846975d9182dd4e4e30c245ba1af77e6ee"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0008.jpg",
+      "bytes": 87642,
+      "sha256": "665d14823972b413d819f7a214afb3a72b34aca2528e0645eaceb78167f17366"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0009.jpg",
+      "bytes": 87621,
+      "sha256": "7b9008c67c33453f1d20adb6a6efe710c950568ba28c6f2ff34fd60a17b84345"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0010.jpg",
+      "bytes": 85828,
+      "sha256": "7d94fcd2a33913db7269fbf080e5036903b415b6eae8991bb661c02a9dfedf37"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0011.jpg",
+      "bytes": 85925,
+      "sha256": "78a212dca70744a44a19390a7485c9765a454e8af82ad6711a2bd6eaa738e852"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0012.jpg",
+      "bytes": 85978,
+      "sha256": "f43497fb350a0b494aa18164c60739c0eb404c597693b16cd671e79fed2f3be2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0013.jpg",
+      "bytes": 86083,
+      "sha256": "0232428ffe8b30fb9c703827401d011e9a144d9f11faa753e8494b9dcecc4b97"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0014.jpg",
+      "bytes": 85885,
+      "sha256": "82ff2d3f974a8aff0d7c059c686f5307ce168af4a9ad9d25a75d79069f3e2bef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0015.jpg",
+      "bytes": 85844,
+      "sha256": "d3798c0b5b9324f7ed52e8d646a6b7e76f7831d234fdc999e69305cc7e4f9579"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0016.jpg",
+      "bytes": 85757,
+      "sha256": "2e05ba5df73be21bf84e52c0df94e61a3b1a066635d8dacc59d1734579598f58"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0017.jpg",
+      "bytes": 85882,
+      "sha256": "40b4f5b79468f17fc5c4e4ee5c75ae08d8802e5331d2a07305765a3df696e5f2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0018.jpg",
+      "bytes": 85809,
+      "sha256": "af047b75b5b1f9055c7441e812b02a05d6563ff049f21d1a8a84fd447625afa5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0019.jpg",
+      "bytes": 85819,
+      "sha256": "73b02d47f1b7df8e4ee72a770db945bcb5abab1399b64f7d87ff8662a004dacd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0020.jpg",
+      "bytes": 85851,
+      "sha256": "fa484d14cb8ab29a9846e74d645e6cd97805158694f589541c29ed77325b1111"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0021.jpg",
+      "bytes": 85800,
+      "sha256": "1a0889ff551750585e34c61c5e085b29d3284648d14e605871e0d73c00feeba5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0022.jpg",
+      "bytes": 85921,
+      "sha256": "1c655e74caf96d9462ee1750bde78101386f06772e6dd45c07bfc28e68c24a81"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0023.jpg",
+      "bytes": 85854,
+      "sha256": "04c124073e6e30eb96dd8e6fdb47ad76c5ed062db47c74d0e2f8c4acf7b53e36"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0024.jpg",
+      "bytes": 85877,
+      "sha256": "7108af9849d2f52625d32dd362bfd3335861316a1f38e5b39bfe0dd77d517e0c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0025.jpg",
+      "bytes": 85856,
+      "sha256": "400482dbdc76dd2907268cf1dcda2de5f9471ae8e0037aff5b25cc91f18d968b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0026.jpg",
+      "bytes": 85780,
+      "sha256": "bdb45edc08e856667603a0333b77760f55badfc6429bfc6b08c7cc18a591a9fc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0027.jpg",
+      "bytes": 85738,
+      "sha256": "dfdc9bef7c6296441a3e3d8d8c505abf3bc7539d107344f325eb6a69603cd5cb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0028.jpg",
+      "bytes": 85782,
+      "sha256": "e2ebf6a3b710c7b90abc4e8e970474e92e0cba9cfd928c3f7398ac3850a82421"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0029.jpg",
+      "bytes": 85928,
+      "sha256": "79eb7e154558e88dd17d2c6730a70a31ea30cf1a2a1f5930398804d1c6585562"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0030.jpg",
+      "bytes": 85960,
+      "sha256": "e81c828c78b685133349f907ad9f3e02834eb8c1210e6a874855ae24143f390f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0031.jpg",
+      "bytes": 85914,
+      "sha256": "f1f108256436324d782bc8810097db473f5326b9e3fde602407204b467d114a4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0032.jpg",
+      "bytes": 85860,
+      "sha256": "f79d8f8860539c724ee9630f1feef8b0f7f3b5217271f2674fe0f5a2bf4bcc46"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0033.jpg",
+      "bytes": 85935,
+      "sha256": "3ef28ac7031457fa73648fecd60cfa22fd2bea5014e8e5c8f374a2adef0e688d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0034.jpg",
+      "bytes": 85888,
+      "sha256": "c9705f7022adc80eec5ef0fee4f98cdca74fca2197ec2953284619252da5efff"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0035.jpg",
+      "bytes": 85940,
+      "sha256": "f72f760614a391e61c128261df05d6b7b25cd8ce026cb77139ca005385b25fe7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0036.jpg",
+      "bytes": 89750,
+      "sha256": "0d1e99f889b14ba3bb174baa52ea2f85e27908162d0b7c2994060fc6180233c4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0037.jpg",
+      "bytes": 90220,
+      "sha256": "5bdee693f78f5380ebf9acb54031ce80e0cacbfbb8fc4dbc1bcbaddab19402de"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0038.jpg",
+      "bytes": 90395,
+      "sha256": "b544c61cd0d7200f531f26fd422e91216b7863668e9c98553f2075c15e901d76"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0039.jpg",
+      "bytes": 90185,
+      "sha256": "332e99fcb1b48515e9b51dea04ea351347139042581d0a21a148598e2504299f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0040.jpg",
+      "bytes": 90055,
+      "sha256": "cc554ee2dbd71950ce88c91a27e60140601c622c67f0b7c97dd062c2bb819358"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0041.jpg",
+      "bytes": 90124,
+      "sha256": "2867ef4180b59a90300559c180afd5caad754b15d22f220236bec049f1458d21"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0042.jpg",
+      "bytes": 89967,
+      "sha256": "6e195edc44b707b1aaf687a72cde4460ced66b71a7c08efeee02c7e9bb34ad7b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0043.jpg",
+      "bytes": 90060,
+      "sha256": "9d95ada3e89b361644496f62a7ecdb4cb61ecd32813783864c27a0669fffb7d2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0044.jpg",
+      "bytes": 89968,
+      "sha256": "9cdd46208856cbfe111fd0d10860ee0b7668abff2d3bfbd30762f9748866d196"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0045.jpg",
+      "bytes": 90067,
+      "sha256": "140a67b65ae2144f1713a568f80c08f0d855e428b8fad05451332c3513ac87be"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0046.jpg",
+      "bytes": 89986,
+      "sha256": "0cda25ffde3b2b392021d75ea66274de3f7ecfdeb901b42b61e626baae04bb15"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0047.jpg",
+      "bytes": 89993,
+      "sha256": "beec7f7bf40c62d3043da71f9351ff22d0bf897febee485b09f31ccb98fda6d0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0048.jpg",
+      "bytes": 90000,
+      "sha256": "855d300ec87e835fc4a81745084e673ca014ec45896c5e7116552762baab2d28"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0049.jpg",
+      "bytes": 89980,
+      "sha256": "490a28d1eeef3694e0bba6509e2c0aedfbecffefccf6945486532eacc1ff5114"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0050.jpg",
+      "bytes": 89936,
+      "sha256": "f77a5a29d9cafd8c1af06cb1a8de5ee496bfdfbc7c1c37112be37e59ccea1183"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0051.jpg",
+      "bytes": 89902,
+      "sha256": "537c86285db016f0d6af7581b2a8f0d4215c1afeed0ca9d5121b1290b901aa89"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0052.jpg",
+      "bytes": 89906,
+      "sha256": "26025b71a322fb9f1b0fec3a8b86a422fc380a521abc90414c4de1b043242406"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0053.jpg",
+      "bytes": 89919,
+      "sha256": "471509ff6b2a11fdba410b120a65d541465cfb58ff83a4e6d4cb1673b9062b53"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0054.jpg",
+      "bytes": 89989,
+      "sha256": "b364734bd38687549003b66dbd6bf2edf98a0be94549df3ba7f561492c8fafb0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0055.jpg",
+      "bytes": 90070,
+      "sha256": "434e1b6d369f24f0160130651401f506e8e794563a279d5b4ac1cd16f4c19daf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0056.jpg",
+      "bytes": 90005,
+      "sha256": "7e1d894713ab3b6d39c93a5822d661c8c8a02304f8f89563b3fe762eb536096f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0057.jpg",
+      "bytes": 90093,
+      "sha256": "4cb61982b5d9d2d23c32e8875ad9d10258ee679cf4d5dd40d3e0fdbcb25d7f67"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0058.jpg",
+      "bytes": 90105,
+      "sha256": "b43ef9b6faac6d5b1261fb0a78cc78d26b3d3052f45f7e0a11025032d0e89e2f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0059.jpg",
+      "bytes": 90031,
+      "sha256": "0e00713ab25c37f735fa8d32d0584efed0aff17b19cf6caa1313385b63f5658a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0060.jpg",
+      "bytes": 90043,
+      "sha256": "aaa0f904c81e450393661aac6c19e940d5b81e846a40430d4bc24712376301d4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0061.jpg",
+      "bytes": 90002,
+      "sha256": "d011a3c1bc68ed8bafee208059bd24f290ffea2dfa477aa7400a4d191abcd6c9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0062.jpg",
+      "bytes": 90159,
+      "sha256": "a8a67cb44592742a50167795a6141fa7f7a0612689faf1d2b827d333f05db58b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0063.jpg",
+      "bytes": 90129,
+      "sha256": "d9faaf72fc5b89f8adab9b152df5dfe875fcf230ce142da84e63837d5c211f5d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0064.jpg",
+      "bytes": 90076,
+      "sha256": "2a562858c686bf9d49e18cacd35922745be3a8a6be8bfe7ebfbdc17624da1f2c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0065.jpg",
+      "bytes": 90065,
+      "sha256": "b892806f670ec538f38eea008b9c20ffcc25fc14a4a642a05e0f73201ba74e1a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0066.jpg",
+      "bytes": 89898,
+      "sha256": "864a0361706ebcdc2f63922aadd8e163b35f18f73f486fb5ce11cc16dadb2e48"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0067.jpg",
+      "bytes": 90048,
+      "sha256": "078b728ef7e069dcdd2d3a912258673eacbc8944bd69381c293b4f98b75a5bd0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0068.jpg",
+      "bytes": 89965,
+      "sha256": "fe9c79aaa1bdf14251ab84287a734015e79584c0d0edd3ca1f22af224725bb58"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0069.jpg",
+      "bytes": 90044,
+      "sha256": "3fa44a07b639c4eacc6d7f04a5bb14a7646398d68ee2995d81c4ea286dc9544d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0070.jpg",
+      "bytes": 90052,
+      "sha256": "b00db12e6d9dba6128cbbb45eec9f3cae3089fc4f8a41a3c107e08914dcb3a47"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/frame-0071.jpg",
+      "bytes": 89941,
+      "sha256": "6e1a093ee5086ac37aafee075448d0609166cdebd526bb1bdb809acd9a82d41f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/leaves.mp4",
+      "bytes": 637842,
+      "sha256": "2a23be75d6f7114249026ee86a0c67546d84c74a605a4a7189782527c282fe2a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-5/motion/sheet.jpg",
+      "bytes": 86730,
+      "sha256": "6c211ac98ebb9b751c5562f5d129e4537ecf829a2e0b8f83321440b8e23ffce0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/captures.json",
+      "bytes": 181230,
+      "sha256": "ed2cd63ef3e5a5b6d61ab18e822435d300fecd29aca5883e8c2f2d3302ef6e2e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2054161,
+      "sha256": "66fc77d3d9348b10850c6595bc2b8d0ebc1301f973497b8820542f1e3cb0d9fa"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-0-320x568.png",
+      "bytes": 212309,
+      "sha256": "e280e4266ee3d9f4bfb3d5d8e5dca0fafd30e31301818a33ea8f99377440d87d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 380463,
+      "sha256": "9b3b1a8b18eb6e4d4573421142377daf5ef645f614e3be3a69a07317faa78e95"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-0-844x390.png",
+      "bytes": 402865,
+      "sha256": "48fe2cde511731817c2c74553b3fa854b0f589124f691c0d2537816a69d75a6c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2075976,
+      "sha256": "cbb9401791e5ca4cfe435d0ee1fd9582b62dc04b7685b03e3a39adb34266e657"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-8-320x568.png",
+      "bytes": 218613,
+      "sha256": "641bff1126db045033dac62cb4767bb7cf24c33401def0b890d2e7d8418fb447"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 390687,
+      "sha256": "96cf7b9c48696589c1d1acc6c2897c51db830b2dafae47d3bc409902378e878e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-8-844x390.png",
+      "bytes": 409376,
+      "sha256": "268216155cb6a98f3c6bc52db7d8956fd9dddfae481b87214f47eda49d5938c0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1960549,
+      "sha256": "c3d281e931ce677eeeef6883b9557a85281186a5cf506c76c07030bd93bb32b8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-side-8-320x568.png",
+      "bytes": 219027,
+      "sha256": "847092f4c2519325a053aabc714fc32c3210a51fee5676e6d79e104ac342a39d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 402260,
+      "sha256": "22fdf74ad2f3662b9a3bcf95596cd35a817240626a16ec383632a1af0b177704"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-clearing-side-8-844x390.png",
+      "bytes": 399588,
+      "sha256": "140e29d8d32bf2444d70024af76e4b9c83a538926bcc687383e919e501f6267a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1502316,
+      "sha256": "5d9a4b1a8235fd2ffe787c438c189bcb2df54719775ef0b58f3cba2877dc7b6f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-deep-forest-0-320x568.png",
+      "bytes": 190088,
+      "sha256": "d9bec050d260e0b1fd4c6c46d8b210888474e6a84eb604226752e2b5efc6f84a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 308226,
+      "sha256": "80066fc1303713b3181905420a4be0cf46f4af57a8db5fdf367b23b0fd066a13"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-deep-forest-0-844x390.png",
+      "bytes": 370215,
+      "sha256": "df7bc4c7ed7f93504ef59c7a60ff7e7835e7181b0d120f70a08c25809fd03dc9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1570301,
+      "sha256": "23424dfc6428af8b85b5556d9fe775a131806ae333b1d39b0fa2bc142e9c4ce3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-grove-8-320x568.png",
+      "bytes": 210285,
+      "sha256": "b9e8a1e33b55e592d7aebc89312877e280f0c50dd4c944dea53ad3224ecf7586"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-grove-8-390x844.png",
+      "bytes": 352195,
+      "sha256": "c9fe61a4ffc40b83fefef655268ffb4d423a37906336c00548f965dc79eb2446"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-grove-8-844x390.png",
+      "bytes": 385549,
+      "sha256": "fe24463a9bf0dc530ef2ab7f1ab9ed9055208f4f3016f80fff5476ce78477a41"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1821877,
+      "sha256": "6a7c6aee1d19233b0e1d9ff4a8ae1a678050b669503cdd21c35293c7ce281d11"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-pond-8-320x568.png",
+      "bytes": 199570,
+      "sha256": "355bd46e43856a00ddac0e42d031e4af7e17a6f6b5672637055f85e980dde2f5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-pond-8-390x844.png",
+      "bytes": 333162,
+      "sha256": "1809eb79c2c87e7c6482daa4594bdabf05e682fce58dbafded6452ca60c6ddef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-pond-8-844x390.png",
+      "bytes": 401720,
+      "sha256": "067ccd864513b6864a8d2b65895b9b7ab17e25ad1ed7de8ab227491e542636ff"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1990214,
+      "sha256": "0b48eda6105fe2e09671efeb5e4bf5429b55593a4b478d5721fb34f8ef121d94"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-tree-return-8-320x568.png",
+      "bytes": 221668,
+      "sha256": "b19a69645965eeffcd847da41bfa7eaf0a0e70aa77c52f266bb6d06543dba0fc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 385628,
+      "sha256": "5edc11ad7e9ad2931a76589c8ad48b6effb13b4e473050011feee136ad0a04c7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-tree-return-8-844x390.png",
+      "bytes": 404839,
+      "sha256": "d68e2a3794220f4c2cdcbd937465b96ef278de22959be1975376f3ca21e3d393"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1920678,
+      "sha256": "eb17922864f31f82c5b1740a34c4834d84c783a6af17c2a0f285a35ff0437f86"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-woodland-0-320x568.png",
+      "bytes": 251173,
+      "sha256": "416d602ac581b9ae91f20b072d6e649228b3618e6f22b91f688bca4ded8ac76f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 436951,
+      "sha256": "7ba0adc2715c2041930e4a4bc0a34981bc6a862dbc1ed4f5715e2aa10049d64d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-01/live-woodland-0-844x390.png",
+      "bytes": 397869,
+      "sha256": "205a9e860761201f7601cc49e03ed1b0f130391121458168354010f8ff323bc4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/captures.json",
+      "bytes": 170317,
+      "sha256": "37ebbef1b0af2a9db7f7834ec9022a2348481ef7d199da3af92d7ec1e5989b02"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-0-1918x918.png",
+      "bytes": 2047436,
+      "sha256": "b4643393cd90eaad2a5da040f10797b8dd36592712933586ec83a2e8717e3070"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-0-320x568.png",
+      "bytes": 212401,
+      "sha256": "eb4dc98ccdaf0bd39ebf6a171784b18315aee02d71d6869eb169793819c89562"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-0-390x844.png",
+      "bytes": 380882,
+      "sha256": "534e88654678ca506fa5a7f29c3fea05ee0160aa8120c485462a66ae16a488bd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-0-844x390.png",
+      "bytes": 401749,
+      "sha256": "66f55f9985dcba7db53729506271317935c0f8495e3fa82486d135268ff2e277"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-8-1918x918.png",
+      "bytes": 2065996,
+      "sha256": "d30e752941bea924c75399ac9ea605ae73e96aeaa3ff0cd94c89a7e5019bd117"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-8-320x568.png",
+      "bytes": 218805,
+      "sha256": "40bdd3a801699bcbb7563b9770c8f2d5b3c0c19a04205ac85e54bcdadc5d79f7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-8-390x844.png",
+      "bytes": 391131,
+      "sha256": "60dbc510a664c430536ed2ab2e44d5fef49199110bc57986ae2e401ad08d51b1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-8-844x390.png",
+      "bytes": 407505,
+      "sha256": "3f40cf3066d74a9a1d4363ecc950ad928f13597650e923878f3584b8f18fa2cd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-side-8-1918x918.png",
+      "bytes": 1954338,
+      "sha256": "a91a62fce258315d73b8ac8ff7fa7b1ee17078c6b3a55a75de74cb79133f4a83"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-side-8-320x568.png",
+      "bytes": 218230,
+      "sha256": "1a8510d07aef9c0ef61571f489e0152d6a538de07d849dc8b5fdb97bf6fcb194"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-side-8-390x844.png",
+      "bytes": 401506,
+      "sha256": "ff9f4f95cbde7dc7d47e9ce71267b6e8f1206d294da5b878b48fe86b0c0b1f70"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-clearing-side-8-844x390.png",
+      "bytes": 397856,
+      "sha256": "c4874a786f1a012c7e694fc172af8025a23bff0baf9475239a2b72d24986fbd6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-deep-forest-0-1918x918.png",
+      "bytes": 1504410,
+      "sha256": "311124bddd9f9d2953deb490654c38bb0590832aac01aa9c6ead8c4625ff8058"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-deep-forest-0-320x568.png",
+      "bytes": 190244,
+      "sha256": "817486923b9bb49e2c4cfe741d76e0424c47b9ef8da44f10614f2046b8ed731a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-deep-forest-0-390x844.png",
+      "bytes": 308444,
+      "sha256": "8b59a8948f1c783a58d050600efefa1982e823654502a8a91a90cdf4a522c236"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-deep-forest-0-844x390.png",
+      "bytes": 370369,
+      "sha256": "be6c37e8519008dbd97aaf2ddf78170d366886ab6a52688733a747da1f706700"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-grove-8-1918x918.png",
+      "bytes": 1571238,
+      "sha256": "eb8eb3c45356470d36b75367ea006ee1faf0bdc5870d7e9f735fc5e018416a24"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-grove-8-320x568.png",
+      "bytes": 209400,
+      "sha256": "821c1865eb8ae31740d2cf11a1b63269412bf737577d780a655360aeec5eaede"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-grove-8-390x844.png",
+      "bytes": 351560,
+      "sha256": "bd5c6bb4b61151140be842ee34902c892fa2200c52fa433df6b77c3d7f74be27"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-grove-8-844x390.png",
+      "bytes": 382681,
+      "sha256": "5ff8705cc1c973e0265f51fded0234bdadac60045dc050eb4a131e64b87ddf9f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-pond-8-1918x918.png",
+      "bytes": 1619583,
+      "sha256": "96bedbeb66e25c0827733da27e9e632c1978d58f857f29ab94e98c1276ac7016"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-pond-8-320x568.png",
+      "bytes": 146802,
+      "sha256": "e284cacd8ee1f76043fe3262e9ada2997abef446e9a23938ff8228a2f8ee3b4f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-pond-8-390x844.png",
+      "bytes": 240716,
+      "sha256": "2bb7decac785d3189079b5b1c6e7b2f3d8605fc120f4d4927d90382626c958f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-pond-8-844x390.png",
+      "bytes": 365435,
+      "sha256": "df7b083af5c07778d8834a6a4c33b634be6b39fa17c65e32014adf6345f49c7c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-tree-return-8-1918x918.png",
+      "bytes": 1985905,
+      "sha256": "b37ced9d9d2a93427570b079619439a1933f48ba1f344a9c8bcc72c6a725fb7a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-tree-return-8-320x568.png",
+      "bytes": 221244,
+      "sha256": "6dafb010d12a4bd653194197141adacf9f7548870bda8e2c45ff45a4679e77cf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-tree-return-8-390x844.png",
+      "bytes": 385838,
+      "sha256": "f33b6e52b720e3cd4525c5db8036c29a3474fdd343516dbd9185fe04cb53191c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-tree-return-8-844x390.png",
+      "bytes": 402127,
+      "sha256": "f9b0c246f89a65c999e7872ef15d2409813d9d7e779b9fd0fe8f60b0df83339b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-woodland-0-1918x918.png",
+      "bytes": 1916333,
+      "sha256": "64058d44e85a69f29bc40b9c2b8e5472f6561b1171db11e997a31548e8e9977c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-woodland-0-320x568.png",
+      "bytes": 250087,
+      "sha256": "3e94aaf26914d566ad82cbaebd391168ad9eb3dbc312e3250f1cb562be1cddd1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-woodland-0-390x844.png",
+      "bytes": 437458,
+      "sha256": "3e7de0fc1a3587677e519e19b6747ab567503f78db52c40572a5537779e3cf83"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-02/live-woodland-0-844x390.png",
+      "bytes": 398200,
+      "sha256": "12ea9f713605090e37338bf4bff39f7096f9d05f8d46c4241dd7ee597d1f4f80"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/captures.json",
+      "bytes": 170319,
+      "sha256": "356c76cb246059b0accfdd7d43939dcb24decf44bc7814be80e8a463fb4362ba"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-1918x918.png",
+      "bytes": 2055115,
+      "sha256": "7b96405b83ec3cd1ea442ff8e66b6809e5cbd6db47c8d61be67acfab3f478a30"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-320x568.png",
+      "bytes": 211891,
+      "sha256": "6f2ca148b6ae412f90fa776d1cc3b616c59d67177ea84933da1f5ba34d0d90c3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-390x844.png",
+      "bytes": 378697,
+      "sha256": "2337348b7ceb22e3e029227d5d06371343859ad7bca279d5c1e8c52180e2d62b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-0-844x390.png",
+      "bytes": 401720,
+      "sha256": "a9f869a2be09eadf1a81a827429fc2b9705ef48dcca4a9eb005b90a9dbcada41"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-1918x918.png",
+      "bytes": 2072164,
+      "sha256": "7f1d3b95e4e4c91be0d3a2aa2d22339d255c81e7539e5870c78f1e9abd848ef2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-320x568.png",
+      "bytes": 218547,
+      "sha256": "474c2ba7d836fb07280be3e0415991975d21f8a8333ff82c7d4107a258f69ea1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-390x844.png",
+      "bytes": 389275,
+      "sha256": "a8cd12540029b12b9e8ad7b6dbee3dc6e288b1bcb0ae4fe338f05fb6e1d533e2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-8-844x390.png",
+      "bytes": 407547,
+      "sha256": "8d8c7b937cefcecef7de1cad566dfdd5f5ecd55eb30bbd9ad3532bdb4714d2b8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-side-8-1918x918.png",
+      "bytes": 1960584,
+      "sha256": "1915697aebc1851fab559e99bd380ded5050721265a640d93a3c7d237a266cb6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-side-8-320x568.png",
+      "bytes": 218083,
+      "sha256": "0546c6e9199b6151c658d3bedd84892b7814982f3a1bb84b4e8580746310cfcf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-side-8-390x844.png",
+      "bytes": 400712,
+      "sha256": "9f0db6a5e379f3e5fb4d9dc71b7fa92b7a5d4f14984453d6a15b38678d4abc92"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-clearing-side-8-844x390.png",
+      "bytes": 399301,
+      "sha256": "29b20fa968819fb5e4e7212171706bc9a3a0933cf47bcd0260e4fb2db9c0808d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-deep-forest-0-1918x918.png",
+      "bytes": 1504253,
+      "sha256": "ad2943a5b417a96f3577f309522884b3d2ac07fb5cc1b77ba36c93daedf230e8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-deep-forest-0-320x568.png",
+      "bytes": 190136,
+      "sha256": "1cd2e8141f03cf493b06758848ba38a6344fb260bba62552d0597d67805e651e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-deep-forest-0-390x844.png",
+      "bytes": 308240,
+      "sha256": "1150b1935d12037445092b49263e68e3aac91f7b8a9e5531f55fc38613e8a548"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-deep-forest-0-844x390.png",
+      "bytes": 370239,
+      "sha256": "e4232744e340464d8ae34aaf54d14c408c154c7921177b056f9ecf999f57be10"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-grove-8-1918x918.png",
+      "bytes": 1567200,
+      "sha256": "455afd76eef762a3f4b2e5f3a3defc040583f883231e37dec4060c5e9cd0ec78"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-grove-8-320x568.png",
+      "bytes": 209258,
+      "sha256": "ab9069b34ecb0d90c74a6c4fa896a828d08b2e6f81c581ccd11d112020f33da2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-grove-8-390x844.png",
+      "bytes": 351409,
+      "sha256": "5521c5b18428cc94c5cb119d0342af2f0a12e5ea15f0048346e4184258266965"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-grove-8-844x390.png",
+      "bytes": 381127,
+      "sha256": "085b3e022ac870f7371c4311d28642eb56bb6cc6f9a835ac73bbafa0b49611cb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-pond-8-1918x918.png",
+      "bytes": 1619366,
+      "sha256": "51b4da40a5608586ed2f66cedc9c46bde111cbbcf222ba73d9220389481099b3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-pond-8-320x568.png",
+      "bytes": 146662,
+      "sha256": "f4ea2d84ad6f9bf89e5a52beb0fcdfea5f7770e6450282836592709069598fec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-pond-8-390x844.png",
+      "bytes": 240539,
+      "sha256": "8368e0f2512456637ec6114000dc0befbb85dbcc23dac201859cc7f927f06f3c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-pond-8-844x390.png",
+      "bytes": 365294,
+      "sha256": "f9f3c9f6f3e231805304f929c8f187db811ef79cd0274265c502467a15f73e68"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-tree-return-8-1918x918.png",
+      "bytes": 1990325,
+      "sha256": "b5a97e55635ee9b96f9a5b12a42112588bba54826d2b60dc3087e3c8aac5e3a5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-tree-return-8-320x568.png",
+      "bytes": 221036,
+      "sha256": "a082fabca87c1050b8a80e198e825f0872d4d50eee09c64467fbdcbee9991815"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-tree-return-8-390x844.png",
+      "bytes": 384495,
+      "sha256": "d5c20bee1517bf1fa2106272d3ad446187190c2bce11e627e412161eed4b2fdd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-tree-return-8-844x390.png",
+      "bytes": 401205,
+      "sha256": "c0480e12346b8275f7f3cf9ab3df4dd4e9564d6ea45e590877ec6ff2f11dc6dc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-woodland-0-1918x918.png",
+      "bytes": 1922004,
+      "sha256": "d2dea8eaca1c385a7fe383684250b8f0c7500d2007539a914773ab010ac50647"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-woodland-0-320x568.png",
+      "bytes": 250847,
+      "sha256": "1cf255ff9c39a7d1c5463c2ae042740dd0b14106a842a4105280356e0ab5c78a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-woodland-0-390x844.png",
+      "bytes": 434689,
+      "sha256": "3f145e825de26145418b799f761c6b0bae1ed650758f1411113c2393a23f9ae8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/iteration-03/live-woodland-0-844x390.png",
+      "bytes": 397491,
+      "sha256": "b481a82fe41ff310ca8fb2a50ccc70001827be352919b0bd9a43adbec654be77"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/load-failure.png",
+      "bytes": 720633,
+      "sha256": "534c89102dde1d803b2098baf07df7ff14151bd1da9942fafac6919f27629381"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/manifest.json",
+      "bytes": 32345,
+      "sha256": "a0301253d23a99d1062e5b1437175f701e69d235537d12b3463c3fc6ffcdccff"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/capture.json",
+      "bytes": 131505,
+      "sha256": "c0a1cec517cada4a2bc60df08b4c46a2a9d0b7c981605a67a510eb318bed08c9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/eight-pictures.png",
+      "bytes": 393974,
+      "sha256": "f9c7d71a5b94916ce5645e4e967e2b0e4474d5fe7139a08e74872a888d05f5f8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/empty-tree.png",
+      "bytes": 387206,
+      "sha256": "b2b2cab65453def600b88e952e111f2616cd6323e055dff41994e4a54403b507"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0000.jpg",
+      "bytes": 49332,
+      "sha256": "87075eaaea58f9ace5942d9ee8cb03e07eab7f81b5a633109a1e5e6c4c3d31d6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0001.jpg",
+      "bytes": 49321,
+      "sha256": "68dd6773680a243dd3b420a74eb23d9f0b3aa713ad57635a03f87211244a4b36"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0002.jpg",
+      "bytes": 49301,
+      "sha256": "9c6445b1a854381041bfe1aa3fe269577873bb774d837b9c6e55c815d845f3e5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0003.jpg",
+      "bytes": 47682,
+      "sha256": "e93d2991ecd9607d713a19f246b3f9335ab0ce482a60c2fae24ae7edd1351eed"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0004.jpg",
+      "bytes": 47746,
+      "sha256": "fec9be29751eb77e83e7d1234e0c442e5c6f06e3127eb31790ae128c3526db38"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0005.jpg",
+      "bytes": 47644,
+      "sha256": "393d2424af7ab31ae31971f5f878f278f9e987f5526bd9420642203eacaca339"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0006.jpg",
+      "bytes": 47636,
+      "sha256": "69eea880aa6b96b918303076582695c0c0023883556aaf926c92ff2e18f634a2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0007.jpg",
+      "bytes": 47632,
+      "sha256": "c5973dba630bc839c9153e64582f32e956351d3086f84938f7aeee398a371017"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0008.jpg",
+      "bytes": 47673,
+      "sha256": "20460407da963a0cd4254c6832fe223139647e4858018655952e50e94306efb1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0009.jpg",
+      "bytes": 47771,
+      "sha256": "94620ab9ddec8f23ccb88652e38f05e7d2bb0527f1ab3c4acb74515966d5f484"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0010.jpg",
+      "bytes": 47691,
+      "sha256": "0749c7c85fdd9b355d8814e30194000b46f09ecd6de4a0e812b6bf6ed9ce457f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0011.jpg",
+      "bytes": 47759,
+      "sha256": "e80229506f42acdb670c7a42b7383e579a86f0430c18abf3a842354633c98190"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0012.jpg",
+      "bytes": 47698,
+      "sha256": "db690271a3f393d5535fd8a1ecc0198eb1192b258f7bbf145d0723883427b969"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0013.jpg",
+      "bytes": 47688,
+      "sha256": "d8b13923182eb63ee4362f75896f1b9c23677eab45457994009f6ec17601b648"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0014.jpg",
+      "bytes": 47533,
+      "sha256": "62767607af13e365f409d49ab3ddbd3710b6e0cde38c48b03f66f8a43afc8641"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0015.jpg",
+      "bytes": 47688,
+      "sha256": "9e3da366fcc77dc0a2ebde3c7a42a8d82349dcb8fcbfe84e1ebaa76fe315278f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0016.jpg",
+      "bytes": 47741,
+      "sha256": "d32b26b9b951cded6e475bf06f19a9dd5c2c6e897cf85bd02d03e3a2840ad56c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0017.jpg",
+      "bytes": 47803,
+      "sha256": "88d98dd74b39cf53f01b6e75eec96b7a6f8458ef2875891b0254130bb8453460"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0018.jpg",
+      "bytes": 47738,
+      "sha256": "ba851d4d81af8f10ac4b6a29e3c0a25d58b73153fcf603a9f26954869b473bfc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0019.jpg",
+      "bytes": 47775,
+      "sha256": "3ec605c08e2a1665fd4ca372dacb4bb4e7c68d4776d62a62903629e87a39adde"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0020.jpg",
+      "bytes": 47787,
+      "sha256": "ba79fe6d4a16699d08bc7422eac74585a2543980d6993443ee18c8ec8e3b4bdc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0021.jpg",
+      "bytes": 47814,
+      "sha256": "ac0b4d14f013c9265504d960e53359a3329ab57af0399c2acafefe48d25b1e3b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0022.jpg",
+      "bytes": 47781,
+      "sha256": "64ee240056c3d8baeab56c44fd6b1c39a98639fcbab3488eca01b4b2d9684fb4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0023.jpg",
+      "bytes": 47780,
+      "sha256": "651d6244652f56de15674cb8f6fedab8bf8e3adea76b1e46910a084fe3989eb7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0024.jpg",
+      "bytes": 47712,
+      "sha256": "473c74ff46f0f425dc52f4a558b992d067611eab860fab7283b93b2b25b5f695"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0025.jpg",
+      "bytes": 47717,
+      "sha256": "48b67013c433d0085b0ab4c4f3c457244910ca578540bd50186e1c1eadda7773"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0026.jpg",
+      "bytes": 47806,
+      "sha256": "2af892ad6b615f6ca09836db67f1f21f2cb3c63a7542ff4b6820b6b950bd75b0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0027.jpg",
+      "bytes": 47709,
+      "sha256": "db6170cf52f6cfa97637ab657239078f169a067c4db2c0f021893554cf737fbc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0028.jpg",
+      "bytes": 47753,
+      "sha256": "5664852b9885dd0fe6fbb48259a2a8d8f1ddc98655ac513e8c9fc6aab8c22a79"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0029.jpg",
+      "bytes": 47751,
+      "sha256": "d73991e52a1726af912b7bff41be37b0a1ec573d3d425446e074715754d16b93"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0030.jpg",
+      "bytes": 47929,
+      "sha256": "7b48715a486b340ecb1173b27a6be4b367dc438030501a5a3db6988b474fe53c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0031.jpg",
+      "bytes": 47911,
+      "sha256": "9321cf1985b8a6674044f49fe86880192ffde79d01f201fc62cc717b0c678323"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0032.jpg",
+      "bytes": 47866,
+      "sha256": "315ceeeaaf472ea843eac4b33426aac5be0d18d78ed867e7ded475677b2f286d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0033.jpg",
+      "bytes": 47788,
+      "sha256": "4951407c605b83a687f20b3cb45e380d93aac6721643fa0ae93c792fe3127988"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0034.jpg",
+      "bytes": 47757,
+      "sha256": "6ba966c78fe104bcf9e7d74a6b81c1c526a58fd74ee8c900449e1e5849030c7e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0035.jpg",
+      "bytes": 47681,
+      "sha256": "5823e0eb250540e6d8cfbaf49fad9f3b15916ade5377222c4bc14c900c530f0f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0036.jpg",
+      "bytes": 50738,
+      "sha256": "7013d7a3caacc433914e579b15168540ae72d658eadda5e5e6f4bd7f467462c0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0037.jpg",
+      "bytes": 51551,
+      "sha256": "9718778cc8f2cba59af92ce3638983ea8d113becd5c63efc5ef761f4af59cc44"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0038.jpg",
+      "bytes": 52419,
+      "sha256": "bd1ad8a1e658501d811fc53fbe8b32ac1937f6b6c3cbd6a8a0119870c47d2487"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0039.jpg",
+      "bytes": 51963,
+      "sha256": "d7e7112c1df4b95768b7b592ff2f564f3e75065db52b9d7c6b8bb83de2d129b6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0040.jpg",
+      "bytes": 52119,
+      "sha256": "e97e9befc16adff1ec98994c7844675e9f9f765a693a8d191161bc3c121bae31"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0041.jpg",
+      "bytes": 52172,
+      "sha256": "e1df08de8da541f5e88cd330a2f7526542df514a4aa3ecf26a6196c64dc4b5a7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0042.jpg",
+      "bytes": 52126,
+      "sha256": "dd2f109105749f273c99cc908144e2bd75085800ea10c0c170c89eca02a7d09b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0043.jpg",
+      "bytes": 52142,
+      "sha256": "0075449e0afa9430115bb4acc1f8f17412b8568590e96071ea5a84b4d7a6848c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0044.jpg",
+      "bytes": 52160,
+      "sha256": "2be805fd843b2af68c2d7c807b6c2f60d44742a858fa3249e588af898806362f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0045.jpg",
+      "bytes": 52128,
+      "sha256": "140e249a061ea7123b46c3ebc85b1779db0963550189570f29feae54325ed79a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0046.jpg",
+      "bytes": 52088,
+      "sha256": "aa7c17dcb1ddefddf537ed9f6eac9461b9f3f5ddf9e5486ca5b4317f4396e859"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0047.jpg",
+      "bytes": 52083,
+      "sha256": "31633ab2c42c7d31a22e8173b68d31baba6d088d85a36fc00b9039a69bf593c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0048.jpg",
+      "bytes": 52059,
+      "sha256": "287af002ec6b8252645b6ccbc3930819b4e71babecfbbb5e96ab829479bebda9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0049.jpg",
+      "bytes": 52036,
+      "sha256": "2ab590beca6244967f890f2959b552ba6305026ead039241380c5f8639f0a1ee"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0050.jpg",
+      "bytes": 52079,
+      "sha256": "9bb53db880fd26a14b02a518be3b7d4fc61ff7adf4b59ad3e5fc3616f4bd0405"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0051.jpg",
+      "bytes": 52095,
+      "sha256": "e23564d631f262f591c256ab385c9a223b5112fb60bfc213ce81de170f6bfa32"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0052.jpg",
+      "bytes": 52061,
+      "sha256": "22a86e522f84b20168e4f34b97d1db6e0587b8152cccaa6daf6873263fbe940f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0053.jpg",
+      "bytes": 52102,
+      "sha256": "2e11e64cdc48e4f1ab8e68bd6e9bca9e9967789e16a0984a200a20ee980ffec7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0054.jpg",
+      "bytes": 52028,
+      "sha256": "5bc7372605047d4b780a016d4fc814d1d9afe87bb9619a05311a0277e0e2c1c6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0055.jpg",
+      "bytes": 52110,
+      "sha256": "bf5ad340f0527e9eabe7cf7f94e010ea6d6dfa75f0ce0ba7077b891859fa0c85"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0056.jpg",
+      "bytes": 52097,
+      "sha256": "d2e1f779fa8e2d125175311176e8fe8ed4f4f3f5db25195b7ea0f81cf8805372"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0057.jpg",
+      "bytes": 52116,
+      "sha256": "4413906e20a6adebbb0692cb955ab22843e7d3cb0b6ffe7bf9b417d48551b682"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0058.jpg",
+      "bytes": 52118,
+      "sha256": "e978393cba91e901f3e5d14883ee8ac2c8fc96cadc4e61c6067d971bc530dc54"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0059.jpg",
+      "bytes": 52044,
+      "sha256": "828bf4391e08b162869b6cb9cfd7f7274f3c47427f91bf1afda987852c119862"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0060.jpg",
+      "bytes": 52071,
+      "sha256": "ed682ad329adce622f0e709dd12a1991c561a0541c2bea8e89d8ec121a056ede"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0061.jpg",
+      "bytes": 52129,
+      "sha256": "806221354a2786edf9546dc1f8bd7951cc54a671403f2615cff46e0a92d7d0b5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0062.jpg",
+      "bytes": 52118,
+      "sha256": "a8242fa95f0f4c878cb7c6eb404922d05002898ee3485bee1174483cfba972de"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0063.jpg",
+      "bytes": 52106,
+      "sha256": "dacdb5ec75de93d7b2f3cd3a08dbd54531ce194a7c93c7910401e5f37f881e6b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0064.jpg",
+      "bytes": 52011,
+      "sha256": "d1fea66be3c196a17ce9e4f6f4f9049cc297e5c5f2a3e66a669a2367b7bae0f8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0065.jpg",
+      "bytes": 52011,
+      "sha256": "a3773fbc4d53412748f1a306031887b30d5bf3042b1b7cbe49f22b295b84ef6c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0066.jpg",
+      "bytes": 52098,
+      "sha256": "f0c9240a03497c53d62281977a2833cca8176e4447569b712683926723783bd1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0067.jpg",
+      "bytes": 52071,
+      "sha256": "1fc9363264e5a0374e0c888a4ca4c476a79e02aeb521023bfc26742b3b2f5ecb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0068.jpg",
+      "bytes": 52050,
+      "sha256": "607ca357b8aa211db474e4ce45a89b1093c0b2488efbc0e40419c73c4aee98d9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0069.jpg",
+      "bytes": 52105,
+      "sha256": "71df8687b1995d3b39df2781debe2bc0436dd51dc0b36890c4610b3f4a0a17bc"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0070.jpg",
+      "bytes": 52090,
+      "sha256": "5ca48ed5f3240a9e9de96152740e8f0e0686a71b8751abf14d3ab212c9d0c2b0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/frame-0071.jpg",
+      "bytes": 51973,
+      "sha256": "e721217d88dae53c20eae44a7a5cc52d190ea94bcfd0b1e6ad5f2a9ea384bad4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/leaves.mp4",
+      "bytes": 488802,
+      "sha256": "8563aad4ccb0499f1d50c691e5e3b33fbb99a8fb4a31783604218377662e8b3b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion-phone/sheet.jpg",
+      "bytes": 57298,
+      "sha256": "9afe349855a816442a7328cec663aec5f04905ced14dd97c4ea6ce7e64e6a642"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/capture.json",
+      "bytes": 131506,
+      "sha256": "4b760ec339c0fe97460ce2ac31b251812ce38248d388d920ef175dc54e19f49a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/eight-pictures.png",
+      "bytes": 626274,
+      "sha256": "f2b5501596ba33969e21333d15b5ba4d28ba20ccec7871f0e38422ec1b019f73"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/empty-tree.png",
+      "bytes": 620613,
+      "sha256": "81651d6f331c0184c9339128612e2b89eb9d230a6a60a0aa8632de21a8069f03"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0000.jpg",
+      "bytes": 87648,
+      "sha256": "5d939e1ef3f663c79828e3512ff59a1b995994b6a08114f2816e6ce00b116369"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0001.jpg",
+      "bytes": 85809,
+      "sha256": "25774cd7455b66fb38081abc65ebc754f65853917da05a3ddf5a491b7bee49f4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0002.jpg",
+      "bytes": 85764,
+      "sha256": "3b8bfe2f2828edebb3baa85851abf83d26ba4e171053866843d4d5e295e8d6ec"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0003.jpg",
+      "bytes": 85785,
+      "sha256": "66fc134a0dfe9c568e619f191c94b649a1c26fc1d3749a1899b3550ab892d37d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0004.jpg",
+      "bytes": 85867,
+      "sha256": "5efcd120483f02c20f43bf4baa04b9d340d8503dee0689b52da27552b4a34b24"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0005.jpg",
+      "bytes": 85867,
+      "sha256": "82780f71b9c1657b170bb45380fb0d8fd999c350f753b4fb657770ccdfc46103"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0006.jpg",
+      "bytes": 85837,
+      "sha256": "6dd9ccb0698cf4fc7b02395db602b033374fd4c74488b17933a3aea8617b2f14"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0007.jpg",
+      "bytes": 85862,
+      "sha256": "4610ab269a01ef888f2e71db2d44d6deb9cd1a3635edeeff64a2429f63a89752"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0008.jpg",
+      "bytes": 85877,
+      "sha256": "090d74712ca02705ac3f53ec9ed4798f968efc40684f51dfdb10d706ac773096"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0009.jpg",
+      "bytes": 85869,
+      "sha256": "5169740b587f0b8acd45c63648e064739b64cb2c48587e444dd7fa481617ad78"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0010.jpg",
+      "bytes": 85834,
+      "sha256": "5613423261dbbdf7b618697411cfe4cf06891846f8e75a34893f8696ccef86fe"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0011.jpg",
+      "bytes": 85909,
+      "sha256": "f90d572c312a2b04c102a5c5c4e1323a816391d8e629976d959a61455989cb7b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0012.jpg",
+      "bytes": 85951,
+      "sha256": "d3a771202a2f383e55424263eeca723f307a9b6501218ef020f91a2cc836bf51"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0013.jpg",
+      "bytes": 86088,
+      "sha256": "05800000b6294ccc0f705120a5d75e9f33038cf618b0b46a9005f85faaf87a0b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0014.jpg",
+      "bytes": 85924,
+      "sha256": "51d9c6297d7a846632e63133a5bc873fe0aa54fd123f2683479da72d85800db3"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0015.jpg",
+      "bytes": 85919,
+      "sha256": "c53021723a76f6c7d219db43c29e43ce0a48f148221ab38da52c527837abfe6d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0016.jpg",
+      "bytes": 85781,
+      "sha256": "4d4888382664ac1c4335d47590fc9a4d6885bc4d4cbdcf67ca5a06789596e3f1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0017.jpg",
+      "bytes": 85828,
+      "sha256": "59663b199ebb7daee7f60cedcbfb4d33ae9c4806a38f1d46cf4bf2bd876f101c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0018.jpg",
+      "bytes": 85800,
+      "sha256": "b3ca9ef6e4ea4bb01fa4947a72cba9351b4f37f03ea501bfcbe891c0e0980f47"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0019.jpg",
+      "bytes": 85793,
+      "sha256": "eedabc54bb475e20e5076cddfab81d9c0dbdfa79dbfa82abfb8cb26b8e186f10"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0020.jpg",
+      "bytes": 85808,
+      "sha256": "264be6ffc5d384b0ef790ce85f195e00e2fe4c65882486280c8fad0b4245569e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0021.jpg",
+      "bytes": 85806,
+      "sha256": "5cd98dad72797406fb71ac3e7f290f41b7cc41fd843861bfe610fcddb84ca468"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0022.jpg",
+      "bytes": 85875,
+      "sha256": "d6eda765e50bc7c7fd6906ce2cad533a0d0dce2db67690dd51783ace0cf6fead"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0023.jpg",
+      "bytes": 85832,
+      "sha256": "bbb6ff4f0c96bd924203308dd6fc87c185ae388799f0d140d430c32b6af53a21"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0024.jpg",
+      "bytes": 85892,
+      "sha256": "1ba17718057b83140755c78756c8e49bdf1243618df6785892ccd421f643611d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0025.jpg",
+      "bytes": 85875,
+      "sha256": "bcfdd29b2df20754323e0d98af1c43bf1a7cfaff13473f8dc71fb87c56d024ca"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0026.jpg",
+      "bytes": 85830,
+      "sha256": "1fbfff268dab311677b4424fc7817d3bb2f3cb8dc3d8954cd5e08e844d0a4ec6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0027.jpg",
+      "bytes": 85728,
+      "sha256": "9fa43705ad3293790cc30888a4a7ca3a4ee7a8d803e147c3f495c21731891717"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0028.jpg",
+      "bytes": 85735,
+      "sha256": "da2ce7f48c79e6f03b3ca69675e73ea42704ab8b97a671d6613843ab99f6276c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0029.jpg",
+      "bytes": 86028,
+      "sha256": "1dfe4922df81d4ae4f9de4da9d7d1efdd5bf08454ef9b1e64f187cf7e07af61a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0030.jpg",
+      "bytes": 85930,
+      "sha256": "bddcbb07abc810eb1b0693dbba7b38a3f68f2bc6b0e4a18b47f419c0ae47db67"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0031.jpg",
+      "bytes": 85895,
+      "sha256": "2f23f62f56412623497566f4e3650a98de604e949126eccacc0b3ba50bfded37"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0032.jpg",
+      "bytes": 85862,
+      "sha256": "3e6f5a949d42562fb70cbae9e809f2bb5acf59e0f74f4b797c45e148647c0bc0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0033.jpg",
+      "bytes": 85946,
+      "sha256": "5534c04d6b78ab7cef9ded74b69e40082ca13fb5f8d01493cf909ffea09cfef1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0034.jpg",
+      "bytes": 85924,
+      "sha256": "46f90614ab728935edd51e9b9e00a8a6436e9ac3d3418c4556e557b719c1eac0"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0035.jpg",
+      "bytes": 85967,
+      "sha256": "01dbfc2e6cd2f2547b82cee1632dff765ab449eaefdd6a322892e82bb0a52bbb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0036.jpg",
+      "bytes": 89655,
+      "sha256": "0f3a44153de974ca507ed0b9d06a26634a56e43d8483cd44013e65a680a84c33"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0037.jpg",
+      "bytes": 90110,
+      "sha256": "98eb653c1c6babd5fa44a3496130b10a4c26dccf65c4d7df88e24d066b5a351e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0038.jpg",
+      "bytes": 90212,
+      "sha256": "93762ade0faa7c03107983eced85f4fb839779ca7aa234d7eafd97d14a7ee181"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0039.jpg",
+      "bytes": 90061,
+      "sha256": "703c2b9f8bfc05f6463dda264c715a7e595880d1c14c865620c4015fd7bbcc1a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0040.jpg",
+      "bytes": 89894,
+      "sha256": "307a37d96229f62bdbae3650c99e229742d19556d41085d87781fe79fc89d759"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0041.jpg",
+      "bytes": 89974,
+      "sha256": "9598f01a1a858c7f9d4254ffa2330e88c9929cb203c23abf0d8a98d8d0f2b4cb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0042.jpg",
+      "bytes": 89878,
+      "sha256": "b91d6d414f6632ac0338cd6f014c2694103c69b8e0054b0707a4b447edda433e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0043.jpg",
+      "bytes": 89937,
+      "sha256": "e7229c7a09dd86c2eb0c329af127afd13af9b196b0a2a8b824d7c49f7c785dbb"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0044.jpg",
+      "bytes": 89951,
+      "sha256": "4a4e5a845f53bf278410a2433704e4bf367bc2b8d1adb403928a6afdb791a85d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0045.jpg",
+      "bytes": 89969,
+      "sha256": "96ab486ff06e652713e1f1a387882ef5d3f390dd051a3d88a0a55bad09839004"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0046.jpg",
+      "bytes": 89842,
+      "sha256": "0049cf36a0310906b85aceaf5a721d8ab5f59a35d1b081af109ba135bd0cc6b4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0047.jpg",
+      "bytes": 89881,
+      "sha256": "d341a4ffe4f423446a189d4cabd09b3466d0ac8ecd03d69eb342a2aa533b81a8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0048.jpg",
+      "bytes": 89833,
+      "sha256": "efeb2a09bb2fbb897fa1050be67b05125cac9babd14212ae24065a76c4b1e862"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0049.jpg",
+      "bytes": 89855,
+      "sha256": "7c36e7ad963b75b68a265e4e2904edd63f3cbca0dd9ebb579582f16f094bc97a"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0050.jpg",
+      "bytes": 89888,
+      "sha256": "bb7e0077db970136565eb8fc2d7eeca0b662d9cc4c4d0c726aa68662bf970e96"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0051.jpg",
+      "bytes": 89834,
+      "sha256": "8ef90ae91920035c4fa9df25baf170e36c76ffc51ddd524e0795018d7cec67f4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0052.jpg",
+      "bytes": 89792,
+      "sha256": "b4b7255bc424aea1f52f14158de862b0f8fb160c164af92a70dfd24a1aa73504"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0053.jpg",
+      "bytes": 89853,
+      "sha256": "eefa025a12689a15258acaabb086753cd966dcb136bacf8eb343e1b1676a05a8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0054.jpg",
+      "bytes": 89818,
+      "sha256": "4740e53f3453b48078fcea9520b00c05c7c6475c28b0f1a37001140506861518"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0055.jpg",
+      "bytes": 89923,
+      "sha256": "65e460e9b81e664331cf7d522a59a935f5cd1040c722bf4bde8a2ed6d7ad6c7e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0056.jpg",
+      "bytes": 89930,
+      "sha256": "cbd07088cd3880f182999cea151d3d50bb8e1cd68709ebdeb7ac364dc046f857"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0057.jpg",
+      "bytes": 89996,
+      "sha256": "4803130bcedb4b6d698b7b6b5481bf709f95148d057d2165e0e32a92d65489f6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0058.jpg",
+      "bytes": 90042,
+      "sha256": "5ec216d1467356b00e554abb61a934588871ad6df5704c6afe9f0effc7eaaa56"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0059.jpg",
+      "bytes": 89935,
+      "sha256": "ab3d1caa3025c36a98b36b66e357b939d8a14c115950f160be2f0603633319a6"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0060.jpg",
+      "bytes": 89875,
+      "sha256": "04b52b093f95ab430bea04678634431fea9bf1d4bf98df8a3e4de3c09df8f330"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0061.jpg",
+      "bytes": 89874,
+      "sha256": "516f63f5c53776dcc98fa2155d2d3f2c900e0d35718b6be5c2c2c46910861acf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0062.jpg",
+      "bytes": 90060,
+      "sha256": "ce3ba680101a810ea6db75ffbf3821d6d1f8089731e9325798475aefd9013102"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0063.jpg",
+      "bytes": 90004,
+      "sha256": "64c9f1fa6423b4bf0303c8e4be40e1ecc31a59d9883d9f84adc49f2d7df3e33c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0064.jpg",
+      "bytes": 89930,
+      "sha256": "aed75c9d6a42c4989560e9620e6cc8a3f81156c240a77f9eb6fd99f0c518b3b8"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0065.jpg",
+      "bytes": 90061,
+      "sha256": "9c844b74a51f3c121587c5981392d641fca39c1b2eb1ab332f522c1890a8e2c1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0066.jpg",
+      "bytes": 89899,
+      "sha256": "1c2ff31a2a11454366c7ca7ff64675c8478a522c51a987f4d3e8532a26c11823"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0067.jpg",
+      "bytes": 90022,
+      "sha256": "a6fe222651ade7443414c500802b5b06ab4607a2287902fd82c0923b23c7536c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0068.jpg",
+      "bytes": 89950,
+      "sha256": "fcafe3c9d64378d4556e5afc3c467235ef33de996f10fe70ad92be6336ffb4c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0069.jpg",
+      "bytes": 89998,
+      "sha256": "1649f0df4a22805b64de55859de4a6aaa20abf9b94422c02a78f9a27cf5ee602"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0070.jpg",
+      "bytes": 89916,
+      "sha256": "c3b4bc405c978bd3131b0e3240c2c46268614115c41a6ada204c054fbd4c026e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/frame-0071.jpg",
+      "bytes": 89905,
+      "sha256": "431b032f7de88d05868174d2f897c8a6649157f66ecfc9507200b269614e33dd"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/leaves.mp4",
+      "bytes": 640379,
+      "sha256": "43d29e05ec5cc5581111e065e0d306cd38097cb8721ea1b87f642f488579faf9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-6/motion/sheet.jpg",
+      "bytes": 86210,
+      "sha256": "07d36ea3945ef192545898315126ee67a6f4e461643e4a42fef8e3836a684514"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/captures.json",
+      "bytes": 85278,
+      "sha256": "d55f0305cccc442bcf89ed7ccebc73b34caead5c1f5244e7e0370ba4b1d6469b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-0-1918x918.png",
+      "bytes": 2049129,
+      "sha256": "0306c80a212de4d79265471cad6a7cc77e92a73ff842e47d7e9767070cbb01da"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-0-390x844.png",
+      "bytes": 384698,
+      "sha256": "0366b862d0732cde39b5aea6b598e8fb2e0b141986edd3e5d8074111899db262"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-8-1918x918.png",
+      "bytes": 2066429,
+      "sha256": "97970f0cbeca57b0bab75167e95e573a670f65a1b02e0db7663149f43a2cbf00"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-8-390x844.png",
+      "bytes": 395061,
+      "sha256": "9729228da2a9ac409d3e8d74c1f3c1ec680ccebea871dae9f79e692d44eb34c4"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-side-8-1918x918.png",
+      "bytes": 1953184,
+      "sha256": "9cc2eb53827fc18c25c43667f93ea28acb451503b4fc5ed856cf0f632e0f157d"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-clearing-side-8-390x844.png",
+      "bytes": 404419,
+      "sha256": "d87fdc5e3b9cc72b63947823fc8e98a0c68d9442a213114069b7ea7d2afc9219"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-deep-forest-0-1918x918.png",
+      "bytes": 1479827,
+      "sha256": "f372de5393d523b27a34d1b86f133e538ee8ab0488382a976b0d3d7a976223ef"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-deep-forest-0-390x844.png",
+      "bytes": 321555,
+      "sha256": "2392d6df1dbb52186d92f9d388007a6d17a69045ae62c4cbfe518344fec7eb58"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-grove-8-1918x918.png",
+      "bytes": 1581479,
+      "sha256": "c1c37b70b051bac3731377603f3640b1d3a63462611a51957cf91c0c014dba12"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-grove-8-390x844.png",
+      "bytes": 348166,
+      "sha256": "9b957e2c4e77db6d04039c83927d090120e6a4afce80bb0ba3377a5a4c1bb42f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-pond-8-1918x918.png",
+      "bytes": 1660611,
+      "sha256": "9f5b13a6e637c99d49d28dd78d8fabfd8f3739b37e92994f3d45d59e40131305"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-pond-8-390x844.png",
+      "bytes": 257511,
+      "sha256": "02243c234d7f42ee7993a44570930d0f35285079297c7c0f94045151e3dcc011"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-tree-return-8-1918x918.png",
+      "bytes": 1983180,
+      "sha256": "211007284e50da15a4079691fbb6e46b4d2bf6b5c14c53b31d757ab8e71366d2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-tree-return-8-390x844.png",
+      "bytes": 388597,
+      "sha256": "38d138e08f38a7ba5b81b27d082825eb1605c422cca8357a57809fcdee2cc480"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-woodland-0-1918x918.png",
+      "bytes": 1897180,
+      "sha256": "18ba3f106cef1af0481c7654582f8450e61a43f973015b5d12ea00e9fbd55f24"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/pass-baseline/iteration-01/live-woodland-0-390x844.png",
+      "bytes": 435236,
+      "sha256": "32073652ae47514b4f39228865df13f50a9a43bba30e749c3481b4a2943cb83b"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/validation.json",
+      "bytes": 4232,
+      "sha256": "7e3e084a39edd293cb8dec8b86d6be5607ec87a94d6df2fe0849d6813b5dc40f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/camera-walk-contact-sheet.jpg",
+      "bytes": 81228,
+      "sha256": "ec8ddea6caea870a3bce48523819fce2c4e5821a207cd96a60a954360dade784"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/camera-walk.webm",
+      "bytes": 988298,
+      "sha256": "3279e738c4b404906ff94aa6fe43ad1c5ad116cbb3b6e240ce815ac158e63855"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/checkpoints.json",
+      "bytes": 4703,
+      "sha256": "d6c5c52499514f7677c5069084c580a59198f7a21df2bebccad82c49418cbbb2"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/intro-race-error.md",
+      "bytes": 10097,
+      "sha256": "dbb55fd55eef19992171c970480ef78e8bc59597efd368d2a1754f64d5b3d9b7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/lifecycle/latest-cycle.json",
+      "bytes": 451,
+      "sha256": "1388298a81da811aea3a09e8b48cf61d28cb2b3f9ecb8f0aa51fee4867f2ff4f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/lifecycle/verification.json",
+      "bytes": 6068,
+      "sha256": "aca2dee5f0e80b9e87c2dd4dad77086050c63e4ace94a20f544ee5ede88fa526"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/motion-raw/page@f62c63f4da64fa3183f8690cd3cfc490.webm",
+      "bytes": 9135402,
+      "sha256": "8bd7eeb488c5842f52a1969797c1a7b41aae5d6d76daff2b1eb63e995e3036a7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/motion-verification.json",
+      "bytes": 15795,
+      "sha256": "190de6d7ed90db07fad2e9160dbb058c09c23aa4e195e900a866da577e3f6d30"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/normal-motion-end.png",
+      "bytes": 694553,
+      "sha256": "9dffa82a5247e08a850bfbbcd4643d63da2f479f6f1dfc781453a9cdcd4729c5"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/playwright.json",
+      "bytes": 21504,
+      "sha256": "cccba8ce588b47ffebcbf9c303faea2aa44f773a586bfd587aac55ac289df64f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/pointer-ray-error.md",
+      "bytes": 7339,
+      "sha256": "196dd7bdfbb3a33cdeb57d814d25677a6efbbd1b8b247976ea330a7fcffe5522"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/pointer-reprojection-timing.json",
+      "bytes": 7823,
+      "sha256": "d58a38267b8d810251afa2479aa65805328a5a00402fcc3dc419327501f8e162"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/pointer-reprojection-timing.md",
+      "bytes": 7454,
+      "sha256": "ee14ce3a31dc549a6a2be96caba10a6cb0a2a952f4da160827e745a78da25b43"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/pointer-retest.json",
+      "bytes": 6593,
+      "sha256": "7c680459258757918ece3cda2ab1fc680219e497cae66001eb0726dee4c2f571"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/production-1918x918.png",
+      "bytes": 2076598,
+      "sha256": "52c0fc7fc188a2fd929e9428e1f3d1210ab61b635cf4569cb4627b144c51e76c"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/production-320x568.png",
+      "bytes": 219470,
+      "sha256": "321b631ab1b2ab30fa3a31bed1fe76d34528571c01df422b29a5064a176cdafa"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/production-844x390.png",
+      "bytes": 410774,
+      "sha256": "d3ff2fd7f8224fb8bd282d595a83e1db348f3492eede058f8f2b0c8084bd0053"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/production-verification.json",
+      "bytes": 490,
+      "sha256": "7aa88d4df19b6571a75bef8be8ffaf2e986e124d6b08f8b6444c24f229153b1f"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/review-desktop.png",
+      "bytes": 800436,
+      "sha256": "293a0515ded00ab7a9d28ddb2040910281455175979998f7cda054f6b375361e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/review-phone.png",
+      "bytes": 81727,
+      "sha256": "f77200b9017b807f005f2c8bb9beb01297ea49e80033e15406f80130fece08c7"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/review-verification.json",
+      "bytes": 6403,
+      "sha256": "8cb44edfea964dcaa03b21703744343215870af664fb8cfce1f17f4771ef95c9"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/scene-probe-manual.json",
+      "bytes": 3349,
+      "sha256": "8d8bbf97d76e5a08dadf439affa3ddf8ab953ac6c18aa0b7232c9130162ff08e"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/scene-probe-manual.png",
+      "bytes": 2049356,
+      "sha256": "5e0c33ee1c0604f39af1b0301ea83573451f794501ec0596e9512c1b89b5ebdf"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/scene-probe.json",
+      "bytes": 74508,
+      "sha256": "a7332b3e03e3f338e8e4f625cfc1d59251317a4846efdab6a988543ce299d2e1"
+    },
+    {
+      "path": "artifacts/visual-reconstruction/passes-4-6/verification/scene-probe.png",
+      "bytes": 2048494,
+      "sha256": "3ec2c620d9563dab52406921013004d536a528f3ea22a35edcdd242921729db1"
+    }
+  ],
+  "productionFiles": [
+    {
+      "path": "dist/assets/FieldGuide-BpvgzQnL.js",
+      "bytes": 4526,
+      "sha256": "c1c88b86626340dde24135a3bfa9f20017ed8ae30e1f833a6a2fa2d6dd4927f1"
+    },
+    {
+      "path": "dist/assets/Journal-BJfNPy98.js",
+      "bytes": 5201,
+      "sha256": "5069555199643feb38e5311ab117c4019e02eb6260c8f772b6dc2b31567a21d4"
+    },
+    {
+      "path": "dist/assets/OscarDialogue-C4Ww0fJo.js",
+      "bytes": 741,
+      "sha256": "6badbafdb2210ab924a1dc5b3e0bc3c1adac3fec216ee88b99bf1955bf690301"
+    },
+    {
+      "path": "dist/assets/Scene-0ehVdw2q.js",
+      "bytes": 937203,
+      "sha256": "03f7542dd122e4aec202668c436616eea639d9b9cd8ed688a737756b3889388b"
+    },
+    {
+      "path": "dist/assets/engine-BpPf-moI.js",
+      "bytes": 263704,
+      "sha256": "5552d08fc37fb1fabf3210fbacbe3c7faa3b877b79c30f76456f66bbf4a30c89"
+    },
+    {
+      "path": "dist/assets/flora-8weMzXZ2.js",
+      "bytes": 5295,
+      "sha256": "1e88f27f0cb1c1f19ccbfb9d1b7997f5a7dd618a9629e1f07eb2167ee8b0becf"
+    },
+    {
+      "path": "dist/assets/index-Cv8b-ruN.js",
+      "bytes": 213530,
+      "sha256": "a3a7abed822ceae09444b87cd88dbf263adab02ab4052134b4f7d9d1933f431c"
+    },
+    {
+      "path": "dist/assets/index-Fa0NSu9_.css",
+      "bytes": 28990,
+      "sha256": "fc9cd2d59b3f4828ebb73f3843c900160a6534ce32a091eea9d513fe7d1d7458"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-BVbkICAY.woff",
+      "bytes": 18336,
+      "sha256": "6d0b022af858becb27f1a033de5d3c0604fc6f2191a7f3ff4dba5d3515e95051"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-400-normal-DnYpCC2O.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-C2je3j2s.woff2",
+      "bytes": 11604,
+      "sha256": "290e6267dd833bf5f899eba4c29ad0a9b09dbe53f6075b18af38057159e1ff20"
+    },
+    {
+      "path": "dist/assets/instrument-serif-latin-ext-400-normal-CFCUzsTy.woff",
+      "bytes": 9860,
+      "sha256": "1719ae18b98d033d2555f5a5971a30f5bb610ed849fc5a1119fe39db6d40eb3e"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-a.mp3",
+      "bytes": 4051183,
+      "sha256": "b4d2a9ff1fc4ac985839e3666d5c0e445d02abfe39dd0b04ce1b7fcba6be25f5"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-b.mp3",
+      "bytes": 4051183,
+      "sha256": "75a4143cea85d2945bb28cefa24644a7365a74d4003ec86fa4b342f0039e8046"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby-c.mp3",
+      "bytes": 4051183,
+      "sha256": "76260db78d1a02261b4bda9a503fb9d85aa3834fa52cc841d8dab61df9305fe1"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.mp3",
+      "bytes": 4051183,
+      "sha256": "63d8a2c7544881a4b24e8a72c21d5b440b41139e5cb6b6ea15ab2cc2e89f7051"
+    },
+    {
+      "path": "dist/audio/ambient-lullaby.wav",
+      "bytes": 35721044,
+      "sha256": "1b3b34972af27f8001496f7494f8b3b17e4bed5e44f7557c8a9a005d4f7aa5c2"
+    },
+    {
+      "path": "dist/audio/ambient-render-report.json",
+      "bytes": 11942,
+      "sha256": "4075cc0a11551b89f1c92f486c0dd41409dea0dc4d9a96a89336b27fe498c011"
+    },
+    {
+      "path": "dist/fonts/instrument-serif-LICENSE.txt",
+      "bytes": 4532,
+      "sha256": "b6106a757902d2d412e09d94dc4a226fe3da80485208a98003969f1b8b6b1d74"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 558,
+      "sha256": "8e7c9a6db68acd16f990f0f5ed2b32c9f5a56d624dd358b4c143b95e43b5cfde"
+    }
+  ],
+  "productionBuiltAt": "2026-10-10T11:08:14.775Z",
+  "finalCapture": "pass-6/iteration-03",
+  "finalMotion": [
+    "pass-6/motion",
+    "pass-6/motion-phone"
+  ],
+  "historicalAttempts": [
+    "pass-6/iteration-01 (pond fog uniform runtime error)",
+    "pass-6/iteration-02 (capture clock reset affected actor transforms)"
+  ],
+  "note": "SHA-256 seals the accepted baseline lineage, three cumulative source checkpoints, final rendered evidence, functional checks and production bundle. Technical checks do not constitute owner visual approval. Pass 7 is stopped.",
+  "nextAction": "Owner reviews Passes 4–6; wait for approval before beginning Pass 7."
+}

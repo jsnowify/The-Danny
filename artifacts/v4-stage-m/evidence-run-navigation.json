@@ -1,0 +1,60 @@
+[
+  {
+    "name": "navigation",
+    "command": [
+      "node",
+      "scripts/verify-v4-navigation.mjs"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 2299
+  },
+  {
+    "name": "tiers",
+    "command": [
+      "node",
+      "scripts/performance.mjs",
+      "--seconds=60",
+      "--output=V4-STAGE-M-PERFORMANCE.json"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 237192
+  },
+  {
+    "name": "bamboo",
+    "command": [
+      "node",
+      "scripts/performance.mjs",
+      "--tier=medium",
+      "--progress=8",
+      "--x=-24",
+      "--z=-7",
+      "--seconds=60",
+      "--output=V4-STAGE-M-BAMBOO-PERFORMANCE.json"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 84932
+  },
+  {
+    "name": "portrait",
+    "command": [
+      "node",
+      "scripts/performance.mjs",
+      "--tier=medium",
+      "--width=390",
+      "--height=844",
+      "--seconds=60",
+      "--output=V4-STAGE-M-PORTRAIT-PERFORMANCE.json"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 74869
+  },
+  {
+    "name": "production",
+    "command": [
+      "node",
+      "scripts/production-smoke.mjs"
+    ],
+    "exitCode": 0,
+    "elapsedMs": 39796
+  }
+]

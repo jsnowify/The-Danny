@@ -1,0 +1,580 @@
+{
+  "recordedAt": "2026-10-10T11:59:16.585Z",
+  "ui": [],
+  "production": null,
+  "motion": {
+    "frames": [
+      {
+        "invalidTransforms": [],
+        "elapsed": 24.5,
+        "interval": null,
+        "span": 11.018483625269287,
+        "pitch": 42,
+        "position": {
+          "x": 0,
+          "z": 11
+        },
+        "calls": 100,
+        "triangles": 380642
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 509.80000000447035,
+        "interval": 485.30000000447035,
+        "span": 11.018483625269287,
+        "pitch": 42,
+        "position": {
+          "x": 0,
+          "z": 11
+        },
+        "calls": 100,
+        "triangles": 380642
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 985.8999999985099,
+        "interval": 476.09999999403954,
+        "span": 11.335452321706825,
+        "pitch": 42.07700378898363,
+        "position": {
+          "x": 0,
+          "z": 10.594463225753795
+        },
+        "calls": 100,
+        "triangles": 380642
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 1528.3000000044703,
+        "interval": 542.4000000059605,
+        "span": 11.882125351133128,
+        "pitch": 42.26299699315229,
+        "position": {
+          "x": 0,
+          "z": 9.766213105319745
+        },
+        "calls": 103,
+        "triangles": 385326
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 2100.3000000044703,
+        "interval": 572,
+        "span": 12.787682462577862,
+        "pitch": 42.508576881123346,
+        "position": {
+          "x": 0.000044351293376946695,
+          "z": 8.938226479310496
+        },
+        "calls": 106,
+        "triangles": 381388
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 2571.89999999851,
+        "interval": 471.59999999403954,
+        "span": 14.19419261668037,
+        "pitch": 42.77418881448315,
+        "position": {
+          "x": 0.00020449488856728984,
+          "z": 8.17890865534403
+        },
+        "calls": 107,
+        "triangles": 382928
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 3040.60000000149,
+        "interval": 468.70000000298023,
+        "span": 15.836383090602574,
+        "pitch": 43.04703064243937,
+        "position": {
+          "x": 0.00058272122060698,
+          "z": 7.4556802292787365
+        },
+        "calls": 108,
+        "triangles": 383048
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 3508.10000000149,
+        "interval": 467.5,
+        "span": 17.273994658741696,
+        "pitch": 43.292159812589226,
+        "position": {
+          "x": 0.0013618370671498858,
+          "z": 6.724600099196276
+        },
+        "calls": 107,
+        "triangles": 385064
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 3999,
+        "interval": 490.8999999985099,
+        "span": 18.090645332030896,
+        "pitch": 43.40997469442708,
+        "position": {
+          "x": 0.002630416135703778,
+          "z": 5.95138052897448
+        },
+        "calls": 110,
+        "triangles": 377164
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 4576,
+        "interval": 577,
+        "span": 18.140447140364508,
+        "pitch": 43.348222640585874,
+        "position": {
+          "x": 0.00436475718444459,
+          "z": 5.11790291695339
+        },
+        "calls": 110,
+        "triangles": 377164
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 5072.80000000447,
+        "interval": 496.80000000447035,
+        "span": 17.58754941977729,
+        "pitch": 43.18001338717073,
+        "position": {
+          "x": 0.006507579935715241,
+          "z": 4.2241981882683906
+        },
+        "calls": 109,
+        "triangles": 377100
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 5554,
+        "interval": 481.19999999552965,
+        "span": 16.642702700048428,
+        "pitch": 42.992403430284746,
+        "position": {
+          "x": 0.008923984222338543,
+          "z": 3.2822266495437162
+        },
+        "calls": 108,
+        "triangles": 377098
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 6038.60000000149,
+        "interval": 484.6000000014901,
+        "span": 15.442910997503892,
+        "pitch": 42.82909510712094,
+        "position": {
+          "x": 0.011477698617436038,
+          "z": 2.3063494122462003
+        },
+        "calls": 101,
+        "triangles": 369106
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 6521.80000000447,
+        "interval": 483.20000000298023,
+        "span": 14.462054213966105,
+        "pitch": 42.72234308867936,
+        "position": {
+          "x": 0.01413805881271844,
+          "z": 1.3080989579237157
+        },
+        "calls": 101,
+        "triangles": 369106
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 6950,
+        "interval": 428.19999999552965,
+        "span": 13.898928941802794,
+        "pitch": 42.66265768461431,
+        "position": {
+          "x": 0.025694889045587685,
+          "z": 0.47931176980847745
+        },
+        "calls": 97,
+        "triangles": 367276
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 7407.10000000149,
+        "interval": 457.1000000014901,
+        "span": 13.626429620608416,
+        "pitch": 42.53960642857355,
+        "position": {
+          "x": 0.277126724864622,
+          "z": 0.3919193518643958
+        },
+        "calls": 104,
+        "triangles": 371477
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 8058.10000000149,
+        "interval": 651,
+        "span": 13.523732379321133,
+        "pitch": 42.50369201017905,
+        "position": {
+          "x": 0.4708656734558889,
+          "z": -0.5205204600110501
+        },
+        "calls": 103,
+        "triangles": 371277
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 8531.39999999851,
+        "interval": 473.29999999701977,
+        "span": 13.493549399699765,
+        "pitch": 42.58782155219831,
+        "position": {
+          "x": 0.43350471359736165,
+          "z": -1.5613081474215005
+        },
+        "calls": 102,
+        "triangles": 371275
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 8998.10000000149,
+        "interval": 466.70000000298023,
+        "span": 13.475177899413401,
+        "pitch": 42.70314687130941,
+        "position": {
+          "x": 0.3832591559477175,
+          "z": -2.57660828026391
+        },
+        "calls": 100,
+        "triangles": 370963
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 9497.20000000298,
+        "interval": 499.1000000014901,
+        "span": 13.44938465956877,
+        "pitch": 42.79278937731879,
+        "position": {
+          "x": 0.3345798827070615,
+          "z": -3.5639760510128657
+        },
+        "calls": 96,
+        "triangles": 367919
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 9961.20000000298,
+        "interval": 464,
+        "span": 13.416762676414347,
+        "pitch": 42.84555214232306,
+        "position": {
+          "x": 0.2907310887661246,
+          "z": -4.533644729580159
+        },
+        "calls": 94,
+        "triangles": 367451
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 10424.10000000149,
+        "interval": 462.8999999985099,
+        "span": 13.38322827384238,
+        "pitch": 42.87102112114224,
+        "position": {
+          "x": 0.25186161833703635,
+          "z": -5.4947164725866
+        },
+        "calls": 91,
+        "triangles": 366235
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 10852.70000000298,
+        "interval": 428.6000000014901,
+        "span": 13.353356310313982,
+        "pitch": 42.87135635772823,
+        "position": {
+          "x": 0.21771192116902446,
+          "z": -6.452134270898308
+        },
+        "calls": 87,
+        "triangles": 369117
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 11311.89999999851,
+        "interval": 459.19999999552965,
+        "span": 13.328549257388687,
+        "pitch": 42.79842400562019,
+        "position": {
+          "x": 0.1881120489958751,
+          "z": -7.40701515107424
+        },
+        "calls": 85,
+        "triangles": 366401
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 11772.10000000149,
+        "interval": 460.20000000298023,
+        "span": 13.305076523695188,
+        "pitch": 42.660014687709854,
+        "position": {
+          "x": 0.16325200432645723,
+          "z": -8.353193591829964
+        },
+        "calls": 85,
+        "triangles": 366385
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 12228.5,
+        "interval": 456.3999999985099,
+        "span": 13.27331700982219,
+        "pitch": 42.53299312454437,
+        "position": {
+          "x": 0.14371900351555766,
+          "z": -9.274070086121462
+        },
+        "calls": 87,
+        "triangles": 401210
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 12951.80000000447,
+        "interval": 723.3000000044703,
+        "span": 13.22221204610117,
+        "pitch": 42.49621879842941,
+        "position": {
+          "x": 0.12988346851927485,
+          "z": -10.14943039755996
+        },
+        "calls": 87,
+        "triangles": 401210
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 13434.20000000298,
+        "interval": 482.3999999985099,
+        "span": 13.147776832281437,
+        "pitch": 42.53936463242449,
+        "position": {
+          "x": 0.12118635579245053,
+          "z": -10.96987827379348
+        },
+        "calls": 86,
+        "triangles": 401090
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 13936.39999999851,
+        "interval": 502.19999999552965,
+        "span": 13.057201736952315,
+        "pitch": 42.6005257387409,
+        "position": {
+          "x": 0.11624883465121753,
+          "z": -11.743850863183575
+        },
+        "calls": 84,
+        "triangles": 399382
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 14409.70000000298,
+        "interval": 473.30000000447035,
+        "span": 12.963893575750175,
+        "pitch": 42.644424203607564,
+        "position": {
+          "x": 0.11359288895999521,
+          "z": -12.489056503138388
+        },
+        "calls": 79,
+        "triangles": 410175
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 14878.20000000298,
+        "interval": 468.5,
+        "span": 12.879640792205436,
+        "pitch": 42.66768177267609,
+        "position": {
+          "x": 0.11215458099484218,
+          "z": -13.220601282746607
+        },
+        "calls": 79,
+        "triangles": 410175
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 15343.5,
+        "interval": 465.29999999701977,
+        "span": 12.810626321568845,
+        "pitch": 42.677911112116014,
+        "position": {
+          "x": 0.11137721025631998,
+          "z": -13.946907765539619
+        },
+        "calls": 78,
+        "triangles": 406655
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 15829,
+        "interval": 485.5,
+        "span": 12.757783152475524,
+        "pitch": 42.68228061477453,
+        "position": {
+          "x": 0.11099235876923198,
+          "z": -14.671322033450148
+        },
+        "calls": 78,
+        "triangles": 406655
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 16357.20000000298,
+        "interval": 528.2000000029802,
+        "span": 12.718982393155384,
+        "pitch": 42.68474563077304,
+        "position": {
+          "x": 0.11071469469021712,
+          "z": -15.394690503682371
+        },
+        "calls": 76,
+        "triangles": 413298
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 16900.20000000298,
+        "interval": 543,
+        "span": 12.691076129956512,
+        "pitch": 42.686799842106005,
+        "position": {
+          "x": 0.1106144393435098,
+          "z": -16.117052034030717
+        },
+        "calls": 73,
+        "triangles": 408614
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 17477.80000000447,
+        "interval": 577.6000000014901,
+        "span": 12.671098855862557,
+        "pitch": 42.688745038333,
+        "position": {
+          "x": 0.1105544952476132,
+          "z": -16.83836904389589
+        },
+        "calls": 74,
+        "triangles": 408616
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 18118,
+        "interval": 640.1999999955297,
+        "span": 12.656719818351208,
+        "pitch": 42.690513429140864,
+        "position": {
+          "x": 0.11051868837690006,
+          "z": -17.558708539847846
+        },
+        "calls": 73,
+        "triangles": 408328
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 18712.60000000149,
+        "interval": 594.6000000014901,
+        "span": 12.646267607783017,
+        "pitch": 42.69201633377253,
+        "position": {
+          "x": 0.11049731512063911,
+          "z": -18.278216938604494
+        },
+        "calls": 73,
+        "triangles": 411405
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 19386.30000000447,
+        "interval": 673.7000000029802,
+        "span": 12.638592435989358,
+        "pitch": 42.69322006806454,
+        "position": {
+          "x": 0.11048456470542013,
+          "z": -18.99701864464495
+        },
+        "calls": 73,
+        "triangles": 411405
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 20027.70000000298,
+        "interval": 641.3999999985099,
+        "span": 12.632911618410702,
+        "pitch": 42.69412658953054,
+        "position": {
+          "x": 0.11047696186647428,
+          "z": -19.715178348432794
+        },
+        "calls": 73,
+        "triangles": 411405
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 20674.89999999851,
+        "interval": 647.1999999955297,
+        "span": 12.628689966790574,
+        "pitch": 42.69478692059207,
+        "position": {
+          "x": 0.11047243035440037,
+          "z": -20.432971139185593
+        },
+        "calls": 73,
+        "triangles": 411405
+      },
+      {
+        "invalidTransforms": [],
+        "elapsed": 21411.5,
+        "interval": 736.6000000014901,
+        "span": 12.483157928618448,
+        "pitch": 42.63994603362291,
+        "position": {
+          "x": 0.11047243035440037,
+          "z": -20.83840284503933
+        },
+        "calls": 73,
+        "triangles": 411389
+      }
+    ],
+    "started": 20913.5,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "initial": {
+      "x": 0,
+      "z": 11
+    },
+    "tier": "low",
+    "previous": 42325,
+    "duration": 22100.70000000298,
+    "final": {
+      "x": 0.11047243035440037,
+      "z": -20.83840284503933
+    },
+    "rawVideo": "C:/Coding/JavaScript/Project/the-danny/artifacts/visual-reconstruction/passes-4-6/verification/motion-raw/page@f62c63f4da64fa3183f8690cd3cfc490.webm",
+    "reviewVideo": "artifacts/visual-reconstruction/passes-4-6/verification/camera-walk.webm",
+    "rawSeconds": 44.52,
+    "trimSeconds": 21.419299999997023,
+    "fps": 1.9003922952664094,
+    "p95FrameMilliseconds": 673.7000000029802,
+    "maximumSpanStep": 1.642190473922204,
+    "maximumRelativeSpanRate": 0.4627781285685461,
+    "relativeSpanRateLimit": 0.7,
+    "allPassCounts": true,
+    "limit": "One software-WebGL browser, Low quality, actual held ground pointer for twenty wall-clock seconds. Movement uses short collision substeps; elapsed time is capped at 250 ms for long stalls/resumes. Rendering below 4 FPS still slows simulation. This records live responsiveness, not accelerated simulation or physical GPU performance."
+  },
+  "errors": []
+}
