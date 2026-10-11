@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Danny — Character Motion Review</title>
+  <style>
+    body { margin: 0; padding: 32px; color: #ede8d6; background: #202c24; font: 16px/1.5 system-ui, sans-serif; }
+    main { max-width: 1500px; margin: auto; }
+    h1 { font-family: Georgia, serif; font-weight: normal; }
+    a { color: #f5cf8a; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 24px 0; }
+    figure { margin: 0; background: #152018; border-radius: 8px; overflow: hidden; }
+    img, video { display: block; width: 100%; }
+    figcaption { padding: 12px; }
+    button { margin: 8px 8px 8px 0; padding: 8px 14px; border: 0; border-radius: 20px; background: #e9ddba; color: #233527; cursor: pointer; }
+    .comparison img { aspect-ratio: 1918 / 968; object-fit: contain; }
+    @media (max-width: 700px) { body { padding: 16px; } .pair { grid-template-columns: 1fr; } }
+  </style>
+  <main>
+    <h1>The Danny — Character Motion</h1>
+    <p>Direction changes, cloth inertia, trunk contact and a stable camera. <a href="http://localhost:4173/">Open the updated game</a> · <a href="after/verification.json">Read the measurements</a></p>
+    <div class="pair">
+      <figure><video controls loop muted playsinline src="reference/turn.mp4"></video><figcaption>Reference: turning sequence at 8–10.5 seconds.</figcaption></figure>
+      <figure><video controls loop muted playsinline src="movement.mp4"></video><figcaption>Implementation: idle, travel, three direction changes and settling. Fixed simulation timing at 12 FPS.</figcaption></figure>
+    </div>
+    <figure><video controls loop muted playsinline src="movement-detail.mp4"></video><figcaption>A closer view of the recorded character animation.</figcaption></figure>
+    <h2>Before and after</h2>
+    <div id="controls"></div>
+    <div class="pair comparison">
+      <figure><img id="before" src="before/idle.png" alt="Original traveler at rest" /><figcaption>Before — camera-facing flat character and timer-driven bob.</figcaption></figure>
+      <figure><img id="after" src="after/idle.png" alt="Updated traveler at rest" /><figcaption id="caption">After — smaller silhouette, directional volume and grounded movement.</figcaption></figure>
+    </div>
+    <h2>Contact, depth and camera</h2>
+    <div class="pair">
+      <figure><img src="after/blocked-trunk.png" alt="Traveler blocked by a solid trunk" /><figcaption>Trunk blocks displacement; gait settles instead of walking in place.</figcaption></figure>
+      <figure><img src="after/slide-around-trunk.png" alt="Traveler sliding around a trunk" /><figcaption>Diagonal input preserves tangential movement.</figcaption></figure>
+      <figure><img src="after/behind-foliage.png" alt="Traveler partially hidden behind foliage" /><figcaption>Walkable canopy and normal depth overlap.</figcaption></figure>
+      <figure><img src="after/wide-view.png" alt="Wider view after double-click" /><figcaption>Camera pulls back; world orientation stays fixed.</figcaption></figure>
+    </div>
+    <p>The dress remains rounder than the reference and keeps the original embroidery. The approved memorial clearing is preserved. See <a href="../../CHARACTER-MOTION-REPORT.md">the report</a> for validation and remaining visual differences.</p>
+  </main>
+  <script>
+    const states = ["idle", "start", "travel", "turn", "away", "deceleration", "settled"];
+    for (const state of states) {
+      const button = document.createElement("button");
+      button.textContent = state;
+      button.addEventListener("click", () => {
+        document.querySelector("#before").src = `before/${state}.png`;
+        document.querySelector("#after").src = `after/${state}.png`;
+        document.querySelector("#before").alt = `Original character: ${state}`;
+        document.querySelector("#after").alt = `Updated character: ${state}`;
+        document.querySelector("#caption").textContent = `After — ${state}. Actual travel drives the body and fabric.`;
+      });
+      document.querySelector("#controls").append(button);
+    }
+  </script>
+</html>

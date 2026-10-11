@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { TEXT, FIL } from "../src/config/localization";
-test("journal tabs, Filipino controls, focus and touch targets work and language survives reload", async ({
+import { TEXT } from "../src/config/localization";
+test("English journal controls, focus and touch targets work with an older Filipino save", async ({
   page,
 }) => {
   const errors: string[] = [];
@@ -14,6 +14,7 @@ test("journal tabs, Filipino controls, focus and touch targets work and language
           version: 3,
           state: {
             introSeen: true,
+            language: "fil",
             settings: {
               quality: "low",
               muted: true,
@@ -60,23 +61,27 @@ test("journal tabs, Filipino controls, focus and touch targets work and language
   ).toBeFocused();
   await page.keyboard.press("Escape");
   await expect(page.locator(".scene canvas")).toBeFocused();
-  await page.getByRole("button", { name: TEXT.language, exact: true }).click();
   await expect(
-    page.getByRole("button", { name: FIL.pauseLabel, exact: true }),
+    page.getByRole("button", { name: "Language", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { name: TEXT.pauseLabel, exact: true }),
   ).toBeVisible();
-  expect(await page.locator("html").getAttribute("lang")).toBe("fil");
-  await page.getByRole("button", { name: FIL.guide, exact: true }).click();
-  await page.getByRole("dialog", { name: FIL.guide, exact: true }).waitFor();
+  expect(await page.locator("html").getAttribute("lang")).toBe("en");
+  await page.getByRole("button", { name: TEXT.guide, exact: true }).click();
+  await page.getByRole("dialog", { name: TEXT.guide, exact: true }).waitFor();
   await page.keyboard.press("Escape");
-  await page.screenshot({ path: "artifacts/v4-stage-j/filipino-hud-390.png" });
+  await page.screenshot({ path: "artifacts/v4-stage-j/english-hud-390.png" });
   await page.reload();
-  await page.getByRole("button", { name: FIL.begin }).click();
-  await page.getByRole("button", { name: FIL.continue, exact: true }).click();
+  await page.getByRole("button", { name: TEXT.begin }).click();
+  await page.getByRole("button", { name: TEXT.continue, exact: true }).click();
   await page.locator(".hud").waitFor();
-  await page.getByRole("button", { name: FIL.companions, exact: true }).click();
-  await page.getByRole("dialog", { name: FIL.journal, exact: true }).waitFor();
+  await page
+    .getByRole("button", { name: TEXT.companions, exact: true })
+    .click();
+  await page.getByRole("dialog", { name: TEXT.journal, exact: true }).waitFor();
   await page.screenshot({
-    path: "artifacts/v4-stage-j/filipino-journal-390.png",
+    path: "artifacts/v4-stage-j/english-journal-390.png",
   });
   expect(errors).toEqual([]);
 });

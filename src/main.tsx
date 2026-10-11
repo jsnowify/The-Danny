@@ -4,7 +4,10 @@ import App from "./App";
 import { warnPersonalTextPlaceholders } from "./utils/placeholders";
 import logoUrl from "./assets/blue-heaven-flower.svg";
 import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
 import "./styles.css";
+import "./ui/painted-ui.css";
+import "./ui/landing.css";
 
 const icon =
   document.querySelector<HTMLLinkElement>('link[rel="icon"]') ??

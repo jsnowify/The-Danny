@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny — meadow contact and expansion</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 32px 20px;
+        background: #e8eadc;
+        color: #394c37;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1100px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.15;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 52px);
+      }
+      p {
+        max-width: 760px;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      video,
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        background: #bec7ab;
+      }
+      figure {
+        margin: 20px 0;
+      }
+      figcaption {
+        margin-top: 10px;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      select {
+        padding: 12px 14px;
+        margin: 8px 0 4px;
+        max-width: 100%;
+        border: 1px solid #7a8d70;
+        border-radius: 10px;
+        background: #f5f1df;
+        color: inherit;
+        font: inherit;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .phone {
+        max-width: 390px;
+        margin: 20px auto;
+      }
+      @media (max-width: 700px) {
+        .pair {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        body {
+          padding: 24px 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">The Danny · Wildflower Meadow</p>
+      <h1>Flowers that move with you.</h1>
+      <p>
+        Flowers bend and part around your feet, then gently spring back after
+        you pass. Grass yields too. The blue meadow has over three times its
+        original footprint, with more flowers along its approach and scattered
+        to the east and north.
+      </p>
+      <p>
+        <a href="/">Walk in the forest</a> ·
+        <a href="../forest-life/review.html">Birds and flower drawings</a>
+      </p>
+      <figure>
+        <video
+          controls
+          playsinline
+          muted
+          loop
+          preload="metadata"
+          poster="expanded-meadow.png"
+          aria-label="Walking through the expanded blue flower meadow"
+        >
+          <source src="meadow-walk.mp4" type="video/mp4" />
+        </video>
+        <figcaption>
+          Actual walking in dev. The plants near the traveler bend while the
+          flowers behind recover.
+        </figcaption>
+      </figure>
+      <h2>A wider flower field</h2>
+      <label for="patch">Explore the flower patches</label><br />
+      <select id="patch">
+        <option value="expanded-meadow.png">Wildflower Meadow</option>
+        <option value="meadow-approach.png">Meadow approach</option>
+        <option value="eastern-flowers.png">Eastern wildflowers</option>
+        <option value="northern-flowers.png">Northern wildflowers</option>
+      </select>
+      <figure>
+        <img
+          id="patch-image"
+          src="expanded-meadow.png"
+          alt="Blue flowers spread across Wildflower Meadow"
+        />
+        <figcaption id="patch-caption" aria-live="polite">
+          Wildflower Meadow — the main field now stretches across a much wider
+          area.
+        </figcaption>
+      </figure>
+      <div class="pair">
+        <figure>
+          <img
+            src="contact.png"
+            alt="Flowers parting around the traveler just after walking"
+            loading="lazy"
+          />
+          <figcaption>
+            After walking: flowers near the feet bend; the wake behind is
+            recovering.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="recovered.png"
+            alt="The flowers behind the stopped traveler have recovered"
+            loading="lazy"
+          />
+          <figcaption>
+            After settling: flowers behind stand upright again. Those still
+            touching the body remain parted.
+          </figcaption>
+        </figure>
+      </div>
+      <figure class="phone">
+        <img
+          src="phone.png"
+          alt="The expanded blue flower meadow on a portrait phone"
+          loading="lazy"
+        />
+        <figcaption>
+          Phone view. Reduced motion keeps immediate contact while stopping wind
+          and spring oscillation.
+        </figcaption>
+      </figure>
+    </main>
+    <script>
+      const patches = {
+        "expanded-meadow.png":
+          "Wildflower Meadow — the main field now stretches across a much wider area.",
+        "meadow-approach.png":
+          "Meadow approach — scattered blue flowers lead into the field.",
+        "eastern-flowers.png":
+          "Eastern wildflowers — a new patch spreads beyond the original meadow.",
+        "northern-flowers.png":
+          "Northern wildflowers — blue blooms continue into the northern woodland.",
+      };
+      document.querySelector("#patch").addEventListener("change", (event) => {
+        const src = event.target.value;
+        const image = document.querySelector("#patch-image");
+        image.src = src;
+        image.alt = patches[src];
+        document.querySelector("#patch-caption").textContent = patches[src];
+      });
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.querySelector("video").loop = false;
+    </script>
+  </body>
+</html>

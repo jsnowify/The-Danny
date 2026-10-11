@@ -1,0 +1,213 @@
+{
+  "verifiedAt": "2026-10-11T10:18:44.870Z",
+  "allRequestedItemsPassed": true,
+  "fixes": [
+    {
+      "file": "src/visual/approved/assets.ts",
+      "change": "Preserve leaf artwork aspect ratio on the two clearing crowns"
+    },
+    {
+      "file": "src/visual/approved/assets.ts",
+      "change": "Enable incoming canopy shadows on the Memory Tree and clearing trunks, forks and perches"
+    }
+  ],
+  "results": {
+    "fixedTrees": {
+      "checked": 59,
+      "changed": 0,
+      "pose": "walk"
+    },
+    "lighting": [
+      {
+        "tier": "low",
+        "shadowPixels": 134102,
+        "directionalCanopyPixels": 110118,
+        "greenLuminanceRange": 98.48360000000001,
+        "opaque": true,
+        "playerOpacityChangedPixels": 0
+      },
+      {
+        "tier": "medium",
+        "shadowPixels": 120762,
+        "directionalCanopyPixels": 110123,
+        "greenLuminanceRange": 98.12699999999998,
+        "opaque": true,
+        "playerOpacityChangedPixels": 0
+      },
+      {
+        "tier": "high",
+        "shadowPixels": 117715,
+        "directionalCanopyPixels": 110121,
+        "greenLuminanceRange": 98.1946,
+        "opaque": true,
+        "playerOpacityChangedPixels": 0
+      }
+    ],
+    "birds": {
+      "groundCount": 21,
+      "groundTakeoff": {
+        "mode": "flying",
+        "takeoffs": 1,
+        "height": 1.2889620256930612
+      },
+      "branchTakeoff": {
+        "mode": "flying",
+        "takeoffs": 1,
+        "height": 1.2027366952752083
+      },
+      "return": {
+        "mode": "perched",
+        "error": 0
+      }
+    },
+    "treeImpact": {
+      "hits": 1,
+      "peak": 0.008159726316254681,
+      "x": 5.4639999999999995,
+      "z": 3.9,
+      "rootX": 5.949999999999999,
+      "rootZ": 3.9,
+      "treeScale": 0.85,
+      "peakDegrees": 0.46751787990322363,
+      "recovered": 0.025
+    },
+    "legacyProps": {
+      "primitiveProps": [],
+      "drawnProps": [
+        {
+          "name": "flora-mushroom",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-mushroom"
+        },
+        {
+          "name": "flora-rock",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-rock"
+        },
+        {
+          "name": "flora-log",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-log"
+        },
+        {
+          "name": "flora-reed",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-reed"
+        },
+        {
+          "name": "flora-lily",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-lily"
+        },
+        {
+          "name": "prototype-rock-1",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-rock"
+        },
+        {
+          "name": "prototype-rock-2",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-rock"
+        },
+        {
+          "name": "prototype-rock-3",
+          "style": "flat-forest-drawing",
+          "map": "forest-drawing-rock"
+        }
+      ],
+      "companions": [
+        {
+          "name": "companion-illustration-snowa",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-hoshi",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-thoma",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-simba",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-star",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-nano",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-doreamon",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "companion-illustration-max",
+          "type": "PlaneGeometry"
+        },
+        {
+          "name": "oscar-illustration",
+          "type": "PlaneGeometry"
+        }
+      ],
+      "grass": {
+        "batches": 1,
+        "blades": 5,
+        "vertices": 70
+      },
+      "bench": {
+        "geometry": "PlaneGeometry",
+        "drawing": "flat-forest-drawing",
+        "texture": "forest-drawing-bench"
+      }
+    },
+    "idleAndWalking": {
+      "automaticWalking": true,
+      "maxStrollRadius": 1.0978437554469924,
+      "manual": {
+        "autonomous": false,
+        "speed": 4.354561105049698
+      },
+      "collision": {
+        "anchor": {
+          "x": 5.05,
+          "z": 3.9
+        },
+        "min": 0.9000000000000004,
+        "max": 1.0944307581559707,
+        "walks": 28
+      },
+      "sleep": {
+        "stage": 300,
+        "frameloop": "never"
+      },
+      "wake": 0,
+      "ordinaryGroundParticles": {
+        "particles": 16,
+        "emitted": 16,
+        "flowerParticles": 0
+      }
+    },
+    "canopyProportions": {
+      "checked": 18,
+      "maximumRelativeError": 1.1731286853056133e-7,
+      "nonuniformInstances": 0
+    },
+    "phone": {
+      "width": 390,
+      "height": 844,
+      "projectionAspect": 0.46208530805687204,
+      "bufferAspect": 0.46208530805687204,
+      "shadows": true,
+      "overflow": false
+    }
+  },
+  "errors": [],
+  "checks": {
+    "build": "passed",
+    "format": "passed"
+  }
+}

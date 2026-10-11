@@ -15,8 +15,6 @@ import { useStore } from "../store";
 import { cameraCalibration } from "./calibration";
 import { CAMERA } from "../config";
 import { groundHeight } from "../utils/random";
-import { windUniforms } from "../shaders/wind";
-import { idleRuntime } from "../features/idleClock";
 export function Camera() {
   const camera = useThree((s) => s.camera);
   const scene = useThree((s) => s.scene);
@@ -33,8 +31,7 @@ export function Camera() {
       viewOffset: 0,
       framingSpan: 0,
       expansion: 0,
-      steerX: 0,
-      steerZ: 0,
+      distance: 0,
       landmarkGeometry: null as BufferGeometry | null,
       landmarkPitch: 0,
       landmarkMatrix: new Matrix4(),
@@ -52,7 +49,7 @@ export function Camera() {
     [],
   );
   useFrame((_, delta) => {
-    const dt = Math.min(delta, 0.25),
+    const dt = Math.max(0, Math.min(delta, 0.25)),
       s = useStore.getState();
     scratch.time += dt;
     scratch.finale = s.phase === "finale" ? scratch.finale + dt : 0;
@@ -85,24 +82,12 @@ export function Camera() {
         : CAMERA.screenOffsetY;
     const ground = groundHeight(traveler.x, traveler.z);
     const desiredExpansion =
-      s.phase === "explore" && input.held && !s.settings.reducedMotion
-        ? traveler.intent * (portrait ? 0.15 : 0.24)
-        : 0;
+      s.phase === "explore" && input.wideView ? (portrait ? 0.22 : 0.32) : 0;
     const response = desiredExpansion > scratch.expansion ? 3.2 : 1.65;
     scratch.expansion +=
       (desiredExpansion - scratch.expansion) * (1 - Math.exp(-response * dt));
-    if (s.settings.reducedMotion) scratch.expansion = 0;
+    if (s.settings.reducedMotion) scratch.expansion = desiredExpansion;
     traveler.cameraExpansion = scratch.expansion;
-    const anticipation = scratch.expansion / 0.24;
-    const inverseSpeed = 1 / Math.max(0.2, traveler.speed);
-    const steeringResponse = 1 - Math.exp(-2.4 * dt);
-    scratch.steerX +=
-      (traveler.vx * inverseSpeed * anticipation * 0.9 - scratch.steerX) *
-      steeringResponse;
-    scratch.steerZ +=
-      (traveler.vz * inverseSpeed * anticipation * 0.65 - scratch.steerZ) *
-      steeringResponse;
-    if (s.settings.reducedMotion) scratch.steerX = scratch.steerZ = 0;
     let followX =
       traveler.x +
       (calibrating && calibration ? calibration.followX : CAMERA.followX);
@@ -236,12 +221,9 @@ export function Camera() {
     } else {
       const height = ground + focusHeight;
       const distance =
-        calibrating && calibration ? calibration.distance : CAMERA.distance;
-      scratch.target.set(
-        followX + scratch.steerX,
-        height,
-        traveler.z - lookAhead + scratch.steerZ,
-      );
+        (calibrating && calibration ? calibration.distance : CAMERA.distance) *
+        (1 + scratch.expansion);
+      scratch.target.set(followX, height, traveler.z - lookAhead);
       scratch.position.set(
         scratch.target.x,
         height + sinPitch * distance,
@@ -253,8 +235,11 @@ export function Camera() {
       s.idleStage >= 45 &&
       !s.settings.reducedMotion
     ) {
-      scratch.position.x += Math.sin(idleRuntime.elapsed * 0.08) * 0.35;
-      scratch.position.y += 0.35;
+      // Pull back along the existing view ray; the idle view never orbits.
+      scratch.position
+        .sub(scratch.target)
+        .multiplyScalar(1.025)
+        .add(scratch.target);
     }
     if (
       camera instanceof PerspectiveCamera ||
@@ -267,7 +252,16 @@ export function Camera() {
       if (!exploring)
         scratch.framingSpan =
           2 * framingDistance * Math.tan((fov * Math.PI) / 360);
+      const halfHeight = framingDistance * Math.tan((fov * Math.PI) / 360);
+      const halfWidth = halfHeight * aspect;
+      const projectionChanged =
+        camera instanceof OrthographicCamera &&
+        (Math.abs(camera.top - halfHeight) > 0.000001 ||
+          Math.abs(camera.bottom + halfHeight) > 0.000001 ||
+          Math.abs(camera.left + halfWidth) > 0.000001 ||
+          Math.abs(camera.right - halfWidth) > 0.000001);
       if (
+        projectionChanged ||
         camera.userData.verticalFov !== fov ||
         camera.userData.framingDistance !== framingDistance ||
         scratch.viewOffset !== offset ||
@@ -276,8 +270,7 @@ export function Camera() {
       ) {
         if (camera instanceof PerspectiveCamera) camera.fov = fov;
         else {
-          const halfHeight = framingDistance * Math.tan((fov * Math.PI) / 360);
-          camera.left = (-halfHeight * size.width) / size.height;
+          camera.left = -halfWidth;
           camera.right = -camera.left;
           camera.top = halfHeight;
           camera.bottom = -halfHeight;
@@ -300,7 +293,29 @@ export function Camera() {
         scratch.viewHeight = size.height;
       }
     }
-    if (s.settings.reducedMotion) {
+    if (exploring) {
+      const distance = scratch.position.distanceTo(scratch.target);
+      if (!scratch.distance || s.settings.reducedMotion)
+        scratch.distance = distance;
+      else damping.damp(scratch, "distance", distance, CAMERA.damping, dt);
+      if (s.settings.reducedMotion) scratch.focus.copy(scratch.target);
+      else
+        damping.damp3(
+          scratch.focus,
+          scratch.target,
+          calibrating && calibration
+            ? calibration.focusDamping
+            : CAMERA.focusDamping,
+          dt,
+        );
+      // Smooth distance independently of follow translation. Reconstructing a
+      // distance from two separately damped points creates feedback during travel.
+      camera.position.set(
+        scratch.focus.x,
+        scratch.focus.y + sinPitch * scratch.distance,
+        scratch.focus.z + cosPitch * scratch.distance,
+      );
+    } else if (s.settings.reducedMotion) {
       camera.position.copy(scratch.position);
       scratch.focus.copy(scratch.target);
     } else {
@@ -324,12 +339,6 @@ export function Camera() {
       );
     }
     camera.lookAt(scratch.focus);
-    windUniforms.uCamera.value.copy(camera.position);
-    camera.getWorldDirection(windUniforms.uViewRay.value);
-    windUniforms.uViewRay.value.multiplyScalar(
-      -camera.position.distanceTo(scratch.focus),
-    );
-    windUniforms.uParallel.value = camera instanceof OrthographicCamera ? 1 : 0;
   });
   return null;
 }

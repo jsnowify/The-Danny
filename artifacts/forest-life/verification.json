@@ -1,0 +1,71 @@
+{
+  "baseline": {
+    "birds": 15,
+    "woodlandPerches": 33,
+    "flowers": 2927,
+    "fieldCounts": [
+      838,
+      2089
+    ],
+    "visibleFlowers": [
+      285,
+      275,
+      292
+    ],
+    "deterministic": true,
+    "flowerRootPixels": [
+      351
+    ],
+    "flatBird": true,
+    "material": "MeshBasicMaterial",
+    "birdPixels": [
+      188,
+      156,
+      151
+    ]
+  },
+  "animatedBirdFrames": true,
+  "paused": true,
+  "reducedMotion": true,
+  "meadow": {
+    "clock": 16.699999999999665,
+    "tiles": [
+      0,
+      2,
+      1,
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      4,
+      1
+    ],
+    "flowerCount": [
+      589,
+      523,
+      548
+    ],
+    "position": {
+      "x": 7,
+      "z": 31
+    },
+    "shader": "illustrated-blue-moon-flowers-0",
+    "flowerClock": 16.699999999999665,
+    "flowerMotion": 1
+  },
+  "walkStart": {
+    "x": 7,
+    "z": 31
+  },
+  "walkEnd": {
+    "x": 17.633333333333375,
+    "z": 31
+  },
+  "phoneOverflow": false,
+  "errors": []
+}

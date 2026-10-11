@@ -1,0 +1,54 @@
+{
+  "tiers": [
+    {
+      "tier": "low",
+      "released": 7,
+      "visiblePixels": 875,
+      "drop": 0.839030189929282
+    },
+    {
+      "tier": "medium",
+      "released": 10,
+      "visiblePixels": 1699,
+      "drop": 0.8023066157342258
+    },
+    {
+      "tier": "high",
+      "released": 13,
+      "visiblePixels": 1966,
+      "drop": 0.7388516467676807
+    }
+  ],
+  "landing": {
+    "landedSamples": 209,
+    "fade": true,
+    "floorError": 2.7755575615628914e-17,
+    "remaining": 0
+  },
+  "woodland": {
+    "count": 13,
+    "visiblePixels": 2205,
+    "position": {
+      "x": -8.628499999999999,
+      "z": -9
+    }
+  },
+  "repeated": {
+    "maximum": 64,
+    "contacts": 22
+  },
+  "memory": {
+    "count": 13,
+    "visiblePixels": 478
+  },
+  "reduced": true,
+  "pauseAndDialog": true,
+  "noIdleEmission": true,
+  "opaqueTrees": true,
+  "phone": {
+    "count": 13,
+    "visiblePixels": 357,
+    "overflow": false
+  },
+  "errors": []
+}

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny — Oscar</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 36px 24px;
+        background: #e6e8d7;
+        color: #354632;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1120px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(34px, 5vw, 52px);
+        margin: 12px 0;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      p {
+        max-width: 760px;
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 12px;
+      }
+      .preview {
+        display: grid;
+        grid-template-columns: minmax(240px, 420px) 1fr;
+        gap: 32px;
+        align-items: center;
+        margin: 28px 0 40px;
+      }
+      .paper {
+        background: #f6f0dc;
+        border-radius: 24px;
+      }
+      canvas {
+        width: 100%;
+        display: block;
+        aspect-ratio: 1;
+      }
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 16px 0;
+      }
+      button {
+        cursor: pointer;
+        color: #354632;
+        background: #f6f0dc;
+        border: 1px solid #a4b192;
+        border-radius: 24px;
+        padding: 8px 16px;
+        font: inherit;
+        font-size: 14px;
+      }
+      button[aria-pressed="true"] {
+        background: #455a3b;
+        color: #fff9e6;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #aa7538;
+        outline-offset: 3px;
+      }
+      img,
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        margin: 18px 0;
+      }
+      .caption {
+        font-size: 13px;
+        opacity: 0.75;
+      }
+      @media (max-width: 680px) {
+        .preview {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">The Danny · Oscar's updated character</div>
+      <h1>Oscar, in the traveler's painted style</h1>
+      <p>
+        The same small shadowed face, cream details, and softly painted
+        silhouette. Oscar wears a Philippine Army inspired camouflage jacket,
+        trousers, cap, and boots.
+      </p>
+      <p><a href="http://localhost:4173/">Play the updated forest ↗</a></p>
+      <div class="preview">
+        <div class="paper">
+          <canvas
+            id="oscar"
+            width="384"
+            height="384"
+            role="img"
+            aria-label="Oscar in a painted Philippine Army camouflage uniform"
+          ></canvas>
+        </div>
+        <div>
+          <h2>See his new outfit</h2>
+          <div class="buttons" aria-label="Oscar pose">
+            <button type="button" data-pose="idle" aria-pressed="true">
+              Stand
+            </button>
+            <button type="button" data-pose="walk" aria-pressed="false">
+              Walk
+            </button>
+            <button type="button" data-pose="sit" aria-pressed="false">
+              Sit
+            </button>
+          </div>
+          <div class="buttons" aria-label="Oscar direction">
+            <button type="button" data-view="front" aria-pressed="true">
+              Front
+            </button>
+            <button type="button" data-view="side" aria-pressed="false">
+              Side
+            </button>
+            <button type="button" data-view="back" aria-pressed="false">
+              Back
+            </button>
+          </div>
+          <button type="button" id="motion" aria-pressed="false">
+            Pause animation
+          </button>
+          <p class="caption">
+            His quiet routine near the bench and your conversations with him are
+            still part of the forest.
+          </p>
+        </div>
+      </div>
+      <h2>With your main character</h2>
+      <img
+        src="with-traveler.png"
+        width="1366"
+        height="768"
+        alt="Oscar and the red traveler together in the forest, sharing the painted character style"
+      />
+      <video
+        src="oscar-walking.mp4"
+        controls
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="with-traveler.png"
+        aria-label="Oscar walking in his camouflage uniform"
+      ></video>
+      <details>
+        <summary>Character poses and family portrait</summary>
+        <img
+          src="board.png"
+          alt="Oscar's front, side, back, walking and sitting drawings"
+          loading="lazy"
+        />
+        <img
+          src="journal-family.png"
+          alt="Oscar's updated family portrait in the journal"
+          loading="lazy"
+        />
+      </details>
+      <p class="caption">
+        Camouflage color and clothing reference:
+        <a
+          href="https://army.mil.ph/home/images/2022/ITB/PHILARPAT_BDU_AMEND_2.pdf"
+          >Philippine Army PHILARPAT uniform specification</a
+        >.
+      </p>
+    </main>
+    <script>
+      const canvas = document.getElementById("oscar");
+      const ctx = canvas.getContext("2d");
+      const atlas = new Image();
+      atlas.src = "atlas.png";
+      let pose = "idle",
+        view = "front",
+        elapsed = 0,
+        previous = 0;
+      let paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function updateMotion() {
+        const button = document.getElementById("motion");
+        button.textContent = paused ? "Play animation" : "Pause animation";
+        button.setAttribute("aria-pressed", String(paused));
+      }
+      updateMotion();
+      document.getElementById("motion").addEventListener("click", () => {
+        paused = !paused;
+        updateMotion();
+      });
+      for (const property of ["pose", "view"])
+        document.querySelectorAll(`[data-${property}]`).forEach((button) =>
+          button.addEventListener("click", () => {
+            if (property === "pose") {
+              pose = button.dataset.pose;
+              elapsed = 0;
+            } else view = button.dataset.view;
+            document
+              .querySelectorAll(`[data-${property}]`)
+              .forEach((other) =>
+                other.setAttribute("aria-pressed", String(other === button)),
+              );
+          }),
+        );
+      function draw(time) {
+        if (previous && !paused && !document.hidden)
+          elapsed += Math.min(0.1, (time - previous) / 1000);
+        previous = time;
+        const row =
+          { idle: 0, walk: 3, sit: 6 }[pose] +
+          { front: 0, side: 1, back: 2 }[view];
+        const frame = Math.floor(elapsed * (pose === "walk" ? 8 : 2)) % 6;
+        ctx.clearRect(0, 0, 384, 384);
+        if (atlas.complete && atlas.naturalWidth)
+          ctx.drawImage(
+            atlas,
+            frame * 192,
+            row * 192,
+            192,
+            192,
+            0,
+            0,
+            384,
+            384,
+          );
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>

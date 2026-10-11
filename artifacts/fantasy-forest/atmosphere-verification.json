@@ -1,0 +1,117 @@
+{
+  "captures": [
+    {
+      "name": "clearing",
+      "trees": [
+        {
+          "name": "painted-summer-canopy-emerald",
+          "alpha": 0.36,
+          "contour": false
+        },
+        {
+          "name": "painted-summer-canopy-sunlit",
+          "alpha": 0.36,
+          "contour": false
+        }
+      ],
+      "fog": {
+        "color": "8dcbb4",
+        "near": 19,
+        "far": 51
+      },
+      "calls": 69,
+      "triangles": 90664,
+      "birds": 14,
+      "span": 11.509842579591991
+    },
+    {
+      "name": "meadow",
+      "trees": [
+        {
+          "name": "painted-summer-canopy-emerald",
+          "alpha": 0.36,
+          "contour": false
+        },
+        {
+          "name": "painted-summer-canopy-sunlit",
+          "alpha": 0.36,
+          "contour": false
+        }
+      ],
+      "fog": {
+        "color": "7ec0b1",
+        "near": 18.236633747330494,
+        "far": 52.52673250533901
+      },
+      "calls": 38,
+      "triangles": 81014,
+      "birds": 5,
+      "span": 9.503442126794761
+    },
+    {
+      "name": "grove",
+      "trees": [
+        {
+          "name": "painted-summer-canopy-emerald",
+          "alpha": 0.36,
+          "contour": false
+        },
+        {
+          "name": "painted-summer-canopy-sunlit",
+          "alpha": 0.36,
+          "contour": false
+        }
+      ],
+      "fog": {
+        "color": "8dcbb4",
+        "near": 19,
+        "far": 51
+      },
+      "calls": 49,
+      "triangles": 74038,
+      "birds": 19,
+      "span": 9.503442126794761
+    },
+    {
+      "name": "pond",
+      "trees": [
+        {
+          "name": "painted-summer-canopy-emerald",
+          "alpha": 0.36,
+          "contour": false
+        },
+        {
+          "name": "painted-summer-canopy-sunlit",
+          "alpha": 0.36,
+          "contour": false
+        }
+      ],
+      "fog": {
+        "color": "88c8b3",
+        "near": 18.750656354520213,
+        "far": 51.49868729095957
+      },
+      "calls": 47,
+      "triangles": 62958,
+      "birds": 8,
+      "span": 9.503442126794761
+    }
+  ],
+  "shadePixels": 31424,
+  "highQuality": {
+    "alphaTest": 0.36,
+    "map": "painted-summer-canopy-sunlit",
+    "alphaShadowPrograms": 4,
+    "shadow": true,
+    "shadowEnabled": true,
+    "calls": 77
+  },
+  "phoneCamera": {
+    "width": 390,
+    "height": 844,
+    "projectionAspect": 0.46208530805687204,
+    "bufferAspect": 0.46208530805687204
+  },
+  "phoneOverflow": false,
+  "errors": []
+}

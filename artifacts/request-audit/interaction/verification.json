@@ -1,0 +1,308 @@
+{
+  "captures": [
+    {
+      "name": "clearing",
+      "x": 0.65,
+      "z": 4.05
+    },
+    {
+      "name": "pond",
+      "x": 9.5,
+      "z": 5.5
+    },
+    {
+      "name": "grove",
+      "x": -4.5,
+      "z": -9.2
+    },
+    {
+      "name": "meadow",
+      "x": 7,
+      "z": 31
+    }
+  ],
+  "structural": {
+    "props": [
+      {
+        "name": "flora-mushroom",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-mushroom"
+      },
+      {
+        "name": "flora-rock",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-rock"
+      },
+      {
+        "name": "flora-log",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-log"
+      },
+      {
+        "name": "flora-reed",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-reed"
+      },
+      {
+        "name": "flora-lily",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-lily"
+      },
+      {
+        "name": "prototype-rock-1",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-rock"
+      },
+      {
+        "name": "prototype-rock-2",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-rock"
+      },
+      {
+        "name": "prototype-rock-3",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-rock"
+      }
+    ],
+    "stretched": 0,
+    "treeNormals": 4020,
+    "groundBirds": 21,
+    "birdFrames": 10,
+    "shadowEnabled": true,
+    "canopyRatios": [
+      {
+        "name": "flora-pine",
+        "width": 2,
+        "height": 2.249999940842245,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 2.6292336308131325e-8
+      },
+      {
+        "name": "flora-crown",
+        "width": 2,
+        "height": 2.249999940842245,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 2.6292336308131325e-8
+      },
+      {
+        "name": "flora-pineFar",
+        "width": 2,
+        "height": 2.249999940842245,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 2.6292336308131325e-8
+      },
+      {
+        "name": "flora-crownFar",
+        "width": 2,
+        "height": 2.249999940842245,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 2.6292336308131325e-8
+      },
+      {
+        "name": "species-narra-near",
+        "width": 1.7792659047991037,
+        "height": 2.0016741170587644,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.2909307844921614e-8
+      },
+      {
+        "name": "species-narra-far",
+        "width": 1.7792659047991037,
+        "height": 2.0016741170587644,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.2909307844921614e-8
+      },
+      {
+        "name": "species-acacia-near",
+        "width": 1.1066950559616089,
+        "height": 1.2450319869055,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 3.93152067568181e-8
+      },
+      {
+        "name": "species-acacia-far",
+        "width": 1.1066950559616089,
+        "height": 1.2450319869055,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 3.93152067568181e-8
+      },
+      {
+        "name": "species-mango-near",
+        "width": 2.51570463180542,
+        "height": 2.8301676688564394,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.4813489102039057e-8
+      },
+      {
+        "name": "species-mango-far",
+        "width": 2.51570463180542,
+        "height": 2.8301676688564394,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.4813489102039057e-8
+      },
+      {
+        "name": "species-balete-near",
+        "width": 1.4787774085998535,
+        "height": 1.6636246539667985,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 4.165120004451239e-8
+      },
+      {
+        "name": "species-balete-far",
+        "width": 1.4787774085998535,
+        "height": 1.6636246539667985,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 4.165120004451239e-8
+      },
+      {
+        "name": "species-talisay-near",
+        "width": 1.9515358209609985,
+        "height": 2.1954775410233554,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.1731286853056133e-7
+      },
+      {
+        "name": "species-talisay-far",
+        "width": 1.9515358209609985,
+        "height": 2.1954775410233554,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.1731286853056133e-7
+      },
+      {
+        "name": "species-agoho-near",
+        "width": 2.8020846843719482,
+        "height": 3.1523451237357802,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 4.637267037033155e-8
+      },
+      {
+        "name": "species-agoho-far",
+        "width": 2.8020846843719482,
+        "height": 3.1523451237357802,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 4.637267037033155e-8
+      },
+      {
+        "name": "prototype-painted-crown",
+        "width": 4.800000190734863,
+        "height": 5.400000143051148,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.3245476271350753e-8
+      },
+      {
+        "name": "prototype-painted-crown",
+        "width": 4.800000190734863,
+        "height": 5.400000143051148,
+        "imageAspect": 0.8888888888888888,
+        "relativeError": 1.3245476271350753e-8
+      }
+    ],
+    "primitiveProps": [],
+    "flatCompanions": [
+      {
+        "name": "companion-illustration-snowa",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-hoshi",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-thoma",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-simba",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-star",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-nano",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-doreamon",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "companion-illustration-max",
+        "type": "PlaneGeometry"
+      },
+      {
+        "name": "oscar-illustration",
+        "type": "PlaneGeometry"
+      }
+    ],
+    "grass": {
+      "batches": 1,
+      "blades": 5,
+      "vertices": 70
+    }
+  },
+  "anchored": {
+    "checked": 59,
+    "changed": 0,
+    "pose": "walk"
+  },
+  "groundFlight": {
+    "mode": "flying",
+    "takeoffs": 1,
+    "height": 1.2889620256930612
+  },
+  "branchFlight": {
+    "mode": "flying",
+    "takeoffs": 1,
+    "height": 1.2027366952752083
+  },
+  "impact": {
+    "hits": 1,
+    "peak": 0.008159726316254681,
+    "x": 5.4639999999999995,
+    "z": 3.9,
+    "rootX": 5.949999999999999,
+    "rootZ": 3.9,
+    "treeScale": 0.85
+  },
+  "woodlandImpact": {
+    "hits": 1,
+    "pixelsChanged": 78102,
+    "x": -8.628499999999999,
+    "z": -9,
+    "marks": [
+      {
+        "x": -7.8,
+        "z": -9
+      }
+    ]
+  },
+  "recovered": 0.025,
+  "walking": {
+    "particles": 16,
+    "emitted": 16,
+    "flowerParticles": 0
+  },
+  "pause": {
+    "beforePause": {
+      "age": 0.5166666666666669,
+      "birdClock": 42.40599999999824
+    },
+    "afterPause": {
+      "age": 0.5166666666666669,
+      "birdClock": 42.40599999999824
+    }
+  },
+  "returnTrip": {
+    "mode": "perched",
+    "error": 0
+  },
+  "phone": {
+    "width": 390,
+    "height": 844,
+    "aspect": 0.46208530805687204,
+    "overflow": false
+  },
+  "errors": []
+}

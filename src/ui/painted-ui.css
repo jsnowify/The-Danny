@@ -1,0 +1,351 @@
+/* Original brush shapes and paper grain shared by the landing and forest UI.
+   Paint sits behind the controls; hit areas and focus rings remain rectangular. */
+:root {
+  --paper-grain: url("/art/ui/paper-grain.svg");
+  --paint-mask: url("/art/ui/paint-stroke.svg");
+  --paint-outline: url("/art/ui/paint-outline.svg");
+}
+html,
+body,
+#root,
+.app {
+  touch-action: auto;
+}
+/* The scene canvas keeps its own touch-action: none for hold-to-walk. */
+
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory,
+    .journal-tabs :where(button),
+    .setting-toggle
+  ) {
+  isolation: isolate;
+  --paint-base: #eee9d3;
+  --paint-light: #fff8e6;
+  --paint-ink: #8e9b725c;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 7px;
+  backdrop-filter: none;
+  box-shadow: none;
+  color: #314c3f;
+}
+
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory,
+    .journal-tabs :where(button),
+    .setting-toggle
+  )::before,
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory,
+    .journal-tabs :where(button),
+    .setting-toggle
+  )::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory,
+    .journal-tabs :where(button),
+    .setting-toggle
+  )::before {
+  background:
+    var(--paper-grain) repeat,
+    radial-gradient(ellipse at 25% 20%, var(--paint-light), transparent 68%),
+    linear-gradient(165deg, var(--paint-light), var(--paint-base));
+  mask: var(--paint-mask) center / 100% 100% no-repeat;
+  transition: filter 180ms ease;
+}
+
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory,
+    .journal-tabs :where(button),
+    .setting-toggle
+  )::after {
+  background: var(--paint-ink);
+  mask: var(--paint-outline) center / 100% 100% no-repeat;
+}
+
+/* Add positioning only where a control does not already anchor the HUD. */
+:is(.app, .project-info-dialog)
+  :is(
+    .primary,
+    .icon-button,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .journal-tabs :where(button),
+    .setting-toggle
+  ) {
+  position: relative;
+}
+.app
+  :is(
+    .title-mute,
+    .journal-button,
+    .hang-button,
+    .near-memory,
+    .viewer-close,
+    .viewer-sound
+  ) {
+  position: absolute;
+}
+.app :is(.title-controls .title-mute, .hud-left .journal-button) {
+  position: relative;
+  inset: auto;
+}
+
+:is(.app, .project-info-dialog) :is(.icon-button, .meadow-playback) {
+  --paint-mask: url("/art/ui/paint-round.svg");
+  --paint-outline: url("/art/ui/paint-round-outline.svg");
+}
+:is(.app, .project-info-dialog) :is(.icon-button, .meadow-playback)::before,
+:is(.app, .project-info-dialog) :is(.icon-button, .meadow-playback)::after {
+  inset: 0;
+}
+.app .primary {
+  --paint-base: #234a3d;
+  --paint-light: #42624e;
+  --paint-ink: #cbd0a84d;
+  color: #fff5df;
+}
+.app .dedication .primary {
+  --paint-base: #d7c399;
+  --paint-light: #f6e7c7;
+  --paint-ink: #87724866;
+  color: #314c3f;
+}
+.app .journal-tabs :where(button)[aria-selected="true"] {
+  --paint-base: #c5d0af;
+  --paint-light: #e3e8cd;
+  background: transparent;
+  color: #314c3f;
+}
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory
+  ):hover {
+  background: transparent;
+}
+:is(.app, .project-info-dialog)
+  :is(
+    .icon-button,
+    .primary,
+    .begin-button,
+    .project-info-button,
+    .meadow-playback,
+    .field-guide-button,
+    .near-memory
+  ):hover::before {
+  filter: brightness(1.06);
+}
+
+/* Labels and sheets use a pigment wash and an uneven ink edge. */
+.app
+  :is(
+    .wordmark,
+    .forest-label,
+    .region-caption,
+    .world-memory-label,
+    .toast,
+    .audio-notice,
+    .nearby-company :where(summary),
+    .nearby-menu,
+    .journal-card,
+    .pause-card,
+    .field-guide-card,
+    .dialogue-card
+  ) {
+  background:
+    var(--paper-grain) repeat,
+    radial-gradient(ellipse at 10% 8%, #fff9e8ba, transparent 75%),
+    linear-gradient(140deg, #f2eedb, #e6e7cf);
+  border: 1px solid #87946c69;
+  border-radius: 5px 13px 7px 15px / 10px 6px 13px 7px;
+  backdrop-filter: none;
+  box-shadow:
+    inset 0 0 0 3px #fff9e347,
+    0 3px 0 #213c3312,
+    0 10px 26px #16302614;
+  text-shadow: none;
+}
+.app .region-caption {
+  color: #f8f1dc;
+  background:
+    var(--paper-grain) repeat,
+    linear-gradient(135deg, #49664b, #375347);
+  border-color: #829271;
+  box-shadow: inset 0 0 0 2px #ccd2b21a;
+}
+.app :is(.wordmark, .world-memory-label, .forest-label) {
+  color: #314c3e;
+}
+.app .memory-slot {
+  border-radius: 47% 53% 48% 52% / 53% 46% 54% 47%;
+  border-color: #e5e8c3;
+  box-shadow:
+    inset 0 0 0 2px #748e6655,
+    1px 2px 0 #24473520;
+}
+.app .memory-slot.filled {
+  border-color: #e4d19b;
+}
+.app kbd {
+  border-radius: 2px 4px 3px 2px;
+  background:
+    var(--paper-grain) repeat,
+    #e3e5cb;
+  border-color: #81906c66;
+}
+.app .nearby-menu button {
+  border-radius: 3px 7px 5px 4px;
+  background:
+    var(--paper-grain) repeat,
+    #f8f2df;
+}
+.app .journal-grid article {
+  background:
+    var(--paper-grain) repeat,
+    #e4e4ce;
+  border-radius: 4px 9px 6px 7px;
+  border: 1px solid #87946c30;
+}
+
+/* Conversations leave the scene visible above the painted dialogue sheet. */
+.app .overlay.dialogue-overlay {
+  background: linear-gradient(transparent 55%, #143c333b);
+  backdrop-filter: none;
+  padding: 24px;
+  pointer-events: auto;
+}
+.app .conversation-card {
+  position: relative;
+  width: min(700px, 100%);
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 10px 20px;
+  padding: 28px 62px 24px 22px;
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+}
+.conversation-portrait {
+  width: 108px;
+  height: 108px;
+  align-self: center;
+  background: radial-gradient(ellipse, #c0cda585, transparent 72%);
+}
+.conversation-portrait :is(img, svg) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.app .conversation-card h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+.app .conversation-card .dialogue-line {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #2f493b;
+}
+.app .conversation-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+.conversation-copy {
+  align-self: center;
+}
+.conversation-actions {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.conversation-question {
+  flex: 0 0 100%;
+  margin: 4px 0;
+  font-size: 23px;
+}
+.app .conversation-actions .secondary {
+  --paint-base: #dce2c6;
+  --paint-light: #f0edda;
+  color: #314c3e;
+}
+.conversation-actions button {
+  min-width: 86px;
+}
+@media (max-width: 560px) {
+  .app .overlay.dialogue-overlay {
+    padding: 12px;
+  }
+  .app .conversation-card {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 10px;
+    padding: 20px 44px 20px 16px;
+    max-height: calc(100dvh - 24px);
+  }
+  .conversation-portrait {
+    width: 64px;
+    height: 86px;
+  }
+  .app .conversation-card h2 {
+    font-size: 26px;
+  }
+  .app .conversation-card .dialogue-line {
+    font-size: 19px;
+  }
+  .conversation-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+}

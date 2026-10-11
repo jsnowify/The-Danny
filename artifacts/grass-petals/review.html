@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny · Grass & petals</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #edf0dc; color: #334b37; font: 16px/1.5 Georgia, serif; }
+      main { max-width: 1200px; margin: auto; padding: 32px 20px 60px; }
+      h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 400; margin: 0 0 10px; }
+      p { max-width: 760px; }
+      nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 14px; }
+      button, a { font: inherit; color: inherit; }
+      button { border: 1px solid #86976a; border-radius: 20px; background: #f8f6e7; padding: 8px 16px; cursor: pointer; }
+      button[aria-pressed="true"] { background: #49623d; color: #fffde7; }
+      img, video { display: block; max-width: 100%; border-radius: 14px; background: #627345; }
+      #scene { width: 100%; }
+      video { width: 100%; margin-top: 16px; }
+      h2 { font-weight: 400; margin-top: 32px; }
+      .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      figure { margin: 0; }
+      figcaption { margin-top: 8px; font-size: 14px; }
+      #phone { max-height: 620px; margin: auto; }
+      @media (max-width: 650px) { .pair { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Painted meadow, glowing petals</h1>
+      <p>Richer olive ground with broken brush strokes, greener grass, and small glowing blue petals that lift from touched flowers and fade after you pass.</p>
+      <p><a href="/">Open the dev forest →</a></p>
+      <nav aria-label="Forest views">
+        <button data-image="clearing.png" data-alt="The clearing with painted olive ground and varied grass" aria-pressed="true">Clearing</button>
+        <button data-image="meadow.png" data-alt="The expanded blue flower meadow before walking" aria-pressed="false">Meadow</button>
+        <button data-image="petals.png" data-alt="Glowing petals drifting behind the traveler" aria-pressed="false">Glowing petals</button>
+        <button data-image="memory-flowers.png" data-alt="The restored Memory Tree and its blue flowers" aria-pressed="false">Memory Tree</button>
+      </nav>
+      <img id="scene" src="clearing.png" alt="The clearing with painted olive ground and varied grass" />
+      <h2>Walk, then watch the petals fade</h2>
+      <p>The traveler walks for three seconds, then stops. Only touched flowers release petals; the remaining glow fades away. This recording uses fixed simulation steps.</p>
+      <video controls loop muted playsinline preload="metadata" poster="petals.png" src="grass-petals.mp4" aria-label="Walking through blue flowers, followed by the petals fading away"></video>
+      <h2>During passage and after stopping</h2>
+      <div class="pair">
+        <figure><img src="petals.png" alt="Petals lifting from flowers along the walking trail" /><figcaption>Petals drift behind the traveler.</figcaption></figure>
+        <figure><img src="faded.png" alt="The same area after the petal effect has faded" /><figcaption>The glow disappears after stopping.</figcaption></figure>
+      </div>
+      <h2>Phone view</h2>
+      <img id="phone" src="phone.png" alt="Blue flower meadow and glowing petals on a narrow phone screen" />
+    </main>
+    <script>
+      const scene = document.querySelector("#scene");
+      document.querySelectorAll("button[data-image]").forEach(button => {
+        button.addEventListener("click", () => {
+          scene.src = button.dataset.image;
+          scene.alt = button.dataset.alt;
+          document.querySelectorAll("button[data-image]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+        });
+      });
+    </script>
+  </body>
+</html>

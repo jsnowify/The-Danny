@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny | Summer forest</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      body {
+        margin: 0;
+        background: #edf3e5;
+        color: #214f43;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1260px;
+        margin: auto;
+        padding: 36px 24px 64px;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.15;
+      }
+      h1 {
+        font-size: clamp(36px, 6vw, 62px);
+        margin: 8px 0 20px;
+      }
+      h2 {
+        font-size: 30px;
+        margin: 0 0 16px;
+      }
+      p {
+        max-width: 800px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #557c65;
+      }
+      a {
+        color: #286a54;
+        text-underline-offset: 4px;
+      }
+      .intro {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .play {
+        padding: 12px 22px;
+        border-radius: 30px;
+        background: #285c48;
+        color: #f7f5df;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 26px 0 14px;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        padding: 9px 18px;
+        border: 1px solid #a9c3a7;
+        border-radius: 24px;
+        background: #f7f8ed;
+        cursor: pointer;
+      }
+      button[aria-pressed="true"] {
+        background: #285c48;
+        color: #fff4d2;
+        border-color: #285c48;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #9dc943;
+        outline-offset: 4px;
+      }
+      .comparison {
+        position: relative;
+        aspect-ratio: 1366/768;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #88aa6a;
+      }
+      .comparison img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .comparison .before {
+        clip-path: inset(0 50% 0 0);
+      }
+      .split {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        border-left: 2px solid #fff8df;
+        pointer-events: none;
+      }
+      .tag {
+        position: absolute;
+        top: 16px;
+        padding: 5px 12px;
+        color: #fdfbe8;
+        background: #214e43cc;
+        border-radius: 20px;
+        font-size: 13px;
+      }
+      .old-tag {
+        left: 16px;
+      }
+      .new-tag {
+        right: 16px;
+      }
+      .control {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin: 16px 0 8px;
+      }
+      .control label {
+        font-size: 14px;
+        min-width: 130px;
+      }
+      .control input {
+        accent-color: #3f8752;
+        flex: 1;
+        max-width: 540px;
+      }
+      .caption {
+        margin: 10px 0 36px;
+        color: #527467;
+      }
+      .lower {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 34px;
+        align-items: start;
+      }
+      video {
+        width: 100%;
+        display: block;
+        border-radius: 18px;
+        background: #365c47;
+      }
+      figure {
+        margin: 0;
+      }
+      figure img {
+        width: 100%;
+        border-radius: 18px;
+        display: block;
+      }
+      figcaption {
+        font-size: 14px;
+        color: #527467;
+        margin-top: 12px;
+      }
+      .high {
+        margin: 28px 0;
+      }
+      summary {
+        cursor: pointer;
+        padding: 12px 0;
+      }
+      details img {
+        width: 100%;
+        border-radius: 18px;
+      }
+      .notes {
+        margin-top: 38px;
+        padding-top: 22px;
+        border-top: 1px solid #c3d3bb;
+        font-size: 14px;
+        color: #567866;
+      }
+      @media (max-width: 760px) {
+        main {
+          padding: 24px 16px 42px;
+        }
+        .intro {
+          display: block;
+        }
+        .play {
+          display: inline-block;
+          margin-bottom: 8px;
+        }
+        .lower {
+          grid-template-columns: 1fr;
+        }
+        .lower figure {
+          max-width: 350px;
+          margin: auto;
+        }
+        .control {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .control input {
+          width: 100%;
+        }
+        .tag {
+          font-size: 11px;
+          padding: 3px 8px;
+          top: 8px;
+        }
+        .old-tag {
+          left: 8px;
+        }
+        .new-tag {
+          right: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="intro">
+        <div>
+          <div class="eyebrow">The Danny / a quiet summer forest</div>
+          <h1>Light through the leaves.</h1>
+          <p>
+            Emerald shade, luminous green foliage, soft sun rays and a warm
+            winding path. The blue flower fields, painted wildlife and glowing
+            petal trail belong to this new forest.
+          </p>
+        </div>
+        <a class="play" href="/">Open the game</a>
+      </div>
+      <nav class="tabs" aria-label="Forest views">
+        <button data-view="clearing" aria-pressed="true">Home glade</button
+        ><button data-view="meadow" aria-pressed="false">
+          Blue flower field</button
+        ><button data-view="grove" aria-pressed="false">Woodland path</button
+        ><button data-view="pond" aria-pressed="false">Pond</button>
+      </nav>
+      <div class="comparison">
+        <img
+          id="current"
+          src="clearing.png"
+          alt="Summer forest glade with painted leafy trees, grass, blue flowers and the red traveler"
+        /><img
+          id="previous"
+          class="before"
+          src="../lime-grass/clearing.png"
+          alt="The previous lime meadow and orange tree crowns"
+        />
+        <div id="split" class="split"></div>
+        <span id="old-tag" class="tag old-tag">Previous lime meadow</span
+        ><span class="tag new-tag">Summer forest</span>
+      </div>
+      <div id="control" class="control">
+        <label for="compare">Compare the scenery</label
+        ><input
+          id="compare"
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Previous scene coverage"
+        />
+      </div>
+      <p id="caption" class="caption" aria-live="polite">
+        Drag the slider to compare the glade. Both versions keep the same
+        traveler and close camera framing.
+      </p>
+      <div class="lower">
+        <section>
+          <h2>Walk among the blue flowers.</h2>
+          <p>
+            Grass and flowers yield as the traveler passes. Glowing blue petals
+            lift from brushed flowers and softly fade.
+          </p>
+          <video
+            controls
+            loop
+            playsinline
+            preload="metadata"
+            poster="petals/meadow.png"
+          >
+            <source src="petals/grass-petals.mp4" type="video/mp4" />
+          </video>
+          <details class="high">
+            <summary>View the sunlight with full shadows</summary>
+            <img
+              src="high-quality.png"
+              alt="The summer glade rendered with full leaf and branch shadows"
+              loading="lazy"
+            />
+          </details>
+        </section>
+        <figure>
+          <h2>Phone view</h2>
+          <img
+            src="phone.png"
+            alt="The leafy summer glade and traveler on a portrait phone"
+            loading="lazy"
+          />
+          <figcaption>
+            The same forest, blue flowers and painted companions in portrait
+            view.
+          </figcaption>
+        </figure>
+      </div>
+      <div class="notes">
+        <p>
+          Original canopy artwork:
+          <a href="/art/forest/summer-canopy.png">saved painting</a> and
+          <a href="/art/forest/PROVENANCE.md"
+            >generation prompt and provenance</a
+          >. Generated with built-in imagegen.
+        </p>
+        <p>
+          <a href="atmosphere-verification.json"
+            >Scenery and rendering checks</a
+          >
+          &middot;
+          <a href="physics/verification.json">Vegetation physics checks</a>
+          &middot; <a href="petals/verification.json">Petal checks</a>
+        </p>
+      </div>
+    </main>
+    <script>
+      const modes = {
+        clearing: {
+          before: "clearing.png",
+          alt: "Summer forest home glade with the red traveler and painted wildlife",
+          caption:
+            "Drag the slider to compare the glade. Both versions keep the same traveler and close camera framing.",
+        },
+        meadow: {
+          before: "meadow.png",
+          alt: "The expanded field of blue flowers beside a sandy forest path",
+          caption:
+            "Compare the blue flower field. The warmer path and richer greens continue through the wider meadow.",
+        },
+        grove: {
+          alt: "Emerald and teal woodland crowns framing the path",
+          caption:
+            "Layered leafy crowns, quiet undergrowth and cool shade along the woodland path.",
+        },
+        pond: {
+          alt: "A tranquil pond surrounded by green woodland",
+          caption:
+            "The cool greens and atmosphere carry through to the pond and its banks.",
+        },
+      };
+      const current = document.querySelector("#current"),
+        previous = document.querySelector("#previous"),
+        split = document.querySelector("#split"),
+        slider = document.querySelector("#compare"),
+        control = document.querySelector("#control"),
+        oldTag = document.querySelector("#old-tag");
+      slider.addEventListener("input", () => {
+        previous.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
+        split.style.left = `${slider.value}%`;
+      });
+      for (const button of document.querySelectorAll("[data-view]"))
+        button.addEventListener("click", () => {
+          for (const tab of document.querySelectorAll("[data-view]"))
+            tab.setAttribute("aria-pressed", String(tab === button));
+          const name = button.dataset.view,
+            mode = modes[name];
+          current.src = `${name}.png`;
+          current.alt = mode.alt;
+          for (const element of [previous, split, oldTag, control])
+            element.hidden = !mode.before;
+          if (mode.before) previous.src = `../lime-grass/${mode.before}`;
+          document.querySelector("#caption").textContent = mode.caption;
+        });
+    </script>
+  </body>
+</html>

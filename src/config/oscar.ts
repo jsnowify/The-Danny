@@ -1,28 +1,19 @@
-// Confirmed relationship; appearance and scene dialogue are editable artistic defaults.
+// Confirmed relationship. Army clothing and traveler styling requested by the owner.
+// Personal dialogue is supplied by the owner in config/dialogues.ts.
 export const OSCAR = {
   name: "Oscar",
   relationship: "Brother of Danilo Cambronero",
   description: "Danny’s brother, sharing a quiet place in this forest.",
   home: [-6.3, 4.4] as [number, number],
-  shirt: "#c6b58b",
-  trousers: "#65756d",
+  shirt: "#a9ab83",
+  trousers: "#929d72",
   skin: "#bd9476",
   hair: "#5d5547",
-  dialogueIsFictional: true,
-  dialogue: {
-    arrival: "Take your time. There is room here to sit and remember.",
-    firstMemory:
-      "You can carry that memory back to the tree whenever you are ready.",
-    greener: "The clearing is growing warmer. We can stay a little longer.",
-    fullBloom: "A full tree, and a quiet place to return to. Keep exploring.",
+  uniform: {
+    cap: "#a9ab83",
+    boots: "#2b231b",
+    pigments: ["#40573b", "#30382c", "#778653", "#b9b48e"],
+    reference:
+      "https://army.mil.ph/home/images/2022/ITB/PHILARPAT_BDU_AMEND_2.pdf",
   },
 };
-export function oscarLine(collected: number, hung: number) {
-  return hung === 8
-    ? OSCAR.dialogue.fullBloom
-    : hung >= 3
-      ? OSCAR.dialogue.greener
-      : collected > 0
-        ? OSCAR.dialogue.firstMemory
-        : OSCAR.dialogue.arrival;
-}

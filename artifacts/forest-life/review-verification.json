@@ -1,0 +1,12 @@
+{
+  "birdColorControls": 3,
+  "flowerColorControls": 3,
+  "video": {
+    "time": 0.4494,
+    "duration": 2.5,
+    "width": 1366
+  },
+  "phoneOverflow": false,
+  "reducedMotion": "paused initially",
+  "errors": []
+}

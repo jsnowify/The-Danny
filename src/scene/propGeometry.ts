@@ -1,19 +1,16 @@
-import { Shape, ShapeGeometry } from "three";
-import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { paintedLeaf } from "./paintedGeometry";
+import { PlaneGeometry, Shape, ShapeGeometry } from "three";
 import { smoothRock } from "../visual/approved/geometry";
+import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
 export function brushShrub() {
-  const leaves = [-1, 0, 1].map((side) => {
-    const leaf = paintedLeaf();
-    leaf.translate(0, 0.65, 0);
-    leaf.scale(0.52, side === 0 ? 0.92 : 0.76, 1);
-    leaf.rotateZ(-side * 0.38);
-    leaf.translate(side * 0.22, 0, Math.abs(side) * 0.045);
-    return leaf;
+  const cards = [-1, 0, 1].map((side) => {
+    const g = new PlaneGeometry(1.29, 1.45, 8, 6);
+    g.translate(side * 0.55, 0.725, side === 0 ? 0.1 : 0);
+    return g;
   });
-  const shrub = mergeGeometries(leaves)!;
-  leaves.forEach((leaf) => leaf.dispose());
+  const shrub = mergeGeometries(cards)!;
+  cards.forEach((g) => g.dispose());
+  shrub.rotateX(-0.28);
   return shrub;
 }
 export function illustratedStone() {

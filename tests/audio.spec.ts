@@ -106,13 +106,17 @@ test("track starts after the gesture, loops, ducks, grows, pauses and persists s
   await expect
     .poll(async () => (await audioState(page)).track!.gain)
     .toBeCloseTo(TRACK_MIX.gain, 2);
-  await page.evaluate(() => {
+  const sought = await page.evaluate(() => {
     const api = Reflect.get(window, "__DANNY_AUDIO__");
     api.seek(api.state().track.duration - 0.3);
+    return api.state().track;
   });
+  expect(sought.position).toBeCloseTo(sought.duration - 0.3, 1);
+  // A slow WebGL frame can miss the first three seconds after the boundary.
+  // Confirm the seek, then observe the backward jump made by the actual loop.
   await expect
     .poll(async () => (await audioState(page)).track!.position)
-    .toBeLessThan(3);
+    .toBeLessThan(sought.position - 1);
   expect((await audioState(page)).track!.playing).toBe(true);
   await page
     .getByRole("button", { name: TEXT.pauseLabel, exact: true })

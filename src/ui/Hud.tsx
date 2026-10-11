@@ -10,7 +10,6 @@ import { REGIONS } from "../config/regions";
 import { input } from "../scene/runtime";
 import { primaryAction, interact } from "../features/interaction";
 import { COMPANION_BY_ID } from "../config/companions";
-import { LanguageSwitch } from "./LanguageSwitch";
 import { NearbyCompany } from "./NearbyCompany";
 export function Hud() {
   const TEXT = useText();
@@ -21,6 +20,7 @@ export function Hud() {
     phase = useStore((s) => s.phase),
     nearMemory = useStore((s) => s.nearMemory);
   const available = collected.some((id) => !hung.includes(id));
+  const seated = useStore((s) => s.seatedWithOscar);
   const nearCompanion = useStore((s) => s.nearCompanion),
     nearOscar = useStore((s) => s.nearOscar);
   const action = primaryAction();
@@ -69,7 +69,6 @@ export function Hud() {
       </div>
       <div className="hud-right">
         <Compass />
-        <LanguageSwitch />
         {document.fullscreenEnabled && (
           <button
             className="icon-button fullscreen-button"
@@ -162,7 +161,16 @@ export function Hud() {
         </button>
       )}
 
-      <NearbyCompany />
+      {seated && (
+        <button
+          className="primary near-memory"
+          onClick={() => useStore.setState({ seatedWithOscar: false })}
+        >
+          Stand up
+          <Icon name="arrow" />
+        </button>
+      )}
+      {!seated && <NearbyCompany />}
       <span className="controls-note">
         {TEXT.controlHold}
         <span> · </span>

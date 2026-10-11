@@ -17,6 +17,10 @@ export const traveler = {
   intent: 0,
   cameraExpansion: 0,
   clothOffset: 0,
+  clothTwist: 0,
+  gait: 0,
+  gaitWeight: 0,
+  autonomous: false,
 };
 export const input = {
   held: false,
@@ -26,6 +30,7 @@ export const input = {
   clientY: 0,
   distance: 0,
   intent: 0,
+  wideView: false,
 };
 export const atmosphere = {
   time: 0,

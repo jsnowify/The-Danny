@@ -1,0 +1,88 @@
+{
+  "tier": "medium",
+  "shadows": true,
+  "shadowSize": 768,
+  "shadowPixels": 120762,
+  "directionalTreePixels": 110123,
+  "contrast": {
+    "greenSamples": 21680,
+    "shade": 76.4194,
+    "highlight": 174.54639999999998,
+    "range": 98.12699999999998
+  },
+  "treeSurface": {
+    "castShadow": true,
+    "receiveShadow": true,
+    "lit": true
+  },
+  "treeWood": [
+    {
+      "name": "memory-tree-limbs",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "painted-crown-fork",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "painted-bird-perch",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "prototype-illustrated-trunk",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "painted-crown-fork",
+      "castShadow": true,
+      "receiveShadow": true
+    },
+    {
+      "name": "painted-bird-perch",
+      "castShadow": true,
+      "receiveShadow": true
+    }
+  ],
+  "coveredRed": 620,
+  "uncoveredRed": 2628,
+  "occludedCharacterPixels": 2008,
+  "opaqueMaterials": true,
+  "treeMaterialCount": 16,
+  "opacityChangedPixels": 0,
+  "treeShadow": 352758086,
+  "restoredShadow": 352758086,
+  "playerAlphaShader": false,
+  "movedShadow": 2187075429,
+  "orderedStipple": false,
+  "leafShadowPrograms": 4,
+  "grassLit": true,
+  "receiverFlags": [
+    {
+      "name": "painted-ground",
+      "receiveShadow": true
+    },
+    {
+      "name": "flora-grass",
+      "receiveShadow": true
+    },
+    {
+      "name": "flora-bush",
+      "receiveShadow": true
+    },
+    {
+      "name": "pond-water",
+      "receiveShadow": true
+    }
+  ],
+  "calls": 77,
+  "span": 9.503442126794761
+}

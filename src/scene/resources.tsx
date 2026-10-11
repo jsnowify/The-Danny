@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useMemo } from "react";
+import { useLoader } from "@react-three/fiber";
 import {
   BufferAttribute,
   CanvasTexture,
-  CylinderGeometry,
   PlaneGeometry,
   MeshStandardMaterial,
   MeshBasicMaterial,
@@ -10,12 +10,12 @@ import {
   RGBADepthPacking,
   SRGBColorSpace,
   RepeatWrapping,
-  SphereGeometry,
   DoubleSide,
+  TextureLoader,
+  type Texture,
 } from "three";
-import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import type { BufferGeometry } from "three";
-import { applyWindShader, windMaterial } from "../shaders/wind";
+import { applyWindShader, grassMaterial, windMaterial } from "../shaders/wind";
 import { outlineMaterial } from "../shaders/outline";
 import { paintTexture } from "../textures/paintTexture";
 import { memoryArt } from "../textures/memoryArt";
@@ -25,11 +25,13 @@ import { createApprovedAssets } from "../visual/approved/assets";
 import { createForestPaint } from "../visual/forestPaint";
 import { curvedStem, forestCrown } from "./forestGeometry";
 import { landscapePaint } from "../visual/landscapePaint";
-import { heroClearance } from "../visual/heroClearance";
 import { memoryCurrent } from "../visual/memoryCurrent";
 import { createPropPaint } from "../visual/propPaint";
-import { brushShrub, illustratedStone, paintedLily } from "./propGeometry";
-import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
+import { brushShrub } from "./propGeometry";
+import { forestProps } from "../visual/forestProps";
+import { groundHeight } from "../utils/random";
+import type { Mesh } from "three";
+import { forestCanopies } from "../visual/forestCanopies";
 
 function flex(
   geometry: BufferGeometry,
@@ -51,13 +53,9 @@ function flex(
   geometry.setAttribute("aCanopy", new BufferAttribute(canopy, 1));
   return geometry;
 }
-function combine(geometries: BufferGeometry[]) {
-  const merged = mergeGeometries(geometries)!;
-  geometries.forEach((g) => g.dispose());
-  return merged;
-}
-function buildResources() {
-  const approved = createApprovedAssets();
+function buildResources(source: Texture) {
+  const canopies = forestCanopies(source.image);
+  const approved = createApprovedAssets(canopies);
   approved.root.name = "approved-pass-1-foundation";
   approved.root.position.set(0.35, 0, 1.6);
   approved.ground.visible = false; // Same painted map extends over the walkable world.
@@ -72,46 +70,29 @@ function buildResources() {
   const forest = createForestPaint(
     approved.trees,
     approved.memory.material as MeshStandardMaterial,
+    canopies,
   );
-  const clearingClearance = heroClearance(approved.trees, forest.depth);
   const current = memoryCurrent(approved.root);
   const props = createPropPaint(approved.root);
-  const stem = new CylinderGeometry(0.025, 0.04, 0.6, 4);
-  stem.translate(0, 0.3, 0);
-  const petals = Array.from({ length: 5 }, (_, i) => {
-    const g = new SphereGeometry(0.12, 12, 7);
-    g.scale(1, 0.45, 1);
-    g.translate(Math.cos(i * 1.256) * 0.12, 0.65, Math.sin(i * 1.256) * 0.12);
-    return g;
-  });
-  const mushroomStem = new CylinderGeometry(0.13, 0.17, 0.5, 7);
-  mushroomStem.translate(0, 0.25, 0);
-  const cap = new SphereGeometry(0.42, 12, 7, 0, Math.PI * 2, 0, Math.PI / 2);
-  cap.scale(1, 0.7, 1);
-  cap.translate(0, 0.52, 0);
-  const reed = grassStrokes().scale(0.28, 1.8, 0.28);
-  const log = new CylinderGeometry(0.5, 0.5, 1.8, 14);
-  log.rotateZ(Math.PI / 2);
-  log.translate(0, 0.22, 0);
-  const lily = paintedLily();
+  const drawings = forestProps();
+  for (let i = 1; i <= 3; i++) {
+    const rock = approved.root.getObjectByName(`prototype-rock-${i}`) as Mesh;
+    rock.geometry = drawings.geometries.rock;
+    rock.material = drawings.materials.rock;
+    rock.rotation.set(0, 0, 0);
+    rock.position.y =
+      groundHeight(rock.position.x + 0.35, rock.position.z + 1.6) + 0.015;
+  }
   const geometries = {
-    grass: flex(grassStrokes(), 1, 1),
+    grass: flex(grassStrokes(true), 1, 1),
     pine: flex(forestCrown(1), 0.08, 0, true),
     crown: flex(forestCrown(0), 0.06, 0, true),
     pineFar: flex(forestCrown(1, true), 0.08, 0, true),
     crownFar: flex(forestCrown(0, true), 0.06, 0, true),
     leaf: flex(paintedLeaf(), 0.18, 0, true),
-    trunk: flex(trunk, 0, 0, true),
-    bush: flex(brushShrub(), 0.2),
-    flower: flex(combine([stem, ...petals]), 0.6),
-    mushroom: flex(combine([mushroomStem, cap]), 0.15),
-    rock: flex(illustratedStone(), 0),
-    log: flex(log, 0),
-    reed: flex(reed, 0.28),
-    lily: flex(lily, 0),
-    benchSeat: new RoundedBoxGeometry(2.3, 0.15, 0.65, 2, 0.035),
-    benchBack: new RoundedBoxGeometry(2.3, 0.45, 0.13, 2, 0.035),
-    benchLeg: new RoundedBoxGeometry(0.15, 0.55, 0.5, 2, 0.028),
+    trunk: flex(trunk, 0),
+    bush: flex(brushShrub(), 0.3, 1),
+    ...drawings.geometries,
   };
   const groundTexture = (approved.ground.material as MeshStandardMaterial).map!;
   const landscape = landscapePaint(
@@ -129,7 +110,7 @@ function buildResources() {
   const leafTexture = new CanvasTexture(paintTexture("leaf"));
   leafTexture.colorSpace = SRGBColorSpace;
   const materials = {
-    foliage: windMaterial(),
+    foliage: grassMaterial(),
     leaves: windMaterial(leafTexture),
     depth: applyWindShader(
       new MeshDepthMaterial({
@@ -154,9 +135,10 @@ function buildResources() {
     lease: 0,
     approved,
     forest,
-    clearingClearance,
+    canopies,
     current,
     props,
+    drawings,
     landscape,
     geometries,
     materials,
@@ -173,7 +155,8 @@ export type Assets = ReturnType<typeof buildResources>;
 export const AssetsContext = createContext<Assets | null>(null);
 export const useAssets = () => useContext(AssetsContext)!;
 export function useResources() {
-  const assets = useMemo(buildResources, []);
+  const source = useLoader(TextureLoader, "/art/forest/summer-canopy.png");
+  const assets = useMemo(() => buildResources(source), [source]);
   useEffect(() => {
     const lease = ++assets.lease;
     return () =>
@@ -197,11 +180,12 @@ export function useResources() {
         assets.pictureGeometry.dispose();
         assets.particleGeometry.dispose();
         assets.forest.dispose();
-        assets.clearingClearance.dispose();
         assets.current.dispose();
         assets.props.dispose();
+        assets.drawings.dispose();
         assets.landscape.dispose();
         assets.approved.dispose();
+        assets.canopies.forEach((map) => map.dispose());
       });
   }, [assets]);
   return assets;

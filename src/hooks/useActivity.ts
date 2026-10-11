@@ -24,12 +24,15 @@ export function useActivity() {
         !s.journalOpen &&
         !s.fieldGuideOpen &&
         !s.oscarDialogue &&
+        !s.companionDialogue &&
+        !s.seatedWithOscar &&
         !document.hidden
       );
     };
     const update = () => {
       const now = performance.now();
-      if (traveler.speed > 0.1 || input.held) clock.reset(now);
+      if ((traveler.speed > 0.1 && !traveler.autonomous) || input.held)
+        clock.reset(now);
       const stage = clock.tick(now, active());
       idleRuntime.elapsed = clock.elapsed;
       const s = useStore.getState();

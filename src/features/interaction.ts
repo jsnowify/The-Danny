@@ -10,6 +10,9 @@ export function primaryAction(): PrimaryAction | null {
     s.paused ||
     s.fieldGuideOpen ||
     s.journalOpen ||
+    s.oscarDialogue ||
+    s.companionDialogue ||
+    s.seatedWithOscar ||
     s.dedicationOpen
   )
     return null;

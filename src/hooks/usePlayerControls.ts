@@ -53,6 +53,15 @@ export function usePlayerControls() {
   useEffect(() => {
     const canvas = gl.domElement;
     let pointerId: number | null = null;
+    let lastTap = { time: -1000, x: 0, y: 0 };
+    let tapStart = { time: 0, x: 0, y: 0 };
+    let handledDoubleTap = false;
+    const toggleView = () => {
+      input.wideView = !input.wideView;
+      input.held = false;
+      input.intent = 0;
+      lastTap.time = -1000;
+    };
     const measure = () => (scratch.rect = canvas.getBoundingClientRect());
     const observer = new ResizeObserver(measure);
     observer.observe(canvas);
@@ -71,6 +80,8 @@ export function usePlayerControls() {
         s.journalOpen ||
         s.fieldGuideOpen ||
         s.oscarDialogue ||
+        s.companionDialogue ||
+        s.seatedWithOscar ||
         s.idleStage === 300 ||
         e.button > 0 ||
         pointerId !== null
@@ -79,7 +90,13 @@ export function usePlayerControls() {
       e.preventDefault();
       canvas.focus();
       pointerId = e.pointerId;
-      input.held = true;
+      tapStart = { time: e.timeStamp, x: e.clientX, y: e.clientY };
+      const doubleTap =
+        tapStart.time - lastTap.time < 320 &&
+        Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 24;
+      handledDoubleTap = doubleTap;
+      if (doubleTap) toggleView();
+      else input.held = true;
       aim(e);
       canvas.setPointerCapture(e.pointerId);
     };
@@ -88,6 +105,15 @@ export function usePlayerControls() {
     };
     const up = (e: PointerEvent) => {
       if (e.pointerId !== pointerId) return;
+      const now = e.timeStamp;
+      if (
+        e.type === "pointerup" &&
+        now - tapStart.time < 230 &&
+        Math.hypot(e.clientX - tapStart.x, e.clientY - tapStart.y) < 16 &&
+        input.held
+      ) {
+        lastTap = { time: now, x: e.clientX, y: e.clientY };
+      }
       input.held = false;
       input.intent = 0;
       pointerId = null;
@@ -98,12 +124,35 @@ export function usePlayerControls() {
       input.held = false;
       input.intent = 0;
       pointerId = null;
+      lastTap.time = -1000;
+    };
+    const lostCapture = (e: PointerEvent) => {
+      if (pointerId === e.pointerId) blur();
+    };
+    const doubleClick = (e: MouseEvent) => {
+      const s = useStore.getState();
+      if (
+        s.phase !== "explore" ||
+        s.paused ||
+        s.dedicationOpen ||
+        s.journalOpen ||
+        s.fieldGuideOpen ||
+        s.oscarDialogue ||
+        s.companionDialogue ||
+        s.seatedWithOscar ||
+        s.idleStage === 300
+      )
+        return;
+      e.preventDefault();
+      if (!handledDoubleTap) toggleView();
+      handledDoubleTap = false;
     };
     canvas.addEventListener("pointerdown", down);
     canvas.addEventListener("pointermove", move);
     canvas.addEventListener("pointerup", up);
     canvas.addEventListener("pointercancel", up);
-    canvas.addEventListener("lostpointercapture", blur);
+    canvas.addEventListener("lostpointercapture", lostCapture);
+    canvas.addEventListener("dblclick", doubleClick);
     window.addEventListener("blur", blur);
     window.addEventListener("resize", measure);
     return () => {
@@ -111,7 +160,8 @@ export function usePlayerControls() {
       canvas.removeEventListener("pointermove", move);
       canvas.removeEventListener("pointerup", up);
       canvas.removeEventListener("pointercancel", up);
-      canvas.removeEventListener("lostpointercapture", blur);
+      canvas.removeEventListener("lostpointercapture", lostCapture);
+      canvas.removeEventListener("dblclick", doubleClick);
       window.removeEventListener("blur", blur);
       window.removeEventListener("resize", measure);
       observer.disconnect();

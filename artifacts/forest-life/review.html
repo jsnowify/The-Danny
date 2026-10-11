@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Danny — birds and blue flowers</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 32px 24px;
+        background: #e8eadc;
+        color: #394c37;
+        font:
+          16px/1.65 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1100px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(34px, 5vw, 54px);
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 29px;
+        margin-top: 32px;
+      }
+      p {
+        max-width: 740px;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .studies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin: 28px 0;
+      }
+      .study {
+        padding: 22px;
+        background: #f5f1df;
+        border-radius: 20px;
+      }
+      .study h2 {
+        margin: 0;
+      }
+      canvas {
+        display: block;
+        width: min(100%, 300px);
+        margin: 0 auto;
+        aspect-ratio: 1;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+      button {
+        border: 1px solid #a3ad91;
+        border-radius: 24px;
+        background: #f5f1df;
+        color: inherit;
+        padding: 8px 16px;
+        font: inherit;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      button[aria-pressed="true"] {
+        background: #496044;
+        color: #fff9e7;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #ab7a41;
+        outline-offset: 3px;
+      }
+      .caption {
+        font-size: 13px;
+        opacity: 0.8;
+      }
+      img,
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        margin: 18px 0;
+      }
+      @media (max-width: 680px) {
+        .studies {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">The Danny · new life in the forest</div>
+      <h1>Birdsong &amp; a field of blue</h1>
+      <p>
+        Small painted birds rest on the tree branches. Blue flowers gather
+        beside the clearing and fill the Wildflower Meadow, inspired by Himmel's
+        Blue Moon Weed in Frieren.
+      </p>
+      <p><a href="http://localhost:5173/">Explore the updated forest ↗</a></p>
+      <div class="studies">
+        <section class="study">
+          <h2>Perched birds</h2>
+          <canvas
+            id="bird"
+            width="384"
+            height="384"
+            role="img"
+            aria-label="A painted bird with cream eyes, ink outlines and small movements"
+          ></canvas>
+          <div class="controls" aria-label="Bird colors">
+            <button type="button" data-coat="0" aria-pressed="true">
+              Orange
+            </button>
+            <button type="button" data-coat="1" aria-pressed="false">
+              Blue
+            </button>
+            <button type="button" data-coat="2" aria-pressed="false">
+              Cream
+            </button>
+          </div>
+          <button type="button" id="motion" aria-pressed="false">
+            Pause animation
+          </button>
+          <p class="caption">
+            Blinking, looking around and flicking their tails while their feet
+            stay on the branches.
+          </p>
+        </section>
+        <section class="study">
+          <h2>Blue Moon flowers</h2>
+          <canvas
+            id="flowers"
+            width="384"
+            height="384"
+            role="img"
+            aria-label="Five blue petals with pale edges, golden centers and painted green leaves"
+          ></canvas>
+          <div class="controls" aria-label="Flower colors">
+            <button type="button" data-flower="0" aria-pressed="true">
+              Blue
+            </button>
+            <button type="button" data-flower="1" aria-pressed="false">
+              Periwinkle
+            </button>
+            <button type="button" data-flower="2" aria-pressed="false">
+              Pale blue
+            </button>
+          </div>
+          <p class="caption">
+            A carpet of flowers with varied heights and a gentle breeze. Follow
+            the path into Wildflower Meadow to find the larger field.
+          </p>
+        </section>
+      </div>
+      <h2>Beside the clearing</h2>
+      <img
+        src="clearing.png"
+        width="1366"
+        height="768"
+        alt="Illustrated birds perch on the orange trees and memory tree, with a blue flower field beside the red traveler"
+      />
+      <h2>Walking through the meadow</h2>
+      <img
+        src="meadow.png"
+        width="1366"
+        height="768"
+        alt="The red traveler stands in a dense field of blue flowers in Wildflower Meadow"
+        loading="lazy"
+      />
+      <video
+        src="meadow-walk.mp4"
+        controls
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="meadow.png"
+        aria-label="Walking through the blue flower field"
+      ></video>
+      <p class="caption">
+        Flower inspiration:
+        <a href="https://frieren-anime.jp/story/ep02/">Frieren, episode 2</a>.
+      </p>
+    </main>
+    <script>
+      const birdCanvas = document.getElementById("bird"),
+        birdContext = birdCanvas.getContext("2d");
+      const flowerCanvas = document.getElementById("flowers"),
+        flowerContext = flowerCanvas.getContext("2d");
+      const atlas = new Image();
+      atlas.src = "bird-atlas.png";
+      const flowers = [0, 1, 2].map((index) => {
+        const image = new Image();
+        image.src = `flowers-${index}.png`;
+        return image;
+      });
+      let coat = 0,
+        variant = 0,
+        previous = 0,
+        elapsed = 0;
+      let paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function motionLabel() {
+        const button = document.getElementById("motion");
+        button.textContent = paused ? "Play animation" : "Pause animation";
+        button.setAttribute("aria-pressed", String(paused));
+      }
+      motionLabel();
+      document.getElementById("motion").addEventListener("click", () => {
+        paused = !paused;
+        motionLabel();
+      });
+      for (const type of ["coat", "flower"])
+        document.querySelectorAll(`[data-${type}]`).forEach((button) =>
+          button.addEventListener("click", () => {
+            if (type === "coat") coat = Number(button.dataset.coat);
+            else variant = Number(button.dataset.flower);
+            document
+              .querySelectorAll(`[data-${type}]`)
+              .forEach((other) =>
+                other.setAttribute("aria-pressed", String(button === other)),
+              );
+          }),
+        );
+      function draw(time) {
+        if (previous && !paused && !document.hidden)
+          elapsed += Math.min(0.1, (time - previous) / 1000);
+        previous = time;
+        const t = elapsed % 7,
+          frame =
+            t > 6.86
+              ? 5
+              : t > 6.4
+                ? 4
+                : t > 5.6
+                  ? 3
+                  : t > 4.85
+                    ? 2
+                    : t > 4.2
+                      ? 1
+                      : 0;
+        birdContext.clearRect(0, 0, 384, 384);
+        flowerContext.clearRect(0, 0, 384, 384);
+        if (atlas.complete && atlas.naturalWidth)
+          birdContext.drawImage(
+            atlas,
+            frame * 128,
+            coat * 128,
+            128,
+            128,
+            0,
+            0,
+            384,
+            384,
+          );
+        if (flowers[variant].complete && flowers[variant].naturalWidth)
+          flowerContext.drawImage(flowers[variant], 0, 0);
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>

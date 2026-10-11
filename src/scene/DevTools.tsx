@@ -13,7 +13,6 @@ import {
   WORLD_CALIBRATION_EVENT,
 } from "./calibration";
 import { DevVisualizations } from "./DevVisualizations";
-import { windUniforms } from "../shaders/wind";
 import { groundUniforms } from "../shaders/ground";
 import type { WorldData } from "./world";
 const metricsElement = { current: null as HTMLDivElement | null };
@@ -132,12 +131,6 @@ export default function DevTools({ world }: { world: WorldData }) {
           "Show collision radii": false,
           "Show interaction radii": false,
           "Show clearing boundary": false,
-          "Canopy obstruction fade": {
-            value: 0.68,
-            min: 0,
-            max: 1,
-            step: 0.05,
-          },
         },
         { collapsed: true },
       ),
@@ -233,7 +226,6 @@ export default function DevTools({ world }: { world: WorldData }) {
       focusDamping: values["Focus damping"],
       screenOffsetY: values["Player screen offset Y"],
     });
-    windUniforms.uObstructionFade.value = values["Canopy obstruction fade"];
   }, [values]);
   useEffect(() => {
     if (!worldCalibration) return;
@@ -286,7 +278,6 @@ export default function DevTools({ world }: { world: WorldData }) {
       atmosphere.sunColor = "#fff0d6";
       atmosphere.sunX = -15;
       atmosphere.sunZ = 12;
-      windUniforms.uObstructionFade.value = 0.68;
       atmosphere.wind = 0.6;
       atmosphere.light = atmosphere.fog = 1;
     },

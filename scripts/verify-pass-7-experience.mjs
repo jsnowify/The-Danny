@@ -3,7 +3,11 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { chromium } from "@playwright/test";
 
-const directory = "artifacts/visual-reconstruction/pass-7/verification";
+const directory =
+  process.argv.find((arg) => arg.startsWith("--artifact-dir="))?.slice(15) ??
+  "artifacts/visual-reconstruction/pass-7/verification";
+if (!/^artifacts\/[a-z0-9/_-]+$/i.test(directory))
+  throw new Error("Invalid artifact directory");
 const uiOnly = process.argv.includes("--ui-only");
 const motionOnly = process.argv.includes("--motion-only");
 const productionOnly = process.argv.includes("--production-only");

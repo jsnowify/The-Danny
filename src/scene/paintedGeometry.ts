@@ -7,28 +7,39 @@ import {
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
-// Curved, tapered brush marks. Each blade has three strip segments; the whole
-// tuft is a single shared instanced geometry.
-export function grassStrokes() {
-  const blades = Array.from({ length: 4 }, (_, i) => {
+// A fanned brush clump with unequal curved blades. Six strip segments bend
+// smoothly; the whole tuft is a single shared instanced geometry.
+export function grassStrokes(short = false) {
+  const heights = short
+    ? [0.35, 0.67, 0.84, 0.48, 0.72]
+    : [0.38, 0.72, 0.96, 0.57, 0.83, 0.46];
+  const blades = heights.map((height, i) => {
     const g = new BufferGeometry();
     const points: number[] = [],
       uv: number[] = [],
       indices: number[] = [];
-    for (let j = 0; j <= 3; j++) {
-      const t = j / 3,
-        center = (i - 1.5) * 0.12 + t * t * (0.12 + i * 0.04),
-        width = 0.06 * (1 - t) + 0.002;
+    for (let j = 0; j <= 6; j++) {
+      const t = j / 6,
+        center = short
+          ? (i - 2) * 0.13 +
+            t * t * ((i - 2) * 0.095 + Math.sin(i * 1.7) * 0.09)
+          : (i - 2.5) * 0.105 + t * t * (0.17 + Math.sin(i * 1.7) * 0.18),
+        width =
+          ((short ? 0.067 : 0.047) + (i % 3) * 0.014) *
+            Math.pow(1 - t, 0.82) *
+            (1 + Math.sin(t * Math.PI) * 0.24) +
+          0.0005;
       points.push(
         center - width,
-        t * (0.62 + i * 0.11),
-        0,
+        t * height,
+        Math.sin(i * 2) * 0.06 + t * t * 0.025,
         center + width,
-        t * (0.62 + i * 0.11),
-        0,
+        t * height,
+        Math.sin(i * 2) * 0.06 + t * t * 0.025,
       );
-      uv.push(0, t, 1, t);
-      if (j < 3)
+      // A blade ID gives each stroke its own pigment and bristle marks.
+      uv.push(i, t, i + 0.95, t);
+      if (j < 6)
         indices.push(
           j * 2,
           j * 2 + 1,
@@ -42,7 +53,7 @@ export function grassStrokes() {
     g.setAttribute("uv", new Float32BufferAttribute(uv, 2));
     g.setIndex(indices);
     g.computeVertexNormals();
-    g.rotateY(i * 0.64);
+    g.rotateY(Math.sin(i * 1.8) * 0.18);
     return g;
   });
   const merged = mergeGeometries(blades)!;

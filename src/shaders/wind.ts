@@ -4,42 +4,39 @@ import {
   MeshStandardMaterial,
   MeshDepthMaterial,
   Vector2,
-  Vector3,
   type Texture,
 } from "three";
 import { breeze, breezeGLSL } from "../scene/breeze";
+import { forestShade, forestShadeGLSL } from "../visual/forestShade";
+import { treeContact } from "../features/forestLife/treeContact";
 export const windUniforms = {
   uTime: { value: 0 },
   uWind: { value: 0.6 },
-  uObstructionFade: { value: 0.68 },
   uPlayer: { value: new Vector2() },
-  uCamera: { value: new Vector3() },
-  uViewRay: { value: new Vector3() },
-  uParallel: { value: 1 },
+  uPlayerDirection: { value: new Vector2(0, 1) },
+  uBrushMotion: { value: 1 },
+  uContactTime: { value: 0 },
   uPlayerHeight: { value: 0.8 },
   uRevivalRadius: { value: 0 },
   uWindDirection: { value: breeze.direction },
   uTrail: { value: breeze.trail },
+  uTreeImpacts: { value: treeContact.marks },
 };
 
 export function applyWindShader<
   T extends MeshStandardMaterial | MeshBasicMaterial | MeshDepthMaterial,
->(
-  material: T,
-  revival = true,
-  dormantSaturation = 0.18,
-  clearTraveler = false,
-) {
+>(material: T, revival = true, dormantSaturation = 0.18) {
+  // Wind and contact move geometry. They never change a tree's opacity or
+  // carve a player-shaped opening into leaves, branches or bark.
   material.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, windUniforms);
     shader.vertexShader =
       `
-      uniform float uTime, uWind, uPlayerHeight;
-      uniform vec2 uPlayer, uWindDirection; uniform vec4 uTrail[4];
-      uniform vec3 uCamera, uViewRay; uniform float uParallel;
+      uniform float uTime, uWind, uPlayerHeight, uContactTime, uBrushMotion;
+      uniform vec2 uPlayer, uWindDirection, uPlayerDirection; uniform vec4 uTrail[${breeze.trail.length}];
+      uniform vec4 uTreeImpacts[8];
       attribute float aFlex, aGrass, aCanopy;
-      varying float vOcclusion, vForestDistance;
-      ${clearTraveler ? "varying vec3 vTreePosition; varying float vTreeMask;" : ""}
+      varying float vForestDistance;
       ${breezeGLSL}
     ` + shader.vertexShader;
     shader.vertexShader = shader.vertexShader.replace(
@@ -53,18 +50,20 @@ export function applyWindShader<
       #endif
       base=(modelMatrix*vec4(base,1.0)).xyz;
       center=(modelMatrix*vec4(center,1.0)).xyz;
-      ${clearTraveler ? "vTreePosition=base; vTreeMask=aCanopy;" : ""}
       vForestDistance=length(base.xz);
       float distanceToPlayer=distance(base.xz,uPlayer);
-      vec3 player=vec3(uPlayer.x,uPlayerHeight,uPlayer.y);
-      vec3 ray=mix(uCamera-player,uViewRay,uParallel);
-      // Test the actual foliage surface, including tall tapered crowns whose
-      // instance origin lies below the part crossing the traveler.
-      float along=clamp(dot(base-player,ray)/max(dot(ray,ray),.001),0.0,1.0);
-      float obstruction=length(base-(player+along*ray));
-      vOcclusion=aCanopy*(1.0-smoothstep(.65,2.1,obstruction))*smoothstep(.02,.14,along)*(1.0-smoothstep(.85,1.0,along));
       float lod=1.0-smoothstep(18.0,32.0,distanceToPlayer);
       transformed*=mix(1.0,lod,aGrass);
+      float weight=mix(aFlex,aFlex*aFlex,aGrass);
+      // A damped, local impulse only follows an actual solid-trunk collision.
+      // Grounded stems have zero flex at their roots; shadow geometry agrees.
+      if (aGrass<.5 && uBrushMotion>.5) {
+        for(int impact=0;impact<8;impact++) {
+          float age=uContactTime-uTreeImpacts[impact].z;
+          if(age>=0.0 && age<1.6 && distance(center.xz,uTreeImpacts[impact].xy)<.12)
+            transformed.x+=sin(age*15.0)*exp(-age*4.0)*uTreeImpacts[impact].w*aFlex*.38;
+        }
+      }
       if (uWind>.001) {
       float flowing=breezeAt(center.xz,uTime);
       float flutter=sin(uTime*3.1+center.x*.73+center.z*.51)*.018;
@@ -74,65 +73,43 @@ export function applyWindShader<
       #endif
       // Quadratic grass weighting pins every root. Trees retain their small
       // authored flex: heavy stems barely move while outer foliage yields.
-      float weight=mix(aFlex,aFlex*aFlex,aGrass);
-      transformed+=windAxis*weight*uWind*(flowing*.13+flutter*aGrass);
-      if (aGrass>.5) {
-      vec2 disturbance=vec2(0.0);
-      for(int mark=0;mark<4;mark++) {
-        float age=max(0.0,uTime-uTrail[mark].z);
+      // Nearby clumps share a travelling gust, while individual blades flutter
+      // quietly. The old near-constant offset barely changed their silhouette.
+      float meadowWave=(flowing-.48)*.5+sin(uTime*1.25-center.x*.21-center.z*.18)*.20+flutter*.65;
+      float bend=mix(flowing*.13,meadowWave,aGrass)*uWind;
+      transformed+=windAxis*weight*bend;
+      transformed.y-=aGrass*weight*bend*bend*.18;
+      }
+      // Twelve stamps cover at most 5.4 units of the resolved walking trail.
+      // Distant clumps skip the contact work entirely.
+      if (length(center.xz-uPlayer)<7.0 && (aGrass>.5 || (aCanopy>.5 && base.y<uPlayerHeight+.5))) {
+      vec2 bodyAway=center.xz-uPlayer;
+      float bodyDistance=length(bodyAway);
+      vec2 direction=bodyDistance>.025 ? bodyAway/bodyDistance : vec2(uPlayerDirection.y,-uPlayerDirection.x);
+      // Live body contact still parts vegetation when reduced motion stops wind.
+      vec2 disturbance=direction*(1.0-smoothstep(.10,1.0,bodyDistance))*.43;
+      for(int mark=0;mark<${breeze.trail.length};mark++) {
+        float age=max(0.0,uContactTime-uTrail[mark].z);
         vec2 away=center.xz-uTrail[mark].xy;
-        float nearby=1.0-smoothstep(.15,.85,length(away));
-        disturbance+=away/max(.15,length(away))*nearby*exp(-age*3.0)*uTrail[mark].w*.085;
+        float nearby=1.0-smoothstep(.10,1.0,length(away));
+        float recovery=exp(-age*4.0)*(1.0-smoothstep(.85,1.2,age));
+        vec2 wake=away/max(.025,length(away))*nearby*recovery*uTrail[mark].w*.43*uBrushMotion;
+        // Overlapping footsteps cannot stack into an oversized bend.
+        if(dot(wake,wake)>dot(disturbance,disturbance)) disturbance=wake;
       }
       vec3 brushing=vec3(disturbance.x,0.0,disturbance.y);
       #ifdef USE_INSTANCING
-        brushing=transpose(mat3(instanceMatrix))*brushing;
+        vec3 scaleSquared=vec3(dot(instanceMatrix[0].xyz,instanceMatrix[0].xyz),dot(instanceMatrix[1].xyz,instanceMatrix[1].xyz),dot(instanceMatrix[2].xyz,instanceMatrix[2].xyz));
+        brushing=transpose(mat3(instanceMatrix))*brushing/max(scaleSquared,vec3(.001));
       #endif
-      transformed+=brushing*weight*aGrass*step(.001,uWind);
-      }
+      transformed+=brushing*weight*mix(.22,1.0,aGrass);
+      transformed.y-=aGrass*weight*length(disturbance)*.32;
       }
     `,
     );
     shader.fragmentShader =
-      `varying float vOcclusion, vForestDistance; uniform float uObstructionFade, uRevivalRadius;\n` +
-      (clearTraveler
-        ? `varying vec3 vTreePosition; varying float vTreeMask;
-        uniform vec2 uPlayer; uniform vec3 uCamera, uViewRay;
-        uniform float uPlayerHeight, uParallel;\n`
-        : "") +
+      `varying float vForestDistance; uniform float uRevivalRadius;\n` +
       shader.fragmentShader;
-    shader.fragmentShader = shader.fragmentShader.replace(
-      "#include <alphatest_fragment>",
-      `
-      #include <alphatest_fragment>
-      // A stable ordered pattern fades only trees crossing the camera/player
-      // segment. The same shader on the cream hull prevents a ghost outline.
-      vec2 cell=mod(floor(gl_FragCoord.xy),4.0);
-      float threshold=fract(dot(cell,vec2(.25,.5625))+.03125);
-      float obstructionFade=vOcclusion*uObstructionFade;
-      ${
-        clearTraveler
-          ? `
-        // Resolve the whole traveler's silhouette per fragment. Large curved
-        // crown triangles cannot reliably interpolate the old vertex-only fade.
-        vec3 treePlayer=vec3(uPlayer.x,uPlayerHeight,uPlayer.y);
-        vec3 treeRay=normalize(mix(uCamera-treePlayer,uViewRay,uParallel));
-        vec3 treeUp=normalize(vec3(0.0,1.0,0.0)-treeRay*treeRay.y);
-        vec3 treeRight=normalize(cross(treeUp,treeRay));
-        vec3 relative=vTreePosition-treePlayer;
-        float vertical=dot(relative,treeUp);
-        // The approved hat leans toward the viewer, extending its projected
-        // height beyond its world-space Y extent.
-        vec2 gap=vec2(dot(relative,treeRight),vertical-clamp(vertical,-.40,1.20));
-        float clearance=vTreeMask*(1.0-smoothstep(.48,.86,length(gap)))
-          *smoothstep(.025,.16,dot(relative,treeRay));
-        obstructionFade=max(obstructionFade,clearance*.99);
-      `
-          : ""
-      }
-      if(threshold<obstructionFade) discard;
-    `,
-    );
     if (revival)
       shader.fragmentShader = shader.fragmentShader.replace(
         "#include <color_fragment>",
@@ -146,7 +123,7 @@ export function applyWindShader<
       );
   };
   material.customProgramCacheKey = () =>
-    `the-danny-painted-wind-v5-${revival}-${dormantSaturation}-${clearTraveler}`;
+    `the-danny-painted-wind-v10-opaque-trees-${revival}-${dormantSaturation}`;
   return material;
 }
 export function windMaterial(map?: Texture) {
@@ -159,4 +136,64 @@ export function windMaterial(map?: Texture) {
       side: DoubleSide,
     }),
   );
+}
+
+/** Matte blades share the floor's real sunlight and cool canopy shadows. */
+export function grassMaterial() {
+  const material = applyWindShader(
+    new MeshStandardMaterial({
+      color: "#ffffff",
+      side: DoubleSide,
+      toneMapped: false,
+      roughness: 1,
+      metalness: 0,
+    }),
+    true,
+    0.96,
+  );
+  const compile = material.onBeforeCompile.bind(material);
+  material.onBeforeCompile = (shader, renderer) => {
+    compile(shader, renderer);
+    Object.assign(shader.uniforms, forestShade);
+    shader.vertexShader =
+      "varying vec2 vBladeUV, vGrassWorld;\n" + shader.vertexShader;
+    shader.vertexShader = shader.vertexShader.replace(
+      "#include <begin_vertex>",
+      `#include <begin_vertex>
+      vBladeUV=uv;
+      vec4 grassPoint=vec4(position,1.0);
+      #ifdef USE_INSTANCING
+        grassPoint=instanceMatrix*grassPoint;
+      #endif
+      vGrassWorld=(modelMatrix*grassPoint).xz;`,
+    );
+    shader.fragmentShader =
+      "varying vec2 vBladeUV, vGrassWorld;\n" +
+      forestShadeGLSL +
+      shader.fragmentShader;
+    shader.fragmentShader = shader.fragmentShader.replace(
+      "#include <color_fragment>",
+      `
+      #include <color_fragment>
+      vec3 root=vec3(.055,.22,.12);
+      float blade=smoothstep(0.0,.85,vBladeUV.y);
+      float bladePigment=fract(sin(floor(vBladeUV.x)*13.71)*43758.5453);
+      vec3 tip=diffuseColor.rgb*mix(vec3(.82,.95,.80),vec3(1.04,1.02,.91),bladePigment);
+      diffuseColor.rgb=mix(root,tip,mix(.32,1.0,blade));
+      float crease=smoothstep(.41,.47,fract(vBladeUV.x))*(1.0-smoothstep(.47,.52,fract(vBladeUV.x)));
+      diffuseColor.rgb*=1.0+crease*.035;
+      float shade=forestShadow(vGrassWorld);
+      diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*vec3(.32,.67,.73),shade*.45);
+    `,
+    );
+    shader.fragmentShader = shader.fragmentShader.replace(
+      "#include <normal_fragment_maps>",
+      `#include <normal_fragment_maps>
+      // Upright painted strokes gather sky light like a rounded grass tuft.
+      normal=normalize(mix(normal,normalize(mat3(viewMatrix)*vec3(0.0,1.0,0.0)),.55));`,
+    );
+  };
+  material.customProgramCacheKey = () =>
+    "the-danny-sunlit-forest-grass-v6-lit-contact";
+  return material;
 }

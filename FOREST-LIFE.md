@@ -1,0 +1,29 @@
+# Birds and the blue flower fields
+
+The forest now has original painted birds perched in its trees and blue flower fields inspired by Himmel's Blue Moon Weed in [Frieren, episode 2](https://frieren-anime.jp/story/ep02/). The new drawings share the animals' cream details, ink outlines and painted colors.
+
+Three birds perch on the two orange trees and the memory tree in the clearing. Another 33 perches are distributed among the acacia, narra and balete branches. Orange, blue and cream birds blink, turn their heads, open their beaks and flick their tails. Their feet stay on the branches. Mirrored birds render from both sides, and the clearing birds follow the actual tree transforms when the phone layout rearranges the trees.
+
+The flower drawings have five blue petals, pale edges, small golden centers and brushed green leaves. Three color variants and different heights form dense fields beside the clearing and in Wildflower Meadow. The main meadow now spans 44 by 34 world units, over three times its original footprint. Smaller patches spread along the approach and into the east and north. The seeded layout contains 11,349 clusters, with three blossoms per cluster: 838 near the clearing, 6,651 in the main meadow, 611 along the approach, 565 in the east, 518 in the north and 2,166 replacing the former woodland flowers. Flower positions avoid the path, pond, tree trunks, props and story memory locations.
+
+The old cream/yellow flower batch and its round petal geometry have been removed. Former flower locations now produce small patches of the same painted blue blooms. The Memory Tree's 64 ground clusters, branch blossoms and garlands also use this artwork. Its ground flowers retain story growth and contact/recovery physics. Named botanical specimens remain part of the Field Guide.
+
+Walking through flowers now bends their stems away from the traveler and presses them down slightly. Damped springs retain a short wake and return each plant to its resting pose after the body passes. Contact follows the resolved walking path on short substeps; a spatial grid limits simulation to nearby plants and stems recovering from contact. The flower roots remain fixed. Grass also parts around the body and recovers along a bounded twelve-stamp trail. Overlapping steps do not multiply its bend.
+
+The feature uses one instanced bird batch and three instanced flower batches. The birds select frames from a shared transparent atlas. Flowers combine contact displacement with gentle wind, using separate contact attributes for each batch. Camera culling includes room for the full bend, so expanding the field does not render every distant flower. Reduced motion stops drawing animation and flower wind while retaining immediate parting without spring oscillation. Pausing and opening dialogs freeze the flower springs and grass contact clock. Low quality retains the birds and two-thirds of eligible flowers. The artwork is generated locally without downloading images during play.
+
+Edit `src/config/forestLife.ts` for field placement and bird size. `src/features/forestLife/paint.ts` contains the original drawings, `layout.ts` derives the positions and branch perches, `contact.ts` integrates flower contact, and the two scene components render them. The botanical Field Guide and story progression retain their existing content.
+
+The subsequent [grass and petal improvement](GRASS-AND-PETALS.md) adds soft lime-green ground, short darker green tufts and glowing petals released by contact with these flowers. Its latest walking and fade-out preview is at `/artifacts/lime-grass/review.html`.
+
+## Review and verification
+
+Open `/artifacts/forest-life/review.html` through the dev server for the color controls, bird animation, actual forest views and a video of walking through the meadow.
+
+Open `/artifacts/meadow-physics/review.html` for the expanded field, new patches, current contact/recovery views and phone screenshot. Its walking video documents the earlier physics pass; the flower replacement and Memory Tree stages are shown in the latest screenshots.
+
+Run `node scripts/verify-forest-life.mjs` against the dev server on port 5174. It checks deterministic placement, flower root pixels, flat bird drawings and actual visible pixels for all three clearing birds. It also checks animation, pause, reduced motion, walking through the field and phone layouts. Results and screenshots are in `artifacts/forest-life/`.
+
+Run `node scripts/verify-meadow-physics.mjs` against port 5174 for the current meadow. It checks opposing contact directions, spring recovery, distant plants, deterministic expansion, matching responses at 10–120 Hz, actual changed flower and grass pixels, keyboard walking, pause, reduced motion, all three new patches and the phone layout. Add `--no-video` to skip recording the walking frames. Results are in `artifacts/meadow-physics/verification.json`.
+
+The flower replacement passed the build and formatting checks, contact verification and two existing browser tests covering all sixteen plant discoveries/persistence and seeded placement/trunk collisions/LOD. Walking touched 105 flower clusters, and the released stems recovered. The isolated render comparisons changed 2,904 flower pixels and 73 grass pixels at the initial meadow position; they keep the camera, wind, player distance and grass LOD identical. The old flower batch is absent, and all three Memory Tree flower materials use the blue drawings. Memory Tree checks passed at 0, 4 and 8 memories, including doubled growth from 4 to 8, contact/recovery and the phone layout. Results and screenshots are in `artifacts/meadow-physics/memory-flowers-verification.json` and `memory-flowers-*.png`. No browser errors occurred. The original bird/artwork checks and Oscar/pet checks remain recorded in the earlier feature artifacts. Dev runs on port 5173, with verification on 5174.

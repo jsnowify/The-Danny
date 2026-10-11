@@ -16,6 +16,9 @@ const Scene = lazy(() => import("./scene/Scene"));
 const OscarDialogue = lazy(async () => ({
   default: (await import("./ui/OscarDialogue")).OscarDialogue,
 }));
+const PetDialogue = lazy(async () => ({
+  default: (await import("./ui/PetDialogue")).PetDialogue,
+}));
 const Journal = lazy(async () => ({
   default: (await import("./ui/Journal")).Journal,
 }));
@@ -54,16 +57,16 @@ class ForestBoundary extends Component<
 export default function App() {
   useActivity();
   const idleStage = useStore((s) => s.idleStage);
-  const language = useStore((s) => s.language);
   useEffect(() => {
-    document.documentElement.lang = language === "fil" ? "fil" : "en";
-  }, [language]);
+    document.documentElement.lang = "en";
+  }, []);
   const phase = useStore((s) => s.phase),
     paused = useStore((s) => s.paused),
     dedication = useStore((s) => s.dedicationOpen),
     fieldGuide = useStore((s) => s.fieldGuideOpen),
     journal = useStore((s) => s.journalOpen),
     dialogue = useStore((s) => s.oscarDialogue),
+    petDialogue = useStore((s) => s.companionDialogue),
     ready = useStore((s) => s.sceneReady),
     large = useStore((s) => s.settings.largeText),
     reduced = useStore((s) => s.settings.reducedMotion);
@@ -82,6 +85,11 @@ export default function App() {
       const s = useStore.getState();
       if (s.journalOpen) useStore.setState({ journalOpen: false });
       else if (s.oscarDialogue) useStore.setState({ oscarDialogue: false });
+      else if (s.companionDialogue)
+        useStore.setState({
+          companionDialogue: null,
+          companionDialogueStep: 0,
+        });
       else if (s.fieldGuideOpen) useStore.setState({ fieldGuideOpen: false });
       else if (s.phase === "viewer") s.closeMemory();
       else if (s.dedicationOpen) useStore.setState({ dedicationOpen: false });
@@ -99,6 +107,7 @@ export default function App() {
     !fieldGuide &&
     !journal &&
     !dialogue &&
+    !petDialogue &&
     idleStage !== 300 &&
     (phase === "explore" || phase === "hanging");
   return (
@@ -136,6 +145,11 @@ export default function App() {
           {dialogue && (
             <Suspense fallback={null}>
               <OscarDialogue />
+            </Suspense>
+          )}
+          {petDialogue && (
+            <Suspense fallback={null}>
+              <PetDialogue key={petDialogue} id={petDialogue} />
             </Suspense>
           )}
         </>

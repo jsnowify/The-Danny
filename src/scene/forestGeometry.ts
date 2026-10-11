@@ -2,14 +2,15 @@ import {
   BufferAttribute,
   BufferGeometry,
   ExtrudeGeometry,
+  PlaneGeometry,
   Shape,
   ShapeGeometry,
+  Vector3,
 } from "three";
 import {
   mergeGeometries,
   mergeVertices,
 } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { crownShape } from "../visual/approved/geometry";
 import type { PlantId } from "../config/flora";
 
 // Smooth, shallow volumes use the approved bulged illustration construction.
@@ -58,11 +59,33 @@ function volume(
 }
 
 export function forestCrown(variant: number, distant = false) {
-  const g = volume(crownShape(variant), [-2.2, 2.2, 0, 5.4], distant, 0.26);
-  g.translate(0, -2.7, 0).scale(1 / 2.2, 1 / 2.7, 1);
-  if (variant) g.translate(0, 1, 0).scale(1, 0.5, 1);
+  const g = canopyCard(2, distant);
+  g.addGroup(0, g.index!.count, 0);
+  if (variant) g.translate(0, 1.125, 0);
   g.rotateX(-0.34);
-  g.userData.style = "approved-illustrated-crown";
+  g.userData.style = "painted-leafy-canopy";
+  return g;
+}
+
+/** Preserve the painted image's 768:864 aspect; rounded normals catch the sun. */
+function canopyCard(width: number, distant: boolean) {
+  const g = new PlaneGeometry(
+    width,
+    (width * 864) / 768,
+    distant ? 4 : 10,
+    distant ? 4 : 10,
+  );
+  const p = g.getAttribute("position"),
+    uv = g.getAttribute("uv");
+  for (let i = 0; i < p.count; i++)
+    p.setZ(
+      i,
+      Math.sin(uv.getX(i) * Math.PI) *
+        Math.sin(uv.getY(i) * Math.PI) *
+        width *
+        0.14,
+    );
+  g.computeVertexNormals();
   return g;
 }
 
@@ -180,6 +203,18 @@ function profile(id: PlantId) {
   return s;
 }
 
+/** Exposed branch ends shared with perched wildlife. */
+export function illustratedBranchTips(id: PlantId, canopyScale = 1) {
+  const lower = Math.min(
+    ...profile(id)
+      .getPoints(24)
+      .map((point) => point.y),
+  );
+  return [-1, 1].map(
+    (side) => new Vector3(side * 0.72 * canopyScale, lower + 0.23, 0.2),
+  );
+}
+
 export function illustratedSpecies(
   id: PlantId,
   distant: boolean,
@@ -194,8 +229,7 @@ export function illustratedSpecies(
     Math.min(...points.map((p) => p.y)),
     Math.max(...points.map((p) => p.y)),
   ];
-  const crown = volume(shape, bounds, distant, 0.17);
-  crown.scale(canopyScale, 1, 1);
+  // Alpha-painted leaf tips define the silhouette, rather than an oval hull.
   const parts: BufferGeometry[] = [];
   const prepare = (source: BufferGeometry, canopy: boolean) => {
     const g = source.index ? source.toNonIndexed() : source;
@@ -208,7 +242,7 @@ export function illustratedSpecies(
     g.setAttribute("aGrass", new BufferAttribute(new Float32Array(p.count), 1));
     g.setAttribute(
       "aCanopy",
-      new BufferAttribute(new Float32Array(p.count).fill(1), 1),
+      new BufferAttribute(new Float32Array(p.count).fill(canopy ? 1 : 0), 1),
     );
     if (!canopy) {
       g.clearGroups();
@@ -216,7 +250,24 @@ export function illustratedSpecies(
     }
     parts.push(g);
   };
-  prepare(crown, true);
+  // Wide species overlap three uniformly scaled crowns instead of stretching
+  // one portrait painting into a flat sheet. Each leaf retains its proportions.
+  const height = bounds[3] - bounds[2];
+  const width = (height * 768) / 864;
+  const totalWidth = bounds[1] - bounds[0];
+  const wide = totalWidth / width > 1.25;
+  const centers = wide ? [-1, 0, 1] : [0];
+  for (const side of centers) {
+    const w = width * (side === 0 ? 1 : 0.88);
+    const crown = canopyCard(w * canopyScale, distant);
+    crown.translate(
+      (bounds[0] + bounds[1]) / 2 + side * (totalWidth - w) * 0.5,
+      bounds[2] + height * 0.5 + (side ? -0.08 : 0.04),
+      0.3 + (side === 0 ? 0.12 : 0),
+    );
+    crown.addGroup(0, crown.index!.count, 0);
+    prepare(crown, true);
+  }
   const radius =
     id === "balete"
       ? 0.25

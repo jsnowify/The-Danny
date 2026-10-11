@@ -103,6 +103,12 @@ test("compact portrait keeps every memory reachable and toolbar controls clear",
     .last()
     .click();
   await expect(page.getByRole("dialog")).toBeVisible();
+  for (const selector of [".viewer-close", ".viewer-sound"]) {
+    const control = page.locator(selector);
+    await expect(control).toBeInViewport();
+    const bounds = await control.boundingBox();
+    expect(bounds!.y + bounds!.height).toBeLessThan(90);
+  }
   expect(await page.evaluate(() => window.__DANNY_TEST__.state().phase)).toBe(
     "viewer",
   );

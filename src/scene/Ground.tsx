@@ -1,10 +1,37 @@
 import { useEffect, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
 import { PlaneGeometry } from "three";
 import { groundHeight } from "../utils/random";
 import { useAssets } from "./resources";
+import type { WorldData } from "./world";
+import { forestShade, woodlandShade } from "../visual/forestShade";
 
-export function Ground() {
+export function Ground({ world }: { world: WorldData }) {
   const assets = useAssets();
+  const pigment = useMemo(
+    () => ({ map: woodlandShade(world), lease: 0 }),
+    [world],
+  );
+  useEffect(() => {
+    const lease = ++pigment.lease;
+    forestShade.uWoodlandShade.value = pigment.map;
+    return () =>
+      queueMicrotask(() => {
+        if (lease === pigment.lease) {
+          if (forestShade.uWoodlandShade.value === pigment.map)
+            forestShade.uWoodlandShade.value = null;
+          pigment.map.dispose();
+        }
+      });
+  }, [pigment]);
+  useFrame(() => {
+    assets.approved.trees.forEach((tree, i) => {
+      forestShade.uHomeTrees.value[i].set(
+        tree.position.x + assets.approved.root.position.x,
+        tree.position.z + assets.approved.root.position.z,
+      );
+    });
+  });
   const geometry = useMemo(() => {
     const ground = new PlaneGeometry(220, 220, 80, 80);
     ground.rotateX(-Math.PI / 2);

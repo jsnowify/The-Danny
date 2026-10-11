@@ -41,6 +41,14 @@ export function createNature(bus: Tone.Gain) {
     cricketAt = 0,
     chimeAt = 0,
     bambooAt = 0;
+  let birdCalls = 0;
+  const sing = (now: number) => {
+    birdCalls++;
+    pan.pan.rampTo(r() * 1.6 - 0.8, 0.1);
+    bird.triggerAttackRelease(1700 + r() * 1300, 0.08, now);
+    bird.frequency.exponentialRampToValueAtTime(2600 + r() * 600, now + 0.06);
+    bird.triggerAttackRelease(2200 + r() * 900, 0.06, now + 0.18);
+  };
   const insectGain = new Tone.Gain(0).connect(bus),
     insectFilter = new Tone.Filter({
       frequency: 4200,
@@ -58,16 +66,32 @@ export function createNature(bus: Tone.Gain) {
     const s = useStore.getState();
     if (
       document.hidden ||
-      s.phase === "title" ||
+      s.phase === "loading" ||
       s.phase === "dedication" ||
       s.paused ||
       s.fieldGuideOpen ||
-      s.journalOpen
+      s.journalOpen ||
+      s.settings.muted
     ) {
       waterGain.gain.rampTo(0, 0.3);
       return;
     }
     const now = Tone.now();
+    if (s.phase === "title") {
+      // The landing has its own meadow ambience, independent of the last
+      // gameplay position and the scene's paused simulation clock.
+      waterGain.gain.rampTo(0, 0.3);
+      insectGain.gain.rampTo(0, 0.5);
+      filter.frequency.rampTo(850 + Math.sin(now * 0.21) * 180, 0.8);
+      windGain.gain.rampTo(0.04 + Math.sin(now * 0.38) * 0.014, 0.5);
+      bird.volume.rampTo(-27, 0.3);
+      if (now > birdAt) {
+        birdAt = now + 2.8 + r() * 3.2;
+        sing(now);
+      }
+      return;
+    }
+    bird.volume.rampTo(-34, 0.3);
     const region = regionAt(traveler.x, traveler.z);
     insectGain.gain.rampTo(
       atmosphere.dusk < 0.55 && s.hung.length > 1
@@ -106,10 +130,7 @@ export function createNature(bus: Tone.Gain) {
         now +
         (region.sound === "birds" ? 4 : region.sound === "hollow" ? 12 : 7) +
         r() * 9;
-      pan.pan.rampTo(r() * 1.6 - 0.8, 0.1);
-      bird.triggerAttackRelease(1700 + r() * 1300, 0.08, now);
-      bird.frequency.exponentialRampToValueAtTime(2600 + r() * 600, now + 0.06);
-      bird.triggerAttackRelease(2200 + r() * 900, 0.06, now + 0.18);
+      sing(now);
     }
     if (region.sound === "bamboo" && now > bambooAt) {
       bambooAt = now + 6 + r() * 8;
@@ -139,6 +160,11 @@ export function createNature(bus: Tone.Gain) {
   };
   return {
     update,
+    diagnostics: () => ({
+      birdCalls,
+      windGain: windGain.gain.value,
+      waterGain: waterGain.gain.value,
+    }),
     dispose() {
       [
         wind,

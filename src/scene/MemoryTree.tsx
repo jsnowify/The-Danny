@@ -6,15 +6,20 @@ import {
   InstancedMesh,
   Object3D,
   PlaneGeometry,
+  Quaternion,
   type Mesh,
 } from "three";
 import * as damping from "maath/easing";
 import { useStore } from "../store";
-import { MEMORIES, PALETTE } from "../config";
+import { MEMORIES } from "../config";
 import { useAssets } from "./resources";
-import { atmosphere } from "./runtime";
+import { atmosphere, traveler } from "./runtime";
 import { groundHeight, random } from "../utils/random";
 import { memoryBranchSpread } from "./calibration";
+import { blueFlowerAssets } from "../features/forestLife/assets";
+import { FlowerContact } from "../features/forestLife/contact";
+import { flowerPetals } from "../features/forestLife/petals";
+import { OSCAR_BENCH } from "../features/oscar/bench";
 
 // Picture centers sit below the original approved branch tips. Memory IDs and
 // collectible locations are unchanged; hanging cards fit this approved tree.
@@ -31,6 +36,7 @@ export const ANCHORS: [number, number, number][] = [
 
 export function MemoryTree() {
   const spread = memoryBranchSpread();
+  const flowerArt = useMemo(blueFlowerAssets, []);
   const assets = useAssets(),
     leaves = useRef<InstancedMesh>(null),
     blossoms = useRef<InstancedMesh>(null),
@@ -73,7 +79,7 @@ export function MemoryTree() {
       return {
         x: Math.cos(a) * d,
         z: Math.sin(a) * d,
-        scale: 0.22 + r() * 0.24,
+        size: 0.55 + r() * 0.35,
       };
     });
     return {
@@ -83,6 +89,23 @@ export function MemoryTree() {
       clusters,
       petals,
       blooms,
+      contacts: new FlowerContact(blooms),
+      onBrush: (index: number, pushX: number, pushZ: number) => {
+        const progress = useStore.getState().hung.length / 8;
+        if (progress <= 0) return;
+        const flower = blooms[index];
+        flowerPetals.brush(
+          flower.x,
+          groundHeight(flower.x, flower.z) + 0.025,
+          flower.z,
+          flower.size * progress,
+          pushX,
+          pushZ,
+        );
+      },
+      orientation: new Quaternion(),
+      clock: 0,
+      lease: 0,
       growth: Array.from({ length: 8 }, () => ({ value: 0 })),
       object: new Object3D(),
       color: new Color(),
@@ -92,37 +115,71 @@ export function MemoryTree() {
     };
   }, [spread, assets]);
   useEffect(() => {
+    const lease = ++flowerArt.lease;
+    return () =>
+      queueMicrotask(() => {
+        if (flowerArt.lease === lease) flowerArt.dispose();
+      });
+  }, [flowerArt]);
+  useEffect(() => {
+    const lease = ++data.lease;
     for (const mesh of [leaves, blossoms, flowers, garlands])
       mesh.current!.instanceMatrix.setUsage(DynamicDrawUsage);
-    for (let i = 0; i < data.petals.length; i++)
-      blossoms.current!.setColorAt(i, data.color.set(PALETTE.cream));
-    for (let i = 0; i < data.blooms.length; i++)
-      flowers.current!.setColorAt(
-        i,
-        data.color.set(i % 3 ? "#e6e4cf" : PALETTE.gold),
-      );
-    for (let i = 0; i < 24; i++)
-      garlands.current!.setColorAt(i, data.color.set("#fff3d6"));
-    for (const mesh of [blossoms, flowers, garlands])
-      mesh.current!.instanceColor!.needsUpdate = true;
     const meshes = [leaves, blossoms, flowers, garlands].map(
       (ref) => ref.current!,
     );
-    return () => {
-      // R3F's dispose={null} replaces the instance's dispose property. Invoke
-      // Three's method explicitly to release instance buffers safely.
-      meshes.forEach((mesh) => InstancedMesh.prototype.dispose.call(mesh));
-      data.glowGeometry.dispose();
-    };
+    return () =>
+      queueMicrotask(() => {
+        if (data.lease !== lease) return;
+        // R3F's dispose={null} replaces the instance's dispose property. Invoke
+        // Three's method explicitly to release instance buffers safely.
+        meshes.forEach((mesh) => InstancedMesh.prototype.dispose.call(mesh));
+        data.glowGeometry.dispose();
+      });
   }, [data]);
   useFrame(({ camera }, delta) => {
     const dt = Math.min(delta, 0.05),
       state = useStore.getState(),
       progress = state.hung.length / 8,
       o = data.object;
-    const yaw = Math.atan2(camera.position.x, camera.position.z);
+    const active =
+      state.phase === "explore" &&
+      !state.paused &&
+      !state.journalOpen &&
+      !state.fieldGuideOpen &&
+      !state.oscarDialogue &&
+      !state.companionDialogue &&
+      !state.dedicationOpen;
+    if (active) {
+      const contactDelta = Math.max(0, Math.min(delta, 0.25));
+      data.clock += contactDelta;
+      data.contacts.update(
+        traveler.x,
+        traveler.z,
+        traveler.speed,
+        contactDelta,
+        state.settings.reducedMotion,
+        data.onBrush,
+      );
+      for (let index = 0; index < data.blooms.length; index++) {
+        const offset = index * 3;
+        flowerArt.contacts[2].setXYZ(
+          index,
+          data.contacts.offsets[offset] * progress,
+          data.contacts.offsets[offset + 1] * progress,
+          data.contacts.offsets[offset + 2] * progress,
+        );
+      }
+      flowerArt.contacts[2].needsUpdate = true;
+    }
+    flowerArt.uniforms.uMoonTime.value = data.clock;
+    flowerArt.uniforms.uMoonMotion.value = state.settings.reducedMotion ? 0 : 1;
+    flowers.current!.userData.contacts = data.contacts;
+    const yaw = 0;
     let changing =
-      data.lastProgress !== progress || Math.abs(yaw - data.lastYaw) > 0.03;
+      data.lastProgress !== progress ||
+      Math.abs(yaw - data.lastYaw) > 0.03 ||
+      Math.abs(data.orientation.dot(camera.quaternion)) < 0.999999;
     for (let i = 0; i < 8; i++) {
       const target = state.hung.includes(MEMORIES[i].id) ? 1 : 0;
       if (state.settings.reducedMotion) {
@@ -152,7 +209,7 @@ export function MemoryTree() {
       for (let i = 0; i < data.petals.length; i++) {
         const c = data.petals[i];
         o.position.set(c.x, c.y, c.z);
-        o.rotation.set(-0.5, 0, 0);
+        o.quaternion.copy(camera.quaternion);
         o.scale.setScalar(0.1 * data.growth[c.branch].value);
         o.updateMatrix();
         blossoms.current!.setMatrixAt(i, o.matrix);
@@ -160,8 +217,8 @@ export function MemoryTree() {
       for (let i = 0; i < data.blooms.length; i++) {
         const c = data.blooms[i];
         o.position.set(c.x, groundHeight(c.x, c.z) + 0.025, c.z);
-        o.rotation.set(0, i, 0);
-        o.scale.setScalar(c.scale * progress);
+        o.quaternion.copy(camera.quaternion);
+        o.scale.setScalar(c.size * progress);
         o.updateMatrix();
         flowers.current!.setMatrixAt(i, o.matrix);
       }
@@ -169,7 +226,7 @@ export function MemoryTree() {
         for (let j = 0; j < 3; j++) {
           const [x, y, z] = data.anchors[branch];
           o.position.set(x, y + 0.44 + j * 0.12, z + 0.015);
-          o.rotation.set(-0.5, 0, j);
+          o.quaternion.copy(camera.quaternion);
           o.scale.setScalar(0.1 * data.growth[branch].value);
           o.updateMatrix();
           garlands.current!.setMatrixAt(branch * 3 + j, o.matrix);
@@ -184,6 +241,7 @@ export function MemoryTree() {
       leaves.current!.instanceColor!.needsUpdate = true;
       data.lastProgress = progress;
       data.lastYaw = yaw;
+      data.orientation.copy(camera.quaternion);
     }
     // Zero-scale flowers have no visible pixels, but still submit all vertices.
     // Keep every growth/fade value; skip only batches whose scales are all zero.
@@ -218,8 +276,8 @@ export function MemoryTree() {
         name="memory-tree-blossoms"
         dispose={null}
         args={[
-          assets.geometries.flower,
-          assets.materials.foliage,
+          flowerArt.geometries[0],
+          flowerArt.materials[0],
           data.petals.length,
         ]}
         frustumCulled
@@ -229,8 +287,8 @@ export function MemoryTree() {
         name="memory-tree-ground-flowers"
         dispose={null}
         args={[
-          assets.geometries.flower,
-          assets.materials.foliage,
+          flowerArt.geometries[2],
+          flowerArt.materials[2],
           data.blooms.length,
         ]}
         frustumCulled
@@ -239,7 +297,7 @@ export function MemoryTree() {
         ref={garlands}
         name="memory-tree-garlands"
         dispose={null}
-        args={[assets.geometries.flower, assets.materials.foliage, 24]}
+        args={[flowerArt.geometries[1], flowerArt.materials[1], 24]}
         frustumCulled
       />
       <mesh ref={glow} geometry={data.glowGeometry}>
@@ -263,33 +321,21 @@ export function MemoryTree() {
       </mesh>
       <group
         name="memory-bench"
-        position={[-4.7, groundHeight(-4.7, 3.6), 3.6]}
-        rotation={[0, 0.5, 0]}
+        position={[
+          OSCAR_BENCH.x,
+          groundHeight(OSCAR_BENCH.x, OSCAR_BENCH.z),
+          OSCAR_BENCH.z,
+        ]}
+        rotation={[0, OSCAR_BENCH.yaw, 0]}
       >
         <mesh
-          position={[0, 0.6, 0]}
-          geometry={assets.geometries.benchSeat}
-          material={assets.props.bench}
+          geometry={assets.geometries.bench}
+          material={assets.drawings.materials.bench}
           castShadow
+          receiveShadow
+          customDepthMaterial={assets.materials.depth}
           dispose={null}
         />
-        <mesh
-          position={[0, 1.05, -0.26]}
-          geometry={assets.geometries.benchBack}
-          material={assets.props.bench}
-          castShadow
-          dispose={null}
-        />
-        {[-0.83, 0.83].map((x) => (
-          <mesh
-            key={x}
-            position={[x, 0.27, 0]}
-            geometry={assets.geometries.benchLeg}
-            material={assets.props.bench}
-            castShadow
-            dispose={null}
-          />
-        ))}
       </group>
     </group>
   );

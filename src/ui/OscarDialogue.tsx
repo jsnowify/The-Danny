@@ -1,33 +1,58 @@
+import { useState } from "react";
 import { useText } from "../hooks/useText";
 import { useStore } from "../store";
-import { OSCAR, oscarLine } from "../config/oscar";
-import { useDialog } from "../hooks/useDialog";
+import { OSCAR_CONVERSATION, OSCAR_DECLINE } from "../config/dialogues";
+import { ConversationCard } from "./ConversationCard";
+import { input } from "../scene/runtime";
 import { Icon } from "./Icons";
 export function OscarDialogue() {
   const t = useText();
-  const collected = useStore((s) => s.collected.length),
-    hung = useStore((s) => s.hung.length),
-    close = () => useStore.setState({ oscarDialogue: false }),
-    ref = useDialog(close);
+  const [step, setStep] = useState(0);
+  const [branch, setBranch] = useState<"conversation" | "choice" | "no">(
+    "conversation",
+  );
+  const lines = branch === "no" ? OSCAR_DECLINE : OSCAR_CONVERSATION;
+  const line = lines[step];
+  const close = () => useStore.setState({ oscarDialogue: false });
+  const next = () => {
+    if (step < lines.length - 1) setStep(step + 1);
+    else if (branch === "conversation") setBranch("choice");
+    else close();
+  };
   return (
-    <div
-      className="overlay dialogue-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="oscar-heading"
-      tabIndex={-1}
-      ref={ref}
-    >
-      <section className="dialogue-card">
-        <span className="eyebrow">{OSCAR.relationship}</span>
-        <h2 id="oscar-heading">Oscar</h2>
-        <p className="dialogue-line">{oscarLine(collected, hung)}</p>
-        {OSCAR.dialogueIsFictional && <small>{t.fictionDialogue}</small>}
-        <button className="primary" onClick={close}>
-          {t.resume}
+    <ConversationCard label="Conversation with Oscar" line={line} close={close}>
+      {branch === "choice" ? (
+        <>
+          <p className="conversation-question">Seat with Oscar</p>
+          <button
+            className="primary conversation-next"
+            onClick={() => {
+              input.held = false;
+              input.intent = 0;
+              useStore.setState({
+                oscarDialogue: false,
+                seatedWithOscar: true,
+              });
+            }}
+          >
+            Yes
+          </button>
+          <button
+            className="primary secondary"
+            onClick={() => {
+              setStep(0);
+              setBranch("no");
+            }}
+          >
+            No
+          </button>
+        </>
+      ) : (
+        <button className="primary conversation-next" onClick={next}>
+          {branch === "no" && step === lines.length - 1 ? t.resume : t.continue}
           <Icon name="arrow" />
         </button>
-      </section>
-    </div>
+      )}
+    </ConversationCard>
   );
 }

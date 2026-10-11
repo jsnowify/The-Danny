@@ -1,6 +1,9 @@
 export type Sound =
   "paper" | "keep" | "hang" | "finale" | "step" | "click" | "cat" | "dog";
 let play: ((sound: Sound) => void) | undefined;
+export function hasSoundEngine() {
+  return Boolean(play);
+}
 export function registerSound(handler: typeof play) {
   play = handler;
 }

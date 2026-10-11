@@ -1,5 +1,6 @@
 import { CanvasTexture, SRGBColorSpace } from "three";
 import { random } from "../../utils/random";
+import { meadowPigment } from "../meadowPigment";
 
 // Original, deterministic brushwork. No reference pixels are shipped or sampled.
 function surface(width: number, height = width) {
@@ -123,36 +124,17 @@ export function crownPaint(variant: number) {
 export function groundPaint() {
   const { canvas, c } = surface(2048),
     r = random(552);
-  c.fillStyle = "#617155";
+  c.fillStyle = "#85b95a";
   c.fillRect(0, 0, 2048, 2048);
   const clearing = c.createRadialGradient(1050, 1050, 80, 1050, 1050, 830);
-  clearing.addColorStop(0, "#eee7df");
-  clearing.addColorStop(0.25, "#dedbd4");
-  clearing.addColorStop(0.48, "#aab99a");
-  clearing.addColorStop(0.75, "#657e52");
-  clearing.addColorStop(1, "#354c31");
+  clearing.addColorStop(0, "#b6d875");
+  clearing.addColorStop(0.25, "#a8d269");
+  clearing.addColorStop(0.48, "#96c661");
+  clearing.addColorStop(0.75, "#88bd5b");
+  clearing.addColorStop(1, "#76af59");
   c.fillStyle = clearing;
   c.fillRect(0, 0, 2048, 2048);
-  c.lineCap = "round";
-  for (let i = 0; i < 2600; i++) {
-    const x = r() * 2400 - 200,
-      y = r() * 2048,
-      length = 120 + r() * 650;
-    c.strokeStyle = i % 3 ? "rgba(255,247,221,.065)" : "rgba(53,76,53,.04)";
-    c.lineWidth = 2 + r() * 23;
-    c.beginPath();
-    c.moveTo(x, y);
-    c.bezierCurveTo(
-      x + length * 0.3,
-      y - 8,
-      x + length * 0.7,
-      y - 32,
-      x + length,
-      y - 40 - r() * 40,
-    );
-    c.stroke();
-  }
-  // Quiet low-frequency washes avoid a uniform brown-green floor.
+  // Soft lime and mint patches keep the clearing open and sunlit.
   for (let i = 0; i < 30; i++) {
     const x = r() * 2048,
       y = r() * 2048,
@@ -160,32 +142,14 @@ export function groundPaint() {
     const wash = c.createRadialGradient(x, y, 0, x, y, radius);
     wash.addColorStop(
       0,
-      i % 2 ? "rgba(157,164,126,.08)" : "rgba(200,189,174,.13)",
+      i % 2 ? "rgba(112,185,98,.055)" : "rgba(233,245,160,.065)",
     );
-    wash.addColorStop(1, "rgba(200,189,174,0)");
+    wash.addColorStop(1, "rgba(169,218,116,0)");
     c.fillStyle = wash;
     c.fillRect(x - radius, y - radius, radius * 2, radius * 2);
   }
-  for (let i = 0; i < 520; i++) {
-    const x = r() * 2048,
-      y = r() * 2048;
-    // Open ground for the Memory Tree, rocks and traveler, with no extra props.
-    if (Math.hypot((x - 1050) / 1.0, (y - 1030) / 1.2) < 260) continue;
-    const scale = 0.5 + r() * 0.8;
-    for (let j = 0; j < 2 + Math.floor(r() * 4); j++) {
-      const bx = x + j * 5 * scale,
-        h = (10 + r() * 13) * scale;
-      c.fillStyle = j % 2 ? "rgba(245,239,214,.40)" : "rgba(204,214,179,.37)";
-      const width = (1.4 + r() * 2.8) * scale;
-      const bend = h * (0.1 + r() * 0.55);
-      c.beginPath();
-      c.moveTo(bx, y);
-      c.quadraticCurveTo(bx + bend * 0.1, y - h * 0.65, bx + bend, y - h);
-      c.quadraticCurveTo(bx + width + bend * 0.2, y - h * 0.55, bx + width, y);
-      c.fill();
-    }
-  }
-  paper(c, 884);
+  // Grass is now rooted, animated geometry; this map supplies only soil paint.
+  meadowPigment(c, 552);
   return texture(canvas);
 }
 
@@ -235,10 +199,14 @@ export function clothPaint() {
   return texture(canvas);
 }
 
-export function barkPaint() {
+export function barkPaint(forest = false) {
   const { canvas, c } = surface(128, 512),
     r = random(341);
-  c.fillStyle = "#4b3628";
+  const grain = c.createLinearGradient(0, 0, 128, 0);
+  grain.addColorStop(0, "#354c40");
+  grain.addColorStop(0.45, "#5e6e52");
+  grain.addColorStop(1, "#909168");
+  c.fillStyle = forest ? grain : "#4b3628";
   c.fillRect(0, 0, 128, 512);
   for (let i = 0; i < 220; i++) {
     const x = r() * 128,

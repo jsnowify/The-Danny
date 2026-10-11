@@ -1,0 +1,12 @@
+{
+  "poseDirectionControls": 9,
+  "uniqueDrawings": 9,
+  "video": {
+    "time": 0.477,
+    "duration": 3,
+    "width": 1366
+  },
+  "phoneOverflow": false,
+  "reducedMotion": "paused initially",
+  "errors": []
+}

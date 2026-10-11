@@ -1,0 +1,154 @@
+{
+  "stages": [
+    {
+      "progress": 0,
+      "scale": 0,
+      "visible": false,
+      "count": 64,
+      "oldBatch": false,
+      "materials": [
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-0",
+          "visible": false,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-2",
+          "visible": false,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-1",
+          "visible": false,
+          "geometry": "PlaneGeometry"
+        }
+      ],
+      "active": 0,
+      "maximum": 0,
+      "finite": true
+    },
+    {
+      "progress": 4,
+      "scale": 0.32238757610321045,
+      "visible": true,
+      "count": 64,
+      "oldBatch": false,
+      "materials": [
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-0",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-2",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-1",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        }
+      ],
+      "active": 0,
+      "maximum": 0,
+      "finite": true
+    },
+    {
+      "progress": 8,
+      "scale": 0.6447751522064209,
+      "visible": true,
+      "count": 64,
+      "oldBatch": false,
+      "materials": [
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-0",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-2",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        },
+        {
+          "type": "MeshBasicMaterial",
+          "map": "painted-blue-moon-flowers-1",
+          "visible": true,
+          "geometry": "PlaneGeometry"
+        }
+      ],
+      "active": 0,
+      "maximum": 0,
+      "finite": true
+    }
+  ],
+  "contact": {
+    "scale": 0.6447751522064209,
+    "visible": true,
+    "count": 64,
+    "oldBatch": false,
+    "materials": [
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-0",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      },
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-2",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      },
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-1",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      }
+    ],
+    "active": 4,
+    "maximum": 0.4342835545539856,
+    "finite": true
+  },
+  "recovery": {
+    "scale": 0.6447751522064209,
+    "visible": true,
+    "count": 64,
+    "oldBatch": false,
+    "materials": [
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-0",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      },
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-2",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      },
+      {
+        "type": "MeshBasicMaterial",
+        "map": "painted-blue-moon-flowers-1",
+        "visible": true,
+        "geometry": "PlaneGeometry"
+      }
+    ],
+    "active": 0,
+    "maximum": 0,
+    "finite": true
+  },
+  "phoneOverflow": false,
+  "errors": []
+}

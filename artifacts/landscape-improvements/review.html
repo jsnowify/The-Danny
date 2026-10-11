@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Danny · Camera, grass & companions</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #eff0e4; color: #334a37; font: 15px/1.6 system-ui,sans-serif; }
+      main { max-width: 1380px; margin: auto; padding: 42px 26px 64px; }
+      h1,h2 { font-family: Georgia,serif; font-weight: 400; line-height: 1.2; }
+      h1 { font-size: clamp(30px,4vw,48px); margin: 0 0 12px; }
+      h2 { font-size: 28px; margin-top: 42px; }
+      a { color: #315842; text-underline-offset: 4px; }
+      nav { display: flex; gap: 22px; flex-wrap: wrap; margin: 24px 0; }
+      img,video { display: block; width: 100%; border-radius: 8px; background: #d3dcc9; }
+      figure { margin: 0; }
+      figcaption { padding: 10px 2px 0; font-size: 13px; }
+      .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .pair img { aspect-ratio: 1918/918; object-fit: contain; }
+      .quiet { color: #63745d; max-width: 960px; }
+      .reference { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+      summary { cursor: pointer; margin-top: 32px; }
+      @media(max-width:720px) { main { padding: 26px 16px; } .pair,.reference { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>The Danny · Camera, grass & companions</h1>
+      <p class="quiet">A closer view, softer painted meadows, a breeze through rooted grass, and the eight original companions.</p>
+      <nav><a href="http://localhost:4173/">Play the current build</a><a href="#motion">See the grass in motion</a><a href="#companions">See the animals</a></nav>
+      <h2>The camera collapse is fixed</h2>
+      <p class="quiet">The original failure was reproduced by changing quality at 125% display scaling. The current view keeps its world framing across quality changes.</p>
+      <div class="pair">
+        <figure><img src="before/avenue-after-quality.png" alt="Earlier quality change shrank the world into a small strip" loading="lazy" /><figcaption>Before · The world collapsed after a quality change.</figcaption></figure>
+        <figure><img src="after/quality-medium.png" alt="Correct full-frame forest after the same quality change" loading="lazy" /><figcaption>After · Stable framing at the same display scaling.</figcaption></figure>
+      </div>
+      <h2>Closer framing and softer grass</h2>
+      <div class="pair">
+        <figure><img src="before/avenue.png" alt="Earlier distant view with dry striped ground and thin animated stalks" loading="lazy" /><figcaption>Before · Distant framing, stationary grass marks and thin stalks.</figcaption></figure>
+        <figure><img src="after/avenue.png" alt="Closer view with fuller pale grass clumps over green painterly soil" loading="lazy" /><figcaption>After · About 16% larger scenery during travel, curved clumps and softer pigment.</figcaption></figure>
+      </div>
+      <h2 id="motion">The grass in motion</h2>
+      <video src="after/grass-and-movement.mp4" controls muted loop playsinline preload="metadata" poster="after/avenue.png"></video>
+      <p class="quiet">The opening second shows the breeze while standing still. Movement then brushes the grass aside. This fixed-step recording demonstrates animation timing.</p>
+      <h2 id="companions">The eight companions</h2>
+      <img src="../illustrated-animals/animals.png" alt="Snowa, Hoshi, Thoma, Simba, Star, Nano, Doreamon and Max as flat illustrated animals" loading="lazy" />
+      <p class="quiet">Updated to flat ink and painted sprites. <a href="../illustrated-animals/review.html">Open the animated animal preview</a> to see their walk, sit, sleep and groom drawings.</p>
+      <details><summary>Grass and landscape reference frames</summary><div class="reference">
+        <img src="reference/ref4.jpg" alt="Frames from ref 4 showing pale grass and olive ground" loading="lazy" />
+        <img src="reference/vid-ref3.jpg" alt="Frames from vid ref 3 showing dark olive grassland" loading="lazy" />
+        <img src="reference/vid-ref.jpg" alt="Frames from vid ref showing the clearing" loading="lazy" />
+        <img src="reference/vid-ref2.jpg" alt="Frames from vid ref 2 showing the painted forest transition" loading="lazy" />
+      </div></details>
+    </main>
+  </body>
+</html>

@@ -16,6 +16,11 @@ import { SpeciesFlora } from "./SpeciesFlora";
 import { PlantDiscoveries } from "./PlantDiscoveries";
 import { Companions } from "../features/animals/Companions";
 import { Oscar } from "../features/oscar/Oscar";
+import { Birds } from "../features/forestLife/Birds";
+import { BlueFlowerField } from "../features/forestLife/BlueFlowerField";
+import { FlowerPetals } from "../features/forestLife/FlowerPetals";
+import { WalkingParticles } from "../features/forestLife/WalkingParticles";
+import { FallingLeaves } from "../features/forestLife/FallingLeaves";
 import { Ground } from "./Ground";
 import { Pond } from "./Pond";
 import { Player } from "./Player";
@@ -25,7 +30,8 @@ import { MemoryTree } from "./MemoryTree";
 import { Memories } from "./MemoryPicture";
 import { ApprovedFoundation } from "./ApprovedFoundation";
 import { ForestDrift } from "./ForestDrift";
-import { VSMShadowMap } from "three";
+import { ForestSunlight } from "./ForestSunlight";
+import { PCFSoftShadowMap } from "three";
 import { Timeline } from "./Timeline";
 import { LoadingScreen } from "../ui/LoadingScreen";
 import { changeQuality } from "../hooks/useQuality";
@@ -111,7 +117,7 @@ function Forest({ development }: { development: DevelopmentModule | null }) {
       <Player world={world} />
       <Camera />
       <Lighting />
-      <Ground />
+      <Ground world={world} />
       <Flora world={world} />
       <SpeciesFlora world={world} />
       <PlantDiscoveries world={world} />
@@ -121,7 +127,13 @@ function Forest({ development }: { development: DevelopmentModule | null }) {
       <Companions world={world} />
       <Oscar world={world} />
       <ApprovedFoundation />
+      <Birds world={world} />
+      <BlueFlowerField world={world} />
+      <FlowerPetals />
+      <WalkingParticles />
+      <FallingLeaves world={world} />
       <ForestDrift />
+      <ForestSunlight />
       <Timeline />
       <AdaptiveDpr pixelated />
       {DevTools && <DevTools world={world} />}
@@ -209,13 +221,20 @@ export default function Scene() {
         <Canvas
           orthographic
           camera={{
+            // Camera.tsx owns the world-space frustum. R3F's automatic DPR
+            // resize otherwise replaces it with a viewport measured in pixels.
+            manual: true,
+            left: -10,
+            right: 10,
+            top: 5.5,
+            bottom: -5.5,
             position: [0, 14.7, 14.6],
             fov: CAMERA.fov,
             near: 0.1,
             far: 110,
           }}
           dpr={[1, QUALITY[tier].dpr]}
-          shadows={tier !== "low" ? { type: VSMShadowMap } : false}
+          shadows={{ type: PCFSoftShadowMap }}
           frameloop={
             hidden ||
             paused ||
@@ -236,7 +255,7 @@ export default function Scene() {
           }}
           onCreated={({ gl }) => {
             gl.setClearColor("#d8dfd5");
-            gl.shadowMap.type = VSMShadowMap;
+            gl.shadowMap.type = PCFSoftShadowMap;
             gl.domElement.addEventListener("webglcontextlost", (e) => {
               e.preventDefault();
               setLost(true);

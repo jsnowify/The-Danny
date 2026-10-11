@@ -112,9 +112,11 @@ export class InstanceVisibility {
       Math.abs(item.sz),
     );
     // Bound the same wind/trail displacement used by the existing vertex shader.
-    const wind = bounds.flex * Math.max(2, windUniforms.uWind.value) * 0.15;
-    const trail = bounds.grass ? bounds.flex ** 2 * 0.34 : 0;
-    this.sphere.radius = (bounds.sphere.radius + wind + trail + 0.02) * scale;
+    const wind = bounds.grass
+      ? bounds.flex ** 2 * Math.max(2, windUniforms.uWind.value) * 0.48
+      : bounds.flex * Math.max(2, windUniforms.uWind.value) * 0.15;
+    const trail = bounds.grass ? bounds.flex ** 2 * 0.48 : 0;
+    this.sphere.radius = (bounds.sphere.radius + wind + 0.02) * scale + trail;
     return (
       this.view.intersectsSphere(this.sphere) ||
       (shadowParticipant &&

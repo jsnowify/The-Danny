@@ -17,6 +17,7 @@ export function Pond() {
   const uniforms = useMemo(
     () => ({
       ...UniformsUtils.clone(UniformsLib.fog),
+      ...UniformsUtils.clone(UniformsLib.lights),
       uTime: { value: 0 },
       uRipple: { value: new Vector2() },
       uPaper: { value: assets.props.paper },
@@ -33,6 +34,7 @@ export function Pond() {
     <group position={[...([WORLD.pond[0], 0.1, WORLD.pond[1]] as const)]}>
       <mesh
         name="pond-water"
+        receiveShadow
         rotation={[-Math.PI / 2, 0, 0]}
         position={[0, 0.03, 0]}
       >
@@ -43,6 +45,7 @@ export function Pond() {
           vertexShader={waterVertex}
           fragmentShader={waterFragment}
           fog
+          lights
           transparent
         />
       </mesh>

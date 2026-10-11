@@ -1,6 +1,81 @@
 import { test, expect } from "@playwright/test";
-import { CAMERA, COMPOSITION, MEMORIES, TEXT } from "../src/config";
+import { CAMERA, MEMORIES, TEXT } from "../src/config";
 import type { Object3D, Mesh, InstancedMesh } from "three";
+
+test("quality changes at 125 percent display scaling preserve the world framing", async ({
+  browser,
+}) => {
+  const page = await browser.newPage({
+    viewport: { width: 1366, height: 768 },
+    deviceScaleFactor: 1.25,
+  });
+  try {
+    await page.addInitScript(() =>
+      localStorage.setItem(
+        "the-danny-v2",
+        JSON.stringify({
+          version: 4,
+          state: {
+            introSeen: true,
+            settings: {
+              quality: "low",
+              muted: true,
+              reducedMotion: true,
+              skipIntro: true,
+            },
+          },
+        }),
+      ),
+    );
+    await page.goto("http://127.0.0.1:5174/?test=1");
+    await page.getByRole("button", { name: TEXT.begin }).click();
+    await page
+      .getByRole("button", { name: TEXT.continue, exact: true })
+      .click();
+    await page.waitForFunction(() => window.__DANNY_TEST__?.state().sceneReady);
+    await page.evaluate(() => window.__DANNY_TEST__.place(-6, 8));
+    const inspect = () =>
+      page.evaluate(async () => {
+        const resources = performance.getEntriesByType("resource");
+        const fiber = await import(
+          /* @vite-ignore */ resources.find((e) =>
+            e.name.includes("/@react-three_fiber.js"),
+          )!.name
+        );
+        const { camera, viewport } = fiber._roots
+          .get(document.querySelector(".scene canvas"))
+          .store.getState();
+        const direction = camera.position.clone();
+        camera.getWorldDirection(direction);
+        return {
+          span: camera.top - camera.bottom,
+          dpr: viewport.dpr,
+          pitch: (Math.asin(-direction.y) * 180) / Math.PI,
+        };
+      });
+    await expect.poll(async () => (await inspect()).span).toBeLessThan(15);
+    const before = await inspect();
+    expect(before.dpr).toBe(1);
+    for (const quality of ["medium", "high", "low"] as const) {
+      await page.evaluate(async (quality) => {
+        const url = performance
+          .getEntriesByType("resource")
+          .find((e) => new URL(e.name).pathname === "/src/store.ts")!.name;
+        const { useStore } = await import(/* @vite-ignore */ url);
+        useStore.getState().setSettings({ quality });
+      }, quality);
+      await expect
+        .poll(async () => (await inspect()).dpr)
+        .toBe(quality === "low" ? 1 : 1.25);
+      await expect
+        .poll(async () => (await inspect()).span)
+        .toBeCloseTo(before.span, 4);
+      expect((await inspect()).pitch).toBeCloseTo(CAMERA.pitch, 2);
+    }
+  } finally {
+    await page.close();
+  }
+});
 
 test("collisions cross spatial cell edges and leave every story location accessible", async ({
   page,
@@ -88,87 +163,85 @@ test("the exploration camera frames the traveler and all eight pictures across s
   ]) {
     await page.setViewportSize(viewport);
     const inspect = () =>
-      page.evaluate(
-        async ({ travelerScale }) => {
-          const resource = performance
-            .getEntriesByType("resource")
-            .find((e) => e.name.includes("/@react-three_fiber.js"));
-          const fiber = await import(/* @vite-ignore */ resource!.name);
-          const { camera, scene, size } = fiber._roots
-            .get(document.querySelector(".scene canvas"))
-            .store.getState();
-          const { groundHeight } = await import(
-            /* @vite-ignore */ "/src/utils/random.ts"
-          );
-          const direction = camera.position.clone();
-          camera.getWorldDirection(direction);
-          const base = camera.position
-            .clone()
-            .set(0, groundHeight(0, 5.5), 5.5)
-            .project(camera);
-          const head = camera.position
-            .clone()
-            .set(0, groundHeight(0, 5.5) + 1.41 * travelerScale, 5.5)
-            .project(camera);
-          const projectedBounds = (object: Object3D) => {
-            let left = Infinity,
-              right = -Infinity,
-              top = Infinity,
-              bottom = -Infinity;
-            object.traverse((node) => {
-              const mesh = node as Mesh;
-              const vertices = mesh.geometry?.getAttribute("position");
-              // Measure the visible picture/frame/string. A sprite's source quad
-              // includes transparent glow pixels; hidden proximity rings are not cards.
-              if (
-                !mesh.isMesh ||
-                !mesh.visible ||
-                !vertices ||
-                (mesh as InstancedMesh).isInstancedMesh
-              )
-                return;
-              const vertex = camera.position.clone();
-              for (let index = 0; index < vertices.count; index++) {
-                vertex
-                  .fromBufferAttribute(vertices, index)
-                  .applyMatrix4(mesh.matrixWorld)
-                  .project(camera);
-                left = Math.min(left, (vertex.x + 1) / 2);
-                right = Math.max(right, (vertex.x + 1) / 2);
-                top = Math.min(top, (1 - vertex.y) / 2);
-                bottom = Math.max(bottom, (1 - vertex.y) / 2);
-              }
-            });
-            return { left, right, top, bottom };
-          };
-          const collection = document
-            .querySelector(".memory-collection")!
-            .getBoundingClientRect();
-          return {
-            pitch: (Math.asin(-direction.y) * 180) / Math.PI,
-            x: (base.x + 1) / 2,
-            y: (1 - base.y) / 2,
-            height: (head.y - base.y) / 2,
-            fov: camera.userData.verticalFov ?? camera.fov,
-            viewport: size,
-            tree: projectedBounds(scene.getObjectByName("memory-tree-limbs")),
-            pictures: [
-              "lake",
-              "sunrise",
-              "dinner",
-              "boat",
-              "garden",
-              "guitar",
-              "road",
-              "fire",
-            ].map((id) =>
-              projectedBounds(scene.getObjectByName(`memory-picture-${id}`)),
-            ),
-            hudBottom: collection.bottom / window.innerHeight,
-          };
-        },
-        { travelerScale: COMPOSITION.travelerScale },
-      );
+      page.evaluate(async () => {
+        const resource = performance
+          .getEntriesByType("resource")
+          .find((e) => e.name.includes("/@react-three_fiber.js"));
+        const fiber = await import(/* @vite-ignore */ resource!.name);
+        const { camera, scene, size } = fiber._roots
+          .get(document.querySelector(".scene canvas"))
+          .store.getState();
+        const { groundHeight } = await import(
+          /* @vite-ignore */ "/src/utils/random.ts"
+        );
+        const direction = camera.position.clone();
+        camera.getWorldDirection(direction);
+        const base = camera.position
+          .clone()
+          .set(0, groundHeight(0, 5.5), 5.5)
+          .project(camera);
+        const projectedBounds = (object: Object3D) => {
+          let left = Infinity,
+            right = -Infinity,
+            top = Infinity,
+            bottom = -Infinity;
+          object.traverse((node) => {
+            const mesh = node as Mesh;
+            const vertices = mesh.geometry?.getAttribute("position");
+            // Measure the visible picture/frame/string. A sprite's source quad
+            // includes transparent glow pixels; hidden proximity rings are not cards.
+            if (
+              !mesh.isMesh ||
+              !mesh.visible ||
+              !vertices ||
+              (mesh as InstancedMesh).isInstancedMesh
+            )
+              return;
+            const vertex = camera.position.clone();
+            for (let index = 0; index < vertices.count; index++) {
+              vertex
+                .fromBufferAttribute(vertices, index)
+                .applyMatrix4(mesh.matrixWorld)
+                .project(camera);
+              left = Math.min(left, (vertex.x + 1) / 2);
+              right = Math.max(right, (vertex.x + 1) / 2);
+              top = Math.min(top, (1 - vertex.y) / 2);
+              bottom = Math.max(bottom, (1 - vertex.y) / 2);
+            }
+          });
+          return { left, right, top, bottom };
+        };
+        const collection = document
+          .querySelector(".memory-collection")!
+          .getBoundingClientRect();
+        return {
+          pitch: (Math.asin(-direction.y) * 180) / Math.PI,
+          x: (base.x + 1) / 2,
+          y: (1 - base.y) / 2,
+          // Measure the live silhouette: the rounded traveler now faces its
+          // movement, so the old camera-facing proxy head is inaccurate.
+          height:
+            (1 - base.y) / 2 -
+            projectedBounds(scene.getObjectByName("prototype-red-traveler"))
+              .top,
+          fov: camera.userData.verticalFov ?? camera.fov,
+          viewport: size,
+          tree: projectedBounds(scene.getObjectByName("memory-tree-limbs")),
+          pictures: [
+            "lake",
+            "sunrise",
+            "dinner",
+            "boat",
+            "garden",
+            "guitar",
+            "road",
+            "fire",
+          ].map((id) =>
+            projectedBounds(scene.getObjectByName(`memory-picture-${id}`)),
+          ),
+          hudBottom: collection.bottom / window.innerHeight,
+        };
+      });
     await expect
       .poll(
         async () => {

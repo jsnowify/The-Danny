@@ -1,0 +1,19 @@
+{
+  "fps": 24,
+  "duration": 9,
+  "location": [
+    7,
+    31
+  ],
+  "flowers": [
+    472,
+    497,
+    505
+  ],
+  "width": 1600,
+  "height": 900,
+  "shadows": true,
+  "quality": "medium",
+  "gustStrength": 3.4,
+  "errors": []
+}

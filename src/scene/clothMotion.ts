@@ -1,4 +1,5 @@
 import { BufferAttribute, BufferGeometry, DynamicDrawUsage } from "three";
+import { mergeVertices } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
 /** Subdivide only long cloth faces. Resting silhouette and painted UVs are exact. */
 export function movingCloth(source: BufferGeometry) {
@@ -52,24 +53,32 @@ export function movingCloth(source: BufferGeometry) {
   for (let i = 0; i < p.count; i += 3)
     triangle(vertex(i), vertex(i + 1), vertex(i + 2), 0);
   if (original !== source) original.dispose();
-  const geometry = new BufferGeometry();
-  geometry.setAttribute(
+  const expanded = new BufferGeometry();
+  expanded.setAttribute(
     "position",
     new BufferAttribute(new Float32Array(positions), 3).setUsage(
       DynamicDrawUsage,
     ),
   );
-  geometry.setAttribute(
+  expanded.setAttribute(
     "normal",
     new BufferAttribute(new Float32Array(normals), 3),
   );
-  geometry.setAttribute(
+  expanded.setAttribute(
     "uv",
     new BufferAttribute(new Float32Array(coordinates), 2),
   );
+  const geometry = mergeVertices(expanded);
+  expanded.dispose();
+  (geometry.getAttribute("position") as BufferAttribute).setUsage(
+    DynamicDrawUsage,
+  );
+  (geometry.getAttribute("normal") as BufferAttribute).setUsage(
+    DynamicDrawUsage,
+  );
   geometry.computeBoundingSphere();
   geometry.boundingSphere!.radius += 0.25;
-  const rest = new Float32Array(positions);
+  const rest = new Float32Array(geometry.getAttribute("position").array);
   return { geometry, rest };
 }
 
@@ -82,6 +91,7 @@ export function deformCloth(
   speed: number,
   wind: number,
   reduced: boolean,
+  twist = 0,
 ) {
   const p = cloth.geometry.getAttribute("position"),
     rest = cloth.rest;
@@ -89,21 +99,32 @@ export function deformCloth(
     const x = rest[i * 3],
       y = rest[i * 3 + 1],
       z = rest[i * 3 + 2];
-    const hem = Math.max(0, Math.min(1, (1.08 - y) / 0.9));
+    const hem = Math.max(0, Math.min(1, (1.16 - y) / 1));
     const weight = hem * hem;
     const flutter = reduced
       ? 0
       : Math.sin(time * 1.7 + x * 5.2) * 0.008 * wind +
         (Math.sin(gait + x * 3.5) * 0.014 * speed) / 4.4;
+    const turn = reduced ? 0 : twist * weight;
+    const cos = Math.cos(turn),
+      sin = Math.sin(turn);
+    const fold = reduced
+      ? 1
+      : 1 +
+        Math.sin(gait + Math.atan2(x, z) * 2) *
+          0.018 *
+          Math.min(1, speed / 4.4) *
+          weight;
     p.setXYZ(
       i,
-      x + weight * (sideways + flutter),
+      (x * cos + z * sin) * fold + weight * (sideways + flutter),
       y +
         weight *
           (Math.sin(time * 1.3 + x * 4) * 0.004 * wind +
             Math.abs(sideways) * 0.045),
-      z + weight * (trailing + flutter * 0.4),
+      (z * cos - x * sin) * fold + weight * (trailing + flutter * 0.4),
     );
   }
   p.needsUpdate = true;
+  cloth.geometry.computeVertexNormals();
 }

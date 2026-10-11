@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>The Danny — Illustrated animals</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 40px 24px;
+        background: #e5e8d7;
+        color: #354632;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: auto;
+      }
+      h1,
+      h2 {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 54px);
+        margin: 12px 0;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        max-width: 760px;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 24px;
+        padding: 20px 0;
+      }
+      .controls > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      button {
+        font: inherit;
+        font-size: 14px;
+        border: 1px solid #abb69a;
+        background: #f6f1df;
+        color: #354632;
+        padding: 8px 15px;
+        border-radius: 22px;
+        cursor: pointer;
+      }
+      button[aria-pressed="true"] {
+        background: #455a3b;
+        color: #fff9e6;
+        border-color: #455a3b;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #ab7533;
+        outline-offset: 3px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+        gap: 16px;
+      }
+      article {
+        padding: 24px;
+        border-radius: 20px;
+        background: #f6f0dc;
+      }
+      article h2 {
+        margin: 0;
+      }
+      article p {
+        font-size: 13px;
+        min-height: 42px;
+        margin: 8px 0 0;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .scene {
+        margin-top: 48px;
+      }
+      img,
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin: 16px 0;
+      }
+      .caption {
+        font-size: 13px;
+      }
+      .muted {
+        opacity: 0.75;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">The Danny · Updated animal style</div>
+      <h1>Your illustrated companions</h1>
+      <p>
+        Flat painted colors, ink contours, and small animated drawings inspired
+        by your reference. Each pet keeps their own coat and markings.
+      </p>
+      <p><a href="http://localhost:4173/">Play the updated forest ↗</a></p>
+      <div class="controls" aria-label="Animal preview controls">
+        <div aria-label="Pose">
+          <button type="button" data-pose="walk" aria-pressed="true">
+            Walk
+          </button>
+          <button type="button" data-pose="sit" aria-pressed="false">
+            Sit
+          </button>
+          <button type="button" data-pose="sleep" aria-pressed="false">
+            Sleep
+          </button>
+          <button type="button" data-pose="groom" aria-pressed="false">
+            Groom
+          </button>
+        </div>
+        <div id="directions" aria-label="Direction">
+          <button type="button" data-view="side" aria-pressed="true">
+            Side
+          </button>
+          <button type="button" data-view="front" aria-pressed="false">
+            Front
+          </button>
+          <button type="button" data-view="back" aria-pressed="false">
+            Back
+          </button>
+        </div>
+        <button type="button" id="motion" aria-pressed="false">
+          Pause animation
+        </button>
+      </div>
+      <div class="grid" id="animals"></div>
+      <section class="scene">
+        <h2>In the forest</h2>
+        <p class="muted">
+          The same illustrations appear in the game, with their usual wandering
+          and pet/play interactions.
+        </p>
+        <img
+          src="family-in-forest.png"
+          width="1366"
+          height="768"
+          alt="All eight illustrated cats and dogs in the painted forest"
+        />
+        <p class="caption">
+          The pets were gathered together temporarily for this preview. Their
+          usual homes are preserved in the game.
+        </p>
+        <video
+          controls
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          poster="family-in-forest.png"
+          aria-label="Illustrated animals walking and sitting in the forest"
+        >
+          <source src="animals-in-motion.mp4" type="video/mp4" />
+        </video>
+      </section>
+    </main>
+    <script>
+      const pets = [
+        ["snowa", "Snowa", "White fur and blue eyes."],
+        [
+          "hoshi",
+          "Hoshi",
+          "Black and white, with a white muzzle, chest, and paws.",
+        ],
+        [
+          "thoma",
+          "Thoma",
+          "Soft orange, subtle warm stripes, and a rounder face.",
+        ],
+        [
+          "simba",
+          "Simba",
+          "Deeper orange, stronger stripes, and a leaner face.",
+        ],
+        ["star", "Star", "Taupe coat with darker ears, muzzle, and tail."],
+        ["nano", "Nano", "Brown coat, slim legs, and a lean frame."],
+        ["doreamon", "Doreamon", "Brown coat, broader chest, and sturdy legs."],
+        ["max", "Max", "Golden brown, tall frame, and long legs."],
+      ];
+      let pose = "walk",
+        view = "side",
+        elapsed = 0,
+        previous = 0;
+      let paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const cards = [];
+      const grid = document.getElementById("animals");
+      for (const [id, name, description] of pets) {
+        const article = document.createElement("article");
+        const heading = document.createElement("h2");
+        heading.textContent = name;
+        const caption = document.createElement("p");
+        caption.textContent = description;
+        const canvas = document.createElement("canvas");
+        canvas.width = canvas.height = 256;
+        canvas.setAttribute("role", "img");
+        canvas.setAttribute("aria-label", `${name}, ${description}`);
+        article.append(heading, caption, canvas);
+        grid.append(article);
+        const image = new Image();
+        image.src = `atlases/${id}.png`;
+        cards.push({ canvas, image });
+      }
+      function updateMotion() {
+        const button = document.getElementById("motion");
+        button.textContent = paused ? "Play animation" : "Pause animation";
+        button.setAttribute("aria-pressed", String(paused));
+      }
+      updateMotion();
+      document.getElementById("motion").addEventListener("click", () => {
+        paused = !paused;
+        updateMotion();
+      });
+      document.querySelectorAll("[data-pose]").forEach((button) =>
+        button.addEventListener("click", () => {
+          pose = button.dataset.pose;
+          elapsed = 0;
+          document
+            .querySelectorAll("[data-pose]")
+            .forEach((other) =>
+              other.setAttribute("aria-pressed", String(other === button)),
+            );
+          document.getElementById("directions").style.display = [
+            "sleep",
+            "groom",
+          ].includes(pose)
+            ? "none"
+            : "flex";
+        }),
+      );
+      document.querySelectorAll("[data-view]").forEach((button) =>
+        button.addEventListener("click", () => {
+          view = button.dataset.view;
+          document
+            .querySelectorAll("[data-view]")
+            .forEach((other) =>
+              other.setAttribute("aria-pressed", String(other === button)),
+            );
+        }),
+      );
+      function draw(time) {
+        if (previous && !paused && !document.hidden)
+          elapsed += Math.min(0.1, (time - previous) / 1000);
+        previous = time;
+        const direction = { side: 0, front: 1, back: 2 }[view];
+        const row =
+          pose === "walk"
+            ? direction
+            : pose === "sit"
+              ? 6 + direction
+              : pose === "sleep"
+                ? 9
+                : 10;
+        const rate = pose === "walk" ? 9 : pose === "groom" ? 4 : 2;
+        const frame = Math.floor(elapsed * rate) % 6;
+        for (const { canvas, image } of cards) {
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, 256, 256);
+          if (image.complete && image.naturalWidth)
+            ctx.drawImage(
+              image,
+              frame * 128 + 6,
+              row * 128 + 10,
+              116,
+              112,
+              0,
+              12,
+              256,
+              230,
+            );
+        }
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+    </script>
+  </body>
+</html>

@@ -385,13 +385,121 @@ button:active {
   height: 100%;
   color: var(--cream);
   isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(24px, 5vh, 56px) 32px;
+  padding: max(28px, 5vh, env(safe-area-inset-top))
+    max(24px, 5.3vw, env(safe-area-inset-right))
+    max(24px, 3vh, env(safe-area-inset-bottom))
+    max(24px, 5.3vw, env(safe-area-inset-left));
+  overflow-y: auto;
+  touch-action: pan-y;
+  background: #142e26;
 }
 .title-art {
-  position: absolute;
+  position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
+}
+.title-meadow-view {
+  position: absolute;
+  inset: 0;
+  transform: scale(1.12);
+  animation: meadow-drift 24s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+.title-art.is-moving .title-meadow-view {
+  animation-play-state: running;
+}
+@keyframes meadow-drift {
+  0%,
+  100% {
+    transform: translate(-3%, -2.5%) scale(1.12);
+  }
+  25% {
+    transform: translate(3%, -2.5%) scale(1.12);
+  }
+  50% {
+    transform: translate(3%, 2.5%) scale(1.12);
+  }
+  75% {
+    transform: translate(-3%, 2.5%) scale(1.12);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-art .title-meadow-view {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}
+.reduced-motion .title-meadow-view {
+  animation: none;
+  transform: none;
+  will-change: auto;
+}
+.title-art img,
+.title-art video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% 50%;
+}
+.title-art video {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.title-art video.is-ready {
+  opacity: 1;
+}
+.title-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #0c251fed 0%,
+      #102c24dc 24%,
+      #102c24ab 43%,
+      #102c2430 68%,
+      #102c240c 100%
+    ),
+    linear-gradient(0deg, #0c251fd9, #0c251f00 35%),
+    linear-gradient(180deg, #0c251f66, #0c251f00 25%);
+}
+.title-header {
+  grid-area: 1 / 1 / 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.title-header .brand {
+  position: static;
+}
+.title-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title-controls .icon-button {
+  background: #153a2b73;
+  color: #f4eedb;
+  border-color: #f4eedb66;
+}
+.title-controls .icon-button:hover {
+  background: #204f39bb;
+}
+.title-controls .title-mute {
+  position: static;
 }
 .brand {
   position: absolute;
@@ -410,41 +518,40 @@ button:active {
   height: 34px;
 }
 .title-content {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: min(90%, 650px);
+  grid-area: 2 / 1;
+  align-self: center;
+  text-align: left;
+  width: min(100%, 600px);
+  padding-block: 16px;
 }
 .title-content .eyebrow {
-  color: #c5cdb3;
+  color: #dce7d3;
   font-size: 10px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 .title-content h1 {
-  font-size: clamp(64px, 9.5vw, 132px);
+  font-size: clamp(72px, 7.5vw, 132px);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 1.25;
-  margin-top: 16px;
+  line-height: 1.05;
+  margin-top: 20px;
   text-shadow: 0 6px 30px #102a3040;
 }
 .title-dot {
   color: #dbbd7d;
 }
 .title-sub {
-  font-size: clamp(22px, 2.8vw, 32px);
-  color: #ded4b6;
+  font-size: clamp(24px, 2.3vw, 34px);
+  color: #eee6cb;
   letter-spacing: 0.3px;
-  margin-top: 3px;
+  margin-top: 18px;
 }
 .title-rule {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 17px;
-  margin: 28px auto 23px;
+  margin: 28px 0 23px;
   color: #b9bb8d;
 }
 .title-rule span {
@@ -458,22 +565,22 @@ button:active {
 }
 .title-description {
   white-space: pre-line;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
-  color: #c2cbb8;
+  color: #d5decf;
 }
 .begin-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 38px;
-  margin: 32px auto 0;
+  margin: 32px 0 0;
   padding: 18px 30px;
   border-radius: 50px;
   min-width: 210px;
   background: #eee5cd;
   color: #314a3c;
-  font-size: 15px;
+  font-size: 17px;
   box-shadow: 0 4px 25px #0a262025;
 }
 .begin-button:hover {
@@ -482,36 +589,152 @@ button:active {
 }
 .sound-note {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 9px;
   font-family: Arial, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.4px;
-  color: #a8b49f;
+  color: #c6d3bf;
   margin-top: 19px;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+}
+.sound-note:hover {
+  color: var(--cream);
 }
 .sound-note svg {
   width: 13px;
   height: 13px;
 }
 .title-footer {
-  position: absolute;
-  bottom: max(30px, env(safe-area-inset-bottom));
-  left: 5.3%;
-  right: 5.3%;
+  grid-area: 3 / 1 / 4 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
-  color: #a7b79d;
+  color: #d0ddc8;
+  border-top: 1px solid #e5ebd733;
+  padding-top: 22px;
+  gap: 24px;
 }
 .title-footer > span:last-child {
   font:
     8px Arial,
     sans-serif;
   letter-spacing: 2px;
-  color: #94a58c;
+  color: #d0ddc8;
+}
+.title-meadow-caption {
+  grid-area: 2 / 2;
+  align-self: end;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+  margin-bottom: 16px;
+  padding: 18px 22px;
+  border: 1px solid #eff4de40;
+  border-radius: 18px;
+  background: #102f26c7;
+  backdrop-filter: blur(12px);
+  color: #f4f0db;
+}
+.title-meadow-caption > svg {
+  flex-shrink: 0;
+  color: #b5d2a4;
+}
+.title-meadow-caption .eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #d8e5ce;
+}
+.meadow-name {
+  font-size: 25px;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+.meadow-playback {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #eff4de66;
+  border-radius: 50%;
+  background: #e7eedb0c;
+  color: #f4f0db;
+}
+.meadow-playback:hover {
+  background: #e7eedb26;
+}
+@media (max-height: 600px) {
+  .title-screen {
+    gap: 18px 24px;
+    padding-block: max(20px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-bottom));
+  }
+  .title-content h1 {
+    font-size: clamp(54px, 7vw, 80px);
+    margin-top: 12px;
+  }
+  .title-sub {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .title-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .title-rule {
+    margin: 12px 0;
+  }
+  .begin-button {
+    margin-top: 18px;
+    padding-block: 14px;
+  }
+  .sound-note {
+    margin-top: 12px;
+  }
+  .title-footer {
+    padding-top: 14px;
+  }
+}
+@media (max-height: 450px) and (min-width: 701px) {
+  .title-content h1 {
+    font-size: 56px;
+    margin-top: 8px;
+  }
+  .title-sub {
+    font-size: 21px;
+    margin-top: 8px;
+  }
+  .title-rule {
+    display: none;
+  }
+  .title-description {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .begin-button {
+    margin-top: 14px;
+    padding-block: 12px;
+  }
+  .sound-note {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+  .title-meadow-caption {
+    padding: 14px 16px;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+  .meadow-name {
+    font-size: 22px;
+  }
 }
 .tiny-star {
   padding: 0 15px;
@@ -1340,42 +1563,78 @@ kbd {
   }
 }
 @media (max-width: 700px) {
+  .title-screen {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto auto;
+    gap: 24px;
+    padding: max(24px, env(safe-area-inset-top))
+      max(24px, env(safe-area-inset-right))
+      max(20px, env(safe-area-inset-bottom))
+      max(24px, env(safe-area-inset-left));
+  }
+  .title-art img,
+  .title-art video {
+    object-position: 80% 50%;
+  }
+  .title-art::after {
+    background:
+      linear-gradient(90deg, #0c251fcc, #0c251f66),
+      linear-gradient(0deg, #0c251fe6, #0c251f00 40%);
+  }
   .brand {
     top: max(25px, env(safe-area-inset-top));
     left: 25px;
     font-size: 16px;
   }
   .title-content {
-    top: 45%;
+    grid-area: 2 / 1;
+    padding-block: 20px;
   }
   .title-content h1 {
     letter-spacing: -0.035em;
-    font-size: 76px;
+    font-size: clamp(60px, 17vw, 88px);
   }
   .title-content .eyebrow {
     font-size: 8px;
-    letter-spacing: 2.8px;
+    letter-spacing: 2.3px;
   }
   .title-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .title-footer {
-    left: 25px;
-    right: 25px;
-    bottom: max(25px, env(safe-area-inset-bottom));
-    justify-content: center;
+    grid-area: 4 / 1;
+    justify-content: flex-start;
+    padding-top: 16px;
   }
   .title-footer > span:last-child {
     display: none;
   }
   .title-rule {
-    margin: 25px auto 20px;
+    margin: 25px 0 20px;
   }
   .begin-button {
     margin-top: 28px;
   }
   .sound-note {
-    font-size: 9px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .title-meadow-caption {
+    grid-area: 3 / 1;
+    justify-self: stretch;
+    padding: 14px 16px;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+  .title-meadow-caption > div {
+    flex: 1;
+  }
+  .title-meadow-caption .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+  .meadow-name {
+    font-size: 23px;
   }
   .hud-left {
     left: 14px;
@@ -1539,13 +1798,60 @@ kbd {
     bottom: 25px;
   }
 }
-@media (max-height: 600px) {
+@media (max-width: 700px) and (max-height: 700px) {
+  .title-screen {
+    gap: 14px;
+    padding-block: max(20px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-bottom));
+  }
   .title-content {
-    top: 49%;
-    transform: translate(-50%, -50%) scale(0.8);
+    padding-block: 0;
+  }
+  .title-content h1 {
+    font-size: 60px;
+    margin-top: 12px;
+  }
+  .title-sub {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+  .title-rule {
+    margin: 12px 0;
+  }
+  .title-rule .brand-logo {
+    width: 22px;
+    height: 22px;
+  }
+  .title-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .begin-button {
+    margin-top: 18px;
+    padding: 14px 24px;
+    gap: 24px;
+    font-size: 16px;
+  }
+  .sound-note {
+    margin-top: 12px;
+    font-size: 9px;
+    line-height: 1.3;
+  }
+  .title-meadow-caption {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .meadow-name {
+    font-size: 20px;
+    margin-top: 4px;
   }
   .title-footer {
-    bottom: 15px;
+    padding-top: 12px;
+  }
+}
+@media (max-height: 600px) {
+  .title-content {
+    padding-block: 0;
   }
   .brand {
     top: 20px;
@@ -1729,11 +2035,6 @@ kbd {
 .hud-left .journal-button {
   position: static;
 }
-.title-language {
-  position: absolute;
-  top: 26px;
-  right: 90px;
-}
 .memory-slot,
 .memory-slot.filled {
   width: 44px;
@@ -1800,10 +2101,6 @@ kbd {
   .journal-tabs button {
     padding: 10px;
     font-size: 13px;
-  }
-  .title-language {
-    right: 70px;
-    top: 18px;
   }
 }
 @media (max-height: 500px) and (min-width: 701px) {

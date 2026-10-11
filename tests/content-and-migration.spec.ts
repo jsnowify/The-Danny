@@ -1,4 +1,3 @@
-import { FIL } from "../src/config/localization";
 import { test, expect } from "@playwright/test";
 import { MEMORIES, TEXT } from "../src/config";
 import {
@@ -70,7 +69,7 @@ test("extended saves sanitize encounters without mixing them into the eight memo
   expect(restored).toMatchObject({
     metOscar: true,
     finaleSeen: true,
-    language: "fil",
+    language: "en",
   });
   expect(
     normalizeProgress({ metOscar: "yes", language: "other" }),
@@ -118,7 +117,6 @@ test("cinematic intro has no gameplay HUD or hints, including while paused", asy
 test("v2 encounters survive upgrade, preview, settings changes and reload; confirmed reset clears them", async ({
   page,
 }) => {
-  const TEXT = FIL;
   const progress = {
     collected: ["lake", "garden"],
     hung: ["lake"],
@@ -151,11 +149,13 @@ test("v2 encounters survive upgrade, preview, settings changes and reload; confi
     await expect(page.locator(".hud")).toBeVisible();
   };
   await page.goto("/?test=1");
-  expect((await read()).state).toMatchObject(progress);
+  await expect(page.getByRole("button", { name: TEXT.begin })).toBeVisible();
+  expect((await read()).state).toMatchObject({ ...progress, language: "en" });
   await enter();
   expect((await read()).version).toBe(SAVE_VERSION);
   const expectedProgress = {
     ...progress,
+    language: "en",
     discoveredSpecies: (await read()).state.discoveredSpecies,
   };
   expect(expectedProgress.discoveredSpecies).toEqual(
@@ -197,7 +197,7 @@ test("v2 encounters survive upgrade, preview, settings changes and reload; confi
     discoveredSpecies: [],
     metOscar: false,
     finaleSeen: false,
-    language: "fil",
+    language: "en",
   });
   // A fresh journey after reset must still save to the new envelope.
   await enter();

@@ -2,7 +2,7 @@
 // together so changing the presentation cannot silently block a walking route.
 export const CAMERA = {
   pitch: 42,
-  distance: 16,
+  distance: 13.8,
   // Equivalent framing angle for the orthographic frustum, not a lens FOV.
   fov: 38,
   lookAhead: 1.9,
@@ -11,17 +11,17 @@ export const CAMERA = {
   damping: 0.5,
   focusDamping: 0.6,
   screenOffsetY: 0,
-  clearingFootY: 0.74,
+  clearingFootY: 0.76,
   portraitFootY: 0.72,
-  landscapeFootY: 0.76,
-  landmarkMargin: 18,
-  landmarkHeadroom: 0.4,
+  landscapeFootY: 0.78,
+  landmarkMargin: 14,
+  landmarkHeadroom: 0.22,
   landmarkRange: 6,
   landmarkFadeRange: 10,
   portraitMinWidth: 5.8,
 };
 export const COMPOSITION = {
-  travelerScale: 1.18,
+  travelerScale: 0.92,
   clearingRadius: 6,
   treeMargin: 7.8,
   pathHalfWidth: 0.85,

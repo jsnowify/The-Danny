@@ -7,7 +7,6 @@ import { SPECIES_IDS } from "./config/discoveries";
 import { COMPANION_BY_ID } from "./config/companions";
 import { animals } from "./features/animals/simulation";
 import { traveler } from "./scene/runtime";
-import { DICTIONARIES } from "./config/localization";
 import type { IdleStage } from "./features/idleClock";
 import type { RegionId } from "./config/regions";
 import {
@@ -69,6 +68,9 @@ type State = DiscoveryProgress & {
   nearCompanions: string[];
   nearOscar: boolean;
   oscarDialogue: boolean;
+  companionDialogue: string | null;
+  companionDialogueStep: number;
+  seatedWithOscar: boolean;
   idleStage: IdleStage;
   discoverCompanions: (ids: string[]) => void;
   interactCompanion: (id: string) => void;
@@ -134,6 +136,9 @@ export const useStore = create<State>()(
       nearCompanions: [],
       nearOscar: false,
       oscarDialogue: false,
+      companionDialogue: null,
+      companionDialogueStep: 0,
+      seatedWithOscar: false,
       idleStage: 0,
       discoverCompanions: (ids) => {
         const s = get();
@@ -176,6 +181,9 @@ export const useStore = create<State>()(
           s.journalOpen ||
           s.fieldGuideOpen ||
           s.oscarDialogue ||
+          s.companionDialogue ||
+          s.dedicationOpen ||
+          s.seatedWithOscar ||
           Math.hypot(a.x - traveler.x, a.z - traveler.z) > 2.7
         )
           return;
@@ -185,7 +193,7 @@ export const useStore = create<State>()(
         if (c.species === "cat")
           set({ interactedCats: [...new Set([...s.interactedCats, id])] });
         else set({ interactedDogs: [...new Set([...s.interactedDogs, id])] });
-        set({ toast: `${DICTIONARIES[s.language].sharedMoment} ${c.name}.` });
+        set({ companionDialogue: id, companionDialogueStep: 0, toast: null });
         playSound(c.species === "cat" ? "cat" : "dog");
       },
       talkOscar: () => {
@@ -195,7 +203,10 @@ export const useStore = create<State>()(
           s.nearOscar &&
           !s.paused &&
           !s.journalOpen &&
-          !s.fieldGuideOpen
+          !s.fieldGuideOpen &&
+          !s.companionDialogue &&
+          !s.dedicationOpen &&
+          !s.seatedWithOscar
         ) {
           set({
             oscarDialogue: true,
@@ -297,6 +308,8 @@ export const useStore = create<State>()(
           !s.journalOpen &&
           !s.fieldGuideOpen &&
           !s.oscarDialogue &&
+          !s.companionDialogue &&
+          !s.seatedWithOscar &&
           !s.dedicationOpen
         ) {
           playSound("paper");
@@ -358,6 +371,9 @@ export const useStore = create<State>()(
           nearCompanions: [],
           nearOscar: false,
           oscarDialogue: false,
+          companionDialogue: null,
+          companionDialogueStep: 0,
+          seatedWithOscar: false,
           idleStage: 0,
           regionId: "clearing",
           revivalRadius: 0,

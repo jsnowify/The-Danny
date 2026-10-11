@@ -5,8 +5,9 @@ import { QUALITY, WORLD } from "../config";
 import { useStore } from "../store";
 import { traveler } from "./runtime";
 import { useAssets } from "./resources";
-import type { BaseKind as Kind, WorldData } from "./world";
+import type { BaseKind, WorldData } from "./world";
 import { InstanceVisibility } from "./instanceVisibility";
+type Kind = Exclude<BaseKind, "blueFlower">;
 
 const kinds: Kind[] = [
   "grass",
@@ -14,7 +15,6 @@ const kinds: Kind[] = [
   "crown",
   "trunk",
   "bush",
-  "flower",
   "mushroom",
   "rock",
   "log",
@@ -28,7 +28,6 @@ const capacities: Record<Kind, number> = {
   crown: 900,
   trunk: 1200,
   bush: 700,
-  flower: 2200,
   mushroom: 400,
   rock: 520,
   log: 25,
@@ -46,7 +45,6 @@ export function Flora({ world }: { world: WorldData }) {
       cx: Infinity,
       cz: Infinity,
       tier: "",
-      yaw: Infinity,
       visibility: new InstanceVisibility(),
     }),
     [],
@@ -67,27 +65,17 @@ export function Flora({ world }: { world: WorldData }) {
     const cx = Math.floor(traveler.x / 3),
       cz = Math.floor(traveler.z / 3),
       tier = useStore.getState().tier;
-    const yaw = Math.atan2(
-      camera.position.x - traveler.x,
-      camera.position.z - traveler.z,
-    );
-    const viewChanged = scratch.visibility.update(
-      camera,
-      scene,
-      tier !== "low",
-    );
+    const viewChanged = scratch.visibility.update(camera, scene, true);
     if (
       cx === scratch.cx &&
       cz === scratch.cz &&
       tier === scratch.tier &&
-      Math.abs(yaw - scratch.yaw) < 0.025 &&
       !viewChanged
     )
       return;
     scratch.cx = cx;
     scratch.cz = cz;
     scratch.tier = tier;
-    scratch.yaw = yaw;
     const counts = Object.fromEntries(
       [...kinds, "pineFar", "crownFar"].map((k) => [k, 0]),
     ) as Record<Batch, number>;
@@ -108,8 +96,7 @@ export function Flora({ world }: { world: WorldData }) {
             continue;
           const item = list[i],
             distance = Math.hypot(item.x - traveler.x, item.z - traveler.z);
-          const detail =
-            kind === "flower" || kind === "mushroom" || kind === "bush";
+          const detail = kind === "mushroom" || kind === "bush";
           const limit =
             kind === "grass"
               ? tier === "high"
@@ -131,20 +118,20 @@ export function Flora({ world }: { world: WorldData }) {
           // Keep the exact original capacity selection before visibility filtering.
           if (eligible[batch]++ >= capacities[kind]) continue;
           const rotation =
-            (kind === "rock" ? item.rotation * 0.15 : item.rotation) +
-            (kind === "pine" ||
-            kind === "crown" ||
-            kind === "bush" ||
-            kind === "rock"
-              ? yaw
-              : 0);
-          // VSM also renders receivers into its shadow map; retain that union.
+            kind === "grass"
+              ? (item.rotation - Math.PI) * 0.22
+              : kind === "rock"
+                ? item.rotation * 0.15
+                : kind === "reed" || kind === "mushroom" || kind === "log"
+                  ? (item.rotation - Math.PI) * 0.04
+                  : item.rotation;
+          // Include off-screen tree casters in every quality tier.
           if (
             !scratch.visibility.intersects(
               assets.geometries[batch],
               item,
               rotation,
-              tier !== "low" && kind !== "grass",
+              kind !== "grass",
             )
           )
             continue;
@@ -159,7 +146,7 @@ export function Flora({ world }: { world: WorldData }) {
           mesh.setColorAt(
             n,
             scratch.color.set(
-              canopy || kind === "trunk" || kind === "rock"
+              canopy || kind === "trunk" || kind === "rock" || kind === "bush"
                 ? "#ffffff"
                 : item.color,
             ),
@@ -207,14 +194,16 @@ export function Flora({ world }: { world: WorldData }) {
                 ? kind.startsWith("pine")
                   ? assets.forest.palettes.honey
                   : assets.forest.palettes.vermilion
-                : kind === "trunk"
-                  ? assets.forest.bark
-                  : kind === "rock"
-                    ? assets.props.stone
-                    : kind === "log"
-                      ? assets.props.wood
-                      : kind === "grass"
-                        ? assets.materials.foliage
+                : kind in assets.drawings.materials
+                  ? assets.drawings.materials[
+                      kind as keyof typeof assets.drawings.materials
+                    ]
+                  : kind === "trunk"
+                    ? assets.forest.bark
+                    : kind === "grass"
+                      ? assets.materials.foliage
+                      : kind === "bush"
+                        ? assets.forest.shrub
                         : assets.props.botanical,
               capacities[kind.replace("Far", "") as Kind],
             ]}
@@ -223,9 +212,11 @@ export function Flora({ world }: { world: WorldData }) {
             customDepthMaterial={
               canopy || kind === "trunk"
                 ? assets.forest.depth
-                : assets.materials.depth
+                : kind === "bush"
+                  ? assets.forest.shrubDepth
+                  : assets.materials.depth
             }
-            receiveShadow={kind !== "grass"}
+            receiveShadow
           />
         );
       })}
@@ -242,6 +233,7 @@ export function Flora({ world }: { world: WorldData }) {
             capacities[kind],
           ]}
           frustumCulled={false}
+          visible={false}
         />
       ))}
     </group>

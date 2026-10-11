@@ -1,53 +1,20 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import {
-  CapsuleGeometry,
-  SphereGeometry,
-  MeshStandardMaterial,
-  Group,
-} from "three";
+import { Group, Mesh } from "three";
 import { OSCAR } from "../../config/oscar";
 import { useStore } from "../../store";
 import { traveler, oscarRuntime } from "../../scene/runtime";
 export { oscarRuntime } from "../../scene/runtime";
 import { groundHeight } from "../../utils/random";
 import type { WorldData } from "../../scene/world";
-import { useAssets } from "../../scene/resources";
-import { paintedSurface } from "../../visual/paintedSurface";
+import { OSCAR_FRAMES, OSCAR_ROWS } from "./paint";
+import { oscarSpriteAssets, selectOscarFrame } from "./sprite";
+import { OSCAR_SEAT, OSCAR_BENCH } from "./bench";
+
 export function Oscar({ world }: { world: WorldData }) {
-  const root = useRef<Group>(null),
-    torso = useRef<Group>(null),
-    head = useRef<Group>(null),
-    left = useRef<Group>(null),
-    right = useRef<Group>(null);
-  const shared = useAssets();
-  const assets = useMemo(
-    () => ({
-      body: new CapsuleGeometry(0.22, 0.45, 4, 8),
-      head: new SphereGeometry(0.19, 12, 8),
-      limb: new CapsuleGeometry(0.067, 0.31, 3, 6),
-      eye: new SphereGeometry(0.017, 6, 4),
-      shirt: paintedSurface(
-        new MeshStandardMaterial({ color: OSCAR.shirt }),
-        shared.props.paper,
-      ),
-      pants: paintedSurface(
-        new MeshStandardMaterial({ color: OSCAR.trousers }),
-        shared.props.paper,
-      ),
-      skin: paintedSurface(
-        new MeshStandardMaterial({ color: OSCAR.skin }),
-        shared.props.paper,
-        0.045,
-      ),
-      hair: paintedSurface(
-        new MeshStandardMaterial({ color: OSCAR.hair }),
-        shared.props.paper,
-        0.035,
-      ),
-    }),
-    [shared.props.paper],
-  );
+  const root = useRef<Group>(null);
+  const sprite = useRef<Mesh>(null);
+  const assets = useMemo(oscarSpriteAssets, []);
   const sim = useMemo(
     () => ({
       clock: 0,
@@ -56,25 +23,43 @@ export function Oscar({ world }: { world: WorldData }) {
       targetZ: OSCAR.home[1],
       walk: false,
       scan: 0,
+      yaw: 0,
     }),
     [],
   );
   useEffect(() => {
+    const lease = ++assets.lease;
     oscarRuntime.x = OSCAR.home[0];
     oscarRuntime.z = OSCAR.home[1];
-    return () => Object.values(assets).forEach((a) => a.dispose());
+    oscarRuntime.pose = "sit";
+    return () => {
+      queueMicrotask(() => {
+        if (assets.lease === lease) assets.dispose();
+      });
+    };
   }, [assets]);
-  useFrame((_, delta) => {
-    const s = useStore.getState(),
-      dt = Math.min(delta, 0.08),
-      active =
-        s.phase === "explore" &&
-        !s.paused &&
-        !s.journalOpen &&
-        !s.fieldGuideOpen &&
-        !s.oscarDialogue &&
-        !s.dedicationOpen;
-    if (active) {
+  useFrame(({ camera }, delta) => {
+    const s = useStore.getState();
+    const dt = Math.max(0, Math.min(delta, 0.08));
+    const active =
+      s.phase === "explore" &&
+      !s.paused &&
+      !s.journalOpen &&
+      !s.fieldGuideOpen &&
+      !s.oscarDialogue &&
+      !s.companionDialogue &&
+      !s.dedicationOpen;
+    let targetYaw = sim.yaw;
+    if (s.seatedWithOscar) {
+      oscarRuntime.x = OSCAR_SEAT.x;
+      oscarRuntime.z = OSCAR_SEAT.z;
+      oscarRuntime.pose = "sit";
+      sim.yaw = OSCAR_BENCH.yaw;
+      sim.walk = false;
+      sim.targetX = OSCAR.home[0];
+      sim.targetZ = OSCAR.home[1];
+      sim.next = sim.clock + 18;
+    } else if (active) {
       sim.clock += dt;
       sim.scan += dt;
       if (sim.scan > 0.35) {
@@ -90,9 +75,9 @@ export function Oscar({ world }: { world: WorldData }) {
         sim.targetX = OSCAR.home[0] + (sim.walk ? -0.8 : 0);
         sim.targetZ = OSCAR.home[1] + (sim.walk ? 0.5 : 0);
       }
-      const dx = sim.targetX - oscarRuntime.x,
-        dz = sim.targetZ - oscarRuntime.z,
-        length = Math.hypot(dx, dz);
+      const dx = sim.targetX - oscarRuntime.x;
+      const dz = sim.targetZ - oscarRuntime.z;
+      const length = Math.hypot(dx, dz);
       if (
         length > 0.05 &&
         Math.hypot(traveler.x - oscarRuntime.x, traveler.z - oscarRuntime.z) > 1
@@ -105,90 +90,74 @@ export function Oscar({ world }: { world: WorldData }) {
         oscarRuntime.x = p.x;
         oscarRuntime.z = p.z;
         oscarRuntime.pose = "walk";
-        root.current!.rotation.y = Math.atan2(dx, dz);
+        targetYaw = Math.atan2(dx, dz);
       } else oscarRuntime.pose = sim.walk ? "idle" : "sit";
+      const close =
+        Math.hypot(traveler.x - oscarRuntime.x, traveler.z - oscarRuntime.z) <
+        5;
+      if (close && oscarRuntime.pose !== "walk")
+        targetYaw = Math.atan2(
+          traveler.x - oscarRuntime.x,
+          traveler.z - oscarRuntime.z,
+        );
+      sim.yaw +=
+        Math.atan2(
+          Math.sin(targetYaw - sim.yaw),
+          Math.cos(targetYaw - sim.yaw),
+        ) *
+        (1 - Math.exp(-dt * 8));
     }
-    const close =
-      Math.hypot(traveler.x - oscarRuntime.x, traveler.z - oscarRuntime.z) < 5;
-    if (close)
-      root.current!.rotation.y = Math.atan2(
-        traveler.x - oscarRuntime.x,
-        traveler.z - oscarRuntime.z,
-      );
     root.current!.position.set(
       oscarRuntime.x,
-      groundHeight(oscarRuntime.x, oscarRuntime.z),
+      groundHeight(oscarRuntime.x, oscarRuntime.z) +
+        (s.seatedWithOscar ? OSCAR_BENCH.actorHeight : 0.025),
       oscarRuntime.z,
     );
-    const sit = oscarRuntime.pose === "sit",
-      stride = s.settings.reducedMotion
-        ? 0
-        : oscarRuntime.pose === "walk"
-          ? Math.sin(sim.clock * 7) * 0.26
-          : 0;
-    const blend = 1 - Math.exp(-dt * 8);
-    torso.current!.position.y +=
-      ((sit ? -0.23 : 0) - torso.current!.position.y) * blend;
-    left.current!.rotation.x +=
-      ((sit ? -1.05 : stride) - left.current!.rotation.x) * blend;
-    right.current!.rotation.x +=
-      ((sit ? -1.05 : -stride) - right.current!.rotation.x) * blend;
-    head.current!.rotation.z =
-      !s.settings.reducedMotion && close
-        ? Math.sin(sim.clock * 0.8) * 0.035
-        : 0;
+    sprite.current!.quaternion.copy(camera.quaternion);
+    if (s.seatedWithOscar)
+      sprite.current!.rotation.set(
+        0,
+        Math.atan2(
+          camera.position.x - oscarRuntime.x,
+          camera.position.z - oscarRuntime.z,
+        ),
+        0,
+      );
+    root.current!.getObjectByName("oscar-contact")!.position.y =
+      -0.013 - (s.seatedWithOscar ? OSCAR_BENCH.actorHeight : 0);
+    const selected = selectOscarFrame(
+      oscarRuntime.pose,
+      sim.yaw,
+      sim.clock,
+      s.settings.reducedMotion,
+    );
+    sprite.current!.scale.x = selected.flip;
+    if (assets.row !== selected.row || assets.frame !== selected.frame) {
+      assets.texture.offset.set(
+        selected.frame / OSCAR_FRAMES,
+        1 - (selected.row + 1) / OSCAR_ROWS,
+      );
+      assets.row = selected.row;
+      assets.frame = selected.frame;
+    }
+    Object.assign(sprite.current!.userData, selected);
   });
   return (
     <group ref={root} name="oscar" dispose={null}>
-      <group ref={torso}>
-        <mesh
-          geometry={assets.body}
-          material={assets.shirt}
-          position={[0, 0.97, 0]}
-        />
-        <group ref={head} position={[0, 1.49, 0]}>
-          <mesh geometry={assets.head} material={assets.skin} />
-          <mesh
-            geometry={assets.head}
-            material={assets.hair}
-            scale={[1.02, 0.5, 1.02]}
-            position={[0, 0.11, -0.02]}
-          />
-          {[-1, 1].map((s) => (
-            <mesh
-              key={s}
-              geometry={assets.eye}
-              material={assets.hair}
-              position={[s * 0.068, 0.025, 0.18]}
-            />
-          ))}
-        </group>
-        {[-1, 1].map((s) => (
-          <mesh
-            key={s}
-            geometry={assets.limb}
-            material={assets.shirt}
-            position={[s * 0.285, 0.89, 0]}
-            rotation={[0, 0, s * 0.12]}
-          />
-        ))}
-      </group>
-      <group ref={left} position={[-0.115, 0.59, 0]}>
-        <mesh
-          geometry={assets.limb}
-          material={assets.pants}
-          scale={[1.2, 1.2, 1.2]}
-          position={[0, -0.3, 0]}
-        />
-      </group>
-      <group ref={right} position={[0.115, 0.59, 0]}>
-        <mesh
-          geometry={assets.limb}
-          material={assets.pants}
-          scale={[1.2, 1.2, 1.2]}
-          position={[0, -0.3, 0]}
-        />
-      </group>
+      <mesh
+        name="oscar-contact"
+        geometry={assets.shadowGeometry}
+        material={assets.shadowMaterial}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, -0.013, 0]}
+        scale={[0.35, 0.2, 1]}
+      />
+      <mesh
+        ref={sprite}
+        name="oscar-illustration"
+        geometry={assets.geometry}
+        material={assets.material}
+      />
     </group>
   );
 }

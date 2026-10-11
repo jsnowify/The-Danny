@@ -1,0 +1,194 @@
+[
+  {
+    "id": "snowa",
+    "mode": "idle",
+    "minimum": 0.024569117884352273,
+    "maximum": 0.624952177336934
+  },
+  {
+    "id": "hoshi",
+    "mode": "idle",
+    "minimum": 0.023767774605982075,
+    "maximum": 0.5615980522095443
+  },
+  {
+    "id": "thoma",
+    "mode": "idle",
+    "minimum": 0.02527656044451025,
+    "maximum": 0.7202335384516179
+  },
+  {
+    "id": "simba",
+    "mode": "idle",
+    "minimum": 0.022869514359491055,
+    "maximum": 0.6828161510562734
+  },
+  {
+    "id": "star",
+    "mode": "idle",
+    "minimum": 0.02624943820669769,
+    "maximum": 0.6131805611395269
+  },
+  {
+    "id": "nano",
+    "mode": "idle",
+    "minimum": 0.024645177478313005,
+    "maximum": 0.872223304058623
+  },
+  {
+    "id": "doreamon",
+    "mode": "idle",
+    "minimum": 0.024087363548484064,
+    "maximum": 0.871440656509054
+  },
+  {
+    "id": "max",
+    "mode": "idle",
+    "minimum": 0.02398208619875551,
+    "maximum": 1.0532037337772524
+  },
+  {
+    "id": "snowa",
+    "mode": "sit",
+    "minimum": 0.0244011855554173,
+    "maximum": 0.5933703688600305
+  },
+  {
+    "id": "hoshi",
+    "mode": "sit",
+    "minimum": 0.025437850392576747,
+    "maximum": 0.5345289471893838
+  },
+  {
+    "id": "thoma",
+    "mode": "sit",
+    "minimum": 0.026092139876753115,
+    "maximum": 0.7040546310698282
+  },
+  {
+    "id": "simba",
+    "mode": "sit",
+    "minimum": 0.025117305825421293,
+    "maximum": 0.643153235549429
+  },
+  {
+    "id": "star",
+    "mode": "sit",
+    "minimum": 0.02651402127207041,
+    "maximum": 0.5994692843397202
+  },
+  {
+    "id": "nano",
+    "mode": "sit",
+    "minimum": 0.024434928899910294,
+    "maximum": 0.7917466824363568
+  },
+  {
+    "id": "doreamon",
+    "mode": "sit",
+    "minimum": 0.024087363548484064,
+    "maximum": 0.7910184198291919
+  },
+  {
+    "id": "max",
+    "mode": "sit",
+    "minimum": 0.02372991809392226,
+    "maximum": 0.8577106077911554
+  },
+  {
+    "id": "snowa",
+    "mode": "sleep",
+    "minimum": 0.026910503070973466,
+    "maximum": 0.36715768965247797
+  },
+  {
+    "id": "hoshi",
+    "mode": "sleep",
+    "minimum": 0.029254627422774113,
+    "maximum": 0.3394317725475106
+  },
+  {
+    "id": "thoma",
+    "mode": "sleep",
+    "minimum": 0.026703145834326675,
+    "maximum": 0.38741816550562175
+  },
+  {
+    "id": "simba",
+    "mode": "sleep",
+    "minimum": 0.030268938493089953,
+    "maximum": 0.4071402717146753
+  },
+  {
+    "id": "star",
+    "mode": "sleep",
+    "minimum": 0.029014268689875795,
+    "maximum": 0.3313634146448728
+  },
+  {
+    "id": "nano",
+    "mode": "sleep",
+    "minimum": 0.02757688339212465,
+    "maximum": 0.46681835895867163
+  },
+  {
+    "id": "doreamon",
+    "mode": "sleep",
+    "minimum": 0.027419392916161592,
+    "maximum": 0.4661190247929582
+  },
+  {
+    "id": "max",
+    "mode": "sleep",
+    "minimum": 0.027505552049913194,
+    "maximum": 0.5042682889424182
+  },
+  {
+    "id": "snowa",
+    "mode": "groom",
+    "minimum": 0.0244011855554173,
+    "maximum": 0.6034960974870207
+  },
+  {
+    "id": "hoshi",
+    "mode": "groom",
+    "minimum": 0.025437850392576747,
+    "maximum": 0.5540294921194493
+  },
+  {
+    "id": "thoma",
+    "mode": "groom",
+    "minimum": 0.023642331247245713,
+    "maximum": 0.6449523264838765
+  },
+  {
+    "id": "simba",
+    "mode": "groom",
+    "minimum": 0.025117305825421293,
+    "maximum": 0.6588196528061854
+  },
+  {
+    "id": "star",
+    "mode": "groom",
+    "minimum": 0.025984590543596826,
+    "maximum": 0.5412621842512032
+  },
+  {
+    "id": "nano",
+    "mode": "groom",
+    "minimum": 0.024434928899910294,
+    "maximum": 0.7859704618804549
+  },
+  {
+    "id": "doreamon",
+    "mode": "groom",
+    "minimum": 0.024087363548484064,
+    "maximum": 0.7848600346115563
+  },
+  {
+    "id": "max",
+    "mode": "groom",
+    "minimum": 0.02372991809392226,
+    "maximum": 0.8506806392081829
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "recordedAt": "2026-10-10T15:12:31.918Z",
+  "build": "passed",
+  "format": "passed",
+  "browserTests": 9,
+  "cameraFailureSpan": 918,
+  "finalTravelSpan": 9.503442126794761,
+  "errors": [],
+  "continuousTravel": [
+    {
+      "name": "long-KeyD",
+      "x": 85.87101850722699,
+      "z": 8.953031070031557,
+      "speed": 0,
+      "span": 9.503442126794761,
+      "position": [
+        85.85866577253434,
+        10.24146265768597,
+        17.3084296616196
+      ],
+      "framing": 13.800000000000002,
+      "pitch": 42,
+      "foot": [
+        0.5006221230005102,
+        0.7002454719403284
+      ],
+      "grassCount": 489,
+      "triangles": 125202,
+      "calls": 34
+    },
+    {
+      "name": "long-KeyW",
+      "x": 86.50838540545303,
+      "z": -94,
+      "speed": 0,
+      "span": 9.503442126794761,
+      "position": [
+        86.50838540545303,
+        10.026361389859323,
+        -85.63967305186118
+      ],
+      "framing": 13.800000000000002,
+      "pitch": 42.000000000000014,
+      "foot": [
+        0.5,
+        0.699898469858011
+      ],
+      "grassCount": 307,
+      "triangles": 108834,
+      "calls": 34
+    },
+    {
+      "name": "long-KeyA",
+      "x": 77.13443313019788,
+      "z": -94.00000000000001,
+      "speed": 0,
+      "span": 9.503442126794761,
+      "position": [
+        77.13443313019788,
+        9.81788724781164,
+        -85.64460140841197
+      ],
+      "framing": 13.800000000000002,
+      "pitch": 42,
+      "foot": [
+        0.5,
+        0.7002454719403282
+      ],
+      "grassCount": 301,
+      "triangles": 101454,
+      "calls": 34
+    },
+    {
+      "name": "long-KeyS",
+      "x": 77.97901218335018,
+      "z": 12.561967968749245,
+      "speed": 0,
+      "span": 9.503442126794761,
+      "position": [
+        77.97901218335018,
+        10.112208650400834,
+        20.904351368605326
+      ],
+      "framing": 13.800000000000002,
+      "pitch": 42.000000000000014,
+      "foot": [
+        0.5,
+        0.7011618623407003
+      ],
+      "grassCount": 477,
+      "triangles": 132512,
+      "calls": 35
+    }
+  ],
+  "companionPoses": {
+    "count": 32,
+    "minClearance": -0.03463358808692785,
+    "maxHeight": 1.4309592581731656
+  },
+  "sequence": {
+    "frames": 48,
+    "peakSpeed": 4.39997007239764
+  },
+  "review": {
+    "images": [
+      {
+        "source": "before/avenue-after-quality.png",
+        "width": 2398,
+        "height": 1148
+      },
+      {
+        "source": "after/quality-medium.png",
+        "width": 2398,
+        "height": 1148
+      },
+      {
+        "source": "before/avenue.png",
+        "width": 2398,
+        "height": 1148
+      },
+      {
+        "source": "after/avenue.png",
+        "width": 2398,
+        "height": 1148
+      },
+      {
+        "source": "after/companions.png",
+        "width": 1708,
+        "height": 960
+      },
+      {
+        "source": "reference/ref4.jpg",
+        "width": 1920,
+        "height": 608
+      },
+      {
+        "source": "reference/vid-ref3.jpg",
+        "width": 1920,
+        "height": 612
+      },
+      {
+        "source": "reference/vid-ref.jpg",
+        "width": 1920,
+        "height": 612
+      },
+      {
+        "source": "reference/vid-ref2.jpg",
+        "width": 1920,
+        "height": 616
+      }
+    ],
+    "duration": 4,
+    "videoWidth": 1708
+  },
+  "sourceHashes": {
+    "src/config/visual.ts": "d54df1d1d976ca6bea950ca68b8b3a87c92b91c37ce4463b5c79080e8b601578",
+    "src/config/world.ts": "140ff8802bf98f5b00646720a07b4549b9c0b3df54484a15666893f114bfaacb",
+    "src/scene/Scene.tsx": "37914589b7eb84c78a6939ee3d542ed6f57db7d144f7839c1a30a435a2a63f67",
+    "src/scene/Camera.tsx": "0656b5d3a9083653debd31ff7c7d9dec14b1b4c3ed01467ff7000b019cfd53bd",
+    "src/scene/Flora.tsx": "15b52b037cedec4565f92c1742c3f66a4f4ac63b4b3ce43c75aeb0391b167f5f",
+    "src/scene/paintedGeometry.ts": "5491f376783eb6dcd97bee317a3e53d75cdf2c44e8ee6b3465b03ea0ddbf9f7a",
+    "src/scene/world.ts": "02b5fc397cb50e8997ca6ef4f96c557d50cec630a8a7bf973d67876b8d564094",
+    "src/scene/resources.tsx": "9e72fe682c14b12c162e05618fa09de2ab228319d0ba469baa7210c40b7455d3",
+    "src/scene/instanceVisibility.ts": "365511369ac5643f8c0923ba8ebd912bfdca12cf75ecc04609349c685fdc0094",
+    "src/shaders/wind.ts": "205e97b62c43f9c266e743931a8b55381dd21b86c6a47225000b48b7ea5741f7",
+    "src/visual/landscapePaint.ts": "f0f6fa03bb31ec529b078a8c0968dc0b3e505ebb5e50a861241a2fad46d766c2",
+    "src/visual/approved/paint.ts": "6726ae9e6df6a0113fb40b8e402f63a287251fd46dbdb7e827439788468d458a",
+    "src/features/animals/geometry.ts": "43190889bed4381b1d9cfc48757801be0637ab5b6cf8940a09fea776d849a69c",
+    "src/features/animals/Animal.tsx": "130df592c2502d93e3d14f05c79cf6c8180841de2021eb50b5c4e1172481fe24",
+    "src/features/oscar/Oscar.tsx": "a4663923f51b777a8833b3c40dafe9f113ea50fb3effad597f0c08d32d98641d",
+    "tests/composition.spec.ts": "3b47e60df0baa5f748b1566d34ae9c3aa72aad48627a0873b7bdf0821487d73c"
+  },
+  "production": {
+    "javascriptChunks": 7,
+    "developerMarkersAbsent": [
+      "__DANNY_TEST__",
+      "__DANNY_STYLE_PROTOTYPE__",
+      "StylePrototype",
+      "cameraCalibration",
+      "Enable camera override"
+    ],
+    "normalGameAtPrototypeQuery": true,
+    "slots": 8,
+    "memoryViewerAndEscape": true,
+    "viewports": [
+      "1918x918",
+      "844x390",
+      "320x568"
+    ]
+  },
+  "productionErrors": [],
+  "grassPixelDifference": 0.179683
+}

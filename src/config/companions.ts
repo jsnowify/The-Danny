@@ -139,7 +139,7 @@ export const DOGS: Companion[] = [
   },
   {
     id: "doreamon",
-    name: "Doreamon",
+    name: "Doraemon",
     species: "dog",
     coat: "#947051",
     marking: "#65503b",

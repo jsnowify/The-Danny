@@ -1,4 +1,5 @@
 import {
+  BufferAttribute,
   BufferGeometry,
   CircleGeometry,
   Color,
@@ -8,7 +9,9 @@ import {
   Material,
   Mesh,
   MeshBasicMaterial,
+  MeshDepthMaterial,
   MeshStandardMaterial,
+  RGBADepthPacking,
   Object3D,
   PlaneGeometry,
   SphereGeometry,
@@ -16,6 +19,9 @@ import {
   type Camera,
 } from "three";
 import { random } from "../../utils/random";
+import { curvedStem } from "../../scene/forestGeometry";
+import { paintedBranchTip } from "../../features/forestLife/layout";
+import { applyWindShader } from "../../shaders/wind";
 import {
   barkPaint,
   clothPaint,
@@ -46,7 +52,7 @@ export const PROTOTYPE_INVENTORY = Object.freeze({
   ambientParticles: 0,
 });
 
-export function createApprovedAssets() {
+export function createApprovedAssets(foliage?: Texture[]) {
   const root = new Group();
   root.name = "visual-style-prototype";
   const maps: Texture[] = [],
@@ -73,7 +79,7 @@ export function createApprovedAssets() {
     return object;
   }
   const groundMap = ownMap(groundPaint()),
-    barkMap = ownMap(barkPaint()),
+    barkMap = ownMap(barkPaint(!!foliage)),
     clothMap = ownMap(clothPaint()),
     stoneMap = ownMap(rockPaint());
   const ground = mesh(
@@ -97,14 +103,16 @@ export function createApprovedAssets() {
     new MeshStandardMaterial({
       map: barkMap,
       roughness: 1,
-      emissive: "#6b4b32",
+      emissive: foliage ? "#759478" : "#6b4b32",
       emissiveMap: barkMap,
-      emissiveIntensity: 0.14,
+      emissiveIntensity: foliage ? 0.08 : 0.14,
     }),
   );
   const memory = mesh("prototype-memory-tree", memoryTreeGeometry(), bark);
+  if (foliage) applyWindShader(bark, false, 0.18);
   memory.position.set(-0.35, 0, -1.6);
   memory.castShadow = true;
+  memory.receiveShadow = true;
 
   const trees: Group[] = [];
   for (let i = 0; i < 2; i++) {
@@ -116,7 +124,7 @@ export function createApprovedAssets() {
     tree.scale.setScalar(i === 0 ? 0.92 : 0.85);
     root.add(tree);
     trees.push(tree);
-    const map = ownMap(crownPaint(i));
+    const map = foliage?.[i] ?? ownMap(crownPaint(i));
     const front = material(
       new MeshStandardMaterial({
         map,
@@ -124,6 +132,15 @@ export function createApprovedAssets() {
         emissive: "#ffaa60",
         emissiveMap: map,
         emissiveIntensity: 0.2,
+        ...(foliage
+          ? {
+              alphaTest: 0.36,
+              side: DoubleSide,
+              toneMapped: false,
+              emissive: "#b2d991",
+              emissiveIntensity: 0.035,
+            }
+          : {}),
       }),
     );
     const edge = material(
@@ -133,14 +150,72 @@ export function createApprovedAssets() {
       }),
     );
     const shape = crownShape(i);
+    if (foliage) {
+      applyWindShader(front, true, 0.93);
+      const compile = front.onBeforeCompile.bind(front);
+      const key = front.customProgramCacheKey.bind(front);
+      front.onBeforeCompile = (shader, renderer) => {
+        compile(shader, renderer);
+        shader.fragmentShader = shader.fragmentShader.replace(
+          "#include <opaque_fragment>",
+          "outgoingLight=mix(outgoingLight,diffuseColor.rgb,.08); outgoingLight*=mix(vec3(.72,.90,1.0),vec3(1.05,1.04,.96),smoothstep(.08,.9,vMapUv.x)*smoothstep(.05,.70,vMapUv.y));\n#include <opaque_fragment>",
+        );
+      };
+      front.customProgramCacheKey = () =>
+        `${key()}-summer-clearing-canopy-lit-v3-depth`;
+    }
     const crown = mesh(
       "prototype-painted-crown",
-      illustratedVolume(shape, [-2.2, 2.2, 0, 5.4], 0.26),
+      foliage
+        ? new PlaneGeometry(
+            5.4 * (foliage[i].image.width / foliage[i].image.height),
+            5.4,
+            8,
+            10,
+          ).translate(0, 2.7, 0.28)
+        : illustratedVolume(shape, [-2.2, 2.2, 0, 5.4], 0.26),
       [front, edge],
       tree,
     );
     crown.position.y = 1.95;
+    if (foliage) {
+      const p = crown.geometry.getAttribute("position"),
+        uv = crown.geometry.getAttribute("uv");
+      for (let vertex = 0; vertex < p.count; vertex++)
+        p.setZ(
+          vertex,
+          p.getZ(vertex) +
+            Math.sin(uv.getX(vertex) * Math.PI) *
+              Math.sin(uv.getY(vertex) * Math.PI) *
+              0.6,
+        );
+      crown.geometry.computeVertexNormals();
+      crown.geometry.addGroup(0, crown.geometry.index!.count, 0);
+      const count = crown.geometry.getAttribute("position").count;
+      crown.geometry.setAttribute(
+        "aCanopy",
+        new BufferAttribute(new Float32Array(count).fill(1), 1),
+      );
+      crown.geometry.setAttribute(
+        "aFlex",
+        new BufferAttribute(new Float32Array(count), 1),
+      );
+      crown.geometry.setAttribute(
+        "aGrass",
+        new BufferAttribute(new Float32Array(count), 1),
+      );
+    }
     crown.castShadow = true;
+    crown.receiveShadow = true;
+    if (foliage)
+      crown.customDepthMaterial = material(
+        new MeshDepthMaterial({
+          map,
+          alphaTest: 0.36,
+          side: DoubleSide,
+          depthPacking: RGBADepthPacking,
+        }),
+      );
     const contour = mesh(
       "prototype-cream-contour",
       crownContour(shape),
@@ -148,6 +223,7 @@ export function createApprovedAssets() {
       tree,
     );
     contour.position.set(0, 1.95, 0);
+    contour.visible = !foliage;
     const stem = mesh(
       "prototype-illustrated-trunk",
       stemGeometry(),
@@ -155,6 +231,45 @@ export function createApprovedAssets() {
       tree,
     );
     stem.castShadow = true;
+    stem.receiveShadow = true;
+    if (foliage) {
+      const upper = mesh(
+        "painted-crown-fork",
+        curvedStem(0, 1.8, 0.12, 5.4, 0.08).translate(0, 0, 0.06),
+        bark,
+        tree,
+      );
+      upper.castShadow = true;
+      upper.receiveShadow = true;
+      const tip = paintedBranchTip(i, i === 0 ? 1 : 0, i === 0 ? 1 : -1);
+      const branch = mesh(
+        "painted-bird-perch",
+        curvedStem(0.02, tip.y - 0.72, tip.x, tip.y, 0.042).translate(
+          0,
+          0,
+          0.19,
+        ),
+        bark,
+        tree,
+      );
+      branch.castShadow = true;
+      branch.receiveShadow = true;
+      const side = i === 0 ? 1 : -1;
+      const perch = mesh(
+        "painted-perch-twig",
+        curvedStem(
+          tip.x - side * 0.18,
+          tip.y - 0.06,
+          tip.x,
+          tip.y,
+          0.018,
+        ).translate(0, 0, tip.z),
+        bark,
+        tree,
+      );
+      perch.castShadow = true;
+      perch.receiveShadow = true;
+    }
   }
 
   const rocks = new Group();
@@ -191,7 +306,6 @@ export function createApprovedAssets() {
   const traveler = new Group();
   traveler.name = "prototype-red-traveler";
   traveler.position.set(0.65, 0, 2.45);
-  traveler.rotation.x = -0.49;
   traveler.scale.setScalar(0.85);
   root.add(traveler);
   const cloak = mesh(
@@ -210,6 +324,7 @@ export function createApprovedAssets() {
     traveler,
   );
   cloak.castShadow = true;
+  cloak.receiveShadow = true;
   const dark = material(new MeshBasicMaterial({ color: "#2b231b" }));
   const face = mesh(
     "prototype-shadow-face",
@@ -217,8 +332,16 @@ export function createApprovedAssets() {
     dark,
     traveler,
   );
-  face.scale.set(0.17, 0.085, 0.095);
-  face.position.set(0.01, 1.33, 0.06);
+  face.scale.set(0.16, 0.122, 0.12);
+  face.position.set(0, 1.29, 0.13);
+  const eye = mesh(
+    "prototype-traveler-eye",
+    new SphereGeometry(0.031, 12, 8),
+    material(new MeshBasicMaterial({ color: "#fff8df" })),
+    traveler,
+  );
+  eye.scale.set(0.8, 1, 0.45);
+  eye.position.set(0.055, 1.31, 0.238);
   const hat = mesh(
     "prototype-pointed-hat",
     hatGeometry(),
@@ -233,6 +356,7 @@ export function createApprovedAssets() {
     traveler,
   );
   hat.castShadow = true;
+  const boots: Mesh[] = [];
   for (const x of [-0.12, 0.14]) {
     const boot = mesh(
       "prototype-boot",
@@ -240,8 +364,9 @@ export function createApprovedAssets() {
       dark,
       traveler,
     );
-    boot.scale.set(0.049, 0.12, 0.049);
-    boot.position.set(x, 0.1, 0);
+    boot.scale.set(0.044, 0.068, 0.067);
+    boot.position.set(x, 0.07, 0);
+    boots.push(boot);
   }
   // Contact pigment keeps objects grounded without relying on a dark AO pass.
   const contact = material(
@@ -264,7 +389,9 @@ export function createApprovedAssets() {
   const r = random(847),
     leaf = leafGeometry();
   geometries.add(leaf);
-  const colors = ["#ffcd24", "#f4ab0f", "#ffe17b", "#ffc229", "#e99a14"];
+  const colors = foliage
+    ? ["#edf4ca", "#d8ecd0", "#bde0bf", "#f5f2d4", "#d1e8c8"]
+    : ["#ffcd24", "#f4ab0f", "#ffe17b", "#ffc229", "#e99a14"];
   const leafMap = ownMap(leafPaint());
   const layers = [
     { count: 28, opacity: 0.43, scale: 0.12 },
@@ -311,6 +438,7 @@ export function createApprovedAssets() {
     shadow,
     cloak,
     hat,
+    boots,
     trees,
     inventory: PROTOTYPE_INVENTORY,
     arrange(portrait: boolean) {
@@ -326,7 +454,7 @@ export function createApprovedAssets() {
       player = { x: 0.65, z: 2.45 },
     ) {
       const t = reduced ? 0 : time;
-      memory.rotation.z = Math.sin(t * 0.32) * 0.006;
+      memory.rotation.z = foliage ? 0 : Math.sin(t * 0.32) * 0.006;
       trees.forEach(
         (tree, i) =>
           (tree.rotation.z =

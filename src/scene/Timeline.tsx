@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useStore } from "../store";
 import { playSound } from "../audio/bridge";
-import { DICTIONARIES } from "../config/localization";
+import { TEXT } from "../config/localization";
 import { traveler } from "./runtime";
 export const flight = { id: "", progress: 0, startX: 0, startZ: 0 };
 export function Timeline() {
@@ -42,7 +42,7 @@ export function Timeline() {
     if (scratch.elapsed > 1.65 && !scratch.landed) {
       state.hangOne(flight.id);
       scratch.landed = true;
-      useStore.setState({ toast: DICTIONARIES[state.language].hung });
+      useStore.setState({ toast: TEXT.hung });
     }
     if (scratch.elapsed > 2.25) {
       scratch.index++;

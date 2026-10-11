@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "kind": "crown",
+      "x": 44.49484748765826,
+      "z": 12.686769850552082,
+      "startX": 42.49484748765826,
+      "startZ": 12.686769850552082,
+      "key": "d",
+      "count": 7,
+      "visiblePixels": 1052,
+      "minimumHeight": 2.02283780113798
+    },
+    {
+      "kind": "pine",
+      "x": -21.332528721541166,
+      "z": -23.378184903413057,
+      "startX": -23.332528721541166,
+      "startZ": -23.378184903413057,
+      "key": "d",
+      "count": 7,
+      "visiblePixels": 534,
+      "minimumHeight": 1.3396572699521667
+    },
+    {
+      "kind": "coconut",
+      "x": 26,
+      "z": 8,
+      "startX": 28,
+      "startZ": 8,
+      "key": "a",
+      "count": 7,
+      "visiblePixels": 1485,
+      "minimumHeight": 2.803724950538215
+    },
+    {
+      "kind": "bamboo",
+      "x": -21.869774954393506,
+      "z": -9.138123970478773,
+      "startX": -23.869774954393506,
+      "startZ": -9.138123970478773,
+      "key": "d",
+      "count": 7,
+      "visiblePixels": 1257,
+      "minimumHeight": 0.8920467753265946
+    }
+  ],
+  "woodlandPixels": 1228,
+  "errors": []
+}

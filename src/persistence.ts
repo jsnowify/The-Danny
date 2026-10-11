@@ -16,7 +16,7 @@ export type DiscoveryProgress = {
   interactedDogs: string[];
   metOscar: boolean;
   finaleSeen: boolean;
-  language: "en" | "fil";
+  language: "en";
 };
 
 export function emptyDiscoveries(): DiscoveryProgress {
@@ -114,7 +114,7 @@ export function normalizeProgress(value: unknown): SavedProgress {
     interactedDogs,
     metOscar: saved.metOscar === true,
     finaleSeen: saved.finaleSeen === true,
-    language: saved.language === "fil" ? "fil" : "en",
+    language: "en",
     settings,
   };
 }

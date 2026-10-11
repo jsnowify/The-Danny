@@ -4,8 +4,9 @@ import { Vector2, Vector4 } from "three";
 // texture coordinates never move with it.
 export const breeze = {
   direction: new Vector2(0.84, 0.54).normalize(),
-  trail: Array.from({ length: 4 }, () => new Vector4(0, 0, -100, 0)),
+  trail: Array.from({ length: 12 }, () => new Vector4(0, 0, -100, 0)),
   cursor: 0,
+  contactTime: 0,
 };
 export function breezeAt(x: number, z: number, time: number) {
   const phase = time * 0.48 - x * 0.14 - z * 0.09;

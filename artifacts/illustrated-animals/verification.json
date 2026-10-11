@@ -1,0 +1,110 @@
+{
+  "flatDrawings": [
+    {
+      "id": "snowa",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-snowa",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "hoshi",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-hoshi",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "thoma",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-thoma",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "simba",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-simba",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "star",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-star",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "nano",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-nano",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "doreamon",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-doreamon",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    },
+    {
+      "id": "max",
+      "meshes": 1,
+      "triangles": 2,
+      "material": "MeshBasicMaterial",
+      "texture": "illustrated-animal-atlas-max",
+      "size": [
+        768,
+        2048
+      ],
+      "coplanar": true,
+      "cameraFacing": 1
+    }
+  ],
+  "poseChecks": 896,
+  "errors": []
+}

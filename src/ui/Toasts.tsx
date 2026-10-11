@@ -9,7 +9,7 @@ export function Toasts() {
   const idleStage = useStore((s) => s.idleStage);
   const guide = useStore((s) => s.fieldGuideOpen),
     journal = useStore((s) => s.journalOpen),
-    dialogue = useStore((s) => s.oscarDialogue);
+    dialogue = useStore((s) => s.oscarDialogue || !!s.companionDialogue);
   const toast = useStore((s) => s.toast),
     phase = useStore((s) => s.phase),
     ready = useStore((s) => s.sceneReady),

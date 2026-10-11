@@ -5,7 +5,8 @@ import { PLANTS, type PlantId } from "../config/flora";
 import { WORLD } from "../config";
 import { useStore } from "../store";
 import { speciesGeometry } from "./speciesGeometry";
-import { windMaterial } from "../shaders/wind";
+import { applyWindShader } from "../shaders/wind";
+import { MeshStandardMaterial } from "three";
 import { paintedSurface } from "../visual/paintedSurface";
 import { useAssets } from "./resources";
 import { traveler } from "./runtime";
@@ -31,7 +32,13 @@ export function SpeciesFlora({ world }: { world: WorldData }) {
         [`${plant.id}-far`, speciesGeometry(plant.id, true)],
       ]),
     );
-    const material = paintedSurface(windMaterial(shared.props.paper));
+    const material = paintedSurface(
+      applyWindShader(
+        new MeshStandardMaterial({ map: shared.props.paper, side: 2 }),
+        true,
+        0.95,
+      ),
+    );
     material.vertexColors = true;
     return { lease: 0, geometries, material };
   }, [world, shared]);
@@ -41,7 +48,6 @@ export function SpeciesFlora({ world }: { world: WorldData }) {
       x: Infinity,
       z: Infinity,
       tier: "",
-      yaw: Infinity,
       visibility: new InstanceVisibility(),
     }),
     [],
@@ -67,25 +73,16 @@ export function SpeciesFlora({ world }: { world: WorldData }) {
   useFrame(({ camera, scene }) => {
     const x = Math.floor(traveler.x / 3),
       z = Math.floor(traveler.z / 3),
-      tier = useStore.getState().tier,
-      yaw = Math.atan2(
-        camera.position.x - traveler.x,
-        camera.position.z - traveler.z,
-      );
-    const viewChanged = scratch.visibility.update(
-      camera,
-      scene,
-      tier !== "low",
-    );
+      tier = useStore.getState().tier;
+    const viewChanged = scratch.visibility.update(camera, scene, true);
     if (
       x === scratch.x &&
       z === scratch.z &&
       tier === scratch.tier &&
-      Math.abs(yaw - scratch.yaw) < 0.025 &&
       !viewChanged
     )
       return;
-    Object.assign(scratch, { x, z, tier, yaw });
+    Object.assign(scratch, { x, z, tier });
     const counts: Partial<Record<Batch, number>> = {};
     for (const plant of PLANTS)
       for (const lod of ["near", "far", "outline"] as const)
@@ -106,14 +103,14 @@ export function SpeciesFlora({ world }: { world: WorldData }) {
           if (distance > (plant.tree ? 48 : tier === "low" ? 18 : 25)) continue;
           const lod = distance > (tier === "low" ? 17 : 25) ? "far" : "near",
             batch: Batch = `${plant.id}-${lod}`,
-            rotation = item.rotation + yaw;
+            rotation = item.rotation;
           if (eligible[batch]!++ >= 320) continue;
           if (
             !scratch.visibility.intersects(
               assets.geometries[batch],
               item,
               rotation,
-              tier !== "low",
+              plant.tree,
             )
           )
             continue;
@@ -166,22 +163,27 @@ export function SpeciesFlora({ world }: { world: WorldData }) {
                     ? shared.forest.outline
                     : !plant.tree
                       ? assets.material
-                      : shared.forest.palettes[
-                          plant.id === "narra" || plant.id === "talisay"
-                            ? "honey"
-                            : plant.id === "acacia" ||
-                                plant.id === "mango" ||
-                                plant.id === "banana"
-                              ? "sage"
-                              : "teal"
-                        ],
+                      : !outlined.has(plant.id)
+                        ? [assets.material, assets.material, assets.material]
+                        : shared.forest.palettes[
+                            plant.id === "narra" || plant.id === "talisay"
+                              ? "honey"
+                              : plant.id === "acacia" ||
+                                  plant.id === "mango" ||
+                                  plant.id === "banana"
+                                ? "sage"
+                                : "teal"
+                          ],
                   320,
                 ]}
                 frustumCulled={false}
+                visible={lod !== "outline"}
                 castShadow={plant.tree && lod === "near"}
                 receiveShadow={lod !== "outline"}
                 customDepthMaterial={
-                  plant.tree ? shared.forest.depth : shared.materials.depth
+                  outlined.has(plant.id)
+                    ? shared.forest.depth
+                    : shared.materials.depth
                 }
                 dispose={null}
               />

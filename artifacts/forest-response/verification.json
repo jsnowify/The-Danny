@@ -1,0 +1,121 @@
+{
+  "captures": [
+    {
+      "name": "clearing",
+      "x": 0.65,
+      "z": 4.05
+    },
+    {
+      "name": "pond",
+      "x": 9.5,
+      "z": 5.5
+    },
+    {
+      "name": "grove",
+      "x": -4.5,
+      "z": -9.2
+    },
+    {
+      "name": "meadow",
+      "x": 7,
+      "z": 31
+    }
+  ],
+  "structural": {
+    "props": [
+      {
+        "name": "flora-mushroom",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-mushroom"
+      },
+      {
+        "name": "flora-rock",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-rock"
+      },
+      {
+        "name": "flora-log",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-log"
+      },
+      {
+        "name": "flora-reed",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-reed"
+      },
+      {
+        "name": "flora-lily",
+        "style": "flat-forest-drawing",
+        "map": "forest-drawing-lily"
+      }
+    ],
+    "stretched": 0,
+    "treeNormals": 4020,
+    "groundBirds": 21,
+    "birdFrames": 10,
+    "shadowEnabled": true
+  },
+  "anchored": {
+    "checked": 59,
+    "changed": 0,
+    "pose": "walk"
+  },
+  "groundFlight": {
+    "mode": "flying",
+    "takeoffs": 1,
+    "height": 1.2889620256930612
+  },
+  "branchFlight": {
+    "mode": "flying",
+    "takeoffs": 1,
+    "height": 1.2027366952752083
+  },
+  "impact": {
+    "hits": 1,
+    "peak": 0.008159726316254681,
+    "x": 5.4639999999999995,
+    "z": 3.9,
+    "rootX": 5.949999999999999,
+    "rootZ": 3.9,
+    "treeScale": 0.85
+  },
+  "woodlandImpact": {
+    "hits": 1,
+    "pixelsChanged": 76974,
+    "x": -8.628499999999999,
+    "z": -9,
+    "marks": [
+      {
+        "x": -7.8,
+        "z": -9
+      }
+    ]
+  },
+  "recovered": 0.025,
+  "walking": {
+    "particles": 16,
+    "emitted": 16,
+    "flowerParticles": 0
+  },
+  "pause": {
+    "beforePause": {
+      "age": 0.5166666666666669,
+      "birdClock": 42.005999999998295
+    },
+    "afterPause": {
+      "age": 0.5166666666666669,
+      "birdClock": 42.005999999998295
+    }
+  },
+  "returnTrip": {
+    "mode": "perched",
+    "error": 0
+  },
+  "phone": {
+    "width": 390,
+    "height": 844,
+    "aspect": 0.46208530805687204,
+    "overflow": false
+  },
+  "errors": []
+}

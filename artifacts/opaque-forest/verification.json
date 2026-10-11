@@ -1,0 +1,280 @@
+{
+  "captures": [
+    {
+      "name": "rain-tree-avenue",
+      "x": -8.6,
+      "z": 4.05,
+      "memories": 8
+    },
+    {
+      "name": "pond-overlap",
+      "x": 9.5,
+      "z": 5.5
+    },
+    {
+      "name": "clearing",
+      "x": 0.65,
+      "z": 4.05
+    },
+    {
+      "name": "grove",
+      "x": -4.5,
+      "z": -9.2
+    },
+    {
+      "name": "meadow",
+      "x": 7,
+      "z": 31
+    }
+  ],
+  "walk": [
+    {
+      "x": -8.416228788965528,
+      "z": 4.05,
+      "speed": 2.9329249562966457,
+      "opaque": true
+    },
+    {
+      "x": -8.053403417127214,
+      "z": 4.05,
+      "speed": 3.9581254883957593,
+      "opaque": true
+    },
+    {
+      "x": -7.63664796843599,
+      "z": 4.05,
+      "speed": 4.266909954713257,
+      "opaque": true
+    },
+    {
+      "x": -7.203649092748691,
+      "z": 4.05,
+      "speed": 4.359914048696486,
+      "opaque": true
+    },
+    {
+      "x": -6.7657577908685544,
+      "z": 4.05,
+      "speed": 4.387926343488361,
+      "opaque": true
+    },
+    {
+      "x": -6.326392918536928,
+      "z": 4.05,
+      "speed": 4.396363484542115,
+      "opaque": true
+    },
+    {
+      "x": -6.173442307954295,
+      "z": 4.067909765201082,
+      "speed": 0.2883075204908185,
+      "opaque": true
+    },
+    {
+      "x": -6.169620142760972,
+      "z": 4.103399896914904,
+      "speed": 0.4191925398521777,
+      "opaque": true
+    },
+    {
+      "x": -6.16048457966772,
+      "z": 4.156955486213503,
+      "speed": 0.6470490941121324,
+      "opaque": true
+    },
+    {
+      "x": -6.138544331033525,
+      "z": 4.238176860518979,
+      "speed": 1.002002687762614,
+      "opaque": true
+    },
+    {
+      "x": -6.086917422661685,
+      "z": 4.356874815581583,
+      "speed": 1.534858852633166,
+      "opaque": true
+    },
+    {
+      "x": -5.971609878908615,
+      "z": 4.5140456373832425,
+      "speed": 2.2863585171378964,
+      "opaque": true
+    },
+    {
+      "x": -5.742591267910752,
+      "z": 4.674520776048323,
+      "speed": 3.199623341393283,
+      "opaque": true
+    },
+    {
+      "x": -5.3859789374996305,
+      "z": 4.755863856120983,
+      "speed": 3.949475088438619,
+      "opaque": true
+    },
+    {
+      "x": -4.97115096650824,
+      "z": 4.780516890312383,
+      "speed": 4.258220328128283,
+      "opaque": true
+    },
+    {
+      "x": -4.538732635947718,
+      "z": 4.787942241516907,
+      "speed": 4.356798023098184,
+      "opaque": true
+    },
+    {
+      "x": -4.1010161908995215,
+      "z": 4.790178714321126,
+      "speed": 4.386943911243412,
+      "opaque": true
+    },
+    {
+      "x": -3.6617039844335877,
+      "z": 4.790852326984855,
+      "speed": 4.396063634632978,
+      "opaque": true
+    },
+    {
+      "x": -3.2219111438650394,
+      "z": 4.791055215220241,
+      "speed": 4.398814032443024,
+      "opaque": true
+    },
+    {
+      "x": -2.7819735390867364,
+      "z": 4.791116323982403,
+      "speed": 4.399642761068101,
+      "opaque": true
+    }
+  ],
+  "tiers": [
+    {
+      "tier": "low",
+      "shadows": true,
+      "shadowSize": 512,
+      "shadowPixels": 132492,
+      "coveredRed": 717,
+      "uncoveredRed": 2839,
+      "occludedCharacterPixels": 2122,
+      "opaqueMaterials": true,
+      "treeMaterialCount": 16,
+      "opacityChangedPixels": 0,
+      "treeShadow": 822691524,
+      "restoredShadow": 822691524,
+      "playerAlphaShader": false,
+      "movedShadow": 30575901,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 79,
+      "span": 9.503442126794761
+    },
+    {
+      "tier": "medium",
+      "shadows": true,
+      "shadowSize": 768,
+      "shadowPixels": 119537,
+      "coveredRed": 588,
+      "uncoveredRed": 2628,
+      "occludedCharacterPixels": 2040,
+      "opaqueMaterials": true,
+      "treeMaterialCount": 16,
+      "opacityChangedPixels": 0,
+      "treeShadow": 1459789642,
+      "restoredShadow": 1459789642,
+      "playerAlphaShader": false,
+      "movedShadow": 4090421907,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 76,
+      "span": 9.503442126794761
+    },
+    {
+      "tier": "high",
+      "shadows": true,
+      "shadowSize": 1024,
+      "shadowPixels": 116303,
+      "coveredRed": 596,
+      "uncoveredRed": 2630,
+      "occludedCharacterPixels": 2034,
+      "opaqueMaterials": true,
+      "treeMaterialCount": 16,
+      "opacityChangedPixels": 0,
+      "treeShadow": 3526593756,
+      "restoredShadow": 3526593756,
+      "playerAlphaShader": false,
+      "movedShadow": 3196105743,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 76,
+      "span": 9.503442126794761
+    }
+  ],
+  "phone": {
+    "width": 390,
+    "height": 844,
+    "projectionAspect": 0.46208530805687204,
+    "bufferAspect": 0.46208530805687204,
+    "shadows": true,
+    "overflow": false
+  },
+  "errors": []
+}

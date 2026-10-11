@@ -1,10 +1,13 @@
 import {
   BufferGeometry,
   CatmullRomCurve3,
+  ConeGeometry,
   ExtrudeGeometry,
+  LatheGeometry,
   Shape,
   ShapeGeometry,
   TubeGeometry,
+  Vector2,
   Vector3,
 } from "three";
 import {
@@ -184,24 +187,49 @@ export function memoryTreeGeometry() {
 }
 
 export function cloakGeometry() {
-  const s = new Shape();
-  s.moveTo(-0.48, 0.19);
-  s.bezierCurveTo(-0.68, 0.31, -0.54, 0.41, -0.42, 0.5);
-  s.bezierCurveTo(-0.26, 0.67, -0.22, 1.07, -0.08, 1.16);
-  s.quadraticCurveTo(0, 1.23, 0.12, 1.14);
-  s.bezierCurveTo(0.27, 0.91, 0.25, 0.68, 0.46, 0.53);
-  s.bezierCurveTo(0.62, 0.43, 0.64, 0.33, 0.49, 0.28);
-  s.bezierCurveTo(0.29, 0.21, 0.23, 0.06, 0.03, 0.12);
-  s.bezierCurveTo(-0.22, 0.13, -0.32, 0.2, -0.48, 0.19);
-  return illustratedVolume(s, [-0.65, 0.65, 0.1, 1.24], 0.12);
+  // A compact painted bell with a scalloped hem. Rounded depth keeps the same
+  // small silhouette readable from the side as the body actually turns.
+  const profile = Array.from({ length: 17 }, (_, i) => {
+    const t = i / 16;
+    return new Vector2(0.12 + 0.46 * (1 - t) ** 1.48, 0.16 + t);
+  });
+  const g = new LatheGeometry(profile, 32);
+  const p = g.getAttribute("position");
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i),
+      y = p.getY(i),
+      z = p.getZ(i);
+    const a = Math.atan2(x, z),
+      hem = 1.16 - y;
+    const fold =
+      1 +
+      Math.sin(a * 5 + hem * 1.4) * 0.036 * hem +
+      Math.sin(a * 3 + 0.6) * 0.055 * hem * hem;
+    p.setXYZ(
+      i,
+      x * fold + 0.035 * hem * hem,
+      y + (Math.sin(a * 3 + 0.7) * 0.05 + Math.cos(a) * 0.022) * hem ** 4,
+      z * fold * 0.76,
+    );
+  }
+  g.computeVertexNormals();
+  return g;
 }
 export function hatGeometry() {
-  const s = new Shape();
-  s.moveTo(-0.21, 1.43);
-  s.bezierCurveTo(-0.25, 1.59, -0.12, 1.79, -0.04, 2.1);
-  s.bezierCurveTo(0.02, 2.02, 0.31, 1.6, 0.22, 1.46);
-  s.quadraticCurveTo(0, 1.34, -0.21, 1.43);
-  return illustratedVolume(s, [-0.26, 0.28, 1.35, 2.1], 0.1);
+  const g = new ConeGeometry(0.215, 0.59, 28, 8);
+  g.translate(0, 1.705, 0);
+  const p = g.getAttribute("position");
+  for (let i = 0; i < p.count; i++) {
+    const t = Math.max(0, (p.getY(i) - 1.41) / 0.59);
+    p.setXYZ(
+      i,
+      p.getX(i) + t * t * 0.075,
+      p.getY(i),
+      p.getZ(i) * 0.88 - t * t * 0.035,
+    );
+  }
+  g.computeVertexNormals();
+  return g;
 }
 export function leafGeometry() {
   const s = new Shape();

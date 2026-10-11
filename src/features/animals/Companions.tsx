@@ -37,7 +37,9 @@ export function Companions({ world }: { world: WorldData }) {
       s.paused ||
       s.fieldGuideOpen ||
       s.journalOpen ||
-      s.dedicationOpen
+      s.dedicationOpen ||
+      s.companionDialogue ||
+      s.oscarDialogue
     )
       return;
     elapsed.current += Math.min(delta, 0.1);

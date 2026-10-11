@@ -4,13 +4,14 @@ import { CollisionGrid } from "../utils/chunks";
 import { worldCalibration } from "./calibration";
 import { PLANTS, PLANT_BY_ID, type PlantId } from "../config/flora";
 import { regionAt } from "../config/regions";
+import { benchPoint } from "../features/oscar/bench";
 export type BaseKind =
   | "grass"
   | "pine"
   | "crown"
   | "trunk"
   | "bush"
-  | "flower"
+  | "blueFlower"
   | "mushroom"
   | "rock"
   | "log"
@@ -62,6 +63,7 @@ export function createWorld() {
     if (
       !(kind in PLANT_BY_ID) &&
       kind !== "grass" &&
+      kind !== "bush" &&
       kind !== "reed" &&
       kind !== "lily" &&
       Math.hypot(x, z) < 15
@@ -117,7 +119,12 @@ export function createWorld() {
         groundHeight(x, z) + 2 * scale,
         facing,
       );
-      collisions.add({ x, z, radius: plant.radius * scale * trunkScale });
+      collisions.add({
+        x,
+        z,
+        radius: plant.radius * scale * trunkScale,
+        tree: true,
+      });
       continue;
     }
     add(
@@ -136,9 +143,9 @@ export function createWorld() {
         "pine",
         x,
         z,
-        1.05 * scale * canopyScale,
-        3.3 * scale,
-        0.9 * scale * canopyScale,
+        1.2 * scale * canopyScale,
+        1.2 * scale * canopyScale,
+        1.2 * scale * canopyScale,
         r() > 0.5 ? PALETTE.emerald : PALETTE.moss,
         groundHeight(x, z) + 1.1 * scale,
         facing,
@@ -155,9 +162,9 @@ export function createWorld() {
         "crown",
         x,
         z,
-        COMPOSITION.crownWidth * scale * canopyScale,
-        COMPOSITION.crownHeight * scale,
-        COMPOSITION.crownDepth * scale * canopyScale,
+        1.2 * scale * canopyScale,
+        1.2 * scale * canopyScale,
+        1.2 * scale * canopyScale,
         col,
         groundHeight(x, z) + COMPOSITION.crownCenter * scale,
         facing,
@@ -167,6 +174,7 @@ export function createWorld() {
       x,
       z,
       radius: COMPOSITION.trunkRadius * 1.3 * scale * trunkScale,
+      tree: true,
     });
   }
   for (let i = 0; i < 26000; i++) {
@@ -178,15 +186,15 @@ export function createWorld() {
       Math.hypot(x, z) < proportions.clearingRadius
     )
       continue;
-    const s = 0.18 + r() * 0.35;
+    const s = 0.23 + r() * 0.36;
     add(
       "grass",
       x,
       z,
       s,
-      s * (0.8 + r() * 0.8),
+      s * (0.48 + r() * 0.35),
       s,
-      r() > 0.6 ? "#d4d5bc" : r() > 0.5 ? "#b7b89c" : "#99a585",
+      r() > 0.6 ? "#b5d979" : r() > 0.5 ? "#92c762" : "#61a85a",
     );
   }
   for (let i = 0; i < 3300; i++) {
@@ -231,7 +239,7 @@ export function createWorld() {
           groundHeight(x, z),
           (r() - 0.5) * 0.3,
         );
-      } else add("flower", x, z, s, s, s, x > 10 ? "#f0d689" : "#e4bca8");
+      } else add("blueFlower", x, z, s, s, s, "#ffffff");
     }
   }
   for (let i = 0; i < 25; i++) {
@@ -274,9 +282,17 @@ export function createWorld() {
   for (let i = 0; i < 70; i++) {
     const a = r() * Math.PI * 2,
       d = 5 + r() * 5;
-    add("flower", Math.cos(a) * d, Math.sin(a) * d, 0.5, 0.5, 0.5, "#edd688");
+    add(
+      "blueFlower",
+      Math.cos(a) * d,
+      Math.sin(a) * d,
+      0.5,
+      0.5,
+      0.5,
+      "#ffffff",
+    );
   }
-  // A few quiet brush tufts and lavender/mint accents in the open clearing.
+  // Short brush clumps leave space around the central rocks and landmark.
   for (let i = 0; i < 100; i++) {
     const x = (r() - 0.5) * 12,
       z = (r() - 0.5) * 12;
@@ -286,8 +302,8 @@ export function createWorld() {
       Math.abs(x - pathX(z)) < 1.25
     )
       continue;
-    const s = 0.14 + r() * 0.22;
-    add("grass", x, z, s, s, s, "#dedfd0");
+    const s = 0.19 + r() * 0.24;
+    add("grass", x, z, s, s * 0.65, s, "#7bae57");
   }
   // Collision footprints follow the approved painted rocks. Responsive tree footprints are resolved beside their live meshes in Player.
   for (const [x, z, radius] of [
@@ -298,12 +314,16 @@ export function createWorld() {
     collisions.add({ x, z, radius });
   add("bush", 1.2, 0.5, 0.3, 0.48, 0.3, "#c4d7b7", groundHeight(1.2, 0.5), 0);
   add("log", 2, 1.4, 0.65, 0.22, 0.22, "#635344", groundHeight(2, 1.4), 0.2);
-  collisions.add({ x: 0, z: 0, radius: COMPOSITION.memoryTrunkRadius });
+  collisions.add({
+    x: 0,
+    z: 0,
+    radius: COMPOSITION.memoryTrunkRadius,
+    tree: true,
+  });
   // Bench footprint, including its rotated ends, instead of an invisible canopy wall.
   for (const offset of [-0.85, 0, 0.85])
     collisions.add({
-      x: -4.7 + Math.cos(0.5) * offset,
-      z: 3.6 - Math.sin(0.5) * offset,
+      ...benchPoint(offset),
       radius: 0.38,
     });
   collisions.add({ x: 19, z: 5, radius: WORLD.pondRadius });
@@ -323,7 +343,12 @@ export function createWorld() {
       0,
     );
     if (plant.radius)
-      collisions.add({ x, z, radius: plant.radius * scale * trunkScale });
+      collisions.add({
+        x,
+        z,
+        radius: plant.radius * scale * trunkScale,
+        tree: plant.tree,
+      });
   }
   for (let i = 0; i < 14; i++) {
     const x = -15 + (r() - 0.5) * 8,
@@ -334,6 +359,99 @@ export function createWorld() {
     const x = 27 + (r() - 0.5) * 10,
       z = 23 + (r() - 0.5) * 10;
     if (free(x, z, 7)) add("rock", x, z, 0.8, 0.5, 0.6, "#a29eae");
+  }
+  // A separate seed fills painted meadows without relocating trees or props.
+  // Retire the former grass layer after consuming its original seed sequence.
+  for (const chunk of chunks.values()) delete chunk.items.grass;
+  // Broad uneven patches and varied blade heights avoid a uniform lawn grid.
+  const meadow = random(WORLD.seed + 531);
+  for (let i = 0; i < 90000; i++) {
+    const x = (meadow() - 0.5) * WORLD.size,
+      z = (meadow() - 0.5) * WORLD.size;
+    const patch = Math.sin(x * 0.43 + Math.cos(z * 0.19)) * Math.cos(z * 0.38);
+    if (
+      meadow() > 0.52 + patch * 0.24 ||
+      Math.hypot(x, z) < 1.35 ||
+      Math.hypot(x - WORLD.pond[0], z - WORLD.pond[1]) <
+        WORLD.pondRadius + 0.15 ||
+      Math.abs(x - pathX(z)) < 0.9
+    )
+      continue;
+    const s = 0.2 + meadow() * 0.4;
+    const clearing = Math.hypot(x, z) < 6.5;
+    const colors = clearing
+      ? ["#b4d877", "#8ec260", "#c3df88"]
+      : ["#add56c", "#78b45f", "#bfdc7c", "#478d60"];
+    add(
+      "grass",
+      x,
+      z,
+      s * (0.9 + meadow() * 0.75),
+      s * (0.65 + meadow() * 0.45),
+      s,
+      colors[Math.floor(meadow() * colors.length)],
+      groundHeight(x, z),
+      meadow() * Math.PI * 2,
+    );
+  }
+  // Leafy banks and a layered grove frame the glade. An independent seed
+  // leaves every existing memory, animal and regional stand in its place.
+  const grove = random(WORLD.seed + 1208);
+  const banks = [
+    [-7.8, -9, 1.45],
+    [-4.4, -12.5, 1.45],
+    [1.8, -13, 1.4],
+    [6.8, -10.8, 1.55],
+    [-9.7, -1.8, 1.45],
+    [9.6, -0.9, 1.5],
+    [-10.3, 7, 1.35],
+    [10, 8, 1.35],
+  ];
+  banks.forEach(([x, z, scale], index) => {
+    const id = index % 3 === 0 ? "balete" : "narra";
+    add(
+      id,
+      x,
+      z,
+      scale,
+      scale,
+      scale,
+      "#ffffff",
+      groundHeight(x, z) + 2 * scale,
+      (grove() - 0.5) * 0.18,
+    );
+    collisions.add({
+      x,
+      z,
+      radius: PLANT_BY_ID[id].radius * scale * trunkScale,
+      tree: true,
+    });
+  });
+  for (let i = 0; i < 64; i++) {
+    const angle = grove() * Math.PI * 2,
+      radius = 6.6 + grove() * 6.5;
+    const x = Math.cos(angle) * radius,
+      z = Math.sin(angle) * radius;
+    if (
+      Math.abs(x - pathX(z)) < 2.3 ||
+      MEMORIES.some(
+        (memory) =>
+          Math.hypot(x - memory.position[0], z - memory.position[1]) < 2.3,
+      )
+    )
+      continue;
+    const size = 0.45 + grove() * 0.55;
+    add(
+      "bush",
+      x,
+      z,
+      size,
+      size * 0.85,
+      size,
+      "#ffffff",
+      groundHeight(x, z),
+      (grove() - 0.5) * 0.35,
+    );
   }
   return {
     chunks: Array.from(chunks.values()),

@@ -10,7 +10,7 @@ import {
 } from "three";
 import { applyWindShader } from "../shaders/wind";
 
-/** Borrow the approved artwork; fade only the surface that hides the traveler. */
+/** Borrow the approved artwork and wind attributes, retaining opaque surfaces. */
 export function heroClearance(trees: Group[], depth: MeshDepthMaterial) {
   const geometries: BufferGeometry[] = [],
     materials: Material[] = [];
@@ -38,7 +38,6 @@ export function heroClearance(trees: Group[], depth: MeshDepthMaterial) {
           source.clone() as MeshStandardMaterial | MeshBasicMaterial,
           false,
           0.18,
-          true,
         );
         materials.push(material);
         return material;

@@ -1,0 +1,146 @@
+{
+    "recordedAtUtc":  "2026-10-10T14:24:26.8107617Z",
+    "build":  "pass",
+    "format":  "pass",
+    "regression":  {
+                       "commands":  [
+                                        "npx playwright test tests/composition.spec.ts tests/experience.spec.ts tests/painted-trees.spec.ts tests/robustness.spec.ts --reporter=line",
+                                        "npx playwright test tests/composition.spec.ts --grep \"exploration camera frames\" --reporter=line"
+                                    ],
+                       "measurementCorrection":  "The camera test now measures the actual silhouette instead of the old proxy head.",
+                       "total":  8,
+                       "passed":  8
+                   },
+    "motion":  {
+                   "states":  [
+                                  "idle",
+                                  "start",
+                                  "travel",
+                                  "turn",
+                                  "away",
+                                  "deceleration",
+                                  "settled",
+                                  "blocked-trunk",
+                                  "slide-around-trunk",
+                                  "behind-foliage",
+                                  "wide-view",
+                                  "reduced-motion",
+                                  "layout-390",
+                                  "layout-844",
+                                  "idle-rest-ground-contact",
+                                  "frame-rate-and-navigation",
+                                  "natural-occlusion",
+                                  "camera",
+                                  "touch-and-reduced-motion",
+                                  "idle-ground-contact"
+                              ],
+                   "errors":  [
+
+                              ],
+                   "passed":  true
+               },
+    "production":  {
+                       "javascriptChunks":  7,
+                       "developerMarkersAbsent":  [
+                                                      "__DANNY_TEST__",
+                                                      "__DANNY_STYLE_PROTOTYPE__",
+                                                      "StylePrototype",
+                                                      "cameraCalibration",
+                                                      "Enable camera override"
+                                                  ],
+                       "normalGameAtPrototypeQuery":  true,
+                       "slots":  8,
+                       "memoryViewerAndEscape":  true,
+                       "viewports":  [
+                                         "1918x918",
+                                         "844x390",
+                                         "320x568"
+                                     ]
+                   },
+    "review":  {
+                   "images":  "pass",
+                   "comparisonButtons":  7,
+                   "phoneOverflow":  false,
+                   "errors":  0,
+                   "videos":  3
+               },
+    "sequence":  {
+                     "errors":  [
+
+                                ],
+                     "duration":  5,
+                     "maxSpeed":  4.399953547050881,
+                     "frames":  60,
+                     "fps":  12
+                 },
+    "source":  [
+                   {
+                       "path":  "src/scene/Player.tsx",
+                       "sha256":  "4972BB52624651CB5AB71DF5B416EDD280335B4BD586D3C0818CB8C102182024"
+                   },
+                   {
+                       "path":  "src/scene/travelerMotion.ts",
+                       "sha256":  "250E57AB404A822EA6B5AA92A6C7A1ECCCB7BD2CA0104439E035011F08E7798A"
+                   },
+                   {
+                       "path":  "src/scene/Camera.tsx",
+                       "sha256":  "153C4686D53E06650D85773E6B5229BBCE93D9ACEE0D504827B7CB9937AD578F"
+                   },
+                   {
+                       "path":  "src/scene/clothMotion.ts",
+                       "sha256":  "5783A9AF258077BD14DDBBB13A8B8AA72B917EFC9088983F84030EA18292932E"
+                   },
+                   {
+                       "path":  "src/hooks/usePlayerControls.ts",
+                       "sha256":  "DD86F9C0376186A39084AC222675FE81AEA7E6C6979BB03DBFAA61631FCB47F8"
+                   },
+                   {
+                       "path":  "src/visual/approved/assets.ts",
+                       "sha256":  "9974E6F1C911EF9726E8A681CC3D0E1E91DD503EF4B993D3F8DC4DDD238BFE78"
+                   },
+                   {
+                       "path":  "src/visual/approved/geometry.ts",
+                       "sha256":  "6D5CC91DF6A1422FA3B6D97563FC3A7ED74E01007F4E21D1EB4C1915F41995E7"
+                   },
+                   {
+                       "path":  "src/config/visual.ts",
+                       "sha256":  "9624E377DFEE0B08AD65908EDD8BD2E8F3C4C859994328B04BCB7222A64008AA"
+                   },
+                   {
+                       "path":  "src/utils/chunks.ts",
+                       "sha256":  "26B5F4DCF9AE1029530E70B27DFFC48990445BA67F2E82BF78F8DB5A2473AE80"
+                   },
+                   {
+                       "path":  "src/shaders/wind.ts",
+                       "sha256":  "002213014EF5BEB59A6148E32A8CDD6B7D53528E5C84EA0FCE4F1FACF9E6288E"
+                   },
+                   {
+                       "path":  "src/scene/forestGeometry.ts",
+                       "sha256":  "3AF2D50848C9FC71429AB8B3A3DC6C5193A17D8FCC80B965256A4B470AA2EA02"
+                   },
+                   {
+                       "path":  "src/scene/ApprovedFoundation.tsx",
+                       "sha256":  "579177CC3FBC05BA9BFB36C8227E05B54D1CE6ECAF7F918CA5FDEC5E7C2C72D9"
+                   },
+                   {
+                       "path":  "src/scene/resources.tsx",
+                       "sha256":  "4D1B79780D996000D1073B584048026FFD5896734DB7CA54C48A315D82F7F031"
+                   },
+                   {
+                       "path":  "src/scene/DevTools.tsx",
+                       "sha256":  "69770CFFC04A399592E783400F91E111FC21A0CD5CD87AAB2EB9E67DF4A63BCF"
+                   },
+                   {
+                       "path":  "src/scene/runtime.ts",
+                       "sha256":  "F68B2A7DAC9E26540EFAA3F9F554A792860C98FD3F48D4D18EF1459F333D2911"
+                   },
+                   {
+                       "path":  "tests/composition.spec.ts",
+                       "sha256":  "FCC4212225FB7B914881BA7E625209FB5C122249F43EAF96E89B7B2800C86690"
+                   },
+                   {
+                       "path":  "dist/index.html",
+                       "sha256":  "1374FAD40FA1D797664F7F90771C71E7E14C7D2A71BA0A9B9AB23B973CB3F671"
+                   }
+               ]
+}

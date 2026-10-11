@@ -32,6 +32,11 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       sfxBus = new Tone.Gain(0.65).connect(master);
     const nature = createNature(natureBus),
       sfx = createSfx(sfxBus);
+    const outputMeter =
+      import.meta.env.DEV && new URLSearchParams(location.search).has("test")
+        ? new Tone.Meter({ normalRange: true, smoothing: 0 })
+        : undefined;
+    if (outputMeter) master.connect(outputMeter);
     let track: ReturnType<typeof createTrack> | undefined;
     let generated: ReturnType<typeof createMusic> | undefined;
     let requested: string | undefined;
@@ -49,7 +54,8 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       const requestKey =
         source +
         (source === "custom" ? ":" + safeUrl(s.settings.customTrackUrl) : "");
-      if (requested !== requestKey) {
+      const resting = s.phase === "title" || s.phase === "loading";
+      if (!resting && requested !== requestKey) {
         requested = requestKey;
         track?.dispose();
         track = undefined;
@@ -87,13 +93,13 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
           setPlayback(source !== "generated" ? "fallback" : "generated");
         }
       }
-      const resting = s.phase === "title" || s.phase === "loading";
       const playing =
         !s.paused &&
         !s.fieldGuideOpen &&
         !s.journalOpen &&
-        !resting &&
+        s.phase !== "loading" &&
         !document.hidden;
+      const musicPlaying = playing && !resting;
       master.gain.rampTo(
         s.settings.muted || !playing
           ? 0
@@ -102,21 +108,29 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       );
       natureBus.gain.rampTo(
         playing && s.phase !== "dedication" && !s.dedicationOpen
-          ? 0.28 * s.settings.natureVolume * (s.oscarDialogue ? 0.45 : 1)
+          ? (s.phase === "title" ? 0.65 : 0.28) *
+              s.settings.natureVolume *
+              (s.oscarDialogue || s.companionDialogue ? 0.45 : 1)
           : 0,
         0.3,
       );
       const progress = s.hung.length / 8;
       musicBus.gain.rampTo(
-        s.settings.musicVolume * (s.idleStage === 45 ? 1.04 : 1),
+        resting ? 0 : s.settings.musicVolume * (s.idleStage === 45 ? 1.04 : 1),
         1.5,
       );
-      sfxBus.gain.rampTo(0.65 * s.settings.effectsVolume, 0.3);
-      track?.update(progress, s.phase === "viewer" || s.oscarDialogue);
-      track?.setPlaying(playing);
-      generated?.update(progress, s.phase === "viewer" || s.oscarDialogue);
+      sfxBus.gain.rampTo(resting ? 0 : 0.65 * s.settings.effectsVolume, 0.3);
+      track?.update(
+        progress,
+        s.phase === "viewer" || s.oscarDialogue || !!s.companionDialogue,
+      );
+      track?.setPlaying(musicPlaying);
+      generated?.update(
+        progress,
+        s.phase === "viewer" || s.oscarDialogue || !!s.companionDialogue,
+      );
       const transport = Tone.getTransport();
-      if (!playing || !generated) {
+      if (!musicPlaying || !generated) {
         if (transport.state === "started") transport.pause();
       } else if (transport.state !== "started") transport.start();
     };
@@ -140,6 +154,7 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         s.fieldGuideOpen !== prior.fieldGuideOpen ||
         s.journalOpen !== prior.journalOpen ||
         s.oscarDialogue !== prior.oscarDialogue ||
+        s.companionDialogue !== prior.companionDialogue ||
         s.idleStage !== prior.idleStage ||
         s.dedicationOpen !== prior.dedicationOpen
       )
@@ -169,6 +184,8 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         musicGain: musicBus.gain.value,
         effectsGain: sfxBus.gain.value,
         contextState: Tone.getContext().state,
+        nature: nature.diagnostics(),
+        outputLevel: outputMeter?.getValue() ?? 0,
       }),
       seek: (seconds: number) => track?.seek(seconds),
     };
@@ -186,6 +203,7 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         track?.dispose();
         generated?.dispose();
         nature.dispose();
+        outputMeter?.dispose();
         sfx.dispose();
         [musicBus, natureBus, sfxBus, master, limiter].forEach((node) =>
           node.dispose(),

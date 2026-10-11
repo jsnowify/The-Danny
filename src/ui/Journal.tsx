@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useStore } from "../store";
 import { COMPANIONS } from "../config/companions";
 import { MEMORIES, MEMORIAL } from "../config";
@@ -6,7 +7,10 @@ import { CompanionPortrait } from "./CompanionPortrait";
 import { useDialog } from "../hooks/useDialog";
 import { useText } from "../hooks/useText";
 import { Icon } from "./Icons";
+import { oscarPortrait } from "../features/oscar/paint";
+import { ProjectNotes } from "./ProjectNotes";
 export function Journal() {
+  const portrait = useMemo(oscarPortrait, []);
   const t = useText(),
     tab = useStore((s) => s.journalTab),
     cats = useStore((s) => s.discoveredCats),
@@ -162,26 +166,13 @@ export function Journal() {
           )}
           {tab === "family" && (
             <article className="family-entry">
-              <svg
+              <img
                 className="family-portrait"
-                viewBox="0 0 160 160"
-                role="img"
-                aria-label="Oscar"
-              >
-                <circle cx="80" cy="80" r="76" fill="#dedbc9" />
-                <path d="M30 150q0-55 50-55t50 55" fill={OSCAR.shirt} />
-                <ellipse cx="80" cy="72" rx="29" ry="34" fill={OSCAR.skin} />
-                <path
-                  d="M50 61q-3-38 31-35t29 38q-8-19-29-18t-31 15"
-                  fill={OSCAR.hair}
-                />
-                <path
-                  d="M68 76h2m20 0h2"
-                  stroke={OSCAR.hair}
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
+                src={portrait}
+                width={160}
+                height={160}
+                alt="Oscar in his Philippine Army camouflage uniform"
+              />
               <h3>{OSCAR.name}</h3>
               <span>{OSCAR.relationship}</span>
               <p>{OSCAR.description}</p>
@@ -190,12 +181,9 @@ export function Journal() {
           )}
           {tab === "about" && (
             <section className="journal-about">
-              <h3>{t.about}</h3>
-              <p>{t.aboutText}</p>
+              <ProjectNotes />
               <h3>{t.how}</h3>
               <p>{t.howText}</p>
-              <h3>{t.credits}</h3>
-              <p>{t.creditsText}</p>
               <h3>{t.privacy}</h3>
               <p>{t.privacyText}</p>
               {MEMORIAL.contactLink && (

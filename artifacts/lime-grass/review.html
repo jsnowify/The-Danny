@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Danny · Lime green meadow</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: #294d36;
+        background: #eef5dd;
+        font:
+          16px/1.5 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1200px;
+        padding: 30px 20px 60px;
+        margin: auto;
+      }
+      h1 {
+        font:
+          400 clamp(30px, 5vw, 46px)/1.15 Georgia,
+          serif;
+        margin: 0;
+      }
+      p {
+        max-width: 780px;
+      }
+      a {
+        color: #355c40;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 24px 0 14px;
+      }
+      button {
+        font: inherit;
+        padding: 8px 15px;
+        border: 1px solid #699058;
+        border-radius: 24px;
+        color: #355c40;
+        background: #f8fbe9;
+        cursor: pointer;
+      }
+      button[aria-pressed="true"] {
+        color: #faffeb;
+        background: #476d3f;
+      }
+      img,
+      video {
+        display: block;
+        max-width: 100%;
+        border-radius: 16px;
+        background: #b9df77;
+      }
+      #scene,
+      video {
+        width: 100%;
+      }
+      video {
+        margin-top: 24px;
+      }
+      #phone {
+        max-height: 620px;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Soft lime-green grass</h1>
+      <p>
+        A bright green floor with soft watercolor patches and short darker green
+        tufts, following the latest grass reference. Wind, grass contact and
+        glowing flower petals are still active.
+      </p>
+      <p><a href="/">Open the dev forest →</a></p>
+      <nav aria-label="Grass comparison">
+        <button
+          data-image="clearing.png"
+          data-alt="Current clearing with a bright lime floor and short green grass"
+          aria-pressed="true"
+        >
+          New grass
+        </button>
+        <button
+          data-image="../grass-petals/clearing.png"
+          data-alt="Earlier olive floor with long brush streaks and pale grass"
+          aria-pressed="false"
+        >
+          Previous grass
+        </button>
+        <button
+          data-image="meadow.png"
+          data-alt="Blue flower meadow on the new lime-green ground"
+          aria-pressed="false"
+        >
+          Meadow
+        </button>
+        <button
+          data-image="petals.png"
+          data-alt="Glowing petals lifting from the flowers along the walking trail"
+          aria-pressed="false"
+        >
+          Glowing petals
+        </button>
+      </nav>
+      <img
+        id="scene"
+        src="clearing.png"
+        alt="Current clearing with a bright lime floor and short green grass"
+      />
+      <p>
+        The traveler walks through flowers, then stops while the petals fade.
+        The clip uses fixed simulation steps.
+      </p>
+      <video
+        src="grass-petals.mp4"
+        poster="petals.png"
+        controls
+        loop
+        muted
+        playsinline
+        preload="metadata"
+        aria-label="Walking through the lime-green meadow and watching the petals fade"
+      ></video>
+      <p>Phone view:</p>
+      <img
+        id="phone"
+        src="phone.png"
+        alt="The latest lime-green meadow and blue flowers on a phone"
+      />
+    </main>
+    <script>
+      const scene = document.querySelector("#scene");
+      document.querySelectorAll("button[data-image]").forEach((button) => {
+        button.addEventListener("click", () => {
+          scene.src = button.dataset.image;
+          scene.alt = button.dataset.alt;
+          document
+            .querySelectorAll("button[data-image]")
+            .forEach((item) =>
+              item.setAttribute("aria-pressed", String(item === button)),
+            );
+        });
+      });
+    </script>
+  </body>
+</html>

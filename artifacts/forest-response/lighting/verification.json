@@ -1,0 +1,140 @@
+{
+  "captures": [
+    {
+      "name": "pond-overlap",
+      "x": 9.5,
+      "z": 5.5
+    },
+    {
+      "name": "clearing",
+      "x": 0.65,
+      "z": 4.05
+    },
+    {
+      "name": "grove",
+      "x": -4.5,
+      "z": -9.2
+    },
+    {
+      "name": "meadow",
+      "x": 7,
+      "z": 31
+    }
+  ],
+  "tiers": [
+    {
+      "tier": "low",
+      "shadows": true,
+      "shadowSize": 512,
+      "shadowPixels": 137716,
+      "visibleRed": 1012,
+      "hiddenRed": 480,
+      "restoredCharacterPixels": 532,
+      "shadowWithFade": 3122330570,
+      "shadowWithoutFade": 3122330570,
+      "movedShadow": 1608117625,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 79,
+      "span": 9.503442126794761
+    },
+    {
+      "tier": "medium",
+      "shadows": true,
+      "shadowSize": 768,
+      "shadowPixels": 122211,
+      "visibleRed": 1013,
+      "hiddenRed": 478,
+      "restoredCharacterPixels": 535,
+      "shadowWithFade": 842642580,
+      "shadowWithoutFade": 842642580,
+      "movedShadow": 3394323229,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 76,
+      "span": 9.503442126794761
+    },
+    {
+      "tier": "high",
+      "shadows": true,
+      "shadowSize": 1024,
+      "shadowPixels": 120162,
+      "visibleRed": 1017,
+      "hiddenRed": 484,
+      "restoredCharacterPixels": 533,
+      "shadowWithFade": 3433588160,
+      "shadowWithoutFade": 3433588160,
+      "movedShadow": 3088323835,
+      "orderedStipple": false,
+      "leafShadowPrograms": 4,
+      "grassLit": true,
+      "receiverFlags": [
+        {
+          "name": "painted-ground",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-grass",
+          "receiveShadow": true
+        },
+        {
+          "name": "flora-bush",
+          "receiveShadow": true
+        },
+        {
+          "name": "pond-water",
+          "receiveShadow": true
+        }
+      ],
+      "calls": 76,
+      "span": 9.503442126794761
+    }
+  ],
+  "phone": {
+    "width": 390,
+    "height": 844,
+    "projectionAspect": 0.46208530805687204,
+    "bufferAspect": 0.46208530805687204,
+    "shadows": true,
+    "overflow": false
+  },
+  "errors": []
+}

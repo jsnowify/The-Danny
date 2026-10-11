@@ -23,6 +23,6 @@ export const WORLD = {
 };
 export const QUALITY = {
   high: { shadow: 1024, grass: 1, particles: 480, dpr: 1.75 },
-  medium: { shadow: 512, grass: 0.6, particles: 260, dpr: 1.4 },
-  low: { shadow: 0, grass: 0.3, particles: 120, dpr: 1 },
+  medium: { shadow: 768, grass: 0.8, particles: 260, dpr: 1.4 },
+  low: { shadow: 512, grass: 0.5, particles: 120, dpr: 1 },
 };

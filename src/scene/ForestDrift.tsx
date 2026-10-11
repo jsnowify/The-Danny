@@ -36,7 +36,7 @@ export function ForestDrift() {
     () =>
       new MeshBasicMaterial({
         map: (source.material as MeshBasicMaterial).map,
-        color: "#dfd99b",
+        color: "#edf3ca",
         side: DoubleSide,
         transparent: true,
         opacity: 0.4,
@@ -88,7 +88,7 @@ export function ForestDrift() {
           );
           o.quaternion.copy(camera.quaternion);
           o.rotateZ(seed.phase + Math.sin(phase) * 0.5);
-          o.rotateY(Math.sin(time * 0.44 + seed.phase) * 0.7);
+
           o.scale.setScalar(0.04 * visibility);
           o.updateMatrix();
           ref.current!.setMatrixAt(index++, o.matrix);

@@ -16,7 +16,7 @@ import type { Tier } from "../store";
 
 const opacity = [0.36, 0.78, 0.5];
 const budgets = { high: [24, 48, 14], medium: [18, 34, 10], low: [10, 20, 6] };
-const colors = ["#ffce32", "#efad20", "#ffe397", "#ffc534", "#df9b29"];
+const colors = ["#eef3cd", "#d3eac8", "#f3efce", "#c4e3cb", "#dcecc1"];
 
 /** Borrow approved leaf silhouettes and maps; own only the three appearances. */
 export function memoryCurrent(root: Group) {
@@ -144,14 +144,8 @@ export function memoryCurrent(root: Group) {
           object.position.set(x, y, z);
           object.quaternion.copy(camera.quaternion);
           object.rotateZ(p.turn + t * 0.14 + Math.sin(angle * 3) * 0.4);
-          object.rotateY(Math.sin(t * 0.44 + p.seed) * 0.8);
-          object.scale.set(
-            p.size * mask,
-            p.size *
-              mask *
-              (0.6 + Math.abs(Math.sin(t * 0.31 + p.seed)) * 0.34),
-            p.size * mask,
-          );
+
+          object.scale.setScalar(p.size * mask);
           object.updateMatrix();
           mesh.setMatrixAt(index, object.matrix);
         }

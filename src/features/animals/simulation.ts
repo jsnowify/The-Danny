@@ -19,6 +19,8 @@ export type AnimalState = {
   speed: number;
   visible: boolean;
   near: boolean;
+  conversation: string;
+  orbitAngle: number;
 };
 export const companionFocus = { follower: null as string | null };
 export const animals = new Map<string, AnimalState>();
@@ -38,7 +40,64 @@ export const createAnimal = (c: Companion): AnimalState => ({
   speed: 0,
   visible: true,
   near: false,
+  conversation: "",
+  orbitAngle: 0,
 });
+
+export function advancePetConversation(
+  a: AnimalState,
+  world: WorldData,
+  player: { x: number; z: number },
+  dt: number,
+  step: number,
+) {
+  a.clock += dt;
+  const orbit = a.id === "nano" && step === 2;
+  const approach = a.id === "thoma";
+  const key = orbit ? "orbit" : "conversation";
+  if (a.conversation !== key) {
+    a.conversation = key;
+    a.orbitAngle = Math.atan2(a.z - player.z, a.x - player.x);
+  }
+  a.mode = "pet";
+  a.speed = 0;
+  a.yaw = Math.atan2(player.x - a.x, player.z - a.z);
+  if (!orbit && !approach) return;
+  const distance = Math.hypot(a.x - player.x, a.z - player.z);
+  if (approach && distance <= 0.95) return;
+  if (orbit) a.orbitAngle += dt * 1.45;
+  const angle = orbit
+    ? a.orbitAngle
+    : Math.atan2(a.z - player.z, a.x - player.x);
+  const targetX = player.x + Math.cos(angle) * (orbit ? 1.15 : 0.9);
+  const targetZ = player.z + Math.sin(angle) * (orbit ? 1.15 : 0.9);
+  const dx = targetX - a.x,
+    dz = targetZ - a.z,
+    length = Math.hypot(dx, dz);
+  if (length < 0.01) return;
+  const amount = Math.min(length, dt * (orbit ? 1.8 : 0.85));
+  const point = {
+    x: a.x + (dx / length) * amount,
+    z: a.z + (dz / length) * amount,
+  };
+  world.collisions.slide(point, 0.3);
+  // Keep the drawing outside Danny's body and never push through a solid object.
+  if (
+    Math.hypot(point.x - player.x, point.z - player.z) < 0.8 ||
+    [...animals.values()].some(
+      (other) =>
+        other !== a && Math.hypot(point.x - other.x, point.z - other.z) < 0.65,
+    )
+  )
+    return;
+  const traveled = Math.hypot(point.x - a.x, point.z - a.z);
+  if (traveled > amount + 0.02) return;
+  a.yaw = Math.atan2(point.x - a.x, point.z - a.z);
+  a.speed = traveled / Math.max(dt, 0.001);
+  a.mode = a.speed > 0.04 ? "walk" : "pet";
+  a.x = point.x;
+  a.z = point.z;
+}
 export function safePosition(
   world: WorldData,
   x: number,

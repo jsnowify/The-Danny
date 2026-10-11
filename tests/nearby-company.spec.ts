@@ -74,8 +74,11 @@ test("overlapping optional company can be chosen without replacing the story pri
   expect(saved.state.interactedCats).toEqual(["snowa"]);
   expect(saved.state.collected).toEqual([]);
   expect(saved.state.hung).toEqual([]);
-  await expect(page.locator(".near-memory")).toHaveText(/Talk to Oscar/);
+  await expect(
+    page.getByRole("dialog", { name: "Conversation with Snowa" }),
+  ).toBeVisible();
   await page.keyboard.press("Escape");
+  await expect(page.locator(".near-memory")).toHaveText(/Talk to Oscar/);
   // Escape may open Pause after native details closes; return to gameplay if so.
   if (
     await page

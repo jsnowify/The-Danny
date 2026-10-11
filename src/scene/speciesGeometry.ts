@@ -2,12 +2,8 @@ import {
   BufferAttribute,
   BufferGeometry,
   Color,
-  CylinderGeometry,
-  ExtrudeGeometry,
-  Quaternion,
   Shape,
   ShapeGeometry,
-  Vector3,
 } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { PLANT_BY_ID, type PlantId } from "../config/flora";
@@ -58,7 +54,10 @@ export function speciesGeometry(id: PlantId, distant = false) {
       if (!canopy) {
         g.clearGroups();
         g.addGroup(0, p.count, 2);
-      } else if (distant && g.groups.length === 0) g.addGroup(0, p.count, 0);
+      } else if (g.groups.length === 0) {
+        // Keep drawn leaves in both LODs when the parts are packed by material.
+        g.addGroup(0, p.count, 0);
+      }
     }
     parts.push(g);
   };
@@ -74,25 +73,7 @@ export function speciesGeometry(id: PlantId, distant = false) {
     ax *= canopyScale;
     bx *= canopyScale;
     radius *= trunkScale;
-    const a = new Vector3(ax, ay, z),
-      b = new Vector3(bx, by, z),
-      v = b.clone().sub(a),
-      g = plant.tree
-        ? curvedStem(ax, ay, bx, by, radius, distant).translate(0, 0, z)
-        : new CylinderGeometry(
-            radius * 0.55,
-            radius,
-            v.length(),
-            distant ? 5 : 9,
-          );
-    if (!plant.tree)
-      g.applyQuaternion(
-        new Quaternion().setFromUnitVectors(
-          new Vector3(0, 1, 0),
-          v.clone().normalize(),
-        ),
-      );
-    if (!plant.tree) g.translate((ax + bx) / 2, (ay + by) / 2, z);
+    const g = curvedStem(ax, ay, bx, by, radius, true).translate(0, 0, z);
     paint(g, pigment, 0.025);
   };
   const leaf = (
@@ -123,14 +104,7 @@ export function speciesGeometry(id: PlantId, distant = false) {
       s.lineTo(0.72, 0.19);
       s.bezierCurveTo(0.74, -0.39, 0.42, -0.86, 0, -1);
     }
-    const g = distant
-      ? new ShapeGeometry(s, 3)
-      : new ExtrudeGeometry(s, {
-          depth: plant.tree ? 0.08 : 0.035,
-          steps: 1,
-          curveSegments: plant.tree ? 12 : 5,
-          bevelEnabled: false,
-        });
+    const g = new ShapeGeometry(s, distant ? 4 : 10);
     const p = g.getAttribute("position"),
       uv = g.getAttribute("uv");
     for (let i = 0; i < p.count; i++)
@@ -314,6 +288,7 @@ export function speciesGeometry(id: PlantId, distant = false) {
   parts.forEach((g) => g.dispose());
   if (plant.tree) packPaintedGroups(merged);
   if (plant.tree) merged.rotateX(-0.34).translate(0, -2, 0);
+  merged.userData.style = "flat-botanical-drawing";
   merged.userData.species = id;
   merged.userData.lod = distant ? "far" : "near";
   return merged;
