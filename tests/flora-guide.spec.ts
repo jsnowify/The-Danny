@@ -18,13 +18,12 @@ async function discovered(page: Page) {
     return {
       plants: s.discoveredSpecies,
       region: s.regionId,
-      guide: s.fieldGuideOpen,
       collected: s.collected,
       hung: s.hung,
     };
   });
 }
-test("all sixteen seeded plant specimens unlock readable Field Guide entries and survive reload", async ({
+test("all sixteen seeded plant discoveries survive reload without a Field Guide interface", async ({
   page,
 }) => {
   const errors: string[] = [];
@@ -51,14 +50,9 @@ test("all sixteen seeded plant specimens unlock readable Field Guide entries and
       );
   });
   await enter(page);
-  await page.getByRole("button", { name: "Field Guide", exact: true }).click();
   await expect(
-    page.getByRole("dialog", { name: "Field Guide", exact: true }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("button", { name: "Narra, not yet found", exact: true }),
-  ).toBeDisabled();
-  await page.getByRole("button", { name: "Close Field Guide" }).click();
+    page.getByRole("button", { name: "Field Guide", exact: true }),
+  ).toHaveCount(0);
   for (const plant of PLANTS) {
     await page.evaluate(
       ([x, z]) => window.__DANNY_TEST__.place(x, z),
@@ -70,24 +64,9 @@ test("all sixteen seeded plant specimens unlock readable Field Guide entries and
   }
   expect((await discovered(page)).collected).toEqual([]);
   expect((await discovered(page)).hung).toEqual([]);
-  await page.getByRole("button", { name: "Field Guide", exact: true }).click();
-  await expect(
-    page.getByText("16 / 16 plants found.", { exact: false }),
-  ).toBeVisible();
-  await page
-    .getByRole("button", { name: "Read about Coconut", exact: true })
-    .click();
-  await expect(page.getByText("Niyog", { exact: true })).toBeVisible();
-  await expect(page.getByText("Cocos nucifera", { exact: true })).toBeVisible();
-  await expect(
-    page.getByRole("link", { name: /Plant reference/ }),
-  ).toHaveAttribute("href", PLANTS.find((p) => p.id === "coconut")!.source);
-  await page.getByRole("button", { name: "All plants", exact: true }).click();
-  await page.keyboard.press("Escape");
   await expect(
     page.getByRole("dialog", { name: "Field Guide", exact: true }),
   ).toHaveCount(0);
-  await expect(page.locator(".scene canvas")).toBeFocused();
   await page.reload();
   await enter(page);
   expect((await discovered(page)).plants).toHaveLength(16);

@@ -1,13 +1,10 @@
 import {
   BufferGeometry,
   CatmullRomCurve3,
-  ConeGeometry,
   ExtrudeGeometry,
-  LatheGeometry,
   Shape,
   ShapeGeometry,
   TubeGeometry,
-  Vector2,
   Vector3,
 } from "three";
 import {
@@ -186,51 +183,6 @@ export function memoryTreeGeometry() {
   return merged;
 }
 
-export function cloakGeometry() {
-  // A compact painted bell with a scalloped hem. Rounded depth keeps the same
-  // small silhouette readable from the side as the body actually turns.
-  const profile = Array.from({ length: 17 }, (_, i) => {
-    const t = i / 16;
-    return new Vector2(0.12 + 0.46 * (1 - t) ** 1.48, 0.16 + t);
-  });
-  const g = new LatheGeometry(profile, 32);
-  const p = g.getAttribute("position");
-  for (let i = 0; i < p.count; i++) {
-    const x = p.getX(i),
-      y = p.getY(i),
-      z = p.getZ(i);
-    const a = Math.atan2(x, z),
-      hem = 1.16 - y;
-    const fold =
-      1 +
-      Math.sin(a * 5 + hem * 1.4) * 0.036 * hem +
-      Math.sin(a * 3 + 0.6) * 0.055 * hem * hem;
-    p.setXYZ(
-      i,
-      x * fold + 0.035 * hem * hem,
-      y + (Math.sin(a * 3 + 0.7) * 0.05 + Math.cos(a) * 0.022) * hem ** 4,
-      z * fold * 0.76,
-    );
-  }
-  g.computeVertexNormals();
-  return g;
-}
-export function hatGeometry() {
-  const g = new ConeGeometry(0.215, 0.59, 28, 8);
-  g.translate(0, 1.705, 0);
-  const p = g.getAttribute("position");
-  for (let i = 0; i < p.count; i++) {
-    const t = Math.max(0, (p.getY(i) - 1.41) / 0.59);
-    p.setXYZ(
-      i,
-      p.getX(i) + t * t * 0.075,
-      p.getY(i),
-      p.getZ(i) * 0.88 - t * t * 0.035,
-    );
-  }
-  g.computeVertexNormals();
-  return g;
-}
 export function leafGeometry() {
   const s = new Shape();
   s.moveTo(-0.025, -0.55);

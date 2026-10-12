@@ -1,32 +1,54 @@
 # Personalization
 
-Edit the source configs, run npm run build, inspect a preview, then redeploy. Confirmed names/relationships/appearance remain separate from editable artistic defaults. Add authentic family wording for memories; empty fields intentionally show neutral reflections.
+Edit the source configuration, regenerate affected artwork, run `npm run build`, and inspect a local preview. Use authentic family wording for memories; empty stories show neutral reflections.
 
-| Content | Exact place to edit |
-|---|---|
-| Memorial name, nickname, years | src/config/memorial.ts: content.fullName, nickname, birthYear, passingYear. The exports derive the inscription/dedication. Keep the nonbreaking year format. |
-| Dedication | Same file: MEMORIAL.dedication sentence and content.dedicationMessage; empty optional message is hidden. |
-| Final message | Same file: content.finalMessage. |
-| Eight memories | src/config/memories.ts: each entries item's title, caption, story and zone. Use authentic text and newline paragraph breaks. Preserve all eight IDs. |
-| Photographs | Put owned photos in public/photos. Set that memory's imageUrl to /photos/name.jpg. Same-origin images need no CORS configuration; remote HTTPS hosts must allow texture access. Images use a square cover crop; failure keeps the illustration. |
-| Memory locations | Same entries: position is [world x, world z]. The eight current locations are preserved. Keep them outside the pond/trunks and within a reachable route, then rerun the journey/collision checks. |
-| Snowa | src/config/companions.ts: CATS snowa. White coat, blue eyes are confirmed; marking, scale, home, speed, radius and routines are editable. |
-| Hoshi | CATS hoshi: black coat, white marking, tuxedo pattern; keep the confirmed black/white identity. |
-| Thoma | CATS thoma: softer orange coat, subtle marking and rounder face in src/features/animals/geometry.ts. |
-| Simba | CATS simba: deeper orange, stronger marking and larger leaner form. Keep distinction from Thoma. |
-| Star | CATS star: taupe/brown coat, dark points, smaller scale. |
-| Nano | DOGS nano: brown coat, slim build. |
-| Doreamon | DOGS doreamon: exact spelling, brown coat, sturdy build with broader chest/thicker legs. |
-| Max | DOGS max: golden-brown coat, tall build; preserve taller/slimmer proportions. |
-| Personalities and behavior | Each companion's personality, home [x,z], region, radius, speed, action and rests. Defaults are artistic choices, not biographical claims. Valid rest modes: sit, sleep, stretch, groom, play for cats; sit, lie, sniff, look, stretch, play for dogs. The brain in src/features/animals/simulation.ts controls safe wander/approach/follow durations. Geometry/rig in geometry.ts and Animal.tsx controls shape/gaits. Keep IDs stable for saved encounters. |
-| Oscar's appearance | src/config/oscar.ts: shirt, trousers, skin, hair and home. src/features/oscar/Oscar.tsx holds the neutral rig/proportions. No authentic likeness is claimed. |
-| Oscar's relationship/description | Same config: relationship and description. Confirmed relation is Danny's brother. |
-| Oscar's dialogue | Same config: arrival, firstMemory, greener, fullBloom. Defaults are fictional and labeled in UI. Set dialogueIsFictional false only when replacing with family-approved authentic wording appropriate for attribution. |
-| Flora information | src/config/flora.ts: common/scientific names, description, source, color, collision radius and landmark. src/config/regions.ts controls plant mixes and ground/light/sound profiles. Model form is in src/scene/speciesGeometry.ts. Keep stable SPECIES_IDS. |
-| Language strings | src/config/localization.ts: TEXT English, FIL Filipino. Type checking keeps UI keys aligned. Review Filipino with a native speaker before publication. Personal prose remains in its authored language. |
-| Contact | src/config/memorial.ts content.contactLink: HTTPS or mailto. Empty hides Contact in About. |
-| Optional recording | Same file content.ambientTrackUrl changes the default Track URL. Visitors may alternatively select Custom track in Pause, enter a same-origin or HTTPS audio URL and apply it. Missing/unavailable audio falls back to Generated. |
-| Music composition/mix | src/config/audio.ts: key, 64 bpm tempo, seed, TRACK_MIX. Offline rendering uses tools/generate_ambient.py; re-render the file after changing composer defaults. Tone's generated alternative is src/audio/music.ts. Keep MUSIC_CREDIT accurate if replacing the original recording. |
-| Camera/world art | src/config/visual.ts CAMERA/COMPOSITION; world.ts PALETTE/WORLD/QUALITY. Use opt-in ?debug=1 calibration to review transient changes, then copy chosen values into config. Recheck collisions and portrait framing. |
+## Content and presentation
 
-All eight stable memory IDs: lake, sunrise, dinner, boat, garden, guitar, road, fire. Cat IDs: snowa, hoshi, thoma, simba, star. Dog IDs: nano, doreamon, max. The save key is the-danny-v2, envelope version 4. Unknown IDs are ignored; interaction implies discovery. Reset clears memories/encounters but retains preferences/language. Preview never replaces real saved progress.
+| Content                                              | Source                                               |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| Memorial identity, dedication and final message      | `src/config/memorial.ts`                             |
+| Eight memory stories, captions, photos and locations | `src/config/memories.ts`                             |
+| Owner's Bisaya conversations and bench replies       | `src/config/dialogues.ts`                            |
+| Pet appearance, homes and routines                   | `src/config/companions.ts`                           |
+| Pet drawings and animation                           | `src/features/animals/illustration.ts`, `Animal.tsx` |
+| Danny and Oscar's painted character drawings         | `src/features/characters/paint.ts`                   |
+| Oscar's uniform, relationship and home               | `src/config/oscar.ts`                                |
+| Plant information and regional mixes                 | `src/config/flora.ts`, `regions.ts`                  |
+| Blue flower fields and roadside banks                | `src/config/forestLife.ts`                           |
+| Camera and world proportions                         | `src/config/visual.ts`                               |
+| World palette, dimensions and quality settings       | `src/config/world.ts`                                |
+| English interface text                               | `src/config/localization.ts`                         |
+| About, credits and inspiration                       | `src/config/projectInfo.ts`                          |
+| Soundtrack defaults and mix                          | `src/config/audio.ts`                                |
+
+Keep the nonbreaking year format derived from the memorial configuration. An empty optional dedication message or contact link stays hidden.
+
+Memory `position` is `[world x, world z]`. Keep locations outside the pond and solid objects, with a reachable route. Put owned photographs in `public/photos/` and set `imageUrl` to a path such as `/photos/name.jpg`. Remote HTTPS images need texture access from their host; unavailable images retain the local illustration.
+
+The interface is English only. Personal conversations remain in the owner's Bisaya, including Oscar's Yes/No bench interaction and every pet's dialogue. Edit those conversations in `dialogues.ts`; there is no Filipino interface dictionary or language switch.
+
+## Family and pets
+
+Oscar is Danny's brother. Danny wears a white sando, shorts and navy cap and carries a flashlight and hammer. Oscar shares the same drawing style and wears the requested Philippine Army uniform.
+
+Snowa has white fur and blue eyes; Hoshi is black and white. Thoma has softer orange coloring and a rounder face, while Simba has deeper orange markings. Star is brown with dark points. Nano is slim and brown; Doraemon is broader and brown; Max is taller, slim and golden brown.
+
+Appearance is owner-confirmed. Personalities, home coordinates, speed, roaming radius and rests are editable artistic defaults. Navigation lives in `src/features/animals/simulation.ts`; drawings and animation live under `src/features/animals/`. Keep existing IDs stable so saved encounters survive.
+
+After changing painted characters, pets, ground or foliage, regenerate prepared artwork with `node scripts/bake-forest-art.mjs` against the dev server on port 5174. The full authoring workflow is in [tools/README.md](tools/README.md). Roadside flower density and width live in `FOREST_LIFE.roadside`; check the path and interaction clearances after layout changes.
+
+## Audio
+
+`ambientTrackUrl` in `src/config/memorial.ts` selects the default recording. Visitors can also choose a custom same-origin or HTTPS recording in Pause; remote audio needs access from its host. Missing recordings fall back to generated music in `src/audio/music.ts`.
+
+The offline soundtrack renderer is `tools/generate_ambient.py`. Its playable MP3 goes to `public/audio/`; WAV masters, alternate mixes and the loudness/seam report stay in `tools/audio/`. Re-render after changing the key, tempo or seed. Keep the music credit accurate when replacing the original recording.
+
+## Saved progress
+
+The save key is `the-danny-v2`, envelope version 4. Stable IDs are:
+
+- Memories: `lake`, `sunrise`, `dinner`, `boat`, `garden`, `guitar`, `road`, `fire`.
+- Cats: `snowa`, `hoshi`, `thoma`, `simba`, `star`.
+- Dogs: `nano`, `doreamon`, `max`. Doraemon keeps the legacy `doreamon` persistence ID.
+
+Unknown IDs are ignored. Interaction implies discovery. Reset clears progress and encounters while retaining preferences. Development progress previews never replace the real save.

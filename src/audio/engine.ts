@@ -95,7 +95,6 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       }
       const playing =
         !s.paused &&
-        !s.fieldGuideOpen &&
         !s.journalOpen &&
         s.phase !== "loading" &&
         !document.hidden;
@@ -139,7 +138,6 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
       if (
         Tone.getContext().state === "running" &&
         !s.paused &&
-        !s.fieldGuideOpen &&
         !s.journalOpen &&
         !document.hidden
       )
@@ -151,7 +149,6 @@ export function unlockAudio(context?: AudioContext): Promise<void> {
         s.hung.length !== prior.hung.length ||
         s.phase !== prior.phase ||
         s.paused !== prior.paused ||
-        s.fieldGuideOpen !== prior.fieldGuideOpen ||
         s.journalOpen !== prior.journalOpen ||
         s.oscarDialogue !== prior.oscarDialogue ||
         s.companionDialogue !== prior.companionDialogue ||

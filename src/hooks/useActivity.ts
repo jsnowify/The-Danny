@@ -22,7 +22,6 @@ export function useActivity() {
         !s.paused &&
         !s.dedicationOpen &&
         !s.journalOpen &&
-        !s.fieldGuideOpen &&
         !s.oscarDialogue &&
         !s.companionDialogue &&
         !s.seatedWithOscar &&

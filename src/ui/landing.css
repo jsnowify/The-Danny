@@ -183,8 +183,6 @@
   overflow: hidden;
   overscroll-behavior: contain;
   touch-action: pan-y;
-  scrollbar-color: #87956d #e7e8d5;
-  scrollbar-width: thin;
   color: #314c3e;
   border: 1px solid #b3bc91;
   border-radius: 5px 16px 7px 12px / 13px 6px 16px 7px;
@@ -215,8 +213,6 @@
   padding: 2px 8px 2px 0;
   overscroll-behavior: contain;
   touch-action: pan-y;
-  scrollbar-width: thin;
-  scrollbar-color: #87956d #e7e8d5;
 }
 .project-info-header {
   flex-shrink: 0;

@@ -5,18 +5,16 @@ import {
   CanvasTexture,
   PlaneGeometry,
   MeshStandardMaterial,
-  MeshBasicMaterial,
   MeshDepthMaterial,
   RGBADepthPacking,
   SRGBColorSpace,
-  RepeatWrapping,
   DoubleSide,
   TextureLoader,
+  type BufferGeometry,
+  type Mesh,
   type Texture,
 } from "three";
-import type { BufferGeometry } from "three";
 import { applyWindShader, grassMaterial, windMaterial } from "../shaders/wind";
-import { outlineMaterial } from "../shaders/outline";
 import { paintTexture } from "../textures/paintTexture";
 import { memoryArt } from "../textures/memoryArt";
 import { MEMORIES } from "../config";
@@ -30,7 +28,6 @@ import { createPropPaint } from "../visual/propPaint";
 import { brushShrub } from "./propGeometry";
 import { forestProps } from "../visual/forestProps";
 import { groundHeight } from "../utils/random";
-import type { Mesh } from "three";
 import { forestCanopies } from "../visual/forestCanopies";
 
 function flex(
@@ -62,10 +59,6 @@ function buildResources(source: Texture) {
   approved.memory.removeFromParent();
   approved.memory.name = "memory-tree-limbs";
   approved.memory.position.set(0, 0, 0);
-  approved.traveler.removeFromParent();
-  approved.traveler.position.set(0, 0, 0);
-  approved.shadow.removeFromParent();
-  approved.shadow.position.set(0, 0.012, 0);
   const trunk = curvedStem(0, 0, 0.08, 1, 1);
   const forest = createForestPaint(
     approved.trees,
@@ -94,12 +87,9 @@ function buildResources(source: Texture) {
     bush: flex(brushShrub(), 0.3, 1),
     ...drawings.geometries,
   };
-  const groundTexture = (approved.ground.material as MeshStandardMaterial).map!;
   const landscape = landscapePaint(
     approved.ground.material as MeshStandardMaterial,
   );
-  const paper = new CanvasTexture(paintTexture("grain"));
-  paper.wrapS = paper.wrapT = RepeatWrapping;
   const glow = new CanvasTexture(paintTexture("glow"));
   glow.colorSpace = SRGBColorSpace;
   const pictures = MEMORIES.map((_, i) => {
@@ -120,16 +110,6 @@ function buildResources(source: Texture) {
       false,
     ),
     ground: landscape.material,
-    outline: outlineMaterial(),
-    bark: approved.memory.material as MeshStandardMaterial,
-    paper: new MeshBasicMaterial({ color: "#fff1cc", side: DoubleSide }),
-    glow: new MeshBasicMaterial({
-      map: glow,
-      transparent: true,
-      depthWrite: false,
-      color: "#ffe2a1",
-      side: DoubleSide,
-    }),
   };
   return {
     lease: 0,
@@ -142,13 +122,10 @@ function buildResources(source: Texture) {
     landscape,
     geometries,
     materials,
-    groundTexture,
-    paper,
     glow,
     pictures,
     leafTexture,
     pictureGeometry: new PlaneGeometry(1.05, 1.23),
-    particleGeometry: new PlaneGeometry(1, 1),
   };
 }
 export type Assets = ReturnType<typeof buildResources>;
@@ -171,14 +148,10 @@ export function useResources() {
           )
             m.dispose();
         });
-        [
-          assets.paper,
-          assets.glow,
-          assets.leafTexture,
-          ...assets.pictures,
-        ].forEach((t) => t.dispose());
+        [assets.glow, assets.leafTexture, ...assets.pictures].forEach((t) =>
+          t.dispose(),
+        );
         assets.pictureGeometry.dispose();
-        assets.particleGeometry.dispose();
         assets.forest.dispose();
         assets.current.dispose();
         assets.props.dispose();

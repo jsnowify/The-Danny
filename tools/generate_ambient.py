@@ -301,7 +301,7 @@ def pcm_metrics(audio):
     }
 
 
-def render(seed, bpm, key, mix_name, outdir):
+def render(seed, bpm, key, mix_name, outdir, archive_dir):
     name = "ambient-lullaby" + ("" if mix_name == "main" else "-" + mix_name)
     print(f"Rendering {name}: seed={seed}, {key} major, {bpm} BPM", flush=True)
     audio, events = synthesize(seed, bpm, key, mix_name)
@@ -313,7 +313,7 @@ def render(seed, bpm, key, mix_name, outdir):
         gain_db = min(-16 - measured["integrated_lufs"], -1.7 - measured["true_peak_dbtp"])
         audio *= 10 ** (gain_db / 20)
         pcm = np.round(np.clip(audio, -1, 1) * 32767).astype(np.int16)
-        master = outdir / (name + ".wav") if mix_name == "main" else Path(tmp) / "master.wav"
+        master = archive_dir / (name + ".wav") if mix_name == "main" else Path(tmp) / "master.wav"
         wavfile.write(master, SR, pcm)
         decoded_master = pcm.astype(np.float32) / 32768
         wav_stats = {**pcm_metrics(decoded_master), **loudness(master)}
@@ -352,6 +352,8 @@ def main():
     parser.add_argument("--bpm", type=float, default=default_bpm)
     parser.add_argument("--mix", choices=["all", *MIXES], default="all")
     parser.add_argument("--out-dir", type=Path, default=ROOT / "public" / "audio")
+    parser.add_argument("--archive-dir", type=Path, default=ROOT / "tools" / "audio",
+                        help="Keep WAV masters, alternate mixes and the render report outside public assets.")
     args = parser.parse_args()
     if not 62 <= args.bpm <= 66:
         parser.error("Tempo must be 62–66 BPM.")
@@ -361,14 +363,17 @@ def main():
         if not shutil.which(binary):
             parser.error(f"Install {binary} and add it to PATH.")
     args.out_dir.mkdir(parents=True, exist_ok=True)
+    args.archive_dir.mkdir(parents=True, exist_ok=True)
     mixes = list(MIXES) if args.mix == "all" else [args.mix]
-    results = [render(args.seed + list(MIXES).index(mix) * 9173, args.bpm, args.key, mix, args.out_dir) for mix in mixes]
+    results = [render(args.seed + list(MIXES).index(mix) * 9173, args.bpm, args.key, mix,
+                      args.out_dir if mix == "main" else args.archive_dir, args.archive_dir)
+               for mix in mixes]
     report = {
         "composition": {"original": True, "sections": {"intro": INTRO, "A": A, "B": B, "A_return": A, "outro": OUTRO}, "phrases_midi": PHRASES},
         "render": {"sample_rate": SR, "channels": 2, "wav_format": "PCM signed 16-bit", "mp3_bitrate": 160000, "reverb_rt60_seconds": 8, "delay_beats": 1.5, "seam_crossfade_seconds_each_side": 4, "target_integrated_lufs": -16, "peak_ceiling_dbtp": -1.7},
         "tracks": results,
     }
-    (args.out_dir / "ambient-render-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    (args.archive_dir / "ambient-render-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

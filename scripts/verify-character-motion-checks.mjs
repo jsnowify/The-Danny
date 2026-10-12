@@ -181,36 +181,33 @@ export async function verifyMotion(page, capture) {
   );
   await page.mouse.dblclick(958, 720, { delay: 75 });
   await page.evaluate(() => window.motionAdvance(2));
-  await capture("wide-view");
+  await capture("after-double-click");
   const wide = await page.evaluate(() => window.motionSample());
-  assert(wide.span > before.span * 1.25, "Double-click reveals more world");
   assert(
-    wide.cameraPosition[1] > before.cameraPosition[1] + 2,
-    "Camera physically pulls back",
+    Math.abs(wide.span - before.span) < 1e-8,
+    "Double-click preserves zoom",
   );
   assert(
     Math.hypot(...wide.direction.map((v, i) => v - before.direction[i])) < 1e-7,
-    "Pullback preserves orientation",
+    "Double-click preserves orientation",
   );
   await page.mouse.dblclick(958, 720, { delay: 75 });
   await page.evaluate(() => window.motionAdvance(4.5));
   assert(
     Math.abs(
       (await page.evaluate(() => window.motionSample())).span - before.span,
-    ) < 0.025,
-    "Second double-click returns framing",
+    ) < 1e-8,
+    "Repeated double-click preserves framing",
   );
   results.push({ name: "camera", before, hover, wide });
 
-  // Touch generates pointer taps, so it must work without a mouse dblclick.
+  // Rapid touch taps must stay movement input and never trigger camera zoom.
   await page.touchscreen.tap(958, 720);
   await page.touchscreen.tap(958, 720);
-  const touch = await page.evaluate(
-    () => window.motionStudy.runtime.input.wideView,
-  );
-  assert(touch, "Two touch taps trigger pullback");
+  await page.evaluate(() => window.motionAdvance(2));
+  const touch = await page.evaluate(() => window.motionSample());
+  assert(Math.abs(touch.span - before.span) < 1e-8, "Touch taps preserve zoom");
   await page.evaluate(() => {
-    window.motionStudy.runtime.input.wideView = false;
     window.motionStudy.useStore.getState().setSettings({ reducedMotion: true });
     window.motionAdvance(2);
   });

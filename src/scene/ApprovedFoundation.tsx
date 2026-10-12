@@ -3,8 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useAssets } from "./resources";
 import { atmosphere, traveler } from "./runtime";
 import { useStore } from "../store";
-import { breezeAt } from "./breeze";
-import { breeze } from "./breeze";
+import { breezeAt, breeze } from "./breeze";
 import { treeContact } from "../features/forestLife/treeContact";
 
 /** The approved Pass 1 artwork is the live scene's foundation. */
@@ -21,13 +20,6 @@ export function ApprovedFoundation() {
       { x: traveler.x - 0.35, z: traveler.z - 1.6 },
     );
     const reduced = useStore.getState().settings.reducedMotion;
-    // Keep the approved painted geometry, with a shared slow gust driving its
-    // tiny motion. Shoulder anchors stay stable while the lower cloth deforms.
-    approved.cloak.rotation.z = 0;
-    approved.hat.position.y = reduced
-      ? 0
-      : traveler.gaitWeight * Math.sin(traveler.gait + 0.3) * 0.002;
-    approved.hat.rotation.z = reduced ? 0 : traveler.clothTwist * 0.035;
     for (let i = 0; i < approved.trees.length; i++) {
       const tree = approved.trees[i];
       const wind = reduced

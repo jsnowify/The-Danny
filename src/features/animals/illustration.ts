@@ -1,3 +1,4 @@
+import { preparedImage } from "../../textures/preparedArt";
 import {
   CanvasTexture,
   LinearFilter,
@@ -378,20 +379,25 @@ export function drawAnimal(
 }
 
 export function animalSpriteAssets(c: Companion) {
-  const canvas = document.createElement("canvas");
-  canvas.width = ANIMAL_CELL * ANIMAL_FRAMES;
-  canvas.height = ANIMAL_CELL * ANIMAL_ROWS;
-  const ctx = canvas.getContext("2d")!;
-  for (let row = 0; row < rows.length; row++)
-    for (let frame = 0; frame < ANIMAL_FRAMES; frame++) {
-      ctx.save();
-      ctx.translate(frame * ANIMAL_CELL, row * ANIMAL_CELL);
-      ctx.beginPath();
-      ctx.rect(1, 1, ANIMAL_CELL - 2, ANIMAL_CELL - 2);
-      ctx.clip();
-      drawAnimal(ctx, c, rows[row].pose, rows[row].view, frame);
-      ctx.restore();
-    }
+  const canvas =
+    preparedImage(`animal-${c.id}`) ??
+    (() => {
+      const canvas = document.createElement("canvas");
+      canvas.width = ANIMAL_CELL * ANIMAL_FRAMES;
+      canvas.height = ANIMAL_CELL * ANIMAL_ROWS;
+      const ctx = canvas.getContext("2d")!;
+      for (let row = 0; row < rows.length; row++)
+        for (let frame = 0; frame < ANIMAL_FRAMES; frame++) {
+          ctx.save();
+          ctx.translate(frame * ANIMAL_CELL, row * ANIMAL_CELL);
+          ctx.beginPath();
+          ctx.rect(1, 1, ANIMAL_CELL - 2, ANIMAL_CELL - 2);
+          ctx.clip();
+          drawAnimal(ctx, c, rows[row].pose, rows[row].view, frame);
+          ctx.restore();
+        }
+      return canvas;
+    })();
   const texture = new CanvasTexture(canvas);
   texture.name = `illustrated-animal-atlas-${c.id}`;
   texture.colorSpace = SRGBColorSpace;

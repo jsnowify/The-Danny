@@ -25,7 +25,6 @@ export function WalkingParticles() {
       s.phase === "explore" &&
       !s.paused &&
       !s.journalOpen &&
-      !s.fieldGuideOpen &&
       !s.oscarDialogue &&
       !s.companionDialogue &&
       !s.dedicationOpen;

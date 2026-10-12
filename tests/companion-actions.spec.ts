@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { TEXT } from "../src/config/localization";
 
-test("overlapping optional company can be chosen without replacing the story priority", async ({
+test("companions use a single interaction prompt without a Nearby Company panel", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -26,7 +26,7 @@ test("overlapping optional company can be chosen without replacing the story pri
   await page.getByRole("button", { name: TEXT.begin }).click();
   await page.getByRole("button", { name: TEXT.continue, exact: true }).click();
   await page.waitForFunction(() => window.__DANNY_TEST__?.state().sceneReady);
-  // Deliberately arrange a safe overlap to exercise selection of a non-nearest cat.
+  // Arrange overlapping companions: the main prompt still gives Oscar priority.
   const safe = await page.evaluate(async () => {
     const url = (p: string) =>
       performance
@@ -59,15 +59,52 @@ test("overlapping optional company can be chosen without replacing the story pri
   });
   expect(safe).toEqual([true, true]);
   await expect(page.locator(".near-memory")).toHaveText(/Talk to Oscar/);
-  await page.getByText(TEXT.nearbyCompany, { exact: true }).click();
-  await expect(page.locator(".nearby-company button")).toHaveCount(3);
-  await page.screenshot({
-    path: "artifacts/v4-stage-m/nearby-company-390.png",
+  await expect(page.locator(".nearby-company")).toHaveCount(0);
+  await expect(page.getByText("Nearby company", { exact: true })).toHaveCount(
+    0,
+  );
+  await page.locator(".near-memory").click();
+  await expect(
+    page.getByRole("dialog", { name: "Conversation with Oscar" }),
+  ).toBeVisible();
+  await page.keyboard.press("Escape");
+  // Walking over to Snowa exposes her ordinary prompt instead of a menu.
+  await page.evaluate(async () => {
+    const url = (p: string) =>
+      performance
+        .getEntriesByType("resource")
+        .find((e) => new URL(e.name).pathname === p)?.name ?? p;
+    const { animals, safePosition } = await import(
+      /* @vite-ignore */ url("/src/features/animals/simulation.ts")
+    );
+    const { createWorld } = await import(
+      /* @vite-ignore */ url("/src/scene/world.ts")
+    );
+    const { oscarRuntime } = await import(
+      /* @vite-ignore */ url("/src/features/oscar/Oscar.tsx")
+    );
+    const a = animals.get("snowa")!;
+    const world = createWorld();
+    const spot = [
+      [0, 1.2],
+      [1.2, 0],
+      [0.9, 0.9],
+    ]
+      .map(([x, z]) => [a.x + x, a.z + z])
+      .find(
+        ([x, z]) =>
+          safePosition(world, x, z) &&
+          Math.hypot(x - oscarRuntime.x, z - oscarRuntime.z) > 3.2,
+      );
+    if (!spot) throw new Error("No safe approach to Snowa");
+    window.__DANNY_TEST__.place(spot[0], spot[1]);
   });
-  await page
-    .locator(".nearby-company")
-    .getByRole("button", { name: "Pet Snowa", exact: true })
-    .click();
+  const pet = page.getByRole("button", { name: /Pet Snowa/ });
+  await expect(pet).toBeVisible();
+  await page.screenshot({
+    path: "artifacts/startup/companion-prompt-390.png",
+  });
+  await pet.click();
   const saved = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("the-danny-v2")!),
   );
@@ -78,12 +115,5 @@ test("overlapping optional company can be chosen without replacing the story pri
     page.getByRole("dialog", { name: "Conversation with Snowa" }),
   ).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.locator(".near-memory")).toHaveText(/Talk to Oscar/);
-  // Escape may open Pause after native details closes; return to gameplay if so.
-  if (
-    await page
-      .getByRole("button", { name: TEXT.resume, exact: true })
-      .isVisible()
-  )
-    await page.getByRole("button", { name: TEXT.resume, exact: true }).click();
+  await expect(page.locator(".nearby-company")).toHaveCount(0);
 });

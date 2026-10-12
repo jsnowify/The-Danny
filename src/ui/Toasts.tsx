@@ -7,8 +7,7 @@ import { BrandLogo } from "./BrandLogo";
 export function Toasts() {
   const textDictionary = useText();
   const idleStage = useStore((s) => s.idleStage);
-  const guide = useStore((s) => s.fieldGuideOpen),
-    journal = useStore((s) => s.journalOpen),
+  const journal = useStore((s) => s.journalOpen),
     dialogue = useStore((s) => s.oscarDialogue || !!s.companionDialogue);
   const toast = useStore((s) => s.toast),
     phase = useStore((s) => s.phase),
@@ -26,7 +25,6 @@ export function Toasts() {
     ready &&
     !paused &&
     !dedication &&
-    !guide &&
     !journal &&
     !dialogue;
   const index =

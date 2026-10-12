@@ -61,7 +61,6 @@ type State = DiscoveryProgress & {
   tier: Tier;
   paused: boolean;
   dedicationOpen: boolean;
-  fieldGuideOpen: boolean;
   journalOpen: boolean;
   journalTab: string;
   nearCompanion: string | null;
@@ -129,7 +128,6 @@ export const useStore = create<State>()(
       tier: mobile ? "medium" : "high",
       paused: false,
       dedicationOpen: false,
-      fieldGuideOpen: false,
       journalOpen: false,
       journalTab: "companions",
       nearCompanion: null,
@@ -146,7 +144,6 @@ export const useStore = create<State>()(
           s.previewBackup ||
           s.phase !== "explore" ||
           s.paused ||
-          s.fieldGuideOpen ||
           s.journalOpen
         )
           return;
@@ -179,7 +176,6 @@ export const useStore = create<State>()(
           s.phase !== "explore" ||
           s.paused ||
           s.journalOpen ||
-          s.fieldGuideOpen ||
           s.oscarDialogue ||
           s.companionDialogue ||
           s.dedicationOpen ||
@@ -203,7 +199,6 @@ export const useStore = create<State>()(
           s.nearOscar &&
           !s.paused &&
           !s.journalOpen &&
-          !s.fieldGuideOpen &&
           !s.companionDialogue &&
           !s.dedicationOpen &&
           !s.seatedWithOscar
@@ -217,13 +212,7 @@ export const useStore = create<State>()(
       regionId: "clearing",
       discoverSpecies: (ids) => {
         const s = get();
-        if (
-          s.previewBackup ||
-          s.phase !== "explore" ||
-          s.paused ||
-          s.fieldGuideOpen
-        )
-          return;
+        if (s.previewBackup || s.phase !== "explore" || s.paused) return;
         const next = [
           ...new Set([
             ...s.discoveredSpecies,
@@ -306,7 +295,6 @@ export const useStore = create<State>()(
           (s.phase === "explore" || s.phase === "finale") &&
           !s.paused &&
           !s.journalOpen &&
-          !s.fieldGuideOpen &&
           !s.oscarDialogue &&
           !s.companionDialogue &&
           !s.seatedWithOscar &&
@@ -365,7 +353,6 @@ export const useStore = create<State>()(
           toast: null,
           sceneReady: false,
           dedicationOpen: false,
-          fieldGuideOpen: false,
           journalOpen: false,
           nearCompanion: null,
           nearCompanions: [],

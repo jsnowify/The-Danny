@@ -63,6 +63,7 @@ export function Player({ world }: { world: WorldData }) {
       cursor: 0,
       sitting: 0,
       wasSeated: false,
+      cursorStall: 0,
       lastX: 0,
       lastZ: 5.5,
     }),
@@ -81,7 +82,6 @@ export function Player({ world }: { world: WorldData }) {
       traveler.gait =
       traveler.gaitWeight =
         0;
-    input.wideView = false;
     traveler.vx =
       traveler.vz =
       traveler.ax =
@@ -108,7 +108,6 @@ export function Player({ world }: { world: WorldData }) {
             s.phase !== "explore" ||
             s.paused ||
             s.dedicationOpen ||
-            s.fieldGuideOpen ||
             s.journalOpen ||
             s.oscarDialogue ||
             s.companionDialogue ||
@@ -126,10 +125,7 @@ export function Player({ world }: { world: WorldData }) {
       state = useStore.getState(),
       k = keys();
     const canMove =
-      state.phase === "explore" &&
-      !state.paused &&
-      !state.dedicationOpen &&
-      !state.fieldGuideOpen;
+      state.phase === "explore" && !state.paused && !state.dedicationOpen;
     const movementAllowed =
       canMove &&
       !state.journalOpen &&
@@ -160,16 +156,19 @@ export function Player({ world }: { world: WorldData }) {
     if (movementAllowed) {
       dx = Number(k.right) - Number(k.left);
       dz = Number(k.back) - Number(k.forward);
-      if (!dx && !dz && input.held) {
+      if (dx || dz) input.followCursor = false;
+      if (!dx && !dz && (input.held || input.followCursor)) {
         pointerWalking = true;
         dx = input.targetX - traveler.x;
         dz = input.targetZ - traveler.z;
         if (!input.intent || dx * dx + dz * dz < 0.0144) {
+          input.followCursor = false;
           dx = dz = 0;
         }
       }
     } else {
       input.held = false;
+      input.followCursor = false;
       input.intent = 0;
     }
     const reduced = state.settings.reducedMotion;
@@ -183,7 +182,8 @@ export function Player({ world }: { world: WorldData }) {
       !k.back &&
       !k.left &&
       !k.right &&
-      !input.held;
+      !input.held &&
+      !input.followCursor;
     const wasAutonomous = scratch.wander.active;
     scratch.wander.update(traveler.x, traveler.z, dt, wandering, (point) => {
       const x = point.x,
@@ -276,6 +276,19 @@ export function Player({ world }: { world: WorldData }) {
         }
       },
     );
+    // A hover destination inside a solid object must settle against its edge,
+    // instead of repeatedly pushing forever after the cursor has stopped.
+    scratch.cursorStall =
+      input.followCursor &&
+      pointerWalking &&
+      traveler.speed < 0.05 &&
+      length > 0.2
+        ? scratch.cursorStall + dt
+        : 0;
+    if (scratch.cursorStall > 0.5) {
+      input.followCursor = false;
+      input.intent = 0;
+    }
     traveler.intent = pointerWalking && movementAllowed ? input.intent : 0;
     traveler.idle = traveler.speed < 0.1 ? traveler.idle + dt : 0;
     traveler.gait = scratch.motion.gait;

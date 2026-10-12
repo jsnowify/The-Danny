@@ -1,3 +1,4 @@
+import { preparedImage } from "../../textures/preparedArt";
 import {
   CanvasTexture,
   CircleGeometry,
@@ -17,31 +18,36 @@ import {
 } from "./paint";
 
 export function characterSpriteAssets(who: Character) {
-  const canvas = document.createElement("canvas");
-  canvas.width = CHARACTER_CELL * CHARACTER_FRAMES;
-  canvas.height = CHARACTER_CELL * CHARACTER_ROWS;
-  const ctx = canvas.getContext("2d")!;
-  for (let pose = 0; pose < 3; pose++)
-    for (let view = 0; view < 3; view++)
-      for (let frame = 0; frame < CHARACTER_FRAMES; frame++) {
-        ctx.save();
-        ctx.translate(
-          frame * CHARACTER_CELL,
-          (pose * 3 + view) * CHARACTER_CELL,
-        );
-        ctx.beginPath();
-        ctx.rect(1, 1, CHARACTER_CELL - 2, CHARACTER_CELL - 2);
-        ctx.clip();
-        ctx.scale(CHARACTER_CELL / 128, CHARACTER_CELL / 128);
-        drawCharacter(
-          ctx,
-          who,
-          (["idle", "walk", "sit"] as const)[pose],
-          (["front", "side", "back"] as const)[view],
-          frame,
-        );
-        ctx.restore();
-      }
+  const canvas =
+    preparedImage(`character-${who}`) ??
+    (() => {
+      const canvas = document.createElement("canvas");
+      canvas.width = CHARACTER_CELL * CHARACTER_FRAMES;
+      canvas.height = CHARACTER_CELL * CHARACTER_ROWS;
+      const ctx = canvas.getContext("2d")!;
+      for (let pose = 0; pose < 3; pose++)
+        for (let view = 0; view < 3; view++)
+          for (let frame = 0; frame < CHARACTER_FRAMES; frame++) {
+            ctx.save();
+            ctx.translate(
+              frame * CHARACTER_CELL,
+              (pose * 3 + view) * CHARACTER_CELL,
+            );
+            ctx.beginPath();
+            ctx.rect(1, 1, CHARACTER_CELL - 2, CHARACTER_CELL - 2);
+            ctx.clip();
+            ctx.scale(CHARACTER_CELL / 128, CHARACTER_CELL / 128);
+            drawCharacter(
+              ctx,
+              who,
+              (["idle", "walk", "sit"] as const)[pose],
+              (["front", "side", "back"] as const)[view],
+              frame,
+            );
+            ctx.restore();
+          }
+      return canvas;
+    })();
   const texture = new CanvasTexture(canvas);
   texture.name = `${who}-chibi-painted-atlas`;
   texture.colorSpace = SRGBColorSpace;

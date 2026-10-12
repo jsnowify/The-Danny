@@ -29,6 +29,9 @@ test("English journal controls, focus and touch targets work with an older Filip
   await page.getByRole("button", { name: TEXT.begin }).click();
   await page.getByRole("button", { name: TEXT.continue, exact: true }).click();
   await page.locator(".hud").waitFor();
+  await expect(
+    page.getByRole("button", { name: "Field Guide", exact: true }),
+  ).toHaveCount(0);
   await page.screenshot({ path: "artifacts/v4-stage-j/hud-390.png" });
   const sizes = await page.locator(".hud button").evaluateAll((nodes) =>
     nodes
@@ -47,6 +50,9 @@ test("English journal controls, focus and touch targets work with an older Filip
     .getByRole("button", { name: TEXT.companions, exact: true })
     .click();
   await page.getByRole("dialog", { name: TEXT.journal, exact: true }).waitFor();
+  await expect(
+    page.getByRole("button", { name: "Field Guide", exact: true }),
+  ).toHaveCount(0);
   await expect(
     page.getByRole("heading", { name: "Max", exact: true }),
   ).toBeVisible();
@@ -68,9 +74,6 @@ test("English journal controls, focus and touch targets work with an older Filip
     page.getByRole("button", { name: TEXT.pauseLabel, exact: true }),
   ).toBeVisible();
   expect(await page.locator("html").getAttribute("lang")).toBe("en");
-  await page.getByRole("button", { name: TEXT.guide, exact: true }).click();
-  await page.getByRole("dialog", { name: TEXT.guide, exact: true }).waitFor();
-  await page.keyboard.press("Escape");
   await page.screenshot({ path: "artifacts/v4-stage-j/english-hud-390.png" });
   await page.reload();
   await page.getByRole("button", { name: TEXT.begin }).click();

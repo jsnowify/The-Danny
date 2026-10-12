@@ -10,7 +10,6 @@ import { REGIONS } from "../config/regions";
 import { input } from "../scene/runtime";
 import { primaryAction, interact } from "../features/interaction";
 import { COMPANION_BY_ID } from "../config/companions";
-import { NearbyCompany } from "./NearbyCompany";
 export function Hud() {
   const TEXT = useText();
   const muted = useStore((s) => s.settings.muted),
@@ -21,14 +20,12 @@ export function Hud() {
     nearMemory = useStore((s) => s.nearMemory);
   const available = collected.some((id) => !hung.includes(id));
   const seated = useStore((s) => s.seatedWithOscar);
-  const nearCompanion = useStore((s) => s.nearCompanion),
-    nearOscar = useStore((s) => s.nearOscar);
+  // Refresh the shared interaction prompt when proximity changes.
+  useStore((s) => s.nearCompanion);
+  useStore((s) => s.nearOscar);
   const action = primaryAction();
-  void nearCompanion;
-  void nearOscar;
   const audioFailed = useStore((s) => s.audioFailed);
-  const regionId = useStore((s) => s.regionId),
-    discovered = useStore((s) => s.discoveredSpecies.length);
+  const regionId = useStore((s) => s.regionId);
   return (
     <div className="hud">
       <div className="hud-left">
@@ -109,19 +106,6 @@ export function Hud() {
           {REGIONS.find((r) => r.id === regionId)?.name}
         </span>
       )}
-      <button
-        className="field-guide-button"
-        aria-label={TEXT.guide}
-        title={`${discovered} / 16 ${TEXT.guide}`}
-        onClick={() => {
-          input.held = false;
-          useStore.setState({ fieldGuideOpen: true });
-        }}
-      >
-        <Icon name="leaf" />
-        <span>{TEXT.guide}</span>
-        <small>{discovered}/16</small>
-      </button>
       {phase === "explore" && near && available && action?.kind === "hang" && (
         <button
           className="primary hang-button"
@@ -170,12 +154,6 @@ export function Hud() {
           <Icon name="arrow" />
         </button>
       )}
-      {!seated && <NearbyCompany />}
-      <span className="controls-note">
-        {TEXT.controlHold}
-        <span> · </span>
-        {TEXT.controlKeys}
-      </span>
       {audioFailed && (
         <span className="audio-notice" role="status">
           {TEXT.audioUnavailable}

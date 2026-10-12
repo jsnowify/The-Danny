@@ -69,7 +69,6 @@ export function createNature(bus: Tone.Gain) {
       s.phase === "loading" ||
       s.phase === "dedication" ||
       s.paused ||
-      s.fieldGuideOpen ||
       s.journalOpen ||
       s.settings.muted
     ) {

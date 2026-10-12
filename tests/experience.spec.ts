@@ -60,18 +60,17 @@ async function begin(page: Page, skip = true) {
   await expect(page.getByRole("heading", { name: "The Danny." })).toBeVisible();
   await page.getByRole("button", { name: "Tap to begin" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  if (skip) await page.getByLabel("Skip intro", { exact: true }).check();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(page.locator(".scene canvas")).toBeVisible();
   await expect
     .poll(async () => (await state(page)).sceneReady, { timeout: 30000 })
     .toBe(true);
   await page.evaluate(() => window.__DANNY_TEST__.quality());
-  if (!skip) {
-    await expect(page.locator(".intro-ui")).toBeVisible();
+  if (!skip || (await page.locator(".intro-ui").isVisible())) {
+    if (!skip) await expect(page.locator(".intro-ui")).toBeVisible();
     try {
       await page.getByRole("button", { name: "Skip intro" }).click({
-        timeout: 5000,
+        timeout: 15000,
       });
     } catch (error) {
       // Shader compilation can outlast the intro. A detached Skip button is

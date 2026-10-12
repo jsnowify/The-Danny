@@ -8,7 +8,6 @@ export function primaryAction(): PrimaryAction | null {
   if (
     s.phase !== "explore" ||
     s.paused ||
-    s.fieldGuideOpen ||
     s.journalOpen ||
     s.oscarDialogue ||
     s.companionDialogue ||

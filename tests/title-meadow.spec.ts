@@ -1,5 +1,15 @@
 import { test, expect } from "@playwright/test";
 
+test.use({
+  launchOptions: {
+    args: [
+      "--enable-webgl",
+      "--ignore-gpu-blocklist",
+      "--autoplay-policy=document-user-activation-required",
+    ],
+  },
+});
+
 test("Info replaces the old caption with the owner's tribute and restores keyboard focus", async ({
   page,
 }) => {
@@ -8,6 +18,8 @@ test("Info replaces the old caption with the owner's tribute and restores keyboa
     0,
   );
   await expect(page.getByText("A GLIMPSE OF THE FOREST")).toHaveCount(0);
+  await expect(page.getByText("WANDER SLOWLY")).toHaveCount(0);
+  await expect(page.getByText("REMEMBER WARMLY")).toHaveCount(0);
   const info = page.getByRole("button", { name: "Info", exact: true });
   await info.focus();
   await page.keyboard.press("Enter");
@@ -207,7 +219,7 @@ test("phone and short screens keep English sound, Info and Begin controls reacha
     { width: 844, height: 390 },
   ]) {
     await page.setViewportSize(size);
-    for (const name of ["Tap to begin", "Info", "Enable forest sounds"])
+    for (const name of ["Tap to begin", "Info", "Mute sound"])
       await expect(
         page.getByRole("button", { name, exact: true }),
       ).toBeInViewport();
@@ -220,9 +232,10 @@ test("phone and short screens keep English sound, Info and Begin controls reacha
       ),
     ).toBe(true);
   }
-  await page
-    .getByRole("button", { name: "Enable forest sounds", exact: true })
-    .click();
+  await page.locator(".sound-note").click();
+  await expect(page.locator(".sound-note")).toHaveText(
+    "Birdsong & a soft breeze",
+  );
   await page.getByRole("button", { name: "Mute sound", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "Enable forest sounds", exact: true }),
@@ -276,7 +289,7 @@ test("the view moves sideways, down, sideways and back up with a seamless return
   expect(path.controlsStayed).toBe(true);
 });
 
-test("landing birds and wind produce audio, mute, resume and hand off to the dedication", async ({
+test("landing sound is on by default; the first ordinary tap starts birds and wind, which mute, resume and hand off to dedication", async ({
   page,
 }) => {
   const tracks: string[] = [];
@@ -290,7 +303,13 @@ test("landing birds and wind produce audio, mute, resume and hand off to the ded
   const state = () =>
     page.evaluate(() => Reflect.get(window, "__DANNY_AUDIO__")?.state());
   expect(await state()).toBeUndefined();
-  await page.getByRole("button", { name: "Enable forest sounds" }).click();
+  await expect(
+    page.getByRole("button", { name: "Mute sound", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Enable forest sounds", exact: true }),
+  ).toHaveCount(0);
+  await page.locator(".title-sub").click();
   await expect.poll(async () => (await state())?.contextState).toBe("running");
   await expect
     .poll(async () => (await state())?.nature.birdCalls)
@@ -365,7 +384,7 @@ test("a hidden tab pauses movement and ambience and preserves a manual preview p
   page,
 }) => {
   await page.goto("/?test=1");
-  await page.getByRole("button", { name: "Enable forest sounds" }).click();
+  await page.locator(".sound-note").click();
   await expect
     .poll(() =>
       page.evaluate(
@@ -425,4 +444,23 @@ test("Begin still unlocks audio and opens the dedication from the meadow landing
       ),
     )
     .toBe("running");
+});
+
+test("keyboard interaction also starts the landing ambience without a separate sound toggle", async ({
+  page,
+}) => {
+  await page.goto("/?test=1");
+  await page.getByRole("button", { name: "Info", exact: true }).focus();
+  await page.keyboard.press("Enter");
+  await expect(
+    page.getByRole("dialog", { name: "About The Danny" }),
+  ).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => Reflect.get(window, "__DANNY_AUDIO__")?.state().outputLevel,
+      ),
+    )
+    .toBeGreaterThan(0.00001);
+  await expect(page.locator(".scene canvas")).toHaveCount(0);
 });

@@ -2,6 +2,8 @@ node_modules/
 dist/
 test-results/
 playwright-report/
+# Generated captures stay local; existing tracked checkpoints are preserved.
+/artifacts/
 .audio-venv/
 __pycache__/
 *.tsbuildinfo

@@ -8,9 +8,10 @@ import { random } from "../utils/random";
 import { meadowPigment } from "./meadowPigment";
 import { forestShade, forestShadeGLSL } from "./forestShade";
 import { COMPOSITION } from "../config";
+import { preparedImage } from "../textures/preparedArt";
 
 /** Warm meadow light, cool leaf shadows and a winding sandy footpath. */
-export function landscapePaint(approved: MeshStandardMaterial) {
+function drawLandscape() {
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 2048;
   const c = canvas.getContext("2d")!,
@@ -43,6 +44,11 @@ export function landscapePaint(approved: MeshStandardMaterial) {
     });
   }
   meadowPigment(c, 8642, true);
+  return canvas;
+}
+
+export function landscapePaint(approved: MeshStandardMaterial) {
+  const canvas = preparedImage("landscape") ?? drawLandscape();
   const map = new CanvasTexture(canvas);
   map.name = "painted-summer-forest-floor";
   map.colorSpace = SRGBColorSpace;

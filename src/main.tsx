@@ -8,6 +8,7 @@ import "@fontsource/instrument-serif/400-italic.css";
 import "./styles.css";
 import "./ui/painted-ui.css";
 import "./ui/landing.css";
+import "./ui/dedication.css";
 
 const icon =
   document.querySelector<HTMLLinkElement>('link[rel="icon"]') ??

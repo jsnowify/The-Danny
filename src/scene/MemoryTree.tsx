@@ -146,7 +146,6 @@ export function MemoryTree() {
       state.phase === "explore" &&
       !state.paused &&
       !state.journalOpen &&
-      !state.fieldGuideOpen &&
       !state.oscarDialogue &&
       !state.companionDialogue &&
       !state.dedicationOpen;

@@ -1,0 +1,106 @@
+[
+  {
+    "name": "ground",
+    "width": 2048,
+    "height": 2048,
+    "originalPixelSha256": "8d6c473c5880e5cb14b938de2675caa48f4f44bda6d8f8e7c4b86e5a8880926d",
+    "lossless": false,
+    "bytes": 137172
+  },
+  {
+    "name": "landscape",
+    "width": 2048,
+    "height": 2048,
+    "originalPixelSha256": "f327cbbbb17e92196a1f8b2a02ecc8a2c7ba3c5b43bc5eafa5712243b3868916",
+    "lossless": false,
+    "bytes": 145802
+  },
+  {
+    "name": "woodland-shade",
+    "width": 1024,
+    "height": 1024,
+    "originalPixelSha256": "309c619982a0b98f1db0e1be3ee65d7bb44e0d331cdd0d0e051c704bce2717fe",
+    "lossless": true,
+    "bytes": 162890
+  },
+  {
+    "name": "animal-snowa",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "a99c4a1bf50856a13bba444bc586899145d70b8b4372f4583be187a3bffe3670",
+    "lossless": true,
+    "bytes": 54422
+  },
+  {
+    "name": "animal-hoshi",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "252185e7e60681a0b3a22880de16d9221a47ea2427f4dfd3c49f0c2abc7b6d88",
+    "lossless": true,
+    "bytes": 56388
+  },
+  {
+    "name": "animal-thoma",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "89effb4efea04694c16ffa02fb8046f308bf284eb366bb7091c15f6f88dc9b9d",
+    "lossless": true,
+    "bytes": 64142
+  },
+  {
+    "name": "animal-simba",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "61fbcda6b2cfffac901a1b5e1ed2dddf6bfcc749f84026f016d29771f8ee0623",
+    "lossless": true,
+    "bytes": 63932
+  },
+  {
+    "name": "animal-star",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "63cf16c87a028876e21c34f81814039d1f130826c210d1f633d0d1022242be0a",
+    "lossless": true,
+    "bytes": 57890
+  },
+  {
+    "name": "animal-nano",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "520522d1615d865560ab69434ba4cf2e9b368162ef82f4414cd59fe4de5cbfc0",
+    "lossless": true,
+    "bytes": 56664
+  },
+  {
+    "name": "animal-doreamon",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "f4ea7fff40f2507949dc574b4c2aaab22c9894e694ab92ac4b37a71f5523fcee",
+    "lossless": true,
+    "bytes": 55630
+  },
+  {
+    "name": "animal-max",
+    "width": 768,
+    "height": 2048,
+    "originalPixelSha256": "03a07fca7f7ab7f82cb4c42300b6a4bf434c45b9e7c1f2f936fedd58056ebf50",
+    "lossless": true,
+    "bytes": 61598
+  },
+  {
+    "name": "character-danny",
+    "width": 1536,
+    "height": 2304,
+    "originalPixelSha256": "10f3c6dd0718658ca64d603e16201b0f4baffdb3f37f92f1ab321c49ef60f8b9",
+    "lossless": true,
+    "bytes": 148382
+  },
+  {
+    "name": "character-oscar",
+    "width": 1536,
+    "height": 2304,
+    "originalPixelSha256": "d039de7034c84c24ef5e8ea257e79e8747c59d358725852f58cab9b1789a4a79",
+    "lossless": true,
+    "bytes": 147154
+  }
+]

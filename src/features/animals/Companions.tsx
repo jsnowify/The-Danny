@@ -35,7 +35,6 @@ export function Companions({ world }: { world: WorldData }) {
     if (
       s.phase !== "explore" ||
       s.paused ||
-      s.fieldGuideOpen ||
       s.journalOpen ||
       s.dedicationOpen ||
       s.companionDialogue ||

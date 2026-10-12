@@ -80,7 +80,6 @@ test("WebGL unavailable has a friendly fallback", async ({ page }) => {
   });
   await page.goto("/?test=1");
   await page.getByRole("button", { name: "Tap to begin" }).click();
-  await page.getByLabel("Skip intro", { exact: true }).check();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await expect(
     page.getByText("This forest needs WebGL to grow."),

@@ -117,12 +117,7 @@ async function snapshot(page) {
     const label = document
       .querySelector(".forest-label")
       ?.getBoundingClientRect();
-    const selectors = [
-      ".forest-label",
-      ".hang-button",
-      ".toast",
-      ".field-guide-button",
-    ];
+    const selectors = [".forest-label", ".hang-button", ".toast"];
     const hudRects = selectors
       .map((selector) => {
         const rect = document.querySelector(selector)?.getBoundingClientRect();

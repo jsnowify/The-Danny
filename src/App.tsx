@@ -12,7 +12,8 @@ import { Finale } from "./ui/Finale";
 import { LoadingScreen } from "./ui/LoadingScreen";
 import { useActivity } from "./hooks/useActivity";
 import { IdleRest } from "./ui/IdleRest";
-const Scene = lazy(() => import("./scene/Scene"));
+import { loadScene } from "./scene/loadScene";
+const Scene = lazy(loadScene);
 const OscarDialogue = lazy(async () => ({
   default: (await import("./ui/OscarDialogue")).OscarDialogue,
 }));
@@ -21,9 +22,6 @@ const PetDialogue = lazy(async () => ({
 }));
 const Journal = lazy(async () => ({
   default: (await import("./ui/Journal")).Journal,
-}));
-const FieldGuide = lazy(async () => ({
-  default: (await import("./ui/FieldGuide")).FieldGuide,
 }));
 
 function ForestFallback() {
@@ -63,7 +61,6 @@ export default function App() {
   const phase = useStore((s) => s.phase),
     paused = useStore((s) => s.paused),
     dedication = useStore((s) => s.dedicationOpen),
-    fieldGuide = useStore((s) => s.fieldGuideOpen),
     journal = useStore((s) => s.journalOpen),
     dialogue = useStore((s) => s.oscarDialogue),
     petDialogue = useStore((s) => s.companionDialogue),
@@ -90,7 +87,6 @@ export default function App() {
           companionDialogue: null,
           companionDialogueStep: 0,
         });
-      else if (s.fieldGuideOpen) useStore.setState({ fieldGuideOpen: false });
       else if (s.phase === "viewer") s.closeMemory();
       else if (s.dedicationOpen) useStore.setState({ dedicationOpen: false });
       else if (["explore", "intro", "hanging"].includes(s.phase))
@@ -99,12 +95,11 @@ export default function App() {
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
   }, []);
-  const inForest = !["loading", "title", "dedication"].includes(phase);
+  const inForest = !["loading", "title"].includes(phase);
   const showHud =
     ready &&
     !dedication &&
     !paused &&
-    !fieldGuide &&
     !journal &&
     !dialogue &&
     !petDialogue &&
@@ -120,7 +115,11 @@ export default function App() {
       {inForest && (
         <>
           <ForestBoundary>
-            <Suspense fallback={<LoadingScreen progress={30} />}>
+            <Suspense
+              fallback={
+                phase === "dedication" ? null : <LoadingScreen progress={30} />
+              }
+            >
               <Scene />
             </Suspense>
           </ForestBoundary>
@@ -132,11 +131,6 @@ export default function App() {
           {phase === "finale" && <Finale />}
           {paused && <PauseMenu />}
           {dedication && <Dedication reopened />}
-          {fieldGuide && (
-            <Suspense fallback={null}>
-              <FieldGuide />
-            </Suspense>
-          )}
           {journal && (
             <Suspense fallback={null}>
               <Journal />

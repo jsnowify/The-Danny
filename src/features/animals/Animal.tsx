@@ -54,11 +54,7 @@ export function Animal({
     root.current!.visible = state.visible;
     if (!state.visible) return;
     const active =
-      s.phase === "explore" &&
-      !s.paused &&
-      !s.fieldGuideOpen &&
-      !s.journalOpen &&
-      !s.dedicationOpen;
+      s.phase === "explore" && !s.paused && !s.journalOpen && !s.dedicationOpen;
     if (active && s.companionDialogue === c.id) {
       advancePetConversation(
         state,

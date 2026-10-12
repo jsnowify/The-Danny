@@ -5,3 +5,4 @@ node_modules/
 dist/
 source-snapshot.html
 source-export/
+tools/

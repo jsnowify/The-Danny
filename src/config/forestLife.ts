@@ -5,6 +5,11 @@ export const FOREST_LIFE = {
   birdRange: 34,
   flowerSize: 0.82,
   flowerCapacity: 1800,
+  roadside: {
+    halfLength: 92,
+    width: 6.2,
+    spacing: 0.38,
+  },
   fields: [
     {
       name: "Clearing flowers",

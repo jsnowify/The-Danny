@@ -1,6 +1,7 @@
 import { CanvasTexture, SRGBColorSpace } from "three";
 import { random } from "../../utils/random";
 import { meadowPigment } from "../meadowPigment";
+import { preparedImage } from "../../textures/preparedArt";
 
 // Original, deterministic brushwork. No reference pixels are shipped or sampled.
 function surface(width: number, height = width) {
@@ -11,7 +12,7 @@ function surface(width: number, height = width) {
   if (!context) throw new Error("The visual study needs a 2D canvas context.");
   return { canvas, c: context };
 }
-function texture(canvas: HTMLCanvasElement) {
+function texture(canvas: HTMLCanvasElement | HTMLImageElement) {
   const map = new CanvasTexture(canvas);
   map.colorSpace = SRGBColorSpace;
   map.anisotropy = 4;
@@ -122,6 +123,8 @@ export function crownPaint(variant: number) {
 }
 
 export function groundPaint() {
+  const prepared = preparedImage("ground");
+  if (prepared) return texture(prepared);
   const { canvas, c } = surface(2048),
     r = random(552);
   c.fillStyle = "#85b95a";
@@ -150,52 +153,6 @@ export function groundPaint() {
   }
   // Grass is now rooted, animated geometry; this map supplies only soil paint.
   meadowPigment(c, 552);
-  return texture(canvas);
-}
-
-export function clothPaint() {
-  const { canvas, c } = surface(512),
-    r = random(315);
-  const base = c.createLinearGradient(0, 0, 512, 400);
-  base.addColorStop(0, "#fb5d24");
-  base.addColorStop(0.5, "#e94b1b");
-  base.addColorStop(1, "#b82b16");
-  c.fillStyle = base;
-  c.fillRect(0, 0, 512, 512);
-  for (let i = 0; i < 140; i++) {
-    c.strokeStyle = i % 2 ? "rgba(255,171,77,.17)" : "rgba(100,25,19,.07)";
-    c.lineWidth = 1 + r() * 4;
-    c.beginPath();
-    c.moveTo(r() * 512, 520);
-    c.quadraticCurveTo(250 + r() * 120, 320, 220 + r() * 80, 0);
-    c.stroke();
-  }
-  c.strokeStyle = "#ffe7b5";
-  c.lineWidth = 4;
-  c.lineCap = "round";
-  // Original embroidered meanders and shoots, intentionally not traced.
-  for (let strand = 0; strand < 5; strand++) {
-    const x = 56 + strand * 99;
-    c.beginPath();
-    c.moveTo(x, 425);
-    c.bezierCurveTo(x + 100, 340, x - 65, 280, x + 15, 196);
-    c.bezierCurveTo(x + 58, 150, x - 8, 110, x + 9, 53);
-    c.stroke();
-    for (let j = 0; j < 3; j++) {
-      const y = 285 - j * 65;
-      c.beginPath();
-      c.moveTo(x + 7, y);
-      c.quadraticCurveTo(x + 31, y - 2, x + 39, y - 23);
-      c.stroke();
-    }
-  }
-  for (const y of [449, 472]) {
-    c.beginPath();
-    c.moveTo(0, y);
-    for (let x = 0; x < 520; x += 5) c.lineTo(x, y + Math.sin(x * 0.037) * 4);
-    c.stroke();
-  }
-  paper(c, 99);
   return texture(canvas);
 }
 

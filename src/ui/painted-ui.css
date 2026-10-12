@@ -4,6 +4,10 @@
   --paper-grain: url("/art/ui/paper-grain.svg");
   --paint-mask: url("/art/ui/paint-stroke.svg");
   --paint-outline: url("/art/ui/paint-outline.svg");
+  --scroll-thumb: #829876;
+  --scroll-thumb-light: #aab892;
+  --scroll-thumb-hover: #bdc69a;
+  --scroll-track: #27473b66;
 }
 html,
 body,
@@ -20,7 +24,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory,
     .journal-tabs :where(button),
     .setting-toggle
@@ -44,7 +47,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory,
     .journal-tabs :where(button),
     .setting-toggle
@@ -56,7 +58,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory,
     .journal-tabs :where(button),
     .setting-toggle
@@ -75,7 +76,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory,
     .journal-tabs :where(button),
     .setting-toggle
@@ -95,7 +95,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory,
     .journal-tabs :where(button),
     .setting-toggle
@@ -166,7 +165,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory
   ):hover {
   background: transparent;
@@ -178,7 +176,6 @@ body,
     .begin-button,
     .project-info-button,
     .meadow-playback,
-    .field-guide-button,
     .near-memory
   ):hover::before {
   filter: brightness(1.06);
@@ -193,11 +190,8 @@ body,
     .world-memory-label,
     .toast,
     .audio-notice,
-    .nearby-company :where(summary),
-    .nearby-menu,
     .journal-card,
     .pause-card,
-    .field-guide-card,
     .dialogue-card
   ) {
   background:
@@ -240,12 +234,6 @@ body,
     var(--paper-grain) repeat,
     #e3e5cb;
   border-color: #81906c66;
-}
-.app .nearby-menu button {
-  border-radius: 3px 7px 5px 4px;
-  background:
-    var(--paper-grain) repeat,
-    #f8f2df;
 }
 .app .journal-grid article {
   background:
@@ -347,5 +335,117 @@ body,
   .conversation-actions {
     grid-column: 1 / -1;
     justify-content: flex-end;
+  }
+}
+
+/* Native scrolling, with the same pigment and paper as the surrounding UI. */
+html,
+body,
+.app,
+.app *,
+.project-info-dialog,
+.project-info-dialog * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+.app :is(.journal-card, .pause-card, .dialogue-card),
+.project-info-dialog {
+  --scroll-thumb: #87956d;
+  --scroll-thumb-light: #acb78d;
+  --scroll-thumb-hover: #5e7954;
+  --scroll-track: #d8ddc766;
+}
+@supports selector(::-webkit-scrollbar) {
+  @media (forced-colors: none) {
+    html,
+    body,
+    .app,
+    .app *,
+    .project-info-dialog,
+    .project-info-dialog * {
+      scrollbar-width: auto;
+      scrollbar-color: auto;
+    }
+    :is(
+      html,
+      body,
+      .app,
+      .app *,
+      .project-info-dialog,
+      .project-info-dialog *
+    )::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    :is(
+      html,
+      body,
+      .app,
+      .app *,
+      .project-info-dialog,
+      .project-info-dialog *
+    )::-webkit-scrollbar-track {
+      background: var(--scroll-track);
+      border-radius: 10px;
+    }
+    :is(
+      html,
+      body,
+      .app,
+      .app *,
+      .project-info-dialog,
+      .project-info-dialog *
+    )::-webkit-scrollbar-thumb {
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background:
+        var(--paper-grain) repeat,
+        linear-gradient(180deg, var(--scroll-thumb-light), var(--scroll-thumb));
+      background-clip: padding-box;
+    }
+    :is(
+        html,
+        body,
+        .app,
+        .app *,
+        .project-info-dialog,
+        .project-info-dialog *
+      )::-webkit-scrollbar-thumb:hover {
+      background:
+        var(--paper-grain) repeat,
+        var(--scroll-thumb-hover);
+      background-clip: padding-box;
+    }
+    :is(
+      html,
+      body,
+      .app,
+      .app *,
+      .project-info-dialog,
+      .project-info-dialog *
+    )::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+    :is(
+      html,
+      body,
+      .app,
+      .app *,
+      .project-info-dialog,
+      .project-info-dialog *
+    )::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+}
+@media (forced-colors: active) {
+  html,
+  body,
+  .app,
+  .app *,
+  .project-info-dialog,
+  .project-info-dialog * {
+    scrollbar-color: auto;
+    scrollbar-width: auto;
   }
 }

@@ -1,7 +1,6 @@
 import {
   BufferAttribute,
   BufferGeometry,
-  CircleGeometry,
   Color,
   DoubleSide,
   Group,
@@ -14,7 +13,6 @@ import {
   RGBADepthPacking,
   Object3D,
   PlaneGeometry,
-  SphereGeometry,
   Texture,
   type Camera,
 } from "three";
@@ -24,17 +22,14 @@ import { paintedBranchTip } from "../../features/forestLife/layout";
 import { applyWindShader } from "../../shaders/wind";
 import {
   barkPaint,
-  clothPaint,
   crownPaint,
   groundPaint,
   leafPaint,
   rockPaint,
 } from "./paint";
 import {
-  cloakGeometry,
   crownContour,
   crownShape,
-  hatGeometry,
   illustratedVolume,
   leafGeometry,
   memoryTreeGeometry,
@@ -45,7 +40,6 @@ import {
 export const PROTOTYPE_INVENTORY = Object.freeze({
   memoryTrees: 1,
   surroundingTrees: 2,
-  travelers: 1,
   rocks: 3,
   groundSurfaces: 1,
   leaves: 96,
@@ -80,7 +74,6 @@ export function createApprovedAssets(foliage?: Texture[]) {
   }
   const groundMap = ownMap(groundPaint()),
     barkMap = ownMap(barkPaint(!!foliage)),
-    clothMap = ownMap(clothPaint()),
     stoneMap = ownMap(rockPaint());
   const ground = mesh(
     "prototype-painted-ground",
@@ -303,89 +296,6 @@ export function createApprovedAssets(foliage?: Texture[]) {
     object.receiveShadow = true;
   });
 
-  const traveler = new Group();
-  traveler.name = "prototype-red-traveler";
-  traveler.position.set(0.65, 0, 2.45);
-  traveler.scale.setScalar(0.85);
-  root.add(traveler);
-  const cloak = mesh(
-    "prototype-embroidered-cloak",
-    cloakGeometry(),
-    material(
-      new MeshStandardMaterial({
-        map: clothMap,
-        roughness: 1,
-        emissive: "#ff8d5a",
-        emissiveMap: clothMap,
-        emissiveIntensity: 0.16,
-        side: DoubleSide,
-      }),
-    ),
-    traveler,
-  );
-  cloak.castShadow = true;
-  cloak.receiveShadow = true;
-  const dark = material(new MeshBasicMaterial({ color: "#2b231b" }));
-  const face = mesh(
-    "prototype-shadow-face",
-    new SphereGeometry(1, 20, 12),
-    dark,
-    traveler,
-  );
-  face.scale.set(0.16, 0.122, 0.12);
-  face.position.set(0, 1.29, 0.13);
-  const eye = mesh(
-    "prototype-traveler-eye",
-    new SphereGeometry(0.031, 12, 8),
-    material(new MeshBasicMaterial({ color: "#fff8df" })),
-    traveler,
-  );
-  eye.scale.set(0.8, 1, 0.45);
-  eye.position.set(0.055, 1.31, 0.238);
-  const hat = mesh(
-    "prototype-pointed-hat",
-    hatGeometry(),
-    material(
-      new MeshStandardMaterial({
-        color: "#f4541c",
-        roughness: 1,
-        emissive: "#ec4918",
-        emissiveIntensity: 0.13,
-      }),
-    ),
-    traveler,
-  );
-  hat.castShadow = true;
-  const boots: Mesh[] = [];
-  for (const x of [-0.12, 0.14]) {
-    const boot = mesh(
-      "prototype-boot",
-      new SphereGeometry(1, 12, 8),
-      dark,
-      traveler,
-    );
-    boot.scale.set(0.044, 0.068, 0.067);
-    boot.position.set(x, 0.07, 0);
-    boots.push(boot);
-  }
-  // Contact pigment keeps objects grounded without relying on a dark AO pass.
-  const contact = material(
-    new MeshBasicMaterial({
-      color: "#586049",
-      transparent: true,
-      opacity: 0.11,
-      depthWrite: false,
-    }),
-  );
-  const shadow = mesh(
-    "prototype-traveler-contact",
-    new CircleGeometry(0.46, 32),
-    contact,
-  );
-  shadow.rotation.x = -Math.PI / 2;
-  shadow.position.set(0.65, 0.012, 2.45);
-  shadow.scale.y = 0.55;
-
   const r = random(847),
     leaf = leafGeometry();
   geometries.add(leaf);
@@ -434,11 +344,6 @@ export function createApprovedAssets(foliage?: Texture[]) {
     root,
     ground,
     memory,
-    traveler,
-    shadow,
-    cloak,
-    hat,
-    boots,
     trees,
     inventory: PROTOTYPE_INVENTORY,
     arrange(portrait: boolean) {
@@ -460,8 +365,6 @@ export function createApprovedAssets(foliage?: Texture[]) {
           (tree.rotation.z =
             (i === 0 ? -0.025 : 0.025) + Math.sin(t * 0.18 + i) * 0.006),
       );
-      cloak.rotation.z = Math.sin(t * 0.75) * 0.023;
-      hat.position.y = Math.sin(t * 0.75 + 0.6) * 0.014;
       for (const current of currents) {
         for (let i = 0; i < current.particles.length; i++) {
           const p = current.particles[i],

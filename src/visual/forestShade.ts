@@ -1,6 +1,7 @@
 import { CanvasTexture, Vector2, type Texture } from "three";
 import type { WorldData } from "../scene/world";
 import { random } from "../utils/random";
+import { preparedImage } from "../textures/preparedArt";
 
 export const forestShade = {
   uWoodlandShade: { value: null as Texture | null },
@@ -9,6 +10,12 @@ export const forestShade = {
 
 /** Subtle forest pigment supplements the moving light's real cast shadows. */
 export function woodlandShade(world: WorldData) {
+  const prepared = !world.calibrated && preparedImage("woodland-shade");
+  if (prepared) {
+    const texture = new CanvasTexture(prepared);
+    texture.name = "world-anchored-canopy-shade";
+    return texture;
+  }
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 1024;
   const c = canvas.getContext("2d")!,

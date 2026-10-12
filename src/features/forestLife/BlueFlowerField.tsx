@@ -71,7 +71,6 @@ export function BlueFlowerField({ world }: { world: WorldData }) {
       s.phase === "explore" &&
       !s.paused &&
       !s.journalOpen &&
-      !s.fieldGuideOpen &&
       !s.oscarDialogue &&
       !s.companionDialogue &&
       !s.dedicationOpen;

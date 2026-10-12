@@ -15,7 +15,6 @@ export function PlantDiscoveries({ world }: { world: WorldData }) {
     if (
       state.phase !== "explore" ||
       state.paused ||
-      state.fieldGuideOpen ||
       state.previewBackup ||
       world.calibrated ||
       (import.meta.env.DEV && worldCalibration?.enabled)

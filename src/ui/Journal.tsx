@@ -83,15 +83,6 @@ export function Journal() {
             </button>
           ))}
         </nav>
-        <button
-          className="text-button journal-guide-link"
-          onClick={() =>
-            useStore.setState({ journalOpen: false, fieldGuideOpen: true })
-          }
-        >
-          <Icon name="leaf" />
-          {t.guide}
-        </button>
         <div
           id="journal-content"
           role="tabpanel"

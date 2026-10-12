@@ -86,6 +86,8 @@ function Forest({ development }: { development: DevelopmentModule | null }) {
           traveler.x = x;
           traveler.z = z;
           input.held = false;
+          input.followCursor = false;
+          input.intent = 0;
         },
         position: () => ({ x: traveler.x, z: traveler.z }),
         quality: () => useStore.getState().setSettings({ quality: "low" }),
@@ -160,7 +162,6 @@ export default function Scene() {
   const paused = useStore((s) => s.paused),
     idleStage = useStore((s) => s.idleStage),
     dedication = useStore((s) => s.dedicationOpen),
-    fieldGuide = useStore((s) => s.fieldGuideOpen),
     journal = useStore((s) => s.journalOpen),
     dialogue = useStore((s) => s.oscarDialogue),
     phase = useStore((s) => s.phase),
@@ -236,17 +237,18 @@ export default function Scene() {
           dpr={[1, QUALITY[tier].dpr]}
           shadows={{ type: PCFSoftShadowMap }}
           frameloop={
-            hidden ||
-            paused ||
-            dedication ||
-            fieldGuide ||
-            journal ||
-            dialogue ||
-            idleStage === 300 ||
-            phase === "viewer" ||
-            lost
-              ? "never"
-              : "always"
+            phase === "dedication"
+              ? "demand"
+              : hidden ||
+                  paused ||
+                  dedication ||
+                  journal ||
+                  dialogue ||
+                  idleStage === 300 ||
+                  phase === "viewer" ||
+                  lost
+                ? "never"
+                : "always"
           }
           gl={{
             antialias: true,
@@ -283,7 +285,7 @@ export default function Scene() {
         </Canvas>
       </KeyboardControls>
       {DevelopmentPanel && <DevelopmentPanel />}
-      {!ready && <ForestLoader />}
+      {!ready && phase !== "dedication" && <ForestLoader />}
       {lost && (
         <div className="fallback">
           <h2>{TEXT.contextLost}</h2>

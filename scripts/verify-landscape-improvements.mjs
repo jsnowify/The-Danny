@@ -201,8 +201,8 @@ try {
     });
     await capture("without-mesh-culling");
   }
-  // A fixed frustum must survive parent React commits (pause/settings/guide).
-  for (const key of ["paused", "fieldGuideOpen", "journalOpen"]) {
+  // A fixed frustum must survive parent React commits (pause/settings/journal).
+  for (const key of ["paused", "journalOpen"]) {
     await page.evaluate(
       (key) => window.landscapeStudy.useStore.setState({ [key]: true }),
       key,
@@ -281,17 +281,11 @@ try {
       await page.waitForTimeout(120);
       await capture(`quality-${tier}`);
     }
-    await page.evaluate(() => {
-      window.landscapeStudy.runtime.input.wideView = true;
-      window.studyAdvance(4);
-    });
-    const wide = await capture("wide");
-    await page.evaluate(() => {
-      window.landscapeStudy.runtime.input.wideView = false;
-      window.studyAdvance(7);
-    });
     const normal = await capture("normal");
-    assert(wide.span > normal.span * 1.2);
+    await page.mouse.dblclick(600, 450);
+    await page.evaluate(() => window.studyAdvance(4));
+    const repeatedClick = await capture("after-double-click");
+    assert(Math.abs(repeatedClick.span - normal.span) < 1e-8);
     for (const viewport of [
       { width: 390, height: 844 },
       { width: 844, height: 390 },

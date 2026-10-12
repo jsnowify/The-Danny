@@ -4,6 +4,22 @@ import { Plane, Raycaster, Vector2, Vector3 } from "three";
 import { useStore } from "../store";
 import { input, traveler } from "../scene/runtime";
 import { groundHeight, clamp } from "../utils/random";
+
+function movementAllowed() {
+  const s = useStore.getState();
+  return (
+    s.phase === "explore" &&
+    !s.paused &&
+    !s.dedicationOpen &&
+    !s.journalOpen &&
+    !s.oscarDialogue &&
+    !s.companionDialogue &&
+    !s.seatedWithOscar &&
+    s.idleStage !== 300 &&
+    !document.hidden
+  );
+}
+
 export function usePlayerControls() {
   const { gl, camera } = useThree();
   const scratch = useMemo(
@@ -18,7 +34,6 @@ export function usePlayerControls() {
     [],
   );
   const updateAim = useCallback(() => {
-    if (!input.held) return;
     const rect = scratch.rect;
     scratch.pointer.set(
       ((input.clientX - rect.left) / rect.width) * 2 - 1,
@@ -53,15 +68,6 @@ export function usePlayerControls() {
   useEffect(() => {
     const canvas = gl.domElement;
     let pointerId: number | null = null;
-    let lastTap = { time: -1000, x: 0, y: 0 };
-    let tapStart = { time: 0, x: 0, y: 0 };
-    let handledDoubleTap = false;
-    const toggleView = () => {
-      input.wideView = !input.wideView;
-      input.held = false;
-      input.intent = 0;
-      lastTap.time = -1000;
-    };
     const measure = () => (scratch.rect = canvas.getBoundingClientRect());
     const observer = new ResizeObserver(measure);
     observer.observe(canvas);
@@ -72,103 +78,104 @@ export function usePlayerControls() {
       updateAim();
     };
     const down = (e: PointerEvent) => {
-      const s = useStore.getState();
-      if (
-        s.phase !== "explore" ||
-        s.paused ||
-        s.dedicationOpen ||
-        s.journalOpen ||
-        s.fieldGuideOpen ||
-        s.oscarDialogue ||
-        s.companionDialogue ||
-        s.seatedWithOscar ||
-        s.idleStage === 300 ||
-        e.button > 0 ||
-        pointerId !== null
-      )
-        return;
+      if (!movementAllowed() || e.button > 0 || pointerId !== null) return;
       e.preventDefault();
       canvas.focus();
       pointerId = e.pointerId;
-      tapStart = { time: e.timeStamp, x: e.clientX, y: e.clientY };
-      const doubleTap =
-        tapStart.time - lastTap.time < 320 &&
-        Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 24;
-      handledDoubleTap = doubleTap;
-      if (doubleTap) toggleView();
-      else input.held = true;
+      input.followCursor = false;
+      input.held = true;
       aim(e);
       canvas.setPointerCapture(e.pointerId);
     };
     const move = (e: PointerEvent) => {
       if (e.pointerId === pointerId) aim(e);
+      else if (
+        e.pointerType === "mouse" &&
+        e.buttons === 0 &&
+        movementAllowed()
+      ) {
+        input.followCursor = true;
+        aim(e);
+      }
     };
     const up = (e: PointerEvent) => {
       if (e.pointerId !== pointerId) return;
-      const now = e.timeStamp;
-      if (
-        e.type === "pointerup" &&
-        now - tapStart.time < 230 &&
-        Math.hypot(e.clientX - tapStart.x, e.clientY - tapStart.y) < 16 &&
-        input.held
-      ) {
-        lastTap = { time: now, x: e.clientX, y: e.clientY };
-      }
       input.held = false;
       input.intent = 0;
       pointerId = null;
+      // Mouse movement needs no held button. After a click, walk to the
+      // last sampled ground point; touch still ends when the finger lifts.
+      input.followCursor =
+        e.type === "pointerup" &&
+        e.pointerType === "mouse" &&
+        movementAllowed();
+      if (input.followCursor) aim(e);
       if (canvas.hasPointerCapture(e.pointerId))
         canvas.releasePointerCapture(e.pointerId);
     };
     const blur = () => {
       input.held = false;
+      input.followCursor = false;
       input.intent = 0;
       pointerId = null;
-      lastTap.time = -1000;
     };
     const lostCapture = (e: PointerEvent) => {
       if (pointerId === e.pointerId) blur();
     };
-    const doubleClick = (e: MouseEvent) => {
-      const s = useStore.getState();
-      if (
-        s.phase !== "explore" ||
-        s.paused ||
-        s.dedicationOpen ||
-        s.journalOpen ||
-        s.fieldGuideOpen ||
-        s.oscarDialogue ||
-        s.companionDialogue ||
-        s.seatedWithOscar ||
-        s.idleStage === 300
-      )
-        return;
-      e.preventDefault();
-      if (!handledDoubleTap) toggleView();
-      handledDoubleTap = false;
+    const leave = () => {
+      input.followCursor = false;
+      if (!input.held) input.intent = 0;
     };
+    const key = (e: KeyboardEvent) => {
+      if (
+        [
+          "KeyW",
+          "KeyA",
+          "KeyS",
+          "KeyD",
+          "ArrowUp",
+          "ArrowLeft",
+          "ArrowDown",
+          "ArrowRight",
+        ].includes(e.code)
+      )
+        leave();
+    };
+    const visibility = () => {
+      if (document.hidden) blur();
+    };
+    const unsubscribe = useStore.subscribe(() => {
+      if (!movementAllowed()) blur();
+    });
     canvas.addEventListener("pointerdown", down);
     canvas.addEventListener("pointermove", move);
+    canvas.addEventListener("pointerleave", leave);
     canvas.addEventListener("pointerup", up);
     canvas.addEventListener("pointercancel", up);
     canvas.addEventListener("lostpointercapture", lostCapture);
-    canvas.addEventListener("dblclick", doubleClick);
     window.addEventListener("blur", blur);
+    window.addEventListener("keydown", key);
     window.addEventListener("resize", measure);
+    document.addEventListener("visibilitychange", visibility);
     return () => {
       canvas.removeEventListener("pointerdown", down);
       canvas.removeEventListener("pointermove", move);
+      canvas.removeEventListener("pointerleave", leave);
       canvas.removeEventListener("pointerup", up);
       canvas.removeEventListener("pointercancel", up);
       canvas.removeEventListener("lostpointercapture", lostCapture);
-      canvas.removeEventListener("dblclick", doubleClick);
       window.removeEventListener("blur", blur);
+      window.removeEventListener("keydown", key);
       window.removeEventListener("resize", measure);
+      document.removeEventListener("visibilitychange", visibility);
+      unsubscribe();
       observer.disconnect();
-      input.held = false;
-      input.intent = 0;
+      blur();
     };
   }, [gl, scratch, updateAim]);
-  // A still held cursor continues to steer as the following camera reveals ground.
-  useFrame(updateAim);
+  // Held touch/mouse input steers continuously. Hover samples a fixed world
+  // destination only when the cursor moves, so a parked cursor lets Danny stop.
+  useFrame(() => {
+    if (input.held) updateAim();
+  });
 }

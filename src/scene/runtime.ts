@@ -15,7 +15,6 @@ export const traveler = {
   az: 0,
   turnRate: 0,
   intent: 0,
-  cameraExpansion: 0,
   clothOffset: 0,
   clothTwist: 0,
   gait: 0,
@@ -24,13 +23,13 @@ export const traveler = {
 };
 export const input = {
   held: false,
+  followCursor: false,
   targetX: 0,
   targetZ: 5.5,
   clientX: 0,
   clientY: 0,
   distance: 0,
   intent: 0,
-  wideView: false,
 };
 export const atmosphere = {
   time: 0,

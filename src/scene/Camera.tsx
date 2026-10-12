@@ -10,7 +10,7 @@ import {
   type Mesh,
 } from "three";
 import * as damping from "maath/easing";
-import { traveler, input } from "./runtime";
+import { traveler } from "./runtime";
 import { useStore } from "../store";
 import { cameraCalibration } from "./calibration";
 import { CAMERA } from "../config";
@@ -29,8 +29,9 @@ export function Camera() {
       viewWidth: 0,
       viewHeight: 0,
       viewOffset: 0,
-      framingSpan: 0,
-      expansion: 0,
+      fixedSpan: 0,
+      fixedLookAhead: CAMERA.lookAhead,
+      fixedFollowOffset: CAMERA.followX,
       distance: 0,
       landmarkGeometry: null as BufferGeometry | null,
       landmarkPitch: 0,
@@ -81,130 +82,132 @@ export function Camera() {
         ? calibration.screenOffsetY
         : CAMERA.screenOffsetY;
     const ground = groundHeight(traveler.x, traveler.z);
-    const desiredExpansion =
-      s.phase === "explore" && input.wideView ? (portrait ? 0.22 : 0.32) : 0;
-    const response = desiredExpansion > scratch.expansion ? 3.2 : 1.65;
-    scratch.expansion +=
-      (desiredExpansion - scratch.expansion) * (1 - Math.exp(-response * dt));
-    if (s.settings.reducedMotion) scratch.expansion = desiredExpansion;
-    traveler.cameraExpansion = scratch.expansion;
     let followX =
       traveler.x +
       (calibrating && calibration ? calibration.followX : CAMERA.followX);
 
     if (exploring && !calibrating) {
-      // Fit the existing landmark below the actual HUD. Cache its vertex envelope
-      // and measure DOM bounds only on resize, language or text-size changes.
-      const limbs = scene.getObjectByName("memory-tree-limbs") as
-        Mesh | undefined;
-      if (limbs) {
-        limbs.updateWorldMatrix(true, false);
-        if (
-          scratch.landmarkGeometry !== limbs.geometry ||
-          scratch.landmarkPitch !== pitch ||
-          !scratch.landmarkMatrix.equals(limbs.matrixWorld)
-        ) {
-          scratch.landmarkGeometry = limbs.geometry;
-          scratch.landmarkPitch = pitch;
-          scratch.landmarkMatrix.copy(limbs.matrixWorld);
-          scratch.landmarkTop = -Infinity;
-          scratch.landmarkLeft = Infinity;
-          scratch.landmarkRight = -Infinity;
-          const vertices = limbs.geometry.getAttribute("position");
-          for (let i = 0; i < vertices.count; i++) {
-            const vertex = scratch.landmarkVertex
-              .fromBufferAttribute(vertices, i)
-              .applyMatrix4(limbs.matrixWorld);
-            scratch.landmarkTop = Math.max(
-              scratch.landmarkTop,
-              vertex.y * cosPitch - vertex.z * sinPitch,
-            );
-            scratch.landmarkLeft = Math.min(scratch.landmarkLeft, vertex.x);
-            scratch.landmarkRight = Math.max(scratch.landmarkRight, vertex.x);
-          }
-        }
-      }
       if (
+        !scratch.fixedSpan ||
         scratch.hudWidth !== size.width ||
         scratch.hudHeight !== size.height ||
         scratch.hudLargeText !== s.settings.largeText ||
-        scratch.hudLanguage !== s.language
-      ) {
+        scratch.hudLanguage !== s.language ||
+        scratch.landmarkPitch !== pitch
+      )
         scratch.hudMeasureFrames = 3;
-      }
-      // Canvas resizing and the DOM HUD commit through separate React roots.
-      // Refresh for three frames so a breakpoint's previous layout is not cached.
       if (scratch.hudMeasureFrames > 0) {
-        const collection = document.querySelector(".memory-collection");
-        scratch.hudBottom =
-          collection?.getBoundingClientRect().bottom ??
-          (size.width < 600 ? 166 : 146);
-        if (collection) {
-          scratch.hudWidth = size.width;
-          scratch.hudHeight = size.height;
-          scratch.hudLargeText = s.settings.largeText;
-          scratch.hudLanguage = s.language;
-          scratch.hudMeasureFrames--;
+        const [framingX, framingZ] = CAMERA.framingAnchor;
+        const framingGround = groundHeight(framingX, framingZ);
+        followX = framingX + CAMERA.followX;
+        // Fit the existing landmark below the actual HUD. Cache its vertex envelope
+        // and measure DOM bounds only on resize, language or text-size changes.
+        const limbs = scene.getObjectByName("memory-tree-limbs") as
+          Mesh | undefined;
+        if (limbs) {
+          limbs.updateWorldMatrix(true, false);
+          if (
+            scratch.landmarkGeometry !== limbs.geometry ||
+            scratch.landmarkPitch !== pitch ||
+            !scratch.landmarkMatrix.equals(limbs.matrixWorld)
+          ) {
+            scratch.landmarkGeometry = limbs.geometry;
+            scratch.landmarkPitch = pitch;
+            scratch.landmarkMatrix.copy(limbs.matrixWorld);
+            scratch.landmarkTop = -Infinity;
+            scratch.landmarkLeft = Infinity;
+            scratch.landmarkRight = -Infinity;
+            const vertices = limbs.geometry.getAttribute("position");
+            for (let i = 0; i < vertices.count; i++) {
+              const vertex = scratch.landmarkVertex
+                .fromBufferAttribute(vertices, i)
+                .applyMatrix4(limbs.matrixWorld);
+              scratch.landmarkTop = Math.max(
+                scratch.landmarkTop,
+                vertex.y * cosPitch - vertex.z * sinPitch,
+              );
+              scratch.landmarkLeft = Math.min(scratch.landmarkLeft, vertex.x);
+              scratch.landmarkRight = Math.max(scratch.landmarkRight, vertex.x);
+            }
+          }
         }
+        // Canvas resizing and the DOM HUD commit through separate React roots.
+        // Refresh for three frames so a breakpoint's previous layout is not cached.
+        if (scratch.hudMeasureFrames > 0) {
+          const collection = document.querySelector(".memory-collection");
+          scratch.hudBottom =
+            collection?.getBoundingClientRect().bottom ??
+            (size.width < 600 ? 166 : 146);
+          if (collection) {
+            scratch.hudWidth = size.width;
+            scratch.hudHeight = size.height;
+            scratch.hudLargeText = s.settings.largeText;
+            scratch.hudLanguage = s.language;
+            scratch.hudMeasureFrames--;
+          }
+        }
+        if (portrait)
+          framingSpan = Math.max(framingSpan, CAMERA.portraitMinWidth / aspect);
+        const influence =
+          1 -
+          MathUtils.smoothstep(
+            Math.hypot(framingX, framingZ),
+            CAMERA.landmarkRange,
+            CAMERA.landmarkFadeRange,
+          );
+        const footY = portrait
+          ? CAMERA.portraitFootY
+          : shortLandscape
+            ? CAMERA.landscapeFootY
+            : CAMERA.clearingFootY;
+        if (limbs && influence > 0) {
+          const upperDistance =
+            scratch.landmarkTop +
+            CAMERA.landmarkHeadroom -
+            framingGround * cosPitch +
+            framingZ * sinPitch;
+          const safeTop = Math.min(
+            0.44,
+            (scratch.hudBottom + CAMERA.landmarkMargin) / size.height,
+          );
+          // The photos hang inside the branch envelope. The extra width leaves
+          // their frames and the supporting rocks clear of portrait edges.
+          const left = Math.min(scratch.landmarkLeft, framingX - 0.65);
+          const right = Math.max(scratch.landmarkRight, framingX + 0.65);
+          followX = MathUtils.lerp(
+            framingX + CAMERA.followX,
+            (left + right) / 2,
+            influence,
+          );
+          const landmarkWidth = right - left + 1.4;
+          const fittedSpan = Math.max(
+            framingSpan,
+            upperDistance / (footY - safeTop),
+            landmarkWidth / (aspect * 0.86),
+          );
+          framingSpan = MathUtils.lerp(framingSpan, fittedSpan, influence);
+        }
+        const baseFootY =
+          0.5 +
+          (CAMERA.lookAhead * sinPitch + focusHeight * cosPitch) / framingSpan -
+          offset;
+        const composedFootY = MathUtils.lerp(
+          portrait ? CAMERA.portraitFootY : baseFootY,
+          footY,
+          influence,
+        );
+        lookAhead =
+          ((composedFootY - 0.5 + offset) * framingSpan -
+            focusHeight * cosPitch) /
+          sinPitch;
+        scratch.fixedSpan = framingSpan;
+        scratch.fixedLookAhead = lookAhead;
+        scratch.fixedFollowOffset = followX - framingX;
       }
-      if (portrait)
-        framingSpan = Math.max(framingSpan, CAMERA.portraitMinWidth / aspect);
-      const influence =
-        1 -
-        MathUtils.smoothstep(
-          Math.hypot(traveler.x, traveler.z),
-          CAMERA.landmarkRange,
-          CAMERA.landmarkFadeRange,
-        );
-      const footY = portrait
-        ? CAMERA.portraitFootY
-        : shortLandscape
-          ? CAMERA.landscapeFootY
-          : CAMERA.clearingFootY;
-      if (limbs && influence > 0) {
-        const upperDistance =
-          scratch.landmarkTop +
-          CAMERA.landmarkHeadroom -
-          ground * cosPitch +
-          traveler.z * sinPitch;
-        const safeTop = Math.min(
-          0.44,
-          (scratch.hudBottom + CAMERA.landmarkMargin) / size.height,
-        );
-        // The photos hang inside the branch envelope. The extra width leaves
-        // their frames and the supporting rocks clear of portrait edges.
-        const left = Math.min(scratch.landmarkLeft, traveler.x - 0.65);
-        const right = Math.max(scratch.landmarkRight, traveler.x + 0.65);
-        followX = MathUtils.lerp(followX, (left + right) / 2, influence);
-        const landmarkWidth = right - left + 1.4;
-        const fittedSpan = Math.max(
-          framingSpan,
-          upperDistance / (footY - safeTop),
-          landmarkWidth / (aspect * 0.86),
-        );
-        framingSpan = MathUtils.lerp(framingSpan, fittedSpan, influence);
-      }
-      // Expand the accepted fitted composition, including the landmark/HUD
-      // margins. Never shrink that safety envelope to make travel feel faster.
-      framingSpan *= 1 + scratch.expansion;
-      if (s.settings.reducedMotion || !scratch.framingSpan)
-        scratch.framingSpan = framingSpan;
-      else
-        damping.damp(scratch, "framingSpan", framingSpan, CAMERA.damping, dt);
-      framingSpan = scratch.framingSpan;
-      const baseFootY =
-        0.5 +
-        (CAMERA.lookAhead * sinPitch + focusHeight * cosPitch) / framingSpan -
-        offset;
-      const composedFootY = MathUtils.lerp(
-        portrait ? CAMERA.portraitFootY : baseFootY,
-        footY,
-        influence,
-      );
-      lookAhead =
-        ((composedFootY - 0.5 + offset) * framingSpan -
-          focusHeight * cosPitch) /
-        sinPitch;
+      // Walking translates the existing view; its scale and angle stay fixed.
+      framingSpan = scratch.fixedSpan;
+      lookAhead = scratch.fixedLookAhead;
+      followX = traveler.x + scratch.fixedFollowOffset;
     }
     if (s.phase === "intro") {
       scratch.target.set(0, 3, 0);
@@ -221,25 +224,13 @@ export function Camera() {
     } else {
       const height = ground + focusHeight;
       const distance =
-        (calibrating && calibration ? calibration.distance : CAMERA.distance) *
-        (1 + scratch.expansion);
+        calibrating && calibration ? calibration.distance : CAMERA.distance;
       scratch.target.set(followX, height, traveler.z - lookAhead);
       scratch.position.set(
         scratch.target.x,
         height + sinPitch * distance,
         scratch.target.z + cosPitch * distance,
       );
-    }
-    if (
-      s.phase === "explore" &&
-      s.idleStage >= 45 &&
-      !s.settings.reducedMotion
-    ) {
-      // Pull back along the existing view ray; the idle view never orbits.
-      scratch.position
-        .sub(scratch.target)
-        .multiplyScalar(1.025)
-        .add(scratch.target);
     }
     if (
       camera instanceof PerspectiveCamera ||
@@ -249,9 +240,6 @@ export function Camera() {
       const framingDistance = exploring
         ? framingSpan / (2 * Math.tan((fov * Math.PI) / 360))
         : scratch.position.distanceTo(scratch.target) * (portrait ? 1.24 : 1);
-      if (!exploring)
-        scratch.framingSpan =
-          2 * framingDistance * Math.tan((fov * Math.PI) / 360);
       const halfHeight = framingDistance * Math.tan((fov * Math.PI) / 360);
       const halfWidth = halfHeight * aspect;
       const projectionChanged =

@@ -1,5 +1,5 @@
 import { Vector3 } from "three";
-import { MEMORIES, WORLD } from "../../config";
+import { COMPOSITION, MEMORIES, WORLD } from "../../config";
 import { FOREST_LIFE } from "../../config/forestLife";
 import { groundHeight, pathX, random } from "../../utils/random";
 import type { WorldData } from "../../scene/world";
@@ -16,6 +16,26 @@ export function blueFlowerLayout(world: WorldData) {
     variant: number;
     field: number;
   }[] = [];
+  // Leave room for the full painted bloom, rather than only its root, beside
+  // the sand. All fields share the same path and interaction clearances.
+  const pathClearance = COMPOSITION.pathHalfWidth + 0.5;
+  const footprint = { x: 0, z: 0 };
+  const canGrow = (x: number, z: number) => {
+    if (
+      Math.abs(x - pathX(z)) < pathClearance ||
+      Math.hypot(x, z) < 2.8 ||
+      Math.hypot(x - WORLD.pond[0], z - WORLD.pond[1]) <
+        WORLD.pondRadius + 0.4 ||
+      MEMORIES.some(
+        (m) => Math.hypot(x - m.position[0], z - m.position[1]) < 1.4,
+      )
+    )
+      return false;
+    footprint.x = x;
+    footprint.z = z;
+    world.collisions.slide(footprint, 0.22);
+    return Math.hypot(footprint.x - x, footprint.z - z) <= 0.001;
+  };
   for (let field = 0; field < FOREST_LIFE.fields.length; field++) {
     const { center, radius, count } = FOREST_LIFE.fields[field];
     for (let i = 0; i < count; i++) {
@@ -24,20 +44,7 @@ export function blueFlowerLayout(world: WorldData) {
       const x = center[0] + Math.cos(angle) * radius[0] * distance;
       const z = center[1] + Math.sin(angle) * radius[1] * distance;
       const edge = 1 - Math.max(0, (distance - 0.8) / 0.2) * 0.6;
-      const footprint = { x, z };
-      world.collisions.slide(footprint, 0.22);
-      if (
-        r() > edge ||
-        Math.abs(x - pathX(z)) < 0.8 ||
-        Math.hypot(x, z) < 2.8 ||
-        Math.hypot(x - WORLD.pond[0], z - WORLD.pond[1]) <
-          WORLD.pondRadius + 0.4 ||
-        MEMORIES.some(
-          (m) => Math.hypot(x - m.position[0], z - m.position[1]) < 1.4,
-        ) ||
-        Math.hypot(footprint.x - x, footprint.z - z) > 0.001
-      )
-        continue;
+      if (r() > edge || !canGrow(x, z)) continue;
       flowers.push({
         x,
         y: groundHeight(x, z) + 0.025,
@@ -58,18 +65,7 @@ export function blueFlowerLayout(world: WorldData) {
         const distance = cluster === 0 ? 0 : 0.2 + woodland() * 0.45;
         const x = patch.x + Math.cos(angle) * distance;
         const z = patch.z + Math.sin(angle) * distance;
-        const footprint = { x, z };
-        world.collisions.slide(footprint, 0.22);
-        if (
-          Math.abs(x - pathX(z)) < 0.8 ||
-          Math.hypot(x - WORLD.pond[0], z - WORLD.pond[1]) <
-            WORLD.pondRadius + 0.4 ||
-          MEMORIES.some(
-            (m) => Math.hypot(x - m.position[0], z - m.position[1]) < 1.4,
-          ) ||
-          Math.hypot(footprint.x - x, footprint.z - z) > 0.001
-        )
-          continue;
+        if (!canGrow(x, z)) continue;
         flowers.push({
           x,
           y: groundHeight(x, z) + 0.025,
@@ -78,6 +74,66 @@ export function blueFlowerLayout(world: WorldData) {
           variant: Math.floor(woodland() * 3),
           field: FOREST_LIFE.fields.length,
         });
+      }
+    }
+  }
+  // Continuous, broad banks follow both sides of the winding road. Jittered
+  // cells fill long gaps without visible rows; their outer edge thins into grass.
+  // The independent seed leaves every tree, prop and story position untouched.
+  const roadside = random(FOREST_LIFE.seed + 231);
+  const { halfLength, width, spacing } = FOREST_LIFE.roadside;
+  const separation = 0.25;
+  // Numeric cell keys avoid allocating strings for every neighboring lookup.
+  const rootKey = (x: number, z: number) => (x << 16) ^ (z & 0xffff);
+  const roots = new Map<number, (typeof flowers)[number][]>();
+  const remember = (flower: (typeof flowers)[number]) => {
+    const key = rootKey(
+      Math.floor(flower.x / separation),
+      Math.floor(flower.z / separation),
+    );
+    const cell = roots.get(key);
+    if (cell) cell.push(flower);
+    else roots.set(key, [flower]);
+  };
+  flowers.forEach(remember);
+  const crowded = (x: number, z: number) => {
+    const cx = Math.floor(x / separation),
+      cz = Math.floor(z / separation);
+    for (let dx = -1; dx <= 1; dx++)
+      for (let dz = -1; dz <= 1; dz++)
+        for (const root of roots.get(rootKey(cx + dx, cz + dz)) ?? [])
+          if ((root.x - x) ** 2 + (root.z - z) ** 2 < separation ** 2)
+            return true;
+    return false;
+  };
+  for (let row = -halfLength; row < halfLength; row += spacing) {
+    for (const side of [-1, 1]) {
+      for (let column = 0; column < width + 1.2; column += spacing) {
+        const z = row + (0.08 + roadside() * 0.84) * spacing;
+        const bankWidth =
+          width +
+          Math.sin(z * 0.18 + side * 0.8) * 0.8 +
+          Math.sin(z * 0.47 - side) * 0.35;
+        const distance = column + (0.08 + roadside() * 0.84) * spacing;
+        const fringe = Math.max(0, (distance / bankWidth - 0.72) / 0.28);
+        const x = pathX(z) + side * (pathClearance + distance);
+        if (
+          distance > bankWidth ||
+          roadside() < fringe * 0.85 ||
+          !canGrow(x, z) ||
+          crowded(x, z)
+        )
+          continue;
+        const flower = {
+          x,
+          y: groundHeight(x, z) + 0.025,
+          z,
+          size: 0.66 + roadside() * 0.44,
+          variant: Math.floor(roadside() * 3),
+          field: FOREST_LIFE.fields.length + 1,
+        };
+        flowers.push(flower);
+        remember(flower);
       }
     }
   }

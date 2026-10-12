@@ -121,7 +121,6 @@ export function FallingLeaves({ world }: { world: WorldData }) {
       state.phase === "explore" &&
       !state.paused &&
       !state.journalOpen &&
-      !state.fieldGuideOpen &&
       !state.oscarDialogue &&
       !state.companionDialogue &&
       !state.dedicationOpen;

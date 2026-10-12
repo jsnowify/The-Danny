@@ -1,5 +1,5 @@
 import { useText } from "../hooks/useText";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PROJECT_NAME } from "../config";
 import { useStore } from "../store";
 import { Icon } from "./Icons";
@@ -13,14 +13,24 @@ export function TitleScreen() {
   const [soundReady, setSoundReady] = useState(hasSoundEngine);
   const [infoOpen, setInfoOpen] = useState(false);
   const unlocking = useRef<Promise<void> | null>(null);
+  const audioContext = useRef<AudioContext | null>(null);
   const muted = useStore((s) => s.settings.muted);
-  const enableSound = () => {
-    if (unlocking.current) return unlocking.current;
+  const enableSound = useCallback(() => {
     // Keep AudioContext creation/resume in the original gesture for Safari.
     let context: AudioContext;
     try {
-      context = new AudioContext();
+      context =
+        audioContext.current?.state !== "closed" && audioContext.current
+          ? audioContext.current
+          : new AudioContext();
+      audioContext.current = context;
       const resumed = context.resume();
+      // Retry resume on each gesture even when an earlier autoplay attempt
+      // is still awaiting browser permission.
+      if (unlocking.current) {
+        void resumed.catch(() => {});
+        return unlocking.current;
+      }
       unlocking.current = Promise.all([import("../audio/engine"), resumed])
         .then(async ([audio]) => {
           await audio.unlockAudio(context);
@@ -29,6 +39,7 @@ export function TitleScreen() {
         })
         .catch(async (error: unknown) => {
           unlocking.current = null;
+          if (audioContext.current === context) audioContext.current = null;
           await context.close().catch(() => {});
           useStore.setState({ audioFailed: true });
           throw error;
@@ -38,14 +49,43 @@ export function TitleScreen() {
       useStore.setState({ audioFailed: true });
       return Promise.reject(error);
     }
-  };
+  }, []);
+  useEffect(() => {
+    if (muted || soundReady) return;
+    let context: AudioContext;
+    try {
+      context = audioContext.current ?? new AudioContext();
+      audioContext.current = context;
+      // Start immediately where autoplay is permitted. Otherwise retain the
+      // context for the first gesture, without waiting on a blocked resume.
+      if (context.state === "running") void enableSound().catch(() => {});
+    } catch {
+      useStore.setState({ audioFailed: true });
+      return;
+    }
+    return () => {
+      // Once started, the sound engine owns the context through the game.
+      if (!unlocking.current && audioContext.current === context) {
+        audioContext.current = null;
+        void context.close().catch(() => {});
+      }
+    };
+  }, [muted, soundReady, enableSound]);
   const toggleSound = () => {
-    if (soundReady && !muted) {
+    if (!muted) {
       useStore.getState().setSettings({ muted: true });
       return;
     }
     useStore.getState().setSettings({ muted: false });
     void enableSound().catch(() => {});
+  };
+  const unlockOnInteraction = (target: EventTarget) => {
+    if (
+      !muted &&
+      !soundReady &&
+      !(target as Element).closest(".title-mute, .begin-button")
+    )
+      void enableSound().catch(() => {});
   };
   const begin = async () => {
     if (starting) return;
@@ -60,15 +100,10 @@ export function TitleScreen() {
   return (
     <main
       className="title-screen"
-      onPointerDownCapture={(event) => {
-        if (
-          !muted &&
-          !soundReady &&
-          !(event.target as Element).closest(
-            ".title-mute, .sound-note, .begin-button",
-          )
-        )
-          void enableSound().catch(() => {});
+      onPointerDownCapture={(event) => unlockOnInteraction(event.target)}
+      onKeyDownCapture={(event) => {
+        if (event.key === "Enter" || event.key === " ")
+          unlockOnInteraction(event.target);
       }}
     >
       <header className="title-header">
@@ -84,12 +119,10 @@ export function TitleScreen() {
         <div className="title-controls">
           <button
             className="icon-button title-mute"
-            aria-label={
-              muted || !soundReady ? TEXT.meadowEnableSound : TEXT.mute
-            }
+            aria-label={muted ? TEXT.meadowEnableSound : TEXT.mute}
             onClick={toggleSound}
           >
-            <Icon name={muted || !soundReady ? "mute" : "sound"} />
+            <Icon name={muted ? "mute" : "sound"} />
           </button>
         </div>
       </header>
@@ -113,18 +146,18 @@ export function TitleScreen() {
           {starting ? TEXT.opening : TEXT.begin}
           <Icon name="arrow" />
         </button>
-        <button className="sound-note" onClick={toggleSound}>
-          <Icon name={muted || !soundReady ? "mute" : "sound"} />
-          {soundReady && !muted ? TEXT.meadowSounds : TEXT.meadowSoundPrompt}
-        </button>
+        <p className="sound-note" role="status">
+          <Icon name={muted ? "mute" : "sound"} />
+          {muted
+            ? TEXT.meadowSoundMuted
+            : soundReady
+              ? TEXT.meadowSounds
+              : TEXT.meadowSoundPending}
+        </p>
       </div>
       <TitleBackdrop onInfo={() => setInfoOpen(true)} />
       <footer className="title-footer">
         <span>{TEXT.crafted}</span>
-        <span>
-          {TEXT.footerMotto[0]} <span className="tiny-star">✧</span>{" "}
-          {TEXT.footerMotto[1]}
-        </span>
       </footer>
       {infoOpen && <ProjectInfo onClose={() => setInfoOpen(false)} />}
     </main>

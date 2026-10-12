@@ -222,8 +222,7 @@ test("the exploration camera frames the traveler and all eight pictures across s
           // movement, so the old camera-facing proxy head is inaccurate.
           height:
             (1 - base.y) / 2 -
-            projectedBounds(scene.getObjectByName("prototype-red-traveler"))
-              .top,
+            projectedBounds(scene.getObjectByName("danny-character")).top,
           fov: camera.userData.verticalFov ?? camera.fov,
           viewport: size,
           tree: projectedBounds(scene.getObjectByName("memory-tree-limbs")),

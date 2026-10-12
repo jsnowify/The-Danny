@@ -7,7 +7,6 @@ export async function captureLandscapePreview(page, directory) {
   await page.waitForTimeout(200);
   await page.evaluate(() => {
     window.__DANNY_TEST__.place(-6, 8);
-    window.landscapeStudy.runtime.input.wideView = false;
     window.landscapeStudy.useStore
       .getState()
       .setSettings({ quality: "low", reducedMotion: false });

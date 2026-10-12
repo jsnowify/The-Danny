@@ -8,6 +8,8 @@ export const CAMERA = {
   lookAhead: 1.9,
   focusHeight: 0.85,
   followX: 0,
+  // Fit the clearing once per viewport, independently of the walking position.
+  framingAnchor: [0, 5.5] as const,
   damping: 0.5,
   focusDamping: 0.6,
   screenOffsetY: 0,
