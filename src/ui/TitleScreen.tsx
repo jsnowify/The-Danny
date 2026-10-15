@@ -138,6 +138,13 @@ export function TitleScreen() {
           <span />
         </div>
         <p className="title-description">{TEXT.titleDescription}</p>
+        <p className="headphones-note">
+          <Icon name="headphones" />
+          <span>
+            <strong>{TEXT.headphonesNotice}</strong>
+            <span>{TEXT.headphonesDetail}</span>
+          </span>
+        </p>
         <button
           className="begin-button"
           onClick={() => void begin()}

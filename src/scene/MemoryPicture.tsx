@@ -9,7 +9,7 @@ import {
   type Texture,
 } from "three";
 import * as damping from "maath/easing";
-import { MEMORIES } from "../config";
+import { MEMORIES, memoryPreviewUrl } from "../config";
 import { useStore } from "../store";
 import { useAssets } from "./resources";
 import { ANCHORS } from "./MemoryTree";
@@ -51,6 +51,7 @@ export function MemoryPicture({
     let cancelled = false;
     const image = new Image();
     image.crossOrigin = "anonymous";
+    image.decoding = "async";
     image.onload = () => {
       if (cancelled) return;
       const canvas = document.createElement("canvas");
@@ -59,20 +60,22 @@ export function MemoryPicture({
       const c = canvas.getContext("2d")!;
       c.fillStyle = "#fff6df";
       c.fillRect(0, 0, 512, 600);
-      const scale = Math.max(452 / image.width, 452 / image.height);
-      const sw = 452 / scale,
-        sh = 452 / scale;
+      const scale = Math.min(452 / image.width, 452 / image.height);
+      const width = image.width * scale,
+        height = image.height * scale;
+      c.filter = "blur(16px)";
       c.drawImage(
         image,
-        (image.width - sw) / 2,
-        (image.height - sh) / 2,
-        sw,
-        sh,
-        30,
-        30,
-        452,
-        452,
+        30 + (452 - width) / 2,
+        30 + (452 - height) / 2,
+        width,
+        height,
       );
+      c.filter = "none";
+      c.fillStyle = "#857c64";
+      c.font = "22px Georgia, serif";
+      c.textAlign = "center";
+      c.fillText(memory.title, 256, 548, 452);
       const texture = new CanvasTexture(canvas);
       texture.colorSpace = SRGBColorSpace;
       scratch.photo = texture;
@@ -81,14 +84,14 @@ export function MemoryPicture({
     image.onerror = () => {
       imageRef.current = assets.pictures[index];
     };
-    image.src = memory.imageUrl;
+    image.src = memoryPreviewUrl(memory.imageUrl);
     return () => {
       cancelled = true;
       image.onload = image.onerror = null;
       scratch.photo?.dispose();
       imageRef.current = assets.pictures[index];
     };
-  }, [memory.imageUrl, assets, index, scratch]);
+  }, [memory.imageUrl, memory.title, assets, index, scratch]);
   useFrame(({ camera }, delta) => {
     const dt = Math.min(delta, 0.05),
       state = useStore.getState(),

@@ -1,5 +1,5 @@
 import { useText } from "../hooks/useText";
-import { useMemo } from "react";
+import { useState } from "react";
 import { MEMORIES } from "../config";
 import { useStore } from "../store";
 import { memoryUrl } from "../textures/memoryArt";
@@ -14,14 +14,15 @@ export function Viewer() {
     collected = useStore((s) => s.collected);
   const index = MEMORIES.findIndex((m) => m.id === id),
     memory = MEMORIES[index];
-  const fallback = useMemo(() => memoryUrl(Math.max(0, index)), [index]);
+  const [revealedId, setRevealedId] = useState<string | null>(null);
+  const revealed = id !== null && revealedId === id;
   const close = () => useStore.getState().closeMemory();
   const ref = useDialog(close);
   const keep = () => {
     const picture = ref.current?.querySelector<HTMLImageElement>(
       ".polaroid-large img",
     );
-    if (picture && !useStore.getState().settings.reducedMotion) {
+    if (picture && revealed && !useStore.getState().settings.reducedMotion) {
       const rect = picture.getBoundingClientRect(),
         clone = picture.cloneNode() as HTMLImageElement;
       Object.assign(clone.style, {
@@ -32,7 +33,7 @@ export function Viewer() {
         height: `${rect.height}px`,
         zIndex: "100",
         pointerEvents: "none",
-        objectFit: "cover",
+        objectFit: "contain",
         boxShadow: "0 0 28px #f2d89a",
       });
       document.body.append(clone);
@@ -78,16 +79,36 @@ export function Viewer() {
       </button>
       <div className="viewer-layout">
         <div className="polaroid-large">
-          <img
-            src={memory.imageUrl || fallback}
-            className={memory.imageUrl ? "real-photo" : ""}
-            onError={(e) => {
-              e.currentTarget.src = fallback;
-              e.currentTarget.className = "";
-            }}
-            alt={memory.caption}
-          />
-          <span>{memory.caption}</span>
+          <button
+            type="button"
+            className="memory-photo-toggle"
+            data-revealed={revealed}
+            aria-label={`${revealed ? TEXT.blurPhoto : TEXT.revealPhoto}: ${memory.title}`}
+            title={revealed ? TEXT.blurPhoto : TEXT.revealPhoto}
+            onClick={() => setRevealedId(revealed ? null : memory.id)}
+            onContextMenu={(e) => e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
+          >
+            <img
+              data-memory-photo
+              draggable={false}
+              src={memory.imageUrl || memoryUrl(index)}
+              decoding="async"
+              className={memory.imageUrl ? "real-photo" : ""}
+              onError={(e) => {
+                e.currentTarget.src = memoryUrl(index);
+                e.currentTarget.className = "";
+              }}
+              alt={memory.caption}
+            />
+            {!revealed && (
+              <span className="photo-reveal-prompt" aria-hidden="true">
+                <Icon name="eye" />
+                <span>{TEXT.revealPhoto}</span>
+              </span>
+            )}
+          </button>
+          <span>{memory.title}</span>
         </div>
         <article className="memory-story">
           <div className="eyebrow">

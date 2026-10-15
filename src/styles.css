@@ -790,6 +790,7 @@ input[type="checkbox"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(4px);
 }
 .memory-slot.hung {
   border-color: #d4b16f;
@@ -973,9 +974,69 @@ kbd {
   width: 100%;
   display: block;
 }
+.memory-photo-toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff6df;
+  overflow: hidden;
+}
+.memory-photo-toggle:focus-visible {
+  outline: 3px solid #c4a76a;
+  outline-offset: 4px;
+}
+.memory-photo-toggle img {
+  transition: filter 250ms ease;
+}
+.memory-photo-toggle[data-revealed="false"] img {
+  filter: blur(16px);
+}
+.photo-reveal-prompt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  background: #243d3559;
+  font-size: 17px;
+  text-shadow: 0 1px 6px #132b23;
+  pointer-events: none;
+}
+.photo-reveal-prompt svg {
+  width: 28px;
+  height: 28px;
+}
+.reduced-motion .memory-photo-toggle img {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .memory-photo-toggle img {
+    transition: none;
+  }
+}
+/* Discourage saving images; browser and OS screenshots remain possible. */
+[data-memory-photo],
+.scene canvas {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+@media print {
+  [data-memory-photo],
+  .scene canvas {
+    visibility: hidden !important;
+  }
+}
 .polaroid-large .real-photo {
   height: 390px;
-  object-fit: cover;
+  object-fit: contain;
   padding: 22px 22px 65px;
 }
 .polaroid-large > span {

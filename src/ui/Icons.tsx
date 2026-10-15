@@ -4,6 +4,8 @@ export type IconName =
   | "heart"
   | "sound"
   | "mute"
+  | "headphones"
+  | "eye"
   | "pause"
   | "arrow"
   | "close"
@@ -26,6 +28,19 @@ const paths: Record<IconName, React.ReactNode> = {
     </>
   ),
   heart: <path d="m12 20-8-8C-1 6 7 1 12 7c5-6 13-1 8 5Z" />,
+  headphones: (
+    <>
+      <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+      <rect x="3" y="12" width="4" height="8" rx="2" />
+      <rect x="17" y="12" width="4" height="8" rx="2" />
+    </>
+  ),
+  eye: (
+    <>
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </>
+  ),
   sound: (
     <>
       <path d="M11 4 5 9H2v6h3l6 5Z" />

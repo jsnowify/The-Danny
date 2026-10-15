@@ -92,7 +92,7 @@ export function Journal() {
             <div className="journal-grid">
               {MEMORIES.map((m) => (
                 <article key={m.id}>
-                  <h3>{collected.includes(m.id) ? m.caption : t.emptySlot}</h3>
+                  <h3>{collected.includes(m.id) ? m.title : t.emptySlot}</h3>
                   <p>{collected.includes(m.id) ? m.zone : t.memoryWaiting}</p>
                   {collected.includes(m.id) && (
                     <button

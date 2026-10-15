@@ -14,6 +14,7 @@
 These reports document the revision when they were written. Older screenshots, controls and verification scripts can describe features that have since changed; use the main README and current source for the running game.
 
 - [Visual performance review](../VISUAL-PASS-7-REVIEW.html) and [report](../VISUAL-PASS-7-REPORT.md)
+- [October 2026 performance check](performance-2026-10-15.md): download sizes, photo previews and canopy preparation.
 - [Character motion](../CHARACTER-MOTION-REPORT.md)
 - [Landscape improvements](../LANDSCAPE-IMPROVEMENTS.md)
 - [Illustrated animals](../ILLUSTRATED-ANIMALS.md)

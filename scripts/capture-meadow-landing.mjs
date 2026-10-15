@@ -169,7 +169,7 @@ await run("ffmpeg", [
   "-preset",
   "slow",
   "-crf",
-  "22",
+  "28",
   "-movflags",
   "+faststart",
   "public/art/landing/meadow-preview.mp4",

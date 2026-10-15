@@ -2,14 +2,22 @@ import { CanvasTexture, SRGBColorSpace } from "three";
 
 /** Original painted artwork, with sunlight, midground and cool shade variants. */
 export function forestCanopies(image: CanvasImageSource) {
+  const source = document.createElement("canvas");
+  source.width = 768;
+  source.height = 864;
+  const context = source.getContext("2d")!;
+  context.drawImage(image, 0, 0, source.width, source.height);
+  const original = context.getImageData(0, 0, source.width, source.height);
+
   return ["emerald", "sunlit", "fern", "teal"].map((name, variant) => {
     const canvas = document.createElement("canvas");
     canvas.width = 768;
     canvas.height = 864;
     const c = canvas.getContext("2d")!;
-    c.drawImage(image, 0, 0, canvas.width, canvas.height);
-    const pixels = c.getImageData(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < pixels.data.length; i += 4) {
+    const pixels = c.createImageData(canvas.width, canvas.height);
+    pixels.data.set(original.data);
+    // The sunlit version already uses the original colors.
+    for (let i = 0; variant !== 1 && i < pixels.data.length; i += 4) {
       const red = pixels.data[i],
         green = pixels.data[i + 1],
         blue = pixels.data[i + 2];

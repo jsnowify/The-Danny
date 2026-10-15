@@ -1,13 +1,11 @@
 import { useText } from "../hooks/useText";
-import { useMemo } from "react";
-import { MEMORIES } from "../config";
+import { MEMORIES, memoryPreviewUrl } from "../config";
 import { useStore } from "../store";
 import { memoryUrl } from "../textures/memoryArt";
 export function MemorySlots() {
   const TEXT = useText();
   const collected = useStore((s) => s.collected),
     hung = useStore((s) => s.hung);
-  const urls = useMemo(() => MEMORIES.map((_, i) => memoryUrl(i)), []);
   return (
     <div className="memory-collection">
       <div
@@ -23,12 +21,27 @@ export function MemorySlots() {
             disabled={!collected.includes(m.id)}
             aria-label={
               collected.includes(m.id)
-                ? `${TEXT.read} ${m.caption}${hung.includes(m.id) ? TEXT.hungLabel : ""}`
+                ? `${TEXT.read} ${m.title}${hung.includes(m.id) ? TEXT.hungLabel : ""}`
                 : TEXT.emptySlot
             }
             onClick={() => useStore.getState().openMemory(m.id)}
           >
-            {collected.includes(m.id) ? <img src={urls[i]} alt="" /> : <span />}
+            {collected.includes(m.id) ? (
+              <img
+                data-memory-photo
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                src={m.imageUrl ? memoryPreviewUrl(m.imageUrl) : memoryUrl(i)}
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = memoryUrl(i);
+                }}
+                alt=""
+              />
+            ) : (
+              <span />
+            )}
           </button>
         ))}
       </div>

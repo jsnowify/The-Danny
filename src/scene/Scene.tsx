@@ -217,7 +217,7 @@ export default function Scene() {
     );
   if (debug && !development) return <LoadingScreen progress={15} />;
   return (
-    <div className="scene">
+    <div className="scene" onContextMenu={(e) => e.preventDefault()}>
       <KeyboardControls map={map}>
         <Canvas
           orthographic
